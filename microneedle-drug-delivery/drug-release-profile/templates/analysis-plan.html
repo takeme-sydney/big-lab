@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#edf2f0">
+  <meta name="description" content="BiG Labの「Analysis plan —
+Microneedle Drug Release Profile」に関するMarkdown正本のHTML閲覧版。">
+  <title>Analysis plan — Microneedle Drug Release
+Profile · BiG Lab</title>
+  <link rel="alternate" type="text/markdown" href="analysis-plan.md" title="Markdown source">
+    <link rel="stylesheet" href="../../../shared/website/assets/research-document.css">
+    </head>
+<body class="research-document">
+  <a class="skip-link" href="#document-content">本文へ移動</a>
+
+  <header class="document-topbar">
+    <div class="document-topbar-inner">
+      <a class="document-brand" href="../../../shared/website/index.html" aria-label="BiG Lab 資料一覧へ">
+        <span class="document-brand-mark" aria-hidden="true">B</span>
+        <span class="document-brand-copy">
+          <strong>BiG Lab</strong>
+          <small>Research library</small>
+        </span>
+      </a>
+
+      <nav class="document-actions" aria-label="文書ナビゲーション">
+        <a href="../../../shared/website/index.html">資料一覧</a>
+        <a class="source-action" href="analysis-plan.md">Markdown正本 <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <header class="document-hero">
+    <div class="document-hero-copy">
+      <p class="document-kicker">
+        <span aria-hidden="true"></span>
+        WORKING TEMPLATE
+      </p>
+      <h1>Analysis plan — Microneedle Drug Release Profile</h1>
+      <p class="document-description">BiG Labの「Analysis plan —
+Microneedle Drug Release Profile」に関するMarkdown正本のHTML閲覧版。</p>
+
+      <dl class="document-meta">
+                        <div>
+          <dt>Format</dt>
+          <dd>HTML reading view</dd>
+        </div>
+      </dl>
+    </div>
+
+    <aside class="format-map" aria-label="MarkdownからHTMLへの文書フロー">
+      <div class="format-map-head">
+        <span>DOCUMENT PIPELINE</span>
+        <small>ONE SOURCE · TWO VIEWS</small>
+      </div>
+      <div class="format-map-flow">
+        <div class="format-node source-node">
+          <span>CANONICAL</span>
+          <strong>Markdown</strong>
+          <small>内容の正本</small>
+        </div>
+        <span class="format-arrow" aria-hidden="true">→</span>
+        <div class="format-node view-node">
+          <span>READING VIEW</span>
+          <strong>HTML</strong>
+          <small>閲覧用レンダリング</small>
+        </div>
+      </div>
+      <p>内容は同一に保ち、画面では読解・移動・参照に適した構造で表示します。</p>
+    </aside>
+  </header>
+
+  <div class="document-rule" aria-hidden="true">
+    <span></span><span></span><span></span>
+  </div>
+
+  <div class="document-shell">
+        <aside class="document-toc" aria-labelledby="document-toc-title">
+      <p id="document-toc-title">On this page</p>
+      <nav aria-label="目次">
+        <ul>
+        <li><a href="#analysis-plan-microneedle-drug-release-profile"
+        id="toc-analysis-plan-microneedle-drug-release-profile">Analysis
+        plan — Microneedle Drug Release Profile</a>
+        <ul>
+        <li><a href="#endpoint-classification"
+        id="toc-endpoint-classification">1. Endpoint
+        classification</a></li>
+        <li><a href="#cumulative-amount-correction"
+        id="toc-cumulative-amount-correction">2. Cumulative amount
+        correction</a></li>
+        <li><a href="#data-quality" id="toc-data-quality">3. Data
+        quality</a></li>
+        <li><a href="#descriptive-analysis"
+        id="toc-descriptive-analysis">4. Descriptive analysis</a></li>
+        <li><a href="#candidate-kinetic-models"
+        id="toc-candidate-kinetic-models">5. Candidate kinetic
+        models</a></li>
+        <li><a href="#group-comparison" id="toc-group-comparison">6.
+        Group comparison</a></li>
+        <li><a href="#small-data-ml" id="toc-small-data-ml">7.
+        Small-data ML</a></li>
+        <li><a href="#figures" id="toc-figures">8. Figures</a></li>
+        <li><a href="#claims" id="toc-claims">9. Claims</a>
+        <ul>
+        <li><a href="#supported-if-criteria-pass"
+        id="toc-supported-if-criteria-pass">Supported if criteria
+        pass</a></li>
+        <li><a href="#not-supported-by-this-design"
+        id="toc-not-supported-by-this-design">Not supported by this
+        design</a></li>
+        </ul></li>
+        </ul></li>
+        </ul>
+      </nav>
+            <a class="toc-source-link" href="analysis-plan.md">
+        <span>Source</span>
+        <strong>analysis-plan.md</strong>
+      </a>
+          </aside>
+    
+    <main id="document-content" class="document-main">
+      <article class="document-content">
+                <p><a href="analysis-plan.html">HTML版を開く</a></p>
+                <h1
+                id="analysis-plan-microneedle-drug-release-profile">Analysis
+                plan — Microneedle Drug Release Profile</h1>
+                <p>Status: draft / frozen / amended<br />
+                Linked charter version:<br />
+                Analyst:<br />
+                Independent reviewer:</p>
+                <h2 id="endpoint-classification">1. Endpoint
+                classification</h2>
+                <p>Select one primary endpoint family:</p>
+                <ul class="task-list">
+                <li><label><input type="checkbox" />Release-only: MN /
+                matrix → receptor medium without skin
+                barrier</label></li>
+                <li><label><input type="checkbox" />Permeation: donor /
+                MN → through skin → receptor</label></li>
+                <li><label><input type="checkbox" />Retention: payload
+                recovered in tissue at endpoint</label></li>
+                <li><label><input type="checkbox" />Recovery: receptor +
+                tissue + residual device + donor / wash
+                fractions</label></li>
+                </ul>
+                <h2 id="cumulative-amount-correction">2. Cumulative
+                amount correction</h2>
+                <p>For constant receptor volume <code>V_r</code>, sample
+                volume <code>V_s</code>, complete replacement, and a
+                well-mixed receptor:</p>
+                <pre class="text"><code>Q_n = V_r × C_n + V_s × Σ(C_i), i = 1 … n−1</code></pre>
+                <p>Record the actual sampling scheme. Use a mass-balance
+                recurrence instead when volume, replacement, or mixing
+                differs.</p>
+                <p>Derived outputs:</p>
+                <pre class="text"><code>amount_per_area_n = Q_n / diffusion_area
+fraction_loaded_n = Q_n / assay_confirmed_exposed_load
+percent_loaded_n = 100 × fraction_loaded_n</code></pre>
+                <p>Never substitute nominal whole-patch loading for
+                assay-confirmed exposed-needle loading without
+                justification.</p>
+                <h2 id="data-quality">3. Data quality</h2>
+                <ul>
+                <li>Raw concentrations remain unchanged.</li>
+                <li>Below-quantification handling is predeclared.</li>
+                <li>Re-injection and repeat-assay reasons are
+                retained.</li>
+                <li>Unit conversion is scripted and tested.</li>
+                <li>Non-monotonic cumulative values are flagged; they
+                are not silently forced upward.</li>
+                <li>Exclusions remain in the dataset with
+                <code>qc_status</code> and
+                <code>exclusion_reason</code>.</li>
+                </ul>
+                <h2 id="descriptive-analysis">4. Descriptive
+                analysis</h2>
+                <ul>
+                <li>Plot every cell-level curve.</li>
+                <li>Overlay batch / donor / condition summaries without
+                hiding individual curves.</li>
+                <li>Report <code>n</code> at batch, donor, cell, and
+                time-point levels.</li>
+                <li>Summarise actual temperature, sampled volume,
+                exposed area, loading, recovery, and protocol
+                deviations.</li>
+                </ul>
+                <h2 id="candidate-kinetic-models">5. Candidate kinetic
+                models</h2>
+                <table>
+                <colgroup>
+                <col style="width: 33%" />
+                <col style="width: 33%" />
+                <col style="width: 33%" />
+                </colgroup>
+                <thead>
+                <tr>
+                <th>Model</th>
+                <th>Common form</th>
+                <th>Use / caution</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td>Zero-order</td>
+                <td><code>Q_t = Q_0 + k_0 t</code></td>
+                <td>Constant release rate; verify residuals and
+                depletion</td>
+                </tr>
+                <tr>
+                <td>First-order</td>
+                <td><code>F_t = 1 − exp(−k_1 t)</code></td>
+                <td>Concentration-dependent approach to plateau</td>
+                </tr>
+                <tr>
+                <td>Higuchi</td>
+                <td><code>Q_t = k_H √t</code></td>
+                <td>Diffusion-controlled approximation; assumptions and
+                early-time range matter</td>
+                </tr>
+                <tr>
+                <td>Korsmeyer–Peppas</td>
+                <td><code>M_t/M∞ = k t^n</code></td>
+                <td>Empirical early-fraction model; geometry and fitted
+                range affect <code>n</code></td>
+                </tr>
+                <tr>
+                <td>Weibull</td>
+                <td><code>F_t = 1 − exp[−(t/α)^β]</code></td>
+                <td>Flexible descriptive curve; mechanism is not
+                identified by fit alone</td>
+                </tr>
+                <tr>
+                <td>Mechanistic diffusion / erosion</td>
+                <td>system-specific PDE / ODE</td>
+                <td>Preferred when boundaries and material processes are
+                identifiable</td>
+                </tr>
+                </tbody>
+                </table>
+                <p>Model comparison:</p>
+                <ul>
+                <li>cell / curve is the unit of fit unless a
+                hierarchical model is specified</li>
+                <li>report RMSE / MAE, AICc where applicable, residual
+                plots, parameter intervals, parameter plausibility</li>
+                <li>compare predictive performance on held-out curves /
+                batches</li>
+                <li>do not choose a mechanism from the largest
+                <code>R²</code> alone</li>
+                </ul>
+                <h2 id="group-comparison">6. Group comparison</h2>
+                <ul>
+                <li>Primary contrast:</li>
+                <li>Estimand:</li>
+                <li>Model:</li>
+                <li>Fixed effects:</li>
+                <li>Random effects:</li>
+                <li>Covariates:</li>
+                <li>Multiple-comparison control:</li>
+                <li>Confidence / compatibility interval:</li>
+                <li>Missing-data strategy:</li>
+                </ul>
+                <p>For repeated time points, use a hierarchical /
+                repeated-measures approach or compare predeclared
+                curve-level summaries. Do not use a test that assumes
+                all time points are independent.</p>
+                <h2 id="small-data-ml">7. Small-data ML</h2>
+                <p>Use only after the mechanistic and classical
+                baselines are fixed.</p>
+                <ul>
+                <li>Group key for split:</li>
+                <li>Nested cross-validation:</li>
+                <li>Leave-one-batch / drug / platform-out test:</li>
+                <li>External prospective set:</li>
+                <li>Uncertainty method:</li>
+                <li>Applicability-domain rule:</li>
+                <li>Leakage checks:</li>
+                <li>Frozen preprocessing pipeline:</li>
+                </ul>
+                <p>Minimum baselines: mean / simple parametric curve,
+                regularised linear model, mechanistic model, GPR, RF /
+                XGBoost if justified.</p>
+                <h2 id="figures">8. Figures</h2>
+                <ol type="1">
+                <li>Cell-level cumulative profile</li>
+                <li>Amount/area and fraction-loaded panels</li>
+                <li>Endpoint mass-balance stacked plot</li>
+                <li>Residual and observed-vs-predicted plots</li>
+                <li>Batch / donor variability</li>
+                <li>Prediction interval and applicability-domain plot
+                for ML</li>
+                </ol>
+                <p>Each caption must state endpoint, unit, experimental
+                <code>n</code>, summary statistic, interval, exclusions,
+                and whether data are measured or simulated.</p>
+                <h2 id="claims">9. Claims</h2>
+                <h3 id="supported-if-criteria-pass">Supported if
+                criteria pass</h3>
+                <ul>
+                <li></li>
+                </ul>
+                <h3 id="not-supported-by-this-design">Not supported by
+                this design</h3>
+                <ul>
+                <li>Clinical efficacy</li>
+                <li>Clinical dose optimisation</li>
+                <li>Generalisation to unseen drug / platform without
+                external validation</li>
+                <li>Mechanism inferred only from empirical curve
+                fit</li>
+                </ul>
+              </article>
+    </main>
+
+    <aside class="reading-gauge" aria-hidden="true">
+      <p>READING DEPTH</p>
+      <div class="gauge-scale">
+        <span>00</span>
+        <span>25</span>
+        <span>50</span>
+        <span>75</span>
+        <span>100</span>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="document-footer">
+    <div>
+      <strong>BiG Lab Research Library</strong>
+      <p>Markdown is canonical. HTML is the synchronized reading view.</p>
+    </div>
+    <div class="document-footer-links">
+      <a href="../../../shared/website/index.html">資料一覧へ戻る</a>
+      <a href="analysis-plan.md">Markdownを開く</a>
+    </div>
+  </footer>
+</body>
+</html>

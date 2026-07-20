@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Claude CodeとClaude Science、マルチエージェント、データ可視化、3Dデザインを、角膜construct Geometry QCの4週間pilotへ統合した実働ポートフォリオ。">
+  <meta name="theme-color" content="#f3f5f7">
+  <title>Corneal Geometry QC — Research Systems Portfolio</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="../website-assets/research-portfolio.css">
+  <link rel="stylesheet" href="../../shared/website/assets/bilingual.css">
+  <link rel="stylesheet" href="../../shared/website/assets/copy-tools.css">
+  <link rel="stylesheet" href="../../shared/website/assets/site-directory.css">
+  <link rel="stylesheet" href="../../shared/website/assets/google-docs-typography.css">
+  <link rel="stylesheet" href="../../shared/website/assets/monochrome-theme.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へ移動</a>
+
+  <header class="portfolio-header">
+    <a class="portfolio-brand" href="../../shared/website/pages/index.html" aria-label="BiG Lab資料ポータルへ戻る">
+      <span class="brand-glyph">T<span>/</span>R</span>
+      <span>TAKUMI SUEHARA<small>RESEARCH SYSTEMS PORTFOLIO</small></span>
+    </a>
+    <nav class="portfolio-nav" aria-label="ページ内ナビゲーション">
+      <a href="#case">Case</a>
+      <a href="#agents">Agents</a>
+      <a href="#geometry">3D QC</a>
+      <a href="#evidence">Paper map</a>
+      <a href="#boundary">Boundary</a>
+    </nav>
+    <div class="header-actions">
+      <a href="geometry-qc-poster.html" class="header-link">POSTER ↗</a>
+      <button type="button" class="menu-button" data-menu aria-expanded="false" aria-label="メニューを開く"><i></i><i></i></button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="portfolio-hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-rule" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+      <div class="hero-main">
+        <p class="overline"><span>PORTFOLIO / CASE 001</span> CLAUDE CODE × CLAUDE SCIENCE</p>
+        <h1 id="hero-title">Research,<br><em>made inspectable.</em></h1>
+        <p class="hero-statement">角膜constructの「設計どおりに造形できたか」を、<strong>追跡可能なコード、3D形状比較、判断できる図、レビュー可能なポスター</strong>へ変換する4週間pilotの成果物例。</p>
+        <div class="hero-cta">
+          <a href="#case" class="button button-primary">ケースを見る <span>↓</span></a>
+          <a href="../portfolio/geometry-qc-synthetic.csv" class="button button-quiet" download>合成データ CSV <span>↘</span></a>
+        </div>
+      </div>
+
+      <aside class="hero-specimen" aria-label="ケース概要">
+        <div class="specimen-top">
+          <span>SYNTHETIC DEMONSTRATION</span>
+          <span>17·07·26</span>
+        </div>
+        <div class="specimen-orbit" aria-hidden="true">
+          <svg viewBox="0 0 520 360">
+            <defs>
+              <linearGradient id="heroDome" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#b8ff74" stop-opacity=".72"/>
+                <stop offset=".55" stop-color="#8ee9df" stop-opacity=".18"/>
+                <stop offset="1" stop-color="#ff715f" stop-opacity=".55"/>
+              </linearGradient>
+            </defs>
+            <ellipse cx="260" cy="298" rx="210" ry="43"/>
+            <path class="dome-fill" d="M51 294C86 102 179 39 260 39s174 63 209 255c-95 45-323 45-418 0Z"/>
+            <path d="M51 294C86 102 179 39 260 39s174 63 209 255"/>
+            <path d="M89 286C120 129 194 75 260 75s140 54 171 211"/>
+            <path d="M131 281C154 163 211 115 260 115s106 48 129 166"/>
+            <path d="M177 278C192 205 229 158 260 158s68 47 83 120"/>
+            <path d="M260 39v259M155 70c46 88 67 164 65 234M365 70c-46 88-67 164-65 234M84 145c82 58 270 58 352 0M57 233c107 46 299 46 406 0"/>
+            <path class="measure" d="M260 38v120M250 38h20M250 158h20"/>
+          </svg>
+          <div class="specimen-label label-radius"><span>R</span><b>7.80 mm</b><small>TARGET RADIUS</small></div>
+          <div class="specimen-label label-thickness"><span>T</span><b>0.55 mm</b><small>TARGET THICKNESS</small></div>
+        </div>
+        <div class="specimen-metrics">
+          <div><span>12</span><small>CONSTRUCTS</small></div>
+          <div><span>03</span><small>BATCHES</small></div>
+          <div><span>07</span><small>ARTIFACTS</small></div>
+        </div>
+      </aside>
+
+      <div class="hero-footnote">
+        <span>DEMO STATUS</span>
+        <p>研究データ・臨床結果ではありません。架空の合成データを使い、成果物の形式と安全境界を示しています。</p>
+      </div>
+    </section>
+
+    <section class="case-overview section" id="case" aria-labelledby="case-title">
+      <div class="section-marker"><span>01</span><small>THE CASE</small></div>
+      <div class="section-title">
+        <p class="eyebrow">One question / seven traceable outputs</p>
+        <h2 id="case-title">一つの科学的な問いを、<br><em>七つの検証可能な成果物へ。</em></h2>
+      </div>
+      <p class="section-lede">研究者の問いと判断基準を先に固定し、AIは探索・実装・検証・可視化を担当。すべての図をsample ID、method version、review stateへ戻せる構成です。</p>
+
+      <div class="case-brief">
+        <article>
+          <span>THE QUESTION</span>
+          <h3>設計した角膜曲面を、print後のconstructがどの程度再現しているか？</h3>
+        </article>
+        <article>
+          <span>PRIMARY METRIC</span>
+          <h3>Best-fit radius deviation</h3>
+          <p>Target 7.80 mm / demo tolerance ±0.18 mm</p>
+        </article>
+        <article>
+          <span>SUCCESS</span>
+          <h3>同じ入力から同じ判定を再生成</h3>
+          <p>失敗例、判断保留、限界を含めて説明できる。</p>
+        </article>
+      </div>
+
+      <ol class="artifact-index" aria-label="成果物一覧">
+        <li><a href="../portfolio/pilot-charter.md"><span>A–01</span><strong>Pilot charter</strong><small>問い・metric・成功条件</small><b>MD ↗</b></a></li>
+        <li><a href="../portfolio/multi-agent-run-log.json"><span>A–02</span><strong>Agent audit trail</strong><small>役割・入力・停止条件</small><b>JSON ↗</b></a></li>
+        <li><a href="../portfolio/geometry-qc-synthetic.csv"><span>A–03</span><strong>QC dataset</strong><small>12 constructs / 3 batches</small><b>CSV ↗</b></a></li>
+        <li><a href="#geometry"><span>A–04</span><strong>Interactive 3D overlay</strong><small>ideal / measured / deviation</small><b>LIVE ↓</b></a></li>
+        <li><a href="#dashboard"><span>A–05</span><strong>QC decision dashboard</strong><small>effect・batch・failure</small><b>LIVE ↓</b></a></li>
+        <li><a href="../portfolio/claim-evidence-map.csv"><span>A–06</span><strong>Paper evidence map</strong><small>Introduction → Poster</small><b>CSV ↗</b></a></li>
+        <li><a href="geometry-qc-poster.html"><span>A–07</span><strong>Review poster</strong><small>print / PDF ready</small><b>HTML ↗</b></a></li>
+      </ol>
+    </section>
+
+    <section class="agents-section" id="agents" aria-labelledby="agents-title">
+      <div class="section section-on-dark">
+        <div class="section-marker light"><span>02</span><small>MULTI-AGENT</small></div>
+        <div class="section-title">
+          <p class="eyebrow">Parallel work / explicit ownership</p>
+          <h2 id="agents-title">五つの専門agent。<br><em>一つの人間レビュー。</em></h2>
+        </div>
+        <p class="section-lede">agentは結論を投票で決めません。共通schemaのもとで別々の仕事を行い、衝突・欠損・不確実性を人間へ返します。</p>
+
+        <div class="agent-system">
+          <div class="human-node human-input">
+            <span>H–01</span><strong>Researcher</strong><small>question · metric · permission</small>
+          </div>
+          <div class="system-line line-in" aria-hidden="true"><i></i></div>
+          <div class="orchestrator-node">
+            <span>ORCHESTRATOR</span><strong>Shared task schema</strong><small>scope · provenance · stop rules</small>
+          </div>
+          <div class="system-line line-out" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="agent-nodes" role="tablist" aria-label="専門agentの詳細">
+            <button type="button" class="agent-node is-active" role="tab" aria-selected="true" data-agent="evidence"><span>01</span><strong>Evidence</strong><small>source registry</small></button>
+            <button type="button" class="agent-node" role="tab" aria-selected="false" data-agent="schema"><span>02</span><strong>Schema</strong><small>IDs · units</small></button>
+            <button type="button" class="agent-node" role="tab" aria-selected="false" data-agent="geometry"><span>03</span><strong>Geometry</strong><small>mesh · metric</small></button>
+            <button type="button" class="agent-node" role="tab" aria-selected="false" data-agent="visual"><span>04</span><strong>Visual</strong><small>figure · QC</small></button>
+            <button type="button" class="agent-node" role="tab" aria-selected="false" data-agent="review"><span>05</span><strong>Reviewer</strong><small>claim audit</small></button>
+          </div>
+          <div class="system-line line-review" aria-hidden="true"><i></i></div>
+          <div class="human-node human-review">
+            <span>H–02</span><strong>Scientific review</strong><small>method · exclusion · interpretation</small>
+          </div>
+        </div>
+
+        <article class="agent-detail" aria-live="polite">
+          <div class="agent-detail-head"><span data-agent-number>AGENT 01</span><strong data-agent-title>Evidence Registry</strong></div>
+          <dl>
+            <div><dt>INPUT</dt><dd data-agent-input>承認済み論文・method note・metric definition</dd></div>
+            <div><dt>TASK</dt><dd data-agent-task>各主張を原典、引用箇所、適用範囲へ接続する。</dd></div>
+            <div><dt>OUTPUT</dt><dd data-agent-output>evidence table / citation trail / unresolved gaps</dd></div>
+            <div><dt>STOP RULE</dt><dd data-agent-stop>原典を確認できない主張は推測で埋めず「未確認」として返す。</dd></div>
+          </dl>
+        </article>
+
+        <div class="run-log">
+          <div class="run-log-head"><span>RUN / QC-PILOT-001</span><strong>Audit trail preview</strong><small>2026-07-17 14:32 AEST</small></div>
+          <div class="log-row"><time>14:32:04</time><span class="log-dot complete"></span><strong>orchestrator</strong><p>charter v0.3、dataset checksum、停止条件を読み込み</p><b>READY</b></div>
+          <div class="log-row"><time>14:32:09</time><span class="log-dot complete"></span><strong>schema</strong><p>12 sample、3 batch、単位と必須fieldを検証</p><b>PASS</b></div>
+          <div class="log-row"><time>14:32:13</time><span class="log-dot review"></span><strong>geometry</strong><p>C08 registration RMSE 0.13 mm — 自動確定せずreviewへ</p><b>FLAG</b></div>
+          <div class="log-row"><time>14:32:18</time><span class="log-dot complete"></span><strong>visual</strong><p>全sampleを含むradius plotと3D overlayを生成</p><b>PASS</b></div>
+          <div class="log-row"><time>14:32:22</time><span class="log-dot waiting"></span><strong>reviewer</strong><p>「再現性が高い」はデータ不足。表現を限定するよう要求</p><b>HUMAN</b></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pilot-section section" id="pilot" aria-labelledby="pilot-title">
+      <div class="section-marker"><span>03</span><small>4-WEEK PILOT</small></div>
+      <div class="section-title">
+        <p class="eyebrow">Small scope / review every week</p>
+        <h2 id="pilot-title">アプリ完成を目指さない。<br><em>判断可能な一周を作る。</em></h2>
+      </div>
+      <p class="section-lede">一つのconstruct type、一つのprimary metric、既存の承認済みデータに限定。各週の出口に人間のacceptance gateを置きます。</p>
+
+      <ol class="pilot-weeks">
+        <li>
+          <div class="week-top"><span>WEEK 01</span><b>DEFINE</b></div>
+          <h3>問い・単位・許可を固定</h3>
+          <p>sample hierarchy、target、tolerance、manual reference、データ利用範囲を確認。</p>
+          <ul><li>Pilot charter</li><li>Data dictionary</li><li>Permission record</li></ul>
+          <div class="acceptance"><span>HUMAN GATE</span><strong>Metric definition approved</strong></div>
+        </li>
+        <li>
+          <div class="week-top"><span>WEEK 02</span><b>BUILD</b></div>
+          <h3>baselineとtestを実装</h3>
+          <p>loader、校正、registration、radius測定、既知値test、全sampleのQC flag。</p>
+          <ul><li>Code + config</li><li>Unit tests</li><li>Overlay set</li></ul>
+          <div class="acceptance"><span>HUMAN GATE</span><strong>Method + failure reviewed</strong></div>
+        </li>
+        <li>
+          <div class="week-top"><span>WEEK 03</span><b>COMPARE</b></div>
+          <h3>設計と実測を比較</h3>
+          <p>radius deviation、thickness、surface RMSEをbatch・sample単位で可視化。</p>
+          <ul><li>3D deviation map</li><li>QC dashboard</li><li>Failure registry</li></ul>
+          <div class="acceptance"><span>HUMAN GATE</span><strong>QC state assigned</strong></div>
+        </li>
+        <li>
+          <div class="week-top"><span>WEEK 04</span><b>COMMUNICATE</b></div>
+          <h3>結果・限界・次を一枚に</h3>
+          <p>同じvalidated outputからfigure、caption、review poster、次実験案を生成。</p>
+          <ul><li>Poster / PDF</li><li>Claim map</li><li>Re-run guide</li></ul>
+          <div class="acceptance"><span>HUMAN GATE</span><strong>Claims + sharing approved</strong></div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="geometry-section" id="geometry" aria-labelledby="geometry-title">
+      <div class="section section-on-dark geometry-head">
+        <div class="section-marker light"><span>04</span><small>3D GEOMETRY QC</small></div>
+        <div class="section-title">
+          <p class="eyebrow">Artifact A–04 / interactive</p>
+          <h2 id="geometry-title">設計値と実測値を、<br><em>同じ空間で比較する。</em></h2>
+        </div>
+        <p class="section-lede">sampleを選び、モデルをドラッグして回転。Ideal、Measured、Deviationの表示を切り替えられます。</p>
+      </div>
+
+      <div class="geometry-workbench">
+        <div class="workbench-toolbar">
+          <label for="sample-select"><span>ACTIVE SAMPLE</span>
+            <select id="sample-select" data-sample-select aria-label="表示するsample"></select>
+          </label>
+          <div class="mode-switch" role="group" aria-label="3D表示モード">
+            <button type="button" data-view-mode="ideal">Ideal</button>
+            <button type="button" data-view-mode="measured">Measured</button>
+            <button type="button" class="is-active" data-view-mode="deviation">Deviation</button>
+          </div>
+          <p><span class="drag-icon" aria-hidden="true">↔</span> DRAG TO ROTATE</p>
+        </div>
+
+        <div class="model-stage">
+          <canvas id="cornea-canvas" aria-label="角膜constructのインタラクティブ3D形状比較"></canvas>
+          <div class="model-axis axis-z">Z</div><div class="model-axis axis-x">X</div>
+          <div class="model-legend"><span>−0.30</span><i></i><span>+0.30 mm</span></div>
+          <div class="model-caption"><span data-model-mode>DEVIATION MAP</span><small>synthetic surface / illustrative registration</small></div>
+        </div>
+
+        <aside class="sample-inspector">
+          <div class="inspector-status"><span data-sample-status>PASS</span><small>QC STATE / DEMO RULE</small></div>
+          <dl>
+            <div><dt>BEST-FIT RADIUS</dt><dd><strong data-radius>7.82</strong><span>mm</span><small data-radius-delta>Δ +0.02</small></dd></div>
+            <div><dt>MEDIAN THICKNESS</dt><dd><strong data-thickness>0.56</strong><span>mm</span><small data-thickness-delta>Δ +0.01</small></dd></div>
+            <div><dt>SURFACE RMSE</dt><dd><strong data-surface>0.08</strong><span>mm</span><small>mesh fit</small></dd></div>
+            <div><dt>REGISTRATION RMSE</dt><dd><strong data-registration>0.04</strong><span>mm</span><small>alignment</small></dd></div>
+          </dl>
+          <div class="inspector-note"><span>REVIEW NOTE</span><p data-review-note>Demo tolerance内。overlayとsource meshを研究者が確認後に確定。</p></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="dashboard-section section" id="dashboard" aria-labelledby="dashboard-title">
+      <div class="section-marker"><span>05</span><small>DATA VIS</small></div>
+      <div class="section-title">
+        <p class="eyebrow">Artifact A–05 / decision dashboard</p>
+        <h2 id="dashboard-title">平均値だけでなく、<br><em>batchと失敗例まで見せる。</em></h2>
+      </div>
+      <p class="section-lede">「きれいな代表例」ではなく12 sampleすべてを表示。QC stateは説明用ruleの結果で、科学的な除外判断ではありません。</p>
+
+      <div class="dashboard-summary" aria-label="QC集計">
+        <article><span>PASS</span><strong data-count-pass>8</strong><small>within demo rule</small></article>
+        <article><span>REVIEW</span><strong data-count-review>3</strong><small>human decision</small></article>
+        <article><span>FAIL</span><strong data-count-fail>1</strong><small>out of demo range</small></article>
+        <article><span>MEDIAN |ΔR|</span><strong data-median-error>0.10</strong><small>mm / n=12</small></article>
+      </div>
+
+      <div class="dashboard-grid">
+        <article class="chart-card chart-main">
+          <header><div><span>FIGURE 01</span><h3>Best-fit radius by construct</h3></div><p>Target 7.80 mm · band ±0.18 mm</p></header>
+          <div class="chart-frame"><svg data-radius-chart role="img" aria-label="12 constructのbest-fit radius plot"></svg></div>
+          <footer><span><i class="dot pass"></i>PASS</span><span><i class="dot review"></i>REVIEW</span><span><i class="dot fail"></i>FAIL</span><small>Click a point to inspect in 3D</small></footer>
+        </article>
+
+        <article class="chart-card chart-secondary">
+          <header><div><span>FIGURE 02</span><h3>QC state by batch</h3></div><p>count / batch</p></header>
+          <div class="batch-bars" data-batch-bars></div>
+          <div class="figure-note"><span>READING</span><p>Batch 02にはreview / failが集中。batch effectを断定せず、材料・装置・operator・registrationを次の確認項目として返す。</p></div>
+        </article>
+
+        <article class="chart-card chart-table">
+          <header><div><span>FAILURE REGISTRY</span><h3>Flagged constructs</h3></div><p>no silent exclusion</p></header>
+          <div class="flag-table" role="table" aria-label="要確認sample一覧">
+            <div class="flag-head" role="row"><span>ID</span><span>TRIGGER</span><span>STATE</span></div>
+            <button type="button" role="row" data-inspect-sample="C03"><strong>C03</strong><span>radius Δ +0.26 mm</span><b class="review">REVIEW</b></button>
+            <button type="button" role="row" data-inspect-sample="C06"><strong>C06</strong><span>surface RMSE 0.21 mm</span><b class="review">REVIEW</b></button>
+            <button type="button" role="row" data-inspect-sample="C08"><strong>C08</strong><span>registration RMSE 0.13 mm</span><b class="fail">FAIL</b></button>
+            <button type="button" role="row" data-inspect-sample="C11"><strong>C11</strong><span>radius Δ −0.19 mm</span><b class="review">REVIEW</b></button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="evidence-section" id="evidence" aria-labelledby="evidence-title">
+      <div class="section section-on-coral">
+        <div class="section-marker"><span>06</span><small>PAPER MAP</small></div>
+        <div class="section-title">
+          <p class="eyebrow">Artifact A–06 / one evidence spine</p>
+          <h2 id="evidence-title">IntroductionからPosterまで、<br><em>同じ根拠を切らさない。</em></h2>
+        </div>
+        <p class="section-lede">セクションを選ぶと、AIが支援する仕事、traceable output、人間が所有する判断を確認できます。</p>
+
+        <div class="paper-path" role="tablist" aria-label="論文からポスターへの活用マップ">
+          <button type="button" class="is-active" role="tab" aria-selected="true" data-paper-stage="introduction"><span>01</span><strong>Introduction</strong><small>WHY / GAP</small></button>
+          <button type="button" role="tab" aria-selected="false" data-paper-stage="methods"><span>02</span><strong>Methods</strong><small>HOW / VERSION</small></button>
+          <button type="button" role="tab" aria-selected="false" data-paper-stage="results"><span>03</span><strong>Results</strong><small>WHAT / UNCERTAINTY</small></button>
+          <button type="button" role="tab" aria-selected="false" data-paper-stage="discussion"><span>04</span><strong>Discussion</strong><small>SO WHAT / LIMIT</small></button>
+          <button type="button" role="tab" aria-selected="false" data-paper-stage="poster"><span>05</span><strong>Poster</strong><small>ONE VISUAL STORY</small></button>
+        </div>
+
+        <article class="paper-detail" aria-live="polite">
+          <div><span data-paper-index>01 / INTRODUCTION</span><h3 data-paper-title>Evidence gapを定義する</h3><p data-paper-purpose>curved corneal constructの形状再現性を、sample-levelかつ追跡可能に評価する必要性を整理。</p></div>
+          <dl>
+            <div><dt>AI SUPPORT</dt><dd data-paper-ai>文献探索を材料・造形・geometry QCへ分担し、主張ごとの原典と反証を整理。</dd></div>
+            <div><dt>TRACEABLE OUTPUT</dt><dd data-paper-output>evidence table / citation trail / gap statement draft</dd></div>
+            <div><dt>HUMAN OWNS</dt><dd data-paper-human>研究上のgap、採用する根拠、研究目的の最終表現。</dd></div>
+          </dl>
+        </article>
+
+        <div class="evidence-spine">
+          <span>ONE EVIDENCE SPINE</span><i></i><b>source → sample → code → figure → claim → poster</b>
+        </div>
+      </div>
+    </section>
+
+    <section class="boundary-section section" id="boundary" aria-labelledby="boundary-title">
+      <div class="section-marker"><span>07</span><small>SAFETY BOUNDARY</small></div>
+      <div class="section-title">
+        <p class="eyebrow">Automation is conditional</p>
+        <h2 id="boundary-title">AIに任せる実行と、<br><em>人間が担う科学的判断。</em></h2>
+      </div>
+      <p class="section-lede">安全境界は「AIを使う／使わない」ではなく、どの判断に誰の承認が必要かを成果物ごとに固定します。</p>
+
+      <div class="boundary-matrix" role="table" aria-label="AIと人間の責任分担">
+        <div class="boundary-head" role="row"><span>TASK</span><span>AI MAY EXECUTE</span><span>HUMAN MUST REVIEW</span><span>HUMAN ONLY</span></div>
+        <div role="row"><strong>Data access</strong><span>承認済みpathの読込・schema検証</span><span>保存・ログ・共有範囲</span><b>患者／未公開dataの利用許可</b></div>
+        <div role="row"><strong>Geometry QC</strong><span>registration・metric・overlay</span><span>校正・failure・manual reference</span><b>metricの科学的妥当性</b></div>
+        <div role="row"><strong>Sample state</strong><span>ruleに基づくflag付与</span><span>flag理由と影響</span><b>除外・再測定・採用</b></div>
+        <div role="row"><strong>Statistics</strong><span>承認済みplanの実行</span><span>assumption・effect・uncertainty</span><b>分析計画と解釈</b></div>
+        <div role="row"><strong>Scientific claim</strong><span>claim–evidence照合・反証探索</span><span>原典・表現・限界</span><b>最終主張と著者責任</b></div>
+        <div role="row"><strong>Dissemination</strong><span>figure・caption・poster生成</span><span>誤解・不都合な結果・provenance</span><b>公開・提出・臨床的表現</b></div>
+      </div>
+
+      <div class="stop-triggers">
+        <div><span>STOP 01</span><p>データ利用許可、単位、sample hierarchyが不明。</p></div>
+        <div><span>STOP 02</span><p>結果がmetric定義やmanual referenceと矛盾。</p></div>
+        <div><span>STOP 03</span><p>AIが除外、因果、臨床的意味を自動確定しようとした。</p></div>
+        <div><span>STOP 04</span><p>図からsource sample・code versionへ戻れない。</p></div>
+      </div>
+    </section>
+
+    <section class="poster-section" id="poster" aria-labelledby="poster-title">
+      <div class="poster-copy">
+        <p class="eyebrow">Artifact A–07 / print-ready output</p>
+        <h2 id="poster-title">レビューの場では、<br>一枚で判断できる。</h2>
+        <p>問題、方法、全sampleの結果、失敗例、限界、次の実験をA3/A0比率の一枚へ。ブラウザから印刷またはPDF保存できます。</p>
+        <div class="poster-actions">
+          <a class="button button-light" href="geometry-qc-poster.html">ポスターを開く <span>↗</span></a>
+          <a class="button button-outline" href="../posters/corneal-geometry-qc-portfolio-poster.pdf">PDFを開く <span>↗</span></a>
+          <button class="button button-outline" type="button" data-print-portfolio>このportfolioを印刷 <span>↗</span></button>
+        </div>
+      </div>
+      <a class="poster-preview" href="geometry-qc-poster.html" aria-label="Geometry QCポスターを開く">
+        <div class="mini-poster">
+          <header><span>GEOMETRY / QC</span><b>SYNTHETIC DEMO</b></header>
+          <h3>CAN A CURVED CORNEAL CONSTRUCT<br>MATCH ITS INTENDED GEOMETRY?</h3>
+          <div class="mini-poster-grid">
+            <div class="mini-column"><i></i><i></i><i></i><i></i></div>
+            <div class="mini-hero-figure"><span></span><span></span><span></span><b>8 / 12</b></div>
+            <div class="mini-column"><i></i><i></i><i></i></div>
+          </div>
+          <footer><span>CODE → 3D → FIGURE → CLAIM</span><b>HUMAN VERIFIED</b></footer>
+        </div>
+        <span class="preview-label">OPEN FULL POSTER ↗</span>
+      </a>
+    </section>
+
+    <section class="closing-section">
+      <div class="closing-mark">7→1</div>
+      <div>
+        <p class="eyebrow">The portfolio thesis</p>
+        <h2>AI、data、3D、designを、<br>一つの研究判断へ。</h2>
+      </div>
+      <div class="closing-copy">
+        <p>価値は「AIを使えること」ではなく、研究者の問いを受け取り、複雑な作業を追跡可能にし、他の人が検証・判断できる成果物へ統合できること。</p>
+        <a href="../../shared/website/pages/research-superpowers.html">5 Research Superpowersを見る <span>→</span></a>
+        <a href="../../shared/website/pages/index.html">BiG Lab資料ポータルへ戻る <span>→</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="portfolio-footer">
+    <div><strong>TAKUMI SUEHARA / RESEARCH SYSTEMS</strong><span>CLAUDE CODE × CLAUDE SCIENCE × HUMAN JUDGMENT</span></div>
+    <div><span>CASE 001 / CORNEAL CONSTRUCT GEOMETRY QC</span><span>17 JUL 2026 · AUSTRALIA/SYDNEY</span></div>
+  </footer>
+
+  <script src="../website-assets/research-portfolio.js"></script>
+  <script src="../../shared/website/assets/bilingual-data.js"></script>
+  <script src="../../shared/website/assets/bilingual.js"></script>
+  <script src="../../shared/website/assets/copy-tools.js"></script>
+  <script src="../../shared/website/assets/site-directory.js"></script>
+</body>
+</html>

@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#edf2f0">
+  <meta name="description" content="BiG Labの「Analysis plan — Curved
+Corneal Construct Geometry QC」に関するMarkdown正本のHTML閲覧版。">
+  <title>Analysis plan — Curved Corneal Construct Geometry
+QC · BiG Lab</title>
+  <link rel="alternate" type="text/markdown" href="analysis-plan.md" title="Markdown source">
+    <link rel="stylesheet" href="../../../shared/website/assets/research-document.css">
+    </head>
+<body class="research-document">
+  <a class="skip-link" href="#document-content">本文へ移動</a>
+
+  <header class="document-topbar">
+    <div class="document-topbar-inner">
+      <a class="document-brand" href="../../../shared/website/index.html" aria-label="BiG Lab 資料一覧へ">
+        <span class="document-brand-mark" aria-hidden="true">B</span>
+        <span class="document-brand-copy">
+          <strong>BiG Lab</strong>
+          <small>Research library</small>
+        </span>
+      </a>
+
+      <nav class="document-actions" aria-label="文書ナビゲーション">
+        <a href="../../../shared/website/index.html">資料一覧</a>
+        <a class="source-action" href="analysis-plan.md">Markdown正本 <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <header class="document-hero">
+    <div class="document-hero-copy">
+      <p class="document-kicker">
+        <span aria-hidden="true"></span>
+        WORKING TEMPLATE
+      </p>
+      <h1 class="long-title">Analysis plan — Curved Corneal Construct
+Geometry QC</h1>
+      <p class="document-description">BiG Labの「Analysis plan — Curved
+Corneal Construct Geometry QC」に関するMarkdown正本のHTML閲覧版。</p>
+
+      <dl class="document-meta">
+                        <div>
+          <dt>Format</dt>
+          <dd>HTML reading view</dd>
+        </div>
+      </dl>
+    </div>
+
+    <aside class="format-map" aria-label="MarkdownからHTMLへの文書フロー">
+      <div class="format-map-head">
+        <span>DOCUMENT PIPELINE</span>
+        <small>ONE SOURCE · TWO VIEWS</small>
+      </div>
+      <div class="format-map-flow">
+        <div class="format-node source-node">
+          <span>CANONICAL</span>
+          <strong>Markdown</strong>
+          <small>内容の正本</small>
+        </div>
+        <span class="format-arrow" aria-hidden="true">→</span>
+        <div class="format-node view-node">
+          <span>READING VIEW</span>
+          <strong>HTML</strong>
+          <small>閲覧用レンダリング</small>
+        </div>
+      </div>
+      <p>内容は同一に保ち、画面では読解・移動・参照に適した構造で表示します。</p>
+    </aside>
+  </header>
+
+  <div class="document-rule" aria-hidden="true">
+    <span></span><span></span><span></span>
+  </div>
+
+  <div class="document-shell">
+        <aside class="document-toc" aria-labelledby="document-toc-title">
+      <p id="document-toc-title">On this page</p>
+      <nav aria-label="目次">
+        <ul>
+        <li><a
+        href="#analysis-plan-curved-corneal-construct-geometry-qc"
+        id="toc-analysis-plan-curved-corneal-construct-geometry-qc">Analysis
+        plan — Curved Corneal Construct Geometry QC</a>
+        <ul>
+        <li><a href="#endpoint-classification"
+        id="toc-endpoint-classification">1. Endpoint
+        classification</a></li>
+        <li><a href="#registration-and-calibration"
+        id="toc-registration-and-calibration">2. Registration and
+        calibration</a></li>
+        <li><a href="#data-quality" id="toc-data-quality">3. Data
+        quality</a></li>
+        <li><a href="#descriptive-analysis"
+        id="toc-descriptive-analysis">4. Descriptive analysis</a></li>
+        <li><a href="#print-process要因との比較"
+        id="toc-print-process要因との比較">5.
+        Print-process要因との比較</a></li>
+        <li><a href="#group-comparison" id="toc-group-comparison">6.
+        Group comparison</a></li>
+        <li><a href="#small-sample統計-mlを使う場合"
+        id="toc-small-sample統計-mlを使う場合">7. Small-sample統計 /
+        MLを使う場合</a></li>
+        <li><a href="#figures" id="toc-figures">8. Figures</a></li>
+        <li><a href="#claims" id="toc-claims">9. Claims</a>
+        <ul>
+        <li><a href="#supported-if-criteria-pass"
+        id="toc-supported-if-criteria-pass">Supported if criteria
+        pass</a></li>
+        <li><a href="#not-supported-by-this-design"
+        id="toc-not-supported-by-this-design">Not supported by this
+        design</a></li>
+        </ul></li>
+        </ul></li>
+        </ul>
+      </nav>
+            <a class="toc-source-link" href="analysis-plan.md">
+        <span>Source</span>
+        <strong>analysis-plan.md</strong>
+      </a>
+          </aside>
+    
+    <main id="document-content" class="document-main">
+      <article class="document-content">
+                <p><a href="analysis-plan.html">HTML版を開く</a></p>
+                <h1
+                id="analysis-plan-curved-corneal-construct-geometry-qc">Analysis
+                plan — Curved Corneal Construct Geometry QC</h1>
+                <p>Status: draft / frozen / amended Linked charter
+                version: Analyst: Independent reviewer:</p>
+                <h2 id="endpoint-classification">1. Endpoint
+                classification</h2>
+                <p>Select one primary endpoint family:</p>
+                <ul class="task-list">
+                <li><label><input type="checkbox" />Radius deviation:
+                best-fit radius − design/nominal radius</label></li>
+                <li><label><input type="checkbox" />Wall-thickness
+                variation: local thickness distribution vs design
+                target</label></li>
+                <li><label><input type="checkbox" />Surface roughness:
+                surface RMSE between measured mesh and design
+                mesh</label></li>
+                <li><label><input type="checkbox" />Topographic chordal
+                error: layer-wise faceting deviation from the intended
+                smooth curve</label></li>
+                <li><label><input type="checkbox" />Volume change /
+                shrinkage rate: measured volume vs design/as-printed
+                volume</label></li>
+                <li><label><input type="checkbox" />Interlayer
+                misalignment: offset between adjacent printed
+                layers</label></li>
+                </ul>
+                <h2 id="registration-and-calibration">2. Registration
+                and calibration</h2>
+                <p>すべての実測メトリクスは、次の順で確立してから計算する。</p>
+                <ol type="1">
+                <li>Calibration: pixel/voxel
+                spacingを既知reference（calibration
+                target、CT/OCTのvoxel
+                size等）から確定する。calibrationのないデータは<code>not measurable</code>と記録する。</li>
+                <li>Registration: 実測mesh（photogrammetry /
+                structured-light / OCT由来）をdesign / nominal
+                meshへ位置合わせする（例: ICP、rigid +
+                scale補正の要否を明記）。</li>
+                <li>Registration RMSEを記録する。これはgeometry
+                errorではなくfit品質の診断指標である。RMSEが事前登録した上限を超えるsampleは、geometry
+                error値を確定値ではなくreview対象として扱う。</li>
+                </ol>
+                <pre class="text"><code>radius_deviation = best_fit_radius − design_radius
+wall_thickness_variation = local_thickness(x) − design_thickness(x)
+surface_rmse = RMS( measured_surface − design_surface ), over registered region
+chordal_error = max deviation of discretised print path from intended smooth curve
+volume_change = ( measured_volume − design_volume ) / design_volume
+shrinkage_rate = ( as_printed_dimension − post_process_dimension ) / as_printed_dimension</code></pre>
+                <p>派生指標を算出する場合は、単位・基準面・正負の符号規約を明記する。</p>
+                <h2 id="data-quality">3. Data quality</h2>
+                <ul>
+                <li>Raw scan / image / OCTデータを変更しない。</li>
+                <li>Segmentation失敗、透明試料での取得困難、calibration欠落は<code>qc_status</code>と<code>exclusion_reason</code>で記録し、削除しない。</li>
+                <li>Re-scanの理由を保持する。</li>
+                <li>Unit変換はscript化し、testする。</li>
+                <li>Registration非収束（RMSE上限超過）は自動除外せずflagする。</li>
+                </ul>
+                <h2 id="descriptive-analysis">4. Descriptive
+                analysis</h2>
+                <ul>
+                <li>全constructのoverlay（design vs
+                measured）を可視化する。</li>
+                <li>batch / print run / fabrication
+                strategy別の要約を、個々のconstructを隠さずに重ねる。</li>
+                <li>print
+                run、batch、construct各水準の<code>n</code>を報告する。</li>
+                <li>実際のcalibration値、registration
+                RMSE、除外率、protocol deviationを要約する。</li>
+                </ul>
+                <h2 id="print-process要因との比較">5.
+                Print-process要因との比較</h2>
+                <table>
+                <colgroup>
+                <col style="width: 33%" />
+                <col style="width: 33%" />
+                <col style="width: 33%" />
+                </colgroup>
+                <thead>
+                <tr>
+                <th>要因</th>
+                <th>想定される影響</th>
+                <th>使用/注意</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td>Fabrication strategy（mould-assisted / direct）</td>
+                <td>曲率保持能力、overhang制限との関係</td>
+                <td>交絡因子（材料・layer厚と同時変更しない）</td>
+                </tr>
+                <tr>
+                <td>Layer thickness</td>
+                <td>chordal error、surface roughness</td>
+                <td>増加でchordal error増大が予想される（Yuan et
+                al. 2026 §3.1）</td>
+                </tr>
+                <tr>
+                <td>Slice angle / overhang角度</td>
+                <td>direct printingでの構造安定性</td>
+                <td>45°制限（Yuan et al. 2026 Figure
+                5e）との関係を記録</td>
+                </tr>
+                <tr>
+                <td>Support構造の有無・除去</td>
+                <td>局所的な表面欠陥・寸法変化</td>
+                <td>除去手順・post-processingを記録</td>
+                </tr>
+                <tr>
+                <td>Material / bioink batch</td>
+                <td>shrinkage rate、volume change</td>
+                <td>batchをgroup化因子として扱う</td>
+                </tr>
+                </tbody>
+                </table>
+                <p>比較の単位はconstructとし、batchを階層効果として扱わない単純比較は避ける。</p>
+                <h2 id="group-comparison">6. Group comparison</h2>
+                <ul>
+                <li>Primary contrast:</li>
+                <li>Estimand:</li>
+                <li>Model:</li>
+                <li>Fixed effects:</li>
+                <li>Random effects（batch、print run）:</li>
+                <li>Covariates:</li>
+                <li>Multiple-comparison control:</li>
+                <li>Confidence / compatibility interval:</li>
+                <li>Missing-data
+                strategy（segmentation失敗等による欠損）:</li>
+                </ul>
+                <p>Batchを繰り返し測定・階層構造として扱う。全constructを独立sampleとみなす検定は使わない。</p>
+                <h2 id="small-sample統計-mlを使う場合">7.
+                Small-sample統計 / MLを使う場合</h2>
+                <p>Mechanistic / geometric
+                baseline（design−measured偏差の直接評価）を固定した後にのみ使用する。</p>
+                <ul>
+                <li>Group key for split（batchまたはprint run）:</li>
+                <li>Nested cross-validation:</li>
+                <li>Leave-one-batch-out test:</li>
+                <li>External prospective set（Gate 6）:</li>
+                <li>Uncertainty method:</li>
+                <li>Applicability-domain rule:</li>
+                <li>Leakage checks:</li>
+                <li>Frozen preprocessing pipeline:</li>
+                </ul>
+                <p>Minimum baselines: 設計値との単純差分、fabrication
+                strategy別の記述統計、（該当する場合のみ）回帰モデル。</p>
+                <h2 id="figures">8. Figures</h2>
+                <ol type="1">
+                <li>Construct-level design-vs-measured overlay（3D
+                or断面）</li>
+                <li>Metric別（radius / thickness / surface / chordal /
+                volume / shrinkage / interlayer）のbatch比較</li>
+                <li>Registration RMSE分布とflag基準</li>
+                <li>Print-process要因 vs geometry errorの散布図</li>
+                <li>Failure
+                registry（segmentation失敗、calibration欠落、外れ値を含む）</li>
+                <li>Synthetic demoとreal
+                pilotの構造監査比較（両者を明確にラベル分けする）</li>
+                </ol>
+                <p>各captionにendpoint、単位、experimental
+                <code>n</code>、summary
+                statistic、interval、除外件数、実測かsyntheticかを明記する。</p>
+                <h2 id="claims">9. Claims</h2>
+                <h3 id="supported-if-criteria-pass">Supported if
+                criteria pass</h3>
+                <ul>
+                <li></li>
+                </ul>
+                <h3 id="not-supported-by-this-design">Not supported by
+                this design</h3>
+                <ul>
+                <li>Young’s modulus、transparency、refractive
+                index/power、corneal permeabilityの性能（Gate
+                7以前）</li>
+                <li>生物学的機能・臨床適合性</li>
+                <li>経験的なfit（例: 単一のR²）のみに基づくfabrication
+                mechanismの断定</li>
+                <li>12構造体規模のpilotからの、印刷手法・材料一般への性能保証</li>
+                </ul>
+              </article>
+    </main>
+
+    <aside class="reading-gauge" aria-hidden="true">
+      <p>READING DEPTH</p>
+      <div class="gauge-scale">
+        <span>00</span>
+        <span>25</span>
+        <span>50</span>
+        <span>75</span>
+        <span>100</span>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="document-footer">
+    <div>
+      <strong>BiG Lab Research Library</strong>
+      <p>Markdown is canonical. HTML is the synchronized reading view.</p>
+    </div>
+    <div class="document-footer-links">
+      <a href="../../../shared/website/index.html">資料一覧へ戻る</a>
+      <a href="analysis-plan.md">Markdownを開く</a>
+    </div>
+  </footer>
+</body>
+</html>

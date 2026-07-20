@@ -1,0 +1,144 @@
+<!doctype html>
+<html$if(lang)$ lang="$lang$"$endif$>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#edf2f0">
+  $if(description)$<meta name="description" content="$description$">$endif$
+  <title>$title$ · BiG Lab</title>
+  $if(source-file)$<link rel="alternate" type="text/markdown" href="$source-file$" title="Markdown source">$endif$
+  $for(css)$
+  <link rel="stylesheet" href="$css$">
+  $endfor$
+  $for(header-includes)$
+  $header-includes$
+  $endfor$
+</head>
+<body class="research-document">
+  <a class="skip-link" href="#document-content">本文へ移動</a>
+
+  <header class="document-topbar">
+    <div class="document-topbar-inner">
+      <a class="document-brand" href="$home-url$" aria-label="BiG Lab 資料一覧へ">
+        <span class="document-brand-mark" aria-hidden="true">B</span>
+        <span class="document-brand-copy">
+          <strong>BiG Lab</strong>
+          <small>Research library</small>
+        </span>
+      </a>
+
+      <nav class="document-actions" aria-label="文書ナビゲーション">
+        <a href="$home-url$">資料一覧</a>
+        $if(source-file)$<a class="source-action" href="$source-file$">Markdown正本 <span aria-hidden="true">↗</span></a>$endif$
+      </nav>
+    </div>
+  </header>
+
+  <header class="document-hero">
+    <div class="document-hero-copy">
+      <p class="document-kicker">
+        <span aria-hidden="true"></span>
+        $if(section-label)$$section-label$$else$RESEARCH DOCUMENT$endif$
+      </p>
+      <h1$if(title-class)$ class="$title-class$"$endif$>$title$</h1>
+      $if(description)$<p class="document-description">$description$</p>$endif$
+
+      <dl class="document-meta">
+        $if(date)$
+        <div>
+          <dt>Date</dt>
+          <dd>$date$</dd>
+        </div>
+        $endif$
+        $if(status)$
+        <div>
+          <dt>Status</dt>
+          <dd>$status$</dd>
+        </div>
+        $endif$
+        <div>
+          <dt>Format</dt>
+          <dd>HTML reading view</dd>
+        </div>
+      </dl>
+    </div>
+
+    <aside class="format-map" aria-label="MarkdownからHTMLへの文書フロー">
+      <div class="format-map-head">
+        <span>DOCUMENT PIPELINE</span>
+        <small>ONE SOURCE · TWO VIEWS</small>
+      </div>
+      <div class="format-map-flow">
+        <div class="format-node source-node">
+          <span>CANONICAL</span>
+          <strong>Markdown</strong>
+          <small>内容の正本</small>
+        </div>
+        <span class="format-arrow" aria-hidden="true">→</span>
+        <div class="format-node view-node">
+          <span>READING VIEW</span>
+          <strong>HTML</strong>
+          <small>閲覧用レンダリング</small>
+        </div>
+      </div>
+      <p>内容は同一に保ち、画面では読解・移動・参照に適した構造で表示します。</p>
+    </aside>
+  </header>
+
+  <div class="document-rule" aria-hidden="true">
+    <span></span><span></span><span></span>
+  </div>
+
+  <div class="document-shell">
+    $if(toc)$
+    <aside class="document-toc" aria-labelledby="document-toc-title">
+      <p id="document-toc-title">On this page</p>
+      <nav aria-label="目次">
+        $toc$
+      </nav>
+      $if(source-file)$
+      <a class="toc-source-link" href="$source-file$">
+        <span>Source</span>
+        <strong>$source-file$</strong>
+      </a>
+      $endif$
+    </aside>
+    $endif$
+
+    <main id="document-content" class="document-main">
+      <article class="document-content">
+        $for(include-before)$
+        $include-before$
+        $endfor$
+        $body$
+        $for(include-after)$
+        $include-after$
+        $endfor$
+      </article>
+    </main>
+
+    <aside class="reading-gauge" aria-hidden="true">
+      <p>READING DEPTH</p>
+      <div class="gauge-scale">
+        <span>00</span>
+        <span>25</span>
+        <span>50</span>
+        <span>75</span>
+        <span>100</span>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="document-footer">
+    <div>
+      <strong>BiG Lab Research Library</strong>
+      <p>Markdown is canonical. HTML is the synchronized reading view.</p>
+    </div>
+    <div class="document-footer-links">
+      <a href="$home-url$">資料一覧へ戻る</a>
+      $if(source-file)$<a href="$source-file$">Markdownを開く</a>$endif$
+    </div>
+  </footer>
+</body>
+</html>

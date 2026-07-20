@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Yuan氏の論文が示すevidence gapを、4週間のCurved Corneal Construct Geometry QCへ落とし込んだ実行案。">
+  <meta name="theme-color" content="#f3f5f7">
+  <title>BiG LabでTakumiができること — BiG Lab Intern Guide</title>
+  <link rel="stylesheet" href="../assets/claude-science-guide.css">
+  <link rel="stylesheet" href="../assets/big-lab-portal.css">
+  <link rel="stylesheet" href="../assets/bilingual.css">
+  <link rel="stylesheet" href="../assets/copy-tools.css">
+  <link rel="stylesheet" href="../assets/site-directory.css">
+  <link rel="stylesheet" href="../assets/google-docs-typography.css">
+  <link rel="stylesheet" href="../assets/monochrome-theme.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <header class="site-header">
+    <div class="header-main">
+      <a class="brand" href="../pages/index.html" aria-label="BiG Lab資料ポータル ホーム">
+        <span class="brand-mark" aria-hidden="true">BL</span>
+        <span class="brand-copy">BiG Lab Working Guide<small>INTERN × CLAUDE / HTML EDITION</small></span>
+      </a>
+      <span class="header-note">Updated 16 Jul 2026</span>
+    </div>
+    <nav class="site-nav" aria-label="インターン資料">
+      <div class="site-nav-inner">
+        <a href="../pages/index.html">統合ホーム</a>
+        <a href="../pages/intern-overview.html">ラボ概要</a>
+        <a href="../../../photopolymer-biomaterials/website-pages/photopolymer-biomaterials-review.html">4論文</a>
+        <a href="../pages/intern-yunong-yuan.html">Yuan研究</a>
+        <a href="../pages/intern-contribution-map.html" aria-current="page">できること</a>
+        <a href="../pages/intern-contribution-strategy.html">貢献戦略</a>
+        <a href="../pages/intern-roadmap.html">12週間</a>
+        <a href="../pages/intern-meeting.html">面談準備</a>
+        <a href="../pages/claude-code.html">Claude Code</a>
+        <a href="../pages/claude-science-overview.html">Claude Science</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-hero doc-hero" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <div>
+          <p class="spec-label">Intern manual / I-06</p>
+          <h1 id="hero-title">BiG LabでTakumiができること</h1>
+          <p class="hero-copy">Yuan氏の論文が示すevidence gapを、4週間のCurved Corneal Construct Geometry QCへ落とし込んだ実行案。</p>
+          <div class="doc-meta">
+            <span>更新 16 Jul 2026</span>
+            <span>4-WEEK PILOT MAP</span>
+            <span>約12分</span>
+          </div>
+        </div>
+        <aside class="doc-abstract">
+          <div class="doc-index">I-06</div>
+          <strong>この資料の位置づけ</strong>
+          <p>依頼文のPIG表記に関する前提、優先順位、成果物、成功基準、安全境界、英語pitchを一つにまとめています。</p>
+        </aside>
+      </div>
+    </section>
+
+    <div class="page-layout">
+      <aside class="toc doc-toc" aria-label="この資料の目次">
+        <p class="toc-title">On this page</p>
+<ul>
+<li><a href="#pig表記について" id="toc-pig表記について">1.
+「PIG」表記について</a></li>
+<li><a href="#私の役割を一文で言う" id="toc-私の役割を一文で言う">2.
+私の役割を一文で言う</a></li>
+<li><a href="#優先順位つき貢献候補" id="toc-優先順位つき貢献候補">3.
+優先順位つき貢献候補</a></li>
+<li><a href="#第一候補-curved-corneal-construct-geometry-qc"
+id="toc-第一候補-curved-corneal-construct-geometry-qc">4. 第一候補 —
+Curved Corneal Construct Geometry QC</a></li>
+<li><a href="#第二候補-photocrosslinking-evidence-registry"
+id="toc-第二候補-photocrosslinking-evidence-registry">5. 第二候補 —
+Photocrosslinking Evidence Registry</a></li>
+<li><a href="#最初の4週間" id="toc-最初の4週間">6. 最初の4週間</a></li>
+<li><a href="#週間で先に見せられるもの"
+id="toc-週間で先に見せられるもの">7. 2週間で先に見せられるもの</a></li>
+<li><a href="#私が判断しないこと" id="toc-私が判断しないこと">8.
+私が判断しないこと</a></li>
+<li><a href="#bigに確認する最小事項" id="toc-bigに確認する最小事項">9.
+BiGに確認する最小事項</a></li>
+<li><a href="#面談用30秒pitch" id="toc-面談用30秒pitch">10.
+面談用30秒pitch</a></li>
+<li><a href="#どの資料を使うか" id="toc-どの資料を使うか">11.
+どの資料を使うか</a></li>
+<li><a href="#根拠" id="toc-根拠">12. 根拠</a></li>
+</ul>
+      </aside>
+
+      <article class="article markdown-body">
+        <div class="source-bar">
+          <span>SOURCE / docs/contribution-map.md</span>
+          <a href="../../docs/contribution-map.md">元のMarkdownを開く</a>
+        </div>
+<p><a href="intern-contribution-map.html">HTML版を開く</a></p>
+<blockquote>
+<p><strong>結論:</strong>
+最初の価値は、新しいbioinkを単独で設計したり、AIに臨床判断をさせたりすることではない。BiGの既存実験を、<strong>比較可能・追跡可能・再実行可能な定量データへ変えること</strong>である。第一候補は、Yuan氏が論文中で明示した未解決課題に沿う
+<strong>Curved Corneal Construct Geometry QC</strong> とする。</p>
+</blockquote>
+<h2 id="pig表記について">1. 「PIG」表記について</h2>
+<p>依頼文の「PIG」は、公開情報で確認できたUniversity of Sydneyの
+<strong>Biomedical Innovation Group（BIG /
+このポータルではBiG）</strong>
+を指すものとして整理した。対象フォルダ、既存資料、Yunong
+Yuan氏の所属・共同研究、公開ラボ名のいずれからも、この文脈の研究組織としての「PIG」は確認できなかったためである。</p>
+<p>これは名称の推定であり、別のproject /
+groupを意味する場合は、その正式名称に合わせて文書を更新する。</p>
+<h2 id="私の役割を一文で言う">2. 私の役割を一文で言う</h2>
+<p><strong>I can turn experimental images, print settings and assay
+outputs into traceable, reproducible evidence that helps the team
+compare constructs and decide the next experiment.</strong></p>
+<p>日本語では、次の役割である。</p>
+<blockquote>
+<p>実験画像、print条件、材料batch、assay結果を同じsample /
+runへ結び、研究者が次の実験を判断できるQCと解析成果物を作る。</p>
+</blockquote>
+<h2 id="優先順位つき貢献候補">3. 優先順位つき貢献候補</h2>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>優先</th>
+<th>貢献</th>
+<th>具体的な成果物</th>
+<th>研究上の価値</th>
+<th>最初の境界</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P0</td>
+<td><strong>Curved Corneal Construct Geometry QC</strong></td>
+<td>radius error、local thickness、surface / chordal
+errorのoverlay、CSV、1ページreport</td>
+<td>Yuan氏のcornea
+reviewが指摘する「形状誤差の定量報告不足」を直接埋める</td>
+<td>既存の承認済みOCT / scan / image、1 construct type、1–2 metrics</td>
+</tr>
+<tr>
+<td>P0</td>
+<td><strong>Run-level Evidence Registry</strong></td>
+<td>data dictionary、sample–run–batch対応表、unit / missingness
+check</td>
+<td>材料、光、造形、力学、細胞を同じexperimental unitへ接続</td>
+<td>欠測を推測で埋めず、sourceとmeasurementを分離</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><strong>Photocrosslinking Condition &amp; Safety
+Matrix</strong></td>
+<td>PI全成分、濃度、波長、照度、時間、dose、post-cure、assayの比較表</td>
+<td>指定4論文が示す性能・細胞安全性trade-offを可視化</td>
+<td>文献整理と既存metadataまで。PI・DNA assayの選定は研究者が行う</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><strong>Simulation–Experiment Comparison</strong></td>
+<td>measured / predicted trace、residual、parameter table、validation
+report</td>
+<td>Yuan氏のphysics-based workflowを再現し、model
+assumptionを明確化</td>
+<td>小さな既存dataset、既知baseline、外挿禁止</td>
+</tr>
+<tr>
+<td>P2</td>
+<td><strong>Drug / Growth-factor Release Analysis</strong></td>
+<td>release curve、burst / lag指標、model fit、condition comparison</td>
+<td>hydrogel mechanicsとtransportをつなぐ</td>
+<td>十分なtime pointと研究者承認がある場合のみ</td>
+</tr>
+<tr>
+<td>P2</td>
+<td><strong>Reusable Analysis Package</strong></td>
+<td>versioned code、tests、config、README、method card</td>
+<td>次のoperator・batchでも同じ方法を再実行できる</td>
+<td>P0 pilotがmanual referenceで検証された後</td>
+</tr>
+</tbody>
+</table>
+<h2 id="第一候補-curved-corneal-construct-geometry-qc">4. 第一候補 —
+Curved Corneal Construct Geometry QC</h2>
+<h3 id="なぜこのテーマか">4.1 なぜこのテーマか</h3>
+<p>Yuan氏らのcornea
+reviewは、曲面constructについて次の定量値がsystematicに報告されていないと指摘している。[1]</p>
+<ul>
+<li>design radiusに対する実測radius error</li>
+<li>local wall-thickness variation</li>
+<li>surface roughness</li>
+<li>layer-by-layer造形に由来するtopographic chordal error</li>
+</ul>
+<p>さらに、test domeを条件を変えて印刷し、high-resolution
+scanningまたはOCTで実測する案まで示している。つまり、これは外部から作った思いつきではなく、<strong>Yuan氏自身が明記したevidence
+gap</strong>である。</p>
+<h3 id="最小のresearch-question">4.2 最小のresearch question</h3>
+<blockquote>
+<p>承認済みの既存画像またはscanから、1種類のcurved corneal
+constructについて、設計値に対するradiusまたはthicknessの誤差を、再実行可能な方法で測定できるか。</p>
+</blockquote>
+<h3 id="入力と出力">4.3 入力と出力</h3>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>必要な入力</th>
+<th>作る出力</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>design geometryまたはnominal radius / thickness</td>
+<td>design–measured overlay</td>
+</tr>
+<tr>
+<td>raw OCT、3D scan、cross-section imageのいずれか</td>
+<td>per-sample metric table</td>
+</tr>
+<tr>
+<td>pixel / voxel calibration</td>
+<td>calibration recordとunit check</td>
+</tr>
+<tr>
+<td>sample ID、print run、bioink batch</td>
+<td>traceable registry</td>
+</tr>
+<tr>
+<td>研究者が選んだmanual reference</td>
+<td>error / agreement report</td>
+</tr>
+<tr>
+<td>除外ルールとprimary metric</td>
+<td>failure examplesを含む1ページsummary</td>
+</tr>
+</tbody>
+</table>
+<h3 id="成功基準">4.4 成功基準</h3>
+<ul>
+<li>raw dataを変更せず、processed dataと明確に分ける。</li>
+<li>全metricを
+<code>sample → print run → bioink batch → method version</code>
+まで追跡できる。</li>
+<li>calibrationがない画像をµmへ勝手に変換せず、pixel単位または<code>not measurable</code>とする。</li>
+<li>少なくとも5例、または研究者が妥当とする小規模setでmanual
+referenceと比較する。</li>
+<li>良い例だけでなく、blur、欠損、曲面外、segmentation
+failureをreportに残す。</li>
+<li>同じinputとversionからtable・figure・reportを再生成できる。</li>
+</ul>
+<h2 id="第二候補-photocrosslinking-evidence-registry">5. 第二候補 —
+Photocrosslinking Evidence Registry</h2>
+<p>指定4論文を統合すると、次の因果鎖で記録する必要がある。</p>
+<pre class="text"><code>material / batch
+  → initiator / wavelength / irradiance / time
+  → conversion / network / geometry
+  → mechanics / transparency / transport
+  → viability / metabolism / phenotype / DNA damage
+  → tissue function and translational claim</code></pre>
+<h3 id="最低限のfield">5.1 最低限のfield</h3>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>区分</th>
+<th>必須field</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Identity</td>
+<td>sample ID、print run ID、bioink batch、operator、date</td>
+</tr>
+<tr>
+<td>Material</td>
+<td>polymer / collagen
+type、source、lot、concentration、functionalisation、additives</td>
+</tr>
+<tr>
+<td>Photochemistry</td>
+<td>PIの全成分、各濃度、wavelength、irradiance、exposure
+time、post-cure</td>
+</tr>
+<tr>
+<td>Printing</td>
+<td>printer / optics、layer / voxel、temperature、design version、build
+orientation</td>
+</tr>
+<tr>
+<td>Geometry</td>
+<td>radius、thickness、layer continuity、design deviation、method /
+calibration</td>
+</tr>
+<tr>
+<td>Function</td>
+<td>transparency / refractive measurement、mechanicsのtest mode、release
+/ permeability</td>
+</tr>
+<tr>
+<td>Biology</td>
+<td>cell type、passage、density、assay、time point、spatial region</td>
+</tr>
+<tr>
+<td>Safety</td>
+<td>viability、metabolism、phenotype、承認された場合のDNA-damage
+assay</td>
+</tr>
+<tr>
+<td>Provenance</td>
+<td>raw path、processed path、code version、parameter
+file、reviewer</td>
+</tr>
+</tbody>
+</table>
+<p>光doseは <code>irradiance (mW/cm²) × time (s) / 1000</code> で
+<code>J/cm²</code>へ計算する。ただし、同じdoseでも波長、PI吸収、散乱、厚さ、oxygen、kineticsが違えば同じ硬化・毒性にはならない。doseを安全性の代替指標にしない。</p>
+<h2 id="最初の4週間">6. 最初の4週間</h2>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>週</th>
+<th>作業</th>
+<th>成果物</th>
+<th>Go / No-go</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Week 1 — Scope</td>
+<td>Yuan氏 / supervisorと問い、experimental unit、primary
+metric、データ区分を固定</td>
+<td>1ページcharter、data dictionary、5例のinventory</td>
+<td>calibration、design reference、利用許可のいずれもない場合はregistry
+prototypeへ切替</td>
+</tr>
+<tr>
+<td>Week 2 — Baseline</td>
+<td>1–2例を手動で測り、loader・calibration・metricを実装</td>
+<td>manual reference、test data、QC overlay</td>
+<td>manualとcodeの差の原因を説明できない場合はmetricを増やさない</td>
+</tr>
+<tr>
+<td>Week 3 — Batch</td>
+<td>承認された小規模setへ適用し、失敗条件を分類</td>
+<td>metric table、failure log、condition plot</td>
+<td>sample独立性やbatch構造が不明なら推測統計を行わない</td>
+</tr>
+<tr>
+<td>Week 4 — Verify</td>
+<td>研究者review、再実行、method / limitationを記述</td>
+<td>versioned code、figure、1ページreport、next-experiment案</td>
+<td>reviewerがrawと照合できたらpilot完了</td>
+</tr>
+</tbody>
+</table>
+<h2 id="週間で先に見せられるもの">7. 2週間で先に見せられるもの</h2>
+<p>研究データの許可に時間がかかる場合でも、次は公開情報だけで作れる。</p>
+<ol type="1">
+<li>指定4論文とYuan氏論文のrun-level data dictionary。</li>
+<li>synthetic dome画像を使ったcalibration / radius metricのunit
+test。</li>
+<li><code>dose</code>, <code>unit</code>, <code>missing field</code>,
+<code>duplicate sample ID</code> のQC checker。</li>
+<li>公開論文の条件を並べたevidence matrixとmissingness heatmap。</li>
+<li>実データへ移る前のpilot charterとdata-handling checklist。</li>
+</ol>
+<p>この段階では、実constructの性能や安全性について結論を出さない。</p>
+<h2 id="私が判断しないこと">8. 私が判断しないこと</h2>
+<ul>
+<li>PI、bioink、cell source、assayを独断で選ばない。</li>
+<li>wet-lab操作、human / animal sample、laser / UV、chemical
+handlingを訓練・監督なしで行わない。</li>
+<li>LIVE/DEADが高いことだけから、genotoxicityやclinical
+safetyを否定しない。</li>
+<li>画像の見た目だけでcell
+phenotype、透明性、屈折、力学を推定しない。</li>
+<li>sample数が少ない状態で、random
+splitの高R²を未知材料への性能として報告しない。</li>
+<li>欠測値をAIで補完して実測値のように扱わない。</li>
+<li>未承認の患者情報、未公開データ、共同研究データを外部AIや公開Gitへ送らない。</li>
+<li>AI生成コード・figure・文章を、原データと研究者reviewなしで公開しない。</li>
+</ul>
+<h2 id="bigに確認する最小事項">9. BiGに確認する最小事項</h2>
+<ol type="1">
+<li>今最も困っている比較はgeometry、optics、mechanics、cell、releaseのどれか。</li>
+<li>最初の4週間で使える既存データは何か。</li>
+<li>experimental unitはconstruct、print run、batch、image
+fieldのどれか。</li>
+<li>design referenceとpixel / voxel calibrationはあるか。</li>
+<li>raw / processed / codeの保存場所と命名規則は何か。</li>
+<li>AI・cloud・Gitへ入力可能なデータ区分は何か。</li>
+<li>scientific reviewerは誰で、どの基準なら成果物を再利用するか。</li>
+</ol>
+<h2 id="面談用30秒pitch">10. 面談用30秒pitch</h2>
+<blockquote>
+<p>I would like to start with a small, verifiable analysis rather than a
+broad AI project. Your cornea review identifies a clear gap in
+quantitative geometry reporting—radius error, wall-thickness variation,
+surface roughness and chordal error. If suitable OCT, scan or
+cross-section data already exist, I can build a traceable QC pilot
+around one or two of those metrics, compare it with manual references,
+document failure cases, and deliver reproducible code and a one-page
+report within four weeks. If the data are not yet available, I can first
+build the photocrosslinking and bioink evidence registry using approved
+public information.</p>
+</blockquote>
+<h2 id="どの資料を使うか">11. どの資料を使うか</h2>
+<ul>
+<li><strong>科学的根拠:</strong> <a
+href="../../../photopolymer-biomaterials/website-pages/photopolymer-biomaterials-review.html">光重合性バイオマテリアル4論文レビュー</a></li>
+<li><strong>Yuan氏の研究と直接のgap:</strong> <a
+href="intern-yunong-yuan.html">Yunong Yuan氏の研究ガイド</a></li>
+<li><strong>役割・能力・12週間の詳細版:</strong> <a
+href="intern-contribution-strategy.html">Takumiの研究貢献戦略</a></li>
+<li><strong>参加後の学習順:</strong> <a
+href="intern-roadmap.html">12週間の学習・研究参加ロードマップ</a></li>
+<li><strong>データとAIの境界:</strong> <a href="safety.html">Claude
+Science安全ガイド</a></li>
+</ul>
+<h2 id="根拠">12. 根拠</h2>
+<ol type="1">
+<li>Yuan Y, Lim KS, Sutton G, Wallace GG, You J. <a
+href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12988584/">3D Printing
+Strategies for Bioengineering Human Cornea</a>. <em>Advanced Healthcare
+Materials</em>. 2026;15:e02767.</li>
+<li>Huang H, Yuan Y, et al. <a
+href="https://pubmed.ncbi.nlm.nih.gov/41742708/">A New Bioprinted
+Dual-Layered Corneal Structure Using Collagen-Based Bioinks</a>.
+<em>Tissue Engineering Part A</em>. 2026.</li>
+<li>Yuan Y, et al. <a
+href="https://doi.org/10.1088/1758-5090/ae6ad0">Principle-based
+multiphysics simulation for 3D bioprinting systems</a>.
+<em>Biofabrication</em>. 2026;18:032001.</li>
+<li>University of Sydney. <a
+href="https://www.sydney.edu.au/medicine-health/our-research/research-centres/biomedical-innovation-group.html">Biomedical
+Innovation Group</a>. 2026-07-16確認。</li>
+</ol>
+<hr />
+<p>この文書は正式な研究計画ではなく、面談でscope・data・reviewerを決めるためのdiscussion
+draftである。</p>
+      </article>
+    </div>
+  </main>
+
+  <footer class="page-footer">
+    <div class="footer-inner">
+      <div><div class="footer-title">BiG Lab Intern Guide</div><p class="footer-copy">Markdownを読みやすいHTMLへ変換。正式な担当・データ利用・公開範囲は、研究室との合意を優先します。</p></div>
+      <div class="footer-meta">INTERN / I-06<br>LOCAL HTML EDITION</div>
+    </div>
+  </footer>
+  <div class="sr-only" id="copy-status" role="status" aria-live="polite"></div>
+  <script src="../assets/claude-science-guide.js"></script>
+  <script src="../assets/bilingual-data.js"></script>
+  <script src="../assets/bilingual.js"></script>
+  <script src="../assets/copy-tools.js"></script>
+  <script src="../assets/site-directory.js"></script>
+</body>
+</html>

@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#edf2f0">
+  <meta name="description" content="BiG Labの「要件定義 — Microneedle
+Drug Release Profile Research
+Roadmap」に関するMarkdown正本のHTML閲覧版。">
+  <title>要件定義 — Microneedle Drug Release Profile Research
+Roadmap · BiG Lab</title>
+  <link rel="alternate" type="text/markdown" href="requirements.md" title="Markdown source">
+    <link rel="stylesheet" href="../../shared/website/assets/research-document.css">
+    </head>
+<body class="research-document">
+  <a class="skip-link" href="#document-content">本文へ移動</a>
+
+  <header class="document-topbar">
+    <div class="document-topbar-inner">
+      <a class="document-brand" href="../../shared/website/index.html" aria-label="BiG Lab 資料一覧へ">
+        <span class="document-brand-mark" aria-hidden="true">B</span>
+        <span class="document-brand-copy">
+          <strong>BiG Lab</strong>
+          <small>Research library</small>
+        </span>
+      </a>
+
+      <nav class="document-actions" aria-label="文書ナビゲーション">
+        <a href="../../shared/website/index.html">資料一覧</a>
+        <a class="source-action" href="requirements.md">Markdown正本 <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <header class="document-hero">
+    <div class="document-hero-copy">
+      <p class="document-kicker">
+        <span aria-hidden="true"></span>
+        PROJECT REQUIREMENTS
+      </p>
+      <h1 class="long-title">要件定義 — Microneedle Drug Release Profile
+Research Roadmap</h1>
+      <p class="document-description">BiG Labの「要件定義 — Microneedle
+Drug Release Profile Research
+Roadmap」に関するMarkdown正本のHTML閲覧版。</p>
+
+      <dl class="document-meta">
+                        <div>
+          <dt>Format</dt>
+          <dd>HTML reading view</dd>
+        </div>
+      </dl>
+    </div>
+
+    <aside class="format-map" aria-label="MarkdownからHTMLへの文書フロー">
+      <div class="format-map-head">
+        <span>DOCUMENT PIPELINE</span>
+        <small>ONE SOURCE · TWO VIEWS</small>
+      </div>
+      <div class="format-map-flow">
+        <div class="format-node source-node">
+          <span>CANONICAL</span>
+          <strong>Markdown</strong>
+          <small>内容の正本</small>
+        </div>
+        <span class="format-arrow" aria-hidden="true">→</span>
+        <div class="format-node view-node">
+          <span>READING VIEW</span>
+          <strong>HTML</strong>
+          <small>閲覧用レンダリング</small>
+        </div>
+      </div>
+      <p>内容は同一に保ち、画面では読解・移動・参照に適した構造で表示します。</p>
+    </aside>
+  </header>
+
+  <div class="document-rule" aria-hidden="true">
+    <span></span><span></span><span></span>
+  </div>
+
+  <div class="document-shell">
+        <aside class="document-toc" aria-labelledby="document-toc-title">
+      <p id="document-toc-title">On this page</p>
+      <nav aria-label="目次">
+        <ul>
+        <li><a
+        href="#要件定義-microneedle-drug-release-profile-research-roadmap"
+        id="toc-要件定義-microneedle-drug-release-profile-research-roadmap">要件定義
+        — Microneedle Drug Release Profile Research Roadmap</a>
+        <ul>
+        <li><a href="#目的" id="toc-目的">1. 目的</a></li>
+        <li><a href="#想定利用者" id="toc-想定利用者">2.
+        想定利用者</a></li>
+        <li><a href="#必須コンテンツ" id="toc-必須コンテンツ">3.
+        必須コンテンツ</a>
+        <ul>
+        <li><a href="#研究定義" id="toc-研究定義">3.1 研究定義</a></li>
+        <li><a href="#roadmap" id="toc-roadmap">3.2 Roadmap</a></li>
+        <li><a href="#実験解析設計" id="toc-実験解析設計">3.3
+        実験・解析設計</a></li>
+        <li><a href="#図表" id="toc-図表">3.4 図表</a></li>
+        <li><a href="#研究資産への導線" id="toc-研究資産への導線">3.5
+        研究資産への導線</a></li>
+        </ul></li>
+        <li><a href="#functional-requirements"
+        id="toc-functional-requirements">4. Functional
+        requirements</a></li>
+        <li><a href="#non-functional-requirements"
+        id="toc-non-functional-requirements">5. Non-functional
+        requirements</a></li>
+        <li><a href="#scientific-requirements"
+        id="toc-scientific-requirements">6. Scientific
+        requirements</a></li>
+        <li><a href="#out-of-scope" id="toc-out-of-scope">7. Out of
+        scope</a></li>
+        <li><a href="#acceptance-checklist"
+        id="toc-acceptance-checklist">8. Acceptance checklist</a></li>
+        </ul></li>
+        </ul>
+      </nav>
+            <a class="toc-source-link" href="requirements.md">
+        <span>Source</span>
+        <strong>requirements.md</strong>
+      </a>
+          </aside>
+    
+    <main id="document-content" class="document-main">
+      <article class="document-content">
+                <p><a href="requirements.html">HTML版を開く</a></p>
+                <h1
+                id="要件定義-microneedle-drug-release-profile-research-roadmap">要件定義
+                — Microneedle Drug Release Profile Research Roadmap</h1>
+                <p>文書版: 1.0<br />
+                作成日: 2026-07-17<br />
+                対象:
+                <code>big-lab/drug-release-profile/site/index.html</code>（一覧ハブ:
+                <code>big-lab/html/index.html</code>）</p>
+                <h2 id="目的">1. 目的</h2>
+                <p>microneedle drug
+                delivery研究を開始する研究者が、<strong>release、skin
+                permeation、retentionを区別</strong>し、研究質問、分析法、実験、解析、small-data
+                ML、前向き検証を順序立てて進められるlocal-first研究ポータルを提供する。</p>
+                <h2 id="想定利用者">2. 想定利用者</h2>
+                <ul>
+                <li>microneedle / transdermal
+                delivery研究を始める学生・研究補助者</li>
+                <li>実験条件と解析設計をレビューするPI・supervisor</li>
+                <li>既存191-point datasetの再解析を担当するdata
+                analyst</li>
+                </ul>
+                <h2 id="必須コンテンツ">3. 必須コンテンツ</h2>
+                <h3 id="研究定義">3.1 研究定義</h3>
+                <ul>
+                <li>release、permeation、retention / recoveryの違い</li>
+                <li>primary research question、hypotheses、scope /
+                out-of-scope</li>
+                <li>原論文が直接測定したoutcomeの正確な位置づけ</li>
+                </ul>
+                <h3 id="roadmap">3.2 Roadmap</h3>
+                <ul>
+                <li>Gate 0からGate 7までの段階</li>
+                <li>各Gateに目的、主要タスク、成果物、Go /
+                Hold基準、想定期間</li>
+                <li>0–12週のpilotと、その後のprospective
+                studyを区別</li>
+                <li>wet-lab開始前のPI、SOP、ethics、training確認</li>
+                </ul>
+                <h3 id="実験解析設計">3.3 実験・解析設計</h3>
+                <ul>
+                <li>assay development / validation</li>
+                <li>release-only IVRT-like test</li>
+                <li>skin permeation test</li>
+                <li>endpoint retentionとmass balance</li>
+                <li>sampling replacement correction</li>
+                <li>experimental hierarchyとgroup-aware validation</li>
+                <li>kinetic / mechanistic / ML modelの役割と限界</li>
+                </ul>
+                <h3 id="図表">3.4 図表</h3>
+                <ul>
+                <li>microneedle–skin–Franz
+                cellのオリジナル科学イラスト</li>
+                <li>releaseからreceptor collectionまでの因果chain</li>
+                <li>概念的なburst / sustained / lagged profile図</li>
+                <li>phase roadmap表</li>
+                <li>minimum data dictionary表</li>
+                <li>model comparison表</li>
+                <li>sampling calculation表</li>
+                <li>risk register表</li>
+                <li>file / reference index表</li>
+                <li>既存Data S1の構造監査chart</li>
+                </ul>
+                <h3 id="研究資産への導線">3.5 研究資産への導線</h3>
+                <ul>
+                <li>集約済みPDF 4本</li>
+                <li>metadata-only文献 1本</li>
+                <li>Yuan et al. Data S1 / SI 2 / SI 3</li>
+                <li>依頼メール画像</li>
+                <li>charter、data dictionary、sampling plan、experiment
+                log、analysis plan</li>
+                <li>要件定義と実行用指示文</li>
+                </ul>
+                <h2 id="functional-requirements">4. Functional
+                requirements</h2>
+                <table>
+                <colgroup>
+                <col style="width: 33%" />
+                <col style="width: 33%" />
+                <col style="width: 33%" />
+                </colgroup>
+                <thead>
+                <tr>
+                <th>ID</th>
+                <th>要件</th>
+                <th>受入条件</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td>F-01</td>
+                <td>セクションnavigation</td>
+                <td>desktop / mobileで主要セクションへ移動できる</td>
+                </tr>
+                <tr>
+                <td>F-02</td>
+                <td>進捗checklist</td>
+                <td>check状態がbrowser localStorageに保存される</td>
+                </tr>
+                <tr>
+                <td>F-03</td>
+                <td>進捗表示</td>
+                <td>完了数とpercentageが即時更新される</td>
+                </tr>
+                <tr>
+                <td>F-04</td>
+                <td>Table filter</td>
+                <td>roadmap phaseをcategoryで絞り込める</td>
+                </tr>
+                <tr>
+                <td>F-05</td>
+                <td>Prompt copy</td>
+                <td>実行用指示文を1クリックでclipboardへコピーできる</td>
+                </tr>
+                <tr>
+                <td>F-06</td>
+                <td>Print</td>
+                <td>print / PDF保存向けlayoutを提供する</td>
+                </tr>
+                <tr>
+                <td>F-07</td>
+                <td>Direct files</td>
+                <td>local referenceとtemplateを相対linkで開ける</td>
+                </tr>
+                <tr>
+                <td>F-08</td>
+                <td>Offline-first</td>
+                <td>hero
+                imageを含め、表示にCDNや外部JavaScriptを必須としない</td>
+                </tr>
+                <tr>
+                <td>F-09</td>
+                <td>Reset</td>
+                <td>checklistを明示操作でresetできる</td>
+                </tr>
+                </tbody>
+                </table>
+                <h2 id="non-functional-requirements">5. Non-functional
+                requirements</h2>
+                <table>
+                <colgroup>
+                <col style="width: 33%" />
+                <col style="width: 33%" />
+                <col style="width: 33%" />
+                </colgroup>
+                <thead>
+                <tr>
+                <th>ID</th>
+                <th>要件</th>
+                <th>基準</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td>NF-01</td>
+                <td>Accessibility</td>
+                <td>semantic HTML、skip link、keyboard
+                focus、十分なcontrast、SVG title / desc</td>
+                </tr>
+                <tr>
+                <td>NF-02</td>
+                <td>Responsive</td>
+                <td>360px幅からdesktopまでhorizontal
+                overflowを抑える</td>
+                </tr>
+                <tr>
+                <td>NF-03</td>
+                <td>Performance</td>
+                <td>local assetsのみ。heroはlazy
+                loading対象外、その他画像はlazy load</td>
+                </tr>
+                <tr>
+                <td>NF-04</td>
+                <td>Scientific integrity</td>
+                <td>実測、文献、推奨、概念図をラベルで区別する</td>
+                </tr>
+                <tr>
+                <td>NF-05</td>
+                <td>Reproducibility</td>
+                <td>experimental
+                unit、units、provenance、raw/derivedを明示する</td>
+                </tr>
+                <tr>
+                <td>NF-06</td>
+                <td>Privacy</td>
+                <td>患者情報・未公開データをHTMLへ埋め込まない</td>
+                </tr>
+                <tr>
+                <td>NF-07</td>
+                <td>Maintainability</td>
+                <td>CSS / JSを分離し、data
+                attributeでbehaviorを接続する</td>
+                </tr>
+                <tr>
+                <td>NF-08</td>
+                <td>Printability</td>
+                <td>navigation /
+                controlsを除外し、A4で表とsectionが読める</td>
+                </tr>
+                </tbody>
+                </table>
+                <h2 id="scientific-requirements">6. Scientific
+                requirements</h2>
+                <ol type="1">
+                <li>累積回収量はsamplingによる取り出しとreplacementを補正する。</li>
+                <li>amount、amount/area、fraction of recovered
+                loadを別列として保存する。</li>
+                <li>nominal loadingとassay-confirmed
+                loadingを混同しない。</li>
+                <li>time pointは独立なexperimental
+                unitとしてsplitしない。</li>
+                <li>primary split unitは最低でもcurve / diffusion
+                cellとし、目的に応じてbatch / donorもgroup化する。</li>
+                <li>kinetic
+                modelはzero-order、first-order、Higuchi、Korsmeyer–Peppas等を比較できるが、適用範囲・geometry・初期区間・残差を確認する。</li>
+                <li><code>R²</code>単独でmodel selectionやmechanism
+                assignmentをしない。AICc、RMSE /
+                MAE、residual、parameter
+                plausibility、外部予測を併記する。</li>
+                <li>release-only、skin permeation、skin retention /
+                recoveryを同じtargetへ混合しない。</li>
+                <li>machine learningはmechanistic
+                baselineより後に実施し、grouped / external
+                validationとuncertaintyを必須にする。</li>
+                <li>acceptance
+                criteriaは結果を見てから設定せず、PIと事前に固定する。</li>
+                </ol>
+                <h2 id="out-of-scope">7. Out of scope</h2>
+                <ul>
+                <li>臨床用量・有効性・安全性の結論</li>
+                <li>ethics / biosafety / regulatory approvalの代替</li>
+                <li>microneedle専用規格が存在するという断定</li>
+                <li>未公開データの公開、購読資料の再配布</li>
+                <li>191-point
+                datasetだけから未知薬物一般化を保証するmodel</li>
+                </ul>
+                <h2 id="acceptance-checklist">8. Acceptance
+                checklist</h2>
+                <ul class="task-list">
+                <li><label><input
+                type="checkbox" /><code>big-lab/drug-release-profile/site/index.html</code>
+                がfile URLとlocal HTTPの両方で表示できる</label></li>
+                <li><label><input
+                type="checkbox" />CSS、JS、hero、reference、templateの相対linkが切れていない</label></li>
+                <li><label><input type="checkbox" />release /
+                permeationの区別がhero直下とmethods
+                sectionの両方にある</label></li>
+                <li><label><input
+                type="checkbox" />roadmapに各Gateのdeliverableとdecision
+                criterionがある</label></li>
+                <li><label><input type="checkbox" />図に「概念図 /
+                非実測」の明示がある</label></li>
+                <li><label><input type="checkbox" />Data S1の191 rows /
+                6 payloads / missing group
+                IDsが記載されている</label></li>
+                <li><label><input type="checkbox" />FDA IVRT / IVPT
+                guidanceのscope limitationが記載されている</label></li>
+                <li><label><input
+                type="checkbox" />keyboard、mobile、print、reduced-motionを確認している</label></li>
+                <li><label><input type="checkbox" />HTML
+                validatorで重大errorがない</label></li>
+                <li><label><input type="checkbox" />JavaScript syntax
+                checkが通る</label></li>
+                </ul>
+              </article>
+    </main>
+
+    <aside class="reading-gauge" aria-hidden="true">
+      <p>READING DEPTH</p>
+      <div class="gauge-scale">
+        <span>00</span>
+        <span>25</span>
+        <span>50</span>
+        <span>75</span>
+        <span>100</span>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="document-footer">
+    <div>
+      <strong>BiG Lab Research Library</strong>
+      <p>Markdown is canonical. HTML is the synchronized reading view.</p>
+    </div>
+    <div class="document-footer-links">
+      <a href="../../shared/website/index.html">資料一覧へ戻る</a>
+      <a href="requirements.md">Markdownを開く</a>
+    </div>
+  </footer>
+</body>
+</html>

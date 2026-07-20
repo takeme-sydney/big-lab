@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#edf2f0">
+  <meta name="description" content="BiG Labの「Study charter —
+Microneedle Drug Release Profile」に関するMarkdown正本のHTML閲覧版。">
+  <title>Study charter — Microneedle Drug Release
+Profile · BiG Lab</title>
+  <link rel="alternate" type="text/markdown" href="study-charter.md" title="Markdown source">
+    <link rel="stylesheet" href="../../../shared/website/assets/research-document.css">
+    </head>
+<body class="research-document">
+  <a class="skip-link" href="#document-content">本文へ移動</a>
+
+  <header class="document-topbar">
+    <div class="document-topbar-inner">
+      <a class="document-brand" href="../../../shared/website/index.html" aria-label="BiG Lab 資料一覧へ">
+        <span class="document-brand-mark" aria-hidden="true">B</span>
+        <span class="document-brand-copy">
+          <strong>BiG Lab</strong>
+          <small>Research library</small>
+        </span>
+      </a>
+
+      <nav class="document-actions" aria-label="文書ナビゲーション">
+        <a href="../../../shared/website/index.html">資料一覧</a>
+        <a class="source-action" href="study-charter.md">Markdown正本 <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <header class="document-hero">
+    <div class="document-hero-copy">
+      <p class="document-kicker">
+        <span aria-hidden="true"></span>
+        WORKING TEMPLATE
+      </p>
+      <h1>Study charter — Microneedle Drug Release Profile</h1>
+      <p class="document-description">BiG Labの「Study charter —
+Microneedle Drug Release Profile」に関するMarkdown正本のHTML閲覧版。</p>
+
+      <dl class="document-meta">
+                        <div>
+          <dt>Format</dt>
+          <dd>HTML reading view</dd>
+        </div>
+      </dl>
+    </div>
+
+    <aside class="format-map" aria-label="MarkdownからHTMLへの文書フロー">
+      <div class="format-map-head">
+        <span>DOCUMENT PIPELINE</span>
+        <small>ONE SOURCE · TWO VIEWS</small>
+      </div>
+      <div class="format-map-flow">
+        <div class="format-node source-node">
+          <span>CANONICAL</span>
+          <strong>Markdown</strong>
+          <small>内容の正本</small>
+        </div>
+        <span class="format-arrow" aria-hidden="true">→</span>
+        <div class="format-node view-node">
+          <span>READING VIEW</span>
+          <strong>HTML</strong>
+          <small>閲覧用レンダリング</small>
+        </div>
+      </div>
+      <p>内容は同一に保ち、画面では読解・移動・参照に適した構造で表示します。</p>
+    </aside>
+  </header>
+
+  <div class="document-rule" aria-hidden="true">
+    <span></span><span></span><span></span>
+  </div>
+
+  <div class="document-shell">
+        <aside class="document-toc" aria-labelledby="document-toc-title">
+      <p id="document-toc-title">On this page</p>
+      <nav aria-label="目次">
+        <ul>
+        <li><a href="#study-charter-microneedle-drug-release-profile"
+        id="toc-study-charter-microneedle-drug-release-profile">Study
+        charter — Microneedle Drug Release Profile</a>
+        <ul>
+        <li><a href="#one-sentence-research-question"
+        id="toc-one-sentence-research-question">1. One-sentence research
+        question</a></li>
+        <li><a href="#primary-endpoint" id="toc-primary-endpoint">2.
+        Primary endpoint</a></li>
+        <li><a href="#secondary-endpoints"
+        id="toc-secondary-endpoints">3. Secondary endpoints</a></li>
+        <li><a href="#scope" id="toc-scope">4. Scope</a>
+        <ul>
+        <li><a href="#included" id="toc-included">Included</a></li>
+        <li><a href="#excluded" id="toc-excluded">Excluded</a></li>
+        </ul></li>
+        <li><a href="#system-classification"
+        id="toc-system-classification">5. System classification</a></li>
+        <li><a href="#experimental-hierarchy"
+        id="toc-experimental-hierarchy">6. Experimental
+        hierarchy</a></li>
+        <li><a href="#factors-and-controls"
+        id="toc-factors-and-controls">7. Factors and controls</a></li>
+        <li><a href="#sample-size-and-replication"
+        id="toc-sample-size-and-replication">8. Sample size and
+        replication</a></li>
+        <li><a href="#predeclared-quality-gates"
+        id="toc-predeclared-quality-gates">9. Predeclared quality
+        gates</a></li>
+        <li><a href="#randomisation-and-blinding"
+        id="toc-randomisation-and-blinding">10. Randomisation and
+        blinding</a></li>
+        <li><a href="#data-and-code" id="toc-data-and-code">11. Data and
+        code</a></li>
+        <li><a href="#amendments" id="toc-amendments">12.
+        Amendments</a></li>
+        </ul></li>
+        </ul>
+      </nav>
+            <a class="toc-source-link" href="study-charter.md">
+        <span>Source</span>
+        <strong>study-charter.md</strong>
+      </a>
+          </aside>
+    
+    <main id="document-content" class="document-main">
+      <article class="document-content">
+                <p><a href="study-charter.html">HTML版を開く</a></p>
+                <h1
+                id="study-charter-microneedle-drug-release-profile">Study
+                charter — Microneedle Drug Release Profile</h1>
+                <p>Version:<br />
+                Owner:<br />
+                PI / reviewer:<br />
+                Date opened:<br />
+                Target decision date:<br />
+                Status: draft / approved / frozen / amended / closed</p>
+                <h2 id="one-sentence-research-question">1. One-sentence
+                research question</h2>
+                <blockquote>
+                <p>For [defined payload] in [defined microneedle
+                platform], how do [predefined formulation / geometry
+                variables] change [release-only / skin permeation /
+                retention endpoint] under [defined test conditions]?</p>
+                </blockquote>
+                <h2 id="primary-endpoint">2. Primary endpoint</h2>
+                <ul>
+                <li>Endpoint:</li>
+                <li>Unit:</li>
+                <li>Normalisation denominator:</li>
+                <li>Time window:</li>
+                <li>Experimental unit:</li>
+                <li>Primary comparison:</li>
+                <li>Success criterion:</li>
+                </ul>
+                <h2 id="secondary-endpoints">3. Secondary endpoints</h2>
+                <table>
+                <thead>
+                <tr>
+                <th>Endpoint</th>
+                <th>Unit</th>
+                <th>Purpose</th>
+                <th>Confirmatory or exploratory</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                </tr>
+                </tbody>
+                </table>
+                <h2 id="scope">4. Scope</h2>
+                <h3 id="included">Included</h3>
+                <ul>
+                <li></li>
+                </ul>
+                <h3 id="excluded">Excluded</h3>
+                <ul>
+                <li>Clinical efficacy or dose prediction</li>
+                <li>Safety conclusion beyond the approved assay
+                scope</li>
+                <li>Conditions without PI / SOP / ethics / biosafety
+                approval</li>
+                </ul>
+                <h2 id="system-classification">5. System
+                classification</h2>
+                <ul>
+                <li>MN type: solid pretreatment / coated / dissolving /
+                hydrogel-forming / hollow / other</li>
+                <li>Release location: media / synthetic membrane system
+                / viable tissue / receptor</li>
+                <li>Does the endpoint include a skin barrier? yes /
+                no</li>
+                <li>Can release and permeation be separated
+                experimentally? yes / no / to be decided</li>
+                </ul>
+                <h2 id="experimental-hierarchy">6. Experimental
+                hierarchy</h2>
+                <pre class="text"><code>study
+└── independent formulation batch
+    └── patch / device
+        └── skin donor or membrane lot
+            └── diffusion cell = curve
+                └── repeated time points</code></pre>
+                <p>Define which level is independently randomised and
+                which level is a technical replicate:</p>
+                <h2 id="factors-and-controls">7. Factors and
+                controls</h2>
+                <table>
+                <thead>
+                <tr>
+                <th>Factor</th>
+                <th>Levels / range</th>
+                <th>Fixed or random</th>
+                <th>Rationale</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td>Formulation batch</td>
+                <td></td>
+                <td>random</td>
+                <td></td>
+                </tr>
+                <tr>
+                <td>Payload loading</td>
+                <td></td>
+                <td>fixed</td>
+                <td></td>
+                </tr>
+                <tr>
+                <td>MN geometry</td>
+                <td></td>
+                <td>fixed</td>
+                <td></td>
+                </tr>
+                <tr>
+                <td>Membrane / donor</td>
+                <td></td>
+                <td>random</td>
+                <td></td>
+                </tr>
+                <tr>
+                <td>Diffusion-cell position</td>
+                <td></td>
+                <td>block</td>
+                <td></td>
+                </tr>
+                <tr>
+                <td>Laboratory day</td>
+                <td></td>
+                <td>block</td>
+                <td></td>
+                </tr>
+                </tbody>
+                </table>
+                <p>Controls:</p>
+                <ul>
+                <li>Blank matrix:</li>
+                <li>Free-drug control:</li>
+                <li>No-MN / untreated-skin control:</li>
+                <li>Reference formulation:</li>
+                <li>Recovery / spike control:</li>
+                </ul>
+                <h2 id="sample-size-and-replication">8. Sample size and
+                replication</h2>
+                <ul>
+                <li>Pilot variance source:</li>
+                <li>Independent batches:</li>
+                <li>Donors / membrane lots:</li>
+                <li>Cells per condition:</li>
+                <li>Repeated measurements per cell:</li>
+                <li>Power / precision target:</li>
+                <li>Attrition allowance:</li>
+                </ul>
+                <p>Do not count repeated time points as independent
+                <code>n</code>.</p>
+                <h2 id="predeclared-quality-gates">9. Predeclared
+                quality gates</h2>
+                <table>
+                <thead>
+                <tr>
+                <th>Gate</th>
+                <th>Acceptance criterion</th>
+                <th>Evidence file</th>
+                <th>Decision owner</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td>Analytical method</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                </tr>
+                <tr>
+                <td>Receptor solubility / sink</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                </tr>
+                <tr>
+                <td>Membrane binding</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                </tr>
+                <tr>
+                <td>Sampling accuracy</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                </tr>
+                <tr>
+                <td>Temperature / mixing</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                </tr>
+                <tr>
+                <td>Skin integrity / insertion</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                </tr>
+                <tr>
+                <td>Recovery / mass balance</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                </tr>
+                </tbody>
+                </table>
+                <h2 id="randomisation-and-blinding">10. Randomisation
+                and blinding</h2>
+                <ul>
+                <li>Randomisation unit and method:</li>
+                <li>Blocking factors:</li>
+                <li>Sample label blinding:</li>
+                <li>Analyst blinding:</li>
+                <li>Code unblinding point:</li>
+                </ul>
+                <h2 id="data-and-code">11. Data and code</h2>
+                <ul>
+                <li>Raw data location:</li>
+                <li>Read-only archive:</li>
+                <li>File naming rule:</li>
+                <li>Data dictionary:</li>
+                <li>Analysis environment:</li>
+                <li>Version-control location:</li>
+                <li>Access / publication restriction:</li>
+                </ul>
+                <h2 id="amendments">12. Amendments</h2>
+                <table>
+                <thead>
+                <tr>
+                <th>Date</th>
+                <th>Change</th>
+                <th>Reason</th>
+                <th>Before or after unblinding?</th>
+                <th>Approved by</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                </tr>
+                </tbody>
+                </table>
+              </article>
+    </main>
+
+    <aside class="reading-gauge" aria-hidden="true">
+      <p>READING DEPTH</p>
+      <div class="gauge-scale">
+        <span>00</span>
+        <span>25</span>
+        <span>50</span>
+        <span>75</span>
+        <span>100</span>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="document-footer">
+    <div>
+      <strong>BiG Lab Research Library</strong>
+      <p>Markdown is canonical. HTML is the synchronized reading view.</p>
+    </div>
+    <div class="document-footer-links">
+      <a href="../../../shared/website/index.html">資料一覧へ戻る</a>
+      <a href="study-charter.md">Markdownを開く</a>
+    </div>
+  </footer>
+</body>
+</html>

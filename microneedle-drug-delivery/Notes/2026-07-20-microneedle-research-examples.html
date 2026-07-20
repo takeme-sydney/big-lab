@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#edf2f0">
+  <meta name="description" content="共有文献を起点に、BiG
+Labで検討できるmicroneedle研究テーマ、最小検証、評価条件を優先順位付きで整理した議論用ノート。">
+  <title>マイクロニードルで取り組むべき研究内容の例 · BiG Lab</title>
+  <link rel="alternate" type="text/markdown" href="2026-07-20-microneedle-research-examples.md" title="Markdown source">
+    <link rel="stylesheet" href="../../shared/website/assets/research-document.css">
+    </head>
+<body class="research-document">
+  <a class="skip-link" href="#document-content">本文へ移動</a>
+
+  <header class="document-topbar">
+    <div class="document-topbar-inner">
+      <a class="document-brand" href="../../shared/website/index.html" aria-label="BiG Lab 資料一覧へ">
+        <span class="document-brand-mark" aria-hidden="true">B</span>
+        <span class="document-brand-copy">
+          <strong>BiG Lab</strong>
+          <small>Research library</small>
+        </span>
+      </a>
+
+      <nav class="document-actions" aria-label="文書ナビゲーション">
+        <a href="../../shared/website/index.html">資料一覧</a>
+        <a class="source-action" href="2026-07-20-microneedle-research-examples.md">Markdown正本 <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <header class="document-hero">
+    <div class="document-hero-copy">
+      <p class="document-kicker">
+        <span aria-hidden="true"></span>
+        DISCUSSION DRAFT
+      </p>
+      <h1 class="long-title">マイクロニードルで取り組むべき研究内容の例</h1>
+      <p class="document-description">共有文献を起点に、BiG
+Labで検討できるmicroneedle研究テーマ、最小検証、評価条件を優先順位付きで整理した議論用ノート。</p>
+
+      <dl class="document-meta">
+                <div>
+          <dt>Date</dt>
+          <dd>2026-07-20</dd>
+        </div>
+                        <div>
+          <dt>Status</dt>
+          <dd>discussion-draft</dd>
+        </div>
+                <div>
+          <dt>Format</dt>
+          <dd>HTML reading view</dd>
+        </div>
+      </dl>
+    </div>
+
+    <aside class="format-map" aria-label="MarkdownからHTMLへの文書フロー">
+      <div class="format-map-head">
+        <span>DOCUMENT PIPELINE</span>
+        <small>ONE SOURCE · TWO VIEWS</small>
+      </div>
+      <div class="format-map-flow">
+        <div class="format-node source-node">
+          <span>CANONICAL</span>
+          <strong>Markdown</strong>
+          <small>内容の正本</small>
+        </div>
+        <span class="format-arrow" aria-hidden="true">→</span>
+        <div class="format-node view-node">
+          <span>READING VIEW</span>
+          <strong>HTML</strong>
+          <small>閲覧用レンダリング</small>
+        </div>
+      </div>
+      <p>内容は同一に保ち、画面では読解・移動・参照に適した構造で表示します。</p>
+    </aside>
+  </header>
+
+  <div class="document-rule" aria-hidden="true">
+    <span></span><span></span><span></span>
+  </div>
+
+  <div class="document-shell">
+        <aside class="document-toc" aria-labelledby="document-toc-title">
+      <p id="document-toc-title">On this page</p>
+      <nav aria-label="目次">
+        <ul>
+        <li><a href="#マイクロニードルで取り組むべき研究内容の例"
+        id="toc-マイクロニードルで取り組むべき研究内容の例">マイクロニードルで取り組むべき研究内容の例</a>
+        <ul>
+        <li><a href="#目的" id="toc-目的">目的</a></li>
+        <li><a href="#推奨する優先順位"
+        id="toc-推奨する優先順位">推奨する優先順位</a></li>
+        <li><a href="#研究例1yuan-et-al.-2023-データのgroup-aware再解析"
+        id="toc-研究例1yuan-et-al.-2023-データのgroup-aware再解析">研究例1：Yuan
+        et al. (2023) データのgroup-aware再解析</a>
+        <ul>
+        <li><a href="#研究質問" id="toc-研究質問">研究質問</a></li>
+        <li><a href="#実施内容" id="toc-実施内容">実施内容</a></li>
+        <li><a href="#成果物" id="toc-成果物">成果物</a></li>
+        <li><a href="#成功基準" id="toc-成功基準">成功基準</a></li>
+        </ul></li>
+        <li><a href="#研究例2releasepermeationretentionを分ける最小実験"
+        id="toc-研究例2releasepermeationretentionを分ける最小実験">研究例2：Release、permeation、retentionを分ける最小実験</a>
+        <ul>
+        <li><a href="#研究質問-1" id="toc-研究質問-1">研究質問</a></li>
+        <li><a href="#実施内容-1" id="toc-実施内容-1">実施内容</a></li>
+        <li><a href="#必須記録" id="toc-必須記録">必須記録</a></li>
+        <li><a href="#成功基準-1" id="toc-成功基準-1">成功基準</a></li>
+        </ul></li>
+        <li><a href="#研究例3physics-informed-residual-machine-learning"
+        id="toc-研究例3physics-informed-residual-machine-learning">研究例3：Physics-informed
+        / residual machine learning</a>
+        <ul>
+        <li><a href="#研究質問-2" id="toc-研究質問-2">研究質問</a></li>
+        <li><a href="#モデル候補"
+        id="toc-モデル候補">モデル候補</a></li>
+        <li><a href="#物理制約" id="toc-物理制約">物理制約</a></li>
+        <li><a href="#成功基準-2" id="toc-成功基準-2">成功基準</a></li>
+        </ul></li>
+        <li><a href="#研究例4active-learningで次の実験を選ぶ"
+        id="toc-研究例4active-learningで次の実験を選ぶ">研究例4：Active
+        learningで次の実験を選ぶ</a>
+        <ul>
+        <li><a href="#研究質問-3" id="toc-研究質問-3">研究質問</a></li>
+        <li><a href="#実施内容-2" id="toc-実施内容-2">実施内容</a></li>
+        <li><a href="#成功基準-3" id="toc-成功基準-3">成功基準</a></li>
+        </ul></li>
+        <li><a href="#研究例5未知薬物未知mn設計への段階的外部検証"
+        id="toc-研究例5未知薬物未知mn設計への段階的外部検証">研究例5：未知薬物・未知MN設計への段階的外部検証</a>
+        <ul>
+        <li><a href="#研究質問-4" id="toc-研究質問-4">研究質問</a></li>
+        <li><a href="#検証の段階"
+        id="toc-検証の段階">検証の段階</a></li>
+        <li><a href="#成功基準-4" id="toc-成功基準-4">成功基準</a></li>
+        </ul></li>
+        <li><a href="#研究例6製造保存適用方法の頑健性"
+        id="toc-研究例6製造保存適用方法の頑健性">研究例6：製造・保存・適用方法の頑健性</a>
+        <ul>
+        <li><a href="#研究質問-5" id="toc-研究質問-5">研究質問</a></li>
+        <li><a href="#実施内容-3" id="toc-実施内容-3">実施内容</a></li>
+        <li><a href="#成功基準-5" id="toc-成功基準-5">成功基準</a></li>
+        </ul></li>
+        <li><a href="#研究例7小規模データ用の標準データセットと報告様式"
+        id="toc-研究例7小規模データ用の標準データセットと報告様式">研究例7：小規模データ用の標準データセットと報告様式</a>
+        <ul>
+        <li><a href="#研究質問-6" id="toc-研究質問-6">研究質問</a></li>
+        <li><a href="#最小スキーマ"
+        id="toc-最小スキーマ">最小スキーマ</a></li>
+        <li><a href="#成功基準-6" id="toc-成功基準-6">成功基準</a></li>
+        </ul></li>
+        <li><a href="#最初に着手するなら"
+        id="toc-最初に着手するなら">最初に着手するなら</a></li>
+        <li><a href="#指導者と確認すべき事項"
+        id="toc-指導者と確認すべき事項">指導者と確認すべき事項</a></li>
+        <li><a href="#研究上の注意"
+        id="toc-研究上の注意">研究上の注意</a></li>
+        <li><a href="#参考資料" id="toc-参考資料">参考資料</a></li>
+        </ul></li>
+        </ul>
+      </nav>
+            <a class="toc-source-link" href="2026-07-20-microneedle-research-examples.md">
+        <span>Source</span>
+        <strong>2026-07-20-microneedle-research-examples.md</strong>
+      </a>
+          </aside>
+    
+    <main id="document-content" class="document-main">
+      <article class="document-content">
+                <p><a
+                href="2026-07-20-microneedle-research-examples.html">HTML版を開く</a></p>
+                <h1
+                id="マイクロニードルで取り組むべき研究内容の例">マイクロニードルで取り組むべき研究内容の例</h1>
+                <h2 id="目的">目的</h2>
+                <p>2026年7月17日のYunong
+                Yuan氏のメールで示された「従来型シミュレーションと一般的な機械学習を用いた、マイクロニードルからの薬物放出プロファイル予測」を出発点として、BiG
+                Labで検討できる研究テーマを具体化する。</p>
+                <p>メールで共有された文献は、Yuan et al. (2023)
+                の薬物透過予測、マイクロニードルデバイスの総説、small-data
+                machine
+                learningの総説3件である。本ノートの研究例は、それらをそのまま要約したものではなく、既存研究の限界から導いた<strong>議論用の候補</strong>である。</p>
+                <blockquote>
+                <p><strong>重要な区別:</strong> Yuan et al. (2023)
+                の主な予測対象は、マイクロニードル処理後に皮膚を通過した累積薬物量・率である。今後は、(1)
+                マイクロニードル材料から媒体へ出る
+                <strong>release</strong>、(2) 皮膚を通る
+                <strong>permeation</strong>、(3) 皮膚やパッチに残る
+                <strong>retention / recovery</strong>
+                を別々に測定・モデル化する。</p>
+                </blockquote>
+                <h2 id="推奨する優先順位">推奨する優先順位</h2>
+                <table>
+                <colgroup>
+                <col style="width: 25%" />
+                <col style="width: 25%" />
+                <col style="width: 25%" />
+                <col style="width: 25%" />
+                </colgroup>
+                <thead>
+                <tr>
+                <th>優先度</th>
+                <th>研究例</th>
+                <th>最初の問い</th>
+                <th>主な価値</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td>1</td>
+                <td>既存191点データの再解析</td>
+                <td>ランダムな時点分割による性能は、curve/run単位の分割でも維持されるか</td>
+                <td>既存データだけで短期間に検証できる</td>
+                </tr>
+                <tr>
+                <td>2</td>
+                <td>Releaseとpermeationの分離実験</td>
+                <td>律速段階はマトリクスからの放出か、皮膚透過か</td>
+                <td>予測対象を明確にし、機構理解を改善する</td>
+                </tr>
+                <tr>
+                <td>3</td>
+                <td>物理モデルとuncertainty-aware
+                MLのハイブリッド化</td>
+                <td>Fickモデルの残差をMLで安全に補正できるか</td>
+                <td>少数データでも解釈性と予測性能を両立しやすい</td>
+                </tr>
+                <tr>
+                <td>4</td>
+                <td>Active learningによる実験条件選択</td>
+                <td>次にどの条件を測れば不確実性が最も減るか</td>
+                <td>実験回数とコストを抑える</td>
+                </tr>
+                <tr>
+                <td>5</td>
+                <td>製造・使用条件を含む頑健性研究</td>
+                <td>batch、保存、挿入力、皮膚差で性能はどれだけ変わるか</td>
+                <td>臨床・製造への移行可能性を評価できる</td>
+                </tr>
+                </tbody>
+                </table>
+                <h2
+                id="研究例1yuan-et-al.-2023-データのgroup-aware再解析">研究例1：Yuan
+                et al. (2023) データのgroup-aware再解析</h2>
+                <h3 id="研究質問">研究質問</h3>
+                <p>同じ薬物・同じ透過曲線の時点がtrain/testの両方に入らないように分割した場合、報告された予測性能はどの程度維持されるか。</p>
+                <h3 id="実施内容">実施内容</h3>
+                <ul>
+                <li>公開補足データ191行について、薬物、MN条件、time、loading、skin
+                typeなどを監査する。</li>
+                <li>原著者に
+                <code>run_id</code>、<code>curve_id</code>、<code>batch_id</code>、skin
+                donorの対応を確認する。復元できない場合は、同一特徴条件を仮のgroupとして感度分析する。</li>
+                <li>random point split、grouped
+                cross-validation、leave-one-drug-outを同一指標で比較する。</li>
+                <li>MLR、Fickモデル、Random
+                Forest、XGBoostに加え、Gaussian Process
+                Regression（GPR）を比較する。</li>
+                <li>全体の <code>R²</code>
+                だけでなく、drug別・curve別のMAE/RMSE、予測区間のcoverage、calibrationを報告する。</li>
+                </ul>
+                <h3 id="成果物">成果物</h3>
+                <p>再現可能な解析コード、データ辞書、split定義、性能比較表、誤差が大きい薬物・条件の一覧。</p>
+                <h3 id="成功基準">成功基準</h3>
+                <p>「高い予測性能がどの一般化範囲で成立するか」を明示できること。性能が低下しても、データリーケージまたは外挿限界を定量化できれば有意義な結果とする。</p>
+                <h2
+                id="研究例2releasepermeationretentionを分ける最小実験">研究例2：Release、permeation、retentionを分ける最小実験</h2>
+                <h3 id="研究質問-1">研究質問</h3>
+                <p>観測された累積透過曲線を支配しているのは、マイクロニードルマトリクスからの放出速度か、皮膚内・皮膚通過の輸送速度か。</p>
+                <h3 id="実施内容-1">実施内容</h3>
+                <ul>
+                <li>同一製剤について、skin-free release試験とFranz
+                cellを用いたpermeation試験を別々に行う。</li>
+                <li>donor、skin、receptor、残存patch、洗浄画分を回収し、mass
+                balanceを確認する。</li>
+                <li>少なくとも1つのpayload、2–3のpolymer組成または架橋条件、複数時点、独立batchでpilotを設計する。</li>
+                <li>burst release、lag time、steady-state
+                flux、最終回収率を推定する。</li>
+                <li>releaseモデルとskin
+                transportモデルを逐次結合し、どちらのパラメータが曲線差を説明するかを比較する。</li>
+                </ul>
+                <h3 id="必須記録">必須記録</h3>
+                <p>MNの長さ・表面積・本数、polymerと架橋条件、drug
+                loading、実測挿入深さ、皮膚種・部位・厚さ、温度、receptor条件、sampling
+                volume、batch、反復単位。</p>
+                <h3 id="成功基準-1">成功基準</h3>
+                <p>各段階のmass
+                balanceが許容範囲に入り、release-limited、permeation-limited、mixed-controlの少なくとも暫定分類ができること。許容範囲は分析法の精度を確認して事前に定める。</p>
+                <h2
+                id="研究例3physics-informed-residual-machine-learning">研究例3：Physics-informed
+                / residual machine learning</h2>
+                <h3 id="研究質問-2">研究質問</h3>
+                <p>Fickの法則に基づく予測を基準とし、その系統的な誤差だけをsmall-data
+                MLで学習すると、black-box
+                ML単独より未知条件への予測と不確実性が改善するか。</p>
+                <h3 id="モデル候補">モデル候補</h3>
+                <ol type="1">
+                <li>mechanistic Fick model</li>
+                <li>正則化線形回帰</li>
+                <li>GPR</li>
+                <li>Random Forest / XGBoost</li>
+                <li><code>実測値 = Fick予測 + ML残差</code> のhybrid
+                model</li>
+                </ol>
+                <h3 id="物理制約">物理制約</h3>
+                <ul>
+                <li>累積透過量は負にしない。</li>
+                <li>回収量は初期loadingとmass-balance上限を超えない。</li>
+                <li>累積量は原則として時間とともに減少しない。</li>
+                <li>simulationとexperimentを混ぜる場合は
+                <code>data_source</code>
+                を保持し、同一精度として扱わない。</li>
+                </ul>
+                <h3 id="成功基準-2">成功基準</h3>
+                <p>同一のgroup splitにおいて、hybrid
+                modelが単独モデルより誤差またはcalibrationを改善し、改善しない条件も説明できること。</p>
+                <h2
+                id="研究例4active-learningで次の実験を選ぶ">研究例4：Active
+                learningで次の実験を選ぶ</h2>
+                <h3 id="研究質問-3">研究質問</h3>
+                <p>限られた実験予算の中で、どのMN条件を追加測定すれば、対象領域全体の予測不確実性を最も効率よく減らせるか。</p>
+                <h3 id="実施内容-2">実施内容</h3>
+                <ul>
+                <li>変更可能な設計空間を、MN長さ、表面積、drug
+                loading、polymer組成、架橋密度などで定義する。</li>
+                <li>安全性・製造可能性の制約を先に設定し、実施不能な候補を除外する。</li>
+                <li>GPRなどから得る不確実性を用い、uncertainty
+                samplingまたはexpected improvementで次条件を選ぶ。</li>
+                <li>DOEのみ、active
+                learning、研究者が選ぶ条件を同一実験数で比較する。</li>
+                <li>各round後にモデルを更新し、blind
+                holdout上の誤差と予測区間coverageを追跡する。</li>
+                </ul>
+                <h3 id="成功基準-3">成功基準</h3>
+                <p>同じ実験数で、事前に定めたholdout領域の誤差または不確実性がDOEのみの方法より低下すること。</p>
+                <h2
+                id="研究例5未知薬物未知mn設計への段階的外部検証">研究例5：未知薬物・未知MN設計への段階的外部検証</h2>
+                <h3 id="研究質問-4">研究質問</h3>
+                <p>モデルは既知データ内の補間を超えて、未知のMN設計、batch、薬物へどの順序で一般化できるか。</p>
+                <h3 id="検証の段階">検証の段階</h3>
+                <ol type="1">
+                <li>同一薬物・既知設計の新しいrun</li>
+                <li>同一薬物・新しいMN設計</li>
+                <li>新しい製造batchまたは皮膚donor</li>
+                <li>物性範囲内にある未知薬物</li>
+                <li>物性範囲外の薬物</li>
+                </ol>
+                <p>薬物記述子には分子量だけでなく、logP/logD、pKa、溶解度、電荷、水素結合能などを候補とする。各段階でapplicability
+                domainを定義し、範囲外予測には警告を付ける。</p>
+                <h3 id="成功基準-4">成功基準</h3>
+                <p>各段階の性能を混ぜずに報告し、「何に対して使えるモデルか」と「予測を拒否すべき条件」を定義できること。</p>
+                <h2
+                id="研究例6製造保存適用方法の頑健性">研究例6：製造・保存・適用方法の頑健性</h2>
+                <h3 id="研究質問-5">研究質問</h3>
+                <p>実験室で得たrelease/permeation性能は、製造batch、滅菌、湿度・温度、保存期間、applicator、皮膚の違いに対して再現するか。</p>
+                <h3 id="実施内容-3">実施内容</h3>
+                <ul>
+                <li>batch-to-batchの寸法、mechanical strength、drug
+                content、release曲線を比較する。</li>
+                <li>滅菌・包装・保存前後で材料、薬物安定性、挿入性能を評価する。</li>
+                <li>thumb
+                pressureと規定applicatorを比較し、実測挿入深さを記録する。</li>
+                <li>皮膚部位、厚さ、donor、前処理の差をrandom
+                effectまたは階層モデルで扱う。</li>
+                <li>平均性能だけでなく、投与量のばらつきと失敗率を報告する。</li>
+                </ul>
+                <h3 id="成功基準-5">成功基準</h3>
+                <p>主要な変動要因と許容範囲を特定し、次の製造・使用SOPで管理すべき項目を提案できること。</p>
+                <h2
+                id="研究例7小規模データ用の標準データセットと報告様式">研究例7：小規模データ用の標準データセットと報告様式</h2>
+                <h3 id="研究質問-6">研究質問</h3>
+                <p>異なる実験・論文のデータを、機械学習に使える形で比較・統合するために最低限必要な項目は何か。</p>
+                <h3 id="最小スキーマ">最小スキーマ</h3>
+                <ul>
+                <li><code>study_id</code>, <code>run_id</code>,
+                <code>curve_id</code>, <code>batch_id</code>,
+                <code>skin_donor_id</code></li>
+                <li>MN type、材料、形状、寸法、本数、patch
+                area、作製法</li>
+                <li>payload、loading、薬物物性</li>
+                <li>skin、適用方法、挿入深さ、温度、媒体、sampling条件</li>
+                <li>time、release、permeation、retention、recovery、単位</li>
+                <li>replicate、分析法、LOD/LOQ、欠測理由</li>
+                <li>experiment /
+                simulationの区別、文献出典、ライセンス</li>
+                </ul>
+                <h3 id="成功基準-6">成功基準</h3>
+                <p>既存データと新規pilotを同じschemaへ変換でき、独立したcurve/runを失わずにgroup-aware解析へ渡せること。</p>
+                <h2 id="最初に着手するなら">最初に着手するなら</h2>
+                <p>最初の4週間は、wet-labを始める前に<strong>研究例1の再解析</strong>を行うのが現実的である。</p>
+                <ol type="1">
+                <li><strong>第1週:</strong>
+                191行のデータ監査、experimental
+                unitの確認、データ辞書作成</li>
+                <li><strong>第2週:</strong> random split、group
+                split、leave-one-drug-outの再現</li>
+                <li><strong>第3週:</strong> GPRとhybrid residual
+                modelのbaseline、uncertainty評価</li>
+                <li><strong>第4週:</strong>
+                結果をもとに研究例2の最小実験を設計し、指導者とgo/no-goを判断</li>
+                </ol>
+                <p>この順序なら、既存データの限界を確認してから追加実験を選べる。最初から未知薬物予測を目標にせず、まず「同一薬物内の新しいMN設計」をcurve/run単位で予測することを第一段階とする。</p>
+                <h2
+                id="指導者と確認すべき事項">指導者と確認すべき事項</h2>
+                <ol type="1">
+                <li>メール中の “drug releasing profile”
+                は、MN単体のrelease、皮膚透過、または両者を含む意味か。</li>
+                <li>191点について
+                <code>run_id</code>、<code>curve_id</code>、batch、skin
+                donorを復元できるか。</li>
+                <li>現在利用できるMN
+                platform、payload、皮膚model、分析装置は何か。</li>
+                <li>最初の成果を再解析論文、方法論pilot、またはwet-lab研究のどれに置くか。</li>
+                <li>未知薬物予測と製造・臨床移行のどちらを中期的な主目的にするか。</li>
+                </ol>
+                <h2 id="研究上の注意">研究上の注意</h2>
+                <ul>
+                <li>本ノートは研究テーマの候補であり、確定した研究計画ではない。</li>
+                <li>高い <code>R²</code> だけで一般化性能やrelease
+                mechanismを主張しない。</li>
+                <li>生体組織、薬物、滅菌、廃棄を扱う実験は、ラボSOP、training、risk
+                assessment、ethics / biosafety approvalを優先する。</li>
+                <li>5番目のAchar &amp; Keith (2024)
+                はローカルではmetadata-onlyであり、本文内容を推測して研究案の根拠にはしていない。</li>
+                </ul>
+                <h2 id="参考資料">参考資料</h2>
+                <ol type="1">
+                <li>Yunong Yuan氏からのメール（2026-07-17）: <a
+                href="../references/correspondence/2026-07-17-yunong-yuan-microneedle-references-email.png"><code>../references/correspondence/2026-07-17-yunong-yuan-microneedle-references-email.png</code></a></li>
+                <li>Yuan Y, Han Y, Yap CW, et al. <em>Prediction of drug
+                permeation through microneedled skin by machine
+                learning</em>. Bioengineering &amp; Translational
+                Medicine. 2023;8(6):e10512. <a
+                href="https://doi.org/10.1002/btm2.10512"
+                class="uri">https://doi.org/10.1002/btm2.10512</a></li>
+                <li>Zheng M, Sheng T, Yu J, Gu Z, Xu C. <em>Microneedle
+                biomedical devices</em>. Nature Reviews Bioengineering.
+                2024;2:324–342. <a
+                href="https://doi.org/10.1038/s44222-023-00141-6"
+                class="uri">https://doi.org/10.1038/s44222-023-00141-6</a></li>
+                <li>Xu P, Ji X, Li M, Lu W. <em>Small data machine
+                learning in materials science</em>. npj Computational
+                Materials. 2023;9:42. <a
+                href="https://doi.org/10.1038/s41524-023-01000-z"
+                class="uri">https://doi.org/10.1038/s41524-023-01000-z</a></li>
+                <li>Dou B, Zhu Z, Merkurjev E, et al. <em>Machine
+                Learning Methods for Small Data Challenges in Molecular
+                Science</em>. Chemical Reviews. 2023;123(13):8736–8780.
+                <a href="https://doi.org/10.1021/acs.chemrev.3c00189"
+                class="uri">https://doi.org/10.1021/acs.chemrev.3c00189</a></li>
+                <li>Achar SK, Keith JA. <em>Small Data Challenges for
+                Intelligent Chemical Science</em>. Chemical Reviews.
+                2024;124(24):13052–13054. <a
+                href="https://doi.org/10.1021/acs.chemrev.4c00957"
+                class="uri">https://doi.org/10.1021/acs.chemrev.4c00957</a>（本文未取得）</li>
+                <li>詳細レビュー: <a
+                href="../review/README.md"><code>../review/README.md</code></a></li>
+                </ol>
+              </article>
+    </main>
+
+    <aside class="reading-gauge" aria-hidden="true">
+      <p>READING DEPTH</p>
+      <div class="gauge-scale">
+        <span>00</span>
+        <span>25</span>
+        <span>50</span>
+        <span>75</span>
+        <span>100</span>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="document-footer">
+    <div>
+      <strong>BiG Lab Research Library</strong>
+      <p>Markdown is canonical. HTML is the synchronized reading view.</p>
+    </div>
+    <div class="document-footer-links">
+      <a href="../../shared/website/index.html">資料一覧へ戻る</a>
+      <a href="2026-07-20-microneedle-research-examples.md">Markdownを開く</a>
+    </div>
+  </footer>
+</body>
+</html>

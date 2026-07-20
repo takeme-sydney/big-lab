@@ -1,0 +1,539 @@
+@page {
+  size: 595.276pt 782.362pt;
+  margin: 0;
+}
+
+:root {
+  color-scheme: light;
+  --ink: #171717;
+  --muted: #555;
+  --rule: #262626;
+  --paper: #fff;
+  --panel: #f0f0f0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  color: var(--ink);
+  background: #d8d8d8;
+  font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif CJK JP",
+    "Noto Serif JP", serif;
+  font-kerning: normal;
+  font-variant-numeric: tabular-nums;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+body {
+  width: 594.5pt;
+  margin: 0 auto;
+}
+
+#title-block-header,
+body > p {
+  display: none;
+}
+
+.paper-page {
+  position: relative;
+  width: 594.5pt;
+  height: 781pt;
+  margin: 0 0 12pt;
+  overflow: hidden;
+  background: var(--paper);
+  break-after: page;
+  page-break-after: always;
+}
+
+.paper-page:last-child {
+  margin-bottom: 0;
+  break-after: auto;
+  page-break-after: auto;
+}
+
+.page-content {
+  position: absolute;
+  inset: 42pt 45.6pt 39pt;
+  overflow: hidden;
+  font-size: 6.6pt;
+  line-height: 1.45;
+  text-align: justify;
+  text-justify: inter-character;
+}
+
+.front-page .page-content {
+  inset: 29pt 45.6pt 38pt;
+}
+
+.running-header {
+  position: absolute;
+  top: 18pt;
+  left: 45.6pt;
+  right: 45.6pt;
+  height: 15pt;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: start;
+  border-bottom: 0.55pt solid var(--rule);
+  padding-bottom: 2pt;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 4.55pt;
+  line-height: 1.05;
+  letter-spacing: 0.03em;
+}
+
+.running-header > :last-child {
+  text-align: right;
+}
+
+.running-header .journal-name {
+  text-align: center;
+  font-size: 4.1pt;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.running-footer {
+  position: absolute;
+  left: 45.6pt;
+  right: 45.6pt;
+  bottom: 13pt;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: end;
+  border-top: 0.35pt solid #777;
+  padding-top: 2.2pt;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 4.45pt;
+  color: #303030;
+}
+
+.running-footer > :last-child {
+  text-align: right;
+}
+
+p {
+  margin: 0 0 4.1pt;
+  orphans: 2;
+  widows: 2;
+}
+
+.column > p {
+  text-indent: 1em;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--ink);
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans",
+    "Noto Sans CJK JP", sans-serif;
+  break-after: avoid;
+  page-break-after: avoid;
+}
+
+h2 {
+  margin: 8pt 0 5pt;
+  font-size: 8.15pt;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+h3 {
+  margin: 7pt 0 4pt;
+  font-size: 7.1pt;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: 0.025em;
+}
+
+.column > h2:first-child,
+.column > h3:first-child,
+.page-content > h2:first-child {
+  margin-top: 0;
+}
+
+h2 + p,
+h3 + p,
+.figure-caption,
+.table-caption,
+.table-footnote,
+.reference-entry {
+  text-indent: 0 !important;
+}
+
+sup,
+sub {
+  line-height: 0;
+  font-size: 72%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.columns-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 18.4pt;
+  align-items: start;
+}
+
+.column {
+  min-width: 0;
+}
+
+.columns-grid.dense {
+  font-size: 6.15pt;
+  line-height: 1.4;
+}
+
+.columns-grid.very-dense {
+  font-size: 5.65pt;
+  line-height: 1.34;
+}
+
+.front-dates,
+.front-doi {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 4.8pt;
+  line-height: 1.2;
+}
+
+.front-doi {
+  margin-top: 7pt;
+}
+
+.article-type {
+  margin-top: 17pt;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 7.1pt;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+}
+
+.article-title {
+  margin: 23pt 0 13pt;
+  max-width: 505pt;
+  font-size: 15.4pt;
+  line-height: 1.34;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+.authors {
+  margin-bottom: 12pt;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 7.15pt;
+  line-height: 1.7;
+  font-weight: 600;
+}
+
+.affiliations {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 4.85pt;
+  line-height: 1.47;
+}
+
+.front-summary {
+  grid-template-columns: 145.5pt minmax(0, 1fr);
+  margin-top: 15pt;
+  gap: 18.5pt;
+  font-size: 5.15pt;
+  line-height: 1.38;
+}
+
+.front-summary .column-left {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #333;
+}
+
+.front-summary .column-left p {
+  text-indent: 0;
+}
+
+.front-summary .column-right {
+  padding: 8.4pt 9.5pt 7.8pt;
+  background: var(--panel);
+  font-size: 6.05pt;
+  line-height: 1.44;
+}
+
+.front-summary h2,
+.front-summary h3 {
+  margin: 0 0 4.2pt;
+  font-size: 6.8pt;
+}
+
+.front-summary h3:not(:first-child) {
+  margin-top: 7pt;
+}
+
+.front-introduction {
+  margin-top: 13pt;
+  padding-top: 7pt;
+  border-top: 0.6pt solid var(--rule);
+  font-size: 6.15pt;
+  line-height: 1.43;
+}
+
+.front-introduction h2 {
+  margin-top: 0;
+  font-size: 7.4pt;
+}
+
+.license-note {
+  margin-top: 7pt;
+  padding-top: 3.2pt;
+  border-top: 0.35pt solid #777;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 4.25pt;
+  line-height: 1.3;
+  color: #333;
+}
+
+.figure-block {
+  margin: 0 0 5pt;
+  text-align: center;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+.figure-block p {
+  text-indent: 0;
+}
+
+.figure-image {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto 3pt;
+  object-fit: contain;
+}
+
+.figure-caption {
+  margin: 0;
+  font-family: "Helvetica Neue", "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans", sans-serif;
+  font-size: 5.05pt;
+  line-height: 1.3;
+  text-align: left;
+}
+
+.figure-1 .figure-image {
+  max-height: 239pt;
+}
+
+.figure-5 .figure-image {
+  max-height: 248pt;
+}
+
+.figure-large-grid .figure-image {
+  max-height: 270pt;
+}
+
+.figure-column .figure-image {
+  width: 100%;
+  max-height: 230pt;
+}
+
+.compact-figure {
+  margin: 4pt 0 5pt;
+}
+
+.compact-figure .figure-image {
+  max-height: 92pt;
+  width: auto;
+}
+
+.figure-3 .figure-image {
+  max-height: 78pt;
+}
+
+.figure-4 .figure-image {
+  max-height: 214pt;
+}
+
+.figure-bars .figure-image {
+  max-height: 255pt;
+}
+
+.below-figure {
+  margin-top: 5.5pt;
+}
+
+.equation {
+  position: relative;
+  margin: 2.5pt 0 4pt;
+  min-height: 18pt;
+  padding-right: 18pt;
+  text-align: center;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+.equation .math.display {
+  margin: 0;
+}
+
+.equation-number {
+  position: absolute;
+  top: 50%;
+  right: 1pt;
+  transform: translateY(-50%);
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 5pt;
+}
+
+.equation-12,
+.equation-13 {
+  font-size: 90%;
+}
+
+.table-block {
+  margin: 4pt 0 7pt;
+  break-inside: avoid;
+  page-break-inside: avoid;
+  font-family: "Helvetica Neue", "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans", sans-serif;
+  font-size: 4.65pt;
+  line-height: 1.22;
+}
+
+.table-caption {
+  margin: 0 0 3pt;
+  font-size: 4.85pt;
+  line-height: 1.3;
+}
+
+table {
+  width: 100%;
+  margin: 0;
+  border-collapse: collapse;
+  border-top: 0.55pt solid #222;
+  border-bottom: 0.55pt solid #222;
+}
+
+thead {
+  border-bottom: 0.45pt solid #444;
+}
+
+th,
+td {
+  padding: 1.45pt 2pt;
+  vertical-align: top;
+  border: 0;
+}
+
+th {
+  font-weight: 700;
+  text-align: left;
+}
+
+td:not(:first-child),
+th:not(:first-child) {
+  text-align: right;
+}
+
+.table-3 {
+  font-size: 4.25pt;
+}
+
+.table-4 {
+  font-size: 4.15pt;
+}
+
+.table-footnote {
+  margin: 2pt 0 0;
+  font-size: 4.1pt;
+  line-height: 1.25;
+}
+
+.references-page .page-content {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 5.75pt;
+  line-height: 1.27;
+  text-align: left;
+}
+
+.references-page h2 {
+  margin: 0 0 6pt;
+  font-size: 7.5pt;
+}
+
+.references-list {
+  column-count: 2;
+  column-gap: 18.4pt;
+  column-fill: balance;
+}
+
+.reference-entry {
+  position: relative;
+  margin: 0 0 2.55pt;
+  padding-left: 12pt;
+  break-inside: avoid;
+  page-break-inside: avoid;
+  hanging-punctuation: first;
+}
+
+.reference-number {
+  position: absolute;
+  left: 0;
+  width: 10.5pt;
+  text-align: right;
+  font-weight: 600;
+}
+
+.supporting-info-box,
+.how-to-cite {
+  margin-top: 13pt;
+  padding: 8pt 9pt;
+  border: 0.55pt solid #444;
+  background: #f4f4f4;
+  font-family: "Helvetica Neue", "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans", sans-serif;
+  font-size: 5.4pt;
+  line-height: 1.38;
+}
+
+.supporting-info-box h2,
+.how-to-cite h2 {
+  margin: 0 0 5pt;
+  font-size: 6.8pt;
+}
+
+.supporting-info-box p,
+.how-to-cite p {
+  margin-bottom: 3pt;
+}
+
+.how-to-cite {
+  background: #fff;
+}
+
+@media print {
+  html,
+  body {
+    width: 594.5pt;
+    background: #fff;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  .paper-page {
+    margin: 0;
+    box-shadow: none;
+  }
+}

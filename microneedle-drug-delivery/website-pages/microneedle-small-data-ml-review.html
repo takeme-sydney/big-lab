@@ -1,0 +1,1257 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#f3f5f7">
+  <meta name="description" content="Yunong
+Yuan氏から共有された5文献の取得状況、4全文の日本語要約、横断的な批判的統合、次の研究設計案。加えて、初めてこのテーマに触れる読者向けの基礎知識、論文評価チェックリスト、用語集を収録。">
+  <title>マイクロニードル薬物送達 × Small-data Machine Learning</title>
+  <link rel="stylesheet" href="../../shared/review-assets/styles.css">
+  <link rel="stylesheet" href="../../shared/website/assets/bilingual.css">
+  <link rel="stylesheet" href="../../shared/website/assets/copy-tools.css">
+  <link rel="stylesheet" href="../../shared/website/assets/site-directory.css">
+  <link rel="stylesheet" href="../../shared/website/assets/google-docs-typography.css">
+  <link rel="stylesheet" href="../../shared/website/assets/monochrome-theme.css">
+</head>
+<body>
+  <a class="skip-link" href="#content">本文へ移動</a>
+  <div class="reading-progress" aria-hidden="true"><span data-reading-progress></span></div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="../../shared/website/pages/index.html" aria-label="BiG Lab Working Guideへ戻る">
+        <span class="brand-mark">BIG</span>
+        <span class="brand-copy">Microneedle × Small-data ML<small>5 REFERENCES / 18 JUL 2026</small></span>
+      </a>
+      <nav class="jump-nav" aria-label="主要セクション">
+        <a href="#foundations">基礎</a>
+        <a href="#overview">要点</a>
+        <a href="#collection">PDF</a>
+        <a href="#paper-summaries">論文別</a>
+        <a href="#synthesis">統合</a>
+        <a href="#next-study">次研究</a>
+        <a href="#validation">検証</a>
+        <a href="#glossary">用語</a>
+      </nav>
+      <button class="toc-toggle" type="button" aria-expanded="false" aria-controls="sidebar-panel" data-toc-toggle>目次</button>
+    </div>
+  </header>
+
+  <main class="page-main">
+    <div class="document-shell">
+      <aside class="sidebar" id="sidebar-panel" data-sidebar>
+        <div class="sidebar-card">
+          <p class="sidebar-label">On this page</p>
+          <nav id="TOC" aria-label="文書内の目次"><ul>
+<li><a href="#マイクロニードル薬物送達-small-data-machine-learning"
+id="toc-マイクロニードル薬物送達-small-data-machine-learning">マイクロニードル薬物送達
+× Small-data Machine Learning</a>
+<ul>
+<li><a href="#共有5文献の要約と次の研究設計"
+id="toc-共有5文献の要約と次の研究設計">共有5文献の要約と、次の研究設計</a></li>
+<li><a href="#foundations" id="toc-foundations">0.
+この分野を初めて読む人のための基礎知識</a></li>
+<li><a href="#overview" id="toc-overview">1. まず押さえる7点</a></li>
+<li><a href="#collection" id="toc-collection">2.
+取得状況とローカルファイル</a></li>
+<li><a href="#paper-summaries" id="toc-paper-summaries">3.
+論文別要約</a></li>
+<li><a href="#synthesis" id="toc-synthesis">4.
+5本を統合すると何が言えるか</a></li>
+<li><a href="#next-study" id="toc-next-study">5.
+次の論文として推奨する研究質問</a></li>
+<li><a href="#data-design" id="toc-data-design">6.
+推奨データ構造</a></li>
+<li><a href="#validation" id="toc-validation">7.
+Validationと解析計画</a></li>
+<li><a href="#mvp" id="toc-mvp">8. 最小実行プラン</a></li>
+<li><a href="#limits" id="toc-limits">9.
+主張できること／まだできないこと</a></li>
+<li><a href="#checklist" id="toc-checklist">10.
+新しい論文・自分のデータを評価するときのチェックリスト</a></li>
+<li><a href="#glossary" id="toc-glossary">11. 用語集</a></li>
+<li><a href="#references" id="toc-references">12.
+参考文献と公式リンク</a></li>
+<li><a href="#methods" id="toc-methods">13. 作成方法と限界</a></li>
+</ul></li>
+</ul></nav>
+          <div class="sidebar-meta">
+            <span>CRITICAL LITERATURE REVIEW</span>
+            <strong>4 full texts · 1 metadata-only</strong>
+            <a href="../review/README.md">Markdown原稿を開く</a>
+            <a href="../references/papers/README.md">PDF索引を開く</a>
+            <a href="../../shared/website/pages/index.html">BiG Labポータルへ戻る</a>
+          </div>
+        </div>
+      </aside>
+
+      <article class="article" id="content">
+        <div class="article-status">
+          <span>LITERATURE REVIEW</span>
+          <span>4 FULL TEXTS CHECKED</span>
+          <span>RESEARCH DESIGN DRAFT</span>
+        </div>
+<p><a
+href="../website-pages/microneedle-small-data-ml-review.html">HTML版を開く</a></p>
+<h1
+id="マイクロニードル薬物送達-small-data-machine-learning">マイクロニードル薬物送達
+× Small-data Machine Learning</h1>
+<h2
+id="共有5文献の要約と次の研究設計">共有5文献の要約と、次の研究設計</h2>
+<blockquote>
+<p><strong>結論:</strong> Yunong
+Yuan氏らの2023年研究は、マイクロニードル処理皮膚の薬物透過を機械学習で予測できることを示した重要なproof-of-conceptである。一方、191点は6薬物の経時観測を含む小規模データで、ランダムな時点分割では未知薬物への一般化を十分に検証できない。次の論文では、<strong>物理モデル
++ uncertainty-aware ML + curve/run単位の外部検証 + active
+learning</strong>へ進めるのが最も筋がよい。</p>
+</blockquote>
+<p>この文書の <code>[論文]</code>
+は本文に記載された内容、<code>[統合]</code>
+は4本を横断した批判的解釈、<code>[提案]</code>
+は次の研究として議論する案、<code>[基礎]</code>
+は特定の論文への批評ではなく分野で広く共有されている教科書的な背景知識を示す。共有された5リンクを対象とし、5本目は全文未取得のため書誌情報以上を推測していない。<code>[基礎]</code>
+の記述は主に[2]の全文と、pharmacokinetics /
+MLの一般知識に基づく（出典の詳細は13章）。</p>
+<blockquote>
+<p>初めてこのテーマに触れる場合は、先に<a href="#foundations">0.
+この分野を初めて読む人のための基礎知識</a>を読むと、1章以降の批評的な内容を理解しやすい。</p>
+</blockquote>
+<h2 id="foundations">0. この分野を初めて読む人のための基礎知識</h2>
+<h3 id="なぜ針を刺さずに刺すのか-経皮送達の壁-基礎2">0.1
+なぜ針を刺さずに「刺す」のか — 経皮送達の壁 [基礎][2]</h3>
+<p>皮膚の最外層である角層（stratum
+corneum）は、死んだ角化細胞が15-20層重なった、厚さ約10-40µmのバリアである。角層は皮膚の中で最も硬く（弾性率
+約3.5-1,000 MPa）、電気抵抗も最も高い（&gt;10^5
+Ω）。分子量が大きい、または親水性が高い薬物ほどこのバリアを通過しにくく、それが経皮吸収製剤の設計を難しくしてきた。</p>
+<p>マイクロニードル（MN）は、数十〜数千µmの高さを持つ微小な針をパッチ状に配列し、角層だけを機械的に迂回する。角層とその下のviable
+epidermisを合わせた表皮全体は約100-150µmで血管を持たず、血管・リンパ管・神経が豊富なdermis（真皮）はさらに深部にある。MNの長さを適切に設計すれば、dermis深部の太い血管や神経までは届かせずに角層を突破できるため、注射針より低侵襲・低疼痛でありながら、貼付剤よりも高い透過性を持つとされる。</p>
+<h3 id="つの基本構造と薬物がどこにありどう放出されるか-基礎2">0.2
+5つの基本構造と、薬物がどこにあり、どう放出されるか [基礎][2]</h3>
+<p>Zheng et al. (2024)
+はMNを次の5構造に分類している。同じ「マイクロニードル」でも、薬物の場所と放出機構は構造ごとに大きく異なるため、これを区別しないまま「マイクロニードルの効果」を語ると論点がずれる。</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>構造</th>
+<th>薬物の場所</th>
+<th>放出・送達の機構</th>
+<th>典型的な使われ方</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Solid</td>
+<td>針自体は薬物を持たないか、表面をコーティング（coated MN）</td>
+<td>皮膚を穿孔して透過経路を作る（poke-and-patch）。coated
+MNは皮膚内でコーティングが溶解・剥離して放出</td>
+<td>角層の前処理、少量・高力価薬物やワクチンの送達</td>
+</tr>
+<tr>
+<td>Hollow</td>
+<td>針内部が中空</td>
+<td>薬液を注入する、または陰圧・電気浸透流で体液を吸引する（micro-syringeに近い）</td>
+<td>溶液・懸濁液の能動的送達、ISF・血液の採取</td>
+</tr>
+<tr>
+<td>Porous</td>
+<td>針が多孔質構造</td>
+<td>毛細管現象で薬液を送達、またはISFを吸引する</td>
+<td>hollowと同様の送達・採取、機械強度とのバランス調整</td>
+</tr>
+<tr>
+<td>Dissolving</td>
+<td>水溶性・生分解性ポリマー基質に薬物を分散</td>
+<td>基質そのものが皮膚水分で溶解・分解し、基質ごと消失しながら薬物を放出</td>
+<td>sustained releaseや一回投与、鋭利な廃棄物を残さない設計</td>
+</tr>
+<tr>
+<td>Swellable（hydrogel-forming）</td>
+<td>架橋ポリマー網目に薬物を保持、または網目自体がISFを吸収</td>
+<td>皮膚水分を吸って膨潤し、溶けずにチャネルを開いて薬物拡散・ISF吸収を行う</td>
+<td>徐放、ISFの継続的サンプリングやバイオセンシング</td>
+</tr>
+</tbody>
+</table>
+<p>[統合] Yuan et al. (2023) が対象としたのは、drug-loaded hydrogel
+MN（swellable/dissolvingに近い挙動）と、皮膚前処理用のplastic solid
+MNの2系統である（3.1参照）。この分類に照らすと、元論文の「permeation」は主にswellable/dissolving系のrelease-then-permeationと、solid
+MNによる前処理効果の混合として理解できる。</p>
+<h3 id="主な材料と作製法-基礎2">0.3 主な材料と作製法 [基礎][2]</h3>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>材料カテゴリ</th>
+<th>代表例</th>
+<th>主な作製法</th>
+<th>特徴</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>金属</td>
+<td>ステンレス、チタン、ニッケル</td>
+<td>レーザー切断・アブレーション、エッチング、micromolding+焼結</td>
+<td>強い圧縮・曲げ強度、繰り返し使用可（例: Dermaroller）</td>
+</tr>
+<tr>
+<td>シリコン</td>
+<td>シリコン</td>
+<td>フォトリソグラフィ、エッチング</td>
+<td>強い機械強度だが割れやすい</td>
+</tr>
+<tr>
+<td>ガラス</td>
+<td>ホウケイ酸ガラス</td>
+<td>pulling technique</td>
+<td>hollow MNで機械強度が必要な用途</td>
+</tr>
+<tr>
+<td>セラミックス</td>
+<td>アルミナ、リン酸カルシウム系</td>
+<td>micromolding+焼結、3Dプリント（光重合）</td>
+<td>高い生体適合性、tunable porosity、割れやすい</td>
+</tr>
+<tr>
+<td>糖ガラス</td>
+<td>マルトース、トレハロース、マンニトール</td>
+<td>micromolding、drawing lithography</td>
+<td>生体適合性が高いが吸湿性</td>
+</tr>
+<tr>
+<td>非分解性ポリマー</td>
+<td>PDMS、PMMA、ナイロン</td>
+<td>レーザーアブレーション、micromilling、3Dプリント、micromolding</td>
+<td>成形自由度が高い</td>
+</tr>
+<tr>
+<td>生分解性ポリマー</td>
+<td>PLA、PLGA、PCL</td>
+<td>micromolding、3Dプリント（FDM）</td>
+<td>分解速度で放出プロファイルを調整可能</td>
+</tr>
+<tr>
+<td>水溶性ポリマー</td>
+<td>PVA、PVP、ゼラチン</td>
+<td>micromolding、drawing lithography</td>
+<td>dissolving/swellable MNの主要材料</td>
+</tr>
+</tbody>
+</table>
+<p>作製法として頻出するのは、鋳型に材料を流し込むmicromolding、フォトリソグラフィ・レーザー加工・エッチングなどの精密除去加工、そして光造形（stereolithography、digital
+light processing、two-photon
+polymerizationなど）を使う3Dプリンティングである。3Dプリンティングは形状の自由度が高い一方、材料・装置・生産速度・コストの制約を受ける。</p>
+<p>[統合] [2]のTable
+1（材料・作製法の対応表）は、「この論文のMNは何でできていて、どう作られたか」を読み解くチェックリストとしても使える。同じ「dissolving
+MN」でも、糖ガラスかPVAかPLGAかで、水分応答性・分解速度・機械強度が変わる。</p>
+<h3 id="なぜsmall-data-mlが問題になるのか-基礎34">0.4 なぜsmall-data
+MLが問題になるのか [基礎][3][4]</h3>
+<p>MN研究の実験（Franz拡散セルによるin
+vitro透過試験、動物・ヒト皮膚サンプル、細胞assay）は、1条件あたりの取得に時間・コスト・倫理的制約がかかる。そのため、他分野の画像認識や自然言語処理のように数万〜数百万件のデータを集めることは通常できず、数十〜数百件規模の観測が典型になる。</p>
+<p>Xu et al. (2023)
+は、small-data対策を「データ」「アルゴリズム」「戦略」の3層で捉えることを提案している（3.3参照）。</p>
+<ul>
+<li><strong>データ層:</strong>
+既存文献からのデータ抽出、データベース化、計画実験（DOE）で少数でも情報量の高い点を選ぶ。</li>
+<li><strong>アルゴリズム層:</strong>
+少数データでも過学習しにくい手法（正則化線形回帰、SVM/SVR、Gaussian
+Process Regression、Random
+Forest、XGBoostなど）を、モデルの複雑さとデータ量に見合った形で選ぶ。</li>
+<li><strong>戦略層:</strong> active
+learning（次にどの実験をすれば最も情報が増えるかをモデルに提案させる）、transfer
+learning（関連する大規模データセットの知識を転用する）。</li>
+</ul>
+<h3 id="初めて読むときのミニ用語ガイド手法の一行説明-基礎">0.5
+初めて読むときのミニ用語ガイド：手法の一行説明 [基礎]</h3>
+<p>詳しい定義は<a href="#glossary">11.
+用語集</a>にまとめるが、本レビューを読むために最低限必要な手法だけ先に一行で説明する。</p>
+<ul>
+<li><strong>Fickの法則に基づくmechanistic model:</strong>
+濃度勾配による拡散を物理方程式で記述するモデル。パラメータ（diffusion
+coefficientなど）に機構的な意味があるが、値の入手や仮定の単純化に制約がある。</li>
+<li><strong>Random Forest / XGBoost:</strong>
+多数の決定木を組み合わせる非線形回帰・分類手法。表形式の少数〜中規模データでも扱いやすく、この分野のtree
+ensembleの代表格。</li>
+<li><strong>Gaussian Process Regression（GPR）:</strong>
+予測値だけでなく予測の不確実性（信頼区間）を返す手法。少数データでのbaselineやactive
+learningと相性がよい。</li>
+<li><strong>Active learning:</strong>
+次にどの条件を実験すれば予測の不確実性が最も減るかをモデルに提案させ、実験と学習を反復するアプローチ。</li>
+<li><strong>Transfer learning:</strong>
+別の（多くはより大規模な）関連データセットで学習した知識を、少数データの対象タスクに転用する手法。関連性が低いsourceからの転用は逆に性能を落とす（negative
+transfer）ことがある。</li>
+<li><strong>Physics-informed / hybrid residual model:</strong>
+mechanistic
+modelの予測値を土台にして、その残差（実測との差）だけをMLで学習する構成。物理的な妥当性とデータからの補正を両立させやすい。</li>
+</ul>
+<h3 id="評価指標を読むときにまず疑うこと-基礎統合">0.6
+評価指標を読むときに、まず疑うこと [基礎][統合]</h3>
+<p>本レビューの4章・7章で詳述する内容の要約として、初めて読む際に持っておくべき3つの疑問を挙げる。</p>
+<ol type="1">
+<li><strong>その<code>R²</code>やRMSEは、何を分割してtrain/testに分けた結果か。</strong>
+同じ薬物・同じ透過曲線の時点が両方に混ざっていないか（1章の3点目、3.1「最重要の限界」で詳述）。</li>
+<li><strong>未知の薬物・未知のMN設計に対する性能か、既知データ内の性能（補間）か。</strong>
+高い<code>R²</code>は多くの場合、後者を示しているに過ぎない（4.4参照）。</li>
+<li><strong>予測に不確実性（誤差範囲）が付いているか。</strong>
+点推定だけの比較では、「どこまで信頼できる予測か」が分からない（4.4、7章参照）。</li>
+</ol>
+<p>これらの疑問を持ったうえで、1章以降の各論文批評、7章のvalidation設計を読むと、なぜこのレビューがrandom
+point splitやsingle R²
+reportingに繰り返し注意しているかが理解しやすくなる。</p>
+<h2 id="overview">1. まず押さえる7点</h2>
+<ol type="1">
+<li><strong>元論文が予測したのは主に「マイクロニードル処理後の皮膚透過」であり、マイクロニードル内部からのreleaseだけではない。</strong>
+次研究では、matrixからのreleaseとskin
+transportを分けて定義する必要がある。[1]</li>
+<li><strong>XGBoostは同じデータ分布内では最良だった。</strong>
+透過量・透過率の両方で <code>R² = 0.98</code>
+を示したが、未知薬物を丸ごと除外した検証では大きなずれが生じた。[1]</li>
+<li><strong>191 time-point observationsを191 independent
+formulationsとして扱ってはいけない。</strong>
+同じ薬物・同じ透過曲線の時点がtrain/testへ分散すると、性能が楽観的に見える可能性がある。[1][3][4]</li>
+<li><strong>物理モデルとMLは競合ではなく補完関係にある。</strong>
+Fickモデルは機構・境界条件・単調性を与え、MLは未知の非線形残差や測定条件差を学習できる。[1][4]</li>
+<li><strong>small dataではalgorithm選びより、experimental
+unit、descriptor、validation、uncertaintyが重要である。</strong>
+SVM、GPR、RF、GBDT/XGBoost、symbolic
+regressionは候補だが、万能な方法はない。[3][4]</li>
+<li><strong>臨床移行に必要な変数は薬物・針形状だけではない。</strong>
+挿入深さ、applicator、皮膚差、batch再現性、滅菌、包装、保存、投与量の一貫性までデータ化する必要がある。[2]</li>
+<li><strong>次の最小実行案は、未知薬物をいきなり当てることではない。</strong>
+まず同一薬物内の新しいMN設計をcurve/run単位で予測し、次にleave-one-drug-outと新規batchで外部検証する。</li>
+</ol>
+<h2 id="collection">2. 取得状況とローカルファイル</h2>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>No.</th>
+<th>文献</th>
+<th>種別</th>
+<th>取得状況</th>
+<th>ローカル</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Yuan et al., 2023 [1]</td>
+<td>原著研究</td>
+<td>全文・publisher PDF・CC BY</td>
+<td><a
+href="../references/papers/2026-07-17-yunong-yuan-email/01-yuan-2023-drug-permeation-microneedled-skin-ml.pdf">PDFを開く</a></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Zheng et al., 2024 [2]</td>
+<td>MN総説</td>
+<td>全文・publisher PDF</td>
+<td><a
+href="../references/papers/2026-07-17-yunong-yuan-email/02-zheng-2024-microneedle-biomedical-devices.pdf">PDFを開く</a></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Xu et al., 2023 [3]</td>
+<td>materials small-data総説</td>
+<td>全文・publisher PDF・CC BY 4.0</td>
+<td><a
+href="../references/papers/2026-07-17-yunong-yuan-email/03-xu-2023-small-data-ml-materials-science.pdf">PDFを開く</a></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Dou et al., 2023 [4]</td>
+<td>molecular small-data総説</td>
+<td>全文・HHS author manuscript</td>
+<td><a
+href="../references/papers/2026-07-17-yunong-yuan-email/04-dou-2023-ml-methods-small-data-molecular-science.pdf">PDFを開く</a></td>
+</tr>
+<tr>
+<td>5</td>
+<td>Achar &amp; Keith, 2024 [5]</td>
+<td>3頁のHighlight</td>
+<td><strong>全文未取得</strong>。ACSは抄録なし・購読対象</td>
+<td><a
+href="../references/papers/2026-07-17-yunong-yuan-email/05-achar-keith-2024-highlight-metadata-only.md">取得記録</a></td>
+</tr>
+</tbody>
+</table>
+<p>ファイルサイズ、頁数、入手元、権利メモ、SHA-256は <a
+href="../references/papers/README.md">PDF索引</a> に記録した。</p>
+<blockquote>
+<p><strong>アクセス上の注意:</strong> [5] は一般的なreview
+articleではなく、<em>Chemical Reviews</em>
+124巻24号の3頁の<code>Highlight</code>である。ACS公式ページは「抄録の代わりにfirst
+pageを表示」としており、オープンアクセス版・機関リポジトリ版は確認できなかった。大学の購読認証が使える場合はDOIから取得できる。</p>
+</blockquote>
+<h2 id="paper-summaries">3. 論文別要約</h2>
+<h3
+id="yuan-et-al.-2023---prediction-of-drug-permeation-through-microneedled-skin-by-machine-learning">3.1
+Yuan et al. (2023) - Prediction of drug permeation through microneedled
+skin by machine learning</h3>
+<p><strong>書誌:</strong> Yunong Yuan, Yiting Han, Chun Wei Yap, et
+al. <em>Bioengineering &amp; Translational Medicine</em> 8(6), e10512.
+DOI: <a
+href="https://doi.org/10.1002/btm2.10512">10.1002/btm2.10512</a>. <a
+href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10658566/">PubMed
+Central</a></p>
+<h4 id="目的">目的</h4>
+<p>[論文] Franz diffusion cellを用いるin
+vitro皮膚透過試験は時間と費用がかかるため、既存の実験データからマイクロニードル（MN）処理皮膚の累積透過量と累積透過率を予測することを目的とした。比較したのは、Fickの第二法則に基づく2次元mechanistic
+model、multiple linear regression（MLR）、random
+forest（RF）、XGBoostの4方法である。</p>
+<h4 id="データと設計">データと設計</h4>
+<ul>
+<li>既報の同一研究グループの実験から、BSA、銅イオン、GHK
+tripeptide、rhodamine B、lidocaine、caffeineの6 payloadを統合した。</li>
+<li>クリーニング後は<strong>191 time-point observations</strong>。</li>
+<li>MNはdrug-loaded hydrogel MNと、皮膚前処理に用いるplastic solid
+MNの2系統。</li>
+<li>MLの7特徴量は、skin type、MN type、MN length、MN surface area、drug
+loading、permeation time、molecular weight。</li>
+<li>データ点を<strong>7:3でランダムにtrain/test分割</strong>。Fickモデルは文献由来のdiffusion
+coefficientを使用し、学習はしていない。</li>
+<li>評価指標はRMSEとR²。</li>
+</ul>
+<h4 id="主結果">主結果</h4>
+<table>
+<thead>
+<tr>
+<th>予測対象</th>
+<th style="text-align: right;">XGBoost</th>
+<th style="text-align: right;">RF</th>
+<th style="text-align: right;">Fick</th>
+<th style="text-align: right;">MLR</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>透過量 RMSE (µg)</td>
+<td style="text-align: right;"><strong>4,447.23</strong></td>
+<td style="text-align: right;">7,043.97</td>
+<td style="text-align: right;">6,778.17</td>
+<td style="text-align: right;">23,398.91</td>
+</tr>
+<tr>
+<td>透過量 R²</td>
+<td style="text-align: right;"><strong>0.98</strong></td>
+<td style="text-align: right;">0.95</td>
+<td style="text-align: right;">0.95</td>
+<td style="text-align: right;">0.46</td>
+</tr>
+<tr>
+<td>透過率 RMSE (%)</td>
+<td style="text-align: right;"><strong>28.24</strong></td>
+<td style="text-align: right;">34.33</td>
+<td style="text-align: right;">85.58</td>
+<td style="text-align: right;">120.33</td>
+</tr>
+<tr>
+<td>透過率 R²</td>
+<td style="text-align: right;"><strong>0.98</strong></td>
+<td style="text-align: right;">0.97</td>
+<td style="text-align: right;">0.82</td>
+<td style="text-align: right;">0.65</td>
+</tr>
+</tbody>
+</table>
+<p>[論文] XGBoostが両予測で最良だった。feature
+importanceでは、透過率にはMN surface areaとtime、透過量にはdrug
+loadingとtimeが重要だった。Fickモデルは機構理解に有用だが、drug・skin・temperatureなどで変わるdiffusion
+coefficientの入手が制約になる。</p>
+<h4 id="最重要の限界">最重要の限界</h4>
+<ul>
+<li>[論文] rhodamine
+Bとcaffeineのように各薬物の点数が少ない場合、予測偏差が大きかった。</li>
+<li>[論文] 1薬物をtraining
+setから完全に除外して予測すると、透過量・透過率ともに大きく外れた。著者は、drug
+loading範囲の偏りと他特徴量の重み不足を理由に挙げている。</li>
+<li>[統合]
+191点は経時曲線上の点を含み、独立した191製剤とは限らない。random point
+splitでは、同一drug・MN
+condition・curve由来の近い時点がtrain/testの両方に入る可能性がある。その場合、<code>R² = 0.98</code>
+は<strong>interpolation性能</strong>としては有用でも、未知drugや未知platformへの性能とは解釈できない。</li>
+<li>[統合]
+<code>time</code>が最重要になるのは累積量の物理から自然であり、feature
+importanceだけで新しい機構を証明したとはいえない。</li>
+<li>[統合]
+RMSEはpayloadの量スケールに支配される。drug間の公平な比較には、per-curve
+normalized errorやdrug-wise metricsも必要である。</li>
+</ul>
+<h4 id="この論文から引き継ぐもの">この論文から引き継ぐもの</h4>
+<p>[提案]
+4モデルを比較する思想、公開data/code、量と率を分ける点、機構モデルをbaselineに置く点はそのまま引き継ぐ。一方、split単位、外部検証、uncertainty、curve構造を更新する。</p>
+<h3 id="zheng-et-al.-2024---microneedle-biomedical-devices">3.2 Zheng et
+al. (2024) - Microneedle biomedical devices</h3>
+<p><strong>書誌:</strong> Mengjia Zheng, Tao Sheng, Jicheng Yu, Zhen Gu,
+Chenjie Xu. <em>Nature Reviews Bioengineering</em> 2, 324-342. DOI: <a
+href="https://doi.org/10.1038/s44222-023-00141-6">10.1038/s44222-023-00141-6</a>.</p>
+<h4 id="総説の地図">総説の地図</h4>
+<p>[論文] MNを単なる皮膚穿刺針ではなく、drug delivery、biofluid
+sampling、biosensing、wearable electronics、closed-loop
+theranosticsを統合するbiomedical deviceとして整理した総説である。</p>
+<ul>
+<li><strong>構造:</strong>
+solid、hollow、porous、dissolving、swellable。</li>
+<li><strong>材料:</strong>
+metals、silicon、glass、ceramics、oligosaccharides、non-degradable /
+biodegradable / water-soluble polymers。</li>
+<li><strong>設計変数:</strong> tip radius、length、aspect
+ratio、spacing、needle number、patch area、internal
+density、multi-material composition。</li>
+<li><strong>応用:</strong> skinに加え、eye、oral
+mucosa、heart、gastrointestinal tract、tumourなど。</li>
+<li><strong>機能統合:</strong> stimuli-responsive delivery、electrical /
+photonic / mechanical stimulation、biosensing、living-cell
+delivery、wearables、feedback-controlled dosing。</li>
+</ul>
+<h4 id="臨床移行に関する主結果">臨床移行に関する主結果</h4>
+<p>[論文]
+著者らはClinicalTrials.govで2007-2022年の<code>microneedle</code>関連138試験を調べ、約4分の1がphase
+II以降と報告した。対象はvaccination、pain、anaesthesia、ocular
+delivery、cancer、osteoporosis、diabetes、diagnosisなどに広がる。一方、血液採取deviceにはFDA
+clearanceやCE markの例があるが、therapeutic MN
+patchの承認・商業化はなお難しい。</p>
+<h4
+id="研究データへ追加すべきtranslation-variables">研究データへ追加すべきtranslation
+variables</h4>
+<ul>
+<li><strong>Safety:</strong>
+出血、感染、allergy、rash、炎症、反復使用、分解物。</li>
+<li><strong>Stability:</strong>
+biologicsのtemperature、humidity、solvent感受性。</li>
+<li><strong>Mass production:</strong> pharmacopoeial
+standard、batch-to-batch consistency、cost。</li>
+<li><strong>Sterilization:</strong> ethylene oxide、gamma
+ray、autoclaving、aseptic processingがmaterial/cargoへ与える影響。</li>
+<li><strong>Packaging/storage:</strong>
+hygroscopicity、oxidation、desiccant、nitrogen、cold chain。</li>
+<li><strong>Deployment:</strong> thumb
+pressureまたはapplicator、insertion depth、skin
+thicknessとmechanicsの個人差・部位差。</li>
+<li><strong>Dose consistency:</strong> penetration、release、needle
+detachmentがbioavailabilityへ与える影響。</li>
+</ul>
+<p>[統合] 次のML研究でlaboratory
+variablesだけを使うと、実装時の分布変化を見落とす。少なくとも<code>applicator</code>,
+<code>insertion success</code>, <code>skin thickness/site</code>,
+<code>batch</code>, <code>sterilization</code>,
+<code>storage</code>を将来追加できるschemaにする必要がある。</p>
+<h3
+id="xu-et-al.-2023---small-data-machine-learning-in-materials-science">3.3
+Xu et al. (2023) - Small data machine learning in materials science</h3>
+<p><strong>書誌:</strong> Pengcheng Xu, Xiaobo Ji, Minjie Li, Wencong
+Lu. <em>npj Computational Materials</em> 9, 42. DOI: <a
+href="https://doi.org/10.1038/s41524-023-01000-z">10.1038/s41524-023-01000-z</a>.</p>
+<h4 id="中心的な整理">中心的な整理</h4>
+<p>[論文] materials MLのsmall-data対策を3層に分ける。</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>層</th>
+<th>方法</th>
+<th>MN研究での対応</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data source</td>
+<td>publication extraction、database、高throughput
+computation/experiment</td>
+<td>過去のFranz-cell曲線、simulation、計画的DOE</td>
+</tr>
+<tr>
+<td>Algorithm</td>
+<td>SVM/SVR、GPR、RF、GBDT、XGBoost、symbolic regression、imbalanced
+learning</td>
+<td>少数表形式データのbaselineとuncertainty</td>
+</tr>
+<tr>
+<td>Strategy</td>
+<td>active learning、transfer learning</td>
+<td>次に測るMN条件の選択、近縁payload/platformからの知識移転</td>
+</tr>
+</tbody>
+</table>
+<h4 id="実務上重要な点">実務上重要な点</h4>
+<ul>
+<li>small/bigは固定のsample数ではなく、sample数、feature数、target
+complexityの関係で決まる。</li>
+<li>controlled conditionsで得た高品質small
+dataは、由来が不明な大量データより有用な場合がある。</li>
+<li>workflowはdata collection、feature engineering、model
+selection/evaluation、applicationで構成される。</li>
+<li>element / structure / process descriptorsに加え、<strong>domain
+knowledgeから作るdescriptor</strong>が精度と解釈性を改善し得る。</li>
+<li>著者らはsample数が30未満ならLOOCVを推奨例として挙げるが、[統合]
+時系列・曲線・batch構造がある場合は単純LOOCVではなく<strong>group-aware
+validation</strong>が優先される。</li>
+<li>y-scrambling、反復分割、external
+validationは偶然の相関やsplit依存性の確認に役立つ。</li>
+<li>active learningは、unlabeled candidate
+poolから情報量の高い点を選び、experiment-label-retrainを反復する。</li>
+<li>transfer learningは関連する大きなsource
+taskがあり、targetとの相関が高いときに有効。無関係なsourceからのnegative
+transferには注意が必要。</li>
+</ul>
+<h4 id="このテーマへの意味">このテーマへの意味</h4>
+<p>[提案]
+MN実験ではGPRをuncertainty付きbaselineにし、RF/XGBoostを非線形baseline、mechanistic
+modelをphysics baseline、symbolic/regularized
+regressionを解釈baselineとして同じsplitで比較する。モデル数を増やすより、group
+splitと外部検証を固定することが先である。</p>
+<h3
+id="dou-et-al.-2023---machine-learning-methods-for-small-data-challenges-in-molecular-science">3.4
+Dou et al. (2023) - Machine Learning Methods for Small Data Challenges
+in Molecular Science</h3>
+<p><strong>書誌:</strong> Bozheng Dou, Zailiang Zhu, Ekaterina
+Merkurjev, et al. <em>Chemical Reviews</em> 123(13), 8736-8780. DOI: <a
+href="https://doi.org/10.1021/acs.chemrev.3c00189">10.1021/acs.chemrev.3c00189</a>.
+<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10999174/">PubMed
+Central</a></p>
+<h4 id="対象と方法群">対象と方法群</h4>
+<p>[論文] molecular scienceでsmall
+dataが生じる理由を、cost、time、ethics、privacy、security、acquisition
+limitsとして整理し、以下を広くレビューする。</p>
+<ul>
+<li>classical ML: linear/logistic regression、KNN、SVM、kernel
+methods、RF、GBT。</li>
+<li>neural/generative:
+ANN、CNN、U-Net、GNN、GAN、VAE、LSTM、transformer。</li>
+<li>data-efficient strategies: transfer/multitask
+learning、self-supervised learning、active learning、graph-based
+semi-supervised learning。</li>
+<li>hybrid strategies: traditional ML + DL、<strong>physical model-based
+data augmentation</strong>。</li>
+</ul>
+<h4 id="mn研究へ直結する主張">MN研究へ直結する主張</h4>
+<ul>
+<li>small
+dataの即時的リスクはtrainだけでなくtestにも起こるoverfitting。</li>
+<li>imbalance、noise、missingness、diversity、high
+dimensionalityが同時に問題を悪化させる。</li>
+<li>materials scienceでは、black-box deep modelより、physics-informed
+variablesを使うsimple modelが同等性能と高い解釈性を示す場合がある。</li>
+<li>simulation
+augmentationは有望だが、noiseやnon-uniformityを持ち込む危険がある。</li>
+<li>modelability、data
+representability、small-and-diverse/noisy/imbalanced
+dataの評価方法が未成熟。</li>
+<li>最終的には、physical / chemical / biological understandingをmodel
+design、selection、interpretationへ組み込む必要がある。</li>
+</ul>
+<h4 id="このテーマへの意味-1">このテーマへの意味</h4>
+<p>[提案]
+simulation点を実験点と同じ重みで単純結合しない。<code>source = experiment | simulation</code>を保持し、multi-fidelity
+model、residual learning、calibration
+weightingのいずれかで扱う。物理的に不可能なnegative cumulative
+amount、loading超過、時間とともに減少する累積透過などを許さない制約も必要である。</p>
+<h3
+id="achar-keith-2024---small-data-machine-learning-approaches-in-molecular-and-materials-science">3.5
+Achar &amp; Keith (2024) - Small Data Machine Learning Approaches in
+Molecular and Materials Science</h3>
+<p><strong>書誌:</strong> Siddarth K. Achar, John A. Keith. <em>Chemical
+Reviews</em> 124(24), 13571-13573. DOI: <a
+href="https://doi.org/10.1021/acs.chemrev.4c00957">10.1021/acs.chemrev.4c00957</a>.</p>
+<p>[論文]
+ACSとPubMedで確認できる範囲では、これは<strong>3頁のHighlight</strong>で、abstractは掲載されていない。subjectsはfirst-principles
+calculations、materials、materials science、molecular modeling、quality
+management。全文未取得のため、具体的主張、方法、結論は本レビューの根拠に使っていない。</p>
+<p>[提案] 大学購読で取得できた場合は、<a
+href="../references/papers/2026-07-17-yunong-yuan-email/05-achar-keith-2024-highlight-metadata-only.md">取得記録</a>の<code>未確認</code>欄を更新し、現在のsummaryへ追補する。</p>
+<h2 id="synthesis">4. 5本を統合すると何が言えるか</h2>
+<h3 id="元論文の位置づけ">4.1 元論文の位置づけ</h3>
+<p>[統合] Yuan et
+al.は「同じ研究群・既知payloadを含むデータ空間で、非線形tree
+ensembleがmechanistic/linear
+baselineより高精度になり得る」ことを示した。これは有用な第一段階である。しかし、未知drugを除いたときの失敗は、現在のmodelがdrug-agnostic
+general predictorではないことも同時に示す。</p>
+<h3 id="releaseとpermeationを分ける">4.2
+releaseとpermeationを分ける</h3>
+<p>累積受容液量は少なくとも次の連鎖で決まる。</p>
+<p><code>MN hydration / dissolution -&gt; payload release -&gt; skin partition -&gt; diffusion through tissue -&gt; receptor mixing / sampling</code></p>
+<p>[統合] 一つのblack-box
+targetへまとめると、どの段階の変化を学習したか分からない。可能なら以下を別targetとして測る。</p>
+<ol type="1">
+<li>MNからmediaへのin vitro release。</li>
+<li>skin内retention。</li>
+<li>receptorへ到達したcumulative amount。</li>
+<li>mass balance（MN残存 + skin + receptor + loss）。</li>
+</ol>
+<h3 id="物理モデルとmlの役割分担">4.3 物理モデルとMLの役割分担</h3>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>方法</th>
+<th>強み</th>
+<th>弱み</th>
+<th>次研究での役割</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fick / mechanistic</td>
+<td>境界条件、単位、機構、extrapolationの形</td>
+<td>diffusion coefficientや単純化仮定に敏感</td>
+<td>physics baseline / constraint</td>
+</tr>
+<tr>
+<td>Regularized linear / symbolic</td>
+<td>少数データ、解釈性</td>
+<td>強い非線形に弱い</td>
+<td>sanity-check baseline</td>
+</tr>
+<tr>
+<td>GPR</td>
+<td>uncertainty、active learningと相性</td>
+<td>高次元・大規模に弱い</td>
+<td>primary small-data baseline</td>
+</tr>
+<tr>
+<td>RF / XGBoost</td>
+<td>非線形、interaction、表形式</td>
+<td>外挿とcalibrationが弱い</td>
+<td>predictive baseline</td>
+</tr>
+<tr>
+<td>Hybrid residual</td>
+<td>物理の形 + data-driven correction</td>
+<td>設計と検証が複雑</td>
+<td>推奨primary model</td>
+</tr>
+</tbody>
+</table>
+<p>推奨形は
+<code>prediction = mechanistic prediction + ML residual</code>。別案として、diffusion
+coefficientやrelease-rate parameterをMLで推定し、mechanistic
+solverへ戻す。</p>
+<h3 id="精度が高いよりどこまで使えるか">4.4
+「精度が高い」より「どこまで使えるか」</h3>
+<p>[統合] small dataで重要なのは単一のR²順位ではなくapplicability
+domainである。少なくとも、各予測に以下を返すべきである。</p>
+<ul>
+<li>training range内か外か。</li>
+<li>nearest known drug / MN designとの距離。</li>
+<li>prediction interval。</li>
+<li>主要なuncertainty source。</li>
+<li>追加実験で最も不確実性が減る候補。</li>
+</ul>
+<h2 id="next-study">5. 次の論文として推奨する研究質問</h2>
+<blockquote>
+<p><strong>Can a physics-guided, uncertainty-aware small-data model
+predict complete drug release and skin permeation profiles from
+microneedle systems, while identifying the next most informative
+experiment?</strong></p>
+</blockquote>
+<h3 id="primary-hypothesis">Primary hypothesis</h3>
+<p>Fick-basedまたはrelease-diffusion mechanistic predictionへGPR/XGBoost
+residualを追加すると、pure mechanistic modelとpure ML
+modelより、<strong>grouped external
+validation</strong>で低い誤差と良いuncertainty
+calibrationを得られる。</p>
+<h3 id="secondary-hypotheses">Secondary hypotheses</h3>
+<ol type="1">
+<li>domain descriptors（solubility、logP、ionization、matrix
+hydration、crosslink density、geometry）を加えると、molecular
+weightだけよりleave-one-drug-out性能が改善する。</li>
+<li>active learningで選んだ実験は、random
+samplingより少ない追加curveでerror/uncertaintyを下げる。</li>
+<li>applicatorとinsertion qualityを加えると、batch間の残差が減る。</li>
+</ol>
+<h2 id="data-design">6. 推奨データ構造</h2>
+<h3 id="experimental-unit">Experimental unit</h3>
+<p><code>study -&gt; batch -&gt; MN formulation/device -&gt; skin specimen -&gt; diffusion-cell run -&gt; curve -&gt; time point</code></p>
+<p>主split単位は<strong>curveまたはrun</strong>とし、time
+pointを独立にsplitしない。skin
+donorやbatchが複数curveを生む場合は、目的に応じてdonor/batchもgroup化する。</p>
+<h3 id="最低限のfield">最低限のfield</h3>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Block</th>
+<th>例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Provenance</td>
+<td>study_id, source_doi, raw_file, extraction_method, reviewer</td>
+</tr>
+<tr>
+<td>Group IDs</td>
+<td>batch_id, formulation_id, skin_donor_id, run_id, curve_id</td>
+</tr>
+<tr>
+<td>MN</td>
+<td>type, material, geometry, length, tip radius, surface area, count,
+spacing</td>
+</tr>
+<tr>
+<td>Matrix/process</td>
+<td>polymer MW, concentration, crosslinking, fabrication method,
+sterilization, storage</td>
+</tr>
+<tr>
+<td>Payload</td>
+<td>identity, loading, MW, logP/logD, pKa, solubility, charge,
+diffusivity</td>
+</tr>
+<tr>
+<td>Barrier</td>
+<td>species, anatomical site, thickness, preparation, integrity
+test</td>
+</tr>
+<tr>
+<td>Deployment</td>
+<td>applicator, force/speed, dwell time, insertion depth/success</td>
+</tr>
+<tr>
+<td>Diffusion test</td>
+<td>donor/receptor volume, medium, pH, temperature, agitation,
+sampling/replacement</td>
+</tr>
+<tr>
+<td>Outcomes</td>
+<td>time, cumulative amount, cumulative %, flux, lag time, skin
+retention, mass balance</td>
+</tr>
+<tr>
+<td>Quality</td>
+<td>replicate, censoring, missingness reason, protocol deviation,
+uncertainty</td>
+</tr>
+</tbody>
+</table>
+<h2 id="validation">7. Validationと解析計画</h2>
+<h3 id="必須の4段階">必須の4段階</h3>
+<ol type="1">
+<li><strong>Grouped repeated cross-validation:</strong>
+curve/run単位で分割。hyperparameter tuningをnested CV内に閉じる。</li>
+<li><strong>Leave-one-formulation/drug-out:</strong>
+未知条件への外挿を明示的に測る。</li>
+<li><strong>Leave-one-platform/material-out:</strong>
+hydrogel/solidなどdevice classをまたぐ一般化を測る。</li>
+<li><strong>Prospective external test:</strong>
+新しいbatch、可能なら新しいskin donor・laboratory
+dayを事前固定して評価。</li>
+</ol>
+<h3 id="metrics">Metrics</h3>
+<ul>
+<li>point-wise: MAE、RMSE、R²。ただしdrug-wiseにも集計。</li>
+<li>curve-wise: normalized RMSE、AUC error、<code>t50/t90</code>
+error、maximum deviation。</li>
+<li>physical validity: non-negativity、monotonic cumulative
+curve、loading upper bound、mass balance。</li>
+<li>uncertainty: 90/95% interval coverage、interval width、calibration
+curve。</li>
+<li>decision value: active learning 1 iterationあたりのerror
+reduction。</li>
+</ul>
+<h3 id="leakage-guard">Leakage guard</h3>
+<ul>
+<li>normalization、feature selection、imputation、augmentationをCV
+foldの外でfitしない。</li>
+<li>同一curveのtime pointsをtrain/testへ分けない。</li>
+<li>literature由来のduplicate curveを検出する。</li>
+<li>simulation-generated pointsの元parameterがtest
+experimentから推定されていないか確認する。</li>
+</ul>
+<h2 id="mvp">8. 最小実行プラン</h2>
+<h3 id="phase-1---reproduce">Phase 1 - Reproduce</h3>
+<ul>
+<li>Data S1/S2から元論文の191点、4モデル、Table 4を再現。</li>
+<li>rowごとに<code>drug</code>, <code>run/curve</code>,
+<code>time</code>, <code>source study</code>を復元。</li>
+<li>random point splitとgrouped splitの性能差を報告。</li>
+</ul>
+<h3 id="phase-2---strengthen">Phase 2 - Strengthen</h3>
+<ul>
+<li>GPR、regularized linear、RF、XGBoost、Fick、hybrid
+residualを同一splitで比較。</li>
+<li>bootstrapでconfidence intervalを出す。</li>
+<li>leave-one-drug-out failureを定量化し、applicability
+domainを可視化。</li>
+</ul>
+<h3 id="phase-3---add-information-not-just-rows">Phase 3 - Add
+information, not just rows</h3>
+<ul>
+<li>drug descriptorsとrelease-stage dataを追加。</li>
+<li>MN batch/applicator/insertion variablesを追加。</li>
+<li>追加実験候補をBayesian active
+learningで順位付けし、研究者が実行可能性を確認。</li>
+</ul>
+<h3 id="phase-4---prospective-validation">Phase 4 - Prospective
+validation</h3>
+<ul>
+<li>modelをfreezeしてから新規curveを取得。</li>
+<li>success criteriaとfailure criteriaを事前登録。</li>
+<li>予測が外れた条件も削除せず、次iterationの情報として残す。</li>
+</ul>
+<h2 id="limits">9. 主張できること／まだできないこと</h2>
+<h3 id="現時点で主張できる">現時点で主張できる</h3>
+<ul>
+<li>既知drugを含む小規模統合dataでは、XGBoostが比較4法中で最良だった。[1]</li>
+<li>MN surface area、drug loading、timeは予測へ強く寄与した。[1]</li>
+<li>small-data対策には、domain descriptors、適切なclassical
+algorithms、active/transfer learning、physics
+integrationが有望である。[3][4]</li>
+<li>clinical
+translationには挿入・製造・滅菌・保存・投与量一貫性が不可欠である。[2]</li>
+</ul>
+<h3 id="まだ主張できない">まだ主張できない</h3>
+<ul>
+<li><code>R² = 0.98</code>が未知drugにも維持されること。</li>
+<li>feature importanceが因果効果または機構を証明すること。</li>
+<li>simulation augmentationだけでexperimental
+generalizationが改善すること。</li>
+<li>MN typeやdrug MWが本質的に重要でないこと。</li>
+<li>laboratory modelがclinical doseやpatient
+responseを保証すること。</li>
+</ul>
+<h2 id="checklist">10.
+新しい論文・自分のデータを評価するときのチェックリスト</h2>
+<p>[提案]
+1〜9章で明らかになった論点を、次にMN×ML論文を読むとき、または自分のデータを解析するときに使えるチェックリストへまとめる。</p>
+<h3 id="データ構造">10.1 データ構造</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" />観測点はexperimental
+unit（curve/run）ごとに識別できるか、それとも時点だけの羅列か。</label></li>
+<li><label><input
+type="checkbox" /><code>batch_id</code>、<code>skin_donor_id</code>、<code>run_id</code>のようなgroup
+IDが記録されているか。</label></li>
+<li><label><input
+type="checkbox" />release、permeation、retention/recoveryのどれを測っているかが明示されているか（混同していないか）。</label></li>
+<li><label><input type="checkbox" />nominal
+loading（設計値）とassay-confirmed
+loading（実測値）が区別されているか。</label></li>
+</ul>
+<h3 id="分割とvalidation">10.2 分割とvalidation</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" />train/testの分割単位はtime
+pointではなく、curve/run/donorなどgroupか。</label></li>
+<li><label><input
+type="checkbox" />leave-one-drug-out、leave-one-platform-outのような外部検証を報告しているか。</label></li>
+<li><label><input
+type="checkbox" />cross-validationのhyperparameter探索は、テスト対象のfoldの外で行われているか（リーク防止）。</label></li>
+<li><label><input
+type="checkbox" />y-scramblingや反復分割など、偶然の相関を確認する手続きがあるか。</label></li>
+</ul>
+<h3 id="指標と物理的妥当性">10.3 指標と物理的妥当性</h3>
+<ul class="task-list">
+<li><label><input
+type="checkbox" /><code>R²</code>だけでなく、RMSE/MAE、可能ならcurve-wiseやdrug-wiseの指標も報告しているか。</label></li>
+<li><label><input
+type="checkbox" />予測値が物理的にあり得ない値（負の累積量、loading上限超え、時間とともに減少する累積曲線など）を許していないか。</label></li>
+<li><label><input type="checkbox" />予測に不確実性（prediction
+interval、信頼区間）が付いているか。</label></li>
+</ul>
+<h3 id="臨床実装への翻訳変数">10.4 臨床・実装への翻訳変数</h3>
+<ul class="task-list">
+<li><label><input
+type="checkbox" />insertion（applicator、挿入深さ、成功率）、滅菌、保存、製造ばらつきなど、laboratory変数以外の翻訳変数を記録・議論しているか（3.2参照）。</label></li>
+<li><label><input
+type="checkbox" />sample数が少ない状態で、未知材料・患者集団への性能を過度に一般化していないか。</label></li>
+</ul>
+<h3 id="自分の研究にaimlを使うとき">10.5
+自分の研究にAI・MLを使うとき</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" />mechanistic
+baseline（Fickなど）を、MLモデルと同じデータ・同じsplitで比較しているか。</label></li>
+<li><label><input
+type="checkbox" />simulationデータと実験データを同じ重みで単純結合していないか（4.3、9章参照）。</label></li>
+<li><label><input
+type="checkbox" />欠測値をAIで補完した場合、それを実測値と区別して記録しているか。</label></li>
+<li><label><input
+type="checkbox" />AIが提案したコード・図・文章を、人間（研究者）がraw
+dataと突き合わせてレビューしたか。</label></li>
+</ul>
+<h2 id="glossary">11. 用語集</h2>
+<p>日本語での議論用に、本レビューで使う主要用語を英日対照でまとめる。定義は本レビューでの使われ方に合わせた簡略なものであり、厳密な学術定義はそれぞれの原論文を参照する。</p>
+<h4 id="マイクロニードル皮膚">マイクロニードル・皮膚</h4>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>用語</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Microneedle (MN)</td>
+<td>数十〜数千µmの微小な針をパッチ状に配列した経皮送達・採取デバイス</td>
+</tr>
+<tr>
+<td>Stratum corneum（角層）</td>
+<td>皮膚最外層。厚さ約10-40µmの死細胞層で、経皮吸収の主なバリア</td>
+</tr>
+<tr>
+<td>Interstitial fluid, ISF（間質液）</td>
+<td>血管と細胞の間を満たす体液。血漿成分を薄めた形で含み、MNでの採取対象になる</td>
+</tr>
+<tr>
+<td>Solid MN</td>
+<td>薬物を持たない、または表面コーティングのみの針。穿孔・前処理に使う</td>
+</tr>
+<tr>
+<td>Hollow / porous MN</td>
+<td>内部が中空・多孔質で、薬液の注入や体液吸引に使う</td>
+</tr>
+<tr>
+<td>Dissolving MN</td>
+<td>水溶性・生分解性の基質が皮膚水分で溶解し、基質ごと薬物を放出する</td>
+</tr>
+<tr>
+<td>Swellable（hydrogel-forming）MN</td>
+<td>架橋ポリマーが皮膚水分で膨潤し、溶けずにチャネルを開いて薬物拡散・ISF吸収を行う</td>
+</tr>
+<tr>
+<td>Applicator</td>
+<td>MNを一定の力・速度で皮膚に押し込む補助器具。挿入成功率に影響する</td>
+</tr>
+<tr>
+<td>Aspect ratio</td>
+<td>針の高さと基部幅の比。機械強度と穿刺性のトレードオフに関わる</td>
+</tr>
+<tr>
+<td>Franz diffusion cell</td>
+<td>donor/receptor 2槽構造で皮膚などの膜を介した透過を測るin
+vitro試験装置</td>
+</tr>
+<tr>
+<td>Cumulative permeation（累積透過量）</td>
+<td>receptor側に一定時間内に到達した薬物の累積量</td>
+</tr>
+<tr>
+<td>Flux（流束）</td>
+<td>単位時間・単位面積あたりの透過速度</td>
+</tr>
+<tr>
+<td>Lag time（遅延時間）</td>
+<td>拡散が定常状態に達するまでの初期の遅れ</td>
+</tr>
+<tr>
+<td>Burst release（バースト放出）</td>
+<td>投与直後に薬物の大部分が急速に放出される挙動</td>
+</tr>
+<tr>
+<td>IVRT / IVPT</td>
+<td>In Vitro Release Testing / In Vitro Permeation
+Testing。局所製剤の品質・同等性評価に使われる規制文書上の試験枠組み</td>
+</tr>
+<tr>
+<td>Mass balance</td>
+<td>投与量が、残存・透過・吸着・損失にどう配分されたかを合計で確認する考え方</td>
+</tr>
+</tbody>
+</table>
+<h4 id="small-data-ml統計">Small-data ML・統計</h4>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>用語</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>XGBoost / Random Forest（RF）</td>
+<td>複数の決定木を組み合わせる非線形回帰・分類手法。表形式データで頻用</td>
+</tr>
+<tr>
+<td>Gaussian Process Regression（GPR）</td>
+<td>予測と同時に不確実性（信頼区間）を返す非パラメトリック回帰手法</td>
+</tr>
+<tr>
+<td>SVM / SVR</td>
+<td>サポートベクターマシン（分類）・回帰版。少数データでも比較的頑健</td>
+</tr>
+<tr>
+<td>Symbolic regression</td>
+<td>データから解釈可能な数式そのものを探索する回帰手法</td>
+</tr>
+<tr>
+<td>Mechanistic model</td>
+<td>Fickの法則など、物理・化学機構に基づく方程式で現象を記述するモデル</td>
+</tr>
+<tr>
+<td>Physics-informed / Hybrid residual model</td>
+<td>mechanistic
+modelの予測を土台に、その残差をMLで補正するモデル構成</td>
+</tr>
+<tr>
+<td>Active learning</td>
+<td>次に測るべき最も情報量の高い条件をモデルに提案させる反復的実験計画</td>
+</tr>
+<tr>
+<td>Transfer learning</td>
+<td>関連する別データセットで得た知識を、対象タスクへ転用する手法</td>
+</tr>
+<tr>
+<td>Negative transfer</td>
+<td>関連性の低いsourceからの転移学習によって、かえって性能が悪化する現象</td>
+</tr>
+<tr>
+<td>Data leakage（データリーク）</td>
+<td>train情報がtestの評価に混入し、性能を実際より楽観的に見せる現象</td>
+</tr>
+<tr>
+<td>Group-aware cross-validation</td>
+<td>同一curve/run/donorなどのgroupがtrain/testに分かれないよう配慮した交差検証</td>
+</tr>
+<tr>
+<td>Leave-one-drug-out</td>
+<td>ある薬物のデータを丸ごとtestにして、未知薬物への汎化を測る検証法</td>
+</tr>
+<tr>
+<td>LOOCV</td>
+<td>Leave-One-Out
+Cross-Validation。1点だけをtestに残す交差検証（小規模データでの一手法）</td>
+</tr>
+<tr>
+<td>y-scrambling</td>
+<td>目的変数をランダムに並べ替えて再学習し、偶然の当てはまりでないか確認する手法</td>
+</tr>
+<tr>
+<td>Applicability domain</td>
+<td>モデルが妥当に予測できると考えられる、学習データの範囲・近傍</td>
+</tr>
+<tr>
+<td>RMSE / MAE</td>
+<td>Root Mean Squared Error / Mean Absolute
+Error。予測誤差の代表的な指標</td>
+</tr>
+<tr>
+<td>R²</td>
+<td>決定係数。分散のうちモデルが説明できた割合。分割方法次第で楽観的になりやすい指標</td>
+</tr>
+<tr>
+<td>AICc</td>
+<td>赤池情報量規準の小サンプル補正版。モデルの当てはまりと複雑さのバランスを比較する指標</td>
+</tr>
+<tr>
+<td>Multi-fidelity model</td>
+<td>精度・コストの異なる複数のデータ源（実験・simulationなど）を区別して統合するモデリング手法</td>
+</tr>
+<tr>
+<td>Descriptor（記述子）</td>
+<td>材料・分子・条件を数値化してモデルへ入力する特徴量</td>
+</tr>
+<tr>
+<td>Prediction interval</td>
+<td>予測値に付随する不確実性の幅を表す区間</td>
+</tr>
+<tr>
+<td>Experimental unit</td>
+<td>統計的に独立とみなせる観測の単位（例: 1 curve、1 diffusion cell
+run）</td>
+</tr>
+<tr>
+<td>Provenance</td>
+<td>データがどこから、どの処理を経て今の形になったかの来歴情報</td>
+</tr>
+</tbody>
+</table>
+<h2 id="references">12. 参考文献と公式リンク</h2>
+<ol type="1">
+<li>Yuan Y, Han Y, Yap CW, et al. <a
+href="https://doi.org/10.1002/btm2.10512">Prediction of drug permeation
+through microneedled skin by machine learning</a>. <em>Bioengineering
+&amp; Translational Medicine</em>. 2023;8(6):e10512. <a
+href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10658566/">PMC full
+text</a></li>
+<li>Zheng M, Sheng T, Yu J, Gu Z, Xu C. <a
+href="https://doi.org/10.1038/s44222-023-00141-6">Microneedle biomedical
+devices</a>. <em>Nature Reviews Bioengineering</em>.
+2024;2:324-342.</li>
+<li>Xu P, Ji X, Li M, Lu W. <a
+href="https://doi.org/10.1038/s41524-023-01000-z">Small data machine
+learning in materials science</a>. <em>npj Computational Materials</em>.
+2023;9:42.</li>
+<li>Dou B, Zhu Z, Merkurjev E, et al. <a
+href="https://doi.org/10.1021/acs.chemrev.3c00189">Machine Learning
+Methods for Small Data Challenges in Molecular Science</a>. <em>Chemical
+Reviews</em>. 2023;123(13):8736-8780. <a
+href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10999174/">PMC full
+text</a></li>
+<li>Achar SK, Keith JA. <a
+href="https://doi.org/10.1021/acs.chemrev.4c00957">Small Data Machine
+Learning Approaches in Molecular and Materials Science</a>. <em>Chemical
+Reviews</em>. 2024;124(24):13571-13573. <strong>Highlight; full text not
+reviewed.</strong></li>
+</ol>
+<h2 id="methods">13. 作成方法と限界</h2>
+<ul>
+<li>2026-07-17に共有された5リンクを確認し、取得できた4全文をPDF化・text
+extraction・page renderingで照合した。</li>
+<li>原著[1]はmethods、Table 2-4、feature importance、leave-one-drug-out
+discussionを重点確認した。</li>
+<li>[2]-[4]は各総説の分類、validation、translation、outlookを重点確認した。</li>
+<li>[5]はACS、PubMed、Crossref、OpenAlexで書誌とaccess状態を確認したが、合法的なopen
+full textは確認できなかった。</li>
+<li>2026-07-18に、初めてこのテーマに触れる読者向けの基礎知識（0章）、論文評価チェックリスト（10章）、用語集（11章）を追加した。0章の構造・材料・作製法の記述は[2]の該当ページ（Fig.
+1、Table 1、MN engineering節）を再確認して作成し、small-data
+MLの一行説明と評価指標の注意点は[3][4]および1-9章の既存内容を再構成したものである。</li>
+<li>0章・10章・11章は新しい一次資料の追加取得を伴わない、既存4全文と一般知識の再構成であり、<code>[基礎]</code>タグの内容は本レビュー独自の主張ではない。</li>
+<li>これはnarrative critical reviewと研究設計draftであり、systematic
+review、meta-analysis、臨床判断ではない。</li>
+</ul>
+      </article>
+    </div>
+  </main>
+
+  <footer class="page-footer">
+    <div>
+      <strong>Microneedle × Small-data ML Review</strong>
+      <p>共有5文献の取得状況、4全文の要約、次の研究設計。</p>
+    </div>
+    <div class="footer-meta">CRITICAL SYNTHESIS<br>LOCAL HTML · 18 JUL 2026</div>
+  </footer>
+
+  <div class="sr-only" role="status" aria-live="polite" data-status></div>
+  <script src="../../shared/review-assets/app.js"></script>
+  <script src="../../shared/website/assets/bilingual-data.js"></script>
+  <script src="../../shared/website/assets/bilingual.js"></script>
+  <script src="../../shared/website/assets/copy-tools.js"></script>
+  <script src="../../shared/website/assets/site-directory.js"></script>
+</body>
+</html>

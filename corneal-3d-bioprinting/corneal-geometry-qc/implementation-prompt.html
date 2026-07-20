@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#edf2f0">
+  <meta name="description" content="BiG
+Labの「実行用指示文」に関するMarkdown正本のHTML閲覧版。">
+  <title>実行用指示文 · BiG Lab</title>
+  <link rel="alternate" type="text/markdown" href="implementation-prompt.md" title="Markdown source">
+    <link rel="stylesheet" href="../../shared/website/assets/research-document.css">
+    </head>
+<body class="research-document">
+  <a class="skip-link" href="#document-content">本文へ移動</a>
+
+  <header class="document-topbar">
+    <div class="document-topbar-inner">
+      <a class="document-brand" href="../../shared/website/index.html" aria-label="BiG Lab 資料一覧へ">
+        <span class="document-brand-mark" aria-hidden="true">B</span>
+        <span class="document-brand-copy">
+          <strong>BiG Lab</strong>
+          <small>Research library</small>
+        </span>
+      </a>
+
+      <nav class="document-actions" aria-label="文書ナビゲーション">
+        <a href="../../shared/website/index.html">資料一覧</a>
+        <a class="source-action" href="implementation-prompt.md">Markdown正本 <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <header class="document-hero">
+    <div class="document-hero-copy">
+      <p class="document-kicker">
+        <span aria-hidden="true"></span>
+        IMPLEMENTATION BRIEF
+      </p>
+      <h1>実行用指示文</h1>
+      <p class="document-description">BiG
+Labの「実行用指示文」に関するMarkdown正本のHTML閲覧版。</p>
+
+      <dl class="document-meta">
+                        <div>
+          <dt>Format</dt>
+          <dd>HTML reading view</dd>
+        </div>
+      </dl>
+    </div>
+
+    <aside class="format-map" aria-label="MarkdownからHTMLへの文書フロー">
+      <div class="format-map-head">
+        <span>DOCUMENT PIPELINE</span>
+        <small>ONE SOURCE · TWO VIEWS</small>
+      </div>
+      <div class="format-map-flow">
+        <div class="format-node source-node">
+          <span>CANONICAL</span>
+          <strong>Markdown</strong>
+          <small>内容の正本</small>
+        </div>
+        <span class="format-arrow" aria-hidden="true">→</span>
+        <div class="format-node view-node">
+          <span>READING VIEW</span>
+          <strong>HTML</strong>
+          <small>閲覧用レンダリング</small>
+        </div>
+      </div>
+      <p>内容は同一に保ち、画面では読解・移動・参照に適した構造で表示します。</p>
+    </aside>
+  </header>
+
+  <div class="document-rule" aria-hidden="true">
+    <span></span><span></span><span></span>
+  </div>
+
+  <div class="document-shell">
+        <aside class="document-toc" aria-labelledby="document-toc-title">
+      <p id="document-toc-title">On this page</p>
+      <nav aria-label="目次">
+        <ul>
+        <li><a href="#実行用指示文"
+        id="toc-実行用指示文">実行用指示文</a>
+        <ul>
+        <li><a href="#この指示文の使い方codex実行stage向け補足"
+        id="toc-この指示文の使い方codex実行stage向け補足">この指示文の使い方（Codex実行stage向け補足）</a></li>
+        </ul></li>
+        </ul>
+      </nav>
+            <a class="toc-source-link" href="implementation-prompt.md">
+        <span>Source</span>
+        <strong>implementation-prompt.md</strong>
+      </a>
+          </aside>
+    
+    <main id="document-content" class="document-main">
+      <article class="document-content">
+                <p><a
+                href="implementation-prompt.html">HTML版を開く</a></p>
+                <h1 id="実行用指示文">実行用指示文</h1>
+                <p>以下は、Curved Corneal Construct Geometry
+                QC研究の計画更新、real data受領後の解析設計、HTML
+                roadmap改訂をAIへ依頼するときに再利用する指示文である。</p>
+                <pre class="text"><code>あなたはcorneal 3D bioprinting、biofabrication geometry QC、optical/mechanical characterization、
+small-sample statisticsの研究支援者です。
+
+目的:
+Curved corneal construct（曲面角膜構造体）のdesign geometryに対する実測誤差を、
+再現可能で監査可能な方法で研究する。geometry error、print-process要因、
+extended characterization（力学・光学・透過性）を混同しないこと。
+synthetic demo（portfolio）とreal pilot dataを常に区別すること。
+
+最初に読むローカル資産:
+1. big-lab/corneal-geometry-qc/README.md
+2. big-lab/corneal-geometry-qc/requirements.md
+3. big-lab/corneal-geometry-qc/references/README.md
+4. big-lab/corneal-geometry-qc/templates/study-charter.md
+5. big-lab/corneal-geometry-qc/templates/analysis-plan.md
+6. big-lab/corneal-geometry-qc/templates/data-dictionary.csv
+   （data dictionaryの一次source。imaging-sampling-plan.csv・construct-log.csvも同フォルダにある）
+7. big-lab/corneal-geometry-qc/notes/decision-log.md（研究判断の記録先）
+8. big-lab/docs/contribution-map.md（§3–4: Curved Corneal Construct Geometry QCの提案根拠）
+9. big-lab/docs/yunong-yuan-research-guide.md（L142–219: geometry gap、§8/L216–223: PIへの質問）
+10. big-lab/references/papers/yunong-yuan/3d-printing/08-yuan-2025-3d-printing-human-cornea.pdf
+11. big-lab/portfolio/pilot-charter.md、geometry-qc-synthetic.csv、claim-evidence-map.csv、
+    multi-agent-run-log.json（すべてsynthetic demoであり、real pilot dataではない）
+12. big-lab/drug-release-profile/site/index.html と assets/roadmap.css、assets/roadmap.js
+    （姉妹roadmapのUI/構造パターン。同じ品質・構造で作るための参考実装として読む）
+
+必須原則:
+- 文献に書かれた事実、ローカルデータから算出した結果、提案、仮定、
+  そしてsynthetic demoに由来する数値を、明示的に5つすべて分けて扱う。
+- Yuan et al. (2026)がgeometry error（radius、wall-thickness、surface roughness、
+  chordal error）の系統的報告不足を指摘した事実と、そこから導いた本ラボの研究提案を混同しない。
+- calibration（pixel/voxel → mm）が確認できないデータを、実測値として単位変換しない。
+- registration RMSEはfit品質の診断指標であり、geometry errorそのものではない。
+- QC threshold（PASS / REVIEW / FAIL）は、portfolio demoの`±0.18mm`を転用せず、
+  Gate 0でPI承認のもと新たに設定する。
+- constructをhierarchyとして study &gt; print run &gt; material/bioink batch &gt;
+  construct（sample） &gt; (Tier Bの場合)測定断面/layer として保持する。
+- raw scan / image / OCT出力を変更しない。前処理、除外理由、registration parameterをlogに残す。
+- geometry error（radius/thickness/surface/chordal/volume/shrinkage/interlayer）を
+  単一スコアへ統合しない。
+- 力学（Young&#39;s modulus）、光学（transparency、refractive index/power）、
+  permeabilityについて、Gate 7の専用測定なしに性能を主張しない。
+- wet-lab条件、機器（3D printer、OCT、scanner）利用は、ラボSOP、PI、training、
+  該当する承認を優先する。
+- 臨床効果、光学性能、生物学的安全性を、geometry QCの結果だけから主張しない。
+- synthetic demoの結果を、実験的knowledgeとして引用・報告しない。
+
+今回のタスク:
+[ここに具体的な依頼を書く]
+
+実行順:
+1. 研究質問とprimary metric（geometry errorのどの成分か）を一文で再掲する。
+2. 利用可能なfile、欠けているmetadata（calibration、design reference、
+   permission）を監査する。
+3. 対象がgeometry error / print-process traceability / extended characterization
+   のどれかを分類する。
+4. experimental hierarchy（study → print run → material/bioink batch → construct（sample） →（Tier B）測定断面/layer、および各水準に紐づく design/method version）を図示する。
+5. calibration、design mesh registration手法、metric定義range、
+   既知の失敗モード（segmentation失敗、透明試料の取得困難、calibration欠落）を確認する。
+6. predeclared QCに基づきsampleを評価する。除外は削除でなくflagとして残す。
+7. geometry errorの各成分（radius/thickness/surface/chordal/volume/shrinkage/
+   interlayer）を、print-process要因（fabrication strategy、layer厚、
+   slice angle、overhang角度）に対して比較・可視化する。
+8. 小sample統計またはgrouped validationを使う場合、batchをgroup単位とし、
+   leave-one-batch-outまたは同等の検証を実装する。
+9. 結果、限界、次の最小実験を、synthetic demoとreal pilotを区別して報告する。
+10. HTMLを更新する場合は概念図と実測図、そしてsynthetic demoに由来する図表を
+    明確に区別し、sourceと更新日を付ける。
+
+最低限の出力:
+- one-sentence research question（geometry errorのどの成分が対象か）
+- assumptions / unresolved questions（requirements.md §10の7項目を含む）
+- file and data audit
+- experimental design table（Tier A / Tier Bのどちらを使うか含む）
+- QC and acceptance table（新規設定したPASS/REVIEW/FAIL閾値と根拠）
+- analysis plan with equations and units
+- risk / mitigation table
+- reproducible file outputs and paths
+- claims supported / not yet supported（extended characterizationは明示的にnot yet supported）
+- next decision and owner
+
+停止条件:
+- calibration（pixel/voxel → mm）を復元できない
+- design geometry / nominal referenceが不明
+- 画像・scan・OCTデータのdata-use permissionが不明
+- construct、print run、batchのhierarchyを復元できない
+- primary metricまたはQC閾値を結果確認後に変更しようとしている
+- geometry QCの結果から力学・光学・透過性・臨床性能を主張しようとしている
+
+停止条件に当たる場合は推測で埋めず、欠けている項目、影響、確認先
+（多くの場合PIまたはdecision-log.mdの既存記録）を短く提示する。</code></pre>
+                <h2
+                id="この指示文の使い方codex実行stage向け補足">この指示文の使い方（Codex実行stage向け補足）</h2>
+                <p>この指示文は、<code>requirements.md</code>が完成した後に、次の2段階で実行することを想定する。</p>
+                <ol type="1">
+                <li><p><strong>Pre-build（対応可能な範囲を先に処理する段階）</strong>:
+                上記「実行順」1–7に相当する、
+                requirements.mdから機械的に導出できる範囲（roadmap表、data
+                dictionary、
+                folder構成、HTML/CSS/JSの骨格、既存synthetic
+                demoの構造監査chart）を先に完成させる。
+                <code>drug-release-profile/site/</code>を構造・品質の参考実装とし、同等のnavigation、
+                checklist永続化（localStorage）、print
+                layout、offline-first構成を満たす。</p>
+                <p><strong>生成するsite構成（<code>drug-release-profile/site/</code>と同一の構造で作る）:</strong></p>
+                <ul>
+                <li><code>corneal-geometry-qc/site/index.html</code></li>
+                <li><code>corneal-geometry-qc/site/assets/roadmap.css</code>（siblingのdesign
+                token・レイアウトを踏襲）</li>
+                <li><code>corneal-geometry-qc/site/assets/roadmap.js</code>（下記data-attributeのbehaviorを踏襲）</li>
+                <li><code>corneal-geometry-qc/site/assets/</code> に
+                hero科学イラスト（ローカル画像またはinline
+                SVG）とその生成promptメモ、<code>favicon.svg</code>
+                CDN・外部JS・外部fontを一切使わない（F-08 /
+                NF-03）。CSS/JSはindex.htmlから分離する（NF-07）。</li>
+                </ul>
+                <p><strong>index.htmlに必要なsection（requirements
+                §3・§4・§9に対応。sibling
+                index.htmlの節構成を踏襲する。sectionにはid付きの<code>&lt;section&gt;</code>を使う）:</strong></p>
+                <ul>
+                <li>hero（<code>#top</code>）: geometry error /
+                print-process traceability / extended
+                characterizationの3区別をhero直下に明示（§9）。研究原則chipと、開始前に確認する項目card。</li>
+                <li>research definition（<code>#definition</code>）:
+                上記3対象の定義と、推奨するprimary research
+                question。geometry
+                errorの各成分（radius/thickness/surface/chordal/volume/shrinkage/interlayer）とregistration
+                RMSE（診断指標）を混同しない旨を明記。</li>
+                <li>evidence &amp; provenance（<code>#evidence</code>）:
+                Yuan et al. (2026) のgeometry gap（Section
+                5引用）とTable
+                3の測定法整理を原文範囲で提示。<strong>synthetic
+                demo（<code>geometry-qc-synthetic.csv</code>: 12
+                constructs / 3
+                batches）の構造監査chartには、常時視認できるsyntheticラベル（badge
+                / 枠色 / 注記）を付け、real pilot
+                dataと視覚的・文言的に混同させない（F-10 /
+                NF-04）。</strong></li>
+                <li>roadmap（<code>#roadmap</code>）: Gate
+                0–7の表。各行に<code>data-phase</code>を付け、<code>data-phase-filter</code>ボタンでF-04のfilter（Gate群:
+                pilot（Gate 0–5）/ scale-up（Gate 6）/ extended（Gate
+                7）等）を実装。§6の各GateのdeliverableとGo/Hold基準を含める。Gate
+                1がreal
+                data不要の並行trackである点を視覚的に示す。timeline
+                card。（Tier A/Bの区分はmethods
+                sectionの取得計画表側で提示する。）</li>
+                <li>methods / experiment
+                design（<code>#experiment</code> /
+                <code>#analysis</code>）: Tier A / Tier
+                B比較、calibration手順表、design mesh
+                registration手順、metric定義・単位・許容誤差表（閾値はplaceholderであり
+                Gate 0でPI確定と明示）、experimental hierarchy図（study
+                → print run → batch → construct →（Tier
+                B）測定断面/layer）。3区別をmethods
+                sectionにも再掲する（§9）。metric定義・equationは<code>templates/analysis-plan.md</code>、単位・quality
+                ruleは<code>templates/data-dictionary.csv</code>をsourceにする。</li>
+                <li>risk register（<code>#risks</code>）: risk /
+                mitigation表。</li>
+                <li>file &amp; reference index（<code>#files</code>）:
+                README・requirements・implementation-prompt・templates（study-charter
+                / analysis-plan / data-dictionary /
+                imaging-sampling-plan /
+                construct-log）・notes/decision-log・references/READMEへの相対link（F-07、リンク切れ厳禁）。</li>
+                <li>prompt（<code>#prompt</code>）:
+                本ファイル冒頭のtextコードブロック（研究プロンプト本体）をそのまま埋め込み、1クリックcopy（F-05）。</li>
+                <li>next / Gate 0（<code>#next</code>）: requirements
+                §10のPI確認質問と、Gate 0完了条件のchecklist。</li>
+                <li>references（<code>#references</code>）: Yuan et
+                al. (2026) と関連資料、interpretation
+                limit（review論文としての範囲・synthetic
+                demoの非実験性）。</li>
+                </ul>
+                <p><strong>踏襲するdata-attribute behavior（sibling
+                <code>roadmap.js</code>と同じ接続）:</strong>
+                <code>data-primary-nav</code> /
+                <code>data-nav-toggle</code> /
+                <code>data-nav-link</code>（F-01）、<code>data-roadmap-check</code>（localStorage永続化、F-02）、<code>data-progress-widget</code>
+                /
+                <code>data-progress-label</code>（進捗表示、F-03。<code>&lt;progress&gt;</code>のmaxはcheckable項目数に一致させる）、<code>data-reset-progress</code>（F-09）、<code>data-phase</code>
+                /
+                <code>data-phase-filter</code>（F-04）、<code>data-copy-prompt</code>（F-05）、<code>data-print-page</code>（F-06）、<code>data-reading-progress</code>
+                /
+                <code>data-status</code>。すべてのSVG図に<code>&lt;title&gt;</code>/<code>&lt;desc&gt;</code>を付け、概念図には「概念図
+                / 非実測」を明示する（§9 / NF-01）。</p></li>
+                <li><p><strong>Execution（この指示文をそのまま実行する段階）</strong>:
+                上記の指示文全体を
+                タスクとして受け取り、「実行順」8–10と「最低限の出力」を満たすところまで完成させる。
+                <code>requirements.md</code> §9 Acceptance
+                checklistの全項目を満たしていることを確認し、
+                満たしていない項目があれば、埋めずに理由を報告する。</p></li>
+                </ol>
+                <p>いずれの段階でも、上記「必須原則」と「停止条件」は省略しない。</p>
+              </article>
+    </main>
+
+    <aside class="reading-gauge" aria-hidden="true">
+      <p>READING DEPTH</p>
+      <div class="gauge-scale">
+        <span>00</span>
+        <span>25</span>
+        <span>50</span>
+        <span>75</span>
+        <span>100</span>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="document-footer">
+    <div>
+      <strong>BiG Lab Research Library</strong>
+      <p>Markdown is canonical. HTML is the synchronized reading view.</p>
+    </div>
+    <div class="document-footer-links">
+      <a href="../../shared/website/index.html">資料一覧へ戻る</a>
+      <a href="implementation-prompt.md">Markdownを開く</a>
+    </div>
+  </footer>
+</body>
+</html>
