@@ -1,0 +1,533 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#edf2f0">
+  <meta name="description" content="BiG Labの「Retrospective Active
+Learning for Microneedle-Facilitated Drug Permeation Prediction: A
+Small-Data Case Study」に関するMarkdown正本のHTML閲覧版。">
+  <title>Retrospective Active Learning for Microneedle-Facilitated Drug
+Permeation Prediction: A Small-Data Case Study · BiG Lab</title>
+  <link rel="alternate" type="text/markdown" href="paper.md" title="Markdown source">
+    <link rel="stylesheet" href="../../shared/website/assets/research-document.css">
+    </head>
+<body class="research-document">
+  <a class="skip-link" href="#document-content">本文へ移動</a>
+
+  <header class="document-topbar">
+    <div class="document-topbar-inner">
+      <a class="document-brand" href="../../shared/website/index.html" aria-label="BiG Lab 資料一覧へ">
+        <span class="document-brand-mark" aria-hidden="true">B</span>
+        <span class="document-brand-copy">
+          <strong>BiG Lab</strong>
+          <small>Research library</small>
+        </span>
+      </a>
+
+      <nav class="document-actions" aria-label="文書ナビゲーション">
+        <a href="../../shared/website/index.html">資料一覧</a>
+        <a class="source-action" href="paper.md">Markdown正本 <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <header class="document-hero">
+    <div class="document-hero-copy">
+      <p class="document-kicker">
+        <span aria-hidden="true"></span>
+        RESEARCH DOCUMENT
+      </p>
+      <h1 class="extra-long-title">Retrospective Active Learning for
+Microneedle-Facilitated Drug Permeation Prediction: A Small-Data Case
+Study</h1>
+      <p class="document-description">BiG Labの「Retrospective Active
+Learning for Microneedle-Facilitated Drug Permeation Prediction: A
+Small-Data Case Study」に関するMarkdown正本のHTML閲覧版。</p>
+
+      <dl class="document-meta">
+                        <div>
+          <dt>Format</dt>
+          <dd>HTML reading view</dd>
+        </div>
+      </dl>
+    </div>
+
+    <aside class="format-map" aria-label="MarkdownからHTMLへの文書フロー">
+      <div class="format-map-head">
+        <span>DOCUMENT PIPELINE</span>
+        <small>ONE SOURCE · TWO VIEWS</small>
+      </div>
+      <div class="format-map-flow">
+        <div class="format-node source-node">
+          <span>CANONICAL</span>
+          <strong>Markdown</strong>
+          <small>内容の正本</small>
+        </div>
+        <span class="format-arrow" aria-hidden="true">→</span>
+        <div class="format-node view-node">
+          <span>READING VIEW</span>
+          <strong>HTML</strong>
+          <small>閲覧用レンダリング</small>
+        </div>
+      </div>
+      <p>内容は同一に保ち、画面では読解・移動・参照に適した構造で表示します。</p>
+    </aside>
+  </header>
+
+  <div class="document-rule" aria-hidden="true">
+    <span></span><span></span><span></span>
+  </div>
+
+  <div class="document-shell">
+        <aside class="document-toc" aria-labelledby="document-toc-title">
+      <p id="document-toc-title">On this page</p>
+      <nav aria-label="目次">
+        <ul>
+        <li><a
+        href="#retrospective-active-learning-for-microneedle-facilitated-drug-permeation-prediction-a-small-data-case-study"
+        id="toc-retrospective-active-learning-for-microneedle-facilitated-drug-permeation-prediction-a-small-data-case-study">Retrospective
+        Active Learning for Microneedle-Facilitated Drug Permeation
+        Prediction: A Small-Data Case Study</a>
+        <ul>
+        <li><a href="#abstract" id="toc-abstract">Abstract</a></li>
+        <li><a href="#introduction" id="toc-introduction">1.
+        Introduction</a></li>
+        <li><a href="#data-and-methods" id="toc-data-and-methods">2.
+        Data and Methods</a>
+        <ul>
+        <li><a href="#dataset" id="toc-dataset">2.1 Dataset</a></li>
+        <li><a href="#active-learning-simulation"
+        id="toc-active-learning-simulation">2.2 Active learning
+        simulation</a></li>
+        <li><a href="#leave-one-drug-out-extrapolation-test"
+        id="toc-leave-one-drug-out-extrapolation-test">2.3
+        Leave-one-drug-out extrapolation test</a></li>
+        </ul></li>
+        <li><a href="#results" id="toc-results">3. Results</a>
+        <ul>
+        <li><a
+        href="#active-learning-reduces-experiments-needed-within-a-known-chemical-space"
+        id="toc-active-learning-reduces-experiments-needed-within-a-known-chemical-space">3.1
+        Active learning reduces experiments needed within a known
+        chemical space</a></li>
+        <li><a
+        href="#active-learning-does-not-rescue-prediction-for-a-drug-class-absent-from-training"
+        id="toc-active-learning-does-not-rescue-prediction-for-a-drug-class-absent-from-training">3.2
+        Active learning does not rescue prediction for a drug class
+        absent from training</a></li>
+        </ul></li>
+        <li><a href="#discussion" id="toc-discussion">4. Discussion</a>
+        <ul>
+        <li><a href="#limitations"
+        id="toc-limitations">Limitations</a></li>
+        </ul></li>
+        <li><a href="#conclusion" id="toc-conclusion">5.
+        Conclusion</a></li>
+        <li><a href="#data-and-code-availability"
+        id="toc-data-and-code-availability">Data and Code
+        Availability</a></li>
+        <li><a href="#references"
+        id="toc-references">References</a></li>
+        </ul></li>
+        </ul>
+      </nav>
+            <a class="toc-source-link" href="paper.md">
+        <span>Source</span>
+        <strong>paper.md</strong>
+      </a>
+          </aside>
+    
+    <main id="document-content" class="document-main">
+      <article class="document-content">
+                <p><a href="paper.html">HTML版を開く</a></p>
+                <h1
+                id="retrospective-active-learning-for-microneedle-facilitated-drug-permeation-prediction-a-small-data-case-study">Retrospective
+                Active Learning for Microneedle-Facilitated Drug
+                Permeation Prediction: A Small-Data Case Study</h1>
+                <p><strong>Research note — retrospective analysis of the
+                completed active-learning simulation based on Yuan et
+                al. (2023).</strong></p>
+                <hr />
+                <h2 id="abstract">Abstract</h2>
+                <p>Machine learning models for microneedle
+                (MN)-facilitated transdermal drug delivery are typically
+                trained on small, manually curated datasets, since each
+                data point requires a full <em>in vitro</em> permeation
+                experiment. Yuan et al. (2023) built a 191-point,
+                six-drug dataset and showed that extreme gradient
+                boosting (XGBoost) predicts drug permeation through
+                microneedled skin accurately in-distribution, but
+                degrades substantially when asked to extrapolate to a
+                drug excluded from training. Here we ask a narrower,
+                actionable question: <em>if the 191 experiments had been
+                chosen adaptively rather than accumulated
+                opportunistically, could the same predictive accuracy
+                have been reached with fewer experiments?</em> We
+                reanalyze the original dataset retrospectively — without
+                collecting new data — as a pool-based active learning
+                problem, comparing random sampling against Gaussian
+                Process uncertainty sampling and Random Forest
+                query-by-committee, evaluated with a fixed downstream
+                Random Forest. Gaussian Process uncertainty sampling
+                reaches a moderate accuracy target (R²≥0.85) using 18%
+                fewer experiments than random sampling (27 vs. 33 of
+                191), but offers no advantage at higher accuracy
+                targets. In a leave-one-drug-out extrapolation setting —
+                directly probing the failure mode Yuan et al. reported —
+                no acquisition strategy improved prediction for a drug
+                class absent from training. We conclude that active
+                learning is a practical tool for reducing experimental
+                burden <em>within</em> a known chemical space, but
+                cannot substitute for transfer learning or mechanistic
+                priors when the scientific question is extrapolation to
+                new drug classes.</p>
+                <hr />
+                <h2 id="introduction">1. Introduction</h2>
+                <p>Microneedles create transient micron-scale channels
+                through the stratum corneum, the skin’s primary
+                permeation barrier, enabling transdermal delivery of
+                drugs that would otherwise be excluded by molecular size
+                or polarity. Because <em>in vitro</em> permeation
+                testing (typically Franz diffusion cell experiments) is
+                slow and resource-intensive, machine learning has been
+                proposed as a way to predict permeation profiles without
+                exhaustive experimentation. Yuan et al. (2023) compared
+                Fick’s-law simulation, multiple linear regression,
+                random forest, and XGBoost on a dataset of 191
+                measurements spanning six model compounds (bovine serum
+                albumin, copper ions, GHK peptide, Rhodamine B,
+                lidocaine, and caffeine). Yuan et al. reported that
+                XGBoost achieved R²=0.98 for both permeation amount and
+                permeation percentage, and identified drug loading,
+                permeation time, and MN surface area as dominant
+                predictive features. The authors also reported, in their
+                discussion, that predictions for a drug withheld from
+                training showed substantial deviation from experiment —
+                a limitation common to small-data QSAR/QSPR models,
+                where the training set rarely spans the full chemical
+                space of interest.</p>
+                <p>This limitation sits squarely within a broader
+                literature on small-data machine learning in molecular
+                and materials science, which catalogs three
+                complementary levers for improving model performance
+                under data scarcity: better data sourcing (literature
+                mining, database construction, high-throughput
+                experimentation), algorithm-level adaptations for
+                imbalanced or small samples, and machine-learning
+                strategies such as active learning and transfer
+                learning. Active learning — adaptively choosing which
+                experiment to run next, rather than accumulating data
+                passively — is among the most immediately actionable of
+                these for an experimental laboratory, since it requires
+                no new instrumentation or data source, only a different
+                order of experimentation.</p>
+                <p>This note asks whether active learning would have
+                helped in exactly the setting Yuan et al. (2023) worked
+                in. Because the original 191 measurements already exist,
+                we can simulate the counterfactual retrospectively:
+                treat the dataset as an unlabeled experimental pool, let
+                each acquisition strategy choose which “experiment” to
+                reveal next, and track how prediction accuracy on a
+                held-out test set evolves as a function of the number of
+                experiments used. This retrospective design requires no
+                new wet-lab work and directly reuses the published
+                dataset, making it a natural first step before
+                committing laboratory time to a prospective
+                active-learning study.</p>
+                <h2 id="data-and-methods">2. Data and Methods</h2>
+                <h3 id="dataset">2.1 Dataset</h3>
+                <p>We reconstructed the original Yuan et al. (2023)
+                training set from the publication’s supplementary data
+                (Data S1, PMC10658566), obtaining all 191 rows across
+                six compounds: lidocaine (73 points), bovine serum
+                albumin (BSA, 33), copper ions (24), GHK peptide (24),
+                Rhodamine B (19), and caffeine (18). Seven input
+                features were retained, following the original study:
+                drug loading in the MN patch, drug molecular weight, MN
+                length, skin type (rat/human), MN type
+                (hydrogel/plastic), MN surface area, and permeation
+                time. The prediction target was cumulative drug
+                permeation amount (µg/cm²). Drug loading, molecular
+                weight, and the permeation target were log₁₀-transformed
+                to stabilize variance, since raw permeation amounts
+                spanned several orders of magnitude (1.05–29,010
+                µg/cm²).</p>
+                <h3 id="active-learning-simulation">2.2 Active learning
+                simulation</h3>
+                <p>We treated the 191-point dataset as an experimental
+                pool and simulated pool-based active learning. In each
+                of 10 repeats, we held out 20% of the data (stratified
+                by drug identity) as a fixed test set, seeded the
+                training pool with 12 randomly chosen points, and then
+                added 3 points per acquisition step for 35 steps (up to
+                117 total training points). At each training size, we
+                recorded test-set R² and RMSE using a fixed downstream
+                Random Forest evaluator retrained from scratch after
+                each acquisition. Using a fixed evaluator, independent
+                of the model used for acquisition, isolates the effect
+                of experiment <em>selection</em> from the effect of
+                model <em>choice</em>.</p>
+                <p>Three acquisition strategies selected which pool
+                points to add at each step:</p>
+                <ul>
+                <li><strong>Random</strong> — uniform random sampling
+                from the remaining pool (baseline).</li>
+                <li><strong>GP-Uncertainty</strong> — a Gaussian Process
+                regressor (RBF kernel plus a white noise term, features
+                standardized) is fit to the current training set; the
+                points with the highest predictive standard deviation
+                are selected.</li>
+                <li><strong>RF-QBC</strong> — a query-by-committee
+                approach: five Random Forest models, each trained on a
+                bootstrap resample of the current training set, vote on
+                each pool point; the points with the highest prediction
+                variance across the committee are selected.</li>
+                </ul>
+                <h3 id="leave-one-drug-out-extrapolation-test">2.3
+                Leave-one-drug-out extrapolation test</h3>
+                <p>To test directly whether active learning addresses
+                the extrapolation failure mode reported by Yuan et
+                al. (2023), we repeated the simulation six times, each
+                time withholding all measurements for one drug entirely
+                from the training pool and using that drug as the test
+                set. Because chemical structure was not a feature in the
+                original model, this test isolates whether
+                <em>experiment selection</em> — as opposed to model
+                architecture or chemical descriptors — can compensate
+                for the absence of a compound’s chemical class from
+                training.</p>
+                <h2 id="results">3. Results</h2>
+                <h3
+                id="active-learning-reduces-experiments-needed-within-a-known-chemical-space">3.1
+                Active learning reduces experiments needed within a
+                known chemical space</h3>
+                <figure>
+                <img src="../research/fig_active_learning_curves.png"
+                alt="Learning curves comparing acquisition strategies, and experiments needed to reach a target accuracy" />
+                <figcaption aria-hidden="true">Learning curves comparing
+                acquisition strategies, and experiments needed to reach
+                a target accuracy</figcaption>
+                </figure>
+                <p><strong>Figure 1.</strong> (a) Test R² as a function
+                of training set size for three acquisition strategies
+                (mean ± SEM over 10 repeats). (b) Number of experiments
+                needed to first reach R²=0.85 for each strategy.</p>
+                <p>At small training-set sizes, GP-Uncertainty
+                outperformed random sampling: at 27 experiments,
+                GP-Uncertainty reached R²=0.863 versus 0.777 for random
+                sampling and 0.663 for RF-QBC. Measured as experiments
+                needed to first reach a target accuracy, GP-Uncertainty
+                reached R²=0.85 after 27 experiments versus 33 for
+                random sampling — an 18% reduction. This advantage did
+                not persist at higher accuracy targets: at R²=0.90 the
+                two strategies required the same number of experiments
+                (39), and at R²=0.95 GP-Uncertainty required
+                <em>more</em> experiments than random sampling (84
+                vs. 69). RF-QBC did not outperform random sampling at
+                any accuracy threshold tested (45, 57, and 84
+                experiments at R²=0.85, 0.90, and 0.95 respectively,
+                versus 33, 39, and 69 for random). At the full training
+                set size (117 points, 61% of the pool), all three
+                strategies converged to comparable accuracy
+                (R²=0.977–0.980).</p>
+                <h3
+                id="active-learning-does-not-rescue-prediction-for-a-drug-class-absent-from-training">3.2
+                Active learning does not rescue prediction for a drug
+                class absent from training</h3>
+                <figure>
+                <img src="../research/fig_lodo_comparison.png"
+                alt="Test RMSE by held-out drug and acquisition strategy in the leave-one-drug-out setting" />
+                <figcaption aria-hidden="true">Test RMSE by held-out
+                drug and acquisition strategy in the leave-one-drug-out
+                setting</figcaption>
+                </figure>
+                <p><strong>Figure 2.</strong> Test RMSE (log₁₀
+                permeation amount) for each held-out drug, comparing
+                acquisition strategies trained on the remaining five
+                compounds.</p>
+                <p>When an entire drug was withheld from training, no
+                acquisition strategy gave a meaningful improvement over
+                random sampling. Mean RMSE across all six held-out drugs
+                was 1.367 (random), 1.342 (GP-Uncertainty), and 1.342
+                (RF-QBC) — differences an order of magnitude smaller
+                than the RMSE variation across drugs themselves. For BSA
+                (a 66 kDa protein, chemically unlike the other five
+                compounds) and Rhodamine B (a fluorescent dye), all
+                strategies produced strongly negative R² (BSA: −44.1 to
+                −43.7; Rhodamine B: −113.3 to −96.6), indicating the
+                model performed far worse than predicting the mean — a
+                signal that the failure mode is one of chemical-space
+                coverage, not experiment ordering. For caffeine, a
+                compound chemically closer to lidocaine (both
+                comparatively small, non-polymeric molecules already
+                well represented in the training distribution), R²
+                remained near zero for all strategies (0.014 to 0.096),
+                reflecting a milder but still substantial extrapolation
+                penalty.</p>
+                <h2 id="discussion">4. Discussion</h2>
+                <p>These results draw a clear boundary around what
+                active learning can and cannot fix in this setting.
+                Within a chemical space already represented in training
+                data, adaptively choosing which condition to test next —
+                here, querying the point of highest model uncertainty —
+                measurably reduces the number of experiments needed to
+                reach a moderate accuracy target, consistent with the
+                broader small-data machine learning literature’s
+                characterization of active learning as a
+                data-source-level lever for mitigating scarcity. The
+                crossover at high accuracy targets (Figure 1) is a
+                caution against assuming uncertainty sampling is
+                uniformly beneficial: once most of the informative
+                variance has been queried, remaining pool points may be
+                redundant with existing training points that a purely
+                uncertainty-driven strategy is not positioned to
+                recognize, and a diversity-aware or hybrid acquisition
+                function may be more appropriate near convergence.</p>
+                <p>For laboratory use, this result is best interpreted
+                as a planning rule for a bounded domain: begin with a
+                representative seed set, collect the condition predicted
+                to be most uncertain, and reassess after each result.
+                The retrospective setup cannot demonstrate savings in a
+                future experiment, but it identifies a pattern worth
+                testing prospectively when acquisition decisions are
+                made before new permeation measurements are run.</p>
+                <p>The leave-one-drug-out result is, in our view, the
+                more consequential finding for this research program.
+                Yuan et al. (2023) reported that prediction for a
+                compound excluded from training showed marked deviation
+                from experiment; our simulation confirms and quantifies
+                this — R² is not merely reduced but strongly negative
+                for the two chemically distinct held-out compounds — and
+                shows that the effect is invariant to how the
+                <em>other</em> experiments were selected. This is the
+                expected result once the problem is stated precisely: an
+                acquisition function operating over MN process
+                parameters (drug loading, permeation time, MN geometry)
+                has no mechanism to select for chemical diversity,
+                because chemical identity is not represented among the
+                features it can query over. Closing this gap requires
+                either adding molecular descriptors to the feature space
+                so that chemical similarity between a candidate compound
+                and the training set becomes learnable, or transfer
+                learning from an external, chemically broader
+                permeability dataset. These are future directions beyond
+                the present simulation.</p>
+                <h3 id="limitations">Limitations</h3>
+                <p>This is a retrospective, simulated active learning
+                study: no new laboratory experiments were run, and the
+                acquisition strategies compete only for the
+                <em>order</em> in which existing measurements are
+                revealed, not for genuinely novel experimental
+                conditions. The six-drug, 191-point dataset is itself
+                small, limiting the statistical power of the
+                leave-one-drug-out comparisons (four of the six drugs —
+                copper ions, GHK peptide, Rhodamine B, and caffeine —
+                have fewer than 25 measurements each). The Gaussian
+                Process acquisition model was fit on the same seven
+                process features as the downstream evaluator, without
+                molecular descriptors; this is a faithful reproduction
+                of the original study’s feature set but is also
+                precisely the limitation the leave-one-drug-out results
+                expose. Results should be read as characterizing this
+                specific dataset and feature representation, not as a
+                general claim about active learning for microneedle
+                permeation modeling. We also did not compare acquisition
+                functions that explicitly combine uncertainty with
+                diversity or molecular information, so the present
+                comparison is not an exhaustive ranking of
+                active-learning methods.</p>
+                <h2 id="conclusion">5. Conclusion</h2>
+                <p>Retrospective active learning simulation on the Yuan
+                et al. (2023) microneedle permeation dataset shows that
+                uncertainty-based experiment selection can reduce the
+                number of experiments needed to reach a moderate
+                predictive accuracy by roughly 18% within a known
+                chemical space, but confers no benefit — and cannot be
+                expected to confer benefit, given the feature
+                representation used — when the scientific goal is
+                extrapolation to an untested drug class. For
+                laboratories designing the next round of microneedle
+                permeation experiments on compounds similar to those
+                already characterized, Gaussian Process uncertainty
+                sampling is a low-cost addition to experimental
+                planning. For extending prediction to new drug classes,
+                the evidence here points toward transfer learning from
+                broader permeability databases or the inclusion of
+                molecular descriptors, rather than experiment scheduling
+                alone.</p>
+                <h2 id="data-and-code-availability">Data and Code
+                Availability</h2>
+                <p>The repository preserves the reconstructed Yuan
+                dataset
+                (<code>yuan2023_dataset_with_descriptors.csv</code>),
+                the archived numerical outputs
+                (<code>active_learning_curves_within_distribution.csv</code>,
+                <code>experiments_to_threshold.csv</code>, and
+                <code>lodo_active_learning_results.csv</code>), and the
+                figures underlying this note
+                (<code>fig_active_learning_curves.png</code> and
+                <code>fig_lodo_comparison.png</code>) under
+                <code>../research/</code>. The available
+                <code>active_learning.py</code> implements the
+                acquisition functions <code>select_random</code>,
+                <code>select_gp_uncertainty</code>, and
+                <code>select_rf_qbc</code>, together with
+                <code>run_active_learning_curve()</code> for an
+                individual learning curve.</p>
+                <p>It does not include the driver/orchestration script
+                required to load the data, perform the repeated split
+                and leave-one-drug-out workflows, write the result
+                tables, and generate the figures from raw inputs. The
+                archived files therefore support inspection of the
+                acquisition routines and reported outputs, but do not
+                constitute an end-to-end regeneration workflow for the
+                reported results.</p>
+                <h2 id="references">References</h2>
+                <ol type="1">
+                <li>Yuan Y, Han Y, Yap CW, Kochhar JS, Li H, Xiang X,
+                Kang L. Prediction of drug permeation through
+                microneedled skin by machine learning. <em>Bioeng Transl
+                Med.</em> 2023;8(6):e10512. doi:10.1002/btm2.10512</li>
+                <li>Zheng M, Sheng T, Yu J, Gu Z, Xu C. Microneedle
+                biomedical devices. <em>Nat Rev Bioeng.</em> 2023.
+                doi:10.1038/s44222-023-00141-6</li>
+                <li>Xu P, Ji X, Li M, Lu W. Small data machine learning
+                in materials science. <em>npj Comput Mater.</em>
+                2023;9:42. doi:10.1038/s41524-023-01000-z</li>
+                <li>Achar SK, Keith JA. Small Data Machine Learning
+                Approaches in Molecular and Materials Science. <em>Chem
+                Rev.</em> 2024. doi:10.1021/acs.chemrev.4c00957</li>
+                <li>Dou B, Zhu Z, Merkurjev E, et al. Machine Learning
+                Methods for Small Data Challenges in Molecular Science.
+                <em>Chem Rev.</em> 2023;123(13):8736–8780.
+                doi:10.1021/acs.chemrev.3c00189</li>
+                </ol>
+              </article>
+    </main>
+
+    <aside class="reading-gauge" aria-hidden="true">
+      <p>READING DEPTH</p>
+      <div class="gauge-scale">
+        <span>00</span>
+        <span>25</span>
+        <span>50</span>
+        <span>75</span>
+        <span>100</span>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="document-footer">
+    <div>
+      <strong>BiG Lab Research Library</strong>
+      <p>Markdown is canonical. HTML is the synchronized reading view.</p>
+    </div>
+    <div class="document-footer-links">
+      <a href="../../shared/website/index.html">資料一覧へ戻る</a>
+      <a href="paper.md">Markdownを開く</a>
+    </div>
+  </footer>
+</body>
+</html>

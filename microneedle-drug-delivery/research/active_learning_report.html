@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#edf2f0">
+  <meta name="description" content="BiG
+Labの「後ろ向き能動学習シミュレーション:マイクロニードル薬物透過予測の実験計画最適化」に関するMarkdown正本のHTML閲覧版。">
+  <title>後ろ向き能動学習シミュレーション:マイクロニードル薬物透過予測の実験計画最適化 · BiG Lab</title>
+  <link rel="alternate" type="text/markdown" href="active_learning_report.md" title="Markdown source">
+    <link rel="stylesheet" href="../../shared/website/assets/research-document.css">
+    </head>
+<body class="research-document">
+  <a class="skip-link" href="#document-content">本文へ移動</a>
+
+  <header class="document-topbar">
+    <div class="document-topbar-inner">
+      <a class="document-brand" href="../../shared/website/index.html" aria-label="BiG Lab 資料一覧へ">
+        <span class="document-brand-mark" aria-hidden="true">B</span>
+        <span class="document-brand-copy">
+          <strong>BiG Lab</strong>
+          <small>Research library</small>
+        </span>
+      </a>
+
+      <nav class="document-actions" aria-label="文書ナビゲーション">
+        <a href="../../shared/website/index.html">資料一覧</a>
+        <a class="source-action" href="active_learning_report.md">Markdown正本 <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <header class="document-hero">
+    <div class="document-hero-copy">
+      <p class="document-kicker">
+        <span aria-hidden="true"></span>
+        RESEARCH DOCUMENT
+      </p>
+      <h1 class="extra-long-title">後ろ向き能動学習シミュレーション:マイクロニードル薬物透過予測の実験計画最適化</h1>
+      <p class="document-description">BiG
+Labの「後ろ向き能動学習シミュレーション:マイクロニードル薬物透過予測の実験計画最適化」に関するMarkdown正本のHTML閲覧版。</p>
+
+      <dl class="document-meta">
+                        <div>
+          <dt>Format</dt>
+          <dd>HTML reading view</dd>
+        </div>
+      </dl>
+    </div>
+
+    <aside class="format-map" aria-label="MarkdownからHTMLへの文書フロー">
+      <div class="format-map-head">
+        <span>DOCUMENT PIPELINE</span>
+        <small>ONE SOURCE · TWO VIEWS</small>
+      </div>
+      <div class="format-map-flow">
+        <div class="format-node source-node">
+          <span>CANONICAL</span>
+          <strong>Markdown</strong>
+          <small>内容の正本</small>
+        </div>
+        <span class="format-arrow" aria-hidden="true">→</span>
+        <div class="format-node view-node">
+          <span>READING VIEW</span>
+          <strong>HTML</strong>
+          <small>閲覧用レンダリング</small>
+        </div>
+      </div>
+      <p>内容は同一に保ち、画面では読解・移動・参照に適した構造で表示します。</p>
+    </aside>
+  </header>
+
+  <div class="document-rule" aria-hidden="true">
+    <span></span><span></span><span></span>
+  </div>
+
+  <div class="document-shell">
+        <aside class="document-toc" aria-labelledby="document-toc-title">
+      <p id="document-toc-title">On this page</p>
+      <nav aria-label="目次">
+        <ul>
+        <li><a
+        href="#後ろ向き能動学習シミュレーションマイクロニードル薬物透過予測の実験計画最適化"
+        id="toc-後ろ向き能動学習シミュレーションマイクロニードル薬物透過予測の実験計画最適化">後ろ向き能動学習シミュレーション:マイクロニードル薬物透過予測の実験計画最適化</a>
+        <ul>
+        <li><a href="#目的" id="toc-目的">目的</a></li>
+        <li><a href="#手法" id="toc-手法">手法</a></li>
+        <li><a href="#結果" id="toc-結果">結果</a>
+        <ul>
+        <li><a href="#分布内within-distribution学習曲線"
+        id="toc-分布内within-distribution学習曲線">1.
+        分布内(within-distribution)学習曲線</a></li>
+        <li><a
+        href="#leave-one-drug-out評価能動学習は真の外挿を改善しない"
+        id="toc-leave-one-drug-out評価能動学習は真の外挿を改善しない">2.
+        Leave-one-drug-out評価:能動学習は真の外挿を改善しない</a></li>
+        </ul></li>
+        <li><a href="#実務的な含意"
+        id="toc-実務的な含意">実務的な含意</a></li>
+        <li><a href="#再現方法" id="toc-再現方法">再現方法</a></li>
+        </ul></li>
+        </ul>
+      </nav>
+            <a class="toc-source-link" href="active_learning_report.md">
+        <span>Source</span>
+        <strong>active_learning_report.md</strong>
+      </a>
+          </aside>
+    
+    <main id="document-content" class="document-main">
+      <article class="document-content">
+                <p><a
+                href="active_learning_report.html">HTML版を開く</a></p>
+                <h1
+                id="後ろ向き能動学習シミュレーションマイクロニードル薬物透過予測の実験計画最適化">後ろ向き能動学習シミュレーション:マイクロニードル薬物透過予測の実験計画最適化</h1>
+                <p><em>Yuan et al. (2023)「Prediction of drug permeation
+                through microneedled skin by machine
+                learning」(doi:10.1002/btm2.10512)
+                の訓練データ(191点・6薬剤)を用いた retrospective active
+                learning
+                シミュレーション。データ収集は行わず、既存データ
+                のみで完結する解析。</em></p>
+                <h2 id="目的">目的</h2>
+                <p>Yuan
+                2023はランダムに集まった191データ点で受動的にモデルを学習した。もし実験の
+                順序を能動学習アルゴリズムで最適化していたら、同じ実験数でより高い予測精度に
+                到達できたか?逆に言えば、目標精度に到達するために必要な実験数を削減できるか?
+                これを、既存データをプール(未実験)とみなして仮想的に「実験」を選択する
+                シミュレーションで検証した。</p>
+                <h2 id="手法">手法</h2>
+                <ul>
+                <li><strong>データ</strong>: Yuan
+                2023の191データ点。特徴量は薬剤負荷量(log変換)・薬剤分子量
+                (log変換)・MN長・皮膚タイプ・MNタイプ・MN表面積・透過時間の7変数。目的変数は
+                薬物透過量(µg/cm², log変換)。</li>
+                <li><strong>獲得戦略</strong>(次にどの実験を選ぶか):
+                <ol type="1">
+                <li><strong>Random</strong> —
+                ランダムサンプリング(ベースライン)</li>
+                <li><strong>GP-Uncertainty</strong> — Gaussian
+                Process回帰の予測分散が最大の点を選択</li>
+                <li><strong>RF-QBC</strong> — Random
+                Forestブートストラップ委員会(5モデル)の予測分散が
+                最大の点を選択(Query-by-Committee)</li>
+                </ol></li>
+                <li><strong>評価</strong>:
+                獲得に使うモデルとは独立に、固定のRandom
+                Forest評価器(150本の木)
+                で学習・テストセット(全体の20%、層化抽出で薬剤比率を保持)への予測精度
+                (R²,
+                RMSE)を測定。初期シード集合12点から開始し、3点ずつ35ステップ追加。
+                10回の異なるテストセット分割で繰り返し、平均±標準誤差を報告。</li>
+                <li><strong>Leave-one-drug-out評価</strong>:
+                6薬剤のうち1つを完全に除外し(訓練プールにも
+                テストセットにも同薬剤の別データ点は使わない設計ではなく、residualとして
+                同薬剤内の他データも訓練プールから除外)、能動学習が真に未知の薬剤への
+                外挿を改善できるかを検証。</li>
+                </ul>
+                <h2 id="結果">結果</h2>
+                <h3 id="分布内within-distribution学習曲線">1.
+                分布内(within-distribution)学習曲線</h3>
+                <p>Random
+                Forest評価器によるテストR²(平均±標準誤差、10反復):</p>
+                <table>
+                <thead>
+                <tr>
+                <th>実験数</th>
+                <th>Random</th>
+                <th>GP-Uncertainty</th>
+                <th>RF-QBC</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td>~27点</td>
+                <td>0.777</td>
+                <td><strong>0.863</strong></td>
+                <td>0.663</td>
+                </tr>
+                <tr>
+                <td>117点(最大)</td>
+                <td>0.977</td>
+                <td>0.979</td>
+                <td>0.980</td>
+                </tr>
+                </tbody>
+                </table>
+                <p>目標精度R²≥0.85に到達するために必要な実験数:</p>
+                <table>
+                <thead>
+                <tr>
+                <th>戦略</th>
+                <th>R²≥0.85</th>
+                <th>R²≥0.90</th>
+                <th>R²≥0.95</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td>Random</td>
+                <td>33</td>
+                <td>39</td>
+                <td>69</td>
+                </tr>
+                <tr>
+                <td><strong>GP-Uncertainty</strong></td>
+                <td><strong>27 (-18%)</strong></td>
+                <td>39 (±0%)</td>
+                <td>84 (+22%)</td>
+                </tr>
+                <tr>
+                <td>RF-QBC</td>
+                <td>45 (+36%)</td>
+                <td>57 (+46%)</td>
+                <td>84 (+22%)</td>
+                </tr>
+                </tbody>
+                </table>
+                <p><strong>GP-Uncertaintyは、データが最も乏しい初期段階(R²≥0.85到達まで)で
+                Randomより18%少ない実験数で到達する。</strong>
+                ただし高精度域(R²≥0.95)では Randomに劣る —
+                これは能動学習の典型的な挙動で、不確実性の高い点を優先する
+                ことで初期の探索効率は上がるが、終盤はランダムサンプリングの持つ暗黙的な
+                多様性確保に劣後するため。RF-QBCはどの精度域でもRandomを上回らなかった。</p>
+                <h3
+                id="leave-one-drug-out評価能動学習は真の外挿を改善しない">2.
+                Leave-one-drug-out評価:能動学習は真の外挿を改善しない</h3>
+                <p>6薬剤それぞれを完全に除外し、残り5薬剤のデータのみから予測した場合の
+                テストRMSE(log₁₀ permeation amount,
+                3戦略の全訓練データ使用時):</p>
+                <table>
+                <thead>
+                <tr>
+                <th>除外薬剤</th>
+                <th>Random</th>
+                <th>GP-Uncertainty</th>
+                <th>RF-QBC</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td>BSA</td>
+                <td>1.976</td>
+                <td>1.967</td>
+                <td>1.969</td>
+                </tr>
+                <tr>
+                <td>lidocaine</td>
+                <td>0.976</td>
+                <td>0.978</td>
+                <td>0.991</td>
+                </tr>
+                <tr>
+                <td>Rhodamine B</td>
+                <td>2.105</td>
+                <td>1.972</td>
+                <td>1.945</td>
+                </tr>
+                <tr>
+                <td>caffeine</td>
+                <td>0.568</td>
+                <td>0.561</td>
+                <td>0.586</td>
+                </tr>
+                <tr>
+                <td>copper ions</td>
+                <td>1.140</td>
+                <td>1.163</td>
+                <td>1.132</td>
+                </tr>
+                <tr>
+                <td>GHK peptide</td>
+                <td>1.438</td>
+                <td>1.413</td>
+                <td>1.428</td>
+                </tr>
+                </tbody>
+                </table>
+                <p><strong>結論:
+                どの獲得戦略を使っても、化学的に全く異なる新規薬剤への外挿性能に
+                実質的な差は生じない。</strong>
+                BSA(タンパク質)やRhodamine B(蛍光色素)を
+                除外した場合、R²は大きく負の値(モデルが平均値予測より悪い)になり、
+                これは能動学習の限界というより、そもそも「訓練データにない化学クラスへの
+                外挿」は実験選択の最適化では解決できない根本的な問題であることを示す。
+                Yuan
+                2023がDiscussionで指摘した限界は、能動学習だけでは克服できず、
+                転移学習や物理モデル併用など、化学的な事前知識を組み込む手法が必要と
+                考えられる(次フェーズで検証予定)。</p>
+                <h2 id="実務的な含意">実務的な含意</h2>
+                <ul>
+                <li><strong>同じ薬剤クラス内での条件探索</strong>(例:同じ薬剤でMN長・薬剤負荷量を
+                変えた追加実験)では、GP-Uncertaintyに基づく実験計画が有効。中程度の
+                精度目標(R²=0.85程度)では約2割の実験数削減が見込める。</li>
+                <li><strong>新規の薬剤クラスへの適用</strong>には、能動学習による実験選択の効率化だけでは
+                不十分。転移学習(本プロジェクトで構築した214化合物の皮膚透過性データを
+                活用)や物理モデル(Fick則シミュレーション)との併用が必要。</li>
+                </ul>
+                <h2 id="再現方法">再現方法</h2>
+                <p><code>active_learning.py</code> の
+                <code>run_active_learning_curve()</code> 関数と
+                <code>STRATEGIES</code> 辞書を使用。データは
+                <code>data/processed/yuan2023_dataset_with_descriptors.csv</code>。
+                結果は
+                <code>results/active_learning_curves_within_distribution.csv</code>,
+                <code>results/experiments_to_threshold.csv</code>,
+                <code>results/lodo_active_learning_results.csv</code>
+                に保存。</p>
+              </article>
+    </main>
+
+    <aside class="reading-gauge" aria-hidden="true">
+      <p>READING DEPTH</p>
+      <div class="gauge-scale">
+        <span>00</span>
+        <span>25</span>
+        <span>50</span>
+        <span>75</span>
+        <span>100</span>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="document-footer">
+    <div>
+      <strong>BiG Lab Research Library</strong>
+      <p>Markdown is canonical. HTML is the synchronized reading view.</p>
+    </div>
+    <div class="document-footer-links">
+      <a href="../../shared/website/index.html">資料一覧へ戻る</a>
+      <a href="active_learning_report.md">Markdownを開く</a>
+    </div>
+  </footer>
+</body>
+</html>

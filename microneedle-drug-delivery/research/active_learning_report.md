@@ -1,3 +1,5 @@
+[HTML版を開く](active_learning_report.html)
+
 # 後ろ向き能動学習シミュレーション:マイクロニードル薬物透過予測の実験計画最適化
 
 *Yuan et al. (2023)「Prediction of drug permeation through microneedled skin by
@@ -91,7 +93,7 @@ Yuan 2023がDiscussionで指摘した限界は、能動学習だけでは克服�
 
 ## 再現方法
 
-`src/active_learning.py` の `run_active_learning_curve()` 関数と
+`active_learning.py` の `run_active_learning_curve()` 関数と
 `STRATEGIES` 辞書を使用。データは `data/processed/yuan2023_dataset_with_descriptors.csv`。
 結果は `results/active_learning_curves_within_distribution.csv`,
 `results/experiments_to_threshold.csv`, `results/lodo_active_learning_results.csv`

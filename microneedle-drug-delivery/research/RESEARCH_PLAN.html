@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#edf2f0">
+  <meta name="description" content="BiG Labの「研究計画: Small-data
+MLによるマイクロニードル薬物送達予測の改良(美容成分応用を含む)」に関するMarkdown正本のHTML閲覧版。">
+  <title>研究計画: Small-data
+MLによるマイクロニードル薬物送達予測の改良(美容成分応用を含む) · BiG Lab</title>
+  <link rel="alternate" type="text/markdown" href="RESEARCH_PLAN.md" title="Markdown source">
+    <link rel="stylesheet" href="../../shared/website/assets/research-document.css">
+    </head>
+<body class="research-document">
+  <a class="skip-link" href="#document-content">本文へ移動</a>
+
+  <header class="document-topbar">
+    <div class="document-topbar-inner">
+      <a class="document-brand" href="../../shared/website/index.html" aria-label="BiG Lab 資料一覧へ">
+        <span class="document-brand-mark" aria-hidden="true">B</span>
+        <span class="document-brand-copy">
+          <strong>BiG Lab</strong>
+          <small>Research library</small>
+        </span>
+      </a>
+
+      <nav class="document-actions" aria-label="文書ナビゲーション">
+        <a href="../../shared/website/index.html">資料一覧</a>
+        <a class="source-action" href="RESEARCH_PLAN.md">Markdown正本 <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <header class="document-hero">
+    <div class="document-hero-copy">
+      <p class="document-kicker">
+        <span aria-hidden="true"></span>
+        RESEARCH DOCUMENT
+      </p>
+      <h1 class="extra-long-title">研究計画: Small-data
+MLによるマイクロニードル薬物送達予測の改良(美容成分応用を含む)</h1>
+      <p class="document-description">BiG Labの「研究計画: Small-data
+MLによるマイクロニードル薬物送達予測の改良(美容成分応用を含む)」に関するMarkdown正本のHTML閲覧版。</p>
+
+      <dl class="document-meta">
+                        <div>
+          <dt>Format</dt>
+          <dd>HTML reading view</dd>
+        </div>
+      </dl>
+    </div>
+
+    <aside class="format-map" aria-label="MarkdownからHTMLへの文書フロー">
+      <div class="format-map-head">
+        <span>DOCUMENT PIPELINE</span>
+        <small>ONE SOURCE · TWO VIEWS</small>
+      </div>
+      <div class="format-map-flow">
+        <div class="format-node source-node">
+          <span>CANONICAL</span>
+          <strong>Markdown</strong>
+          <small>内容の正本</small>
+        </div>
+        <span class="format-arrow" aria-hidden="true">→</span>
+        <div class="format-node view-node">
+          <span>READING VIEW</span>
+          <strong>HTML</strong>
+          <small>閲覧用レンダリング</small>
+        </div>
+      </div>
+      <p>内容は同一に保ち、画面では読解・移動・参照に適した構造で表示します。</p>
+    </aside>
+  </header>
+
+  <div class="document-rule" aria-hidden="true">
+    <span></span><span></span><span></span>
+  </div>
+
+  <div class="document-shell">
+        <aside class="document-toc" aria-labelledby="document-toc-title">
+      <p id="document-toc-title">On this page</p>
+      <nav aria-label="目次">
+        <ul>
+        <li><a
+        href="#研究計画-small-data-mlによるマイクロニードル薬物送達予測の改良美容成分応用を含む"
+        id="toc-研究計画-small-data-mlによるマイクロニードル薬物送達予測の改良美容成分応用を含む">研究計画:
+        Small-data
+        MLによるマイクロニードル薬物送達予測の改良(美容成分応用を含む)</a>
+        <ul>
+        <li><a href="#フェーズ0-スコープ定義-完了"
+        id="toc-フェーズ0-スコープ定義-完了">フェーズ0: スコープ定義 ✅
+        完了</a></li>
+        <li><a href="#フェーズ1-データ収集-完了初期版"
+        id="toc-フェーズ1-データ収集-完了初期版">フェーズ1: データ収集
+        ✅ 完了(初期版)</a></li>
+        <li><a href="#フェーズ1.5-yuan-2023データセットの再現-完了"
+        id="toc-フェーズ1.5-yuan-2023データセットの再現-完了">フェーズ1.5:
+        Yuan 2023データセットの再現 ✅ 完了</a></li>
+        <li><a href="#フェーズ2-データキュレーション"
+        id="toc-フェーズ2-データキュレーション">フェーズ2:
+        データキュレーション</a></li>
+        <li><a href="#フェーズ3-探索的データ分析eda"
+        id="toc-フェーズ3-探索的データ分析eda">フェーズ3:
+        探索的データ分析(EDA)</a></li>
+        <li><a href="#フェーズ4-モデル構築2系統並行"
+        id="toc-フェーズ4-モデル構築2系統並行">フェーズ4:
+        モデル構築(2系統並行)</a>
+        <ul>
+        <li><a href="#a.-皮膚透過性qsarモデル化粧品成分向け既存軸"
+        id="toc-a.-皮膚透過性qsarモデル化粧品成分向け既存軸">4A.
+        皮膚透過性QSARモデル(化粧品成分向け、既存軸)</a></li>
+        <li><a
+        href="#b.-yuan-2023マイクロニードルモデルの再現改良中心軸"
+        id="toc-b.-yuan-2023マイクロニードルモデルの再現改良中心軸">4B.
+        Yuan 2023マイクロニードルモデルの再現・改良(中心軸)</a></li>
+        </ul></li>
+        <li><a href="#フェーズ5-解釈応用考察"
+        id="toc-フェーズ5-解釈応用考察">フェーズ5:
+        解釈・応用考察</a></li>
+        <li><a href="#フェーズ6-成果物整理"
+        id="toc-フェーズ6-成果物整理">フェーズ6: 成果物整理</a></li>
+        </ul></li>
+        </ul>
+      </nav>
+            <a class="toc-source-link" href="RESEARCH_PLAN.md">
+        <span>Source</span>
+        <strong>RESEARCH_PLAN.md</strong>
+      </a>
+          </aside>
+    
+    <main id="document-content" class="document-main">
+      <article class="document-content">
+                <p><a href="RESEARCH_PLAN.html">HTML版を開く</a></p>
+                <h1
+                id="研究計画-small-data-mlによるマイクロニードル薬物送達予測の改良美容成分応用を含む">研究計画:
+                Small-data
+                MLによるマイクロニードル薬物送達予測の改良(美容成分応用を含む)</h1>
+                <p><em>2026-07-20更新: ユーザー提供の5文献(Yuan
+                2023本人論文、マイクロニードルレビュー、 Small-data
+                MLレビュー3本)を精読し、研究の軸をYuan
+                2023の限界克服型に再定義。</em></p>
+                <h2 id="フェーズ0-スコープ定義-完了">フェーズ0:
+                スコープ定義 ✅ 完了</h2>
+                <ul>
+                <li>対象成分:
+                美白剤・抗老化剤(レチノイド)・ビタミンC誘導体・保湿剤・脂質バリア成分・
+                抗炎症剤・角質剥離剤・浸透促進剤の8カテゴリ、50成分をリストアップ(<code>handoff/ingredient_list.json</code>)</li>
+                <li>目的変数: log Kp (cm/h) に統一</li>
+                <li>高分子(ヒアルロン酸、ペプチド)は低分子モデルの対象外とし、別枠管理</li>
+                </ul>
+                <h2 id="フェーズ1-データ収集-完了初期版">フェーズ1:
+                データ収集 ✅ 完了(初期版)</h2>
+                <ul>
+                <li>PubChemより48/50成分の構造・物性データ取得(<code>data/processed/cosmetic_ingredients_descriptors.csv</code>)</li>
+                <li>実測皮膚透過性データを2つの公開データベースから取得・統合:
+                <ul>
+                <li>HuskinDB(129件、Stepanov 2020)</li>
+                <li>SkinPiX(103件、Chedik 2024)+
+                INRS追加データ(3件、2025年)</li>
+                <li>重複除去後 <strong>214件のユニーク化合物</strong>
+                による訓練データセット
+                (<code>data/processed/skin_permeability_training_set.csv</code>)</li>
+                </ul></li>
+                <li>美容成分48件中4件(ナイアシンアミド・尿素・サリチル酸・エタノール)はすでに
+                訓練データに実測値あり →
+                モデル検証用の直接比較に使える</li>
+                <li>美容成分48件中38件が訓練データの化学空間(MW・LogP範囲)内
+                → 予測信頼性が高い</li>
+                <li>残り10件(高分子量脂質・誘導体)は適用範囲外 →
+                予測は参考値として扱う</li>
+                </ul>
+                <h2
+                id="フェーズ1.5-yuan-2023データセットの再現-完了">フェーズ1.5:
+                Yuan 2023データセットの再現 ✅ 完了</h2>
+                <ul>
+                <li>PMC補足データ(PMC10658566, Data S1)からYuan
+                2023の訓練データ191点を完全再現
+                (<code>data/raw/yuan2023_training_data.csv</code>)</li>
+                <li>薬剤別内訳: lidocaine 73件, BSA 33件, copper ions
+                24件, GHK peptide 24件, Rhodamine B 19件, caffeine
+                18件(論文記載と一致)</li>
+                <li>小分子4薬剤(lidocaine, GHK peptide, Rhodamine B,
+                caffeine)にPubChem SMILES +
+                RDKit記述子を付与(<code>data/processed/yuan2023_dataset_with_descriptors.csv</code>)</li>
+                <li>BSA・copper
+                ionsは非小分子としてフラグ管理(低分子QSAR記述子の対象外)</li>
+                <li>論文の限界点を確認:
+                訓練セット外の薬剤への外挿で大きな乖離が生じる
+                (Discussion
+                4.2節)。薬剤負荷量への特徴量重要度の偏りが一因と分析されている。</li>
+                </ul>
+                <h2 id="フェーズ2-データキュレーション">フェーズ2:
+                データキュレーション</h2>
+                <ul class="task-list">
+                <li><label><input
+                type="checkbox" />214件の実測値の外れ値・矛盾データチェック(SkinPiXのnotes列に記載の
+                “suspicious point” フラグの確認・除外検討)</label></li>
+                <li><label><input
+                type="checkbox" />美容成分特有の透過性データを化粧品科学誌(<em>Int
+                J Cosmetic Science</em> 等)から
+                個別収集し、訓練データセットに追加(目標:
+                美容成分特化データ20〜30件追加)</label></li>
+                <li><label><input
+                type="checkbox" />SMILES重複・立体異性体表記ゆれの最終チェック</label></li>
+                </ul>
+                <h2 id="フェーズ3-探索的データ分析eda">フェーズ3:
+                探索的データ分析(EDA)</h2>
+                <ul class="task-list">
+                <li><label><input
+                type="checkbox" />目的変数の分布確認、記述子との相関・多重共線性(VIF)チェック</label></li>
+                <li><label><input
+                type="checkbox" />美容成分カテゴリ別(親水性 vs
+                親油性)の透過性傾向を可視化</label></li>
+                </ul>
+                <h2 id="フェーズ4-モデル構築2系統並行">フェーズ4:
+                モデル構築(2系統並行)</h2>
+                <h3 id="a.-皮膚透過性qsarモデル化粧品成分向け既存軸">4A.
+                皮膚透過性QSARモデル(化粧品成分向け、既存軸)</h3>
+                <ul class="task-list">
+                <li><label><input type="checkbox" />ベースライン:
+                Potts-Guy式、多重線形回帰</label></li>
+                <li><label><input type="checkbox" />Random Forest,
+                XGBoost, Gaussian Process Regression の比較</label></li>
+                <li><label><input
+                type="checkbox" />5-fold交差検証によるR²・RMSE評価</label></li>
+                <li><label><input type="checkbox" />Applicability
+                Domain評価(leverage法)</label></li>
+                </ul>
+                <h3
+                id="b.-yuan-2023マイクロニードルモデルの再現改良中心軸">4B.
+                Yuan 2023マイクロニードルモデルの再現・改良(中心軸)</h3>
+                <ul class="task-list">
+                <li><label><input type="checkbox" />Yuan
+                2023の4手法(Fick則, MLR, RF,
+                XGBoost)をまず再現し、報告値 (XGBoost
+                R²=0.98)との整合性を確認</label></li>
+                <li><label><input
+                type="checkbox" /><strong>Leave-one-drug-out交差検証</strong>で外挿性能を定量評価(論文が定性的にしか
+                示していない「新規薬剤への乖離」を数値化する)</label></li>
+                <li><label><input
+                type="checkbox" /><strong>転移学習</strong>:
+                フェーズ1で構築した皮膚透過性QSARモデル(214化合物)を
+                事前学習し、Yuan 2023の191点でファインチューニング。Xu
+                2023 / Dou・Zhu・ Merkurjev
+                2023が整理する転移学習戦略を適用。</label></li>
+                <li><label><input
+                type="checkbox" /><strong>特徴量重要度の偏り是正</strong>:
+                薬剤負荷量への過度な依存を緩和する正則化・
+                特徴量選択・アンサンブル手法を比較</label></li>
+                <li><label><input
+                type="checkbox" /><strong>物理モデル併用データ拡張</strong>:
+                Yuan 2023のFick則シミュレーションを用いて
+                疑似データ点を生成し、小規模データを補強(Achar・Keith
+                2024が言及する
+                物理モデルベースのデータ拡張に相当)</label></li>
+                </ul>
+                <h2 id="フェーズ5-解釈応用考察">フェーズ5:
+                解釈・応用考察</h2>
+                <ul class="task-list">
+                <li><label><input
+                type="checkbox" />SHAP値による特徴量重要度分析(4A・4Bの両モデル)</label></li>
+                <li><label><input
+                type="checkbox" />Leave-one-drug-out性能: 改良モデル(4B)
+                vs Yuan 2023オリジナルモデルの比較</label></li>
+                <li><label><input
+                type="checkbox" />医薬品ベースモデルと美容成分特化モデルの予測精度比較(4A)</label></li>
+                <li><label><input
+                type="checkbox" />改良済みMNモデル(4B)を用いた美容成分48件のマイクロニードル送達性能予測</label></li>
+                </ul>
+                <h2 id="フェーズ6-成果物整理">フェーズ6: 成果物整理</h2>
+                <ul class="task-list">
+                <li><label><input
+                type="checkbox" /><code>figure-style</code>
+                適用済み最終図表の作成</label></li>
+                <li><label><input
+                type="checkbox" />論文/レポート草稿</label></li>
+                <li><label><input type="checkbox"
+                checked="" /><strong>副次的検討(能動学習)</strong>: Yuan
+                2023データ(191点)を用いたretrospective active
+                learningシミュレーション(Random vs GP-Uncertainty vs
+                RF-QBC)を実施し、 研究ノートとして執筆中: <a
+                href="../active-learning-paper/"><code>../active-learning-paper/</code></a>。
+                新規データ収集なし・既存191点の再利用のみ。フェーズ2〜6本体(transfer
+                learning等)
+                の代替ではなく、実験計画最適化に関する独立した補足的知見。</label></li>
+                </ul>
+                <hr />
+                <p><em>進捗: フェーズ0, 1, 1.5
+                完了。次はフェーズ2(データキュレーション)を経て、
+                フェーズ4B(Yuan
+                2023の再現とleave-one-drug-out評価)に優先着手する。</em></p>
+              </article>
+    </main>
+
+    <aside class="reading-gauge" aria-hidden="true">
+      <p>READING DEPTH</p>
+      <div class="gauge-scale">
+        <span>00</span>
+        <span>25</span>
+        <span>50</span>
+        <span>75</span>
+        <span>100</span>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="document-footer">
+    <div>
+      <strong>BiG Lab Research Library</strong>
+      <p>Markdown is canonical. HTML is the synchronized reading view.</p>
+    </div>
+    <div class="document-footer-links">
+      <a href="../../shared/website/index.html">資料一覧へ戻る</a>
+      <a href="RESEARCH_PLAN.md">Markdownを開く</a>
+    </div>
+  </footer>
+</body>
+</html>

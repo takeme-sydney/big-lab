@@ -3,7 +3,7 @@
 # Retrospective Active Learning for Microneedle Drug Permeation — Research Note
 
 更新日: 2026-07-21
-状態: 下書き完成・数値検証パイプライン実行中(sonnet段階)
+状態: 本文完成・数値監査・HTML同期・リポジトリ全体のビルド検証を完了。Codex gpt-5.6-solによる最終独立検証待ち。
 
 ## Start here
 
@@ -31,9 +31,9 @@
 要件定義・指示文を1つの多段パイプラインで仕上げている(`notes/decision-log.md` に詳細記録):
 
 1. Claude Sonnet 5 — `research/` の既存下書き・結果CSV・図を精読し、`requirements.md` / `implementation-prompt.md` を起草
-2. Claude Fable 5 — 起草内容を独立レビューし、直接改善
-3. Codex `gpt-5.6-terra`(reasoning effort: max) — 図の修復、`paper.md` の完成、数値allowlistの照合、HTML生成
-4. Codex `gpt-5.6-sol`(reasoning effort: ultra) — 指示文をそのまま実行し、残りを仕上げ・独立検証
+2. Claude Fable 5 — 独立レビューを依頼したが利用枠上限のため実行できず、Sonnet 5が判断記録を残して代行レビュー
+3. Codex `gpt-5.6-terra`(reasoning effort: max) — 図の修復、`paper.md` の完成、数値allowlistの照合、HTML生成(完了)
+4. Codex `gpt-5.6-sol`(reasoning effort: ultra) — 最終独立検証(予定)
 
 ## フォルダ構成
 

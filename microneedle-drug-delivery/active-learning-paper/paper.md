@@ -1,6 +1,8 @@
+[HTML版を開く](paper.html)
+
 # Retrospective Active Learning for Microneedle-Facilitated Drug Permeation Prediction: A Small-Data Case Study
 
-**Working draft — prepared as a research note extending Yuan et al. (2023)**
+**Research note — retrospective analysis of the completed active-learning simulation based on Yuan et al. (2023).**
 
 ---
 
@@ -42,13 +44,13 @@ proposed as a way to predict permeation profiles without exhaustive
 experimentation. Yuan et al. (2023) compared Fick's-law simulation, multiple
 linear regression, random forest, and XGBoost on a dataset of 191
 measurements spanning six model compounds (bovine serum albumin, copper ions,
-GHK peptide, Rhodamine B, lidocaine, and caffeine), and found XGBoost gave the
-best in-distribution fit, with drug loading, permeation time, and MN surface
-area as the dominant predictive features. The authors also reported, in their
-discussion, that predictions for a drug withheld from training showed
-substantial deviation from experiment — a limitation common to small-data
-QSAR/QSPR models, where the training set rarely spans the full chemical space
-of interest.
+GHK peptide, Rhodamine B, lidocaine, and caffeine). Yuan et al. reported that
+XGBoost achieved R²=0.98 for both permeation amount and permeation percentage,
+and identified drug loading, permeation time, and MN surface area as dominant
+predictive features. The authors also reported, in their discussion, that
+predictions for a drug withheld from training showed substantial deviation from
+experiment — a limitation common to small-data QSAR/QSPR models, where the
+training set rarely spans the full chemical space of interest.
 
 This limitation sits squarely within a broader literature on small-data
 machine learning in molecular and materials science, which catalogs three
@@ -78,16 +80,15 @@ committing laboratory time to a prospective active-learning study.
 
 We reconstructed the original Yuan et al. (2023) training set from the
 publication's supplementary data (Data S1, PMC10658566), obtaining all 191
-rows across the six compounds reported: lidocaine (73 points), bovine serum
-albumin (BSA, 33), copper ions (24), GHK peptide (24), Rhodamine B (19), and
-caffeine (18) — matching the counts given in the original paper. Seven input
-features were retained, following the original study: drug loading in the MN
+rows across six compounds: lidocaine (73 points), bovine serum albumin (BSA,
+33), copper ions (24), GHK peptide (24), Rhodamine B (19), and caffeine (18).
+Seven input features were retained, following the original study: drug loading in the MN
 patch, drug molecular weight, MN length, skin type (rat/human), MN type
 (hydrogel/plastic), MN surface area, and permeation time. The prediction
 target was cumulative drug permeation amount (µg/cm²). Drug loading,
 molecular weight, and the permeation target were log₁₀-transformed to
-stabize variance, since raw values spanned several orders of magnitude
-(permeation amount: 1.05–29,010 µg/cm²).
+stabilize variance, since raw permeation amounts spanned several orders of
+magnitude (1.05–29,010 µg/cm²).
 
 ### 2.2 Active learning simulation
 
@@ -95,11 +96,11 @@ We treated the 191-point dataset as an experimental pool and simulated
 pool-based active learning. In each of 10 repeats, we held out 20% of the
 data (stratified by drug identity) as a fixed test set, seeded the training
 pool with 12 randomly chosen points, and then added 3 points per acquisition
-step for 35 steps (up to 117 total training points), recording test-set R²
-and RMSE after each step using a fixed downstream evaluator — a Random Forest
-regressor (150 trees) retrained from scratch at each step. Using a fixed
-evaluator, independent of the model used for acquisition, isolates the effect
-of experiment *selection* from the effect of model *choice*.
+step for 35 steps (up to 117 total training points). At each training size, we
+recorded test-set R² and RMSE using a fixed downstream Random Forest evaluator
+retrained from scratch after each acquisition. Using a fixed evaluator,
+independent of the model used for acquisition, isolates the effect of
+experiment *selection* from the effect of model *choice*.
 
 Three acquisition strategies selected which pool points to add at each step:
 
@@ -116,18 +117,18 @@ Three acquisition strategies selected which pool points to add at each step:
 
 To test directly whether active learning addresses the extrapolation failure
 mode reported by Yuan et al. (2023), we repeated the simulation six times,
-each time withholding all measurements for one drug entirely (both from the
-training pool and as the test set for that drug), so predictions relied
-exclusively on the remaining five compounds. Because chemical structure was
-not a feature in the original model, this test isolates whether *experiment
-selection* — as opposed to model architecture or chemical descriptors — can
-compensate for the absence of a compound's chemical class from training.
+each time withholding all measurements for one drug entirely from the
+training pool and using that drug as the test set. Because
+chemical structure was not a feature in the original model, this test isolates
+whether *experiment selection* — as opposed to model architecture or chemical
+descriptors — can compensate for the absence of a compound's chemical class
+from training.
 
 ## 3. Results
 
 ### 3.1 Active learning reduces experiments needed within a known chemical space
 
-![Learning curves comparing acquisition strategies, and experiments needed to reach a target accuracy]({{artifact:92f16820-f9e2-4323-b077-133834665e2f}})
+![Learning curves comparing acquisition strategies, and experiments needed to reach a target accuracy](../research/fig_active_learning_curves.png)
 
 **Figure 1.** (a) Test R² as a function of training set size for three
 acquisition strategies (mean ± SEM over 10 repeats). (b) Number of
@@ -148,7 +149,7 @@ strategies converged to comparable accuracy (R²=0.977–0.980).
 
 ### 3.2 Active learning does not rescue prediction for a drug class absent from training
 
-![Test RMSE by held-out drug and acquisition strategy in the leave-one-drug-out setting]({{artifact:1b5cd923-2b09-4d3f-9529-f43b674a8adb}})
+![Test RMSE by held-out drug and acquisition strategy in the leave-one-drug-out setting](../research/fig_lodo_comparison.png)
 
 **Figure 2.** Test RMSE (log₁₀ permeation amount) for each held-out drug,
 comparing acquisition strategies trained on the remaining five compounds.
@@ -158,7 +159,7 @@ a meaningful improvement over random sampling. Mean RMSE across all six
 held-out drugs was 1.367 (random), 1.342 (GP-Uncertainty), and 1.342 (RF-QBC)
 — differences an order of magnitude smaller than the RMSE variation across
 drugs themselves. For BSA (a 66 kDa protein, chemically unlike the other five
-compounds) and Rhodamine B (a fluorescent dye), all three strategies produced
+compounds) and Rhodamine B (a fluorescent dye), all strategies produced
 strongly negative R² (BSA: −44.1 to −43.7; Rhodamine B: −113.3 to −96.6),
 indicating the model performed far worse than predicting the mean — a signal
 that the failure mode is one of chemical-space coverage, not experiment
@@ -183,6 +184,13 @@ existing training points that a purely uncertainty-driven strategy is not
 positioned to recognize, and a diversity-aware or hybrid acquisition function
 may be more appropriate near convergence.
 
+For laboratory use, this result is best interpreted as a planning rule for a
+bounded domain: begin with a representative seed set, collect the condition
+predicted to be most uncertain, and reassess after each result. The
+retrospective setup cannot demonstrate savings in a future experiment, but it
+identifies a pattern worth testing prospectively when acquisition decisions
+are made before new permeation measurements are run.
+
 The leave-one-drug-out result is, in our view, the more consequential
 finding for this research program. Yuan et al. (2023) reported that
 prediction for a compound excluded from training showed marked deviation
@@ -194,11 +202,11 @@ problem is stated precisely: an acquisition function operating over MN
 process parameters (drug loading, permeation time, MN geometry) has no
 mechanism to select for chemical diversity, because chemical identity is not
 represented among the features it can query over. Closing this gap requires
-either (a) adding molecular descriptors to the feature space so that
-chemical similarity between a candidate compound and the training set becomes
-learnable, or (b) transfer learning from an external, chemically broader
-permeability dataset — both directions already staged in this project via a
-214-compound skin permeability dataset assembled from HuskinDB and SkinPiX.
+either adding molecular descriptors to the feature space so that chemical
+similarity between a candidate compound and the training set becomes
+learnable, or transfer learning from an external, chemically broader
+permeability dataset. These are future directions beyond the present
+simulation.
 
 ### Limitations
 
@@ -207,14 +215,17 @@ experiments were run, and the acquisition strategies compete only for the
 *order* in which existing measurements are revealed, not for genuinely novel
 experimental conditions. The six-drug, 191-point dataset is itself small,
 limiting the statistical power of the leave-one-drug-out comparisons
-(particularly for the three drugs with fewer than 25 measurements). The
-Gaussian Process acquisition model was fit on the same seven process
-features as the downstream evaluator, without molecular descriptors; this is
+(four of the six drugs — copper ions, GHK peptide, Rhodamine B, and
+caffeine — have fewer than 25 measurements each). The Gaussian Process
+acquisition model was fit on the same seven process features as the
+downstream evaluator, without molecular descriptors; this is
 a faithful reproduction of the original study's feature set but is also
 precisely the limitation the leave-one-drug-out results expose. Results
 should be read as characterizing this specific dataset and feature
 representation, not as a general claim about active learning for microneedle
-permeation modeling.
+permeation modeling. We also did not compare acquisition functions that
+explicitly combine uncertainty with diversity or molecular information, so the
+present comparison is not an exhaustive ranking of active-learning methods.
 
 ## 5. Conclusion
 
@@ -233,13 +244,21 @@ inclusion of molecular descriptors, rather than experiment scheduling alone.
 
 ## Data and Code Availability
 
-All analysis code, the reconstructed training dataset, and full result tables
-are provided as supplementary artifacts: `active_learning.py` (acquisition
-strategies and simulation loop), `yuan2023_dataset_with_descriptors.csv`
-(reconstructed 191-point dataset with molecular descriptors for the four
-small-molecule compounds), `active_learning_curves_within_distribution.csv`,
-`experiments_to_threshold.csv`, and `lodo_active_learning_results.csv` (full
-numerical results underlying Figures 1 and 2).
+The repository preserves the reconstructed Yuan dataset
+(`yuan2023_dataset_with_descriptors.csv`), the archived numerical outputs
+(`active_learning_curves_within_distribution.csv`,
+`experiments_to_threshold.csv`, and `lodo_active_learning_results.csv`), and
+the figures underlying this note (`fig_active_learning_curves.png` and
+`fig_lodo_comparison.png`) under `../research/`. The available
+`active_learning.py` implements the acquisition functions `select_random`,
+`select_gp_uncertainty`, and `select_rf_qbc`, together with
+`run_active_learning_curve()` for an individual learning curve.
+
+It does not include the driver/orchestration script required to load the data,
+perform the repeated split and leave-one-drug-out workflows, write the result
+tables, and generate the figures from raw inputs. The archived files therefore
+support inspection of the acquisition routines and reported outputs, but do
+not constitute an end-to-end regeneration workflow for the reported results.
 
 ## References
 
