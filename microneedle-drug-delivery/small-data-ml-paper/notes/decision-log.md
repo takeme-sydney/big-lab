@@ -305,3 +305,32 @@ Yuan et al. (2023)日本語訳を改めて読み、raw row・flag・DOI・図中
 - [x] **11/11** sonnet→fable→codex-terra→codex-solの4段パイプライン、主要判断、独立allowlist、最終監査を本記録に収録した。
 
 **最終スコア: 11/11 (全項目適合)**
+
+## 2026-07-21: PR #1への追加コミット — Asgarkhanova et al. (2026) 発見を反映した帰属表現の修正
+
+**発生した経緯**: 別ブランチ・別PR(`microneedle-competitive-gap-analysis`, PR #2)のdeep-research調査で、
+CNRS-Strasbourg/INRSのAsgarkhanova et al. (2026, *Molecular Informatics*, doi:10.1002/minf.70030) が、
+本論文§5.2の214化合物データセット(HuskinDB129+SkinPiX103+INRS3)と**内訳が完全一致**する統合データセットを
+既に構築・公開している可能性が高いことが判明した(データDOI 10.57745/ZUU1DH — 本プロジェクトの
+`research/CLAUDE.md`が元々「統合QSPRデータセットの出典」として引用していたのと同一)。PR #2の
+`competitive-landscape.md` §11がこの帰属表現の修正をPR #1への追加コミットとして推奨し、ユーザーが
+「今すぐ修正する」を選択したため、本コミットで対応する。
+
+**修正内容**:
+- Abstract(§1)・§5.2の「we assembled a training resource of 214 unique compounds」という自己統合を
+  示唆する表現を、「reused」(公開済み統合データセットの再利用)へ修正。
+- §5.2に、Asgarkhanova et al.との内訳一致・DOIの一致・本文入手不可(購読制)という制約・
+  「本研究の新規性はデータ統合ではなく転移学習のソースドメインとしての橋渡しにある」という
+  位置づけの明確化を追記。
+- References に Asgarkhanova et al. (2026) を新規追加(#12)。本文入手不可のためタイトルは
+  「unconfirmed」と明記し、確認できない情報を確定事実として書かない既存の原則を維持した。
+- Data & Ethics Statement の引用範囲を [9–11] から Asgarkhanova言及を含む形に更新。
+
+**捏造防止原則との整合性確認**: Asgarkhanova et al.の実際の手法・性能指標は依然として不明のため、
+「Asgarkhanova et al.は既にこの問題を解決した」という逆方向の過大主張はしていない。あくまで
+「214化合物データセットの構築主体」についての帰属表現の訂正であり、本論文の新規性の所在
+(転移学習のソースドメインとしての利用)は変更していない。
+
+**実施者**: Claude Sonnet 5(オーケストレーションセッション)。`git worktree`を用いて、並行実行中の
+別タスク(`microneedle-active-learning-paper`ブランチでのCodex gpt-5.6-sol実行)と作業ツリーを
+分離した上で実施した。
