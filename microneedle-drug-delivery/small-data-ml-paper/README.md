@@ -42,7 +42,8 @@ small-data-ml-paper/
 
 ## 利用上の境界
 
-- 新規のモデル訓練・交差検証・SHAP計算は行わない(別タスク)。
-- 美容成分の予測値を具体的数値として主張しない。
-- 引用は `../research/microneedle_ml_literature.csv` と RESEARCH_PLAN.md 記載の中核5文献の範囲に限定し、実在確認できない文献は追加しない。
+- これは執筆タスクであり計算タスクではない。新規のモデル訓練・交差検証・SHAP計算を行わず、`descriptors.py` を含むモデリング/計算コードもこの論文のために実行しない(`research/` は読んで引用するのみ)。
+- 美容成分の予測値を具体的数値として主張しない。特に `cosmetic_ingredients_descriptors.csv` の `logKp_PottsGuy_baseline`(48件分の未検証な式出力)を予測結果として転記しない。
+- Yuan (2023) が自ら報告した値(XGBoost R²=0.98 等)は「先行研究の事実」として引用してよいが、本研究の成果と取り違えない。
+- 引用は `../research/microneedle_ml_literature.csv` と `../research/CLAUDE.md`「中核となる参考文献」節の中核5文献の範囲に限定し、実在確認できない文献は追加しない。
 - 購読論文の本文転載・再配布はしない。

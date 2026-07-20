@@ -33,4 +33,48 @@ Codex gpt-5.6-sol(reasoning effort: ultra、仕上げ・検証)の4段構成で�
 それでも失敗する場合はこのセッション(Claude Sonnet 5)が直接仕上げ、
 ユーザーにその旨を明示する。
 
+## 2026-07-20: Fable 5 による requirements/implementation-prompt の独立レビュー・改善
+
+**実施**: Sonnet 5 起草の `requirements.md` / `implementation-prompt.md` / `README.md` を、
+`research/` 配下の一次資料(各CSV・literature_map_report.md・descriptors.py・両図・
+Yuan 2023和訳)に対して逐一検証し、直接修正した。
+
+**検証で確定した事実(すべて元ファイルと一致を確認)**:
+- 件数: 文献 **116**、皮膚透過性 **214**(= HuskinDB 129 + SkinPiX 103 + INRS 3 の重複除去後。
+  内訳: HuskinDB単独108 + SkinPiX単独82 + 両方21 + INRS3 = 214)、Yuan **191点・6薬剤**
+  (lidocaine73 / BSA33 / copper24 / GHK24 / RhodamineB19 / caffeine18)、美容成分 **48**。
+- Yuan (2023) 報告値: XGBoost 透過量・透過率とも **R²=0.98**(RF 0.95/0.97、Fick 0.95/0.82、
+  MLR 0.46/0.65)、7特徴量、**7:3 の train/test 分割**、Discussion **4.2** で薬剤搭載量への
+  過依存による外挿失敗を報告。和訳(references/translated papers)で一次確認済み。
+
+**修正した誤り・曖昧さ**:
+1. **美容成分の domain 件数の誤り**: 起草版は「48件中34件が範囲内」「34範囲内+10範囲外」
+   としていたが、34+10=44≠48 で内部矛盾。CSVの `in_MW_domain`/`in_LogP_domain` 両 true は
+   **38件**。正しくは「**範囲内38 / 範囲外10**」で、34は「範囲内かつ未実測」の内数
+   (範囲内38のうち4件=Niacinamide/Urea/Salicylic acid/Ethanol は実測済み)。全該当箇所を修正。
+2. **中核5文献の所在の誤り**: 「RESEARCH_PLAN.md 記載の5文献」としていたが、DOI付き正本は
+   **CLAUDE.md**「中核となる参考文献」節。requirements/implementation-prompt/README の
+   全参照を CLAUDE.md に修正し、5文献のDOIを §3 に明記。
+3. **図の記述リスク**: 「5クラスタ」表現。Figure 1b は実際は **8テーマカテゴリ**の棒
+   (48/18/17/14/8/7/3/1=116)。本文は「5主要クラスタ+3小クラスタ」でよいが図キャプションは
+   8カテゴリと明記するよう指示を追加。両図のパネル内容も正確に記述。
+4. **捏造トラップの明文化**: `cosmetic_ingredients_descriptors.csv` に `logKp_PottsGuy_baseline`
+   列が **48行すべて数値入り**で存在する。未検証の式出力であり「予測結果」ではないので、
+   これを表・図・本文に転記しない旨を §3・§8-7・implementation-prompt に明記(自律実行モデルが
+   「完成」させようとして最も踏みやすい地雷)。
+5. **過剰自主規制の防止**: Yuanが自ら報告した数値・feature importance傾向は literature 事実として
+   引用可、と明記(禁止は「本研究の未実行モデルの数値」のみ)。Yuanの外挿検証は定性的に存在
+   (Fig S1/S2)し、本研究の新規性は leave-one-drug-out CV での定量化、と精度注記を追加。
+6. **コード実行の全面禁止**: §9 と implementation-prompt に「執筆タスクであって計算タスクでない。
+   descriptors.py 等モデリング/計算コードを一切実行しない。実行してよいのは build-website.sh 系のみ」
+   を明記(research/requirements.txt の rdkit/xgboost/sklearn/shap を見て実行に走るのを防ぐ)。
+7. **実行順の事前ゲート化**: 捏造を「後で直す」から「書く前に防ぐ」へ。step1 で「数値allowlist」を
+   先に作り、allowlist に無い数値は書かない方針とし、build 前に専用の「捏造監査パス」(step6)を追加。
+8. その他: HuskinDB/SkinPiX/INRS の DB出典DOIを References 指示に補記、Yuan和訳を情報源リストに追加、
+   §5 の文字化け(「範囲」が壊れたバイトを含んでいた箇所)を修正、build スクリプトの同名 `.html` 要求に合わせたリンク指示の明確化。
+
+**判断の分かれ目**: 「範囲外10件」の性質。RESEARCH_PLAN.md は「高分子量脂質」と表現するが、
+CSV確認では大半が極端なLogP(高親油: squalane/tocopherol/CoQ10、高親水: ascorbyl phosphate類)
+による範囲外で、MW超過は4件のみ。paper では「訓練化学空間(MW・LogP)の外」と書くよう §8-4 に注記。
+
 ## (このセクションは各ステージ完了時に追記される)
