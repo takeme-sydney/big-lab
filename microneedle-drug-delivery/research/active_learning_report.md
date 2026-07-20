@@ -29,10 +29,9 @@ Yuan 2023はランダムに集まった191データ点で受動的にモデル�
   で学習・テストセット(全体の20%、層化抽出で薬剤比率を保持)への予測精度
   (R², RMSE)を測定。初期シード集合12点から開始し、3点ずつ35ステップ追加。
   10回の異なるテストセット分割で繰り返し、平均±標準誤差を報告。
-- **Leave-one-drug-out評価**: 6薬剤のうち1つを完全に除外し(訓練プールにも
-  テストセットにも同薬剤の別データ点は使わない設計ではなく、residualとして
-  同薬剤内の他データも訓練プールから除外)、能動学習が真に未知の薬剤への
-  外挿を改善できるかを検証。
+- **Leave-one-drug-out評価**: 6薬剤のうち1つについて全測定点を訓練プールから
+  除外してテストセットとし、残る5薬剤の測定点だけを獲得対象として、能動学習が
+  未知薬剤への外挿を改善できるかを検証。
 
 ## 結果
 
@@ -62,7 +61,7 @@ Randomに劣る — これは能動学習の典型的な挙動で、不確実性
 ### 2. Leave-one-drug-out評価:能動学習は真の外挿を改善しない
 
 6薬剤それぞれを完全に除外し、残り5薬剤のデータのみから予測した場合の
-テストRMSE(log₁₀ permeation amount, 3戦略の全訓練データ使用時):
+テストRMSE(log₁₀ permeation amount, 各戦略の最終獲得時点):
 
 | 除外薬剤 | Random | GP-Uncertainty | RF-QBC |
 |---|---|---|---|
@@ -91,10 +90,17 @@ Yuan 2023がDiscussionで指摘した限界は、能動学習だけでは克服�
   不十分。転移学習(本プロジェクトで構築した214化合物の皮膚透過性データを
   活用)や物理モデル(Fick則シミュレーション)との併用が必要。
 
-## 再現方法
+## 利用可能な実装と成果物
 
-`active_learning.py` の `run_active_learning_curve()` 関数と
-`STRATEGIES` 辞書を使用。データは `data/processed/yuan2023_dataset_with_descriptors.csv`。
-結果は `results/active_learning_curves_within_distribution.csv`,
-`results/experiments_to_threshold.csv`, `results/lodo_active_learning_results.csv`
-に保存。
+本レポートと同じ `research/` ディレクトリに、獲得戦略と単一学習曲線を実装した
+`active_learning.py`、入力データ `yuan2023_dataset_with_descriptors.csv`、結果CSV
+`active_learning_curves_within_distribution.csv`、`experiments_to_threshold.csv`、
+`lodo_active_learning_results.csv`、および対応する図
+`fig_active_learning_curves.png`、`fig_lodo_comparison.png` がある。
+
+`active_learning.py` には `run_active_learning_curve()` と `STRATEGIES` 辞書があるが、
+データ読み込み、10反復の分割、leave-one-drug-outループ、CSV書き出し、図生成を
+一括実行するdriver/orchestrationコードは含まれていない。反復ごとの分割indexと
+個別学習曲線も保存されておらず、分布内CSVにあるのは集約済みの平均・標準偏差のみである。
+したがって、保存済みの実装と成果物は獲得関数および報告値の点検には利用できるが、
+生データから全結果をend-to-endで再生成する完全なワークフローではない。

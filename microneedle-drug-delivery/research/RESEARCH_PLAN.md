@@ -79,7 +79,7 @@ Small-data MLレビュー3本)を精読し、研究の軸をYuan 2023の限界�
 - [ ] 論文/レポート草稿
 - [x] **副次的検討(能動学習)**: Yuan 2023データ(191点)を用いたretrospective active
       learningシミュレーション(Random vs GP-Uncertainty vs RF-QBC)を実施し、
-      研究ノートとして執筆中: [`../active-learning-paper/`](../active-learning-paper/)。
+      研究ノートとして完成: [`../active-learning-paper/`](../active-learning-paper/)。
       新規データ収集なし・既存191点の再利用のみ。フェーズ2〜6本体(transfer learning等)
       の代替ではなく、実験計画最適化に関する独立した補足的知見。
 

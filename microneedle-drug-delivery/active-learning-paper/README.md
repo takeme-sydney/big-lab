@@ -3,7 +3,7 @@
 # Retrospective Active Learning for Microneedle Drug Permeation — Research Note
 
 更新日: 2026-07-21
-状態: 本文完成・数値監査・HTML同期・リポジトリ全体のビルド検証を完了。Codex gpt-5.6-solによる最終独立検証待ち。
+状態: 4段パイプライン完了。Codex gpt-5.6-solによる一次資料からの最終独立検証、Acceptance checklist全項目、HTML同期、リポジトリ全体のビルド検証を完了し、PR可能な状態。
 
 ## Start here
 
@@ -23,7 +23,7 @@
 
 - `paper.md` は英語のresearch note本文であり、Abstract・Introduction・Data and Methods・Results・Discussion・Conclusion・Data and Code Availability・Referencesで構成される(既存草稿の章立てを維持)。
 - Figure 1(`../research/fig_active_learning_curves.png`)は分布内学習曲線と目標精度到達に必要な実験数、Figure 2(`../research/fig_lodo_comparison.png`)はleave-one-drug-out設定でのRMSE比較を示す。
-- 主要な結果: GP-Uncertaintyサンプリングは中程度の精度目標(R²≥0.85)にRandomサンプリングより18%少ない実験数で到達するが、高精度域や新規薬剤クラスへの外挿では優位性がない。
+- 主要な結果: GP-Uncertaintyサンプリングは中程度の精度目標(R²≥0.85)にRandomサンプリングより18%少ない実験数で到達するが、高精度域や新規薬剤クラスへの外挿では一貫した、または実務的に大きな優位性がない。
 - `notes/decision-log.md` には、数値allowlist、パイプライン各段階の判断、監査結果を記録する。
 
 ## 執筆パイプライン
@@ -33,7 +33,7 @@
 1. Claude Sonnet 5 — `research/` の既存下書き・結果CSV・図を精読し、`requirements.md` / `implementation-prompt.md` を起草
 2. Claude Fable 5 — 独立レビューを依頼したが利用枠上限のため実行できず、Sonnet 5が判断記録を残して代行レビュー
 3. Codex `gpt-5.6-terra`(reasoning effort: max) — 図の修復、`paper.md` の完成、数値allowlistの照合、HTML生成(完了)
-4. Codex `gpt-5.6-sol`(reasoning effort: ultra) — 最終独立検証(予定)
+4. Codex `gpt-5.6-sol`(reasoning effort: ultra) — 前段の監査結果を根拠から隔離し、一次CSV・ソース・元データ・図・DOIから全数値と記述を最終独立検証(完了)
 
 ## フォルダ構成
 

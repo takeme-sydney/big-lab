@@ -170,4 +170,102 @@ GHK peptide(24)・Rhodamine B(19)・caffeine(18)の**4種**であり、「3種�
 (参考文献除く、NF-01の2,000–3,200語の範囲内)。次段階のCodex gpt-5.6-solには、
 この改訂内容を含めて独立に全数値を再検証するよう申し送る。
 
+## 2026-07-21: Codex gpt-5.6-sol段階 — 最終独立検証とパイプライン完了
+
+**独立性の扱い**: terra段階およびその後のSonnet 5レビューの監査結果は、検証値の
+根拠として使用せず隔離した。最初に要件・実行指示・完成稿・本判断記録を全文読了した後、
+完成稿の主張を改めて一覧化し、3件の生CSV、再構成データセット、`active_learning.py`、
+`active_learning_report.md`、`CLAUDE.md`、およびPNG図2枚から独立に再導出・照合した。
+`active_learning.py`を含むモデリング・記述子計算・統計処理コードは実行していない。
+
+**一次資料から一致を確認した数値**:
+
+- `yuan2023_dataset_with_descriptors.csv`は191行・6薬剤で、lidocaine 73、BSA 33、
+  copper ions 24、GHK peptide 24、Rhodamine B 19、caffeine 18。透過量の最小値
+  1.0537、最大値29,009.78801は本文の1.05–29,010 µg/cm²と一致し、BSA全行の
+  分子量66,000 Daは本文の66 kDaと一致した。25件未満は4薬剤である。
+- `active_learning_curves_within_distribution.csv`は3戦略それぞれ36行、訓練サイズ
+  12→117の3点刻みであり、35獲得ステップを再導出した。n=27のR²はRandom
+  0.777331…、GP-Uncertainty 0.862648…、RF-QBC 0.662754…、n=117は順に
+  0.977222…、0.978642…、0.979640…で、本文の丸め値と一致した。
+- `experiments_to_threshold.csv`の閾値0.85/0.90/0.95に対する必要実験数は、Random
+  33/39/69、GP-Uncertainty 27/39/84、RF-QBC 45/57/84。33→27は18.1818%減で、
+  本文の18%と一致した。
+- `lodo_active_learning_results.csv`全18行から再集計した平均RMSEはRandom
+  1.367036、GP-Uncertainty 1.342352、RF-QBC 1.341789で、本文の
+  1.367/1.342/1.342と一致した。BSA、Rhodamine B、caffeineのR²範囲もそれぞれ
+  −44.1〜−43.7、−113.3〜−96.6、0.014〜0.096に正しく丸められている。
+- allowlistや既存判断記録に明示されていなかった「戦略間の平均RMSE差は薬剤間変動より
+  1桁以上小さい」という本文の主張も、生CSVから、戦略平均の最大差0.025247に対して
+  薬剤別平均RMSEの範囲1.435562（約56.9倍）と再導出でき、裏付けられた。
+- Figure 1・2を実画像として開いた。Figure 1は学習曲線、10反復のmean ± SEM表示、
+  R²=0.85到達数33/27/45を示し、Figure 2は6薬剤×3戦略のLODO RMSEを示す。
+  画像、CSV、本文キャプションの対応に不一致はなかった。
+
+**コード・引用・スコープの確認**:
+
+- `active_learning.py`を先頭から末尾まで読んだ。同ファイルは`select_random`、
+  `select_gp_uncertainty`、`select_rf_qbc`、`STRATEGIES`、および単一カーブ用の
+  `run_active_learning_curve()`を含む一方、データ読み込み、反復分割、LODOループ、
+  CSV書き出し、図生成、main blockを含まない。したがってpaperのData and Code
+  Availabilityにある「実装済み関数・保存済み成果物」と「不在のdriver」の区別は正確。
+  `select_rf_qbc(..., n_committee=5)`の既定値と、単一カーブ関数がこの値を上書きせず
+  呼び出すことも読み、本文の5モデルcommitteeと一致することを確認した。
+- 分布内CSVは平均・標準偏差だけを保存し、反復ごとの分割index・個別曲線は保存していない。
+  20%の層化splitと10反復は`active_learning_report.md`に記録され、10反復・mean ± SEMは
+  Figure 1の表示とも一致するが、リポジトリ内のsplit indexや反復別生データから再集計は
+  できない。この限界もData and Code Availabilityと内部レポートへ明記した。
+- `paper.md`を本文・図キャプション・Data and Code Availabilityまで全文検索し、
+  214化合物データセット、48成分データセット、両ファイル名、具体的な関連語が存在しない
+  ことを確認した。一般的な将来方向としてのtransfer learningへの言及のみである。
+- Yuan et al.のXGBoost R²=0.98は、本文で一貫して「Yuan et al. reported」と帰属され、
+  本active-learningシミュレーションの結果と混同されていない。原稿のReferences 5件の
+  DOIは`CLAUDE.md`の中核5文献と文字列単位ですべて一致し、各文献の実在も確認した。
+
+**今回修正した点**:
+
+1. 数値自体の誤りはなかったが、117点を「poolの61%」とした母集団の表現は不正確だった。
+   20% holdout後の獲得poolではなく、191点の完全データセットに対する61%であるため、
+   “61% of the complete 191-point dataset”へ訂正し、117点を最大シミュレーション予算と明記した。
+2. LODOの平均RMSEはGP/RF-QBCがRandomよりわずかに低いため、「改善しない」「不変」
+   「benefitなし」という絶対表現を、CSVが支持する「一貫した、または実務的に大きな改善なし」
+   へ修正した。結論の範囲は本データセット・特徴表現に限定したまま維持した。
+3. Discussionのactive learningを`data-source-level`とする分類は、`CLAUDE.md`および
+   Xu et al.の3層整理と不一致だったため、`machine-learning-strategy-level`へ訂正した。
+   また、元の7特徴量には薬剤分子量がある一方で構造・化学同一性記述子がない、という
+   正確な境界へ説明を修正した。
+4. 本文中で中核文献[1]〜[5]への参照を明示し、DOIは変更せず、出版社の書誌情報に基づいて
+   Zheng et al.とAchar & Keithの巻・頁等を補完した。
+5. `active_learning_report.md`の末尾に残っていた実在しない`data/processed/`・`results/`
+   パスを、`research/`直下の実ファイル名へ訂正した。同時に、driver不在とend-to-end再生成
+   不可、反復別データ不在を明記し、LODOの説明を全測定点除外・残る5薬剤からの獲得という
+   実態に整えた。
+6. `README.md`の状態とパイプライン第4段、および`RESEARCH_PLAN.md`のクロスリンク状態を、
+   最終検証・パイプライン完了へ更新した。
+
+**requirements.md §10 Acceptance checklist自己採点**:
+
+- [x] `paper.md`の全実質的数値を元CSV・再構成データ・承認済み一次資料へ独立に追跡した。
+- [x] Figure 1/2は指定された`../research/`のPNGへ解決し、実画像とキャプションが一致する。
+- [x] 214化合物・48成分データセットの数値・具体的言及はpaperのどこにもない。
+- [x] モデリング・記述子計算・統計処理コードを実行していない。実行したリポジトリ内
+  スクリプトは`shared/scripts/build-website.sh`のみである。
+- [x] Data and Code Availabilityは実在する戦略実装・単一カーブ関数・CSV・図と、
+  実在しないdriver/orchestration scriptを正確に区別する。
+- [x] `active_learning_report.md`の`src/active_learning.py`誤記は解消済みであり、今回さらに
+  残存していた不存在のdata/resultsパスと再現性表現も修正した。
+- [x] Yuan et al.の既報値は先行研究の値として明示され、本研究結果と区別される。
+- [x] 引用5件は実在し、全DOIが`CLAUDE.md`の中核5文献と一致する。
+- [x] `README.md`と本判断記録を最終状態へ更新した。
+- [x] モジュール内全Markdownの先頭本文行に同名HTMLへのリンクがあり、
+  `shared/scripts/build-website.sh`はexit code 0で全リポジトリのHTML生成・リンク検証を完走した。
+- [x] `RESEARCH_PLAN.md`フェーズ6のクロスリンクを維持し、「研究ノートとして完成」へ更新した。
+- [x] Sonnet→Fable代行→Codex-terra→Codex-solの4段パイプラインと各段の主要判断・監査結果を
+  本ログに記録した。
+
+**最終評価**: Acceptance checklistは12/12項目を達成した。保存済み集計値を生の反復結果から
+end-to-end再生成できるdriverがない制約は本文で明示されており、隠れた再現性主張はない。
+一次資料との不一致は解消済みで、Markdown/HTML同期と全体リンク検証も成功しているため、
+本モジュールはそのままPRしてよい状態と判断する。
+
 ## (このセクションは各ステージ完了時に追記される)

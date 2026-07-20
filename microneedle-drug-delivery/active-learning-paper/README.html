@@ -116,9 +116,9 @@ Note」に関するMarkdown正本のHTML閲覧版。</p>
                 id="retrospective-active-learning-for-microneedle-drug-permeation-research-note">Retrospective
                 Active Learning for Microneedle Drug Permeation —
                 Research Note</h1>
-                <p>更新日: 2026-07-21 状態:
-                本文完成・数値監査・HTML同期・リポジトリ全体のビルド検証を完了。Codex
-                gpt-5.6-solによる最終独立検証待ち。</p>
+                <p>更新日: 2026-07-21 状態: 4段パイプライン完了。Codex
+                gpt-5.6-solによる一次資料からの最終独立検証、Acceptance
+                checklist全項目、HTML同期、リポジトリ全体のビルド検証を完了し、PR可能な状態。</p>
                 <h2 id="start-here">Start here</h2>
                 <ol type="1">
                 <li>要件定義: <a
@@ -164,7 +164,7 @@ Note」に関するMarkdown正本のHTML閲覧版。</p>
                 1(<code>../research/fig_active_learning_curves.png</code>)は分布内学習曲線と目標精度到達に必要な実験数、Figure
                 2(<code>../research/fig_lodo_comparison.png</code>)はleave-one-drug-out設定でのRMSE比較を示す。</li>
                 <li>主要な結果:
-                GP-Uncertaintyサンプリングは中程度の精度目標(R²≥0.85)にRandomサンプリングより18%少ない実験数で到達するが、高精度域や新規薬剤クラスへの外挿では優位性がない。</li>
+                GP-Uncertaintyサンプリングは中程度の精度目標(R²≥0.85)にRandomサンプリングより18%少ない実験数で到達するが、高精度域や新規薬剤クラスへの外挿では一貫した、または実務的に大きな優位性がない。</li>
                 <li><code>notes/decision-log.md</code>
                 には、数値allowlist、パイプライン各段階の判断、監査結果を記録する。</li>
                 </ul>
@@ -182,7 +182,8 @@ Note」に関するMarkdown正本のHTML閲覧版。</p>
                 max) — 図の修復、<code>paper.md</code>
                 の完成、数値allowlistの照合、HTML生成(完了)</li>
                 <li>Codex <code>gpt-5.6-sol</code>(reasoning effort:
-                ultra) — 最終独立検証(予定)</li>
+                ultra) —
+                前段の監査結果を根拠から隔離し、一次CSV・ソース・元データ・図・DOIから全数値と記述を最終独立検証(完了)</li>
                 </ol>
                 <h2 id="フォルダ構成">フォルダ構成</h2>
                 <pre class="text"><code>active-learning-paper/

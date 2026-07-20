@@ -25,11 +25,12 @@ Forest. Gaussian Process uncertainty sampling reaches a moderate accuracy
 target (R²≥0.85) using 18% fewer experiments than random sampling (27 vs. 33
 of 191), but offers no advantage at higher accuracy targets. In a
 leave-one-drug-out extrapolation setting — directly probing the failure mode
-Yuan et al. reported — no acquisition strategy improved prediction for a drug
-class absent from training. We conclude that active learning is a practical
-tool for reducing experimental burden *within* a known chemical space, but
-cannot substitute for transfer learning or mechanistic priors when the
-scientific question is extrapolation to new drug classes.
+Yuan et al. reported — no acquisition strategy produced a consistent or
+practically large improvement for a drug class absent from training. We
+conclude that active learning can reduce experimental burden *within* a known
+chemical space, but did not overcome extrapolation to absent drug classes in
+this dataset and feature representation; transfer learning or mechanistic
+priors would require separate evaluation.
 
 ---
 
@@ -37,12 +38,12 @@ scientific question is extrapolation to new drug classes.
 
 Microneedles create transient micron-scale channels through the stratum
 corneum, the skin's primary permeation barrier, enabling transdermal delivery
-of drugs that would otherwise be excluded by molecular size or polarity.
+of drugs that would otherwise be excluded by molecular size or polarity [2].
 Because *in vitro* permeation testing (typically Franz diffusion cell
 experiments) is slow and resource-intensive, machine learning has been
 proposed as a way to predict permeation profiles without exhaustive
-experimentation. Yuan et al. (2023) compared Fick's-law simulation, multiple
-linear regression, random forest, and XGBoost on a dataset of 191
+experimentation. Yuan et al. (2023) [1] compared Fick's-law simulation,
+multiple linear regression, random forest, and XGBoost on a dataset of 191
 measurements spanning six model compounds (bovine serum albumin, copper ions,
 GHK peptide, Rhodamine B, lidocaine, and caffeine). Yuan et al. reported that
 XGBoost achieved R²=0.98 for both permeation amount and permeation percentage,
@@ -58,11 +59,11 @@ complementary levers for improving model performance under data scarcity:
 better data sourcing (literature mining, database construction,
 high-throughput experimentation), algorithm-level adaptations for imbalanced
 or small samples, and machine-learning strategies such as active learning and
-transfer learning. Active learning — adaptively choosing which experiment to
-run next, rather than accumulating data passively — is among the most
-immediately actionable of these for an experimental laboratory, since it
-requires no new instrumentation or data source, only a different order of
-experimentation.
+transfer learning [3–5]. Active learning — adaptively choosing which
+experiment to run next, rather than accumulating data passively — is among
+the most immediately actionable of these for an experimental laboratory,
+since it requires no new instrumentation or data source, only a different
+order of experimentation.
 
 This note asks whether active learning would have helped in exactly the
 setting Yuan et al. (2023) worked in. Because the original 191 measurements
@@ -144,8 +145,9 @@ number of experiments (39), and at R²=0.95 GP-Uncertainty required *more*
 experiments than random sampling (84 vs. 69). RF-QBC did not outperform
 random sampling at any accuracy threshold tested (45, 57, and 84 experiments
 at R²=0.85, 0.90, and 0.95 respectively, versus 33, 39, and 69 for random).
-At the full training set size (117 points, 61% of the pool), all three
-strategies converged to comparable accuracy (R²=0.977–0.980).
+At the largest simulated training-set size (117 points, 61% of the complete
+191-point dataset), all three strategies converged to comparable accuracy
+(R²=0.977–0.980).
 
 ### 3.2 Active learning does not rescue prediction for a drug class absent from training
 
@@ -155,11 +157,12 @@ strategies converged to comparable accuracy (R²=0.977–0.980).
 comparing acquisition strategies trained on the remaining five compounds.
 
 When an entire drug was withheld from training, no acquisition strategy gave
-a meaningful improvement over random sampling. Mean RMSE across all six
-held-out drugs was 1.367 (random), 1.342 (GP-Uncertainty), and 1.342 (RF-QBC)
-— differences an order of magnitude smaller than the RMSE variation across
-drugs themselves. For BSA (a 66 kDa protein, chemically unlike the other five
-compounds) and Rhodamine B (a fluorescent dye), all strategies produced
+a consistent or practically large improvement over random sampling. Mean RMSE
+across all six held-out drugs was 1.367 (random), 1.342 (GP-Uncertainty), and
+1.342 (RF-QBC) — differences an order of magnitude smaller than the RMSE
+variation across drugs themselves. For BSA (a 66 kDa protein, chemically
+unlike the other five compounds) and Rhodamine B (a fluorescent dye), all
+strategies produced
 strongly negative R² (BSA: −44.1 to −43.7; Rhodamine B: −113.3 to −96.6),
 indicating the model performed far worse than predicting the mean — a signal
 that the failure mode is one of chemical-space coverage, not experiment
@@ -176,7 +179,8 @@ training data, adaptively choosing which condition to test next — here,
 querying the point of highest model uncertainty — measurably reduces the
 number of experiments needed to reach a moderate accuracy target, consistent
 with the broader small-data machine learning literature's characterization of
-active learning as a data-source-level lever for mitigating scarcity. The
+active learning as a machine-learning-strategy-level lever for mitigating
+scarcity. The
 crossover at high accuracy targets (Figure 1) is a caution against assuming
 uncertainty sampling is uniformly beneficial: once most of the informative
 variance has been queried, remaining pool points may be redundant with
@@ -196,17 +200,16 @@ finding for this research program. Yuan et al. (2023) reported that
 prediction for a compound excluded from training showed marked deviation
 from experiment; our simulation confirms and quantifies this — R² is not
 merely reduced but strongly negative for the two chemically distinct
-held-out compounds — and shows that the effect is invariant to how the
-*other* experiments were selected. This is the expected result once the
-problem is stated precisely: an acquisition function operating over MN
-process parameters (drug loading, permeation time, MN geometry) has no
-mechanism to select for chemical diversity, because chemical identity is not
-represented among the features it can query over. Closing this gap requires
-either adding molecular descriptors to the feature space so that chemical
-similarity between a candidate compound and the training set becomes
-learnable, or transfer learning from an external, chemically broader
-permeability dataset. These are future directions beyond the present
-simulation.
+held-out compounds — and shows that the failure persists across acquisition
+strategies despite small differences in error. This is the expected result
+once the problem is stated precisely: an acquisition function operating over
+the seven original features — including drug molecular weight but no
+molecular-structure or chemical-identity descriptor — has limited means to
+select for chemical diversity. Closing this gap may require adding molecular
+descriptors to the feature space so that chemical similarity between a
+candidate compound and the training set becomes learnable, or evaluating
+transfer learning from an external, chemically broader permeability dataset.
+These are future directions beyond the present simulation.
 
 ### Limitations
 
@@ -233,10 +236,10 @@ Retrospective active learning simulation on the Yuan et al. (2023)
 microneedle permeation dataset shows that uncertainty-based experiment
 selection can reduce the number of experiments needed to reach a moderate
 predictive accuracy by roughly 18% within a known chemical space, but confers
-no benefit — and cannot be expected to confer benefit, given the feature
-representation used — when the scientific goal is extrapolation to an
-untested drug class. For laboratories designing the next round of microneedle
-permeation experiments on compounds similar to those already characterized,
+no consistent or practically large benefit in this simulation when the
+scientific goal is extrapolation to an untested drug class. For laboratories
+designing the next round of microneedle permeation experiments on compounds
+similar to those already characterized,
 Gaussian Process uncertainty sampling is a low-cost addition to experimental
 planning. For extending prediction to new drug classes, the evidence here
 points toward transfer learning from broader permeability databases or the
@@ -256,9 +259,12 @@ the figures underlying this note (`fig_active_learning_curves.png` and
 
 It does not include the driver/orchestration script required to load the data,
 perform the repeated split and leave-one-drug-out workflows, write the result
-tables, and generate the figures from raw inputs. The archived files therefore
-support inspection of the acquisition routines and reported outputs, but do
-not constitute an end-to-end regeneration workflow for the reported results.
+tables, and generate the figures from raw inputs. Per-repeat split indices and
+replicate-level learning curves are also not archived; the within-distribution
+CSV contains only aggregate means and standard deviations. The archived files
+therefore support inspection of the acquisition routines and reported outputs,
+but do not constitute an end-to-end regeneration workflow for the reported
+results.
 
 ## References
 
@@ -266,11 +272,12 @@ not constitute an end-to-end regeneration workflow for the reported results.
    drug permeation through microneedled skin by machine learning. *Bioeng
    Transl Med.* 2023;8(6):e10512. doi:10.1002/btm2.10512
 2. Zheng M, Sheng T, Yu J, Gu Z, Xu C. Microneedle biomedical devices. *Nat
-   Rev Bioeng.* 2023. doi:10.1038/s44222-023-00141-6
+   Rev Bioeng.* 2024;2:324–342. doi:10.1038/s44222-023-00141-6
 3. Xu P, Ji X, Li M, Lu W. Small data machine learning in materials science.
    *npj Comput Mater.* 2023;9:42. doi:10.1038/s41524-023-01000-z
 4. Achar SK, Keith JA. Small Data Machine Learning Approaches in Molecular
-   and Materials Science. *Chem Rev.* 2024. doi:10.1021/acs.chemrev.4c00957
+   and Materials Science. *Chem Rev.* 2024;124(24):13571–13573.
+   doi:10.1021/acs.chemrev.4c00957
 5. Dou B, Zhu Z, Merkurjev E, et al. Machine Learning Methods for Small Data
    Challenges in Molecular Science. *Chem Rev.* 2023;123(13):8736–8780.
    doi:10.1021/acs.chemrev.3c00189
