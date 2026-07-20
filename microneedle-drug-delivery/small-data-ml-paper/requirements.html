@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#edf2f0">
+  <meta name="description" content="BiG Labの「要件定義 — Small-Data ML
+for Microneedle Drug Permeation: A Perspective &amp; Research-Proposal
+Paper」に関するMarkdown正本のHTML閲覧版。">
+  <title>要件定義 — Small-Data ML for Microneedle Drug Permeation: A
+Perspective &amp; Research-Proposal Paper · BiG Lab</title>
+  <link rel="alternate" type="text/markdown" href="requirements.md" title="Markdown source">
+    <link rel="stylesheet" href="../../shared/website/assets/research-document.css">
+    </head>
+<body class="research-document">
+  <a class="skip-link" href="#document-content">本文へ移動</a>
+
+  <header class="document-topbar">
+    <div class="document-topbar-inner">
+      <a class="document-brand" href="../../shared/website/index.html" aria-label="BiG Lab 資料一覧へ">
+        <span class="document-brand-mark" aria-hidden="true">B</span>
+        <span class="document-brand-copy">
+          <strong>BiG Lab</strong>
+          <small>Research library</small>
+        </span>
+      </a>
+
+      <nav class="document-actions" aria-label="文書ナビゲーション">
+        <a href="../../shared/website/index.html">資料一覧</a>
+        <a class="source-action" href="requirements.md">Markdown正本 <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <header class="document-hero">
+    <div class="document-hero-copy">
+      <p class="document-kicker">
+        <span aria-hidden="true"></span>
+        PROJECT REQUIREMENTS
+      </p>
+      <h1 class="extra-long-title">要件定義 — Small-Data ML for
+Microneedle Drug Permeation: A Perspective &amp; Research-Proposal
+Paper</h1>
+      <p class="document-description">BiG Labの「要件定義 — Small-Data
+ML for Microneedle Drug Permeation: A Perspective &amp;
+Research-Proposal Paper」に関するMarkdown正本のHTML閲覧版。</p>
+
+      <dl class="document-meta">
+                        <div>
+          <dt>Format</dt>
+          <dd>HTML reading view</dd>
+        </div>
+      </dl>
+    </div>
+
+    <aside class="format-map" aria-label="MarkdownからHTMLへの文書フロー">
+      <div class="format-map-head">
+        <span>DOCUMENT PIPELINE</span>
+        <small>ONE SOURCE · TWO VIEWS</small>
+      </div>
+      <div class="format-map-flow">
+        <div class="format-node source-node">
+          <span>CANONICAL</span>
+          <strong>Markdown</strong>
+          <small>内容の正本</small>
+        </div>
+        <span class="format-arrow" aria-hidden="true">→</span>
+        <div class="format-node view-node">
+          <span>READING VIEW</span>
+          <strong>HTML</strong>
+          <small>閲覧用レンダリング</small>
+        </div>
+      </div>
+      <p>内容は同一に保ち、画面では読解・移動・参照に適した構造で表示します。</p>
+    </aside>
+  </header>
+
+  <div class="document-rule" aria-hidden="true">
+    <span></span><span></span><span></span>
+  </div>
+
+  <div class="document-shell">
+        <aside class="document-toc" aria-labelledby="document-toc-title">
+      <p id="document-toc-title">On this page</p>
+      <nav aria-label="目次">
+        <ul>
+        <li><a
+        href="#要件定義-small-data-ml-for-microneedle-drug-permeation-a-perspective-research-proposal-paper"
+        id="toc-要件定義-small-data-ml-for-microneedle-drug-permeation-a-perspective-research-proposal-paper">要件定義
+        — Small-Data ML for Microneedle Drug Permeation: A Perspective
+        &amp; Research-Proposal Paper</a>
+        <ul>
+        <li><a href="#目的" id="toc-目的">1. 目的</a></li>
+        <li><a href="#想定読者" id="toc-想定読者">2. 想定読者</a></li>
+        <li><a href="#論文の位置づけジャンル最重要制約"
+        id="toc-論文の位置づけジャンル最重要制約">3.
+        論文の位置づけ・ジャンル(最重要制約)</a></li>
+        <li><a href="#必須コンテンツ論文の章立て"
+        id="toc-必須コンテンツ論文の章立て">4.
+        必須コンテンツ(論文の章立て)</a></li>
+        <li><a href="#使用可能な情報源これ以外を根拠にしない"
+        id="toc-使用可能な情報源これ以外を根拠にしない">5.
+        使用可能な情報源(これ以外を根拠にしない)</a></li>
+        <li><a href="#functional-requirements"
+        id="toc-functional-requirements">6. Functional
+        requirements</a></li>
+        <li><a href="#non-functional-requirements"
+        id="toc-non-functional-requirements">7. Non-functional
+        requirements</a></li>
+        <li><a href="#scientific-requirements"
+        id="toc-scientific-requirements">8. Scientific
+        requirements</a></li>
+        <li><a href="#out-of-scope" id="toc-out-of-scope">9. Out of
+        scope</a></li>
+        <li><a href="#acceptance-checklist"
+        id="toc-acceptance-checklist">10. Acceptance checklist</a></li>
+        </ul></li>
+        </ul>
+      </nav>
+            <a class="toc-source-link" href="requirements.md">
+        <span>Source</span>
+        <strong>requirements.md</strong>
+      </a>
+          </aside>
+    
+    <main id="document-content" class="document-main">
+      <article class="document-content">
+                <p><a href="requirements.html">HTML版を開く</a></p>
+                <h1
+                id="要件定義-small-data-ml-for-microneedle-drug-permeation-a-perspective-research-proposal-paper">要件定義
+                — Small-Data ML for Microneedle Drug Permeation: A
+                Perspective &amp; Research-Proposal Paper</h1>
+                <p>文書版: 1.0 作成日: 2026-07-20 対象:
+                <code>big-lab/microneedle-drug-delivery/small-data-ml-paper/paper.md</code>
+                根拠資料:
+                <code>big-lab/microneedle-drug-delivery/research/</code>（RESEARCH_PLAN.md,
+                CLAUDE.md, literature_map_report.md, 各種CSV,
+                descriptors.py, 図表）</p>
+                <h2 id="目的">1. 目的</h2>
+                <p><code>microneedle-drug-delivery/research/</code>
+                に蓄積された研究準備内容(文献マップ116本、実測皮膚透過性データ214化合物、Yuan
+                et al. (2023)
+                の191点データセット再現、美容成分48件の記述子)を土台に、<strong>論文（Perspective
+                / Research proposal
+                manuscript）を1本書き上げる</strong>。</p>
+                <p>この論文は
+                <strong>新規の計算結果を報告しない</strong>。すでに完了した作業(文献マップ、データ収集・統合、Yuan
+                2023データの再現、記述子計算パイプライン)は実測の成果として正確に報告し、RESEARCH_PLAN.md
+                フェーズ2〜6(データキュレーション、モデル構築、transfer
+                learning、SHAP解析、美容成分予測)は
+                <strong>明示的に「未実施・今後の計画」として</strong>
+                記述する。目的は、Yunong Yuan (PI)
+                と共有し、この研究方向の literature command と
+                methodology
+                の健全性を示す、査読可能な水準の草稿を用意することである。</p>
+                <h2 id="想定読者">2. 想定読者</h2>
+                <ul>
+                <li>Yunong Yuan (PI, University of Sydney Biomedical
+                Innovation Group) — 研究方向の妥当性を評価する読者</li>
+                <li>将来この研究に参加する学生・研究補助者 —
+                背景と計画を把握するための読者</li>
+                <li>(将来的な拡張として)<em>Pharmaceutics</em>,
+                <em>International Journal of Pharmaceutics</em>,
+                <em>Journal of Controlled Release</em>
+                等、literature_map_report.md
+                が特定した主要投稿先ジャーナルの査読者を意識した文体</li>
+                </ul>
+                <h2 id="論文の位置づけジャンル最重要制約">3.
+                論文の位置づけ・ジャンル(最重要制約)</h2>
+                <ul>
+                <li>ジャンル: <strong>Perspective / Research proposal
+                manuscript</strong>(完了した実証研究の報告ではない)。</li>
+                <li>本文中で「本論文は着手前の研究計画であり、フェーズ4〜6のモデル構築・検証は実施していない」ことを
+                Introduction 末尾か Methods 冒頭で明示すること。</li>
+                <li><strong>絶対に行ってはならないこと(捏造防止 —
+                この節は下流の自律実行モデルが「論文を完成させよう」として無意識に破りやすい。1つでも破れば科学的不正になる)</strong>:
+                <ul>
+                <li>RF/XGBoost/GPR/MLR/Gaussian Process
+                等、<strong>本プロジェクトが一度も訓練していないモデルの定量的性能値(R²、RMSE、MAE、精度、AUC
+                等)を書かない</strong>。「〜と予想される」「おそらく
+                R²≈0.9」のような推測値・目標値も<strong>数値としては</strong>書かない(定量目標が必要なら「先行研究に匹敵する外挿精度を目指す」のように非数値で書く)。</li>
+                <li>本プロジェクトのモデルについて SHAP値・feature
+                importance
+                の具体的な数値や順位を、実際に計算していないのに記述しない。</li>
+                <li>Leave-one-drug-out CV、transfer
+                learning、applicability domain 評価の「結果」を書かない
+                — これらは §6(Proposed Methodology / Future
+                Work)に「計画」として書く。</li>
+                <li>美容成分48件の<strong>予測 log Kp
+                値を、いかなる出所であれ具体的数値・表・散布図として提示しない</strong>。特に
+                <code>cosmetic_ingredients_descriptors.csv</code> には
+                <code>logKp_PottsGuy_baseline</code>
+                列(48行すべて数値入り)が既に存在するが、<strong>これは検証されていない決定論的式の出力であり、本研究の「予測結果」ではない</strong>。この48個の
+                baseline
+                値を成果・予測として表や図に転記してはならない(§8-7
+                参照)。提示してよいのは Potts–Guy
+                の<strong>式そのもの</strong>と、その式を将来 baseline
+                として使う<strong>計画</strong>のみ。</li>
+                <li>実在しない引用文献・DOIを作らない。引用は
+                <code>research/literature_map_report.md</code>、<code>research/microneedle_ml_literature.csv</code>
+                に載る文献、または
+                <code>research/CLAUDE.md</code>「中核となる参考文献」節に列挙された中核5文献に限定する。中核5文献は次のとおり(DOIはCLAUDE.md記載):
+                ①Yuan et al. 2023 <code>doi:10.1002/btm2.10512</code>
+                ②Zheng et al. 2023
+                <code>doi:10.1038/s44222-023-00141-6</code> ③Xu et
+                al. 2023 <code>doi:10.1038/s41524-023-01000-z</code>
+                ④Achar &amp; Keith 2024
+                <code>doi:10.1021/acs.chemrev.4c00957</code>(<strong>本文入手不可・要旨のみ参照可</strong>なので、要旨で確認できる範囲を超えた内容を帰属させない)
+                ⑤Dou, Zhu, Merkurjev et al. 2023
+                <code>doi:10.1021/acs.chemrev.3c00189</code>。追加文献が必要な場合は、実際にその文献が実在し内容を確認できる場合のみ追加し、確認できない場合は追加しない。</li>
+                </ul></li>
+                <li><strong>区別のための明確化(過剰な自主規制で事実を落とさないために)</strong>
+                —
+                以下は捏造ではなく、literature/実ファイルに裏づけられた事実として<strong>書いてよい</strong>:
+                <ul>
+                <li>Yuan et al. (2023)
+                が<strong>自ら報告した</strong>数値(XGBoost
+                の透過量・透過率 R²=0.98、RF 0.95/0.97、Fick
+                0.95/0.82、MLR 0.46/0.65、7特徴量、7:3 の train/test
+                分割、著者らが報告した feature importance
+                の傾向=透過率では MN
+                表面積と透過時間、透過量では薬剤搭載量と透過時間が支配的、Discussion
+                4.2
+                の外挿失敗が薬剤搭載量への過依存に起因すること)は、<strong>先行研究の記載事実</strong>として正確に引用してよい。これらを「本研究が計算した」かのように書かないこと。</li>
+                <li>添付CSVに実在する件数・記述子・図(<code>fig1_landscape.png</code>
+                /
+                <code>fig2_influence_methods.png</code>)の数値は事実として引用してよい。</li>
+                </ul></li>
+                <li>上記制約に反する内容が書きかけになっている場合、完成させず「今後のモデル構築フェーズで実施する計画」に書き換えること。判断に迷う数値は<strong>書かない</strong>方を選ぶ。</li>
+                </ul>
+                <h2 id="必須コンテンツ論文の章立て">4.
+                必須コンテンツ(論文の章立て)</h2>
+                <ol type="1">
+                <li><strong>Title &amp; Abstract</strong> —
+                proposal/perspectiveであることが読み取れる書き方(例:
+                “toward”, “a proposed approach”, “we
+                outline”等の表現)。</li>
+                <li><strong>Introduction</strong> — microneedle drug
+                delivery の背景、Yuan et al. (2023)
+                の到達点と限界(Discussion 4.2節:
+                191点・6薬剤の小規模訓練データによる新規薬剤への外挿誤差)、本論文の立ち位置(proposalである旨)を明記。</li>
+                <li><strong>Related Work / Literature Landscape</strong>
+                — <code>literature_map_report.md</code>
+                のテーマ構成、2015–2026の急成長トレンド(2024年16本→2025年22本→2026年30本、コーパスの59%が2024年以降)、著者・拠点(Silpakorn
+                / Stockholm / Surrey の3クラスタ、Lian 6本ほか)、Figure
+                1・Figure 2
+                を実データとして引用。図の記述は実物に厳密に合わせること:
+                <ul>
+                <li><strong>注意(件数の言い方)</strong>:
+                本文では「5つの主要テーマクラスタ」(QSAR 48、formulation
+                18、microneedle-ML 17、molecular dynamics 14、FEM
+                8)+「3つの小クラスタ」(nanoparticle 7、reviews
+                3、physical-enhancement 1)と表現できるが、<strong>Figure
+                1b
+                は合計8カテゴリの棒</strong>(合計116本)を示す。図キャプションを「5クラスタ」と書くと図と矛盾するので、キャプションは「8つのテーマカテゴリ」と記述する。</li>
+                <li><strong>Figure 1</strong>
+                (<code>fig1_landscape.png</code>): (a)
+                2015–2026の年別出版数の積み上げ棒(2026は partial)、(b)
+                テーマ別構成(n=116、8カテゴリ)。</li>
+                <li><strong>Figure 2</strong>
+                (<code>fig2_influence_methods.png</code>): (a)
+                被引用数上位の論文(Crossref、対数軸: Roberts
+                2021=196、Lundborg 2018=123 等)、(b) 使用手法の分布(tree
+                ensembles/mixed ML 25、QSAR/QSPR 21、review 19、NN/DL
+                15、MD 10 等)。Figure 2 は
+                §5「著者・拠点/影響力」と本§4「手法landscape」の両方の根拠として引用してよい。</li>
+                </ul></li>
+                <li><strong>Research Gap</strong> —
+                literature_map_report.md §6
+                は4つのgap(①データ希少性・標準化不足、②QSAR–microneedleモデル間の断絶、③physics-ML融合の欠如、④生成・基盤モデルの不在)を挙げる。本研究は主に①〜③に対応する(④は言及にとどめる)。RESEARCH_PLAN.md
+                / CLAUDE.md の力点(transfer
+                learning、物理モデル併用データ拡張、applicability
+                domain厳格化)をここに接続する。<strong>精度上の注意</strong>:
+                Yuan (2023) は「外挿を全く検証していない」わけではない —
+                学習セットから薬剤を意図的に除外して予測する<strong>定性的</strong>チェック(Figure
+                S1/S2)を行い大きな乖離を示した。本研究の新規性は、これを
+                systematic な leave-one-drug-out
+                交差検証で<strong>定量化</strong>する点にあるので、「Yuanは外挿未検証」と誤記しないこと。</li>
+                <li><strong>Completed Preliminary
+                Work(実測として報告可)</strong> —
+                <ul>
+                <li>文献マップ構築(Crossref/PubMed、990件→116件に絞り込み)</li>
+                <li>皮膚透過性データセット統合(HuskinDB 129件 + SkinPiX
+                103件 + INRS 3件 → 重複除去後214化合物)</li>
+                <li>Yuan et al. (2023) 訓練データの完全再現(PMC10658566
+                Data S1より191点・6薬剤: lidocaine 73, BSA 33, copper
+                ions 24, GHK peptide 24, Rhodamine B 19, caffeine
+                18)</li>
+                <li>美容成分48件の構造・記述子取得(PubChem由来、RDKit記述子計算)</li>
+                <li>分子記述子計算パイプライン(<code>descriptors.py</code>)とPotts–Guy
+                baseline式の実装</li>
+                <li>化学空間(MW・LogP)によるapplicability
+                domainの初期スクリーニング:
+                <strong>48件中38件が範囲内、10件が範囲外</strong>。範囲内38件のうち4件(Niacinamide,
+                Urea, Salicylic acid,
+                Ethanol)は既に214化合物訓練セットに実測値があり直接検証に使える
+                →
+                差し引き<strong>34件が「範囲内かつ未実測」の新規予測候補</strong>。(注:
+                元CSVの
+                <code>in_MW_domain</code>/<code>in_LogP_domain</code>
+                両方 true
+                が38件。34ではなく38が「範囲内」の正しい総数。)</li>
+                </ul></li>
+                <li><strong>Proposed Methodology / Future
+                Work(明示的に未実施と分かる書き方)</strong> —
+                RESEARCH_PLAN.mdフェーズ2〜6の内容(データキュレーション、4A/4Bモデル構築、leave-one-drug-out
+                CV、transfer
+                learning、物理モデルベースのデータ拡張、SHAP解釈、美容成分への適用)を計画として記述。</li>
+                <li><strong>Anticipated Contributions</strong> —
+                この研究が実施された場合に期待される学術的貢献(小規模データの外挿性改善という一般的課題への寄与、化粧品応用への橋渡し)。</li>
+                <li><strong>Limitations</strong> —
+                6薬剤という検証薬剤数の少なさ、美容成分側の実測透過性データ欠如、単一ラボ・単一データセットへの依存、化学空間外10件の扱いなど。</li>
+                <li><strong>Data &amp; Ethics Statement</strong> —
+                すべて公開データベース・既刊論文の補足データの二次利用であり、新規のヒト・動物実験を伴わないこと、購読資料の再配布はしないこと。</li>
+                <li><strong>References</strong> —
+                literature_map_report.md / microneedle_ml_literature.csv
+                由来の文献 +
+                CLAUDE.md「中核となる参考文献」節の中核5文献 +
+                データベース出典(HuskinDB
+                <code>doi:10.1038/s41597-020-00764-z</code>, SkinPiX
+                <code>doi:10.57745/7FHQOY</code>, 統合QSPRデータセット
+                <code>doi:10.57745/ZUU1DH</code>)。DOIはすべてCLAUDE.md「データ出典」節と照合すること。</li>
+                </ol>
+                <h2 id="使用可能な情報源これ以外を根拠にしない">5.
+                使用可能な情報源(これ以外を根拠にしない)</h2>
+                <ul>
+                <li><code>microneedle-drug-delivery/research/RESEARCH_PLAN.md</code></li>
+                <li><code>microneedle-drug-delivery/research/CLAUDE.md</code></li>
+                <li><code>microneedle-drug-delivery/research/README.md</code></li>
+                <li><code>microneedle-drug-delivery/research/literature_map_report.md</code></li>
+                <li><code>microneedle-drug-delivery/research/microneedle_ml_literature.csv</code></li>
+                <li><code>microneedle-drug-delivery/research/cosmetic_ingredients_descriptors.csv</code></li>
+                <li><code>microneedle-drug-delivery/research/skin_permeability_training_set.csv</code></li>
+                <li><code>microneedle-drug-delivery/research/yuan2023_training_data.csv</code>
+                /
+                <code>yuan2023_dataset_with_descriptors.csv</code></li>
+                <li><code>microneedle-drug-delivery/research/descriptors.py</code></li>
+                <li><code>microneedle-drug-delivery/research/fig1_landscape.png</code>,
+                <code>fig2_influence_methods.png</code>(実データ図として再利用。新規図を捏造データで作らない)</li>
+                <li><code>microneedle-drug-delivery/references/translated  papers/01-yuan-2023-drug-permeation-microneedled-skin-ml-ja.md</code>(Yuan
+                2023 本文の日本語訳。R²=0.98・Discussion
+                4.2・7特徴量・7:3分割など、Yuan由来の記述事実の一次確認先。フォルダ名の
+                <code>translated</code> と <code>papers</code>
+                の間はスペース2つ)</li>
+                <li><code>microneedle-drug-delivery/drug-release-profile/</code>(release/permeation/retentionの区別など、関連する既存の要件定義)</li>
+                <li><code>shared/references/papers/yunong-yuan/</code>(PIの既存論文。文脈確認用。過度な引用は避け、事実確認できる範囲で言及)</li>
+                </ul>
+                <h2 id="functional-requirements">6. Functional
+                requirements</h2>
+                <table>
+                <colgroup>
+                <col style="width: 33%" />
+                <col style="width: 33%" />
+                <col style="width: 33%" />
+                </colgroup>
+                <thead>
+                <tr>
+                <th>ID</th>
+                <th>要件</th>
+                <th>受入条件</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td>F-01</td>
+                <td>論文本文</td>
+                <td><code>small-data-ml-paper/paper.md</code>
+                に完成した論文本文が存在する</td>
+                </tr>
+                <tr>
+                <td>F-02</td>
+                <td>言語</td>
+                <td>論文本文(<code>paper.md</code>)は英語。README/requirements/implementation-prompt/decision-logは日本語(ワークスペースの既存慣行に合わせる)</td>
+                </tr>
+                <tr>
+                <td>F-03</td>
+                <td>HTML同期</td>
+                <td><code>AGENTS.md</code>
+                の規則に従い、<code>paper.md</code>
+                を含む全Markdownの先頭本文行に
+                <code>[HTML版を開く](該当ファイル名.html)</code>
+                を付与し、<code>shared/scripts/build-website.sh</code>
+                実行後に対応するHTMLが生成されること</td>
+                </tr>
+                <tr>
+                <td>F-04</td>
+                <td>図表再利用</td>
+                <td><code>fig1_landscape.png</code> /
+                <code>fig2_influence_methods.png</code>
+                を実データ図として本文に埋め込み、キャプションに出典(<code>research/</code>配下のファイル)を明記する</td>
+                </tr>
+                <tr>
+                <td>F-05</td>
+                <td>文献引用</td>
+                <td>本文で言及した文献はすべて
+                <code>microneedle_ml_literature.csv</code> または
+                <code>CLAUDE.md</code>「中核となる参考文献」節の中核5文献(§3に列挙)のいずれかに存在し、DOIが一致する</td>
+                </tr>
+                <tr>
+                <td>F-06</td>
+                <td>ファイル構成</td>
+                <td><code>README.md</code>,
+                <code>requirements.md</code>,
+                <code>implementation-prompt.md</code>,
+                <code>paper.md</code>,
+                <code>notes/decision-log.md</code> が
+                <code>small-data-ml-paper/</code> 配下に揃っている</td>
+                </tr>
+                </tbody>
+                </table>
+                <h2 id="non-functional-requirements">7. Non-functional
+                requirements</h2>
+                <table>
+                <colgroup>
+                <col style="width: 33%" />
+                <col style="width: 33%" />
+                <col style="width: 33%" />
+                </colgroup>
+                <thead>
+                <tr>
+                <th>ID</th>
+                <th>要件</th>
+                <th>基準</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td>NF-01</td>
+                <td>分量</td>
+                <td>論文本文(参考文献リストを除く)はおおよそ4,000〜6,500語</td>
+                </tr>
+                <tr>
+                <td>NF-02</td>
+                <td>Scientific integrity</td>
+                <td>§3の捏造防止制約を厳守。実測・文献記載事実・提案/計画を明確に区別する語彙(“we
+                assembled”, “we propose”, “future work
+                will”等)を一貫して使う</td>
+                </tr>
+                <tr>
+                <td>NF-03</td>
+                <td>Reproducibility</td>
+                <td>「完了した作業」として書く内容は、必ず対応する実ファイル(CSV行数、descriptors.py関数名等)で裏付けられること</td>
+                </tr>
+                <tr>
+                <td>NF-04</td>
+                <td>Privacy/copyright</td>
+                <td>購読論文本文の転載・再配布をしない。引用は書誌情報とDOIのみ</td>
+                </tr>
+                <tr>
+                <td>NF-05</td>
+                <td>Consistency</td>
+                <td><code>drug-release-profile/</code>
+                側の用語定義(release / permeation /
+                retentionの区別)と矛盾しない</td>
+                </tr>
+                <tr>
+                <td>NF-06</td>
+                <td>Style</td>
+                <td>Perspective論文としての体裁(見出し構成、能動的だが控えめな主張、hedging
+                language)を守る</td>
+                </tr>
+                </tbody>
+                </table>
+                <h2 id="scientific-requirements">8. Scientific
+                requirements</h2>
+                <ol type="1">
+                <li>完了済みフェーズ(0, 1,
+                1.5)の内容のみを「結果」として提示し、フェーズ2以降は「計画」として提示する。</li>
+                <li>Yuan et al. (2023) の記述(手法、XGBoost
+                R²=0.98、Discussion
+                4.2節の外挿限界)は<strong>Yuanの報告値</strong>として正確に引用し、誇張・改変せず、本研究の成果と取り違えない。</li>
+                <li>214化合物データセット、191点データセット、48件の美容成分データセットの件数・出典は元CSVと完全に一致させる(214
+                = HuskinDB 129 + SkinPiX 103 + INRS 3 の重複除去後; 191
+                = 6薬剤の合計; 48 = 美容成分)。</li>
+                <li>美容成分の化学空間適合性は<strong>48件中38件がMW・LogP範囲内、10件が範囲外</strong>(34ではない
+                —
+                34は「範囲内かつ未実測」の内数)として事実報告してよいが、それに基づく「予測性能」は主張しない。範囲外10件を記述する場合は「高分子量脂質」と一括りにしない
+                — 実際は大半が極端なLogP(squalane・tocopherol・CoQ10
+                のような高親油性、ascorbyl phosphate
+                類のような高親水性の両方)による範囲外で、MW超過は4件のみ。「訓練化学空間(MW・LogP)の外」とだけ書くのが安全。</li>
+                <li>Potts–Guy
+                baseline式(<code>descriptors.py::potts_guy_baseline</code>:
+                log Kp = -2.7 + 0.71·logP −
+                0.0061·MW)の<strong>式自体</strong>の引用は可(公表式)。ただしこのbaselineを本データセット(美容成分・214化合物)に適用した<strong>具体的な性能値や
+                per-compound
+                予測値</strong>は、実際に計算・検証していない限り記載しない。</li>
+                <li>図表に用いる数値はすべて添付CSV・既存PNGに実在する値のみとする。新規の表・図を推定値/目標値で作らない。</li>
+                <li><strong><code>cosmetic_ingredients_descriptors.csv</code>
+                の <code>logKp_PottsGuy_baseline</code>
+                列は48行すべて数値入りだが、これは未検証の式出力であって本研究の「予測結果」ではない。</strong>この48値を予測・成果として表・散布図・本文に転記しない(§3の捏造防止と同一趣旨)。descriptor
+                列(MW/LogP/TPSA等)は分子の物性値なので記述に使ってよいが、<code>logKp_PottsGuy_baseline</code>
+                は結果として扱わない。</li>
+                </ol>
+                <h2 id="out-of-scope">9. Out of scope</h2>
+                <ul>
+                <li><strong>モデリング/計算コードの実行を一切行わない。これは執筆タスクであって計算タスクではない。</strong>
+                具体的には、<code>research/descriptors.py</code>
+                を含む一切の Python・R
+                スクリプトを<strong>この論文のために実行しない</strong>。モデル訓練、交差検証、SHAP計算、Potts–Guy値や記述子の再計算、予測の生成をしない。<code>research/requirements.txt</code>
+                に
+                <code>rdkit</code>/<code>xgboost</code>/<code>scikit-learn</code>/<code>shap</code>
+                等が並んでいても、それは将来の別タスク用であり、<code>pip install</code>
+                も実行もしない。
+                <ul>
+                <li>許可される操作は「<code>research/</code>
+                配下のファイルを<strong>読んで</strong>件数・値・関数名を確認し引用すること」まで。実行してよいスクリプトは<strong>ドキュメントビルドの
+                <code>shared/scripts/build-website.sh</code>(とそれが内部で呼ぶビルド/リンク検証スクリプト)のみ</strong>で、これはモデリングではなく
+                Markdown→HTML 変換である。</li>
+                </ul></li>
+                <li>新規のモデル訓練・交差検証・SHAP計算(内容としても —
+                別タスクとして今後実施)</li>
+                <li>美容成分の実測皮膚透過性データの新規収集</li>
+                <li>投稿ジャーナルの選定・実際の投稿手続き</li>
+                <li>wet-lab実験の設計・実施(<code>drug-release-profile/</code>の管轄)</li>
+                <li>未公開データ・購読資料本文の転載</li>
+                </ul>
+                <h2 id="acceptance-checklist">10. Acceptance
+                checklist</h2>
+                <ul class="task-list">
+                <li><label><input
+                type="checkbox" /><code>paper.md</code>
+                が存在し、§4の10章立てをすべて含む</label></li>
+                <li><label><input
+                type="checkbox" />フェーズ2以降の内容が「未実施・計画」であると明記されている(本研究のモデルに関する
+                R²/RMSE/精度/SHAP/feature importance/予測 log Kp
+                の<strong>具体的数値・推測値が一切ない</strong>)</label></li>
+                <li><label><input type="checkbox" />Yuan (2023)
+                由来の報告値(R²=0.98
+                等)は「先行研究の値」として引用され、本研究の成果と混同されていない</label></li>
+                <li><label><input
+                type="checkbox" /><code>logKp_PottsGuy_baseline</code>
+                の48値や、その他のモデル予測値が「予測結果」として表・図・本文に転記されていない(§3・§8-7)</label></li>
+                <li><label><input
+                type="checkbox" />モデリング/計算コード(<code>descriptors.py</code>
+                等)を一切実行していない。実行したスクリプトは
+                <code>build-website.sh</code> 系のみ(§9)</label></li>
+                <li><label><input
+                type="checkbox" />引用文献がすべて実在し、<code>microneedle_ml_literature.csv</code>
+                または CLAUDE.md
+                中核5文献と照合でき、DOIが一致する</label></li>
+                <li><label><input type="checkbox" />Figure 1・Figure
+                2が実データ図として埋め込まれ、出典(<code>research/</code>
+                配下ファイル名)が明記され、キャプションが実物と整合(Fig
+                1b は「8テーマカテゴリ」表記)</label></li>
+                <li><label><input
+                type="checkbox" />データセットの件数(214, 191, 48,
+                116)が元資料と一致し、美容成分の domain 内訳が
+                <strong>38 in / 10
+                out</strong>(34ではない)で記述されている</label></li>
+                <li><label><input
+                type="checkbox" /><code>[HTML版を開く]</code>
+                リンクが全Markdownファイルの先頭本文行(front
+                matterがあれば <code>---</code>
+                直後)にあり、リンク先が同名
+                <code>.html</code></label></li>
+                <li><label><input
+                type="checkbox" /><code>shared/scripts/build-website.sh</code>
+                がエラーなく完走し、対応するHTMLが生成・検証される</label></li>
+                <li><label><input
+                type="checkbox" /><code>notes/decision-log.md</code>
+                に本タスクのパイプライン(sonnet→fable→codex-terra→codex-sol)と主要判断が記録されている</label></li>
+                </ul>
+              </article>
+    </main>
+
+    <aside class="reading-gauge" aria-hidden="true">
+      <p>READING DEPTH</p>
+      <div class="gauge-scale">
+        <span>00</span>
+        <span>25</span>
+        <span>50</span>
+        <span>75</span>
+        <span>100</span>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="document-footer">
+    <div>
+      <strong>BiG Lab Research Library</strong>
+      <p>Markdown is canonical. HTML is the synchronized reading view.</p>
+    </div>
+    <div class="document-footer-links">
+      <a href="../../shared/website/index.html">資料一覧へ戻る</a>
+      <a href="requirements.md">Markdownを開く</a>
+    </div>
+  </footer>
+</body>
+</html>

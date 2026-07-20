@@ -78,3 +78,131 @@ CSV確認では大半が極端なLogP(高親油: squalane/tocopherol/CoQ10、高
 による範囲外で、MW超過は4件のみ。paper では「訓練化学空間(MW・LogP)の外」と書くよう §8-4 に注記。
 
 ## (このセクションは各ステージ完了時に追記される)
+
+## 2026-07-20: Codex gpt-5.6-terra — 執筆前の根拠読了と数値allowlist
+
+**実施**: `requirements.md` と `implementation-prompt.md` を全文読了した後、指定された
+`research/` 配下のMarkdown、CSV、`descriptors.py`、既存図、Yuan et al. (2023) 和訳、
+HTMLビルド／検証スクリプトを読んだ。`descriptors.py`、依存関係、モデル学習、記述子計算、
+予測生成は実行していない。`drug-release-profile/` の用語定義も確認し、本稿では
+microneedle処理皮膚を通過してreceptor compartmentへ到達する **permeation** を、
+release-only や skin retention と混同しない。
+
+### paper.md 用の数値allowlist
+
+以下は、根拠ファイル、既存図、または Yuan et al. (2023) の報告値に直接たどれる値だけを
+まとめたもの。章番号、参考文献番号、書誌情報の年・DOIは構造的な表記として別扱いとする。
+この表にない実質的な数値は、本文では原則使用しない。
+
+| 用途 | 使用を許可する値 | 根拠 |
+| --- | --- | --- |
+| 文献マップ | 990候補から116件、対象期間2015–2026、2024年16件、2025年22件、2026年（partial）30件、2024年以降59% | `research/literature_map_report.md`, `research/fig1_landscape.png` |
+| テーマ構成 | 48 / 18 / 17 / 14 / 8 / 7 / 3 / 1（Figure 1bの8カテゴリ） | `research/literature_map_report.md`, `research/fig1_landscape.png` |
+| 手法・影響力図 | tree ensembles/mixed ML 25、QSAR/QSPR 21、review 19、NN/DL 15、MD 10、other ML/AI 8、FEM/physics 8、SVM/SVR 6、linear/GPR 2、generative AI 2；Roberts 196、Lundborg 123等の図中値 | `research/fig2_influence_methods.png`, `research/literature_map_report.md` |
+| 皮膚透過性データ | HuskinDB 129、SkinPiX 103、INRS 3、重複除去後214ユニーク化合物 | `research/RESEARCH_PLAN.md`, `research/CLAUDE.md`, `research/skin_permeability_training_set.csv` |
+| Yuanデータ再現 | 191点、6薬剤；lidocaine 73、BSA 33、copper ions 24、GHK peptide 24、Rhodamine B 19、caffeine 18 | `research/RESEARCH_PLAN.md`, `research/yuan2023_training_data.csv`, `research/yuan2023_dataset_with_descriptors.csv` |
+| Yuanの既報値のみ | 7特徴量、7:3 train/test split、XGBoostのR²=0.98（透過量・透過率）、RF 0.95/0.97、Fick 0.95/0.82、MLR 0.46/0.65；feature-importanceの定性的傾向 | Yuan和訳、`research/CLAUDE.md` |
+| 美容成分の準備データ | 48成分、MW・LogP範囲内38、範囲外10、範囲内かつ実測済み4（Niacinamide、Urea、Salicylic acid、Ethanol）、範囲内かつ未実測34 | `research/cosmetic_ingredients_descriptors.csv`, `research/RESEARCH_PLAN.md` |
+| 将来のbaselineの式 | `log Kp = -2.7 + 0.71·logP − 0.0061·MW` | `research/descriptors.py::potts_guy_baseline` |
+
+**明示的な除外**: `cosmetic_ingredients_descriptors.csv` の
+`logKp_PottsGuy_baseline` 列にある48個の個別出力はallowlist外とする。これらは未検証の
+決定論的式の出力であり、本稿の結果、予測値、表、図、または比較値として使用しない。
+本プロジェクトが未実施のモデルについて、R²、RMSE、MAE、accuracy、AUC、SHAP値、
+feature importance順位、leave-one-drug-out結果、transfer-learning結果、applicability-domain
+の性能値、または美容成分の予測log Kpもallowlist外とする。
+
+### 事実と計画の仕分け
+
+- **完了済み事実（過去形で記述可）**: フェーズ0、1、1.5の文献マップ構築、公開皮膚透過性
+  データの統合、Yuanデータの再現、PubChem由来の美容成分構造・記述子収集、
+  `compute_descriptors`／`potts_guy_baseline`／`check_applicability_domain` を含む
+  記述子パイプラインの実装、MW・LogPによる初期スクリーニング。
+- **未実施の将来計画（`we propose` / `future work will` でのみ記述）**: フェーズ2以降の
+  データキュレーション、EDA、Potts–Guy・MLR・RF・XGBoost・GPRの学習／比較、
+  leave-one-drug-out交差検証、transfer learning、物理モデル併用データ拡張、SHAP解析、
+  美容成分への予測適用と実測比較。
+
+**執筆ルール**: Yuan et al. の数値は必ず「Yuan et al. reported」と帰属させる。本研究の
+既完了作業はデータ資産・再現・パイプラインの整備までであり、予測モデルの結果は報告しない。
+ビルド前に、本文の数値、予測値の混入、Yuan値の帰属、未来形の一貫性を個別に再監査する。
+
+## 2026-07-20: Codex gpt-5.6-terra — 本文完成と捏造監査
+
+**作成した成果物**: 英語のpaper.mdを完成させ、Title & Abstract、Introduction、
+Related Work / Literature Landscape、Research Gap、Completed Preliminary Work、
+Proposed Methodology / Future Work、Anticipated Contributions、Limitations、
+Data & Ethics Statement、Referencesの順で構成した。本文は参考文献を除いて5,482語であり、
+要件の4,000–6,500語に収まる。Figure 1とFigure 2はresearch配下の既存PNGをそのまま
+埋め込み、Figure 1bを8テーマカテゴリとしてキャプションに明記した。
+
+### 数値allowlist監査
+
+本文のReferences手前から数値トークンを抽出し、section番号・引用番号を除いて手作業で
+allowlistと照合した。文献マップ、テーマ構成、データセット、Yuan既報値、美容成分のdomain
+内訳、Potts–Guy式以外の実質的な数値は検出しなかった。YuanのR²、7特徴量、7:3分割は
+すべてYuan et al.の報告値として文脈内で帰属させた。書誌情報の年とDOIはReferences内の
+メタデータに限定した。
+
+### 捏造監査パス
+
+- **(i) 数値の出所**: 本文中の実質的な数値は上記allowlistに一致することを確認した。
+- **(ii) 未実施モデルの結果**: 本プロジェクトのR²、RMSE、MAE、accuracy、AUC、SHAP値、
+  feature-importance順位、leave-one-drug-out結果、transfer-learning結果、または
+  applicability-domain性能値は記載していない。
+- **(iii) 美容成分の数値予測**: logKp_PottsGuy_baseline列の個別出力、その他のper-compound
+  予測値、予測散布図、予測表は記載していない。Potts–Guyは式と将来のbaseline計画のみである。
+- **(iv) Yuan値の帰属**: Yuan et al.の性能値・特徴量傾向・定性的なexcluded-drug checkを、
+  すべて先行研究の記載として扱った。本研究が再計算したとの文言はない。
+- **(v) 時制**: データ資産・文献マップ・再現・記述子準備は完了済みとして記述し、データ
+  キュレーション以降、モデル構築、検証、転移、増強、解釈、化粧品への適用はfuture work
+  またはproposalの語彙に限定した。
+
+**引用照合**: Yuan、Roberts、Lundborg、Rezapour SarabiのDOIは
+microneedle_ml_literature.csvに照合した。Zheng、Xu、Achar & Keith、Dou/Zhu/Merkurjevの
+DOIと、HuskinDB、SkinPiX、統合QSPRデータセットのDOIはCLAUDE.mdに照合した。実在確認
+できない文献や新規DOIは追加していない。
+
+### requirements.md §10 の自己採点（HTML build前）
+
+- [x] paper.mdに英語の本文と指定章立てがある。
+- [x] フェーズ2以降を未実施の計画として明示し、未実行モデルの数値結果を載せていない。
+- [x] Yuanの既報値は先行研究の値として明示した。
+- [x] 未検証のPotts–Guy個別出力や美容成分の予測値を掲載していない。
+- [x] モデリング・記述子・依存関係の実行を行っていない。
+- [x] 引用のDOIを指定ソースと照合した。
+- [x] Figure 1・Figure 2を正しい出典・キャプションで埋め込んだ。
+- [x] 116、214、191、48、38/10、および34の関係を根拠どおりに記述した。
+- [ ] 同名HTMLの生成と全Markdownリンク検証は、最終のbuild-website.sh実行後に更新する。
+- [x] 4段パイプラインと主要判断を本decision logに記録した。
+
+## 2026-07-20: Codex gpt-5.6-terra — HTML buildの結果と既存ブロッカー
+
+**実施**: shared/scripts/build-website.sh を実行した。ビルドはpaper.html、README.html、
+notes/decision-log.html、requirements.html、implementation-prompt.htmlを含む当該モジュールの
+HTMLを生成した。したがって、今回更新したMarkdown正本には対応HTMLが存在する。
+
+**停止した検証**: 最後の全Markdownリンク検証で、research/CLAUDE.mdの先頭本文行が
+HTMLリンクではないことにより停止した。検出された内容は次のとおりである。
+
+    Invalid HTML link in microneedle-drug-delivery/research/CLAUDE.md
+      expected first body line: [HTML版を開く](CLAUDE.html)
+      actual first body line:   # プロジェクト: Small-data MLによるマイクロニードル薬物送達予測の改良と美容成分への応用
+
+このファイルは今回の執筆対象ではなく、今回の変更以前から先頭リンクがない既存の状態である。
+実行用指示文の停止条件に従い、無関係な既存ファイルは修正しない。次ステージでは、必要なら
+この既存Markdownリンクを別途是正したうえで、リポジトリ全体のvalidatorを成功させられる。
+
+### requirements.md §10 の自己採点（build後）
+
+- [x] paper.mdに英語の本文と指定章立てがある。
+- [x] フェーズ2以降を未実施の計画として明示し、未実行モデルの数値結果を載せていない。
+- [x] Yuanの既報値は先行研究の値として明示した。
+- [x] 未検証のPotts–Guy個別出力や美容成分の予測値を掲載していない。
+- [x] モデリング・記述子・依存関係の実行を行っていない。
+- [x] 引用のDOIを指定ソースと照合した。
+- [x] Figure 1・Figure 2を正しい出典・キャプションで埋め込んだ。
+- [x] 116、214、191、48、38/10、および34の関係を根拠どおりに記述した。
+- [x] 今回の全Markdownは同名HTMLへの先頭リンクを持ち、対応HTMLが生成された。
+- [ ] shared/scripts/build-website.shのリポジトリ全体の成功は、上記の既存research/CLAUDE.mdリンク不備のため未達。
+- [x] 4段パイプラインと主要判断を本decision logに記録した。

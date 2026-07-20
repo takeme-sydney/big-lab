@@ -1,0 +1,542 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#edf2f0">
+  <meta name="description" content="BiG Labの「判断記録 —
+small-data-ml-paper」に関するMarkdown正本のHTML閲覧版。">
+  <title>判断記録 — small-data-ml-paper · BiG Lab</title>
+  <link rel="alternate" type="text/markdown" href="decision-log.md" title="Markdown source">
+    <link rel="stylesheet" href="../../../shared/website/assets/research-document.css">
+    </head>
+<body class="research-document">
+  <a class="skip-link" href="#document-content">本文へ移動</a>
+
+  <header class="document-topbar">
+    <div class="document-topbar-inner">
+      <a class="document-brand" href="../../../shared/website/index.html" aria-label="BiG Lab 資料一覧へ">
+        <span class="document-brand-mark" aria-hidden="true">B</span>
+        <span class="document-brand-copy">
+          <strong>BiG Lab</strong>
+          <small>Research library</small>
+        </span>
+      </a>
+
+      <nav class="document-actions" aria-label="文書ナビゲーション">
+        <a href="../../../shared/website/index.html">資料一覧</a>
+        <a class="source-action" href="decision-log.md">Markdown正本 <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <header class="document-hero">
+    <div class="document-hero-copy">
+      <p class="document-kicker">
+        <span aria-hidden="true"></span>
+        RESEARCH NOTE
+      </p>
+      <h1>判断記録 — small-data-ml-paper</h1>
+      <p class="document-description">BiG Labの「判断記録 —
+small-data-ml-paper」に関するMarkdown正本のHTML閲覧版。</p>
+
+      <dl class="document-meta">
+                        <div>
+          <dt>Format</dt>
+          <dd>HTML reading view</dd>
+        </div>
+      </dl>
+    </div>
+
+    <aside class="format-map" aria-label="MarkdownからHTMLへの文書フロー">
+      <div class="format-map-head">
+        <span>DOCUMENT PIPELINE</span>
+        <small>ONE SOURCE · TWO VIEWS</small>
+      </div>
+      <div class="format-map-flow">
+        <div class="format-node source-node">
+          <span>CANONICAL</span>
+          <strong>Markdown</strong>
+          <small>内容の正本</small>
+        </div>
+        <span class="format-arrow" aria-hidden="true">→</span>
+        <div class="format-node view-node">
+          <span>READING VIEW</span>
+          <strong>HTML</strong>
+          <small>閲覧用レンダリング</small>
+        </div>
+      </div>
+      <p>内容は同一に保ち、画面では読解・移動・参照に適した構造で表示します。</p>
+    </aside>
+  </header>
+
+  <div class="document-rule" aria-hidden="true">
+    <span></span><span></span><span></span>
+  </div>
+
+  <div class="document-shell">
+        <aside class="document-toc" aria-labelledby="document-toc-title">
+      <p id="document-toc-title">On this page</p>
+      <nav aria-label="目次">
+        <ul>
+        <li><a href="#判断記録-small-data-ml-paper"
+        id="toc-判断記録-small-data-ml-paper">判断記録 —
+        small-data-ml-paper</a>
+        <ul>
+        <li><a href="#論文の性格をperspectiveproposalに限定"
+        id="toc-論文の性格をperspectiveproposalに限定">2026-07-20:
+        論文の性格をPerspective/proposalに限定</a></li>
+        <li><a href="#パイプライン構成"
+        id="toc-パイプライン構成">2026-07-20: パイプライン構成</a></li>
+        <li><a
+        href="#fable-5-による-requirementsimplementation-prompt-の独立レビュー改善"
+        id="toc-fable-5-による-requirementsimplementation-prompt-の独立レビュー改善">2026-07-20:
+        Fable 5 による requirements/implementation-prompt
+        の独立レビュー・改善</a></li>
+        <li><a href="#このセクションは各ステージ完了時に追記される"
+        id="toc-このセクションは各ステージ完了時に追記される">(このセクションは各ステージ完了時に追記される)</a></li>
+        <li><a
+        href="#codex-gpt-5.6-terra-執筆前の根拠読了と数値allowlist"
+        id="toc-codex-gpt-5.6-terra-執筆前の根拠読了と数値allowlist">2026-07-20:
+        Codex gpt-5.6-terra — 執筆前の根拠読了と数値allowlist</a>
+        <ul>
+        <li><a href="#paper.md-用の数値allowlist"
+        id="toc-paper.md-用の数値allowlist">paper.md
+        用の数値allowlist</a></li>
+        <li><a href="#事実と計画の仕分け"
+        id="toc-事実と計画の仕分け">事実と計画の仕分け</a></li>
+        </ul></li>
+        <li><a href="#codex-gpt-5.6-terra-本文完成と捏造監査"
+        id="toc-codex-gpt-5.6-terra-本文完成と捏造監査">2026-07-20:
+        Codex gpt-5.6-terra — 本文完成と捏造監査</a>
+        <ul>
+        <li><a href="#数値allowlist監査"
+        id="toc-数値allowlist監査">数値allowlist監査</a></li>
+        <li><a href="#捏造監査パス"
+        id="toc-捏造監査パス">捏造監査パス</a></li>
+        <li><a href="#requirements.md-10-の自己採点html-build前"
+        id="toc-requirements.md-10-の自己採点html-build前">requirements.md
+        §10 の自己採点（HTML build前）</a></li>
+        </ul></li>
+        <li><a
+        href="#codex-gpt-5.6-terra-html-buildの結果と既存ブロッカー"
+        id="toc-codex-gpt-5.6-terra-html-buildの結果と既存ブロッカー">2026-07-20:
+        Codex gpt-5.6-terra — HTML buildの結果と既存ブロッカー</a>
+        <ul>
+        <li><a href="#requirements.md-10-の自己採点build後"
+        id="toc-requirements.md-10-の自己採点build後">requirements.md
+        §10 の自己採点（build後）</a></li>
+        </ul></li>
+        </ul></li>
+        </ul>
+      </nav>
+            <a class="toc-source-link" href="decision-log.md">
+        <span>Source</span>
+        <strong>decision-log.md</strong>
+      </a>
+          </aside>
+    
+    <main id="document-content" class="document-main">
+      <article class="document-content">
+                <p><a href="decision-log.html">HTML版を開く</a></p>
+                <h1 id="判断記録-small-data-ml-paper">判断記録 —
+                small-data-ml-paper</h1>
+                <h2
+                id="論文の性格をperspectiveproposalに限定">2026-07-20:
+                論文の性格をPerspective/proposalに限定</h2>
+                <p><strong>決定</strong>: <code>research/</code> の
+                RESEARCH_PLAN.md
+                はフェーズ2〜6(データキュレーション、モデル構築、
+                transfer
+                learning、SHAP解析、美容成分への適用)が未着手のまま止まっている。この状態で
+                「論文を書く」ためには、(a)
+                フェーズ2〜6を実際に実行してから結果を報告する、 (b)
+                新規計算を行わずPerspective/proposalとして書く、の2択があった。
+                ユーザーは (b) を明示的に選択した。</p>
+                <p><strong>理由</strong>:
+                実行していない計算の結果を書くと科学的誠実性(データ捏造)に関わる重大な問題になる。
+                (b)
+                であれば、既に実在する文献マップ・データセット・記述子コードという「本物の」土台の上に、
+                誠実に「ここまで完了・ここからは計画」と区別した文書を作れる。</p>
+                <p><strong>影響</strong>: <code>requirements.md</code>
+                §3
+                に捏造防止の制約を明文化し、<code>implementation-prompt.md</code>
+                の
+                実行順・停止条件にも同じ制約を繰り返し埋め込んだ。後続のfable-5・codexステージが
+                この区別を破らないよう、各ステージの成果物を都度この観点でレビューする。</p>
+                <h2 id="パイプライン構成">2026-07-20:
+                パイプライン構成</h2>
+                <p><strong>決定</strong>: Sonnet
+                5(要件定義・指示文起草)→ Fable 5(レビュー・改善)→ Codex
+                gpt-5.6-terra(reasoning effort: max、本文の下書き)→
+                Codex gpt-5.6-sol(reasoning effort:
+                ultra、仕上げ・検証)の4段構成で実行する。</p>
+                <p><strong>理由</strong>:
+                ユーザーの明示的な指定(過去のcorneal-geometry-qcモジュールと同じパターン)。
+                複数モデルによる独立レビューを重視し、1モデルが自分の成果を自己採点する状態を避ける。</p>
+                <p><strong>既知のリスク</strong>:
+                <code>gpt-5.6-sol</code> の <code>ultra</code> reasoning
+                effortは、長時間の headless <code>codex exec</code>
+                実行中に停止する既知の不具合がある(内部でmulti-agent委任が走り、
+                <code>codex exec resume</code>
+                では復帰できない)。停止した場合は同じコマンドで再実行を1回試み、
+                それでも失敗する場合はこのセッション(Claude Sonnet
+                5)が直接仕上げ、 ユーザーにその旨を明示する。</p>
+                <h2
+                id="fable-5-による-requirementsimplementation-prompt-の独立レビュー改善">2026-07-20:
+                Fable 5 による requirements/implementation-prompt
+                の独立レビュー・改善</h2>
+                <p><strong>実施</strong>: Sonnet 5 起草の
+                <code>requirements.md</code> /
+                <code>implementation-prompt.md</code> /
+                <code>README.md</code> を、 <code>research/</code>
+                配下の一次資料(各CSV・literature_map_report.md・descriptors.py・両図・
+                Yuan 2023和訳)に対して逐一検証し、直接修正した。</p>
+                <p><strong>検証で確定した事実(すべて元ファイルと一致を確認)</strong>:
+                - 件数: 文献 <strong>116</strong>、皮膚透過性
+                <strong>214</strong>(= HuskinDB 129 + SkinPiX 103 + INRS
+                3 の重複除去後。 内訳: HuskinDB単独108 + SkinPiX単独82 +
+                両方21 + INRS3 = 214)、Yuan
+                <strong>191点・6薬剤</strong> (lidocaine73 / BSA33 /
+                copper24 / GHK24 / RhodamineB19 / caffeine18)、美容成分
+                <strong>48</strong>。 - Yuan (2023) 報告値: XGBoost
+                透過量・透過率とも <strong>R²=0.98</strong>(RF
+                0.95/0.97、Fick 0.95/0.82、 MLR
+                0.46/0.65)、7特徴量、<strong>7:3 の train/test
+                分割</strong>、Discussion <strong>4.2</strong>
+                で薬剤搭載量への
+                過依存による外挿失敗を報告。和訳(references/translated
+                papers)で一次確認済み。</p>
+                <p><strong>修正した誤り・曖昧さ</strong>: 1.
+                <strong>美容成分の domain 件数の誤り</strong>:
+                起草版は「48件中34件が範囲内」「34範囲内+10範囲外」
+                としていたが、34+10=44≠48 で内部矛盾。CSVの
+                <code>in_MW_domain</code>/<code>in_LogP_domain</code> 両
+                true は
+                <strong>38件</strong>。正しくは「<strong>範囲内38 /
+                範囲外10</strong>」で、34は「範囲内かつ未実測」の内数
+                (範囲内38のうち4件=Niacinamide/Urea/Salicylic
+                acid/Ethanol は実測済み)。全該当箇所を修正。 2.
+                <strong>中核5文献の所在の誤り</strong>:
+                「RESEARCH_PLAN.md
+                記載の5文献」としていたが、DOI付き正本は
+                <strong>CLAUDE.md</strong>「中核となる参考文献」節。requirements/implementation-prompt/README
+                の 全参照を CLAUDE.md に修正し、5文献のDOIを §3 に明記。
+                3. <strong>図の記述リスク</strong>:
+                「5クラスタ」表現。Figure 1b は実際は
+                <strong>8テーマカテゴリ</strong>の棒
+                (48/18/17/14/8/7/3/1=116)。本文は「5主要クラスタ+3小クラスタ」でよいが図キャプションは
+                8カテゴリと明記するよう指示を追加。両図のパネル内容も正確に記述。
+                4. <strong>捏造トラップの明文化</strong>:
+                <code>cosmetic_ingredients_descriptors.csv</code> に
+                <code>logKp_PottsGuy_baseline</code> 列が
+                <strong>48行すべて数値入り</strong>で存在する。未検証の式出力であり「予測結果」ではないので、
+                これを表・図・本文に転記しない旨を
+                §3・§8-7・implementation-prompt に明記(自律実行モデルが
+                「完成」させようとして最も踏みやすい地雷)。 5.
+                <strong>過剰自主規制の防止</strong>:
+                Yuanが自ら報告した数値・feature importance傾向は
+                literature 事実として
+                引用可、と明記(禁止は「本研究の未実行モデルの数値」のみ)。Yuanの外挿検証は定性的に存在
+                (Fig S1/S2)し、本研究の新規性は leave-one-drug-out CV
+                での定量化、と精度注記を追加。 6.
+                <strong>コード実行の全面禁止</strong>: §9 と
+                implementation-prompt
+                に「執筆タスクであって計算タスクでない。 descriptors.py
+                等モデリング/計算コードを一切実行しない。実行してよいのは
+                build-website.sh 系のみ」
+                を明記(research/requirements.txt の
+                rdkit/xgboost/sklearn/shap を見て実行に走るのを防ぐ)。
+                7. <strong>実行順の事前ゲート化</strong>:
+                捏造を「後で直す」から「書く前に防ぐ」へ。step1
+                で「数値allowlist」を 先に作り、allowlist
+                に無い数値は書かない方針とし、build
+                前に専用の「捏造監査パス」(step6)を追加。 8. その他:
+                HuskinDB/SkinPiX/INRS の DB出典DOIを References
+                指示に補記、Yuan和訳を情報源リストに追加、 §5
+                の文字化け(「範囲」が壊れたバイトを含んでいた箇所)を修正、build
+                スクリプトの同名 <code>.html</code>
+                要求に合わせたリンク指示の明確化。</p>
+                <p><strong>判断の分かれ目</strong>:
+                「範囲外10件」の性質。RESEARCH_PLAN.md
+                は「高分子量脂質」と表現するが、
+                CSV確認では大半が極端なLogP(高親油:
+                squalane/tocopherol/CoQ10、高親水: ascorbyl phosphate類)
+                による範囲外で、MW超過は4件のみ。paper
+                では「訓練化学空間(MW・LogP)の外」と書くよう §8-4
+                に注記。</p>
+                <h2
+                id="このセクションは各ステージ完了時に追記される">(このセクションは各ステージ完了時に追記される)</h2>
+                <h2
+                id="codex-gpt-5.6-terra-執筆前の根拠読了と数値allowlist">2026-07-20:
+                Codex gpt-5.6-terra —
+                執筆前の根拠読了と数値allowlist</h2>
+                <p><strong>実施</strong>: <code>requirements.md</code>
+                と <code>implementation-prompt.md</code>
+                を全文読了した後、指定された <code>research/</code>
+                配下のMarkdown、CSV、<code>descriptors.py</code>、既存図、Yuan
+                et al. (2023) 和訳、
+                HTMLビルド／検証スクリプトを読んだ。<code>descriptors.py</code>、依存関係、モデル学習、記述子計算、
+                予測生成は実行していない。<code>drug-release-profile/</code>
+                の用語定義も確認し、本稿では
+                microneedle処理皮膚を通過してreceptor
+                compartmentへ到達する <strong>permeation</strong> を、
+                release-only や skin retention と混同しない。</p>
+                <h3 id="paper.md-用の数値allowlist">paper.md
+                用の数値allowlist</h3>
+                <p>以下は、根拠ファイル、既存図、または Yuan et
+                al. (2023) の報告値に直接たどれる値だけを
+                まとめたもの。章番号、参考文献番号、書誌情報の年・DOIは構造的な表記として別扱いとする。
+                この表にない実質的な数値は、本文では原則使用しない。</p>
+                <table>
+                <colgroup>
+                <col style="width: 33%" />
+                <col style="width: 33%" />
+                <col style="width: 33%" />
+                </colgroup>
+                <thead>
+                <tr>
+                <th>用途</th>
+                <th>使用を許可する値</th>
+                <th>根拠</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td>文献マップ</td>
+                <td>990候補から116件、対象期間2015–2026、2024年16件、2025年22件、2026年（partial）30件、2024年以降59%</td>
+                <td><code>research/literature_map_report.md</code>,
+                <code>research/fig1_landscape.png</code></td>
+                </tr>
+                <tr>
+                <td>テーマ構成</td>
+                <td>48 / 18 / 17 / 14 / 8 / 7 / 3 / 1（Figure
+                1bの8カテゴリ）</td>
+                <td><code>research/literature_map_report.md</code>,
+                <code>research/fig1_landscape.png</code></td>
+                </tr>
+                <tr>
+                <td>手法・影響力図</td>
+                <td>tree ensembles/mixed ML 25、QSAR/QSPR 21、review
+                19、NN/DL 15、MD 10、other ML/AI 8、FEM/physics
+                8、SVM/SVR 6、linear/GPR 2、generative AI 2；Roberts
+                196、Lundborg 123等の図中値</td>
+                <td><code>research/fig2_influence_methods.png</code>,
+                <code>research/literature_map_report.md</code></td>
+                </tr>
+                <tr>
+                <td>皮膚透過性データ</td>
+                <td>HuskinDB 129、SkinPiX 103、INRS
+                3、重複除去後214ユニーク化合物</td>
+                <td><code>research/RESEARCH_PLAN.md</code>,
+                <code>research/CLAUDE.md</code>,
+                <code>research/skin_permeability_training_set.csv</code></td>
+                </tr>
+                <tr>
+                <td>Yuanデータ再現</td>
+                <td>191点、6薬剤；lidocaine 73、BSA 33、copper ions
+                24、GHK peptide 24、Rhodamine B 19、caffeine 18</td>
+                <td><code>research/RESEARCH_PLAN.md</code>,
+                <code>research/yuan2023_training_data.csv</code>,
+                <code>research/yuan2023_dataset_with_descriptors.csv</code></td>
+                </tr>
+                <tr>
+                <td>Yuanの既報値のみ</td>
+                <td>7特徴量、7:3 train/test
+                split、XGBoostのR²=0.98（透過量・透過率）、RF
+                0.95/0.97、Fick 0.95/0.82、MLR
+                0.46/0.65；feature-importanceの定性的傾向</td>
+                <td>Yuan和訳、<code>research/CLAUDE.md</code></td>
+                </tr>
+                <tr>
+                <td>美容成分の準備データ</td>
+                <td>48成分、MW・LogP範囲内38、範囲外10、範囲内かつ実測済み4（Niacinamide、Urea、Salicylic
+                acid、Ethanol）、範囲内かつ未実測34</td>
+                <td><code>research/cosmetic_ingredients_descriptors.csv</code>,
+                <code>research/RESEARCH_PLAN.md</code></td>
+                </tr>
+                <tr>
+                <td>将来のbaselineの式</td>
+                <td><code>log Kp = -2.7 + 0.71·logP − 0.0061·MW</code></td>
+                <td><code>research/descriptors.py::potts_guy_baseline</code></td>
+                </tr>
+                </tbody>
+                </table>
+                <p><strong>明示的な除外</strong>:
+                <code>cosmetic_ingredients_descriptors.csv</code> の
+                <code>logKp_PottsGuy_baseline</code>
+                列にある48個の個別出力はallowlist外とする。これらは未検証の
+                決定論的式の出力であり、本稿の結果、予測値、表、図、または比較値として使用しない。
+                本プロジェクトが未実施のモデルについて、R²、RMSE、MAE、accuracy、AUC、SHAP値、
+                feature
+                importance順位、leave-one-drug-out結果、transfer-learning結果、applicability-domain
+                の性能値、または美容成分の予測log
+                Kpもallowlist外とする。</p>
+                <h3 id="事実と計画の仕分け">事実と計画の仕分け</h3>
+                <ul>
+                <li><strong>完了済み事実（過去形で記述可）</strong>:
+                フェーズ0、1、1.5の文献マップ構築、公開皮膚透過性
+                データの統合、Yuanデータの再現、PubChem由来の美容成分構造・記述子収集、
+                <code>compute_descriptors</code>／<code>potts_guy_baseline</code>／<code>check_applicability_domain</code>
+                を含む
+                記述子パイプラインの実装、MW・LogPによる初期スクリーニング。</li>
+                <li><strong>未実施の将来計画（<code>we propose</code> /
+                <code>future work will</code> でのみ記述）</strong>:
+                フェーズ2以降の
+                データキュレーション、EDA、Potts–Guy・MLR・RF・XGBoost・GPRの学習／比較、
+                leave-one-drug-out交差検証、transfer
+                learning、物理モデル併用データ拡張、SHAP解析、
+                美容成分への予測適用と実測比較。</li>
+                </ul>
+                <p><strong>執筆ルール</strong>: Yuan et
+                al. の数値は必ず「Yuan et
+                al. reported」と帰属させる。本研究の
+                既完了作業はデータ資産・再現・パイプラインの整備までであり、予測モデルの結果は報告しない。
+                ビルド前に、本文の数値、予測値の混入、Yuan値の帰属、未来形の一貫性を個別に再監査する。</p>
+                <h2
+                id="codex-gpt-5.6-terra-本文完成と捏造監査">2026-07-20:
+                Codex gpt-5.6-terra — 本文完成と捏造監査</h2>
+                <p><strong>作成した成果物</strong>:
+                英語のpaper.mdを完成させ、Title &amp;
+                Abstract、Introduction、 Related Work / Literature
+                Landscape、Research Gap、Completed Preliminary Work、
+                Proposed Methodology / Future Work、Anticipated
+                Contributions、Limitations、 Data &amp; Ethics
+                Statement、Referencesの順で構成した。本文は参考文献を除いて5,482語であり、
+                要件の4,000–6,500語に収まる。Figure 1とFigure
+                2はresearch配下の既存PNGをそのまま 埋め込み、Figure
+                1bを8テーマカテゴリとしてキャプションに明記した。</p>
+                <h3 id="数値allowlist監査">数値allowlist監査</h3>
+                <p>本文のReferences手前から数値トークンを抽出し、section番号・引用番号を除いて手作業で
+                allowlistと照合した。文献マップ、テーマ構成、データセット、Yuan既報値、美容成分のdomain
+                内訳、Potts–Guy式以外の実質的な数値は検出しなかった。YuanのR²、7特徴量、7:3分割は
+                すべてYuan et
+                al.の報告値として文脈内で帰属させた。書誌情報の年とDOIはReferences内の
+                メタデータに限定した。</p>
+                <h3 id="捏造監査パス">捏造監査パス</h3>
+                <ul>
+                <li><strong>(i) 数値の出所</strong>:
+                本文中の実質的な数値は上記allowlistに一致することを確認した。</li>
+                <li><strong>(ii) 未実施モデルの結果</strong>:
+                本プロジェクトのR²、RMSE、MAE、accuracy、AUC、SHAP値、
+                feature-importance順位、leave-one-drug-out結果、transfer-learning結果、または
+                applicability-domain性能値は記載していない。</li>
+                <li><strong>(iii) 美容成分の数値予測</strong>:
+                logKp_PottsGuy_baseline列の個別出力、その他のper-compound
+                予測値、予測散布図、予測表は記載していない。Potts–Guyは式と将来のbaseline計画のみである。</li>
+                <li><strong>(iv) Yuan値の帰属</strong>: Yuan et
+                al.の性能値・特徴量傾向・定性的なexcluded-drug checkを、
+                すべて先行研究の記載として扱った。本研究が再計算したとの文言はない。</li>
+                <li><strong>(v) 時制</strong>:
+                データ資産・文献マップ・再現・記述子準備は完了済みとして記述し、データ
+                キュレーション以降、モデル構築、検証、転移、増強、解釈、化粧品への適用はfuture
+                work またはproposalの語彙に限定した。</li>
+                </ul>
+                <p><strong>引用照合</strong>:
+                Yuan、Roberts、Lundborg、Rezapour SarabiのDOIは
+                microneedle_ml_literature.csvに照合した。Zheng、Xu、Achar
+                &amp; Keith、Dou/Zhu/Merkurjevの
+                DOIと、HuskinDB、SkinPiX、統合QSPRデータセットのDOIはCLAUDE.mdに照合した。実在確認
+                できない文献や新規DOIは追加していない。</p>
+                <h3
+                id="requirements.md-10-の自己採点html-build前">requirements.md
+                §10 の自己採点（HTML build前）</h3>
+                <ul class="task-list">
+                <li><label><input type="checkbox"
+                checked="" />paper.mdに英語の本文と指定章立てがある。</label></li>
+                <li><label><input type="checkbox"
+                checked="" />フェーズ2以降を未実施の計画として明示し、未実行モデルの数値結果を載せていない。</label></li>
+                <li><label><input type="checkbox"
+                checked="" />Yuanの既報値は先行研究の値として明示した。</label></li>
+                <li><label><input type="checkbox"
+                checked="" />未検証のPotts–Guy個別出力や美容成分の予測値を掲載していない。</label></li>
+                <li><label><input type="checkbox"
+                checked="" />モデリング・記述子・依存関係の実行を行っていない。</label></li>
+                <li><label><input type="checkbox"
+                checked="" />引用のDOIを指定ソースと照合した。</label></li>
+                <li><label><input type="checkbox" checked="" />Figure
+                1・Figure
+                2を正しい出典・キャプションで埋め込んだ。</label></li>
+                <li><label><input type="checkbox"
+                checked="" />116、214、191、48、38/10、および34の関係を根拠どおりに記述した。</label></li>
+                <li><label><input
+                type="checkbox" />同名HTMLの生成と全Markdownリンク検証は、最終のbuild-website.sh実行後に更新する。</label></li>
+                <li><label><input type="checkbox"
+                checked="" />4段パイプラインと主要判断を本decision
+                logに記録した。</label></li>
+                </ul>
+                <h2
+                id="codex-gpt-5.6-terra-html-buildの結果と既存ブロッカー">2026-07-20:
+                Codex gpt-5.6-terra — HTML
+                buildの結果と既存ブロッカー</h2>
+                <p><strong>実施</strong>:
+                shared/scripts/build-website.sh
+                を実行した。ビルドはpaper.html、README.html、
+                notes/decision-log.html、requirements.html、implementation-prompt.htmlを含む当該モジュールの
+                HTMLを生成した。したがって、今回更新したMarkdown正本には対応HTMLが存在する。</p>
+                <p><strong>停止した検証</strong>:
+                最後の全Markdownリンク検証で、research/CLAUDE.mdの先頭本文行が
+                HTMLリンクではないことにより停止した。検出された内容は次のとおりである。</p>
+                <pre><code>Invalid HTML link in microneedle-drug-delivery/research/CLAUDE.md
+  expected first body line: [HTML版を開く](CLAUDE.html)
+  actual first body line:   # プロジェクト: Small-data MLによるマイクロニードル薬物送達予測の改良と美容成分への応用</code></pre>
+                <p>このファイルは今回の執筆対象ではなく、今回の変更以前から先頭リンクがない既存の状態である。
+                実行用指示文の停止条件に従い、無関係な既存ファイルは修正しない。次ステージでは、必要なら
+                この既存Markdownリンクを別途是正したうえで、リポジトリ全体のvalidatorを成功させられる。</p>
+                <h3
+                id="requirements.md-10-の自己採点build後">requirements.md
+                §10 の自己採点（build後）</h3>
+                <ul class="task-list">
+                <li><label><input type="checkbox"
+                checked="" />paper.mdに英語の本文と指定章立てがある。</label></li>
+                <li><label><input type="checkbox"
+                checked="" />フェーズ2以降を未実施の計画として明示し、未実行モデルの数値結果を載せていない。</label></li>
+                <li><label><input type="checkbox"
+                checked="" />Yuanの既報値は先行研究の値として明示した。</label></li>
+                <li><label><input type="checkbox"
+                checked="" />未検証のPotts–Guy個別出力や美容成分の予測値を掲載していない。</label></li>
+                <li><label><input type="checkbox"
+                checked="" />モデリング・記述子・依存関係の実行を行っていない。</label></li>
+                <li><label><input type="checkbox"
+                checked="" />引用のDOIを指定ソースと照合した。</label></li>
+                <li><label><input type="checkbox" checked="" />Figure
+                1・Figure
+                2を正しい出典・キャプションで埋め込んだ。</label></li>
+                <li><label><input type="checkbox"
+                checked="" />116、214、191、48、38/10、および34の関係を根拠どおりに記述した。</label></li>
+                <li><label><input type="checkbox"
+                checked="" />今回の全Markdownは同名HTMLへの先頭リンクを持ち、対応HTMLが生成された。</label></li>
+                <li><label><input
+                type="checkbox" />shared/scripts/build-website.shのリポジトリ全体の成功は、上記の既存research/CLAUDE.mdリンク不備のため未達。</label></li>
+                <li><label><input type="checkbox"
+                checked="" />4段パイプラインと主要判断を本decision
+                logに記録した。</label></li>
+                </ul>
+              </article>
+    </main>
+
+    <aside class="reading-gauge" aria-hidden="true">
+      <p>READING DEPTH</p>
+      <div class="gauge-scale">
+        <span>00</span>
+        <span>25</span>
+        <span>50</span>
+        <span>75</span>
+        <span>100</span>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="document-footer">
+    <div>
+      <strong>BiG Lab Research Library</strong>
+      <p>Markdown is canonical. HTML is the synchronized reading view.</p>
+    </div>
+    <div class="document-footer-links">
+      <a href="../../../shared/website/index.html">資料一覧へ戻る</a>
+      <a href="decision-log.md">Markdownを開く</a>
+    </div>
+  </footer>
+</body>
+</html>
