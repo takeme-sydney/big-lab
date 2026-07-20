@@ -128,6 +128,27 @@ small-data-ml-paper」に関するMarkdown正本のHTML閲覧版。</p>
         id="toc-requirements.md-10-の自己採点build後">requirements.md
         §10 の自己採点（build後）</a></li>
         </ul></li>
+        <li><a
+        href="#codex-gpt-5.6-sol-一次資料からの独立再検証と最終仕上げ"
+        id="toc-codex-gpt-5.6-sol-一次資料からの独立再検証と最終仕上げ">2026-07-20:
+        Codex gpt-5.6-sol — 一次資料からの独立再検証と最終仕上げ</a>
+        <ul>
+        <li><a href="#独立再導出した数値allowlist"
+        id="toc-独立再導出した数値allowlist">独立再導出した数値allowlist</a></li>
+        <li><a href="#一次資料内で発見した不整合"
+        id="toc-一次資料内で発見した不整合">一次資料内で発見した不整合</a></li>
+        <li><a href="#paper.mdの数値捻造引用監査"
+        id="toc-paper.mdの数値捻造引用監査">paper.mdの数値・捻造・引用監査</a></li>
+        <li><a href="#論文に直接加えた修正"
+        id="toc-論文に直接加えた修正">論文に直接加えた修正</a></li>
+        <li><a href="#プローズ分量文書整合"
+        id="toc-プローズ分量文書整合">プローズ・分量・文書整合</a></li>
+        <li><a href="#html-build最終結果"
+        id="toc-html-build最終結果">HTML build最終結果</a></li>
+        <li><a href="#requirements.md-10-最終自己採点"
+        id="toc-requirements.md-10-最終自己採点">requirements.md §10
+        最終自己採点</a></li>
+        </ul></li>
         </ul></li>
         </ul>
       </nav>
@@ -263,8 +284,11 @@ small-data-ml-paper」に関するMarkdown正本のHTML閲覧版。</p>
                 は「高分子量脂質」と表現するが、
                 CSV確認では大半が極端なLogP(高親油:
                 squalane/tocopherol/CoQ10、高親水: ascorbyl phosphate類)
-                による範囲外で、MW超過は4件のみ。paper
-                では「訓練化学空間(MW・LogP)の外」と書くよう §8-4
+                による範囲外である。<code>in_MW_domain=False</code>
+                は3件、<code>in_LogP_domain=False</code>
+                は8件、両方falseは1件で、 和集合が10件である。別指標の
+                <code>large_molecule_flag=True</code>(MW&gt;500)は6件である。paper
+                では 「訓練化学空間(MW・LogP)の外」と書くよう §8-4
                 に注記。</p>
                 <h2
                 id="このセクションは各ステージ完了時に追記される">(このセクションは各ステージ完了時に追記される)</h2>
@@ -513,6 +537,236 @@ small-data-ml-paper」に関するMarkdown正本のHTML閲覧版。</p>
                 checked="" />4段パイプラインと主要判断を本decision
                 logに記録した。</label></li>
                 </ul>
+                <h2
+                id="codex-gpt-5.6-sol-一次資料からの独立再検証と最終仕上げ">2026-07-20:
+                Codex gpt-5.6-sol —
+                一次資料からの独立再検証と最終仕上げ</h2>
+                <p><strong>実施原則</strong>:
+                上記terra段階のallowlistと自己監査は証拠として使わず、比較対象として隔離した。
+                <code>RESEARCH_PLAN.md</code>、<code>CLAUDE.md</code>、<code>literature_map_report.md</code>、指定5
+                CSV、<code>descriptors.py</code>、両PNGの実物、 Yuan et
+                al. (2023)日本語訳を改めて読み、raw
+                row・flag・DOI・図中値から独立に再構成した。
+                <code>descriptors.py</code>、Python/R、RDKit、XGBoost、scikit-learn、SHAP、記述子計算、モデル学習、
+                予測生成は実行していない。行・flagの検査に限定したread-only
+                CLIとCSVパースを用い、 実行したリポジトリ内スクリプトは
+                <code>shared/scripts/build-website.sh</code>
+                系のみである。</p>
+                <h3
+                id="独立再導出した数値allowlist">独立再導出した数値allowlist</h3>
+                <table>
+                <colgroup>
+                <col style="width: 33%" />
+                <col style="width: 33%" />
+                <col style="width: 33%" />
+                </colgroup>
+                <thead>
+                <tr>
+                <th>用途</th>
+                <th>允許値</th>
+                <th>独立の根拠</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td>文献コーパス</td>
+                <td>990候補→116件、2015–2026、2024/2025/partial-2026は16/22/30件、2024以降68/116=58.6%→報告値59%</td>
+                <td><code>literature_map_report.md</code>、literature
+                CSV 116 rows、Figure 1a</td>
+                </tr>
+                <tr>
+                <td>Figure 1bテーマ</td>
+                <td>48 / 18 / 17 / 14 / 8 / 7 / 3 / 1 =
+                116、8カテゴリ</td>
+                <td>literature CSVの <code>theme</code>、Figure 1b</td>
+                </tr>
+                <tr>
+                <td>Figure 2a被引用上位</td>
+                <td>196 / 123 / 111 / 93 / 76 / 74 / 73 / 69 / 63 / 58 /
+                51 / 49</td>
+                <td>literature CSVの <code>citations</code>、Figure
+                2a</td>
+                </tr>
+                <tr>
+                <td>Figure 2b手法</td>
+                <td>25 / 21 / 19 / 15 / 10 / 8 / 8 / 6 / 2 / 2</td>
+                <td>Figure 2bの集約カテゴリ</td>
+                </tr>
+                <tr>
+                <td>皮膚透過性資源</td>
+                <td>214 unique。HuskinDB-only 108 + SkinPiX-only 82 +
+                両方 21 + INRS 3。従ってsource contributionは129 / 103 /
+                3</td>
+                <td><code>skin_permeability_training_set.csv</code> 214
+                rowsと <code>sources</code></td>
+                </tr>
+                <tr>
+                <td>Yuanデータ</td>
+                <td>191点・6薬剤: lidocaine 73 / BSA 33 / copper ions 24
+                / GHK peptide 24 / Rhodamine B 19 / caffeine 18</td>
+                <td>両Yuan CSVの191 rowsと <code>Drug name</code></td>
+                </tr>
+                <tr>
+                <td>Yuan既報値のみ</td>
+                <td>7特徴量、7:3 random split、XGBoost R² 0.98/0.98、RF
+                0.95/0.97、Fick 0.95/0.82、MLR
+                0.46/0.65、feature-importanceの定性的傾向</td>
+                <td>Yuan日本語訳 §2.8・表4・§3.5・§4.2</td>
+                </tr>
+                <tr>
+                <td>美容成分</td>
+                <td>48 rows、38 in both MW/LogP domains、10 out of
+                either、4 measured overlaps、34
+                in-domain/unmeasured</td>
+                <td>cosmetic CSVの両domain flagとtraining CSVとの
+                <code>canon_smiles</code> 一致</td>
+                </tr>
+                <tr>
+                <td>domain内訳の監査用値</td>
+                <td><code>in_MW_domain=False</code>
+                3、<code>in_LogP_domain=False</code> 8、両方false
+                1→和集合10。<code>large_molecule_flag=True</code>
+                は別指標で6</td>
+                <td><code>cosmetic_ingredients_descriptors.csv</code></td>
+                </tr>
+                <tr>
+                <td>Potts–Guy式</td>
+                <td>log Kp = -2.7 + 0.71·logP − 0.0061·MW</td>
+                <td><code>descriptors.py::potts_guy_baseline</code>
+                のソースコード読み取り</td>
+                </tr>
+                </tbody>
+                </table>
+                <h3
+                id="一次資料内で発見した不整合">一次資料内で発見した不整合</h3>
+                <ol type="1">
+                <li><strong>Yuan訳本文の薬剤別件数</strong>:
+                本文はRhodamine Bとcaffeineを各10点と記載するが、
+                その内訳は174点にしかならず、同文の総数191点と矛盾する。Data
+                S1由来の両CSVは19/18点で、
+                6薬剤の合計が191点になる。従ってpaperの19/18を維持し、訳本の10/10は内部矛盾と記録する。</li>
+                <li><strong>MW domain外数の先行監査ミス</strong>:
+                先行ステージの「MW超過4件」は誤り。元CSVで
+                <code>in_MW_domain=False</code> はCoenzyme
+                Q10、Madecassoside、Asiaticosideの3件である。MW&gt;500の
+                <code>large_molecule_flag=True</code>
+                6件との混同を防ぐため、<code>requirements.md</code>
+                §8-4と本logの先行記述を修正した。</li>
+                </ol>
+                <h3
+                id="paper.mdの数値捻造引用監査">paper.mdの数値・捻造・引用監査</h3>
+                <ul>
+                <li><strong>全数値</strong>:
+                References前の数値を行ごとに再抽出し、上記allowlistと照合した。支持不能な数値は0件。</li>
+                <li><strong>モデル成果</strong>:
+                本プロジェクトのR²、RMSE、MAE、accuracy、AUC、SHAP値、feature-importance数値・順位、
+                leave-one-drug-out、transfer
+                learning、美容成分予測の結果は0件。R²数値はYuan et
+                al.の既報値のみで、
+                直後に本プロジェクトの結果ではないと明記している。</li>
+                <li><strong>Potts–Guy漏洩</strong>:
+                <code>logKp_PottsGuy_baseline</code>
+                の48個別値について、完全文字列一致は0件。
+                成分別表・散布図・予測主張も0件。式と将来baseline計画のみである。</li>
+                <li><strong>DOI</strong>: References
+                11件を1件ずつ独立照合し、11/11件が
+                <code>CLAUDE.md</code> または
+                <code>microneedle_ml_literature.csv</code>
+                と完全一致。存在しないDOI、孤立引用、未引用参考文献は0件。</li>
+                <li><strong>時制</strong>:
+                <code>we found</code>、<code>we show</code>、未実施modelの
+                <code>our results</code>に相当する完了表現は0件。
+                フェーズ2以降はproposal/future/conditionalの語彙で統一した。</li>
+                </ul>
+                <h3 id="論文に直接加えた修正">論文に直接加えた修正</h3>
+                <ol type="1">
+                <li>214 uniqueの算術を明確化し、HuskinDB-only
+                108、SkinPiX-only 82、両方21、INRS 3から source
+                contribution 129/103/3とunique
+                214を追跡できる文にした。</li>
+                <li>4つの実測済み美容成分を「直接検証」と無条件に呼ぶデータ漏洩リスクを修正した。
+                intact-skin log
+                Kpで全前処理・学習・モデル選択から除外した場合のみout-of-sample検証とし、
+                それ以外はmeasured comparator、microneedle-treated
+                cumulative permeationの検証には使えないと明記した。</li>
+                <li>leave-one-drug-out
+                transferの主解析で、保留薬剤と同一のsource-domainレコードをpretrainingと
+                source-derived
+                preprocessingからも除外する規則を追加した。既知のintact-skin実測値を利用する場合は
+                別のauxiliary analysisとし、unseen-chemistry
+                generalizationと呼ばない。</li>
+                <li>Figure
+                1の説明を査読原稿向けに整理し、5主要クラスタと3小カテゴリ、図の8カテゴリを自然に接続した。
+                Referencesの最初出現も[1,
+                2]とし、数字引用の登場順を整えた。</li>
+                <li>Yuanデータ再現を「訓練済みモデルの再現」と読まれない表現に改め、anticipated
+                contributionsを conditionalな語気に統一した。</li>
+                </ol>
+                <h3
+                id="プローズ分量文書整合">プローズ・分量・文書整合</h3>
+                <ul>
+                <li>完成済み資産→研究gap→一般化を反証可能にする段階的protocol→条件付きの貢献と限界、という
+                Perspectiveの論旨を通読し、章間のendpointと時制を統一した。</li>
+                <li>References前で <code>awk</code> により区切り
+                <code>wc -w</code> で数えた最終文量は
+                <strong>5,558語</strong>(タイトル、見出し、
+                keywords、図キャプションを含み、Referencesを除外)で、NF-01の4,000–6,500語に収まる。</li>
+                <li>READMEの旧build
+                blocker記述を現状に合わせて更新した。先行ステージの
+                <code>research/CLAUDE.md</code>
+                先頭リンク不備は解消済みで、本ステージのbuildは成功した。</li>
+                </ul>
+                <h3 id="html-build最終結果">HTML build最終結果</h3>
+                <p><code>shared/scripts/build-website.sh</code>
+                をリポジトリrootから実行し、当モジュールの
+                <code>paper.html</code>、<code>README.html</code>、<code>requirements.html</code>、<code>implementation-prompt.html</code>、
+                <code>notes/decision-log.html</code>
+                を再生成した。エラーなく完走し、最終行に以下を確認した。</p>
+                <pre><code>Validated Markdown-to-HTML links.
+Generated and validated all Markdown-backed HTML documents.</code></pre>
+                <p>先行段階で報告された無関係のblockerは再発せず、今回のモジュール内エラーもなかった。</p>
+                <h3 id="requirements.md-10-最終自己採点">requirements.md
+                §10 最終自己採点</h3>
+                <ul class="task-list">
+                <li><label><input type="checkbox"
+                checked="" /><strong>1/11</strong> <code>paper.md</code>
+                が存在し、指定の10章構成をすべて含む。</label></li>
+                <li><label><input type="checkbox"
+                checked="" /><strong>2/11</strong>
+                フェーズ2以降は未実施の計画で、本研究モデルの具体的成果値を含まない。</label></li>
+                <li><label><input type="checkbox"
+                checked="" /><strong>3/11</strong> Yuan
+                (2023)の既報値は先行研究の値と明記し、本研究と混同しない。</label></li>
+                <li><label><input type="checkbox"
+                checked="" /><strong>4/11</strong>
+                <code>logKp_PottsGuy_baseline</code>
+                の48個別値、予測表、予測散布図、その他予測値は未掲載。</label></li>
+                <li><label><input type="checkbox"
+                checked="" /><strong>5/11</strong>
+                モデリング・記述子・予測コードは実行せず、リポジトリ内で実行したスクリプトはbuild系のみ。</label></li>
+                <li><label><input type="checkbox"
+                checked="" /><strong>6/11</strong>
+                Referencesは11/11件が許可ソースに存在し、DOIが完全一致する。</label></li>
+                <li><label><input type="checkbox"
+                checked="" /><strong>7/11</strong> Figure
+                1・2は実データPNGを埋め込み、出典を明記し、Figure
+                1bは8カテゴリと正確に記述する。</label></li>
+                <li><label><input type="checkbox"
+                checked="" /><strong>8/11</strong>
+                116、214、191、48、38/10、34とその内訳をraw
+                fileに対して再照合済み。</label></li>
+                <li><label><input type="checkbox"
+                checked="" /><strong>9/11</strong>
+                対象Markdownの先頭本文行に同名HTMLリンクがあり、リンク先が存在する。</label></li>
+                <li><label><input type="checkbox"
+                checked="" /><strong>10/11</strong>
+                <code>shared/scripts/build-website.sh</code>
+                がエラーなく完走し、Markdown-to-HTMLリンク検証に成功した。</label></li>
+                <li><label><input type="checkbox"
+                checked="" /><strong>11/11</strong>
+                sonnet→fable→codex-terra→codex-solの4段パイプライン、主要判断、独立allowlist、最終監査を本記録に収録した。</label></li>
+                </ul>
+                <p><strong>最終スコア: 11/11 (全項目適合)</strong></p>
               </article>
     </main>
 

@@ -244,9 +244,9 @@ Proposal」に関するMarkdown正本のHTML閲覧版。</p>
                 barrier to one also shaped by device geometry,
                 insertion, loading, skin type, and the time course of
                 exposure. This makes microneedles relevant to a broad
-                range of therapeutic materials and design strategies,
-                while also making their performance difficult to infer
-                from any single experimental factor. Comprehensive
+                range of therapeutic materials and design strategies [1,
+                2], while also making their performance difficult to
+                infer from any single experimental factor. Comprehensive
                 accounts of microneedle biomedical devices emphasize the
                 breadth of the engineering and translational design
                 space that must be reconciled for successful use
@@ -353,9 +353,9 @@ Proposal」に関するMarkdown正本のHTML閲覧版。</p>
                 project. Panel (a) shows stacked annual publication
                 counts across 2015–2026; the 2026 bar is partial. Panel
                 (b) shows the thematic composition of the curated corpus
-                (n=116) across eight theme categories, not five
-                clusters. Source: research/fig1_landscape.png, derived
-                from research/literature_map_report.md.</em></p>
+                (n=116) across all eight theme categories. Source:
+                research/fig1_landscape.png, derived from
+                research/literature_map_report.md.</em></p>
                 <p>The largest category is skin-permeability QSAR/ML,
                 with 48 papers. It provides the longest-standing
                 computational tradition in the map: learning or
@@ -364,13 +364,12 @@ Proposal」に関するMarkdown正本のHTML閲覧版。</p>
                 contributes 18 papers, and direct microneedle ML
                 permeation contributes 17. Molecular-dynamics studies of
                 skin account for 14 papers, and microneedle design or
-                finite-element modeling contributes 8. The remaining
-                categories are nanoparticle dermal ML, reviews or
-                perspectives, and physical-enhancement modeling. It is
-                useful to describe the first five as major thematic
-                clusters; it would be misleading to describe Figure 1b
-                that way because the displayed bar chart contains all
-                eight categories.</p>
+                finite-element modeling contributes 8. These first five
+                constitute the major thematic clusters. Three smaller
+                categories cover nanoparticle dermal ML (7 papers),
+                reviews or perspectives (3), and physical-enhancement
+                modeling (1), so Figure 1b displays eight categories in
+                total.</p>
                 <p>This composition highlights both continuity and
                 fragmentation. Intact-skin QSAR offers a large
                 molecular-information base, while microneedle work
@@ -532,16 +531,17 @@ Proposal」に関するMarkdown正本のHTML閲覧版。</p>
                 Unified measured skin-permeability resource</h3>
                 <p>We assembled a training resource of 214 unique
                 compounds with measured skin permeability, standardized
-                to log Kp in cm/h. The resource combines 129 HuskinDB
-                entries, 103 SkinPiX entries, and 3 additional INRS
-                entries before duplicate removal. Canonical SMILES, a
-                measured permeability endpoint, measurement counts,
-                source labels, and molecular descriptors are retained in
-                the compiled file. The available descriptors include
-                molecular weight, lipophilicity, polar surface area,
-                hydrogen-bond counts, rotatable bonds, ring measures,
-                carbon hybridization fraction, molar refractivity, and
-                heteroatom count.</p>
+                to log Kp in cm/h. Its source contributions comprise 129
+                HuskinDB records, 103 SkinPiX records, and 3 additional
+                INRS records; reconciling 21 compounds shared by
+                HuskinDB and SkinPiX yields the 214 unique-compound
+                table. Canonical SMILES, a measured permeability
+                endpoint, measurement counts, source labels, and
+                molecular descriptors are retained in the compiled file.
+                The available descriptors include molecular weight,
+                lipophilicity, polar surface area, hydrogen-bond counts,
+                rotatable bonds, ring measures, carbon hybridization
+                fraction, molar refractivity, and heteroatom count.</p>
                 <p>This data set is a completed research asset, not
                 evidence that a project model has already learned a
                 reliable skin-permeability relationship. It has not been
@@ -576,8 +576,9 @@ Proposal」に関するMarkdown正本のHTML閲覧版。</p>
                 methodological choice: a convenient numeric encoding is
                 not a justification for claiming chemical comparability.
                 The reproduction preserves the original data structure
-                for future validation design; it does not reproduce Yuan
-                et al.’s trained models or their performance values.</p>
+                for future validation design; it does not retrain Yuan
+                et al.’s models or computationally reproduce their
+                performance estimates.</p>
                 <h3
                 id="cosmetic-ingredient-structures-and-initial-domain-screen">5.4
                 Cosmetic-ingredient structures and initial domain
@@ -591,9 +592,13 @@ Proposal」に関するMarkdown正本のHTML閲覧版。</p>
                 application study, not an output set of permeation
                 predictions. Four ingredients—Niacinamide, Urea,
                 Salicylic acid, and Ethanol—already have measured
-                entries in the 214-compound resource. They provide a
-                valuable future opportunity for direct evaluation
-                without reclassifying a known value as a prediction.</p>
+                entries in the 214-compound resource. In future
+                intact-skin log Kp modeling, they can serve as measured
+                comparators or, if their records are excluded from every
+                preprocessing, fitting, and model-selection step, as
+                out-of-sample evaluation cases. These measurements
+                cannot directly validate cumulative permeation through
+                microneedle-treated skin.</p>
                 <p>An initial molecular-domain screen based on the
                 measured resource’s molecular-weight and lipophilicity
                 ranges places 38 of the 48 ingredients within both
@@ -791,15 +796,19 @@ Proposal」に関するMarkdown正本のHTML閲覧版。</p>
                 selected conclusions.</p>
                 <p>To prevent data leakage, the held-out drug in a
                 leave-one-drug-out fold will remain absent from all
-                target-domain fitting decisions. If a source-domain
-                molecule is chemically identical or directly linked to a
-                target payload, that relationship will be recorded and
-                handled according to a pre-specified rule. The study
-                will also compare transfer learning with a target-only
-                baseline. A transfer procedure that merely adds
-                complexity without improving the appropriate held-out
-                scenario will be rejected rather than retained for
-                narrative appeal.</p>
+                target-domain fitting decisions. In the primary
+                unseen-payload analysis, any source-domain record
+                chemically identical to that held-out payload will also
+                be excluded from pretraining and from preprocessing
+                learned on the source data. A separately labeled
+                auxiliary analysis may ask whether a legitimately
+                available intact-skin measurement helps predict
+                microneedle permeation, but it will not be described as
+                unseen-chemistry generalization. The study will also
+                compare transfer learning with a target-only baseline. A
+                transfer procedure that merely adds complexity without
+                improving the appropriate held-out scenario will be
+                rejected rather than retained for narrative appeal.</p>
                 <h3
                 id="stage-d-physics-informed-augmentation-with-provenance-controls">6.5
                 Stage D: physics-informed augmentation with provenance
@@ -874,12 +883,15 @@ Proposal」に関するMarkdown正本のHTML閲覧版。</p>
                 workflow begins with identity and descriptor checks,
                 followed by the existing molecular-domain screen. The
                 four ingredients already represented in the measured
-                214-compound resource will serve as direct evaluation
-                cases; they will not be advertised as newly predicted
-                compounds. The 34 in-domain but unmeasured candidates
-                may be considered for future model application, provided
-                their predictions are accompanied by domain status and
-                uncertainty information.</p>
+                214-compound resource will be treated as measured
+                comparators, or as held-out evaluation cases for
+                intact-skin log Kp only under the full-exclusion rule
+                above; they will not be advertised as newly predicted
+                compounds or used to validate microneedle-treated
+                cumulative permeation. The 34 in-domain but unmeasured
+                candidates may be considered for future model
+                application, provided their predictions are accompanied
+                by domain status and uncertainty information.</p>
                 <p>The 10 ingredients outside the current
                 molecular-weight/logP space will remain quarantined from
                 any decision-oriented ranking unless new evidence
@@ -907,19 +919,19 @@ Proposal」に関するMarkdown正本のHTML閲覧版。</p>
                 stringent account of small-data generalization for
                 microneedle permeation by making unseen-payload
                 performance a primary evaluation question. That
-                contribution is valuable even if the initial models
-                fail: a well-documented failure can show whether the
-                missing ingredient is chemical diversity, device
-                diversity, endpoint alignment, or representation
-                quality.</p>
+                contribution would remain valuable even if the initial
+                models fail: a well-documented failure could help
+                identify whether limitations arise from chemical
+                diversity, device diversity, endpoint alignment, or
+                representation quality.</p>
                 <p>Second, the work would establish an auditable bridge
                 between intact-skin permeability QSAR and
                 microneedle-specific permeation modeling. The bridge is
-                deliberately conditional. It tests whether molecular
-                information learned from measured log Kp data is useful
-                once microneedle and experimental variables are
-                introduced, rather than assuming that data volume alone
-                confers transferability.</p>
+                deliberately conditional. It would test whether
+                molecular information learned from measured log Kp data
+                is useful once microneedle and experimental variables
+                are introduced, rather than assuming that data volume
+                alone confers transferability.</p>
                 <p>Third, the proposal would create a transparent basis
                 for physics–ML comparison. Separating empirical from
                 simulated inputs, preserving provenance, and evaluating
@@ -963,12 +975,14 @@ Proposal」に関するMarkdown正本のHTML閲覧版。</p>
                 limits. It contains structures and descriptors, but most
                 ingredients lack matched measured permeability values in
                 the compiled training set. The four measured overlaps
-                are useful for future direct checks, yet they are not
-                enough to validate a broad cosmetic claim. In addition,
-                the 10 ingredients outside the initial
-                molecular-weight/logP domain include chemically
-                different reasons for being out of range. A single
-                extrapolation rule would conceal that diversity.</p>
+                can support the qualified intact-skin checks described
+                above, but they cannot validate microneedle-treated
+                permeation and are not enough to support a broad
+                cosmetic claim. In addition, the 10 ingredients outside
+                the initial molecular-weight/logP domain include
+                chemically different reasons for being out of range. A
+                single extrapolation rule would conceal that
+                diversity.</p>
                 <p>The literature map is a structured, useful survey but
                 not a systematic review with exhaustive database
                 coverage. Its labels were assigned from
@@ -1018,7 +1032,7 @@ Proposal」に関するMarkdown正本のHTML閲覧版。</p>
                 <li>Yuan Y, Han Y, Yap CW, et al. Prediction of drug
                 permeation through microneedled skin by machine
                 learning. <em>Bioengineering &amp; Translational
-                Medicine</em>. 2023;8:e10512.
+                Medicine</em>. 2023;8(6):e10512.
                 doi:10.1002/btm2.10512.</li>
                 <li>Zheng et al. Microneedle biomedical devices.
                 <em>Nature Reviews Bioengineering</em>. 2023.

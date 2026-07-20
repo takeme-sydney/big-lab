@@ -49,7 +49,7 @@
    - Yuan et al. (2023) 訓練データの完全再現(PMC10658566 Data S1より191点・6薬剤: lidocaine 73, BSA 33, copper ions 24, GHK peptide 24, Rhodamine B 19, caffeine 18)
    - 美容成分48件の構造・記述子取得(PubChem由来、RDKit記述子計算)
    - 分子記述子計算パイプライン(`descriptors.py`)とPotts–Guy baseline式の実装
-   - 化学空間(MW・LogP)によるapplicability domainの初期スクリーニング: **48件中38件が範囲内、10件が範囲外**。範囲内38件のうち4件(Niacinamide, Urea, Salicylic acid, Ethanol)は既に214化合物訓練セットに実測値があり直接検証に使える → 差し引き**34件が「範囲内かつ未実測」の新規予測候補**。(注: 元CSVの `in_MW_domain`/`in_LogP_domain` 両方 true が38件。34ではなく38が「範囲内」の正しい総数。)
+   - 化学空間(MW・LogP)によるapplicability domainの初期スクリーニング: **48件中38件が範囲内、10件が範囲外**。範囲内38件のうち4件(Niacinamide, Urea, Salicylic acid, Ethanol)は既に214化合物訓練セットに実測値がある。これらは実測comparatorとして使え、モデル開発の全工程から除外した場合に限りintact-skin log Kpの直接holdout検証に使える(マイクロニードル処理皮膚の累積透過を直接検証する値ではない)。差し引き**34件が「範囲内かつ未実測」の新規予測候補**。(注: 元CSVの `in_MW_domain`/`in_LogP_domain` 両方 true が38件。34ではなく38が「範囲内」の正しい総数。)
 6. **Proposed Methodology / Future Work(明示的に未実施と分かる書き方)** — RESEARCH_PLAN.mdフェーズ2〜6の内容(データキュレーション、4A/4Bモデル構築、leave-one-drug-out CV、transfer learning、物理モデルベースのデータ拡張、SHAP解釈、美容成分への適用)を計画として記述。
 7. **Anticipated Contributions** — この研究が実施された場合に期待される学術的貢献(小規模データの外挿性改善という一般的課題への寄与、化粧品応用への橋渡し)。
 8. **Limitations** — 6薬剤という検証薬剤数の少なさ、美容成分側の実測透過性データ欠如、単一ラボ・単一データセットへの依存、化学空間外10件の扱いなど。
@@ -99,7 +99,7 @@
 1. 完了済みフェーズ(0, 1, 1.5)の内容のみを「結果」として提示し、フェーズ2以降は「計画」として提示する。
 2. Yuan et al. (2023) の記述(手法、XGBoost R²=0.98、Discussion 4.2節の外挿限界)は**Yuanの報告値**として正確に引用し、誇張・改変せず、本研究の成果と取り違えない。
 3. 214化合物データセット、191点データセット、48件の美容成分データセットの件数・出典は元CSVと完全に一致させる(214 = HuskinDB 129 + SkinPiX 103 + INRS 3 の重複除去後; 191 = 6薬剤の合計; 48 = 美容成分)。
-4. 美容成分の化学空間適合性は**48件中38件がMW・LogP範囲内、10件が範囲外**(34ではない — 34は「範囲内かつ未実測」の内数)として事実報告してよいが、それに基づく「予測性能」は主張しない。範囲外10件を記述する場合は「高分子量脂質」と一括りにしない — 実際は大半が極端なLogP(squalane・tocopherol・CoQ10 のような高親油性、ascorbyl phosphate 類のような高親水性の両方)による範囲外で、MW超過は4件のみ。「訓練化学空間(MW・LogP)の外」とだけ書くのが安全。
+4. 美容成分の化学空間適合性は**48件中38件がMW・LogP範囲内、10件が範囲外**(34ではない — 34は「範囲内かつ未実測」の内数)として事実報告してよいが、それに基づく「予測性能」は主張しない。範囲外10件を記述する場合は「高分子量脂質」と一括りにしない — 実際は大半が極端なLogP(squalane・tocopherol・CoQ10 のような高親油性、ascorbyl phosphate 類のような高親水性の両方)による範囲外である。元CSVで `in_MW_domain=False` は3件(CoQ10、Madecassoside、Asiaticoside)、`in_LogP_domain=False` は8件、両方falseは1件で、和集合が10件である。別指標の `large_molecule_flag=True`(MW>500)は6件であり、MW domain外の件数と混同しない。「訓練化学空間(MW・LogP)の外」と書くのが安全。
 5. Potts–Guy baseline式(`descriptors.py::potts_guy_baseline`: log Kp = -2.7 + 0.71·logP − 0.0061·MW)の**式自体**の引用は可(公表式)。ただしこのbaselineを本データセット(美容成分・214化合物)に適用した**具体的な性能値や per-compound 予測値**は、実際に計算・検証していない限り記載しない。
 6. 図表に用いる数値はすべて添付CSV・既存PNGに実在する値のみとする。新規の表・図を推定値/目標値で作らない。
 7. **`cosmetic_ingredients_descriptors.csv` の `logKp_PottsGuy_baseline` 列は48行すべて数値入りだが、これは未検証の式出力であって本研究の「予測結果」ではない。**この48値を予測・成果として表・散布図・本文に転記しない(§3の捏造防止と同一趣旨)。descriptor 列(MW/LogP/TPSA等)は分子の物性値なので記述に使ってよいが、`logKp_PottsGuy_baseline` は結果として扱わない。

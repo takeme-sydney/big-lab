@@ -25,7 +25,7 @@
 - 既存の文献マップ図を根拠図として再利用し、Figure 1は8テーマカテゴリ、Figure 2は影響力と手法分布として明記する。
 - 美容成分の候補集合については、構造・記述子の準備状況と化学空間のスクリーニングのみを報告する。個別の予測log Kp値や未実行モデルの性能値は掲載しない。
 - notes/decision-log.md には、数値allowlist、完了事実と将来計画の仕分け、捏造監査、受入条件の自己採点を記録する。
-- paper.html、README.html、notes/decision-log.htmlは生成済みである。リポジトリ全体のリンク検証は、research/CLAUDE.mdに既存のHTML先頭リンクがないため停止しており、詳細はdecision logに記録する。
+- paper.html、README.html、notes/decision-log.html、requirements.html、implementation-prompt.htmlは生成済みである。`shared/scripts/build-website.sh` はリポジトリ全体でエラーなく完走し、`Validated Markdown-to-HTML links.` と `Generated and validated all Markdown-backed HTML documents.` を出力した。
 
 ## 執筆パイプライン
 

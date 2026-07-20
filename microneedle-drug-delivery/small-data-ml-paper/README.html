@@ -157,8 +157,11 @@ Paper」に関するMarkdown正本のHTML閲覧版。</p>
                 Kp値や未実行モデルの性能値は掲載しない。</li>
                 <li>notes/decision-log.md
                 には、数値allowlist、完了事実と将来計画の仕分け、捏造監査、受入条件の自己採点を記録する。</li>
-                <li>paper.html、README.html、notes/decision-log.htmlは生成済みである。リポジトリ全体のリンク検証は、research/CLAUDE.mdに既存のHTML先頭リンクがないため停止しており、詳細はdecision
-                logに記録する。</li>
+                <li>paper.html、README.html、notes/decision-log.html、requirements.html、implementation-prompt.htmlは生成済みである。<code>shared/scripts/build-website.sh</code>
+                はリポジトリ全体でエラーなく完走し、<code>Validated Markdown-to-HTML links.</code>
+                と
+                <code>Generated and validated all Markdown-backed HTML documents.</code>
+                を出力した。</li>
                 </ul>
                 <h2 id="執筆パイプライン">執筆パイプライン</h2>
                 <p>要件定義・指示文を1つの多段パイプラインで仕上げている(<code>notes/decision-log.md</code>

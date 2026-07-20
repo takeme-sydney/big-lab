@@ -294,9 +294,9 @@ Research-Proposal Paper」に関するMarkdown正本のHTML閲覧版。</p>
                 domainの初期スクリーニング:
                 <strong>48件中38件が範囲内、10件が範囲外</strong>。範囲内38件のうち4件(Niacinamide,
                 Urea, Salicylic acid,
-                Ethanol)は既に214化合物訓練セットに実測値があり直接検証に使える
-                →
-                差し引き<strong>34件が「範囲内かつ未実測」の新規予測候補</strong>。(注:
+                Ethanol)は既に214化合物訓練セットに実測値がある。これらは実測comparatorとして使え、モデル開発の全工程から除外した場合に限りintact-skin
+                log
+                Kpの直接holdout検証に使える(マイクロニードル処理皮膚の累積透過を直接検証する値ではない)。差し引き<strong>34件が「範囲内かつ未実測」の新規予測候補</strong>。(注:
                 元CSVの
                 <code>in_MW_domain</code>/<code>in_LogP_domain</code>
                 両方 true
@@ -478,7 +478,12 @@ Research-Proposal Paper」に関するMarkdown正本のHTML閲覧版。</p>
                 34は「範囲内かつ未実測」の内数)として事実報告してよいが、それに基づく「予測性能」は主張しない。範囲外10件を記述する場合は「高分子量脂質」と一括りにしない
                 — 実際は大半が極端なLogP(squalane・tocopherol・CoQ10
                 のような高親油性、ascorbyl phosphate
-                類のような高親水性の両方)による範囲外で、MW超過は4件のみ。「訓練化学空間(MW・LogP)の外」とだけ書くのが安全。</li>
+                類のような高親水性の両方)による範囲外である。元CSVで
+                <code>in_MW_domain=False</code>
+                は3件(CoQ10、Madecassoside、Asiaticoside)、<code>in_LogP_domain=False</code>
+                は8件、両方falseは1件で、和集合が10件である。別指標の
+                <code>large_molecule_flag=True</code>(MW&gt;500)は6件であり、MW
+                domain外の件数と混同しない。「訓練化学空間(MW・LogP)の外」と書くのが安全。</li>
                 <li>Potts–Guy
                 baseline式(<code>descriptors.py::potts_guy_baseline</code>:
                 log Kp = -2.7 + 0.71·logP −

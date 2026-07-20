@@ -75,7 +75,9 @@ Yuan 2023和訳)に対して逐一検証し、直接修正した。
 
 **判断の分かれ目**: 「範囲外10件」の性質。RESEARCH_PLAN.md は「高分子量脂質」と表現するが、
 CSV確認では大半が極端なLogP(高親油: squalane/tocopherol/CoQ10、高親水: ascorbyl phosphate類)
-による範囲外で、MW超過は4件のみ。paper では「訓練化学空間(MW・LogP)の外」と書くよう §8-4 に注記。
+による範囲外である。`in_MW_domain=False` は3件、`in_LogP_domain=False` は8件、両方falseは1件で、
+和集合が10件である。別指標の `large_molecule_flag=True`(MW>500)は6件である。paper では
+「訓練化学空間(MW・LogP)の外」と書くよう §8-4 に注記。
 
 ## (このセクションは各ステージ完了時に追記される)
 
@@ -206,3 +208,100 @@ HTMLリンクではないことにより停止した。検出された内容は�
 - [x] 今回の全Markdownは同名HTMLへの先頭リンクを持ち、対応HTMLが生成された。
 - [ ] shared/scripts/build-website.shのリポジトリ全体の成功は、上記の既存research/CLAUDE.mdリンク不備のため未達。
 - [x] 4段パイプラインと主要判断を本decision logに記録した。
+
+## 2026-07-20: Codex gpt-5.6-sol — 一次資料からの独立再検証と最終仕上げ
+
+**実施原則**: 上記terra段階のallowlistと自己監査は証拠として使わず、比較対象として隔離した。
+`RESEARCH_PLAN.md`、`CLAUDE.md`、`literature_map_report.md`、指定5 CSV、`descriptors.py`、両PNGの実物、
+Yuan et al. (2023)日本語訳を改めて読み、raw row・flag・DOI・図中値から独立に再構成した。
+`descriptors.py`、Python/R、RDKit、XGBoost、scikit-learn、SHAP、記述子計算、モデル学習、
+予測生成は実行していない。行・flagの検査に限定したread-only CLIとCSVパースを用い、
+実行したリポジトリ内スクリプトは `shared/scripts/build-website.sh` 系のみである。
+
+### 独立再導出した数値allowlist
+
+| 用途 | 允許値 | 独立の根拠 |
+| --- | --- | --- |
+| 文献コーパス | 990候補→116件、2015–2026、2024/2025/partial-2026は16/22/30件、2024以降68/116=58.6%→報告値59% | `literature_map_report.md`、literature CSV 116 rows、Figure 1a |
+| Figure 1bテーマ | 48 / 18 / 17 / 14 / 8 / 7 / 3 / 1 = 116、8カテゴリ | literature CSVの `theme`、Figure 1b |
+| Figure 2a被引用上位 | 196 / 123 / 111 / 93 / 76 / 74 / 73 / 69 / 63 / 58 / 51 / 49 | literature CSVの `citations`、Figure 2a |
+| Figure 2b手法 | 25 / 21 / 19 / 15 / 10 / 8 / 8 / 6 / 2 / 2 | Figure 2bの集約カテゴリ |
+| 皮膚透過性資源 | 214 unique。HuskinDB-only 108 + SkinPiX-only 82 + 両方 21 + INRS 3。従ってsource contributionは129 / 103 / 3 | `skin_permeability_training_set.csv` 214 rowsと `sources` |
+| Yuanデータ | 191点・6薬剤: lidocaine 73 / BSA 33 / copper ions 24 / GHK peptide 24 / Rhodamine B 19 / caffeine 18 | 両Yuan CSVの191 rowsと `Drug name` |
+| Yuan既報値のみ | 7特徴量、7:3 random split、XGBoost R² 0.98/0.98、RF 0.95/0.97、Fick 0.95/0.82、MLR 0.46/0.65、feature-importanceの定性的傾向 | Yuan日本語訳 §2.8・表4・§3.5・§4.2 |
+| 美容成分 | 48 rows、38 in both MW/LogP domains、10 out of either、4 measured overlaps、34 in-domain/unmeasured | cosmetic CSVの両domain flagとtraining CSVとの `canon_smiles` 一致 |
+| domain内訳の監査用値 | `in_MW_domain=False` 3、`in_LogP_domain=False` 8、両方false 1→和集合10。`large_molecule_flag=True` は別指標で6 | `cosmetic_ingredients_descriptors.csv` |
+| Potts–Guy式 | log Kp = -2.7 + 0.71·logP − 0.0061·MW | `descriptors.py::potts_guy_baseline` のソースコード読み取り |
+
+### 一次資料内で発見した不整合
+
+1. **Yuan訳本文の薬剤別件数**: 本文はRhodamine Bとcaffeineを各10点と記載するが、
+   その内訳は174点にしかならず、同文の総数191点と矛盾する。Data S1由来の両CSVは19/18点で、
+   6薬剤の合計が191点になる。従ってpaperの19/18を維持し、訳本の10/10は内部矛盾と記録する。
+2. **MW domain外数の先行監査ミス**: 先行ステージの「MW超過4件」は誤り。元CSVで
+   `in_MW_domain=False` はCoenzyme Q10、Madecassoside、Asiaticosideの3件である。MW>500の
+   `large_molecule_flag=True` 6件との混同を防ぐため、`requirements.md` §8-4と本logの先行記述を修正した。
+
+### paper.mdの数値・捻造・引用監査
+
+- **全数値**: References前の数値を行ごとに再抽出し、上記allowlistと照合した。支持不能な数値は0件。
+- **モデル成果**: 本プロジェクトのR²、RMSE、MAE、accuracy、AUC、SHAP値、feature-importance数値・順位、
+  leave-one-drug-out、transfer learning、美容成分予測の結果は0件。R²数値はYuan et al.の既報値のみで、
+  直後に本プロジェクトの結果ではないと明記している。
+- **Potts–Guy漏洩**: `logKp_PottsGuy_baseline` の48個別値について、完全文字列一致は0件。
+  成分別表・散布図・予測主張も0件。式と将来baseline計画のみである。
+- **DOI**: References 11件を1件ずつ独立照合し、11/11件が `CLAUDE.md` または
+  `microneedle_ml_literature.csv` と完全一致。存在しないDOI、孤立引用、未引用参考文献は0件。
+- **時制**: `we found`、`we show`、未実施modelの `our results`に相当する完了表現は0件。
+  フェーズ2以降はproposal/future/conditionalの語彙で統一した。
+
+### 論文に直接加えた修正
+
+1. 214 uniqueの算術を明確化し、HuskinDB-only 108、SkinPiX-only 82、両方21、INRS 3から
+   source contribution 129/103/3とunique 214を追跡できる文にした。
+2. 4つの実測済み美容成分を「直接検証」と無条件に呼ぶデータ漏洩リスクを修正した。
+   intact-skin log Kpで全前処理・学習・モデル選択から除外した場合のみout-of-sample検証とし、
+   それ以外はmeasured comparator、microneedle-treated cumulative permeationの検証には使えないと明記した。
+3. leave-one-drug-out transferの主解析で、保留薬剤と同一のsource-domainレコードをpretrainingと
+   source-derived preprocessingからも除外する規則を追加した。既知のintact-skin実測値を利用する場合は
+   別のauxiliary analysisとし、unseen-chemistry generalizationと呼ばない。
+4. Figure 1の説明を査読原稿向けに整理し、5主要クラスタと3小カテゴリ、図の8カテゴリを自然に接続した。
+   Referencesの最初出現も[1, 2]とし、数字引用の登場順を整えた。
+5. Yuanデータ再現を「訓練済みモデルの再現」と読まれない表現に改め、anticipated contributionsを
+   conditionalな語気に統一した。
+
+### プローズ・分量・文書整合
+
+- 完成済み資産→研究gap→一般化を反証可能にする段階的protocol→条件付きの貢献と限界、という
+  Perspectiveの論旨を通読し、章間のendpointと時制を統一した。
+- References前で `awk` により区切り `wc -w` で数えた最終文量は **5,558語**(タイトル、見出し、
+  keywords、図キャプションを含み、Referencesを除外)で、NF-01の4,000–6,500語に収まる。
+- READMEの旧build blocker記述を現状に合わせて更新した。先行ステージの
+  `research/CLAUDE.md` 先頭リンク不備は解消済みで、本ステージのbuildは成功した。
+
+### HTML build最終結果
+
+`shared/scripts/build-website.sh` をリポジトリrootから実行し、当モジュールの
+`paper.html`、`README.html`、`requirements.html`、`implementation-prompt.html`、
+`notes/decision-log.html` を再生成した。エラーなく完走し、最終行に以下を確認した。
+
+    Validated Markdown-to-HTML links.
+    Generated and validated all Markdown-backed HTML documents.
+
+先行段階で報告された無関係のblockerは再発せず、今回のモジュール内エラーもなかった。
+
+### requirements.md §10 最終自己採点
+
+- [x] **1/11** `paper.md` が存在し、指定の10章構成をすべて含む。
+- [x] **2/11** フェーズ2以降は未実施の計画で、本研究モデルの具体的成果値を含まない。
+- [x] **3/11** Yuan (2023)の既報値は先行研究の値と明記し、本研究と混同しない。
+- [x] **4/11** `logKp_PottsGuy_baseline` の48個別値、予測表、予測散布図、その他予測値は未掲載。
+- [x] **5/11** モデリング・記述子・予測コードは実行せず、リポジトリ内で実行したスクリプトはbuild系のみ。
+- [x] **6/11** Referencesは11/11件が許可ソースに存在し、DOIが完全一致する。
+- [x] **7/11** Figure 1・2は実データPNGを埋め込み、出典を明記し、Figure 1bは8カテゴリと正確に記述する。
+- [x] **8/11** 116、214、191、48、38/10、34とその内訳をraw fileに対して再照合済み。
+- [x] **9/11** 対象Markdownの先頭本文行に同名HTMLリンクがあり、リンク先が存在する。
+- [x] **10/11** `shared/scripts/build-website.sh` がエラーなく完走し、Markdown-to-HTMLリンク検証に成功した。
+- [x] **11/11** sonnet→fable→codex-terra→codex-solの4段パイプライン、主要判断、独立allowlist、最終監査を本記録に収録した。
+
+**最終スコア: 11/11 (全項目適合)**
