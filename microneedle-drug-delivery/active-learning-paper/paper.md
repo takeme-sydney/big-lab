@@ -272,12 +272,11 @@ results.
    drug permeation through microneedled skin by machine learning. *Bioeng
    Transl Med.* 2023;8(6):e10512. doi:10.1002/btm2.10512
 2. Zheng M, Sheng T, Yu J, Gu Z, Xu C. Microneedle biomedical devices. *Nat
-   Rev Bioeng.* 2024;2:324–342. doi:10.1038/s44222-023-00141-6
+   Rev Bioeng.* 2023. doi:10.1038/s44222-023-00141-6
 3. Xu P, Ji X, Li M, Lu W. Small data machine learning in materials science.
    *npj Comput Mater.* 2023;9:42. doi:10.1038/s41524-023-01000-z
 4. Achar SK, Keith JA. Small Data Machine Learning Approaches in Molecular
-   and Materials Science. *Chem Rev.* 2024;124(24):13571–13573.
-   doi:10.1021/acs.chemrev.4c00957
+   and Materials Science. *Chem Rev.* 2024. doi:10.1021/acs.chemrev.4c00957
 5. Dou B, Zhu Z, Merkurjev E, et al. Machine Learning Methods for Small Data
    Challenges in Molecular Science. *Chem Rev.* 2023;123(13):8736–8780.
    doi:10.1021/acs.chemrev.3c00189

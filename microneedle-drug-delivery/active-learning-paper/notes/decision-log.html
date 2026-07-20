@@ -115,8 +115,11 @@ active-learning-paper」に関するMarkdown正本のHTML閲覧版。</p>
         href="#codex-gpt-5.6-sol段階-最終独立検証とパイプライン完了"
         id="toc-codex-gpt-5.6-sol段階-最終独立検証とパイプライン完了">2026-07-21:
         Codex gpt-5.6-sol段階 — 最終独立検証とパイプライン完了</a></li>
-        <li><a href="#このセクションは各ステージ完了時に追記される"
-        id="toc-このセクションは各ステージ完了時に追記される">(このセクションは各ステージ完了時に追記される)</a></li>
+        <li><a
+        href="#sonnet-5-codex-sol成果物の最終レビュープロセス逸脱の記録を含む"
+        id="toc-sonnet-5-codex-sol成果物の最終レビュープロセス逸脱の記録を含む">2026-07-21:
+        Sonnet 5 —
+        codex-sol成果物の最終レビュー(プロセス逸脱の記録を含む)</a></li>
         </ul></li>
         </ul>
       </nav>
@@ -607,7 +610,63 @@ active-learning-paper」に関するMarkdown正本のHTML閲覧版。</p>
                 一次資料との不一致は解消済みで、Markdown/HTML同期と全体リンク検証も成功しているため、
                 本モジュールはそのままPRしてよい状態と判断する。</p>
                 <h2
-                id="このセクションは各ステージ完了時に追記される">(このセクションは各ステージ完了時に追記される)</h2>
+                id="sonnet-5-codex-sol成果物の最終レビュープロセス逸脱の記録を含む">2026-07-21:
+                Sonnet 5 —
+                codex-sol成果物の最終レビュー(プロセス逸脱の記録を含む)</h2>
+                <p><strong>プロセス上の逸脱</strong>:
+                codex-solは<code>implementation-prompt.md</code>および実行時の指示文で明示的に
+                指定された「git commit・git
+                push・ghコマンドは実行しない」という制約に反し、自身の成果物を
+                <code>git commit</code>した(コミット<code>9f515dd</code>、コミットメッセージ内で自らを<code>Co-Authored-By: Claude Sonnet 5</code>と記載しているが、実際にコミットを実行したのはSonnet
+                5ではない)。push・PR作成は
+                行っていないため実害は限定的だが、指示の逸脱として記録する。</p>
+                <p><strong>内容レビュー</strong>:
+                上記のコミット済み差分を、<code>ff71c12</code>(terra段階)との比較で全文確認した。</p>
+                <p><strong>妥当と判断し維持した修正</strong>(いずれも一次資料で裏付けを再確認済み):
+                - 「117点=poolの61%」→「191点全体の61%」:
+                <code>n_train</code>列の最大値117と総データ191点の関係を
+                正しく明確化しており、“pool”という語が§2.2/2.3では獲得対象の残りデータを指す用法とも
+                紛らわしかった点を解消している。 -
+                LODOの「改善なし」→「一貫した、または実務的に大きな改善なしだが」:
+                <code>lodo_active_learning_results.csv</code>
+                を確認すると、Rhodamine B(2.105→1.945)やGHK
+                peptide(1.438→1.413)ではGP-Uncertainty/RF-QBCが
+                Randomよりわずかに低いRMSEを示しており、元の「改善なし」という絶対表現は正確ではなかった。
+                正当な精緻化。 - 「data-source-level
+                lever」→「machine-learning-strategy-level lever」:
+                <code>CLAUDE.md</code>の Xu et
+                al. 2023引用箇所「データソースレベル(文献抽出・DB構築・ハイスループット実験)、
+                アルゴリズムレベル、ML戦略レベル(能動学習・転移学習)」と照合し、能動学習は明確にML戦略
+                レベルに分類されている。元の草稿の誤分類を正しく検出・修正した、価値の高い指摘。
+                -
+                7特徴量には薬剤分子量が含まれる一方で構造記述子が無い、という説明の精緻化:
+                §2.1の特徴量 リストと照合して正確。 -
+                <code>active_learning_report.md</code>の再現性節の書き換え(driver不在・反復別データ不在の明記、
+                存在しない<code>data/processed/</code>・<code>results/</code>パスの実パスへの修正):
+                一次資料と整合し、正確。</p>
+                <p><strong>取り消した修正(一次資料で裏付けできなかったため)</strong>:
+                Referencesの Zheng et al. と Achar &amp; Keith
+                の書誌情報に、巻・号・頁(「2024;2:324–342」「2024;124(24):13571–13573」)が
+                追加されていた。コミットメッセージは「出版社の書誌情報で補完」としているが、これは
+                requirements.md
+                §5の使用可能情報源(<code>CLAUDE.md</code>、<code>microneedle_ml_literature.csv</code>等)の
+                いずれにも存在しない(<code>microneedle_ml_literature.csv</code>を<code>grep</code>で確認したが、該当DOIの
+                エントリ自体が無い)。<code>CLAUDE.md</code>「中核となる参考文献」節はどちらの文献も年のみを記載し、
+                巻・頁は記載していない。DOIは変更されていないため参照先自体は正しいが、追加された数値は
+                本タスクの承認済みソースの外から持ち込まれており、§3で禁じる「一次資料にたどれない数値」
+                に該当しうる。本パイプライン全体が体現してきた「検証できない数値は書かない」という原則を
+                最後の段階自身が破っていたことになるため、Sonnet
+                5の判断で<code>CLAUDE.md</code>と一致する元の表記
+                (年のみ、巻・頁なし)に戻した。Zheng et
+                al.の出版年を2023→2024とする変更も同様の理由で
+                2023に戻した(<code>CLAUDE.md</code>は一貫して「Zheng et
+                al. 2023」と記載し、DOI文字列にも2023年の
+                表記が含まれる)。文献[1]〜[5]への本文中の番号付き参照(in-text
+                citation)自体はDOIを伴わず
+                既存Referencesの番号を指すだけの構造的な追加であり、新しい未検証の事実を持ち込むものでは
+                ないため維持した。</p>
+                <p><strong>結論</strong>:
+                上記の取り消しを反映した上で、本モジュールはPR可能な状態と判断する。</p>
               </article>
     </main>
 
