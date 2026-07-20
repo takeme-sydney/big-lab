@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#edf2f0">
+  <meta name="description" content="BiG Labの「要件定義 — Microneedle
+ML:
+競合・関連研究マップとギャップ分析」に関するMarkdown正本のHTML閲覧版。">
+  <title>要件定義 — Microneedle ML:
+競合・関連研究マップとギャップ分析 · BiG Lab</title>
+  <link rel="alternate" type="text/markdown" href="requirements.md" title="Markdown source">
+    <link rel="stylesheet" href="../../shared/website/assets/research-document.css">
+    </head>
+<body class="research-document">
+  <a class="skip-link" href="#document-content">本文へ移動</a>
+
+  <header class="document-topbar">
+    <div class="document-topbar-inner">
+      <a class="document-brand" href="../../shared/website/index.html" aria-label="BiG Lab 資料一覧へ">
+        <span class="document-brand-mark" aria-hidden="true">B</span>
+        <span class="document-brand-copy">
+          <strong>BiG Lab</strong>
+          <small>Research library</small>
+        </span>
+      </a>
+
+      <nav class="document-actions" aria-label="文書ナビゲーション">
+        <a href="../../shared/website/index.html">資料一覧</a>
+        <a class="source-action" href="requirements.md">Markdown正本 <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <header class="document-hero">
+    <div class="document-hero-copy">
+      <p class="document-kicker">
+        <span aria-hidden="true"></span>
+        PROJECT REQUIREMENTS
+      </p>
+      <h1 class="extra-long-title">要件定義 — Microneedle ML:
+競合・関連研究マップとギャップ分析</h1>
+      <p class="document-description">BiG Labの「要件定義 — Microneedle
+ML:
+競合・関連研究マップとギャップ分析」に関するMarkdown正本のHTML閲覧版。</p>
+
+      <dl class="document-meta">
+                        <div>
+          <dt>Format</dt>
+          <dd>HTML reading view</dd>
+        </div>
+      </dl>
+    </div>
+
+    <aside class="format-map" aria-label="MarkdownからHTMLへの文書フロー">
+      <div class="format-map-head">
+        <span>DOCUMENT PIPELINE</span>
+        <small>ONE SOURCE · TWO VIEWS</small>
+      </div>
+      <div class="format-map-flow">
+        <div class="format-node source-node">
+          <span>CANONICAL</span>
+          <strong>Markdown</strong>
+          <small>内容の正本</small>
+        </div>
+        <span class="format-arrow" aria-hidden="true">→</span>
+        <div class="format-node view-node">
+          <span>READING VIEW</span>
+          <strong>HTML</strong>
+          <small>閲覧用レンダリング</small>
+        </div>
+      </div>
+      <p>内容は同一に保ち、画面では読解・移動・参照に適した構造で表示します。</p>
+    </aside>
+  </header>
+
+  <div class="document-rule" aria-hidden="true">
+    <span></span><span></span><span></span>
+  </div>
+
+  <div class="document-shell">
+        <aside class="document-toc" aria-labelledby="document-toc-title">
+      <p id="document-toc-title">On this page</p>
+      <nav aria-label="目次">
+        <ul>
+        <li><a
+        href="#要件定義-microneedle-ml-競合関連研究マップとギャップ分析"
+        id="toc-要件定義-microneedle-ml-競合関連研究マップとギャップ分析">要件定義
+        — Microneedle ML: 競合・関連研究マップとギャップ分析</a>
+        <ul>
+        <li><a href="#目的" id="toc-目的">1. 目的</a></li>
+        <li><a href="#これまでに完了している作業sonnet-5-が直接実施済み"
+        id="toc-これまでに完了している作業sonnet-5-が直接実施済み">2.
+        これまでに完了している作業(Sonnet 5 が直接実施済み)</a></li>
+        <li><a href="#必須コンテンツタスク"
+        id="toc-必須コンテンツタスク">3. 必須コンテンツ・タスク</a>
+        <ul>
+        <li><a href="#レビュー必須" id="toc-レビュー必須">3.1
+        レビュー(必須)</a></li>
+        <li><a href="#未解決の問いへの追加調査できる範囲で"
+        id="toc-未解決の問いへの追加調査できる範囲で">3.2
+        未解決の問いへの追加調査(できる範囲で)</a></li>
+        <li><a href="#仕上げ" id="toc-仕上げ">3.3 仕上げ</a></li>
+        </ul></li>
+        <li><a href="#使用可能な情報源" id="toc-使用可能な情報源">4.
+        使用可能な情報源</a></li>
+        <li><a href="#制約捏造防止task-1と同じ規律"
+        id="toc-制約捏造防止task-1と同じ規律">5. 制約(捏造防止・Task
+        1と同じ規律)</a></li>
+        <li><a href="#acceptance-checklist"
+        id="toc-acceptance-checklist">6. Acceptance checklist</a></li>
+        </ul></li>
+        </ul>
+      </nav>
+            <a class="toc-source-link" href="requirements.md">
+        <span>Source</span>
+        <strong>requirements.md</strong>
+      </a>
+          </aside>
+    
+    <main id="document-content" class="document-main">
+      <article class="document-content">
+                <p><a href="requirements.html">HTML版を開く</a></p>
+                <h1
+                id="要件定義-microneedle-ml-競合関連研究マップとギャップ分析">要件定義
+                — Microneedle ML:
+                競合・関連研究マップとギャップ分析</h1>
+                <p>文書版: 1.0 作成日: 2026-07-20 対象:
+                <code>big-lab/microneedle-drug-delivery/competitive-landscape/competitive-landscape.md</code>
+                根拠資料:
+                deep-researchハーネスによる調査結果(このタスクの直前に実行、<code>research/</code>
+                プロジェクトとの比較で競合・関連研究を洗い出したもの)+
+                <code>microneedle-drug-delivery/research/</code>
+                の既存資料</p>
+                <h2 id="目的">1. 目的</h2>
+                <p><code>microneedle-drug-delivery/research/</code>
+                で進めているマイクロニードル薬物送達のsmall-data
+                MLアプローチについて、competing/関連する学術・商用の研究・ツール・製品をリサーチし、現在のアプローチとの差分(強み・弱み・見落とし)を特定した上で、<code>research/</code>
+                プロジェクトの計画(<code>RESEARCH_PLAN.md</code>,
+                <code>CLAUDE.md</code>)と今後書く成果物(<code>small-data-ml-paper/</code>)に反映できる、具体的でactionableなギャップ分析文書を完成させる。</p>
+                <h2
+                id="これまでに完了している作業sonnet-5-が直接実施済み">2.
+                これまでに完了している作業(Sonnet 5 が直接実施済み)</h2>
+                <ul>
+                <li>deep-researchハーネスによる調査(6検索角度、26件一次資料取得、113件の主張抽出、25件をadversarial
+                verificationで検証)。</li>
+                <li>調査結果に基づく
+                <code>competitive-landscape.md</code>
+                の起草(§1〜11、確認済み事実・棄却された主張・未解決の問いを明確に区別)。</li>
+                <li><code>research/RESEARCH_PLAN.md</code>
+                への具体的なチェックリスト項目の追加(Asgarkhanova et
+                al.本文入手、HuskinDB件数の確認、Stevens et
+                al. 2024データの検討、MAMLスタイルメタ学習の言及、Abdallah
+                et al.との方法論比較)。</li>
+                <li><code>research/CLAUDE.md</code>「データ出典」節への重要な注記追加(214化合物データセットがAsgarkhanova
+                et al.のデータセットの再利用である可能性)。</li>
+                </ul>
+                <p><strong>Fable
+                5の役割はゼロから作ることではなく、上記を批判的にレビューし、可能な範囲で未解決の問いにさらに取り組み、仕上げることである。</strong></p>
+                <h2 id="必須コンテンツタスク">3.
+                必須コンテンツ・タスク</h2>
+                <h3 id="レビュー必須">3.1 レビュー(必須)</h3>
+                <ul>
+                <li><code>competitive-landscape.md</code>
+                の全ての「確認済み」記述を、deep-research結果(このセッションのタスク通知に含まれる
+                <code>findings</code>/<code>refuted</code>/<code>caveats</code>/<code>openQuestions</code>)と突き合わせ、過大解釈や誤帰属がないか確認する。</li>
+                <li>特に §4(Asgarkhanova et
+                al.)の記述が、実際に確認できた事実(データセット組成の一致、本文入手不可という事実)と、推測(「本プロジェクトが再利用している可能性が高い」という推論)を混同していないか確認する。confidence表現が適切か見直す。</li>
+                <li><code>RESEARCH_PLAN.md</code> /
+                <code>CLAUDE.md</code>
+                への追記が、既存の記述と矛盾していないか確認する。</li>
+                </ul>
+                <h3 id="未解決の問いへの追加調査できる範囲で">3.2
+                未解決の問いへの追加調査(できる範囲で)</h3>
+                <p>以下は <code>competitive-landscape.md</code> §8
+                に記載した未解決の問い。WebSearch/WebFetchツールを用いて、可能な範囲で追加調査し、確認できた事実は明記して追記し、確認できなかった場合はその旨を正直に記録する(捏造しない):</p>
+                <ol type="1">
+                <li><strong>[最優先]</strong>
+                美容成分(美白剤・レチノイド・ビタミンC誘導体・保湿剤等)への機械学習ベースの皮膚透過性予測応用の先行事例。日本語圏を含む。</li>
+                <li>Asgarkhanova et al. (2026, doi:10.1002/minf.70030)
+                の本文入手の再試行(プレプリントサーバ、著者の所属機関リポジトリ、ResearchGate等、Wiley本体以外の経路を試す)。</li>
+                <li>§9に記載した小林製薬のリード(https://skincare.kobayashi.co.jp/field/skincare/penetration02.html)を実際にfetchして内容を確認する。</li>
+                <li><code>research/skin_permeability_training_set.csv</code>
+                および <code>research/RESEARCH_PLAN.md</code>
+                の記述を再確認し、129件(HuskinDB)という数字の由来(2020年論文記載の251化合物・546測定値との関係)についてローカル資料から手がかりがないか確認する。</li>
+                </ol>
+                <h3 id="仕上げ">3.3 仕上げ</h3>
+                <ul>
+                <li><code>README.md</code>(このモジュールの索引、他モジュールと同じ構成)を完成させる。</li>
+                <li><code>notes/decision-log.md</code>(調査・レビューの経緯と主要判断)を完成させる。</li>
+                <li>全Markdownファイルの先頭本文行に
+                <code>[HTML版を開く](同名.html)</code> を付与する。</li>
+                <li><code>shared/scripts/build-website.sh</code>
+                を実行し、エラーなく完走することを確認する。</li>
+                </ul>
+                <h2 id="使用可能な情報源">4. 使用可能な情報源</h2>
+                <ul>
+                <li>このセッションのdeep-researchタスク通知に含まれる調査結果一式(<code>findings</code>,
+                <code>refuted</code>, <code>caveats</code>,
+                <code>openQuestions</code>, <code>sources</code>)—
+                全て実在するURL/DOI付き</li>
+                <li><code>microneedle-drug-delivery/research/</code>
+                配下の全資料(RESEARCH_PLAN.md, CLAUDE.md, README.md,
+                literature_map_report.md, 各CSV)</li>
+                <li><code>microneedle-drug-delivery/small-data-ml-paper/paper.md</code>(既存の論文原稿。§11で言及した影響を確認する参考として読んでよいが、<strong>このタスクでは編集しない</strong>
+                — 別ブランチ・別PRの管轄)</li>
+                <li>WebSearch/WebFetchツール(§3.2の追加調査用)</li>
+                </ul>
+                <h2 id="制約捏造防止task-1と同じ規律">5.
+                制約(捏造防止・Task 1と同じ規律)</h2>
+                <ul>
+                <li>confidence(確信度)の低い主張、単一ソースの主張、adversarial
+                verificationで棄却された主張を「確認済みの事実」として書かない。</li>
+                <li>追加のWeb調査で確認できなかった場合は「確認できなかった」と明記する。確認できないからといって存在しないと断定しない。</li>
+                <li><code>small-data-ml-paper/</code> (Task
+                1のブランチ・PR)のファイルは編集しない。影響がある場合は本文書(§11)で言及するに留める。</li>
+                <li>実在しないDOI・URLを作らない。</li>
+                </ul>
+                <h2 id="acceptance-checklist">6. Acceptance
+                checklist</h2>
+                <ul class="task-list">
+                <li><label><input
+                type="checkbox" /><code>competitive-landscape.md</code>
+                の全記述がdeep-research結果またはこのタスクでの追加調査結果のいずれかに遡れる</label></li>
+                <li><label><input
+                type="checkbox" />§8の未解決の問いのうち、少なくとも(1)美容成分応用の独自性、(3)小林製薬リードの確認、について追加調査を試み、結果(確認できた/できなかった)を記録している</label></li>
+                <li><label><input
+                type="checkbox" /><code>RESEARCH_PLAN.md</code> /
+                <code>CLAUDE.md</code> への追記に矛盾がない</label></li>
+                <li><label><input
+                type="checkbox" /><code>README.md</code>,
+                <code>notes/decision-log.md</code>
+                が完成している</label></li>
+                <li><label><input type="checkbox" />全Markdownに
+                <code>[HTML版を開く]</code> リンクがある</label></li>
+                <li><label><input
+                type="checkbox" /><code>shared/scripts/build-website.sh</code>
+                がエラーなく完走する</label></li>
+                </ul>
+              </article>
+    </main>
+
+    <aside class="reading-gauge" aria-hidden="true">
+      <p>READING DEPTH</p>
+      <div class="gauge-scale">
+        <span>00</span>
+        <span>25</span>
+        <span>50</span>
+        <span>75</span>
+        <span>100</span>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="document-footer">
+    <div>
+      <strong>BiG Lab Research Library</strong>
+      <p>Markdown is canonical. HTML is the synchronized reading view.</p>
+    </div>
+    <div class="document-footer-links">
+      <a href="../../shared/website/index.html">資料一覧へ戻る</a>
+      <a href="requirements.md">Markdownを開く</a>
+    </div>
+  </footer>
+</body>
+</html>

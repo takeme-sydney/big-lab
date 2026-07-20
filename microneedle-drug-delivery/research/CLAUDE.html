@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#edf2f0">
+  <meta name="description" content="BiG Labの「プロジェクト: Small-data
+MLによるマイクロニードル薬物送達予測の改良と美容成分への応用」に関するMarkdown正本のHTML閲覧版。">
+  <title>プロジェクト: Small-data
+MLによるマイクロニードル薬物送達予測の改良と美容成分への応用 · BiG Lab</title>
+  <link rel="alternate" type="text/markdown" href="CLAUDE.md" title="Markdown source">
+    <link rel="stylesheet" href="../../shared/website/assets/research-document.css">
+    </head>
+<body class="research-document">
+  <a class="skip-link" href="#document-content">本文へ移動</a>
+
+  <header class="document-topbar">
+    <div class="document-topbar-inner">
+      <a class="document-brand" href="../../shared/website/index.html" aria-label="BiG Lab 資料一覧へ">
+        <span class="document-brand-mark" aria-hidden="true">B</span>
+        <span class="document-brand-copy">
+          <strong>BiG Lab</strong>
+          <small>Research library</small>
+        </span>
+      </a>
+
+      <nav class="document-actions" aria-label="文書ナビゲーション">
+        <a href="../../shared/website/index.html">資料一覧</a>
+        <a class="source-action" href="CLAUDE.md">Markdown正本 <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <header class="document-hero">
+    <div class="document-hero-copy">
+      <p class="document-kicker">
+        <span aria-hidden="true"></span>
+        RESEARCH DOCUMENT
+      </p>
+      <h1 class="extra-long-title">プロジェクト: Small-data
+MLによるマイクロニードル薬物送達予測の改良と美容成分への応用</h1>
+      <p class="document-description">BiG Labの「プロジェクト:
+Small-data
+MLによるマイクロニードル薬物送達予測の改良と美容成分への応用」に関するMarkdown正本のHTML閲覧版。</p>
+
+      <dl class="document-meta">
+                        <div>
+          <dt>Format</dt>
+          <dd>HTML reading view</dd>
+        </div>
+      </dl>
+    </div>
+
+    <aside class="format-map" aria-label="MarkdownからHTMLへの文書フロー">
+      <div class="format-map-head">
+        <span>DOCUMENT PIPELINE</span>
+        <small>ONE SOURCE · TWO VIEWS</small>
+      </div>
+      <div class="format-map-flow">
+        <div class="format-node source-node">
+          <span>CANONICAL</span>
+          <strong>Markdown</strong>
+          <small>内容の正本</small>
+        </div>
+        <span class="format-arrow" aria-hidden="true">→</span>
+        <div class="format-node view-node">
+          <span>READING VIEW</span>
+          <strong>HTML</strong>
+          <small>閲覧用レンダリング</small>
+        </div>
+      </div>
+      <p>内容は同一に保ち、画面では読解・移動・参照に適した構造で表示します。</p>
+    </aside>
+  </header>
+
+  <div class="document-rule" aria-hidden="true">
+    <span></span><span></span><span></span>
+  </div>
+
+  <div class="document-shell">
+        <aside class="document-toc" aria-labelledby="document-toc-title">
+      <p id="document-toc-title">On this page</p>
+      <nav aria-label="目次">
+        <ul>
+        <li><a
+        href="#プロジェクト-small-data-mlによるマイクロニードル薬物送達予測の改良と美容成分への応用"
+        id="toc-プロジェクト-small-data-mlによるマイクロニードル薬物送達予測の改良と美容成分への応用">プロジェクト:
+        Small-data
+        MLによるマイクロニードル薬物送達予測の改良と美容成分への応用</a>
+        <ul>
+        <li><a href="#目的" id="toc-目的">目的</a></li>
+        <li><a href="#中核となる参考文献この研究の設計思想の土台"
+        id="toc-中核となる参考文献この研究の設計思想の土台">中核となる参考文献(この研究の設計思想の土台)</a></li>
+        <li><a href="#研究の力点優先順位"
+        id="toc-研究の力点優先順位">研究の力点(優先順位)</a></li>
+        <li><a href="#データスキーマ"
+        id="toc-データスキーマ">データスキーマ</a>
+        <ul>
+        <li><a href="#dataprocessedskin_permeability_training_set.csv"
+        id="toc-dataprocessedskin_permeability_training_set.csv"><code>data/processed/skin_permeability_training_set.csv</code></a></li>
+        <li><a href="#dataprocessedcosmetic_ingredients_descriptors.csv"
+        id="toc-dataprocessedcosmetic_ingredients_descriptors.csv"><code>data/processed/cosmetic_ingredients_descriptors.csv</code></a></li>
+        <li><a
+        href="#dataprocessedyuan2023_dataset_with_descriptors.csv"
+        id="toc-dataprocessedyuan2023_dataset_with_descriptors.csv"><code>data/processed/yuan2023_dataset_with_descriptors.csv</code></a></li>
+        <li><a href="#データ出典"
+        id="toc-データ出典">データ出典</a></li>
+        </ul></li>
+        <li><a href="#命名規則コーディング規約"
+        id="toc-命名規則コーディング規約">命名規則・コーディング規約</a></li>
+        <li><a href="#モデリング方針"
+        id="toc-モデリング方針">モデリング方針</a></li>
+        <li><a href="#既知の制約"
+        id="toc-既知の制約">既知の制約</a></li>
+        </ul></li>
+        </ul>
+      </nav>
+            <a class="toc-source-link" href="CLAUDE.md">
+        <span>Source</span>
+        <strong>CLAUDE.md</strong>
+      </a>
+          </aside>
+    
+    <main id="document-content" class="document-main">
+      <article class="document-content">
+                <p><a href="CLAUDE.html">HTML版を開く</a></p>
+                <h1
+                id="プロジェクト-small-data-mlによるマイクロニードル薬物送達予測の改良と美容成分への応用">プロジェクト:
+                Small-data
+                MLによるマイクロニードル薬物送達予測の改良と美容成分への応用</h1>
+                <h2 id="目的">目的</h2>
+                <p>Yuan et al. (2023)「Prediction of drug permeation
+                through microneedled skin by machine learning」(Bioeng
+                Transl Med, doi:10.1002/btm2.10512)が抱える中心的な 限界
+                ―
+                <strong>訓練データが191点・6薬剤のみと小規模で、訓練セットにない新規薬剤への
+                外挿で大きな誤差が生じる</strong>(論文Discussion
+                4.2節で著者自身が明記)― を、 Small-data
+                ML分野の確立手法(転移学習・データ拡張・Applicability
+                Domain評価)で
+                解決することを主目的とする。美容有効成分への応用はこの改良モデルの実証先として
+                位置づける。</p>
+                <h2
+                id="中核となる参考文献この研究の設計思想の土台">中核となる参考文献(この研究の設計思想の土台)</h2>
+                <ol type="1">
+                <li><strong>Yuan et al. 2023</strong>
+                (doi:10.1002/btm2.10512) — 本研究の直接の前身。
+                Fick則・MLR・RF・XGBoostの4手法比較。XGBoostが最良(R²=0.98)だが、
+                訓練データ外の新規薬剤への予測で「大きな乖離」が生じることが確認されている
+                (Discussion 4.2, Figure S1/S2)。特徴量:
+                薬剤負荷量・透過時間・MN表面積・
+                MN長・MNタイプ・皮膚タイプ・薬剤分子量の7種。</li>
+                <li><strong>Zheng et al. 2023, Nature Reviews
+                Bioengineering</strong> (doi:10.1038/s44222-023-00141-6)
+                “Microneedle biomedical devices” —
+                マイクロニードル工学の包括的レビュー。
+                MN設計・材料・応用の最新動向の参照元。</li>
+                <li><strong>Xu et al. 2023, npj Computational
+                Materials</strong> (doi:10.1038/s41524-023-01000-z)
+                “Small data machine learning in materials science” —
+                小規模データ対処法の
+                体系的整理:データソースレベル(文献抽出・DB構築・ハイスループット実験)、
+                アルゴリズムレベル(不均衡学習向けモデル)、ML戦略レベル(能動学習・転移学習)。</li>
+                <li><strong>Achar &amp; Keith 2024, Chem Rev</strong>
+                (doi:10.1021/acs.chemrev.4c00957) “Small Data Machine
+                Learning Approaches in Molecular and Materials Science”
+                (本文入手不可、要旨のみ参照)</li>
+                <li><strong>Dou, Zhu, Merkurjev et al. 2023, Chem
+                Rev</strong> (doi:10.1021/acs.chemrev.3c00189) “Machine
+                Learning Methods for Small Data Challenges in Molecular
+                Science” — 基礎アルゴリズム(MLR, LR, KNN, SVM, KL, RF,
+                GBT)から発展手法(ANN, CNN, GNN, GAN, LSTM, transformer,
+                転移学習, 能動学習, 物理モデルベースのデータ拡張)
+                までを網羅。</li>
+                </ol>
+                <h2 id="研究の力点優先順位">研究の力点(優先順位)</h2>
+                <ol type="1">
+                <li><strong>転移学習によるYuan
+                2023モデルの外挿性改善</strong> —
+                本プロジェクトで新規構築した
+                実測皮膚透過性データセット(214化合物、HuskinDB+SkinPiX統合)を「元ドメイン」、
+                Yuan
+                2023のMN透過データ(191点・6薬剤)を「目標ドメイン」とし、皮膚透過性の
+                一般知識をMN文脈に転移する。</li>
+                <li><strong>データ拡張・物理モデル併用</strong> — Yuan
+                2023のFick則モデル(C言語実装)を
+                物理制約として、機械学習モデルの予測を補正・拡張する(Zhu
+                2024, Zhang 2023
+                で紹介される物理モデルベースのデータ拡張に相当)。</li>
+                <li><strong>Applicability Domain評価の厳格化</strong> —
+                Yuan 2023では新規薬剤の予測乖離が
+                「薬剤負荷量への過度な依存」が原因と分析されている。特徴量重要度の分布を
+                平滑化する正則化・アンサンブル手法を検討する。</li>
+                <li><strong>美容成分への応用</strong> —
+                上記の改良モデルを用いて、美容有効成分48件
+                (<code>data/processed/cosmetic_ingredients_descriptors.csv</code>)のマイクロニードル
+                送達性能を予測する。</li>
+                </ol>
+                <h2 id="データスキーマ">データスキーマ</h2>
+                <h3
+                id="dataprocessedskin_permeability_training_set.csv"><code>data/processed/skin_permeability_training_set.csv</code></h3>
+                <p>実測皮膚透過性データ(214化合物、HuskinDB + SkinPiX +
+                INRS 2025年追加分を統合・重複除去済み)。 -
+                <code>canon_smiles</code>: RDKit正規化SMILES(主キー) -
+                <code>logKp_cm_h</code>: log10(Kp),
+                単位cm/h(複数実測値がある場合は平均) -
+                <code>n_measurements</code>: 統合前の実測値の数 -
+                <code>sources</code>: データ由来(HuskinDB / SkinPiX /
+                INRS_new) -
+                <code>MW, LogP, TPSA, HBD, HBA, RotB, NumRings, NumAromaticRings, FractionCSP3,   MolarRefractivity, NumHeteroatoms</code>:
+                RDKit記述子</p>
+                <h3
+                id="dataprocessedcosmetic_ingredients_descriptors.csv"><code>data/processed/cosmetic_ingredients_descriptors.csv</code></h3>
+                <p>候補美容成分48件の構造・記述子(PubChem
+                CID・SMILES・RDKit記述子)。 - <code>category</code>:
+                機能分類(whitening, anti_aging_retinoid, antioxidant,
+                moisturizer, etc.) - <code>large_molecule_flag</code>:
+                MW&gt;500(適用範囲外の可能性) -
+                <code>in_MW_domain</code>, <code>in_LogP_domain</code>:
+                訓練データの化学空間範囲内かどうか -
+                48件中4件(Niacinamide, Urea, Salicylic acid,
+                Ethanol)はすでにトレーニングセット内に
+                実測値あり。残り44件のうち34件が化学空間(MW・LogP)の範囲内、10件が範囲外
+                (高分子量の脂質類・誘導体)。</p>
+                <h3
+                id="dataprocessedyuan2023_dataset_with_descriptors.csv"><code>data/processed/yuan2023_dataset_with_descriptors.csv</code></h3>
+                <p>Yuan et al. (2023) の訓練データ(191点・6薬剤: BSA,
+                copper ions, GHK peptide, Rhodamine B, lidocaine,
+                caffeine)を論文補足データ(Data S1, PMC10658566)から
+                再現し、小分子(GHK peptide, Rhodamine B, lidocaine,
+                caffeine)にRDKit記述子を 追加したもの。BSA(タンパク質,
+                MW 66,000)とcopper ions(金属イオン)は
+                <code>is_small_molecule=False</code>
+                としてフラグ管理し、低分子記述子の対象外とする。</p>
+                <h3 id="データ出典">データ出典</h3>
+                <ul>
+                <li>HuskinDB: https://huskindb.drug-design.de (Stepanov,
+                Canipa &amp; Wolber 2020,
+                doi:10.1038/s41597-020-00764-z)</li>
+                <li>SkinPiX: Recherche Data Gouv doi:10.57745/7FHQOY
+                (Chedik et al. 2024)</li>
+                <li>統合QSPRデータセット: Recherche Data Gouv
+                doi:10.57745/ZUU1DH (Asgarkhanova et al., Laboratory of
+                Chemoinformatics, University of Strasbourg)</li>
+                <li>Yuan 2023訓練データ: PMC10658566 Data S1
+                (doi:10.1002/btm2.10512 補足情報)</li>
+                </ul>
+                <p><strong>重要(2026-07-20競合調査で判明)</strong>:
+                上記の doi:10.57745/ZUU1DH は、Asgarkhanova et al.
+                の論文(<em>Molecular Informatics</em>,
+                doi:10.1002/minf.70030, 2026年4月公開)の再現用データ
+                そのものであり、その論文自体がこのHuskinDB+SkinPiX+INRS統合データセット(209件)を
+                用いたQSPRモデルを既に発表している(本文入手不可のため手法・性能は未確認)。したがって
+                <code>skin_permeability_training_set.csv</code>(214件)は本プロジェクトが独自にゼロから統合した
+                ものではなく、<strong>Asgarkhanova et
+                al.が構築・公開した統合データセットを再利用している</strong>
+                可能性が高い。成果物(論文等)で「本プロジェクトが214化合物を統合した」と書かず、出典を
+                正確に帰属させること。詳細は <a
+                href="../competitive-landscape/competitive-landscape.md"><code>../competitive-landscape/competitive-landscape.md</code></a>
+                §4。</p>
+                <h2
+                id="命名規則コーディング規約">命名規則・コーディング規約</h2>
+                <ul>
+                <li>日本語コメント可、変数名・関数名は英語(snake_case)</li>
+                <li>分子記述子計算は <code>src/descriptors.py</code>
+                を必ず経由する(RDKit呼び出しを散在させない)</li>
+                <li>図表は <code>figure-style</code>
+                スキル適用(最終成果物のみ。探索的プロットは簡易でよい)</li>
+                <li>乱数シードは全スクリプトで
+                <code>RANDOM_STATE = 42</code> に統一</li>
+                </ul>
+                <h2 id="モデリング方針">モデリング方針</h2>
+                <ul>
+                <li>ベースライン:
+                Potts-Guy式(<code>src/descriptors.py::potts_guy_baseline</code>)、多重線形回帰</li>
+                <li>主要手法: Random Forest, XGBoost(Yuan
+                2023と同一アプローチ)、Gaussian Process Regression</li>
+                <li>検証:
+                5-fold交差検証(データ数214件のため単純train/test
+                splitは避ける)</li>
+                <li>適用範囲(Applicability Domain):
+                訓練データのMW・LogP範囲外の美容成分(高分子脂質類など
+                10件)は別枠で扱い、予測結果に「範囲外」フラグを必ず付与する</li>
+                <li>解釈: SHAP値による特徴量重要度分析を必須とする</li>
+                </ul>
+                <h2 id="既知の制約">既知の制約</h2>
+                <ul>
+                <li>訓練データ(214件)は主に医薬品・環境化学物質由来。化粧品有効成分特有のデータは
+                文献から個別収集が必要(フェーズ1-2で継続対応)。</li>
+                <li>ヒアルロン酸等の高分子・重合体は本モデルの対象外(別途プロジェクト化を検討)。</li>
+                </ul>
+              </article>
+    </main>
+
+    <aside class="reading-gauge" aria-hidden="true">
+      <p>READING DEPTH</p>
+      <div class="gauge-scale">
+        <span>00</span>
+        <span>25</span>
+        <span>50</span>
+        <span>75</span>
+        <span>100</span>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="document-footer">
+    <div>
+      <strong>BiG Lab Research Library</strong>
+      <p>Markdown is canonical. HTML is the synchronized reading view.</p>
+    </div>
+    <div class="document-footer-links">
+      <a href="../../shared/website/index.html">資料一覧へ戻る</a>
+      <a href="CLAUDE.md">Markdownを開く</a>
+    </div>
+  </footer>
+</body>
+</html>

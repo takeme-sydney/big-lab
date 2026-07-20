@@ -1,7 +1,20 @@
+[HTML版を開く](RESEARCH_PLAN.html)
+
 # 研究計画: Small-data MLによるマイクロニードル薬物送達予測の改良(美容成分応用を含む)
 
 *2026-07-20更新: ユーザー提供の5文献(Yuan 2023本人論文、マイクロニードルレビュー、
 Small-data MLレビュー3本)を精読し、研究の軸をYuan 2023の限界克服型に再定義。*
+
+*2026-07-20追記: 競合・関連研究のdeep-research調査により重要な発見があった。詳細は
+[`../competitive-landscape/competitive-landscape.md`](../competitive-landscape/competitive-landscape.md)
+を参照。特に重要な2点:*
+1. *CNRS-Strasbourg/INRSのグループ(Asgarkhanova et al. 2026, Molecular Informatics,
+   doi:10.1002/minf.70030)が、本計画のHuskinDB+SkinPiX+INRS統合データセットと
+   実質的に同一組成のデータセットで既にQSPRモデルを発表している(本文入手不可・
+   手法/性能は未確認)。**フェーズ1の「214件のデータセットを本プロジェクトが統合した」
+   という記述は、実際には「Asgarkhanova et al.が構築・公開した統合データセットを
+   再利用している」に近い可能性が高く、成果物の表現を要修正。**
+2. *美容成分への応用の独自性は、今回の調査では確認も否定もできなかった(要フォローアップ)。*
 
 
 ## フェーズ0: スコープ定義 ✅ 完了
@@ -39,6 +52,12 @@ Small-data MLレビュー3本)を精読し、研究の軸をYuan 2023の限界�
 - [ ] 美容成分特有の透過性データを化粧品科学誌(*Int J Cosmetic Science* 等)から
       個別収集し、訓練データセットに追加(目標: 美容成分特化データ20〜30件追加)
 - [ ] SMILES重複・立体異性体表記ゆれの最終チェック
+- [ ] **[競合調査より]** Asgarkhanova et al. (2026, doi:10.1002/minf.70030) の本文入手を
+      試み、本プロジェクトの214化合物データセットとの関係(独自統合か再利用か)・
+      同論文が報告する手法/性能指標を確認する
+- [ ] **[競合調査より]** HuskinDBの現行公開データが129化合物より多い可能性
+      (2020年論文記載では251化合物・546測定値)を確認し、129件が最新かつ十分な
+      部分集合かどうかを検証する
 
 ## フェーズ3: 探索的データ分析(EDA)
 - [ ] 目的変数の分布確認、記述子との相関・多重共線性(VIF)チェック
@@ -65,6 +84,14 @@ Small-data MLレビュー3本)を精読し、研究の軸をYuan 2023の限界�
 - [ ] **物理モデル併用データ拡張**: Yuan 2023のFick則シミュレーションを用いて
       疑似データ点を生成し、小規模データを補強(Achar・Keith 2024が言及する
       物理モデルベースのデータ拡張に相当)
+- [ ] **[競合調査より]** Stevens et al. (2024, *Scientific Data* 11:755,
+      doi:10.1038/s41597-024-03588-3) の層別(角質層・表皮・真皮)diffusion/partition
+      係数データ(73化合物)を物理モデル併用データ拡張の追加データ源として検討する
+      (HuskinDBはKp値のみでdiffusion/partition係数を含まないため補完的)
+- [ ] **[競合調査より、確信度: 中]** 単純なpretrain→fine-tune型のtransfer learningに
+      加え、MAMLスタイルのメタ学習(out-of-distribution性能で優位性を示す報告あり、
+      arXiv:2003.05996)も代替候補として検討する。皮膚透過性に特化した実証ではない
+      ことに留意
 
 ## フェーズ5: 解釈・応用考察
 - [ ] SHAP値による特徴量重要度分析(4A・4Bの両モデル)
@@ -74,8 +101,14 @@ Small-data MLレビュー3本)を精読し、研究の軸をYuan 2023の限界�
 
 ## フェーズ6: 成果物整理
 - [ ] `figure-style` 適用済み最終図表の作成
-- [ ] 論文/レポート草稿
+- [ ] 論文/レポート草稿(進行中: [`../small-data-ml-paper/`](../small-data-ml-paper/)。
+      競合調査(§末尾リンク)を踏まえ、データセットの出典表現の見直しが必要)
+- [ ] **[競合調査より]** Abdallah et al. (2024, doi:10.1371/journal.pdig.0000483) との
+      方法論比較(本計画のleave-one-drug-out評価 vs 同論文のランダム85/15分割)を
+      成果物のRelated Work/Discussionに明記する
 
 ---
 *進捗: フェーズ0, 1, 1.5 完了。次はフェーズ2(データキュレーション)を経て、
 フェーズ4B(Yuan 2023の再現とleave-one-drug-out評価)に優先着手する。*
+
+*競合・関連研究の全体像は [`../competitive-landscape/competitive-landscape.md`](../competitive-landscape/competitive-landscape.md) を参照。*

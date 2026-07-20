@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#edf2f0">
+  <meta name="description" content="BiG Labの「判断記録 —
+competitive-landscape」に関するMarkdown正本のHTML閲覧版。">
+  <title>判断記録 — competitive-landscape · BiG Lab</title>
+  <link rel="alternate" type="text/markdown" href="decision-log.md" title="Markdown source">
+    <link rel="stylesheet" href="../../../shared/website/assets/research-document.css">
+    </head>
+<body class="research-document">
+  <a class="skip-link" href="#document-content">本文へ移動</a>
+
+  <header class="document-topbar">
+    <div class="document-topbar-inner">
+      <a class="document-brand" href="../../../shared/website/index.html" aria-label="BiG Lab 資料一覧へ">
+        <span class="document-brand-mark" aria-hidden="true">B</span>
+        <span class="document-brand-copy">
+          <strong>BiG Lab</strong>
+          <small>Research library</small>
+        </span>
+      </a>
+
+      <nav class="document-actions" aria-label="文書ナビゲーション">
+        <a href="../../../shared/website/index.html">資料一覧</a>
+        <a class="source-action" href="decision-log.md">Markdown正本 <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <header class="document-hero">
+    <div class="document-hero-copy">
+      <p class="document-kicker">
+        <span aria-hidden="true"></span>
+        RESEARCH NOTE
+      </p>
+      <h1>判断記録 — competitive-landscape</h1>
+      <p class="document-description">BiG Labの「判断記録 —
+competitive-landscape」に関するMarkdown正本のHTML閲覧版。</p>
+
+      <dl class="document-meta">
+                        <div>
+          <dt>Format</dt>
+          <dd>HTML reading view</dd>
+        </div>
+      </dl>
+    </div>
+
+    <aside class="format-map" aria-label="MarkdownからHTMLへの文書フロー">
+      <div class="format-map-head">
+        <span>DOCUMENT PIPELINE</span>
+        <small>ONE SOURCE · TWO VIEWS</small>
+      </div>
+      <div class="format-map-flow">
+        <div class="format-node source-node">
+          <span>CANONICAL</span>
+          <strong>Markdown</strong>
+          <small>内容の正本</small>
+        </div>
+        <span class="format-arrow" aria-hidden="true">→</span>
+        <div class="format-node view-node">
+          <span>READING VIEW</span>
+          <strong>HTML</strong>
+          <small>閲覧用レンダリング</small>
+        </div>
+      </div>
+      <p>内容は同一に保ち、画面では読解・移動・参照に適した構造で表示します。</p>
+    </aside>
+  </header>
+
+  <div class="document-rule" aria-hidden="true">
+    <span></span><span></span><span></span>
+  </div>
+
+  <div class="document-shell">
+        <aside class="document-toc" aria-labelledby="document-toc-title">
+      <p id="document-toc-title">On this page</p>
+      <nav aria-label="目次">
+        <ul>
+        <li><a href="#判断記録-competitive-landscape"
+        id="toc-判断記録-competitive-landscape">判断記録 —
+        competitive-landscape</a>
+        <ul>
+        <li><a href="#deep-research調査の実行とスコープ"
+        id="toc-deep-research調査の実行とスコープ">2026-07-20:
+        deep-research調査の実行とスコープ</a></li>
+        <li><a href="#最重要発見とその扱い"
+        id="toc-最重要発見とその扱い">2026-07-20:
+        最重要発見とその扱い</a></li>
+        <li><a href="#このセクションは各ステージ完了時に追記される"
+        id="toc-このセクションは各ステージ完了時に追記される">(このセクションは各ステージ完了時に追記される)</a></li>
+        </ul></li>
+        </ul>
+      </nav>
+            <a class="toc-source-link" href="decision-log.md">
+        <span>Source</span>
+        <strong>decision-log.md</strong>
+      </a>
+          </aside>
+    
+    <main id="document-content" class="document-main">
+      <article class="document-content">
+                <p><a href="decision-log.html">HTML版を開く</a></p>
+                <h1 id="判断記録-competitive-landscape">判断記録 —
+                competitive-landscape</h1>
+                <h2 id="deep-research調査の実行とスコープ">2026-07-20:
+                deep-research調査の実行とスコープ</h2>
+                <p><strong>決定</strong>:
+                「競合サービス」の比較対象を「microneedle
+                ML予測アプローチそのもの」とした
+                (ユーザー指定)。big-lab全体のWebサイト/ポータルツールとの比較ではない。</p>
+                <p><strong>実施</strong>:
+                deep-researchハーネスを実行(6検索角度、26件一次資料取得、113件の主張抽出、
+                25件を3票制adversarial verificationで検証 —
+                15件確認・10件棄却)。所要: 約70分、
+                109エージェント呼び出し、約437万トークン。</p>
+                <h2 id="最重要発見とその扱い">2026-07-20:
+                最重要発見とその扱い</h2>
+                <p><strong>発見</strong>:
+                CNRS-Strasbourg/INRSのグループ(Asgarkhanova et al. 2026,
+                <em>Molecular Informatics</em>,
+                doi:10.1002/minf.70030)が、本プロジェクトのHuskinDB+SkinPiX+INRS
+                統合データセット(214化合物)と実質的に同一組成(209化合物、HuskinDB129+SkinPiX103+
+                INRS3)のデータセットで既にQSPRモデルを発表している。本文は購読制(HTTP
+                403、 Unpaywallでも確認)のため手法・性能指標は不明。</p>
+                <p><strong>判断</strong>:
+                この発見は<code>research/CLAUDE.md</code>が最初から「統合QSPRデータセット」の出典として
+                Asgarkhanova et
+                al.のデータリポジトリ(doi:10.57745/ZUU1DH)を引用していたことと
+                整合する —
+                つまり本プロジェクトは元々この関係性を知っていたが、その論文自体が
+                QSPRモデリングを行っていることまでは明示的に認識・記録していなかった可能性が高い。
+                <code>RESEARCH_PLAN.md</code>と<code>CLAUDE.md</code>に、データセットの出典表現を正確化する注記を追加した。</p>
+                <p><strong>Task 1 (<code>small-data-ml-paper</code>, PR
+                #1) への影響</strong>: 別ブランチ・別PRのため、
+                このタスクでは<code>small-data-ml-paper/paper.md</code>を直接編集していない。
+                <code>competitive-landscape.md</code> §11
+                に、ユーザーへの推奨事項として記録した。</p>
+                <h2
+                id="このセクションは各ステージ完了時に追記される">(このセクションは各ステージ完了時に追記される)</h2>
+              </article>
+    </main>
+
+    <aside class="reading-gauge" aria-hidden="true">
+      <p>READING DEPTH</p>
+      <div class="gauge-scale">
+        <span>00</span>
+        <span>25</span>
+        <span>50</span>
+        <span>75</span>
+        <span>100</span>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="document-footer">
+    <div>
+      <strong>BiG Lab Research Library</strong>
+      <p>Markdown is canonical. HTML is the synchronized reading view.</p>
+    </div>
+    <div class="document-footer-links">
+      <a href="../../../shared/website/index.html">資料一覧へ戻る</a>
+      <a href="decision-log.md">Markdownを開く</a>
+    </div>
+  </footer>
+</body>
+</html>
