@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="BiG Labの研究インターンでClaude Codeを、解析コード、データ検証、テスト、図、文書化へ安全に使うためのローカルガイド。">
+  <meta name="theme-color" content="#f3f5f7">
+  <title>Claude Codeを研究で使う — BiG Lab Working Guide</title>
+  <link rel="stylesheet" href="../assets/claude-science-guide.css">
+  <link rel="stylesheet" href="../assets/big-lab-portal.css">
+  <link rel="stylesheet" href="../assets/bilingual.css">
+  <link rel="stylesheet" href="../assets/copy-tools.css">
+  <link rel="stylesheet" href="../assets/site-directory.css">
+  <link rel="stylesheet" href="../assets/google-docs-typography.css">
+  <link rel="stylesheet" href="../assets/monochrome-theme.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <header class="site-header">
+    <div class="header-main">
+      <a class="brand" href="index.html" aria-label="BiG Lab資料ポータル ホーム">
+        <span class="brand-mark" aria-hidden="true">BL</span>
+        <span class="brand-copy">BiG Lab Working Guide<small>INTERN × CLAUDE / HTML EDITION</small></span>
+      </a>
+      <span class="header-note">Local use guide · 16 Jul 2026</span>
+    </div>
+    <nav class="site-nav" aria-label="ガイドのページ">
+      <div class="site-nav-inner">
+        <a href="index.html">統合ホーム</a>
+        <a href="intern-overview.html">インターン資料</a>
+        <a href="claude-code.html" aria-current="page">Claude Code</a>
+        <a href="claude-science-overview.html">Claude Science</a>
+        <a href="safety.html">安全管理</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-hero subpage-hero" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <div>
+          <p class="spec-label">Manual AI-01 / Claude Code</p>
+          <h1 id="hero-title">研究判断ではなく、<br>再現可能な実装を支える。</h1>
+          <p class="hero-copy"><strong>Claude Codeの役割は、研究者が決めた問い・データ・評価基準を、追跡可能な解析コードへ落とすこと。</strong> BiG Lab資料にある活用方針を、実装の順番と安全境界にまとめました。</p>
+          <div class="hero-meta"><span class="meta-chip primary">Implementation assistant</span><span class="meta-chip">Human-verified</span><span class="meta-chip">Repo first</span></div>
+        </div>
+        <aside class="hero-side">
+          <div class="module-index">AI-01</div>
+          <h2>このページの位置づけ</h2>
+          <p>ローカルのインターン資料に記載されたClaude Code経験・AI支援方針の整理です。製品仕様や正式なラボ方針を示すものではありません。</p>
+          <div class="hero-finish"><strong>完了条件：</strong> AIに任せる実装と、人間が判断する研究事項を分けて説明できる。</div>
+        </aside>
+      </div>
+    </section>
+
+    <div class="notice warning">
+      <strong>データ利用許可が先</strong>
+      <p>患者情報、未公開データ、ラボ承認前のファイルをClaude Codeや外部AIへ入力しないでください。使用環境、保存、ログ、外部送信、公開範囲を研究室へ確認してから始めます。</p>
+    </div>
+
+    <div class="page-layout">
+      <nav class="toc" aria-label="このページの目次">
+        <p class="toc-title">On this page</p>
+        <a href="#role">役割</a>
+        <a href="#use-cases">使う場所</a>
+        <a href="#workflow">実装フロー</a>
+        <a href="#prompts">依頼テンプレート</a>
+        <a href="#division">Scienceとの分担</a>
+        <a href="#guardrails">安全境界</a>
+        <a href="#pilot">4週間pilot</a>
+      </nav>
+
+      <article class="article">
+        <section class="article-section" id="role" aria-labelledby="role-title">
+          <p class="eyebrow">Core role</p>
+          <h2 id="role-title">問いを決めず、決まった問いを実装する。</h2>
+          <p class="article-intro">Claude Codeは、研究者の代わりに生物学的意味、sample除外、臨床的主張を確定するものではありません。入力、処理、出力、検証をコードとして明示する補助者です。</p>
+          <div class="principle">
+            <strong>Researcher owns the claim. Code makes the path traceable.</strong>
+            <p>研究者が問い、experimental unit、primary metric、許可範囲を決め、Claude Codeがloader、検証、metric、test、reportへ落とし込みます。</p>
+          </div>
+        </section>
+
+        <section class="article-section" id="use-cases" aria-labelledby="use-cases-title">
+          <p class="eyebrow">Six useful jobs</p>
+          <h2 id="use-cases-title">研究repoで任せる6つの仕事。</h2>
+          <p class="article-intro">最初から大規模なAIモデルを作らず、測定・品質管理・再実行性を固めます。</p>
+          <div class="claude-code-grid">
+            <article class="claude-code-card"><span>01 / STRUCTURE</span><h3>repoを整える</h3><p>raw、processed、src、tests、config、reportsを分け、データをGitへ入れない構造を作る。</p></article>
+            <article class="claude-code-card"><span>02 / VALIDATE</span><h3>入力を検証する</h3><p>sample ID、run、batch、単位、pixel size、欠損、重複を読み込み時に確認する。</p></article>
+            <article class="claude-code-card"><span>03 / IMPLEMENT</span><h3>測定を実装する</h3><p>校正、segmentation、registration、metric計算を小さな関数へ分離する。</p></article>
+            <article class="claude-code-card"><span>04 / TEST</span><h3>不変条件をテスト</h3><p>既知寸法、同一入力、単位変換、空データ、失敗画像で期待結果を確認する。</p></article>
+            <article class="claude-code-card"><span>05 / REPORT</span><h3>QCを可視化する</h3><p>数値だけでなくoverlay、偏差マップ、QC flag、method versionを一緒に出す。</p></article>
+            <article class="claude-code-card"><span>06 / DOCUMENT</span><h3>方法と限界を残す</h3><p>README、再実行手順、入力条件、失敗条件、言えること／言えないことを記録する。</p></article>
+          </div>
+        </section>
+
+        <section class="article-section" id="workflow" aria-labelledby="workflow-title">
+          <p class="eyebrow">Implementation flow</p>
+          <h2 id="workflow-title">コードを書く前から、レビュー後まで。</h2>
+          <div class="steps">
+            <article class="step"><h3>人間がproject charterを承認</h3><p>研究上の問い、入力、experimental unit、primary metric、範囲外、データ利用を一文で固定します。</p></article>
+            <article class="step"><h3>Claude Codeへ制約と完了条件を渡す</h3><p>repo規約、read-onlyのraw、出力先、許可package、期待するtestとartifactを明記します。</p></article>
+            <article class="step"><h3>まずloaderと検証を作る</h3><p>解析より前にID、階層、単位、欠損、校正情報を検証し、壊れた入力で止まるようにします。</p></article>
+            <article class="step"><h3>小さなbaselineとtestを実装</h3><p>少数の承認済みsampleで測定し、既知値・手動reference・失敗例をtestへ含めます。</p></article>
+            <article class="step"><h3>差分と実行結果を人間が確認</h3><p>コード変更、overlay、metric表、警告、未解決事項を研究者へ提示します。</p></article>
+            <article class="step"><h3>固定versionから成果物を再生成</h3><p>configとmethod versionを残し、別の人が同じ入力から同じ図とCSVを作れるか確認します。</p><div class="step-output">DONE → CODE + TEST + OVERLAY + METHOD + LIMITATIONS</div></article>
+          </div>
+        </section>
+
+        <section class="article-section" id="prompts" aria-labelledby="prompts-title">
+          <p class="eyebrow">Request templates</p>
+          <h2 id="prompts-title">依頼には、判断済み事項を書く。</h2>
+          <p class="article-intro">下の文面は下書きです。実際のpath、データ分類、metric、ラボ規約に置き換えます。</p>
+          <div class="prompt-list">
+            <article class="prompt-item" data-prompt>
+              <button class="prompt-summary" type="button" aria-expanded="false"><span class="prompt-number">01</span><span><strong>解析repoの骨格を作る</strong><small>rawを変更せず、実装と成果物を分離</small></span><span class="prompt-toggle" aria-hidden="true">+</span></button>
+              <div class="prompt-body" hidden><div class="prompt-text" data-copy>この研究repoに、src / tests / config / reports / notebooksを作ってください。data/rawはread-onlyとして扱い、Git対象外を維持してください。まず既存構成と規約を確認し、変更計画を示してください。入力を変更せず、成果物はreports以下へ出します。完了条件は、READMEの再実行手順と最小testが通ることです。<button class="copy-button" type="button">COPY</button></div></div>
+            </article>
+            <article class="prompt-item" data-prompt>
+              <button class="prompt-summary" type="button" aria-expanded="false"><span class="prompt-number">02</span><span><strong>データschemaを監査する</strong><small>ID、階層、単位、欠損、重複</small></span><span class="prompt-toggle" aria-hidden="true">+</span></button>
+              <div class="prompt-body" hidden><div class="prompt-text" data-copy>解析はまだ行わず、承認済みsample tableのschemaだけを監査してください。study / experiment / print_run / bioink_batch / construct / timepoint / fieldの階層、単位、欠損、重複、参照切れを確認し、問題一覧とdata dictionary案を出してください。科学的な除外判断はせず、確認が必要な項目として返してください。<button class="copy-button" type="button">COPY</button></div></div>
+            </article>
+            <article class="prompt-item" data-prompt>
+              <button class="prompt-summary" type="button" aria-expanded="false"><span class="prompt-number">03</span><span><strong>測定とtestを実装する</strong><small>既知値、手動reference、失敗例</small></span><span class="prompt-toggle" aria-hidden="true">+</span></button>
+              <div class="prompt-body" hidden><div class="prompt-text" data-copy>承認済みのprimary metricを1つだけ実装してください。単位と校正を明示し、既知寸法、同一入力の再実行、空入力、範囲外値のtestを追加してください。全sampleにoverlayまたはQC flagを保存し、parameterをsampleごとに後付け調整しないでください。未確定の研究判断はTODOとして止めてください。<button class="copy-button" type="button">COPY</button></div></div>
+            </article>
+            <article class="prompt-item" data-prompt>
+              <button class="prompt-summary" type="button" aria-expanded="false"><span class="prompt-number">04</span><span><strong>研究者レビュー用にまとめる</strong><small>差分、結果、限界、未解決事項</small></span><span class="prompt-toggle" aria-hidden="true">+</span></button>
+              <div class="prompt-body" hidden><div class="prompt-text" data-copy>コード差分、test結果、各sampleのQC、手動referenceとの差、failure modeを研究者レビュー用に1ページで要約してください。「この結果から言えること」「言えないこと」「研究者の確認が必要なこと」を分け、元sampleとmethod versionへ追跡できるようにしてください。新しい科学的主張は追加しないでください。<button class="copy-button" type="button">COPY</button></div></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="article-section" id="division" aria-labelledby="division-title">
+          <p class="eyebrow">Code × Science</p>
+          <h2 id="division-title">実装と研究実行を分担する。</h2>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>仕事</th><th>Claude Code</th><th>Claude Science</th><th>人間</th></tr></thead>
+              <tbody>
+                <tr><td><strong>問い・metric</strong></td><td>型やconfigへ反映</td><td>Project instructionsへ反映</td><td>科学的に決定</td></tr>
+                <tr><td><strong>解析実装</strong></td><td>script、test、Git差分</td><td>必要に応じてcode実行</td><td>方法を承認</td></tr>
+                <tr><td><strong>データアクセス</strong></td><td>承認済み環境内だけ</td><td>Folder permissionを提示</td><td>利用可否を決定</td></tr>
+                <tr><td><strong>成果物</strong></td><td>図、CSV、report生成</td><td>ArtifactとProvenanceを保存</td><td>内容と共有範囲を承認</td></tr>
+                <tr><td><strong>検証</strong></td><td>unit / integration test</td><td>実行記録との照合補助</td><td>生物学・統計・研究妥当性を確認</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="article-section" id="guardrails" aria-labelledby="guardrails-title">
+          <p class="eyebrow">Guardrails</p>
+          <h2 id="guardrails-title">AIへ渡さない判断を先に決める。</h2>
+          <div class="guardrails">
+            <article class="guardrail"><h3>Raw dataを固定</h3><ul><li>入力を上書きしない</li><li>派生データを別folderへ</li><li>sample IDで出力へ追跡</li></ul></article>
+            <article class="guardrail"><h3>未公開情報を守る</h3><ul><li>外部AI利用を事前確認</li><li>個人GitHub・cloudへ置かない</li><li>ログと保存場所を確認</li></ul></article>
+            <article class="guardrail"><h3>研究判断を戻す</h3><ul><li>除外を自動確定しない</li><li>生物学的意味を断定しない</li><li>臨床的主張を作らない</li></ul></article>
+            <article class="guardrail"><h3>失敗を成果物に含める</h3><ul><li>代表画像だけを選ばない</li><li>overlayとQC flagを全件保存</li><li>適用範囲とfailure modeを明記</li></ul></article>
+          </div>
+        </section>
+
+        <section class="article-section" id="pilot" aria-labelledby="pilot-title">
+          <p class="eyebrow">Four-week integration</p>
+          <h2 id="pilot-title">QC pilotでのClaude Codeの位置。</h2>
+          <div class="week-plan">
+            <article class="week"><span class="week-label">WEEK 1</span><h3>定義をコード化</h3><ul><li>charterとdata dictionaryを読む</li><li>repo構造と入力検証</li><li>未確定事項を質問として返す</li></ul></article>
+            <article class="week"><span class="week-label">WEEK 2</span><h3>baseline実装</h3><ul><li>loader、校正、metric</li><li>overlayとQC flag</li><li>既知値のtest</li></ul></article>
+            <article class="week"><span class="week-label">WEEK 3</span><h3>reference比較</h3><ul><li>手動値との差を計算</li><li>failure modeを分類</li><li>個別調整を減らす</li></ul></article>
+            <article class="week"><span class="week-label">WEEK 4</span><h3>再実行可能に渡す</h3><ul><li>固定configで全再生成</li><li>methodと限界を文書化</li><li>研究者レビューへ提出</li></ul></article>
+          </div>
+          <a class="next-page" href="claude-science-big-lab.html"><span>NEXT / CS-04</span><strong>Claude Science側の4週間pilotを見る</strong><b aria-hidden="true">→</b></a>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <footer class="page-footer">
+    <div class="footer-inner">
+      <div><div class="footer-title">BiG Lab Working Guide</div><p class="footer-copy">Claude Codeを研究者の代替ではなく、再現可能な実装・検証・文書化を支える補助として整理。</p></div>
+      <div class="footer-meta">AI-01 / CLAUDE CODE<br>LOCAL USE GUIDE</div>
+    </div>
+  </footer>
+  <div class="sr-only" id="copy-status" role="status" aria-live="polite"></div>
+  <script src="../assets/claude-science-guide.js"></script>
+  <script src="../assets/bilingual-data.js"></script>
+  <script src="../assets/bilingual.js"></script>
+  <script src="../assets/copy-tools.js"></script>
+  <script src="../assets/site-directory.js"></script>
+</body>
+</html>

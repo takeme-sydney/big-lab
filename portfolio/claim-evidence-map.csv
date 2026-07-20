@@ -1,0 +1,7 @@
+stage,scientific_purpose,ai_support,traceable_output,human_owns,portfolio_example
+Introduction,Define the evidence gap,"Parallel literature search; source and counter-evidence extraction","Evidence table; citation trail; gap statement draft","Research gap; selected evidence; final objective","Need for sample-level traceable geometry QC"
+Methods,Make the analysis reproducible,"Implement approved loader metric tests; connect run provenance","Code; config; method draft; test report","Method validity; manual reference; analysis plan","Best-fit radius plus overlay and QC triggers"
+Results,Show all samples and uncertainty,"Generate all-sample plots 3D overlays and failure registry","Figure set; captions; sample source links","Statistics; exclusions; result interpretation","12 constructs across 3 batches including C08 failure"
+Discussion,Separate observation claim and limitation,"Audit claims against evidence; search alternative explanations","Claim matrix; contradiction list; limitation register","Biological meaning; causality; generalisability","No claim of biological optical or clinical performance"
+Poster,Create one review path,"Recompose validated figures and approved claims only","A0/A3 poster; graphical abstract; presentation figure","Emphasis; authorship; publication and sharing","Problem to method to all-sample result to limitation to next test"
+

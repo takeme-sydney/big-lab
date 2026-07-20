@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Claude Code・Claude Science、マルチエージェント、データ可視化、3Dデザイン、ポスター型可視化という5つの強みを、BiG Labの研究と論文制作にどう活かすかをまとめた実践マップ。">
+  <meta name="theme-color" content="#f3f5f7">
+  <title>5 Research Superpowers — BiG Lab</title>
+  <link rel="stylesheet" href="../assets/research-superpowers.css">
+  <link rel="stylesheet" href="../assets/bilingual.css">
+  <link rel="stylesheet" href="../assets/copy-tools.css">
+  <link rel="stylesheet" href="../assets/site-directory.css">
+  <link rel="stylesheet" href="../assets/google-docs-typography.css">
+  <link rel="stylesheet" href="../assets/monochrome-theme.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へ移動</a>
+
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="BiG Lab資料ポータルへ戻る">
+      <span class="brand-mark" aria-hidden="true">B<span>i</span>G</span>
+      <span class="brand-copy">RESEARCH AMPLIFIER<small>FIVE CAPABILITIES / ONE SYSTEM</small></span>
+    </a>
+    <nav class="top-nav" aria-label="ページ内ナビゲーション">
+      <a href="#strengths">5つの強み</a>
+      <a href="#system">研究フロー</a>
+      <a href="#paper">論文への活用</a>
+      <a href="#pilot">最初のpilot</a>
+    </nav>
+    <button class="print-button" type="button" data-print aria-label="このページを印刷またはPDF保存">
+      <span>PRINT / PDF</span>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 9V3h10v6M7 18H5a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2M7 14h10v7H7z"/></svg>
+    </button>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-copy">
+        <p class="kicker"><span>BiG LAB</span> / ACADEMIC CAPABILITY MAP · 2026</p>
+        <h1 id="hero-title">
+          <span class="hero-count">5</span>
+          <span class="hero-words">RESEARCH<br><em>SUPERPOWERS</em></span>
+        </h1>
+        <p class="hero-lede">別々のスキルではない。<strong>研究の問いを、再現できる解析、理解できる図、共有できる論文へ変える一つのシステム。</strong></p>
+        <div class="hero-actions">
+          <a class="primary-action" href="#strengths">強みを見る <span aria-hidden="true">↘</span></a>
+          <span class="edition">01 — ONE-PAGE RESEARCH MAP</span>
+        </div>
+      </div>
+
+      <div class="hero-orbit" aria-label="5つの強みの概要">
+        <svg class="orbit-lines" viewBox="0 0 520 520" role="img" aria-label="5つの能力が研究成果へ集約する図">
+          <circle cx="260" cy="260" r="192"/>
+          <circle cx="260" cy="260" r="126"/>
+          <path d="M260 260 260 42M260 260 467 193M260 260 389 436M260 260 131 436M260 260 53 193"/>
+        </svg>
+        <div class="orbit-core"><span>ONE</span><strong>RESEARCH<br>STORY</strong><small>EVIDENCE → IMPACT</small></div>
+        <div class="orbit-node node-1"><b>01</b><span>AI<br>RESEARCH OPS</span></div>
+        <div class="orbit-node node-2"><b>02</b><span>MULTI<br>AGENT</span></div>
+        <div class="orbit-node node-3"><b>03</b><span>DATA<br>VIS</span></div>
+        <div class="orbit-node node-4"><b>04</b><span>3D<br>DESIGN</span></div>
+        <div class="orbit-node node-5"><b>05</b><span>POSTER<br>VIS</span></div>
+      </div>
+
+      <aside class="message-strip">
+        <span>THE OPPORTUNITY</span>
+        <p>“These capabilities can be highly valuable in academia — and can be applied directly to future research papers.”</p>
+        <small>FROM CAPABILITY → TO RESEARCH PRACTICE</small>
+      </aside>
+    </section>
+
+    <section class="intro section-pad" aria-labelledby="intro-title">
+      <div class="section-index"><span>00</span><small>POSITION</small></div>
+      <div class="section-heading">
+        <p class="eyebrow">The central idea</p>
+        <h2 id="intro-title">強みは「作れること」ではなく、<br><em>研究のボトルネックを外せること。</em></h2>
+      </div>
+      <div class="intro-note">
+        <p><strong>BiG Labでの価値</strong></p>
+        <p>角膜construct、3D bioprinting、biomaterial、画像・測定データの間をつなぎ、研究者が比較・検証・共有しやすい成果物へ変換する。</p>
+      </div>
+      <div class="naming-note" role="note">
+        <span>名称の整理</span>
+        <p><strong>Claude Code</strong>は解析実装、<strong>Claude Science</strong>は研究Project・実行・由来管理を担う別の環境です。このページでは二つを「AI Research Ops」として連携させます。</p>
+      </div>
+    </section>
+
+    <section class="strengths" id="strengths" aria-labelledby="strengths-title">
+      <div class="strengths-head section-pad">
+        <div class="section-index light"><span>01</span><small>CAPABILITIES</small></div>
+        <div class="section-heading">
+          <p class="eyebrow">Five capabilities</p>
+          <h2 id="strengths-title">5つをつなぐと、<br>研究の速度と伝達力が変わる。</h2>
+        </div>
+        <p class="strengths-intro">各カードは「できること」ではなく、研究での入力・変換・成果物で整理しています。カードを選ぶと、下の活用例が切り替わります。</p>
+      </div>
+
+      <div class="capability-selector" role="tablist" aria-label="5つの研究能力">
+        <button class="capability-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="capability-panel" data-capability="ai">
+          <span class="tab-number">01</span><span class="tab-name">AI RESEARCH<br>OPS</span><span class="tab-mark">↗</span>
+        </button>
+        <button class="capability-tab" type="button" role="tab" aria-selected="false" aria-controls="capability-panel" data-capability="agents">
+          <span class="tab-number">02</span><span class="tab-name">MULTI-AGENT<br>SYSTEMS</span><span class="tab-mark">↗</span>
+        </button>
+        <button class="capability-tab" type="button" role="tab" aria-selected="false" aria-controls="capability-panel" data-capability="data">
+          <span class="tab-number">03</span><span class="tab-name">DATA<br>VISUALISATION</span><span class="tab-mark">↗</span>
+        </button>
+        <button class="capability-tab" type="button" role="tab" aria-selected="false" aria-controls="capability-panel" data-capability="three-d">
+          <span class="tab-number">04</span><span class="tab-name">3D<br>DESIGN</span><span class="tab-mark">↗</span>
+        </button>
+        <button class="capability-tab" type="button" role="tab" aria-selected="false" aria-controls="capability-panel" data-capability="poster">
+          <span class="tab-number">05</span><span class="tab-name">POSTER<br>DATA VIS</span><span class="tab-mark">↗</span>
+        </button>
+      </div>
+
+      <article class="capability-panel" id="capability-panel" aria-live="polite">
+        <div class="panel-identity">
+          <span class="panel-number" data-panel-number>01</span>
+          <p data-panel-label>REPRODUCIBLE IMPLEMENTATION</p>
+          <h3 data-panel-title>AI Research Ops</h3>
+          <p class="panel-summary" data-panel-summary>Claude Codeで解析を実装し、Claude Scienceで計画・実行・Artifact・Provenanceをつなぐ。</p>
+        </div>
+        <div class="panel-flow" aria-label="入力から研究成果物まで">
+          <div><span>INPUT</span><strong data-panel-input>研究の問い／承認済みデータ</strong></div>
+          <i aria-hidden="true">→</i>
+          <div><span>TRANSFORM</span><strong data-panel-transform>schema検証・解析・test・記録</strong></div>
+          <i aria-hidden="true">→</i>
+          <div><span>OUTPUT</span><strong data-panel-output>再実行可能なcode＋figure＋method</strong></div>
+        </div>
+        <div class="panel-example">
+          <span>BIG LAB APPLICATION</span>
+          <p data-panel-example>角膜constructの画像からradius / thicknessを定量化し、全sampleのoverlay、QC flag、method versionを同時に出す。</p>
+        </div>
+        <div class="panel-guardrail">
+          <span>HUMAN CHECK</span>
+          <p data-panel-guardrail>研究者がmetric、除外、解釈、共有範囲を承認する。</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="system section-pad" id="system" aria-labelledby="system-title">
+      <div class="section-index"><span>02</span><small>THE SYSTEM</small></div>
+      <div class="section-heading wide-heading">
+        <p class="eyebrow">Connected research loop</p>
+        <h2 id="system-title">問いから論文まで、<br><em>5つの強みをリレーする。</em></h2>
+      </div>
+
+      <div class="research-loop" aria-label="研究の問いから論文までの6段階">
+        <article class="loop-step step-question">
+          <span class="loop-index">01 / FRAME</span>
+          <div class="loop-symbol">?</div>
+          <h3>問いを固定する</h3>
+          <p>仮説、experimental unit、primary outcome、範囲外を研究者と合意。</p>
+          <small>HUMAN LEAD</small>
+        </article>
+        <article class="loop-step">
+          <span class="loop-index">02 / ORCHESTRATE</span>
+          <div class="loop-symbol nodes"><i></i><i></i><i></i></div>
+          <h3>役割を分ける</h3>
+          <p>探索・解析・検証・文章レビューを専門agentへ分割し、最後に統合。</p>
+          <small>MULTI-AGENT</small>
+        </article>
+        <article class="loop-step">
+          <span class="loop-index">03 / BUILD</span>
+          <div class="loop-symbol code">{ }</div>
+          <h3>解析を実装する</h3>
+          <p>入力検証、baseline、test、実行記録を固定し、raw dataを保護。</p>
+          <small>CODE × SCIENCE</small>
+        </article>
+        <article class="loop-step">
+          <span class="loop-index">04 / MODEL</span>
+          <div class="loop-symbol cube"><i></i></div>
+          <h3>形状を測る</h3>
+          <p>理想形状と実測constructを3Dで重ね、偏差・厚み・曲率を比較。</p>
+          <small>3D DESIGN</small>
+        </article>
+        <article class="loop-step">
+          <span class="loop-index">05 / EXPLAIN</span>
+          <div class="loop-symbol chart"><i></i><i></i><i></i></div>
+          <h3>差を見せる</h3>
+          <p>effect、uncertainty、failure modeを、判断に必要な図へ変換。</p>
+          <small>DATA VIS</small>
+        </article>
+        <article class="loop-step step-share">
+          <span class="loop-index">06 / SHARE</span>
+          <div class="loop-symbol page"><i></i><i></i></div>
+          <h3>一枚に統合する</h3>
+          <p>問い・方法・結果・限界・次の実験を、論文図とポスターへ展開。</p>
+          <small>POSTER VIS</small>
+        </article>
+      </div>
+
+      <div class="loop-return"><span>VERIFY / LEARN / ITERATE</span><i></i><b aria-hidden="true">↖</b></div>
+    </section>
+
+    <section class="use-cases" aria-labelledby="cases-title">
+      <div class="case-title section-pad">
+        <div class="section-index light"><span>03</span><small>BiG USE CASES</small></div>
+        <div class="section-heading">
+          <p class="eyebrow">Where this becomes useful</p>
+          <h2 id="cases-title">BiG Labで価値に変わる<br>4つの場面。</h2>
+        </div>
+      </div>
+      <div class="case-grid">
+        <article class="case case-featured">
+          <div class="case-top"><span>01 / GEOMETRY QC</span><b>FIRST PILOT</b></div>
+          <h3>Curved Corneal<br>Construct</h3>
+          <p>設計した曲率・厚みと、印刷後constructの実測形状を比較。sampleごとの偏差を3D overlayと数値で残す。</p>
+          <div class="cornea-visual" aria-hidden="true">
+            <svg viewBox="0 0 560 250">
+              <defs><linearGradient id="cornea" x1="0" x2="1"><stop stop-color="#7ce3cf" stop-opacity=".15"/><stop offset=".5" stop-color="#7ce3cf" stop-opacity=".75"/><stop offset="1" stop-color="#ffdf68" stop-opacity=".18"/></linearGradient></defs>
+              <path class="cornea-grid" d="M55 198C147 17 413 17 505 198M84 198C168 56 392 56 476 198M114 198C187 92 373 92 446 198M145 198C205 127 355 127 415 198M178 198C226 157 334 157 382 198"/>
+              <path class="cornea-main" d="M52 197C147 15 414 15 508 197L474 200C394 72 166 72 86 200Z"/>
+              <path class="cornea-measure" d="M280 47v112M265 48h30M265 159h30"/>
+              <text x="303" y="111">THICKNESS</text>
+            </svg>
+          </div>
+          <ul class="case-artifacts">
+            <li><span>3D</span>design vs. measured mesh</li>
+            <li><span>VIS</span>deviation / thickness map</li>
+            <li><span>AI</span>tested QC pipeline</li>
+          </ul>
+        </article>
+
+        <article class="case">
+          <div class="case-top"><span>02 / EVIDENCE MAP</span></div>
+          <h3>Photopolymer<br>Biomaterials</h3>
+          <p>材料・photoinitiator・光条件・力学・細胞安全性を、論文横断のevidence tableへ変換。</p>
+          <div class="mini-matrix" aria-label="文献エビデンスの模式図">
+            <span></span><b>MAT</b><b>LIGHT</b><b>MECH</b><b>CELL</b>
+            <strong>P01</strong><i class="hot"></i><i></i><i class="mid"></i><i class="hot"></i>
+            <strong>P02</strong><i></i><i class="hot"></i><i class="hot"></i><i></i>
+            <strong>P03</strong><i class="mid"></i><i class="mid"></i><i></i><i class="hot"></i>
+            <strong>P04</strong><i class="hot"></i><i></i><i class="mid"></i><i class="mid"></i>
+          </div>
+          <small class="case-result">OUTPUT → Figure 1: evidence landscape</small>
+        </article>
+
+        <article class="case">
+          <div class="case-top"><span>03 / DESIGN SPACE</span></div>
+          <h3>Print Parameter<br>Exploration</h3>
+          <p>print speed、layer height、light doseなどを、品質指標と結びつけて多変量で比較。</p>
+          <div class="dot-field" aria-label="印刷条件と品質の模式的な散布図">
+            <i style="--x:10%;--y:74%;--s:8px"></i><i style="--x:18%;--y:62%;--s:11px"></i><i style="--x:27%;--y:70%;--s:6px"></i><i style="--x:36%;--y:45%;--s:14px"></i><i style="--x:45%;--y:52%;--s:9px"></i><i style="--x:53%;--y:30%;--s:12px"></i><i style="--x:61%;--y:42%;--s:7px"></i><i style="--x:70%;--y:18%;--s:15px"></i><i style="--x:80%;--y:27%;--s:9px"></i><i style="--x:89%;--y:10%;--s:12px"></i>
+          </div>
+          <small class="case-result">OUTPUT → decision plot + next experiment</small>
+        </article>
+
+        <article class="case case-yellow">
+          <div class="case-top"><span>04 / RESEARCH STORY</span></div>
+          <h3>Paper → Poster<br>→ Presentation</h3>
+          <p>同じvalidated datasetから、論文図、学会ポスター、lab meeting用スライドを一貫した物語で生成。</p>
+          <div class="format-stack" aria-hidden="true">
+            <span class="format-paper"><i></i><i></i><i></i></span>
+            <span class="format-poster"><i></i><i></i><i></i><i></i></span>
+            <span class="format-slide"><i></i><i></i></span>
+          </div>
+          <small class="case-result">ONE SOURCE → THREE FORMATS</small>
+        </article>
+      </div>
+    </section>
+
+    <section class="paper section-pad" id="paper" aria-labelledby="paper-title">
+      <div class="section-index"><span>04</span><small>PAPER MAP</small></div>
+      <div class="section-heading wide-heading">
+        <p class="eyebrow">Apply it to a future paper</p>
+        <h2 id="paper-title">論文の各セクションに、<br><em>役割と成果物を割り当てる。</em></h2>
+      </div>
+
+      <div class="paper-map" role="table" aria-label="論文制作と5つの強みの対応表">
+        <div class="paper-row paper-head" role="row">
+          <span role="columnheader">PAPER STAGE</span><span role="columnheader">PRIMARY CAPABILITY</span><span role="columnheader">WHAT IT DOES</span><span role="columnheader">TRACEABLE OUTPUT</span><span role="columnheader">HUMAN OWNS</span>
+        </div>
+        <div class="paper-row" role="row">
+          <strong role="cell"><b>01</b>Introduction</strong><span role="cell"><i class="cap-dot agent"></i>Multi-agent</span><p role="cell">文献探索、立場の比較、evidence gapの抽出を分担。</p><span role="cell">Evidence table<br>citation trail</span><span role="cell">研究上のgap</span>
+        </div>
+        <div class="paper-row" role="row">
+          <strong role="cell"><b>02</b>Methods</strong><span role="cell"><i class="cap-dot ai"></i>AI Research Ops</span><p role="cell">解析手順、parameter、version、test、失敗条件を固定。</p><span role="cell">Code + config<br>method draft</span><span role="cell">方法の妥当性</span>
+        </div>
+        <div class="paper-row" role="row">
+          <strong role="cell"><b>03</b>Geometry</strong><span role="cell"><i class="cap-dot three-d"></i>3D Design</span><p role="cell">設計形状と実測形状を同じ座標・単位で比較。</p><span role="cell">Mesh + overlay<br>deviation map</span><span role="cell">比較基準</span>
+        </div>
+        <div class="paper-row" role="row">
+          <strong role="cell"><b>04</b>Results</strong><span role="cell"><i class="cap-dot data"></i>Data Visualisation</span><p role="cell">effect size、ばらつき、batch、failureを見える形にする。</p><span role="cell">Figure set<br>caption draft</span><span role="cell">統計と解釈</span>
+        </div>
+        <div class="paper-row" role="row">
+          <strong role="cell"><b>05</b>Discussion</strong><span role="cell"><i class="cap-dot agent"></i>Multi-agent</span><p role="cell">主張、反証、限界、代替説明を別視点でレビュー。</p><span role="cell">Claim matrix<br>limitation list</span><span role="cell">最終的な主張</span>
+        </div>
+        <div class="paper-row" role="row">
+          <strong role="cell"><b>06</b>Dissemination</strong><span role="cell"><i class="cap-dot poster"></i>Poster Data Vis</span><p role="cell">論文の中心メッセージを一枚の視覚ストーリーへ再構成。</p><span role="cell">Poster + graphical<br>abstract</span><span role="cell">公開・共有範囲</span>
+        </div>
+      </div>
+
+      <div class="paper-principle">
+        <span>THE RULE</span>
+        <strong>AI can accelerate the path.<br>It cannot own the scientific claim.</strong>
+        <p>AIは探索・実装・比較・可視化・レビューを支援する。研究者は、問い、データ利用、方法、除外、統計、解釈、著者性、公開範囲に責任を持つ。</p>
+      </div>
+    </section>
+
+    <section class="pilot" id="pilot" aria-labelledby="pilot-title">
+      <div class="pilot-intro section-pad">
+        <div class="section-index light"><span>05</span><small>START SMALL</small></div>
+        <div class="section-heading">
+          <p class="eyebrow">Recommended first pilot</p>
+          <h2 id="pilot-title">最初は4週間。<br>一つのconstruct、<br>一つのmetric。</h2>
+        </div>
+        <div class="pilot-thesis">
+          <span>PILOT QUESTION</span>
+          <p>既存の角膜construct画像／3D dataから、承認済みの一つの形状指標を再現可能に測り、研究者が判断できる一枚のQC posterにできるか？</p>
+        </div>
+      </div>
+
+      <ol class="weeks">
+        <li>
+          <span class="week-no">W1</span>
+          <div><small>DEFINE</small><h3>問いとデータを固定</h3><p>利用許可、sample階層、metric、manual reference、成功条件を確認。</p></div>
+          <b>CHARTER</b>
+        </li>
+        <li>
+          <span class="week-no">W2</span>
+          <div><small>BUILD</small><h3>baselineを実装</h3><p>loader、校正、測定、test、全sampleのoverlayとQC flag。</p></div>
+          <b>CODE + TEST</b>
+        </li>
+        <li>
+          <span class="week-no">W3</span>
+          <div><small>COMPARE</small><h3>3Dとdataで比較</h3><p>設計値／手動値との差、ばらつき、failure modeを可視化。</p></div>
+          <b>FIGURE SET</b>
+        </li>
+        <li>
+          <span class="week-no">W4</span>
+          <div><small>COMMUNICATE</small><h3>一枚でレビュー</h3><p>方法、結果、限界、次の実験をposter形式へまとめ、研究者が検証。</p></div>
+          <b>QC POSTER</b>
+        </li>
+      </ol>
+
+      <div class="success-bar">
+        <span>SUCCESS ≠ A PERFECT APP</span>
+        <strong>同じ入力から、同じ結果を再生成でき、失敗例まで説明できること。</strong>
+      </div>
+    </section>
+
+    <section class="takeaway section-pad" aria-labelledby="takeaway-title">
+      <div class="takeaway-mark" aria-hidden="true">5→1</div>
+      <div>
+        <p class="eyebrow">The takeaway</p>
+        <h2 id="takeaway-title">5つの強みを、<br>一つの研究成果へ。</h2>
+      </div>
+      <div class="takeaway-copy">
+        <p>Takumiの強みは、AI、コード、3D、デザインを別々に見せることではありません。</p>
+        <p><strong>研究者の問いを理解し、複雑な証拠を検証可能な形にし、他の人が使える・読める・判断できる成果物へ統合すること。</strong></p>
+        <a href="research-portfolio.html">実際の成果物portfolioを開く <span aria-hidden="true">→</span></a>
+        <a href="index.html">BiG Lab資料ポータルへ戻る <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div><strong>BiG LAB / RESEARCH AMPLIFIER</strong><span>Capability map for future academic work</span></div>
+    <div><span>LOCAL WORKING DOCUMENT</span><span>17 JUL 2026 · AUSTRALIA/SYDNEY</span></div>
+  </footer>
+
+  <script src="../assets/research-superpowers.js"></script>
+  <script src="../assets/bilingual-data.js"></script>
+  <script src="../assets/bilingual.js"></script>
+  <script src="../assets/copy-tools.js"></script>
+  <script src="../assets/site-directory.js"></script>
+</body>
+</html>

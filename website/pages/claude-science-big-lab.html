@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="BiG LabでClaude Scienceを試すためのCurved Corneal Construct QC pilot、4週間計画、folder構造、測定境界、完了条件。">
+  <meta name="theme-color" content="#f3f5f7">
+  <title>BiG LabでClaude Scienceを使う — Claude Science Guide</title>
+  <link rel="stylesheet" href="../assets/claude-science-guide.css">
+  <link rel="stylesheet" href="../assets/bilingual.css">
+  <link rel="stylesheet" href="../assets/copy-tools.css">
+  <link rel="stylesheet" href="../assets/site-directory.css">
+  <link rel="stylesheet" href="../assets/google-docs-typography.css">
+  <link rel="stylesheet" href="../assets/monochrome-theme.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <header class="site-header">
+    <div class="header-main">
+      <a class="brand" href="claude-science-overview.html" aria-label="Claude Science Guide ホーム">
+        <span class="brand-mark" aria-hidden="true">CS</span>
+        <span class="brand-copy">Claude Science Guide<small>BIG LAB / JAPANESE FIELD MANUAL</small></span>
+      </a>
+      <span class="header-note">Unofficial · Verified 16 Jul 2026</span>
+    </div>
+    <nav class="site-nav" aria-label="ガイドのページ">
+      <div class="site-nav-inner">
+        <a href="index.html">統合ホーム</a>
+        <a href="claude-science-overview.html">概要</a>
+        <a href="getting-started.html">導入する</a>
+        <a href="workflow.html">研究を進める</a>
+        <a href="claude-science-big-lab.html" aria-current="page">BiG Labで使う</a>
+        <a href="safety.html">安全に使う</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-hero subpage-hero" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <div>
+          <p class="spec-label">Manual CS-04 / BiG Lab pilot</p>
+          <h1 id="hero-title">一つのconstruct。<br>一つの指標。四週間。</h1>
+          <p class="hero-copy">BiG Labでの初期導入は、承認済みの少数sampleを使い、<strong>形状または顕微鏡QCを再現可能にする小さなpilot</strong>から始めます。</p>
+          <div class="hero-meta"><span class="meta-chip primary">Recommended pilot</span><span class="meta-chip">Corneal biofabrication</span></div>
+        </div>
+        <div class="lab-hero-visual" aria-label="曲面角膜constructのコンセプトビジュアル">
+          <span class="lab-visual-label">CURVED CORNEAL CONSTRUCT / QC</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="notice warning">
+      <strong>これは正式な研究計画ではない</strong>
+      <p>公開情報とローカル資料から作った初期提案です。利用データ、測定法、AI入力、成果公開、著者資格、知財はPIと研究室の承認を優先します。</p>
+    </div>
+
+    <div class="page-layout">
+      <nav class="toc" aria-label="このページの目次">
+        <p class="toc-title">On this page</p>
+        <a href="#charter">Pilot charter</a>
+        <a href="#four-weeks">4週間計画</a>
+        <a href="#use-cases">候補課題</a>
+        <a href="#folders">Folder設計</a>
+        <a href="#brief">最初の依頼</a>
+        <a href="#measurement">測定境界</a>
+        <a href="#done">完了条件</a>
+      </nav>
+
+      <article class="article">
+        <section class="article-section" id="charter" aria-labelledby="charter-title">
+          <p class="eyebrow">Pilot charter</p>
+          <h2 id="charter-title">Curved Corneal Construct QC。</h2>
+          <p class="article-intro">CAD、校正済み写真、surface scan、OCTのうち利用可能な入力から、一つのprimary metricを安定して再生成できる状態を目指します。</p>
+          <dl class="charter">
+            <div class="charter-row"><dt>RESEARCH NEED</dt><dd>手作業で時間がかかるconstruct評価を、sample IDで追跡できるQCへ変える。</dd></div>
+            <div class="charter-row"><dt>INPUT</dt><dd>承認済みのCAD、写真、scan、OCT、manual referenceのいずれか。</dd></div>
+            <div class="charter-row"><dt>PRIMARY METRIC</dt><dd>曲率、厚さ、表面偏差、収縮率、layer continuityから一つ選ぶ。</dd></div>
+            <div class="charter-row"><dt>OUTPUT</dt><dd>QC overlay、metrics.csv、method.md、failure log、再実行script。</dd></div>
+            <div class="charter-row"><dt>VALIDATION</dt><dd>手動referenceとの誤差、bias、再現性、失敗する画像条件を示す。</dd></div>
+            <div class="charter-row"><dt>BOUNDARY</dt><dd>通常写真だけから透過率、haze、屈折率などの光学性能を主張しない。</dd></div>
+          </dl>
+        </section>
+
+        <section class="article-section" id="four-weeks" aria-labelledby="weeks-title">
+          <p class="eyebrow">Four-week plan</p>
+          <h2 id="weeks-title">理解から、再実行できる成果へ。</h2>
+          <div class="week-plan">
+            <article class="week"><span class="week-label">WEEK 01</span><h3>問いとデータを固定</h3><ul><li>manual bottleneckを確認</li><li>experimental unitを定義</li><li>metricを一つ選ぶ</li><li>charterとdata dictionaryを承認</li></ul></article>
+            <article class="week"><span class="week-label">WEEK 02</span><h3>最小baselineを作る</h3><ul><li>raw data loader</li><li>calibration / segmentation</li><li>sampleごとのoverlay</li><li>metric・unit・QC flagを保存</li></ul></article>
+            <article class="week"><span class="week-label">WEEK 03</span><h3>手動評価と比較</h3><ul><li>reference subsetと比較</li><li>誤差・bias・再現性</li><li>失敗条件を分類</li><li>scriptを再実行</li></ul></article>
+            <article class="week"><span class="week-label">WEEK 04</span><h3>研究判断へ渡す</h3><ul><li>rawから図とCSVを再生成</li><li>方法・結果・限界</li><li>5分demo</li><li>次の候補は最大2つ</li></ul></article>
+          </div>
+        </section>
+
+        <section class="article-section" id="use-cases" aria-labelledby="use-cases-title">
+          <p class="eyebrow">Candidate tasks</p>
+          <h2 id="use-cases-title">Claude Scienceを使う場所。</h2>
+          <p class="article-intro">最初から大規模な最適化へ進まず、既に取得しているdataを研究判断へ変える部分から始めます。</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>優先</th><th>候補課題</th><th>必要な入力</th><th>最初の成果</th></tr></thead>
+              <tbody>
+                <tr><td>1</td><td><strong>Geometry QC</strong><span class="cell-note">曲率・厚さ・偏差・収縮</span></td><td>CAD、写真、scan、OCT</td><td>2–4週</td></tr>
+                <tr><td>2</td><td><strong>Microscopy QC</strong><span class="cell-note">viability・coverage・continuity</span></td><td>承認済み画像、手動評価例</td><td>3–6週</td></tr>
+                <tr><td>3</td><td><strong>Evidence map</strong><span class="cell-note">material・method・metric</span></td><td>公開論文、review question</td><td>1–3週</td></tr>
+                <tr><td>4</td><td><strong>Experiment registry</strong><span class="cell-note">runとsampleの追跡</span></td><td>項目、命名規則、folder構造</td><td>1–3週</td></tr>
+                <tr><td>5</td><td><strong>Condition optimisation</strong><span class="cell-note">解釈可能な比較</span></td><td>整理済みの複数run data</td><td>6–12週以降</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="article-section" id="folders" aria-labelledby="folders-title">
+          <p class="eyebrow">Project structure</p>
+          <h2 id="folders-title">rawとoutputを物理的に分ける。</h2>
+          <p class="article-intro">Claude Scienceにはinputをread-only、outputだけをread &amp; writeで許可します。sample IDをfile名と表の両方に残します。</p>
+          <div class="folder-tree" aria-label="推奨folder構造">corneal-qc/
+├── 00_charter/
+│   ├── research_question.md
+│   └── data_dictionary.csv
+├── 01_raw/                 # READ ONLY
+│   ├── images/
+│   ├── scans/
+│   └── cad/
+├── 02_reference/
+│   └── manual_measurements.csv
+├── 03_output/              # READ &amp; WRITE
+│   ├── qc_overlays/
+│   ├── tables/
+│   └── figures/
+├── 04_code/
+└── README.md</div>
+        </section>
+
+        <section class="article-section" id="brief" aria-labelledby="brief-title">
+          <p class="eyebrow">First session</p>
+          <h2 id="brief-title">最初の依頼を具体化する。</h2>
+          <p class="article-intro">利用できる入力とmetricが未確定なら、解析を始めさせず、候補と必要条件を比較させます。</p>
+          <div class="prompt-text" data-copy>@[corneal-qc]を確認してください。
+
+目的:
+曲面角膜constructの[primary metric]を、
+sample IDで追跡できるQCとして再生成可能にする。
+
+制約:
+- 01_rawはread-only
+- experimental unitはconstruct
+- calibrationと単位を必ず記録
+- 全sampleのoverlayを保存
+- manual referenceとの差を評価
+- failure conditionを除外せず分類
+- 写真から測れない光学特性は主張しない
+
+まずコードを実行せず、
+入力確認、最小Plan、必要権限、Artifact、
+validation方法を提示してください。<button class="copy-button" type="button">COPY</button></div>
+        </section>
+
+        <section class="article-section" id="measurement" aria-labelledby="measurement-title">
+          <p class="eyebrow">Measurement boundary</p>
+          <h2 id="measurement-title">入力に合わせて、言えることを制限する。</h2>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>入力</th><th>測定候補</th><th>主な限界</th></tr></thead>
+              <tbody>
+                <tr><td>校正scale付き写真</td><td>直径、輪郭、投影面積、高さ、簡易曲率、収縮</td><td>3D表面全体と光学特性は測れない</td></tr>
+                <tr><td>複数角度写真 / surface scan</td><td>3D再構築、target mesh registration、偏差map</td><td>透明・湿潤試料は反射と輪郭が不安定</td></tr>
+                <tr><td>OCT / confocal z-stack</td><td>厚さ、前後面、層境界、局所曲率</td><td>装置calibrationと専門家の解釈が必要</td></tr>
+                <tr><td>Microscopy画像</td><td>viability、coverage、cell density、alignment</td><td>segmentation誤差とfield selectionを確認</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="principle">
+            <strong>「透明に見える」と「光学性能が高い」は別。</strong>
+            <p>通常写真は固定条件下の相対QCには使えても、透過率、haze、屈折率を直接主張する根拠にはなりません。</p>
+          </div>
+        </section>
+
+        <section class="article-section" id="done" aria-labelledby="done-title">
+          <p class="eyebrow">Definition of done</p>
+          <h2 id="done-title">完成は、精度だけで決めない。</h2>
+          <div class="permission-list">
+            <div class="permission-row"><strong>Traceable</strong><p>sample IDでinput、metric、QC、figureを追跡できる。</p><span>必須</span></div>
+            <div class="permission-row"><strong>Re-runnable</strong><p>rawから最終成果を別の人が再生成できる。</p><span>必須</span></div>
+            <div class="permission-row"><strong>Validated</strong><p>manual referenceとの差、bias、再現性を示す。</p><span>必須</span></div>
+            <div class="permission-row"><strong>Bounded</strong><p>適用範囲、失敗条件、言えないことを明記する。</p><span>必須</span></div>
+            <div class="permission-row"><strong>Approved</strong><p>データ利用、成果共有、次の実験判断を担当者が承認する。</p><span>PI / supervisor</span></div>
+          </div>
+          <a class="next-page" href="safety.html"><span>NEXT / CS-05</span><strong>データと権限の境界を確認する</strong><b aria-hidden="true">→</b></a>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <footer class="page-footer">
+    <div class="footer-inner">
+      <div><div class="footer-title">Claude Science Guide</div><p class="footer-copy">BiG Labでの最初の価値を、少数sampleの追跡可能なQCとして示すためのpilot案。</p></div>
+      <div class="footer-meta">CS-04 / BIG LAB PILOT<br>Independent guide · Australia/Sydney</div>
+    </div>
+  </footer>
+  <div class="sr-only" id="copy-status" role="status" aria-live="polite"></div>
+  <script src="../assets/claude-science-guide.js"></script>
+  <script src="../assets/bilingual-data.js"></script>
+  <script src="../assets/bilingual.js"></script>
+  <script src="../assets/copy-tools.js"></script>
+  <script src="../assets/site-directory.js"></script>
+</body>
+</html>

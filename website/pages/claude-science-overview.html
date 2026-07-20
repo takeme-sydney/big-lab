@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Claude Scienceを研究で使うための日本語ガイド。目的に合わせて導入、研究フロー、BiG Lab実践、安全管理のページを選べます。">
+  <meta name="theme-color" content="#f3f5f7">
+  <title>Claude Science Guide — 研究の仕事から読むページを選ぶ</title>
+  <link rel="stylesheet" href="../assets/claude-science-guide.css">
+  <link rel="stylesheet" href="../assets/bilingual.css">
+  <link rel="stylesheet" href="../assets/copy-tools.css">
+  <link rel="stylesheet" href="../assets/site-directory.css">
+  <link rel="stylesheet" href="../assets/google-docs-typography.css">
+  <link rel="stylesheet" href="../assets/monochrome-theme.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <header class="site-header">
+    <div class="header-main">
+      <a class="brand" href="claude-science-overview.html" aria-label="Claude Science Guide ホーム">
+        <span class="brand-mark" aria-hidden="true">CS</span>
+        <span class="brand-copy">Claude Science Guide<small>BIG LAB / JAPANESE FIELD MANUAL</small></span>
+      </a>
+      <span class="header-note">Unofficial · Verified 16 Jul 2026</span>
+    </div>
+    <nav class="site-nav" aria-label="ガイドのページ">
+      <div class="site-nav-inner">
+        <a href="index.html">統合ホーム</a>
+        <a href="claude-science-overview.html" aria-current="page">概要</a>
+        <a href="getting-started.html">導入する</a>
+        <a href="workflow.html">研究を進める</a>
+        <a href="claude-science-big-lab.html">BiG Labで使う</a>
+        <a href="safety.html">安全に使う</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-hero home-hero" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <div>
+          <p class="spec-label">Manual CS-01 / Start here</p>
+          <h1 id="hero-title">研究の仕事から、<br>読むページを選ぶ。</h1>
+          <p class="hero-copy"><strong>Claude Scienceは、科学研究のためのローカル型AIワークベンチです。</strong> このガイドは機能順ではなく、あなたが今したい仕事に合わせて5ページに分かれています。</p>
+          <div class="hero-meta" aria-label="ガイドの情報">
+            <span class="meta-chip primary">Public beta</span>
+            <span class="meta-chip">macOS 13+ / Linux x64</span>
+            <span class="meta-chip">Pro · Max · Team · Enterprise</span>
+          </div>
+        </div>
+
+        <nav class="route-board" aria-label="目的からページを選ぶ">
+          <div class="route-board-head"><strong>今、何をしたいですか？</strong><span>SELECT A TASK</span></div>
+          <a class="route-link" href="getting-started.html">
+            <span class="route-number">02</span>
+            <span><strong>初めて使う</strong><small>準備、インストール、最初の解析</small></span>
+            <span class="route-arrow" aria-hidden="true">→</span>
+          </a>
+          <a class="route-link" href="workflow.html">
+            <span class="route-number">03</span>
+            <span><strong>研究を進める</strong><small>計画、解析、Artifact、プロンプト</small></span>
+            <span class="route-arrow" aria-hidden="true">→</span>
+          </a>
+          <a class="route-link" href="claude-science-big-lab.html">
+            <span class="route-number">04</span>
+            <span><strong>BiG Labで試す</strong><small>角膜construct QCの4週間pilot</small></span>
+            <span class="route-arrow" aria-hidden="true">→</span>
+          </a>
+          <a class="route-link" href="safety.html">
+            <span class="route-number">05</span>
+            <span><strong>データの扱いを確認する</strong><small>Local-first、権限、機密情報、Beta制約</small></span>
+            <span class="route-arrow" aria-hidden="true">→</span>
+          </a>
+        </nav>
+      </div>
+    </section>
+
+    <div class="notice">
+      <strong>名称を先に整理</strong>
+      <p>正式名称は「Claude Science」です。「Claude Code Science」という製品名ではありません。Claude Codeはソフトウェア開発、Claude Scienceは再現可能な科学解析を中心にした別のアプリです。</p>
+    </div>
+
+    <section class="section white" aria-labelledby="definition-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">What it is</p>
+          <h2 id="definition-title">問いを、検証できる成果物にする。</h2>
+          <p class="section-lead">自然言語で研究課題を伝えると、Claudeが計画を作り、許可を求め、Python・R・shellを実行し、図・表・処理済みデータ・原稿を由来情報と一緒に保存します。</p>
+        </div>
+
+        <div class="definition">
+          <div class="definition-main">
+            <h3>文献、コード、科学データベース、計算環境、図、原稿を、一つのProjectでつなぐ研究作業台。</h3>
+            <p>一般的なチャットAIと違い、実際にコードを実行できます。一般的なNotebookと違い、会話から専門エージェント、Connector、Skill、HPCまでを調整します。すべてを置き換える製品ではなく、研究室が既に使う道具をつなぐ場所です。</p>
+          </div>
+          <aside class="definition-aside" aria-label="主な仕様">
+            <dl>
+              <div><dt>実行</dt><dd>Python / R / shell</dd></div>
+              <div><dt>保存</dt><dd>Local-first</dd></div>
+              <div><dt>検証</dt><dd>Provenance + Reviewer</dd></div>
+              <div><dt>専門領域</dt><dd>Genomicsほか</dd></div>
+              <div><dt>提供状態</dt><dd>Public beta</dd></div>
+            </dl>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section mint" aria-labelledby="process-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">How a result is made</p>
+          <h2 id="process-title">成果物までの5つの場所。</h2>
+          <p class="section-lead">研究者が責任を持つ判断と、Claudeへ任せる実行を混ぜないことが、安全で再現可能な使い方の基本です。</p>
+        </div>
+        <div class="process" aria-label="研究の問いから検証までの流れ">
+          <article class="process-step"><span>01 / YOU</span><h3>研究の問い</h3><p>目的、experimental unit、primary outcome、制約を決める。</p></article>
+          <article class="process-step"><span>02 / PLAN</span><h3>計画と権限</h3><p>Claudeの手順、仮定、必要なfolder・network・computeを確認。</p></article>
+          <article class="process-step"><span>03 / EXECUTE</span><h3>解析を実行</h3><p>専門SkillとConnectorを選び、sandboxでコードを実行。</p></article>
+          <article class="process-step"><span>04 / ARTIFACT</span><h3>成果物を保存</h3><p>図、表、script、reportをversionつきで保存。</p></article>
+          <article class="process-step"><span>05 / VERIFY</span><h3>記録と照合</h3><p>Reviewerと人間が主張、実行記録、研究妥当性を確認。</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section white" aria-labelledby="compare-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Choose the right surface</p>
+          <h2 id="compare-title">Claude、Code、Scienceの違い。</h2>
+          <p class="section-lead">同じClaude系でも、主な作業場所と保存する成果が違います。</p>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>製品</th><th>主な作業場所</th><th>向いている仕事</th><th>研究での使いどころ</th></tr></thead>
+            <tbody>
+              <tr>
+                <td><strong>Claude</strong><span class="cell-note">Web / Desktop / Mobile</span></td>
+                <td>会話と文書</td>
+                <td>質問、要約、執筆、Research</td>
+                <td>アイデア整理、文献の理解、文章レビュー</td>
+              </tr>
+              <tr>
+                <td><strong>Claude Code</strong><span class="cell-note">Terminal / IDE / Web</span></td>
+                <td>コードリポジトリ</td>
+                <td>実装、テスト、デバッグ、Git</td>
+                <td>解析パイプラインや研究ソフトの開発</td>
+              </tr>
+              <tr>
+                <td><strong>Claude Science</strong><span class="cell-note">Local app / Browser UI</span></td>
+                <td>研究Projectと計算環境</td>
+                <td><span class="tag">RECOMMENDED</span> 文献＋データ＋計算＋図</td>
+                <td>実データ解析、由来記録、科学ツール連携</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="limits-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Know the boundary</p>
+          <h2 id="limits-title">便利さと、保証を分ける。</h2>
+        </div>
+        <div class="notice warning">
+          <strong>Reviewerは最終保証ではない</strong>
+          <p>ReviewerはClaudeの主張と実行記録を照合しますが、解析を再実行せず、研究手法が問いに適切かを保証しません。臨床・診断用途の製品でもありません。重要な結果は研究者が原データと別手段で確認します。</p>
+        </div>
+        <a class="next-page" href="getting-started.html">
+          <span>NEXT / CS-02</span>
+          <strong>10分で最初の解析を一周する</strong>
+          <b aria-hidden="true">→</b>
+        </a>
+      </div>
+    </section>
+
+    <section class="section white" aria-labelledby="sources-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Official references</p>
+          <h2 id="sources-title">仕様は公式情報へ戻る。</h2>
+        </div>
+        <div class="source-list">
+          <a class="source-link" href="https://www.anthropic.com/news/claude-science-ai-workbench" target="_blank" rel="noopener noreferrer"><span>ANNOUNCEMENT</span><strong>Claude Science発表</strong><small>目的、主要機能、Public betaの全体像</small></a>
+          <a class="source-link" href="https://claude.com/docs/claude-science/overview" target="_blank" rel="noopener noreferrer"><span>DOCUMENTATION</span><strong>Overview &amp; requirements</strong><small>対応plan、OS、disk、sandbox、研究用途上の注意</small></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <div class="footer-inner">
+      <div><div class="footer-title">Claude Science Guide</div><p class="footer-copy">科学研究AIワークベンチを、導入・研究フロー・BiG Lab実践・安全管理に分けた日本語ガイド。</p></div>
+      <div class="footer-meta">CS-01 / OVERVIEW<br>Independent guide · Australia/Sydney</div>
+    </div>
+  </footer>
+  <div class="sr-only" id="copy-status" role="status" aria-live="polite"></div>
+  <script src="../assets/claude-science-guide.js"></script>
+  <script src="../assets/bilingual-data.js"></script>
+  <script src="../assets/bilingual.js"></script>
+  <script src="../assets/copy-tools.js"></script>
+  <script src="../assets/site-directory.js"></script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+.index-page {
+  background:
+    radial-gradient(circle at 85% 0%, rgba(226, 235, 255, .9), transparent 28rem),
+    var(--canvas);
+}
+
+.index-header {
+  position: sticky;
+  z-index: 30;
+  top: 0;
+  min-height: 76px;
+  padding: 0 clamp(20px, 5vw, 72px);
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 36px;
+  border-bottom: 1px solid rgba(215, 222, 235, .9);
+  background: rgba(247, 249, 252, .88);
+  backdrop-filter: blur(18px);
+}
+
+.index-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.index-brand strong,
+.index-brand small { display: block; line-height: 1.25; }
+.index-brand strong { font-size: 14px; }
+.index-brand small { margin-top: 3px; color: var(--muted); font-size: 9px; letter-spacing: .12em; text-transform: uppercase; }
+
+.index-header nav {
+  display: flex;
+  justify-content: center;
+  gap: clamp(16px, 2.5vw, 34px);
+}
+
+.index-header nav a,
+.workspace-link {
+  color: var(--copy);
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.index-header nav a:hover { color: var(--ink); }
+.workspace-link { color: var(--accent-deep); }
+
+.index-main,
+.index-footer {
+  width: min(1280px, calc(100% - 40px));
+  margin-inline: auto;
+}
+
+.index-hero {
+  min-height: 560px;
+  padding: 105px 4px 80px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+  gap: 60px;
+  border-bottom: 1px solid var(--line);
+}
+
+.index-hero h1 {
+  margin: 14px 0 25px;
+  font-size: clamp(54px, 8vw, 108px);
+  line-height: .94;
+  letter-spacing: -.075em;
+}
+
+.index-hero h1 span { color: #7483a5; }
+.index-hero > div > p:last-child { max-width: 660px; margin: 0; color: var(--copy); font-size: clamp(14px, 1.5vw, 18px); }
+
+.index-summary {
+  display: grid;
+  grid-template-columns: repeat(3, 105px);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: rgba(255,255,255,.75);
+  box-shadow: var(--shadow);
+}
+
+.index-summary span { padding: 22px 16px; border-right: 1px solid var(--line); }
+.index-summary span:last-child { border: 0; }
+.index-summary strong, .index-summary small { display: block; }
+.index-summary strong { font-size: 26px; }
+.index-summary small { margin-top: 4px; color: var(--muted); font-size: 9px; line-height: 1.4; }
+
+.index-section {
+  padding: 90px 4px;
+  scroll-margin-top: 70px;
+  border-bottom: 1px solid var(--line);
+}
+
+.index-section .section-heading { margin-bottom: 36px; }
+.section-count { color: var(--muted); font-size: 10px; font-weight: 750; letter-spacing: .12em; }
+.index-section .paper-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.index-section .compact-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.index-section .paper-card { min-height: 340px; }
+
+.index-footer {
+  padding: 32px 4px 60px;
+  display: flex;
+  justify-content: space-between;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.index-footer p { margin: 0; }
+.index-footer a { color: var(--accent-deep); font-weight: 700; text-decoration: none; }
+
+@media (max-width: 900px) {
+  .index-header { grid-template-columns: auto 1fr; }
+  .index-header nav { display: none; }
+  .workspace-link { justify-self: end; }
+  .index-hero { min-height: 500px; grid-template-columns: 1fr; align-items: end; }
+  .index-summary { width: min(100%, 420px); }
+  .index-section .paper-grid,
+  .index-section .compact-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 620px) {
+  .index-header { min-height: 68px; padding-inline: 16px; gap: 12px; }
+  .index-brand small { display: none; }
+  .workspace-link { font-size: 10px; }
+  .index-main, .index-footer { width: min(100% - 28px, 1280px); }
+  .index-hero { min-height: 460px; padding-top: 75px; }
+  .index-summary { grid-template-columns: repeat(3, 1fr); }
+  .index-summary span { padding: 17px 10px; }
+  .index-section { padding-block: 65px; }
+  .index-section .paper-grid,
+  .index-section .compact-grid { grid-template-columns: 1fr; }
+  .index-footer { gap: 15px; flex-direction: column; }
+}

@@ -1,0 +1,61 @@
+field_name,level,required,data_type,unit_or_allowed_values,description,quality_rule
+study_id,study,yes,string,controlled ID,Study identifier,unique and immutable
+protocol_version,study,yes,string,semantic version,Approved protocol version,must match decision log
+study_status,study,yes,category,draft|approved|frozen|amended|closed,Study state,no unlogged transition
+batch_id,batch,yes,string,controlled ID,Independent formulation batch,not inferred from row order
+formulation_id,formulation,yes,string,controlled ID,Composition identifier,links to full formulation record
+patch_id,patch,yes,string,controlled ID,Physical patch or device identifier,unique within batch
+mn_type,patch,yes,category,solid_pretreatment|coated|dissolving|hydrogel_forming|hollow|other,Microneedle platform,controlled vocabulary
+mn_material,patch,yes,string,material and grade,Primary matrix or needle material,record supplier and lot elsewhere
+mn_length_um,patch,yes,number,µm,Measured needle length,positive value
+mn_count,patch,yes,integer,count,Needles in exposed array,positive integer
+mn_exposed_area_mm2,patch,yes,number,mm²,Exposed needle surface area,calculation method recorded
+patch_contact_area_cm2,patch,yes,number,cm²,Nominal skin contact area,positive value
+assay_confirmed_load_ug,patch,yes,number,µg,Measured payload load used for normalisation,do not replace with nominal load silently
+nominal_load_ug,patch,no,number,µg,Target payload load,flag discrepancy from measured load
+drug_id,payload,yes,string,controlled ID,Payload identity,include salt or form
+drug_mw_da,payload,yes,number,Da,Molecular weight,source documented
+drug_logp_or_logd,payload,no,number,value with pH,Partition descriptor,pH and source required
+drug_pka,payload,no,number,pKa,Acid-base property,source required
+solubility_receptor_ug_ml,method,yes,number,µg/mL,Measured solubility in receptor medium,temperature and replicate count required
+membrane_lot,cell,yes,string,lot or donor ID,Synthetic membrane lot or tissue donor,never store direct patient identifiers
+species,cell,yes,category,synthetic|human|porcine|rat|other,Barrier source,controlled vocabulary
+anatomical_site,cell,no,string,site,Tissue collection site,required for biological tissue
+skin_thickness_um,cell,no,number,µm,Measured membrane thickness,method required
+skin_integrity_result,cell,no,string,method-specific value,Pre-test barrier integrity,criterion predeclared
+insertion_method,cell,yes,string,applicator or manual,How MN was applied,force and dwell fields linked
+insertion_force_n,cell,no,number,N,Application force,positive value
+dwell_time_min,cell,no,number,min,Patch residence before or during test,nonnegative
+insertion_success_pct,cell,no,number,%,Fraction of needles inserted or dye/imaging proxy,0 to 100
+run_id,run,yes,string,controlled ID,Independent laboratory run,not inferred from date alone
+cell_id,cell,yes,string,controlled ID,Diffusion cell and complete curve identifier,primary repeated-measure group
+cell_position,cell,yes,string,instrument position,Blocking variable,unique within run
+operator_id,run,yes,string,pseudonymous ID,Operator identifier,no personal details in public output
+experiment_date,run,yes,date,ISO 8601,Date of run,YYYY-MM-DD
+receptor_medium,cell,yes,string,full composition,Receptor solution,pH and additives included
+receptor_ph,cell,yes,number,pH,Measured receptor pH,within predeclared range
+receptor_volume_ml,cell,yes,number,mL,Actual receptor volume,positive value
+diffusion_area_cm2,cell,yes,number,cm²,Exposed diffusion area,positive value
+target_temperature_c,cell,yes,number,°C,Protocol set point,not a substitute for measured value
+actual_temperature_c,timepoint,yes,number,°C,Measured cell or bath temperature,flag outside range
+agitation_rpm,cell,yes,number,rpm,Stirring rate,nonnegative
+timepoint_id,timepoint,yes,string,controlled ID,Repeated observation identifier,unique within cell
+elapsed_time_h,timepoint,yes,number,h,Elapsed time from defined zero,strictly increasing within cell
+sample_volume_ml,timepoint,yes,number,mL,Volume removed at this time,nonnegative
+replacement_volume_ml,timepoint,yes,number,mL,Fresh medium added,nonnegative
+raw_file,timepoint,yes,string,relative path,Raw instrument data file,must exist and remain read-only
+analyte_concentration_ug_ml,timepoint,yes,number,µg/mL,Back-calculated concentration,retain BLQ flag separately
+quantification_flag,timepoint,yes,category,quantified|BLQ|above_range|reassayed|missing,Quantification status,controlled vocabulary
+cumulative_amount_ug,timepoint,yes,number,µg,Sampling-corrected cumulative receptor amount,derived by versioned script
+cumulative_amount_area_ug_cm2,timepoint,yes,number,µg/cm²,Cumulative amount normalised by area,derived from recorded area
+cumulative_fraction_loaded,timepoint,yes,number,fraction,Cumulative amount divided by confirmed exposed load,do not clamp silently
+qc_status,timepoint,yes,category,pass|review|exclude_from_primary,Quality status,raw row is retained
+exclusion_reason,timepoint,no,string,controlled reason plus note,Reason for primary-analysis exclusion,required when excluded
+skin_retention_ug,endpoint,no,number,µg,Payload recovered from skin at endpoint,extraction recovery recorded
+residual_patch_ug,endpoint,no,number,µg,Payload remaining in patch or device,extraction recovery recorded
+donor_wash_ug,endpoint,no,number,µg,Payload recovered from donor or wash fraction,extraction recovery recorded
+total_recovery_pct,endpoint,yes,number,%,Sum of measured recovery relative to confirmed load,criterion predeclared
+source_type,provenance,yes,category,experiment|literature|simulation,Origin of row,never merge without retaining source
+source_reference,provenance,yes,string,DOI or local file,Traceable source,must resolve
+created_at,provenance,yes,datetime,ISO 8601,Record creation timestamp,timezone included
+reviewed_by,provenance,yes,string,pseudonymous ID,Human QC reviewer,not the same person where independent review is required

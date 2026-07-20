@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Claude Scienceの動作要件、macOS・Linux・Team向け導入、初回解析、権限、起動トラブルを案内する日本語ガイド。">
+  <meta name="theme-color" content="#f3f5f7">
+  <title>Claude Scienceを導入する — Claude Science Guide</title>
+  <link rel="stylesheet" href="../assets/claude-science-guide.css">
+  <link rel="stylesheet" href="../assets/bilingual.css">
+  <link rel="stylesheet" href="../assets/copy-tools.css">
+  <link rel="stylesheet" href="../assets/site-directory.css">
+  <link rel="stylesheet" href="../assets/google-docs-typography.css">
+  <link rel="stylesheet" href="../assets/monochrome-theme.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <header class="site-header">
+    <div class="header-main">
+      <a class="brand" href="claude-science-overview.html" aria-label="Claude Science Guide ホーム">
+        <span class="brand-mark" aria-hidden="true">CS</span>
+        <span class="brand-copy">Claude Science Guide<small>BIG LAB / JAPANESE FIELD MANUAL</small></span>
+      </a>
+      <span class="header-note">Unofficial · Verified 16 Jul 2026</span>
+    </div>
+    <nav class="site-nav" aria-label="ガイドのページ">
+      <div class="site-nav-inner">
+        <a href="index.html">統合ホーム</a>
+        <a href="claude-science-overview.html">概要</a>
+        <a href="getting-started.html" aria-current="page">導入する</a>
+        <a href="workflow.html">研究を進める</a>
+        <a href="claude-science-big-lab.html">BiG Labで使う</a>
+        <a href="safety.html">安全に使う</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-hero subpage-hero" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <div>
+          <p class="spec-label">Manual CS-02 / Getting started</p>
+          <h1 id="hero-title">10分で、最初の解析を一周する。</h1>
+          <p class="hero-copy">公開データか匿名化済みの小さなデータで、<strong>Project作成 → Folder許可 → Plan確認 → Code実行 → Artifact確認</strong>まで進めます。</p>
+          <div class="hero-meta"><span class="meta-chip primary">初めて使う人向け</span><span class="meta-chip">所要 10–20分</span></div>
+        </div>
+        <aside class="hero-side">
+          <div class="module-index">02</div>
+          <h2>このページで完了すること</h2>
+          <p>対応環境を確認し、アプリを起動して、最小権限で最初のArtifactを保存します。</p>
+          <div class="hero-finish"><strong>完了条件：</strong> ArtifactのProvenanceからExecution LogとEnvironmentを開ける。</div>
+        </aside>
+      </div>
+    </section>
+
+    <div class="notice warning">
+      <strong>練習は公開データから</strong>
+      <p>初回から患者情報、未公開研究データ、契約で制限された資料を使わないでください。データ分類に迷う場合は、先に「安全に使う」ページを確認します。</p>
+    </div>
+
+    <div class="page-layout">
+      <nav class="toc" aria-label="このページの目次">
+        <p class="toc-title">On this page</p>
+        <a href="#requirements">動作要件</a>
+        <a href="#install">インストール</a>
+        <a href="#first-analysis">最初の解析</a>
+        <a href="#checklist">チェックリスト</a>
+        <a href="#permissions">権限</a>
+        <a href="#launch-help">起動トラブル</a>
+      </nav>
+
+      <article class="article">
+        <section class="article-section" id="requirements" aria-labelledby="requirements-title">
+          <p class="eyebrow">Before install</p>
+          <h2 id="requirements-title">最初に4項目だけ確認。</h2>
+          <p class="article-intro">条件を満たさない場合、インストール後のsign inやruntime構築で止まります。</p>
+          <div class="requirements">
+            <div class="requirement"><strong>Claude account</strong><span>Pro / Max / Team / Enterprise。Free planは対象外。</span></div>
+            <div class="requirement"><strong>macOS</strong><span>macOS 13以降。Apple SiliconまたはIntel。</span></div>
+            <div class="requirement"><strong>Linux</strong><span>x64、glibc、bubblewrap 0.8.0+、socat、user namespace。</span></div>
+            <div class="requirement"><strong>Storage</strong><span>runtimeとstarter Python / R環境に約5 GB。</span></div>
+          </div>
+          <div class="principle">
+            <strong>Team / Enterpriseは管理者の有効化が先。</strong>
+            <p>OwnerまたはPrimary OwnerがOrganization settings → CapabilitiesからClaude Scienceをonにします。API keyは不要です。</p>
+          </div>
+        </section>
+
+        <section class="article-section" id="install" aria-labelledby="install-title">
+          <p class="eyebrow">Install</p>
+          <h2 id="install-title">使う環境を選ぶ。</h2>
+          <p class="article-intro">タブを切り替えて手順を確認してください。ブラウザに画面が開きますが、Claude Scienceはローカルアプリです。</p>
+
+          <div class="tabs" data-tabs>
+            <div class="tab-list" role="tablist" aria-label="環境別インストール">
+              <button class="tab-button" id="tab-macos" type="button" role="tab" aria-selected="true" aria-controls="panel-macos">macOS</button>
+              <button class="tab-button" id="tab-linux" type="button" role="tab" aria-selected="false" aria-controls="panel-linux">Linux</button>
+              <button class="tab-button" id="tab-org" type="button" role="tab" aria-selected="false" aria-controls="panel-org">Team / Enterprise</button>
+            </div>
+
+            <section class="tab-panel" id="panel-macos" role="tabpanel" aria-labelledby="tab-macos">
+              <h3>macOSで始める</h3>
+              <ol>
+                <li><a href="https://claude.com/product/claude-science" target="_blank" rel="noopener noreferrer">公式ダウンロードページ</a>を開く。</li>
+                <li>Apple menu → About This MacでChipを確認し、Apple SiliconまたはIntel版を選ぶ。</li>
+                <li>installerを開く。初回のPython / R環境構築が終わるまで待つ。</li>
+                <li>既定browserでClaude accountへsign inする。</li>
+              </ol>
+            </section>
+
+            <section class="tab-panel" id="panel-linux" role="tabpanel" aria-labelledby="tab-linux" hidden>
+              <h3>Linuxで始める</h3>
+              <p>Ubuntu / Debianでは先にsandbox依存関係を入れます。Ubuntu 22.04標準のbubblewrapは必要versionより古いため注意してください。</p>
+              <div class="code-block" data-copy>sudo apt-get update &amp;&amp; sudo apt-get install -y curl bubblewrap socat<button class="copy-button" type="button">COPY</button></div>
+              <div class="code-block" data-copy>curl -fsSL https://claude.ai/install-claude-science.sh | bash
+claude-science serve<button class="copy-button" type="button">COPY</button></div>
+              <p>表示されたlocal URLを同じmachineのbrowserで開きます。Remote serverではSSH tunnelを使います。</p>
+            </section>
+
+            <section class="tab-panel" id="panel-org" role="tabpanel" aria-labelledby="tab-org" hidden>
+              <h3>組織で有効化する</h3>
+              <ol>
+                <li>Organization settings → <strong>Capabilities</strong>を開く。</li>
+                <li>Claude Scienceのtoggleをonにする。</li>
+                <li>setup wizardでrole accessとConnectorを確認する。</li>
+                <li>Enterpriseのcustom roleにはClaude Science capabilityを追加する。</li>
+              </ol>
+              <p><strong>HIPAA注意：</strong> 組織で有効化できても、Beta中のClaude Science利用はBAA対象外です。PHIを扱わないでください。</p>
+            </section>
+          </div>
+        </section>
+
+        <section class="article-section" id="first-analysis" aria-labelledby="first-analysis-title">
+          <p class="eyebrow">First analysis</p>
+          <h2 id="first-analysis-title">最小の解析を8ステップで。</h2>
+          <p class="article-intro">目的は立派な結果を出すことではなく、権限・実行・保存・検証の流れを理解することです。</p>
+          <div class="steps">
+            <article class="step"><h3>Sign inとsetup wizardを完了</h3><p>Connector、Skill、アクセス可能なwebsiteは後からSettingsで変更できます。</p></article>
+            <article class="step"><h3>練習用Projectを作成</h3><p>一つの研究テーマを一つのProjectにします。Projectは関連SessionとArtifactをまとめます。</p></article>
+            <article class="step"><h3>Project instructionsを記入</h3><p>目的、experimental unit、単位、除外基準、出力形式、禁止事項を短く書きます。</p></article>
+            <article class="step"><h3>入力folderを指定</h3><p>composerでpathを入力するか、@ pickerから選びます。添付fileはアプリのlocal data folderへcopyされます。</p></article>
+            <article class="step"><h3>まずread-onlyで許可</h3><p>raw dataを上書きしないよう、入力と出力のfolderを分けます。</p></article>
+            <article class="step"><h3>Planを確認して承認</h3><p>入力、手法、仮定、QC、成果物、failure modeを読んでから実行へ進みます。</p></article>
+            <article class="step"><h3>Code permissionを確認</h3><p>実行するlanguage、command、package install、network accessが目的と合うかを見ます。</p></article>
+            <article class="step"><h3>ArtifactとProvenanceを開く</h3><p>Filesから成果物を開き、Messages、Code、Execution Log、Environment、Reviewを確認します。</p><div class="step-output">DONE → provenance付きArtifactが1つ保存された</div></article>
+          </div>
+        </section>
+
+        <section class="article-section" id="checklist" aria-labelledby="checklist-title">
+          <p class="eyebrow">Interactive checklist</p>
+          <h2 id="checklist-title">初回セットアップの確認。</h2>
+          <p class="article-intro">進捗はこのbrowserのlocalStorageにだけ保存されます。</p>
+          <div class="checklist-box" data-checklist data-storage-key="claude-science-getting-started-v2">
+            <div class="checklist-progress">
+              <span class="eyebrow" style="color:#a9d7d3">Progress</span>
+              <h3>最初の一周</h3>
+              <p>研究データはこのチェックリストへ保存されません。</p>
+              <div class="progress-count"><span data-progress-count>0</span>/8</div>
+              <div class="progress-track"><div class="progress-fill" data-progress-fill></div></div>
+              <button class="reset-button" type="button" data-reset>リセット</button>
+            </div>
+            <ul class="checklist">
+              <li><label class="check-row"><input type="checkbox"><span><strong>PlanとOSを確認</strong><span>対応account、OS、disk、組織enable。</span></span></label></li>
+              <li><label class="check-row"><input type="checkbox"><span><strong>Installとsign inを完了</strong><span>starter environment構築まで待った。</span></span></label></li>
+              <li><label class="check-row"><input type="checkbox"><span><strong>練習Projectを作成</strong><span>公開または匿名化済みの小さなdata。</span></span></label></li>
+              <li><label class="check-row"><input type="checkbox"><span><strong>Project instructionsを記入</strong><span>目的、単位、出力、禁止事項。</span></span></label></li>
+              <li><label class="check-row"><input type="checkbox"><span><strong>Folderをread-onlyで許可</strong><span>rawとoutputを分離。</span></span></label></li>
+              <li><label class="check-row"><input type="checkbox"><span><strong>PlanとCodeを確認</strong><span>仮定、QC、package、network。</span></span></label></li>
+              <li><label class="check-row"><input type="checkbox"><span><strong>Artifactを保存</strong><span>scratch fileのままにしない。</span></span></label></li>
+              <li><label class="check-row"><input type="checkbox"><span><strong>Provenanceを確認</strong><span>Execution LogとEnvironmentまで開いた。</span></span></label></li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="article-section" id="permissions" aria-labelledby="permissions-title">
+          <p class="eyebrow">Permission cards</p>
+          <h2 id="permissions-title">許可する対象を見分ける。</h2>
+          <p class="article-intro">新しい種類のアクセスが必要になるたび、Claude ScienceはPermission cardを表示します。standing grantはSettings → Permissionsから取り消せます。</p>
+          <div class="permission-list">
+            <div class="permission-row"><strong>Folder</strong><p>端末上のfolderを読む、または書く。</p><span>Read-onlyを優先</span></div>
+            <div class="permission-row"><strong>Code</strong><p>Python、R、shell、package installを実行。</p><span>Once / Always</span></div>
+            <div class="permission-row"><strong>Network</strong><p>指定hostへ接続。sandboxはdeny-by-default。</p><span>目的と送信内容を確認</span></div>
+            <div class="permission-row"><strong>Connector</strong><p>外部data sourceのtoolを使う。</p><span>Once → Projectの順</span></div>
+            <div class="permission-row"><strong>Remote job</strong><p>HPCまたはcompute providerでjobを実行。</p><span>Resourceとcostを確認</span></div>
+          </div>
+        </section>
+
+        <section class="article-section" id="launch-help" aria-labelledby="launch-help-title">
+          <p class="eyebrow">First-launch help</p>
+          <h2 id="launch-help-title">起動で止まったとき。</h2>
+          <div class="faq">
+            <details><summary>macOSでアプリに禁止マークが出る</summary><div class="faq-answer"><p>Macのprocessorと異なるbuildを選んだ可能性があります。About This MacでChipを確認し、Apple SiliconまたはIntel版を再downloadします。</p></div></details>
+            <details><summary>browser tabが開かない</summary><div class="faq-answer"><p>macOSはmenu bar iconからOpen。Linuxはterminalのlocal URLを開くか、<code>claude-science url</code>で新しいURLを表示します。</p></div></details>
+            <details><summary>Linuxで起動しない</summary><div class="faq-answer"><p><code>bwrap --version</code>で0.8.0以上を確認し、socatとunprivileged user namespaceが利用できるか確認します。</p></div></details>
+            <details><summary>sign inがclaude.aiで止まる</summary><div class="faq-answer"><p>Free plan、OAuth redirect、組織で未enableのいずれかを確認します。SSH tunnelではPaste a codeを使えます。</p></div></details>
+          </div>
+          <a class="next-page" href="workflow.html"><span>NEXT / CS-03</span><strong>研究を再現可能に進める</strong><b aria-hidden="true">→</b></a>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <footer class="page-footer">
+    <div class="footer-inner">
+      <div><div class="footer-title">Claude Science Guide</div><p class="footer-copy">導入手順はClaude Science公式documentationを2026年7月16日に確認。</p></div>
+      <div class="footer-meta">CS-02 / GETTING STARTED<br>Independent guide · Australia/Sydney</div>
+    </div>
+  </footer>
+  <div class="sr-only" id="copy-status" role="status" aria-live="polite"></div>
+  <script src="../assets/claude-science-guide.js"></script>
+  <script src="../assets/bilingual-data.js"></script>
+  <script src="../assets/bilingual.js"></script>
+  <script src="../assets/copy-tools.js"></script>
+  <script src="../assets/site-directory.js"></script>
+</body>
+</html>

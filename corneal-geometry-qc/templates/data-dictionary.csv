@@ -1,0 +1,45 @@
+field_name,level,required,data_type,unit_or_allowed_values,description,quality_rule
+study_id,study,yes,string,controlled ID,Study identifier,unique and immutable
+protocol_version,study,yes,string,semantic version,Approved protocol version,must match decision log
+study_status,study,yes,category,draft|approved|frozen|amended|closed,Study state,no unlogged transition
+print_run_id,print_run,yes,string,controlled ID,Independent print run,not inferred from date alone
+batch_id,batch,yes,string,controlled ID,Independent material/bioink batch,not inferred from row order
+material_id,batch,yes,string,controlled ID,Bioink or material composition identifier,links to full formulation record
+material_lot,batch,no,string,supplier lot,Material lot for traceability,record supplier separately
+construct_id,construct,yes,string,controlled ID,Physical printed construct identifier,unique within batch
+fabrication_strategy,construct,yes,category,mould_assisted|direct_support_free|other,Curved-construct fabrication approach,controlled vocabulary
+print_method,construct,yes,category,ME|DLP|inkjet|SLA|other,Printing technology,controlled vocabulary
+layer_thickness_um,construct,yes,number,µm,Nominal layer thickness used,positive value
+slice_angle_deg,construct,no,number,degrees,Slicing angle relative to build plate,record when direct printing used
+overhang_angle_deg,construct,no,number,degrees,Steepest overhang angle in the design,flag values exceeding the platform's printable limit
+support_removed,construct,no,boolean,true|false,Whether support structures were removed post-print,record removal method separately
+design_version,construct,yes,string,controlled ID,CAD/design reference version,must resolve to a stored design file
+design_radius_mm,construct,yes,number,mm,Nominal/target radius from design,positive value
+design_thickness_mm,construct,yes,number,mm,Nominal/target wall thickness from design,positive value
+operator_id,construct,yes,string,pseudonymous ID,Operator identifier,no personal details in public output
+fabrication_date,construct,yes,date,ISO 8601,Date of printing,YYYY-MM-DD
+measurement_id,measurement,yes,string,controlled ID,Single acquisition/measurement event on a construct,unique within construct
+acquisition_tier,measurement,yes,category,tier_a_photo_scan|tier_b_oct_confocal|both,Data acquisition tier,see requirements.md Tier A/B definition
+acquisition_method,measurement,yes,string,controlled vocabulary,Specific method (photogrammetry / structured_light / OCT / confocal_z_stack / profilometry),instrument model recorded separately
+calibration_reference,measurement,yes,string,reference object or spec,Calibration source for pixel/voxel to mm conversion,required before any mm-unit value is recorded
+calibration_confirmed,measurement,yes,boolean,true|false,Whether calibration was verified for this measurement,if false all length/area/volume fields are not_measurable
+voxel_or_pixel_size,measurement,no,number,µm/px or µm/voxel,Recorded spatial resolution,required when calibration_confirmed is true
+registration_method,measurement,yes,string,e.g. ICP + scale,Method used to align measured mesh to design mesh,parameters versioned in code
+registration_rmse_mm,measurement,yes,number,mm,Registration fit-quality diagnostic,not itself a geometry error; high values trigger review
+best_fit_radius_mm,measurement,no,number,mm,Best-fit measured radius,derived by versioned script
+radius_deviation_mm,measurement,no,number,mm,best_fit_radius_mm minus design_radius_mm,derived; sign convention documented
+median_thickness_mm,measurement,no,number,mm,Median measured wall thickness,derived by versioned script
+thickness_variation_mm,measurement,no,number,mm,Measured thickness distribution vs design_thickness_mm,derived; report spread not only median
+surface_rmse_mm,measurement,no,number,mm,Surface RMSE between measured and design mesh over registered region,derived by versioned script
+chordal_error_mm,measurement,no,number,mm,Maximum layer-wise topographic chordal deviation,derived by versioned script
+measured_volume_mm3,measurement,no,number,mm3,Measured construct volume,derived by versioned script
+volume_change_fraction,measurement,no,number,fraction,(measured_volume - design_volume) / design_volume,derived; design_volume computed from design_version
+shrinkage_rate_fraction,measurement,no,number,fraction,Dimensional change between as-printed and post-process state,requires paired pre/post measurement
+interlayer_misalignment_mm,measurement,no,number,mm,Offset between adjacent printed layers,Tier B only unless otherwise justified
+qc_status,measurement,yes,category,pass|review|exclude_from_primary,Quality status,raw row is retained regardless of status
+exclusion_reason,measurement,no,string,controlled reason plus note,Reason for primary-analysis exclusion or review flag,required when qc_status is not pass
+raw_file,measurement,yes,string,relative path,Raw scan/image/OCT file,must exist and remain read-only
+source_type,provenance,yes,category,experiment|literature|simulation|synthetic_demo,Origin of row,synthetic_demo rows must never be merged into real-pilot summaries
+source_reference,provenance,yes,string,DOI or local file,Traceable source,must resolve
+created_at,provenance,yes,datetime,ISO 8601,Record creation timestamp,timezone included
+reviewed_by,provenance,yes,string,pseudonymous ID,Human QC reviewer,not the same person where independent review is required

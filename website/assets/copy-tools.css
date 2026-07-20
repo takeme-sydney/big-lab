@@ -1,0 +1,208 @@
+/*
+ * Copy helpers shared by every BiG Lab HTML page.
+ * Keep readable content selectable even when a page theme adds interactive UI.
+ */
+body,
+body :where(
+  main,
+  article,
+  section,
+  header,
+  footer,
+  nav,
+  aside,
+  div,
+  span,
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  ul,
+  ol,
+  li,
+  dl,
+  dt,
+  dd,
+  table,
+  thead,
+  tbody,
+  tfoot,
+  tr,
+  th,
+  td,
+  blockquote,
+  pre,
+  code,
+  a,
+  strong,
+  em,
+  small,
+  label
+) {
+  -webkit-user-select: text !important;
+  user-select: text !important;
+}
+
+body :where(button, input[type="button"], input[type="submit"], summary),
+.copy-tools {
+  -webkit-user-select: none !important;
+  user-select: none !important;
+}
+
+.copy-tools {
+  position: fixed;
+  right: max(16px, env(safe-area-inset-right));
+  bottom: max(76px, calc(env(safe-area-inset-bottom) + 76px));
+  z-index: 9998;
+  display: flex;
+  align-items: center;
+  color: #102f3a;
+  background: rgba(255, 253, 248, .96);
+  border: 1px solid rgba(16, 47, 58, .2);
+  border-radius: 999px;
+  box-shadow: 0 12px 32px rgba(16, 47, 58, .2);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.copy-page-button,
+.copy-block-button {
+  border: 0;
+  cursor: pointer;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.copy-page-button {
+  display: inline-flex;
+  min-height: 46px;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 15px;
+  color: #fffdf8;
+  background: #102f3a;
+  border-radius: inherit;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: .02em;
+  white-space: nowrap;
+}
+
+.copy-page-button svg {
+  width: 17px;
+  height: 17px;
+  flex: 0 0 auto;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.copy-page-button:hover {
+  background: #1a4a57;
+}
+
+.copy-page-button[data-copy-state="success"] {
+  background: #256c5d;
+}
+
+.copy-page-button[data-copy-state="error"] {
+  background: #9a4237;
+}
+
+.copy-page-button:focus-visible,
+.copy-block-button:focus-visible {
+  outline: 3px solid #e7ad5e;
+  outline-offset: 3px;
+}
+
+.copy-block-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin: 12px 0 -7px;
+  position: relative;
+  z-index: 2;
+}
+
+.copy-block-button {
+  min-height: 30px;
+  padding: 6px 10px;
+  color: #3d5962;
+  background: rgba(255, 253, 248, .96);
+  border: 1px solid rgba(16, 47, 58, .2);
+  border-radius: 999px;
+  box-shadow: 0 5px 14px rgba(16, 47, 58, .1);
+  font-size: 10px;
+  font-weight: 850;
+  line-height: 1;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.copy-block-button:hover {
+  color: #fffdf8;
+  background: #102f3a;
+}
+
+.copy-block-button[data-copy-state="success"] {
+  color: #fffdf8;
+  background: #256c5d;
+}
+
+.copy-block-button[data-copy-state="error"] {
+  color: #fffdf8;
+  background: #9a4237;
+}
+
+.copy-tools-offscreen {
+  position: fixed !important;
+  top: 0 !important;
+  left: -100000px !important;
+  width: min(1000px, 90vw) !important;
+  height: auto !important;
+  max-height: none !important;
+  overflow: visible !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+.copy-tools-status {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+@media (max-width: 520px) {
+  .copy-tools {
+    right: 10px;
+    bottom: max(62px, calc(env(safe-area-inset-bottom) + 62px));
+  }
+
+  .copy-page-button {
+    min-height: 42px;
+    padding: 8px 12px;
+    font-size: 11px;
+  }
+
+  .copy-page-button svg {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+@media print {
+  .copy-tools,
+  .copy-block-actions {
+    display: none !important;
+  }
+}

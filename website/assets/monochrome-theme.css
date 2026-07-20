@@ -1,0 +1,294 @@
+/*
+ * Learning Atlas colour and reading layer shared by BiG Lab/html.
+ *
+ * The historical filename is kept so every document continues to load the
+ * same asset. The palette now matches MyPhrase Uni: a quiet neutral canvas,
+ * white document planes, pulse blue for navigation, violet for AI/analysis,
+ * green for evidence/completion, and accessible semantic colours.
+ */
+
+:root {
+  --atlas-bg: #f3f5f7;
+  --atlas-bg-subtle: #ebedf1;
+  --atlas-raised: #ffffff;
+  --atlas-fg: #17181c;
+  --atlas-copy: #54555c;
+  --atlas-muted: #737581;
+  --atlas-border: #dee2e9;
+  --atlas-border-strong: #c3c9d3;
+  --atlas-blue: #1a6bff;
+  --atlas-blue-deep: #0c52d1;
+  --atlas-blue-soft: #e7f0ff;
+  --atlas-violet: #705cde;
+  --atlas-violet-soft: #f0edff;
+  --atlas-green: #287d45;
+  --atlas-green-soft: #e9f6ed;
+  --atlas-amber: #945c06;
+  --atlas-amber-soft: #fff2db;
+  --atlas-red: #be3b32;
+  --atlas-red-soft: #fff0ef;
+  --atlas-shadow: 0 18px 42px -22px rgba(30, 35, 45, .24);
+
+  /* Google Docs typography layer */
+  --docs-text: var(--atlas-fg);
+  --docs-copy: var(--atlas-copy);
+  --docs-muted: var(--atlas-muted);
+  --docs-link: var(--atlas-blue-deep);
+  --docs-link-hover: var(--atlas-blue);
+  --docs-font: ui-sans-serif, -apple-system, BlinkMacSystemFont, system-ui,
+    "Segoe UI", Roboto, "Hiragino Sans", "Hiragino Kaku Gothic ProN",
+    "Noto Sans JP", Meiryo, Arial, sans-serif;
+
+  /* Aliases used by the different document templates. */
+  --paper: var(--atlas-bg);
+  --paper-2: var(--atlas-bg-subtle);
+  --surface: var(--atlas-raised);
+  --surface-soft: #f7f8fa;
+  --white: var(--atlas-raised);
+  --ink: var(--atlas-fg);
+  --ink-2: #2b2d33;
+  --ink-deep: var(--atlas-fg);
+  --ink-soft: var(--atlas-copy);
+  --muted: var(--atlas-muted);
+  --muted-2: #92949e;
+  --line: var(--atlas-border);
+  --line-strong: var(--atlas-border-strong);
+  --line-dark: rgba(255, 255, 255, .2);
+  --line-light: rgba(255, 255, 255, .2);
+
+  --blue: var(--atlas-blue);
+  --blue-deep: var(--atlas-blue-deep);
+  --blue-soft: var(--atlas-blue-soft);
+  --mint: var(--atlas-blue-soft);
+  --mint-2: #cfe0ff;
+  --teal: #0a7e8c;
+  --teal-soft: #e8f7f8;
+  --coral: var(--atlas-red);
+  --coral-soft: var(--atlas-red-soft);
+  --lime: var(--atlas-green);
+  --lime-soft: var(--atlas-green-soft);
+  --amber: var(--atlas-amber);
+  --amber-soft: var(--atlas-amber-soft);
+  --yellow: #f4c84e;
+  --aqua: #64c9d3;
+  --danger: var(--atlas-red);
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: var(--docs-font);
+}
+
+body {
+  color: var(--atlas-fg);
+  background: var(--atlas-bg);
+  font-size: 16px;
+  letter-spacing: 0;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: var(--atlas-blue-deep);
+}
+
+a:hover {
+  color: var(--atlas-blue);
+}
+
+:focus-visible {
+  outline: 3px solid rgba(26, 107, 255, .3);
+  outline-offset: 3px;
+}
+
+::selection {
+  color: var(--atlas-fg);
+  background: #d9e8ff;
+}
+
+.site-header,
+.portfolio-header {
+  border-color: var(--atlas-border);
+  background: rgba(255, 255, 255, .94);
+  box-shadow: 0 8px 24px -22px rgba(23, 24, 28, .4);
+  backdrop-filter: blur(22px) saturate(1.25);
+}
+
+.topbar {
+  background: rgba(23, 24, 28, .96);
+}
+
+.topbar a {
+  color: inherit;
+}
+
+.brand-mark {
+  color: #fff;
+  background: var(--atlas-blue);
+  box-shadow: 0 8px 20px rgba(26, 107, 255, .2);
+}
+
+.site-nav a[aria-current="page"],
+.jump-nav a:hover {
+  color: var(--atlas-blue-deep);
+}
+
+.reading-progress span {
+  background: var(--atlas-blue);
+}
+
+/*
+ * Keep long-form text comfortable. Interface labels remain compact, but
+ * paragraphs and lists do not fall below a practical 15–16px reading size.
+ */
+.article :where(p, li, td, th, dt, dd, blockquote),
+.markdown-body :where(p, li, td, th, dt, dd, blockquote),
+.page-main .article :where(p, li, td, th, dt, dd, blockquote) {
+  color: var(--atlas-copy);
+  font-size: 1rem;
+  line-height: 1.82;
+}
+
+.article :where(strong, h1, h2, h3, h4),
+.markdown-body :where(strong, h1, h2, h3, h4) {
+  color: var(--atlas-fg);
+}
+
+.article > h1:first-of-type {
+  font-size: clamp(2.25rem, 4vw, 3.15rem);
+  letter-spacing: -.04em;
+}
+
+.article-section > h2,
+.article.markdown-body h2,
+.page-main .article h2 {
+  color: var(--atlas-fg);
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  letter-spacing: -.025em;
+}
+
+.article.markdown-body h3,
+.page-main .article h3 {
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+}
+
+.article blockquote,
+.markdown-body blockquote {
+  border-color: var(--atlas-blue);
+  background: linear-gradient(135deg, #f7faff, #faf8ff);
+  box-shadow: var(--atlas-shadow);
+}
+
+.article table,
+.markdown-body table {
+  border-color: var(--atlas-border);
+}
+
+.article :where(th, thead),
+.markdown-body :where(th, thead) {
+  background: var(--atlas-blue-soft);
+}
+
+.article :where(code, pre),
+.markdown-body :where(code, pre) {
+  border-color: var(--atlas-border);
+}
+
+.article pre,
+.markdown-body pre {
+  color: #eef4ff;
+  background: #202631;
+}
+
+.article :not(pre) > code,
+.markdown-body :not(pre) > code {
+  color: var(--atlas-violet);
+  background: var(--atlas-violet-soft);
+}
+
+.sidebar-card,
+.document-shell > .sidebar,
+.toc,
+.doc-toc {
+  border-color: var(--atlas-border);
+}
+
+.sidebar-card,
+.toc,
+.doc-toc {
+  background: rgba(255, 255, 255, .9);
+  box-shadow: 0 10px 30px -26px rgba(23, 24, 28, .35);
+}
+
+.article,
+.poster-sheet {
+  border-color: var(--atlas-border);
+  box-shadow: var(--atlas-shadow);
+}
+
+.tag,
+.meta-chip.primary,
+.article-status span:first-child {
+  border-color: var(--atlas-blue);
+  color: var(--atlas-blue-deep);
+  background: var(--atlas-blue-soft);
+}
+
+/* AI and generated-work surfaces use the reserved violet accent. */
+:where(.claude-card, .claude-code-card, .ai-card, [data-ai]) {
+  --blue: var(--atlas-violet);
+  --blue-deep: #5843c4;
+  --blue-soft: var(--atlas-violet-soft);
+}
+
+/* Scientific graphics retain colour, while their surrounding UI follows the
+   shared atlas palette. */
+body:has(.portfolio-header),
+body:has(.poster-sheet),
+body:has(.hero-count) {
+  --lime: var(--atlas-green);
+  --aqua: #64c9d3;
+  --coral: var(--atlas-red);
+  --yellow: #f4c84e;
+  --blue: var(--atlas-blue);
+}
+
+body:has(.topbar) {
+  --mint: var(--atlas-blue-soft);
+  --mint-2: #cfe0ff;
+  --yellow: #f4c84e;
+  --coral: var(--atlas-red);
+}
+
+body:has(.page-main) {
+  --lime: var(--atlas-green);
+  --lime-soft: var(--atlas-green-soft);
+}
+
+@media (max-width: 720px) {
+  body {
+    font-size: 15px;
+  }
+
+  .article :where(p, li, td, th, dt, dd, blockquote),
+  .markdown-body :where(p, li, td, th, dt, dd, blockquote),
+  .page-main .article :where(p, li, td, th, dt, dd, blockquote) {
+    font-size: .98rem;
+    line-height: 1.78;
+  }
+}
+
+@media print {
+  body {
+    color: #111;
+    background: #fff;
+  }
+
+  .article,
+  .poster-sheet {
+    box-shadow: none;
+  }
+}

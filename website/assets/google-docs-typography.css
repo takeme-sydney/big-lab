@@ -1,0 +1,143 @@
+/*
+ * Typography-only refinement shared by every page in BiG Lab/html.
+ *
+ * The scale and neutral text palette follow the familiar reading rhythm of a
+ * Google Docs document: Arial-style sans serif text, an 11 pt-equivalent
+ * reading size, restrained heading sizes, dark neutral copy, and blue links.
+ * This file deliberately changes only font and text-colour properties.
+ */
+
+:root {
+  --docs-text: #202124;
+  --docs-copy: #3c4043;
+  --docs-muted: #5f6368;
+  --docs-link: #1155cc;
+  --docs-link-hover: #174ea6;
+  --docs-font: Arial, "Noto Sans JP", "Hiragino Sans", "Yu Gothic UI",
+    "Yu Gothic", Meiryo, sans-serif;
+
+  /* Reuse the existing theme hooks without touching layout or decoration. */
+  --display: var(--docs-font);
+  --sans: var(--docs-font);
+  --serif: var(--docs-font);
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: var(--docs-font);
+}
+
+body {
+  color: var(--docs-text);
+  font-size: 15px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--docs-font);
+  font-style: normal;
+}
+
+a {
+  color: var(--docs-link);
+}
+
+a:hover {
+  color: var(--docs-link-hover);
+}
+
+/*
+ * Long-form pages use a calm document scale. Dense labels and interface
+ * controls remain smaller, while explanatory copy stays at roughly 11 pt.
+ */
+.article > h1:first-of-type {
+  font-size: clamp(2rem, 4vw, 2.2rem);
+}
+
+.article-section > h2,
+.article.markdown-body h2,
+.page-main .article h2 {
+  font-size: clamp(1.65rem, 3vw, 2.1rem);
+}
+
+.article.markdown-body h3,
+.page-main .article h3 {
+  font-size: clamp(1.2rem, 2vw, 1.4rem);
+}
+
+.article.markdown-body h4,
+.page-main .article h4 {
+  font-size: 1.05rem;
+}
+
+.article.markdown-body :where(p, li, td, th, dt, dd, blockquote),
+.page-main .article :where(p, li, td, th, dt, dd, blockquote),
+.article-intro,
+.hero-copy,
+.section-lead {
+  font-family: var(--docs-font);
+  font-size: 0.92rem;
+}
+
+.article.markdown-body :where(p, li, td, dt, dd),
+.page-main .article :where(p, li, td, dt, dd) {
+  color: var(--docs-copy);
+}
+
+.article.markdown-body :where(small, .cell-note),
+.page-main .article :where(small, .cell-note) {
+  color: var(--docs-muted);
+  font-size: 0.75rem;
+}
+
+.article.markdown-body a,
+.page-main .article a {
+  color: var(--docs-link);
+}
+
+.article.markdown-body a:hover,
+.page-main .article a:hover {
+  color: var(--docs-link-hover);
+}
+
+/*
+ * Navigation and supporting labels were frequently below comfortable screen
+ * size. Keep them visually secondary while making them easier to scan.
+ */
+:where(
+  .site-nav a,
+  .top-nav a,
+  .topnav a,
+  .portfolio-nav a,
+  .jump-nav a,
+  #TOC a
+) {
+  font-size: 0.75rem;
+}
+
+:where(
+  .eyebrow,
+  .spec-label,
+  .toc-title,
+  .sidebar-label,
+  .week-label,
+  .step-output,
+  .footer-meta
+) {
+  font-family: var(--docs-font);
+  font-size: 0.72rem;
+}
+
+@media print {
+  body {
+    color: #111111;
+    font-family: Arial, "Noto Sans JP", "Hiragino Sans", "Yu Gothic", sans-serif;
+  }
+}

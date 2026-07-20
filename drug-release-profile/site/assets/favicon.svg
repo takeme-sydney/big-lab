@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">BiG Lab microneedle research</title>
+  <rect width="64" height="64" rx="16" fill="#0b2c3a"/>
+  <path d="M14 16h36" stroke="#76d5d0" stroke-width="4" stroke-linecap="round"/>
+  <path d="M20 20l5 25 7-25 7 25 5-25" fill="#dff4f1" stroke="#dff4f1" stroke-linejoin="round"/>
+  <circle cx="32" cy="49" r="3" fill="#e86d5e"/>
+</svg>

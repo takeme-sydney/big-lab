@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">4論文のエビデンスマップ</title>
+  <desc id="desc">4本のレビューが、材料と光の設計、開始剤の高度化、安全性、コラーゲンの力学と輸送を補完し、一つのrun-level evidenceへ統合される図。</desc>
+  <defs>
+    <filter id="s" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#173b35" flood-opacity=".1"/></filter>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5 0 10z" fill="#82938e"/></marker>
+    <style>
+      .jp{font-family:"BIZ UDPGothic","Noto Sans JP","Hiragino Sans","Yu Gothic",sans-serif}
+      .mono{font-family:"SFMono-Regular",Consolas,monospace;letter-spacing:.07em}
+      .h{font-size:30px;font-weight:780;fill:#173b35}.k{font-size:14px;font-weight:800;fill:#5b706b}
+      .pt{font-size:21px;font-weight:780;fill:#173b35}.pc{font-size:15px;font-weight:550;fill:#4d625d}
+      .ct{font-size:27px;font-weight:800;fill:#fff}.cc{font-size:16px;font-weight:600;fill:#dcedea}
+      .ot{font-size:20px;font-weight:760;fill:#173b35}.oc{font-size:14px;font-weight:550;fill:#536762}
+    </style>
+  </defs>
+  <rect width="1200" height="760" rx="34" fill="#f4f7f3"/>
+  <text x="64" y="66" class="jp h">4本は競合せず、別の設計層を埋めている</text>
+  <text x="64" y="97" class="mono k">PAPER → EVIDENCE LAYER → RUN-LEVEL RECORD → DECISION</text>
+
+  <g filter="url(#s)">
+    <rect x="64" y="139" width="355" height="116" rx="18" fill="#e7f2ef" stroke="#88bcb3"/>
+    <rect x="64" y="139" width="8" height="116" rx="4" fill="#0e6b63"/>
+    <text x="94" y="175" class="mono k">01 / YU ET AL.</text>
+    <text x="94" y="204" class="jp pt">材料 × 光造形の全体地図</text>
+    <text x="94" y="231" class="jp pc">chemistry・modality・resolution・quality</text>
+  </g>
+  <g filter="url(#s)">
+    <rect x="64" y="275" width="355" height="116" rx="18" fill="#fff0e9" stroke="#dfa084"/>
+    <rect x="64" y="275" width="8" height="116" rx="4" fill="#c86343"/>
+    <text x="94" y="311" class="mono k">02 / BAO</text>
+    <text x="94" y="340" class="jp pt">次世代photoinitiator</text>
+    <text x="94" y="367" class="jp pc">visible/NIR・RAFT・switch・polymer・nano</text>
+  </g>
+  <g filter="url(#s)">
+    <rect x="64" y="411" width="355" height="116" rx="18" fill="#eef5dd" stroke="#abc668"/>
+    <rect x="64" y="411" width="8" height="116" rx="4" fill="#708f24"/>
+    <text x="94" y="447" class="mono k">03 / LEE ET AL.</text>
+    <text x="94" y="476" class="jp pt">cyto / genotoxicityのgate</text>
+    <text x="94" y="503" class="jp pc">light・PI・radical・assay・time course</text>
+  </g>
+  <g filter="url(#s)">
+    <rect x="64" y="547" width="355" height="116" rx="18" fill="#fff7df" stroke="#dfbd5f"/>
+    <rect x="64" y="547" width="8" height="116" rx="4" fill="#b58516"/>
+    <text x="94" y="583" class="mono k">04 / SARRIGIANNIDIS ET AL.</text>
+    <text x="94" y="612" class="jp pt">collagenの力学 × GF輸送</text>
+    <text x="94" y="639" class="jp pc">crosslink・degradation・binding・release</text>
+  </g>
+
+  <path d="M419 197 C482 197 482 310 506 337" fill="none" stroke="#82938e" stroke-width="3" marker-end="url(#a)"/>
+  <path d="M419 333 L506 350" fill="none" stroke="#82938e" stroke-width="3" marker-end="url(#a)"/>
+  <path d="M419 469 L506 378" fill="none" stroke="#82938e" stroke-width="3" marker-end="url(#a)"/>
+  <path d="M419 605 C483 605 483 420 506 392" fill="none" stroke="#82938e" stroke-width="3" marker-end="url(#a)"/>
+
+  <g filter="url(#s)">
+    <rect x="506" y="249" width="340" height="260" rx="28" fill="#173b35"/>
+    <text x="676" y="294" text-anchor="middle" class="mono k" fill="#a9d6ce">SINGLE SOURCE OF TRUTH</text>
+    <text x="676" y="337" text-anchor="middle" class="jp ct">Run-level Evidence</text>
+    <line x1="545" y1="360" x2="807" y2="360" stroke="#4f746d"/>
+    <text x="546" y="396" class="jp cc">sample / print run / batch</text>
+    <text x="546" y="427" class="jp cc">material / PI / wavelength / dose</text>
+    <text x="546" y="458" class="jp cc">geometry / optics / mechanics</text>
+    <text x="546" y="489" class="jp cc">cells / assay / time / provenance</text>
+  </g>
+
+  <path d="M846 379 L891 379" fill="none" stroke="#82938e" stroke-width="3" marker-end="url(#a)"/>
+  <g filter="url(#s)">
+    <rect x="891" y="196" width="245" height="112" rx="18" fill="#fff" stroke="#cbd7d2"/>
+    <text x="919" y="231" class="mono k">OUTPUT 01</text>
+    <text x="919" y="263" class="jp ot">比較可能なQC</text>
+    <text x="919" y="288" class="jp oc">単位・欠測・batchを明示</text>
+  </g>
+  <g filter="url(#s)">
+    <rect x="891" y="325" width="245" height="112" rx="18" fill="#fff" stroke="#cbd7d2"/>
+    <text x="919" y="360" class="mono k">OUTPUT 02</text>
+    <text x="919" y="392" class="jp ot">trade-offの可視化</text>
+    <text x="919" y="417" class="jp oc">硬化・形状・安全を同じ図へ</text>
+  </g>
+  <g filter="url(#s)">
+    <rect x="891" y="454" width="245" height="112" rx="18" fill="#fff" stroke="#cbd7d2"/>
+    <text x="919" y="489" class="mono k">OUTPUT 03</text>
+    <text x="919" y="521" class="jp ot">次の1実験</text>
+    <text x="919" y="546" class="jp oc">根拠・限界・承認者つき</text>
+  </g>
+
+  <rect x="64" y="704" width="1072" height="1" fill="#cbd7d2"/>
+  <text x="600" y="736" text-anchor="middle" class="jp pc">論文の結論を並べるだけでなく、同じsample/runへ結び付けて初めてBIGの意思決定に使える。</text>
+</svg>

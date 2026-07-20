@@ -1,0 +1,6 @@
+construct_id,measurement_id,planned_acquisition_tier,actual_acquisition_method,calibration_reference,calibration_confirmed,registration_method,registration_rmse_mm,radius_deviation_mm,thickness_variation_mm,surface_rmse_mm,chordal_error_mm,qc_status,notes
+CONSTRUCT-001,M00,tier_a_photo_scan,,,,,,,,,,
+CONSTRUCT-001,M01,tier_b_oct_confocal,,,,,,,,,,
+CONSTRUCT-002,M00,tier_a_photo_scan,,,,,,,,,,
+CONSTRUCT-002,M01,tier_b_oct_confocal,,,,,,,,,,
+CONSTRUCT-003,M00,tier_a_photo_scan,,,,,,,,,,

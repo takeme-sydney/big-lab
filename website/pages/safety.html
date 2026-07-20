@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Claude ScienceのLocal-firstデータフロー、機密情報、権限、Reviewerの限界、Beta版の管理制約を整理した安全ガイド。">
+  <meta name="theme-color" content="#f3f5f7">
+  <title>Claude Scienceを安全に使う — Claude Science Guide</title>
+  <link rel="stylesheet" href="../assets/claude-science-guide.css">
+  <link rel="stylesheet" href="../assets/bilingual.css">
+  <link rel="stylesheet" href="../assets/copy-tools.css">
+  <link rel="stylesheet" href="../assets/site-directory.css">
+  <link rel="stylesheet" href="../assets/google-docs-typography.css">
+  <link rel="stylesheet" href="../assets/monochrome-theme.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <header class="site-header">
+    <div class="header-main">
+      <a class="brand" href="claude-science-overview.html" aria-label="Claude Science Guide ホーム">
+        <span class="brand-mark" aria-hidden="true">CS</span>
+        <span class="brand-copy">Claude Science Guide<small>BIG LAB / JAPANESE FIELD MANUAL</small></span>
+      </a>
+      <span class="header-note">Unofficial · Verified 16 Jul 2026</span>
+    </div>
+    <nav class="site-nav" aria-label="ガイドのページ">
+      <div class="site-nav-inner">
+        <a href="index.html">統合ホーム</a>
+        <a href="claude-science-overview.html">概要</a>
+        <a href="getting-started.html">導入する</a>
+        <a href="workflow.html">研究を進める</a>
+        <a href="claude-science-big-lab.html">BiG Labで使う</a>
+        <a href="safety.html" aria-current="page">安全に使う</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-hero subpage-hero" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <div>
+          <p class="spec-label">Manual CS-05 / Data and safety</p>
+          <h1 id="hero-title">Local-firstは、<br>「送信しない」ではない。</h1>
+          <p class="hero-copy">raw datasetと実行環境は端末側にあります。ただし、<strong>Claudeが回答に使うprompt、必要なfile content、responseはAnthropicへ送られます。</strong></p>
+          <div class="hero-meta"><span class="meta-chip primary">入力前に確認</span><span class="meta-chip">研究データ管理</span></div>
+        </div>
+        <aside class="hero-side">
+          <div class="module-index">05</div>
+          <h2>このページで完了すること</h2>
+          <p>どのデータを使えるか、何を許可するか、どこを人間が検証するかを決めます。</p>
+          <div class="hero-finish"><strong>完了条件：</strong> Data分類、Folder権限、Network、Human review担当が明文化されている。</div>
+        </aside>
+      </div>
+    </section>
+
+    <div class="notice warning">
+      <strong>研究室の規程を優先</strong>
+      <p>倫理承認、data management plan、共同研究契約、NDA、University policy、知財、SOPがこのガイドより優先です。不明なら入力せず、PI・data steward・ethics担当へ確認します。</p>
+    </div>
+
+    <div class="page-layout">
+      <nav class="toc" aria-label="このページの目次">
+        <p class="toc-title">On this page</p>
+        <a href="#data-flow">データフロー</a>
+        <a href="#classification">データ分類</a>
+        <a href="#permission-scope">権限</a>
+        <a href="#guardrails">研究室ルール</a>
+        <a href="#review-boundary">検証境界</a>
+        <a href="#beta-gaps">Beta制約</a>
+        <a href="#faq">FAQ</a>
+        <a href="#official">公式情報</a>
+      </nav>
+
+      <article class="article">
+        <section class="article-section" id="data-flow" aria-labelledby="data-flow-title">
+          <p class="eyebrow">Data flow</p>
+          <h2 id="data-flow-title">端末に残るもの、modelへ送るもの。</h2>
+          <p class="article-intro">Claude Scienceはlocal-firstです。会話履歴とArtifactをAnthropic側で同期する一般的なcloud project storeは持ちません。一方、model callはAnthropic serverで処理されます。</p>
+          <div class="data-flow" role="img" aria-label="利用者の端末とAnthropic model間のデータフロー">
+            <div class="data-zone local">
+              <p class="eyebrow">Your infrastructure</p>
+              <h3>端末 / Lab Linux / HPC</h3>
+              <ul>
+                <li>raw datasetとlocal file</li>
+                <li>会話履歴、Artifact、Memory</li>
+                <li>Python / R / shell runtime</li>
+                <li>sandboxとpackage environment</li>
+                <li>remote computeへは端末から直接送信</li>
+              </ul>
+            </div>
+            <div class="data-arrow"><span><b aria-hidden="true">⇄</b>prompt<br>必要なfile content<br>response</span></div>
+            <div class="data-zone model">
+              <p class="eyebrow">Anthropic</p>
+              <h3>Claude model</h3>
+              <ul>
+                <li>model callを処理</li>
+                <li>標準retentionでtraffic log</li>
+                <li>product usage telemetry</li>
+                <li>local project storeは保持しない</li>
+              </ul>
+            </div>
+          </div>
+          <div class="principle">
+            <strong>「fileがlocal」でも、その内容が一切送られないわけではない。</strong>
+            <p>Claudeが回答に必要として読んだ内容はprompt contextの一部として処理されます。入力可否はfileの保存場所ではなく、送信可能な情報かどうかで判断します。</p>
+          </div>
+        </section>
+
+        <section class="article-section" id="classification" aria-labelledby="classification-title">
+          <p class="eyebrow">Before input</p>
+          <h2 id="classification-title">データを3段階で止める。</h2>
+          <p class="article-intro">所属組織に正式なclassificationがある場合は、その分類名と手順を使ってください。下記は初期判断用です。</p>
+          <div class="classification">
+            <article class="class-column">
+              <span class="class-state"><span class="state-dot"></span>START</span>
+              <h3>練習に使いやすい</h3>
+              <ul><li>公開論文と公開database</li><li>公開sample dataset</li><li>自分で作ったsynthetic data</li><li>公開済みcodeとdocumentation</li></ul>
+            </article>
+            <article class="class-column caution">
+              <span class="class-state"><span class="state-dot"></span>CONFIRM</span>
+              <h3>承認範囲を確認</h3>
+              <ul><li>未公開の実験data</li><li>共同研究者から受領したfile</li><li>特許・知財に関わるmethod</li><li>内部SOP、ELN、protocol</li></ul>
+            </article>
+            <article class="class-column stop">
+              <span class="class-state"><span class="state-dot"></span>DO NOT INPUT</span>
+              <h3>承認なしで扱わない</h3>
+              <ul><li>PHIと識別可能なparticipant data</li><li>同意範囲外のhuman research data</li><li>NDA・契約で制限された情報</li><li>password、token、API key</li></ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="article-section" id="permission-scope" aria-labelledby="permission-title">
+          <p class="eyebrow">Least privilege</p>
+          <h2 id="permission-title">最小権限で始め、終了後に戻す。</h2>
+          <div class="permission-list">
+            <div class="permission-row"><strong>Input folder</strong><p>raw dataとreferenceを読む。</p><span>Read-only</span></div>
+            <div class="permission-row"><strong>Output folder</strong><p>Artifactにする前の出力を保存。</p><span>Read &amp; write</span></div>
+            <div class="permission-row"><strong>Code</strong><p>language、command、package sourceを確認。</p><span>まずOnce</span></div>
+            <div class="permission-row"><strong>Network</strong><p>接続先、送る情報、licenseを確認。</p><span>Deny by default</span></div>
+            <div class="permission-row"><strong>Connector</strong><p>外部sourceの利用規約とscopeを確認。</p><span>Once → Project</span></div>
+            <div class="permission-row"><strong>Remote compute</strong><p>host、job、resource、cost、出力先を確認。</p><span>Jobごとにreview</span></div>
+            <div class="permission-row"><strong>After work</strong><p>Settings → Permissionsから不要grantを取り消す。</p><span>Revoke</span></div>
+          </div>
+        </section>
+
+        <section class="article-section" id="guardrails" aria-labelledby="guardrails-title">
+          <p class="eyebrow">Lab guardrails</p>
+          <h2 id="guardrails-title">研究室で先に合意すること。</h2>
+          <div class="guardrails">
+            <article class="guardrail"><h3>Data</h3><ul><li>raw dataを変更しない</li><li>sample IDとfile名を対応させる</li><li>保存先とretentionを決める</li><li>個人cloudや公開repositoryへ置かない</li></ul></article>
+            <article class="guardrail"><h3>AI use</h3><ul><li>利用箇所、model、日付を記録</li><li>外部AIへの入力範囲を承認</li><li>AI出力を実験証拠にしない</li><li>引用と数値を原文・原dataで確認</li></ul></article>
+            <article class="guardrail"><h3>Research integrity</h3><ul><li>除外基準を結果前に固定</li><li>代表画像だけで結論を作らない</li><li>negative resultとfailureを残す</li><li>experimental unitを明記</li></ul></article>
+            <article class="guardrail"><h3>Authorship &amp; IP</h3><ul><li>担当とcode所有をcharterで確認</li><li>論文、poster、portfolioを別々に承認</li><li>著者資格は実質的貢献で判断</li><li>特許出願前の公開を避ける</li></ul></article>
+          </div>
+        </section>
+
+        <section class="article-section" id="review-boundary" aria-labelledby="review-title">
+          <p class="eyebrow">Human verification</p>
+          <h2 id="review-title">Reviewerの後に、人間が見る。</h2>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Reviewer</th><th>研究者 / Domain expert</th></tr></thead>
+              <tbody>
+                <tr><td>回答とExecution Logの不一致</td><td>解析手法が研究問いに適切か</td></tr>
+                <tr><td>fileと異なる数値</td><td>experimental unitと統計設計</td></tr>
+                <tr><td>主張を支えない引用、異なるDOI</td><td>一次論文の解釈と研究分野の文脈</td></tr>
+                <tr><td>未完了のPlan step</td><td>臨床的意味、再現実験、最終結論</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="notice warning" style="margin-top:22px">
+            <strong>臨床・診断には使わない</strong>
+            <p>Claude Scienceはresearch toolであり、clinicalまたはdiagnostic useを目的としていません。Reviewerがあることは医療判断の許可を意味しません。</p>
+          </div>
+        </section>
+
+        <section class="article-section" id="beta-gaps" aria-labelledby="beta-title">
+          <p class="eyebrow">Public beta gaps</p>
+          <h2 id="beta-title">組織管理で未対応の部分。</h2>
+          <p class="article-intro">2026年7月16日時点。導入前に最新documentationを再確認してください。</p>
+          <div class="permission-list">
+            <div class="permission-row"><strong>Audit log</strong><p>Claude Science eventは組織audit logへまだ記録されない。</p><span>Roadmap</span></div>
+            <div class="permission-row"><strong>Compliance API</strong><p>端末上の会話・Artifactをexportまたはdeleteできない。</p><span>Local data</span></div>
+            <div class="permission-row"><strong>Org data export</strong><p>member端末に保存されたdataは含まれない。</p><span>MDMで補完</span></div>
+            <div class="permission-row"><strong>Allowlists</strong><p>local / custom ConnectorとFeatured Skillをadminが完全制限できない。</p><span>Procedureで補完</span></div>
+            <div class="permission-row"><strong>Offboarding</strong><p>member削除後も端末のlocal dataは自動消去されない。</p><span>Device management</span></div>
+            <div class="permission-row"><strong>HIPAA / BAA</strong><p>Beta中のClaude Science利用はBAA対象外。</p><span>No PHI</span></div>
+          </div>
+        </section>
+
+        <section class="article-section" id="faq" aria-labelledby="faq-title">
+          <p class="eyebrow">Data FAQ</p>
+          <h2 id="faq-title">迷いやすい点。</h2>
+          <div class="faq">
+            <details><summary>別のPCでProjectが見えない</summary><div class="faq-answer"><p>会話、Artifact、Memoryはlocal保存で同期されません。必要な成果物はDownloadし、研究室の承認済みstorageへ移します。</p></div></details>
+            <details><summary>Artifact以外のfileは残るか</summary><div class="faq-answer"><p>Session中に作ったscratch fileは数時間後に消える場合があります。残したいものは「Artifactとして保存」と明示します。</p></div></details>
+            <details><summary>MemoryはAnthropicへ同期されるか</summary><div class="faq-answer"><p>Memoryは初期状態でoffで、保存した短い情報は端末のlocal databaseに残り、Anthropicへ同期されません。ただしmodel callで使えばその文脈はpromptへ含まれます。</p></div></details>
+            <details><summary>Remote computeのdataはAnthropicを通るか</summary><div class="faq-answer"><p>接続したowned serverやcloud accountへのcode・data通信は端末から直接送られ、Anthropicを経由しません。</p></div></details>
+            <details><summary>完全に削除するには</summary><div class="faq-answer"><p><code>~/.claude-science</code>を削除するとProject、Artifact、会話履歴が消えます。必要な成果物を先にexportし、組織のretention手順に従います。</p></div></details>
+          </div>
+        </section>
+
+        <section class="article-section" id="official" aria-labelledby="official-title">
+          <p class="eyebrow">Official references</p>
+          <h2 id="official-title">重要判断は公式仕様へ戻る。</h2>
+          <div class="source-list">
+            <a class="source-link" href="https://claude.com/docs/claude-science/how-claude-science-works-with-your-data" target="_blank" rel="noopener noreferrer"><span>DATA</span><strong>How Claude Science works with your data</strong><small>Local storage、model traffic、telemetry、remote compute</small></a>
+            <a class="source-link" href="https://claude.com/docs/claude-science/whats-not-available-yet" target="_blank" rel="noopener noreferrer"><span>BETA</span><strong>What is not available yet</strong><small>Audit、compliance、retention、allowlist、offboarding</small></a>
+            <a class="source-link" href="https://claude.com/docs/claude-science/core-concepts" target="_blank" rel="noopener noreferrer"><span>PERMISSIONS</span><strong>Core concepts</strong><small>Project、Session、permission card、sandbox、Memory</small></a>
+            <a class="source-link" href="https://claude.com/docs/claude-science/the-reviewer" target="_blank" rel="noopener noreferrer"><span>REVIEW</span><strong>The reviewer</strong><small>確認対象、限界、custom review criteria</small></a>
+          </div>
+          <a class="next-page" href="claude-science-overview.html"><span>BACK / CS-01</span><strong>概要ページから目的を選び直す</strong><b aria-hidden="true">↗</b></a>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <footer class="page-footer">
+    <div class="footer-inner">
+      <div><div class="footer-title">Claude Science Guide</div><p class="footer-copy">Local-firstの利点とmodel通信を分け、研究室の承認・端末管理・人間の検証で安全境界を作る。</p></div>
+      <div class="footer-meta">CS-05 / DATA AND SAFETY<br>Independent guide · Australia/Sydney</div>
+    </div>
+  </footer>
+  <div class="sr-only" id="copy-status" role="status" aria-live="polite"></div>
+  <script src="../assets/claude-science-guide.js"></script>
+  <script src="../assets/bilingual-data.js"></script>
+  <script src="../assets/bilingual.js"></script>
+  <script src="../assets/copy-tools.js"></script>
+  <script src="../assets/site-directory.js"></script>
+</body>
+</html>

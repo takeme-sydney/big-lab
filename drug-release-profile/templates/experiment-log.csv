@@ -1,0 +1,8 @@
+event_time,study_id,protocol_version,batch_id,run_id,cell_id,event_type,actor_id,source_file,description,deviation_id,review_status
+,,,,,,setup,,,,,
+,,,,,,sampling,,,,,
+,,,,,,assay,,,,,
+,,,,,,calculation,,,,,
+,,,,,,qc_review,,,,,
+,,,,,,decision,,,,,
+

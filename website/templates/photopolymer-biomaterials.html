@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#f3f5f7">
+  <meta name="description" content="光重合性バイオマテリアルと光造形に関する4論文の本文要約、統合設計原理、Claude CodeとClaude Scienceを用いたBIGへの貢献案。">
+  <title>$title$</title>
+$for(css)$
+  <link rel="stylesheet" href="$css$">
+$endfor$
+  <link rel="stylesheet" href="../assets/bilingual.css">
+  <link rel="stylesheet" href="../assets/copy-tools.css">
+  <link rel="stylesheet" href="../assets/site-directory.css">
+  <link rel="stylesheet" href="../assets/google-docs-typography.css">
+  <link rel="stylesheet" href="../assets/monochrome-theme.css">
+</head>
+<body>
+  <a class="skip-link" href="#content">本文へ移動</a>
+  <div class="reading-progress" aria-hidden="true"><span data-reading-progress></span></div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="BiG Lab Working Guideへ戻る">
+        <span class="brand-mark">BIG</span>
+        <span class="brand-copy">Biomaterials Evidence Review<small>BIG LAB / 16 JUL 2026</small></span>
+      </a>
+      <nav class="jump-nav" aria-label="主要セクション">
+        <a href="#1-まず押さえる5点">要点</a>
+        <a href="#3-論文別の本文要約">4論文</a>
+        <a href="#4-4本を統合した設計原理">統合</a>
+        <a href="#6-claude-code--claude-scienceでどう貢献するか">BIGへの貢献</a>
+        <a href="#7-推奨する最初の4週間pilot">4週間pilot</a>
+      </nav>
+      <button class="toc-toggle" type="button" aria-expanded="false" aria-controls="sidebar-panel" data-toc-toggle>目次</button>
+    </div>
+  </header>
+
+  <main class="page-main">
+    <div class="document-shell">
+      <aside class="sidebar" id="sidebar-panel" data-sidebar>
+        <div class="sidebar-card">
+          <p class="sidebar-label">On this page</p>
+          <nav id="TOC" aria-label="文書内の目次">$toc$</nav>
+          <div class="sidebar-meta">
+            <span>FULL TEXT REVIEW</span>
+            <strong>4 papers · 3 original figures</strong>
+            <a href="../../reviews/photopolymer-biomaterials/README.md">Markdown原稿を開く</a>
+            <a href="index.html">BiG Labポータルへ戻る</a>
+          </div>
+        </div>
+      </aside>
+
+      <article class="article" id="content">
+        <div class="article-status">
+          <span>LITERATURE REVIEW</span>
+          <span>DISCUSSION DRAFT</span>
+          <span>FULL TEXT CHECKED</span>
+        </div>
+$body$
+      </article>
+    </div>
+  </main>
+
+  <footer class="page-footer">
+    <div>
+      <strong>Photopolymer Biomaterials Evidence Review</strong>
+      <p>指定4論文の本文要約、統合設計原理、BIG向けの再現可能な研究支援案。</p>
+    </div>
+    <div class="footer-meta">ORIGINAL SYNTHESIS<br>LOCAL HTML · 16 JUL 2026</div>
+  </footer>
+
+  <div class="sr-only" role="status" aria-live="polite" data-status></div>
+  <script src="../../reviews/photopolymer-biomaterials/assets/app.js"></script>
+  <script src="../assets/bilingual-data.js"></script>
+  <script src="../assets/bilingual.js"></script>
+  <script src="../assets/copy-tools.js"></script>
+  <script src="../assets/site-directory.js"></script>
+</body>
+</html>

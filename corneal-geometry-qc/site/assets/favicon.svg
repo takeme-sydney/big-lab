@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="favicon-title favicon-desc">
+  <title id="favicon-title">BiG Lab corneal geometry QC mark</title>
+  <desc id="favicon-desc">A curved dome with a measured comparison curve and a small calibration point.</desc>
+  <rect width="64" height="64" rx="14" fill="#0b2c3a"/>
+  <path d="M10 47C14 25 23 15 32 15c11 0 19 11 23 32" fill="none" stroke="#dff4f1" stroke-width="5" stroke-linecap="round"/>
+  <path d="M10 47C16 29 24 21 32 21c9 0 16 10 22 26" fill="none" stroke="#ff9b8e" stroke-width="3" stroke-linecap="round"/>
+  <path d="M10 48h44" stroke="#82d4ce" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="32" cy="12" r="3" fill="#82d4ce"/>
+</svg>

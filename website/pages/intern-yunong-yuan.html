@@ -1,0 +1,794 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="熱・結晶化の物理モデルから、薬物送達、機械学習、角膜バイオプリンティングへ発展した研究を一次資料で整理。">
+  <meta name="theme-color" content="#f3f5f7">
+  <title>Yunong Yuan氏の研究ガイド — BiG Lab Intern Guide</title>
+  <link rel="stylesheet" href="../assets/claude-science-guide.css">
+  <link rel="stylesheet" href="../assets/big-lab-portal.css">
+  <link rel="stylesheet" href="../assets/bilingual.css">
+  <link rel="stylesheet" href="../assets/copy-tools.css">
+  <link rel="stylesheet" href="../assets/site-directory.css">
+  <link rel="stylesheet" href="../assets/google-docs-typography.css">
+  <link rel="stylesheet" href="../assets/monochrome-theme.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <header class="site-header">
+    <div class="header-main">
+      <a class="brand" href="index.html" aria-label="BiG Lab資料ポータル ホーム">
+        <span class="brand-mark" aria-hidden="true">BL</span>
+        <span class="brand-copy">BiG Lab Working Guide<small>INTERN × CLAUDE / HTML EDITION</small></span>
+      </a>
+      <span class="header-note">Updated 16 Jul 2026</span>
+    </div>
+    <nav class="site-nav" aria-label="インターン資料">
+      <div class="site-nav-inner">
+        <a href="index.html">統合ホーム</a>
+        <a href="intern-overview.html">ラボ概要</a>
+        <a href="photopolymer-biomaterials-review.html">4論文</a>
+        <a href="intern-yunong-yuan.html" aria-current="page">Yuan研究</a>
+        <a href="intern-contribution-map.html">できること</a>
+        <a href="intern-contribution-strategy.html">貢献戦略</a>
+        <a href="intern-roadmap.html">12週間</a>
+        <a href="intern-meeting.html">面談準備</a>
+        <a href="claude-code.html">Claude Code</a>
+        <a href="claude-science-overview.html">Claude Science</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-hero doc-hero" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <div>
+          <p class="spec-label">Intern manual / I-05</p>
+          <h1 id="hero-title">Yunong Yuan氏の研究ガイド</h1>
+          <p class="hero-copy">熱・結晶化の物理モデルから、薬物送達、機械学習、角膜バイオプリンティングへ発展した研究を一次資料で整理。</p>
+          <div class="doc-meta">
+            <span>更新 16 Jul 2026</span>
+            <span>PUBLIC SOURCE BRIEF</span>
+            <span>約25分</span>
+          </div>
+        </div>
+        <aside class="doc-abstract">
+          <div class="doc-index">I-05</div>
+          <strong>この資料の位置づけ</strong>
+          <p>公開研究成果12本とMPhil thesis、論文別の要点、PDF取得状況、面談で確認する質問をまとめています。</p>
+        </aside>
+      </div>
+    </section>
+
+    <div class="page-layout">
+      <aside class="toc doc-toc" aria-label="この資料の目次">
+        <p class="toc-title">On this page</p>
+<ul>
+<li><a href="#研究者像を30秒で理解する"
+id="toc-研究者像を30秒で理解する">1. 研究者像を30秒で理解する</a></li>
+<li><a href="#研究の発展を一本の線で見る"
+id="toc-研究の発展を一本の線で見る">2.
+研究の発展を一本の線で見る</a></li>
+<li><a href="#公開研究成果とpdf取得状況"
+id="toc-公開研究成果とpdf取得状況">3. 公開研究成果とPDF取得状況</a></li>
+<li><a href="#最重要論文を深く読む" id="toc-最重要論文を深く読む">4.
+最重要論文を深く読む</a></li>
+<li><a href="#yuan氏の研究を表す重要フレーズ"
+id="toc-yuan氏の研究を表す重要フレーズ">5.
+Yuan氏の研究を表す重要フレーズ</a></li>
+<li><a href="#指定4論文との接続" id="toc-指定4論文との接続">6.
+指定4論文との接続</a></li>
+<li><a href="#最初に読む順番" id="toc-最初に読む順番">7.
+最初に読む順番</a></li>
+<li><a href="#面談で使える質問" id="toc-面談で使える質問">8.
+面談で使える質問</a></li>
+<li><a href="#出典と調査範囲" id="toc-出典と調査範囲">9.
+出典と調査範囲</a></li>
+</ul>
+      </aside>
+
+      <article class="article markdown-body">
+        <div class="source-bar">
+          <span>SOURCE / docs/yunong-yuan-research-guide.md</span>
+          <a href="../../docs/yunong-yuan-research-guide.md">元のMarkdownを開く</a>
+        </div>
+<blockquote>
+<p><strong>結論:</strong>
+Yuan氏の研究は、材料押出時の熱・結晶化を説明する<strong>物理モデル</strong>から始まり、皮膚・ハイドロゲル中の<strong>拡散予測</strong>、データが少ない状況での<strong>機械学習</strong>、そして<strong>角膜バイオプリンティング</strong>へ発展している。一貫しているのは、実験だけ・計算だけで完結させず、<strong>材料・プロセス・形状・生物機能を測定可能なモデルへ結ぶ姿勢</strong>である。</p>
+</blockquote>
+<p>この文書は <code>yunong.yuan@sydney.edu.au</code>
+と、論文に記載された所属・<a
+href="https://orcid.org/0000-0003-1470-6541">ORCID
+<code>0000-0003-1470-6541</code></a>
+を照合し、2026年7月16日までに公開一次資料で本人確認できた研究を整理した。完全なCVではなく、公開データベースの更新遅れや未索引論文があり得る。</p>
+<h2 id="研究者像を30秒で理解する">1. 研究者像を30秒で理解する</h2>
+<p>2025年公開の著者略歴では、Yuan氏はUniversity of Sydneyのpostdoctoral
+researcherで、Aircraft Power Engineeringの学士、University of
+ManchesterのMaterials Science MPhil、University of SydneyのPharmacy
+PhD（2025）を経ている。研究関心は3D printing、biomaterials、tissue
+engineering、regenerative medicine、simulation、machine
+learningと記載されている。[1]</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>観点</th>
+<th>読み取れる特徴</th>
+<th>根拠となる研究</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>物理を出発点にする</td>
+<td>熱伝達、結晶成長、Fick拡散、流体・光・力学を方程式で扱う</td>
+<td>PLA熱・結晶化、酸素縫合糸、vancomycin放出、multiphysics review</td>
+</tr>
+<tr>
+<td>実験でモデルを閉じる</td>
+<td>予測値を温度測定、microelectrode、透過試験、in
+vivo結果と比較する</td>
+<td>2020、2023、2024の原著</td>
+</tr>
+<tr>
+<td>小規模データの限界を明記する</td>
+<td>MLの精度だけでなく、未知drugへの外挿失敗とデータ偏りを報告する</td>
+<td>microneedle–skin ML論文</td>
+</tr>
+<tr>
+<td>臨床課題から評価項目を逆算する</td>
+<td>角膜では透明性だけでなく、曲率、厚さ、屈折、力学、酸素・栄養透過を要求する</td>
+<td>cornea strategy review</td>
+</tr>
+<tr>
+<td>標準化を重視する</td>
+<td>条件・形状誤差・生物評価の報告不足を、比較不能の原因として扱う</td>
+<td>cornea review、multiphysics review、薬剤3D printing review</td>
+</tr>
+</tbody>
+</table>
+<h2 id="研究の発展を一本の線で見る">2. 研究の発展を一本の線で見る</h2>
+<pre class="text"><code>2019–2020  PLA押出の熱・結晶化
+     ↓     物理則 + domain discretisation + 実測検証
+2022       3D printed dosage formと薬局実装
+     ↓     個別化、品質管理、規制、非破壊評価
+2023–2024  皮膚・酸素・薬物送達
+     ↓     Fick拡散 + ML + hydrogel + in vivo proof of concept
+2024       biomaterialと3D disease model
+     ↓     sericin、bioprinted drug-testing model、非動物モデル
+2025–2026  human cornea bioengineering
+     ↓     collagen、曲率、多層構造、光学、細胞、標準化
+2026       principle-based multiphysics
+           inkjet・extrusion・DLPを物理モデルとMLで統合</code></pre>
+<p><code>[統合]</code>
+分野が移ったように見えても、研究上の主語は同じである。<strong>「加工条件が、材料内部の物理現象を通じて、最終的な機能へどう伝わるか」</strong>を、実験と計算で追っている。</p>
+<h2 id="公開研究成果とpdf取得状況">3. 公開研究成果とPDF取得状況</h2>
+<h3 id="学位論文">3.1 学位論文</h3>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>年</th>
+<th>成果</th>
+<th>内容</th>
+<th>ローカル資料</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2019</td>
+<td><em>Modelling of Temperature Evolution and Crystal Growth in
+Additive Manufacturing of PLA</em>（MPhil thesis）[2]</td>
+<td>2D domain
+discretisationとHoffman–Lauritzen理論で、PLA押出時の温度・結晶化をモデル化。2020年論文の基盤となる詳細版。</td>
+<td><a
+href="../../references/papers/yunong-yuan/3d-printing/00-yuan-2019-mphil-thesis-temperature-crystal-growth.pdf">PDF</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="論文レビュー">3.2 論文・レビュー</h3>
+<p>公開一次資料で本人確認できたjournal article /
+reviewは12本である。ORCIDには2026年7月16日時点でそのうち9本が登録され、2025–2026年の角膜関連3本は出版社側で確認した。これは公開記録の照合結果であり、公式CVの代替ではない。</p>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>年</th>
+<th>論文</th>
+<th>種別・Yuan氏の位置</th>
+<th>一文要約</th>
+<th>PDF / 本文状況</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2020</td>
+<td><a href="https://doi.org/10.1016/j.matdes.2020.109121">Prediction of
+temperature and crystal growth evolution during 3D printing of polymeric
+materials via extrusion</a> [3]</td>
+<td>原著・first author</td>
+<td>2D熱モデルと結晶成長理論を結び、single-lineの温度を最大3.8 °C、full
+scale比2%以内のずれで予測。</td>
+<td>出版社PDFは自動取得不可。上記MPhil thesisを保存</td>
+</tr>
+<tr>
+<td>2022</td>
+<td><a href="https://doi.org/10.1093/jpp/rgab168">Recent progress in
+three-dimensionally-printed dosage forms from a pharmacist
+perspective</a> [4]</td>
+<td>review・coauthor</td>
+<td>個別用量、複数薬、release制御、調剤薬局、品質・規制を薬剤師の視点で整理。</td>
+<td><a
+href="https://academic.oup.com/jpp/article/74/10/1367/6534282">公式全文HTML</a>、PDF未保存</td>
+</tr>
+<tr>
+<td>2023</td>
+<td><a href="https://doi.org/10.1002/btm2.10512">Prediction of drug
+permeation through microneedled skin by machine learning</a> [5]</td>
+<td>原著・first author</td>
+<td>Fick、MLR、RF、XGBoostを比較し、既知drug内ではXGBoostが最良。ただし未知drugへの外挿に失敗。</td>
+<td><a
+href="../../references/papers/yunong-yuan/microneedle/03-yuan-2023-machine-learning-microneedled-skin-permeation.pdf">PDF</a></td>
+</tr>
+<tr>
+<td>2023</td>
+<td><a href="https://doi.org/10.1016/j.eng.2023.05.006">Oxygen
+Penetration Through Full-Thickness Skin by Oxygen-Releasing Sutures</a>
+[6]</td>
+<td>原著・co-first author</td>
+<td>二層hydrogel縫合糸で深部へ酸素を送り、model、細胞、マウス皮膚移植で検証。</td>
+<td><a
+href="../../references/papers/yunong-yuan/biomaterials/04-yuan-2023-oxygen-releasing-sutures-skin-graft.pdf">PDF</a></td>
+</tr>
+<tr>
+<td>2023</td>
+<td><a
+href="https://doi.org/10.12300/j.issn.1674-5817.2023.083">Implications
+on the Development of Animal Disease Models from FDA Modernization Act
+2.0</a> [7]</td>
+<td>frontier review・coauthor</td>
+<td>cell culture、organoid、organ-on-chip、3D bioprinting、computer
+modelの役割と、動物モデルとの組合せを整理。</td>
+<td><a
+href="../../references/papers/yunong-yuan/biomedical-research-policy/02-yuan-2023-fda-modernization-disease-models.pdf">PDF</a></td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.1016/j.bioadv.2024.213896">Controlled
+release of vancomycin from PF-PEGDA hydrogel</a> [8]</td>
+<td>原著・co-first author</td>
+<td>gel stiffnessと拡散係数のpower-law関係を示し、drug
+loading・厚さ・硬さからreleaseを予測。</td>
+<td><a
+href="https://www.sciencedirect.com/science/article/pii/S2772950824001390">公式全文HTML</a>、PDF未保存</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.1016/j.addr.2024.115456">Recent
+applications of 3D bioprinting in drug discovery and development</a>
+[9]</td>
+<td>review・coauthor</td>
+<td>target selectionからlead、preclinicalまでの3D bioprinted
+modelを整理。臨床試験での実利用はまだ未報告。</td>
+<td><a
+href="https://pubmed.ncbi.nlm.nih.gov/39306280/">PubMed</a>、出版社PDF未保存</td>
+</tr>
+<tr>
+<td>2024</td>
+<td><a href="https://doi.org/10.1016/j.mtbio.2024.101306">Sericin coats
+of silk fibres, a degumming waste or future material?</a> [10]</td>
+<td>review・first author</td>
+<td>廃棄物扱いだったsericinを、分子量・抽出法・機能・hydrogel/printing用途から再評価。</td>
+<td><a
+href="../../references/papers/yunong-yuan/biomaterials/07-yuan-2024-sericin-coats-silk-fibres.pdf">PDF</a></td>
+</tr>
+<tr>
+<td>2025 online / 2026 issue</td>
+<td><a href="https://doi.org/10.1002/adhm.202502767">3D Printing
+Strategies for Bioengineering Human Cornea</a> [1]</td>
+<td>review・first / corresponding author</td>
+<td>角膜固有の曲率、異方性、透明性、力学、屈折、透過性を満たすprinting
+strategyを比較。</td>
+<td><a
+href="../../references/papers/yunong-yuan/3d-printing/08-yuan-2025-3d-printing-human-cornea.pdf">PDF</a></td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.1177/19373341261424272">A New Bioprinted
+Dual-Layered Corneal Structure Using Collagen-Based Bioinks</a>
+[11]</td>
+<td>原著・second author</td>
+<td>Col-I stroma + Col-IV-supported
+endotheliumを曲面支持体へ印刷し、3週間、曲率・透明性・界面を保持。</td>
+<td>公式abstractは公開、本文PDFは購読制限のため未保存</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.1088/1758-5090/ae6ad0">Principle-based
+multiphysics simulation for 3D bioprinting systems</a> [12]</td>
+<td>review・first author</td>
+<td>inkjet、extrusion、DLPを、流体・熱・光・力学・輸送の理論モデルで整理し、hybrid
+physics–MLを提案。</td>
+<td><a
+href="../../references/papers/yunong-yuan/3d-printing/10-yuan-2026-multiphysics-simulation-bioprinting.pdf">PDF</a></td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://doi.org/10.1016/j.ajpath.2026.03.017">Advances in
+Differentiation of iPSC-Derived Corneal Endothelial Cells</a> [13]</td>
+<td>review・coauthor / corresponding author</td>
+<td>TGF-β、BMP、WNT等の分化経路と、研究用・臨床用characterizationの差を比較。</td>
+<td><a
+href="https://www.sciencedirect.com/science/article/pii/S0002944026001252">公式全文HTML</a>、PDF未保存</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>取得上の注意:</strong>
+「PDF未保存」は論文が存在しないという意味ではない。出版社のbot対策、購読制限、またはPDF
+endpointの制約により、合法的な公開PDFを自動取得できなかったものを示す。University
+of Sydney Libraryの認証、出版社のDownload
+PDF、または著者へのrequestで確認する。</p>
+</blockquote>
+<h2 id="最重要論文を深く読む">4. 最重要論文を深く読む</h2>
+<h3 id="熱結晶化モデル-研究スタイルの原点">4.1 熱・結晶化モデル —
+研究スタイルの原点</h3>
+<p><strong>問い:</strong> material
+extrusion中のPLAは、どのように冷却・再加熱され、結晶化するか。</p>
+<p><strong>方法:</strong> 印刷線を2D要素へ分割し、熱伝達のboundary
+conditionとHoffman–Lauritzen crystal-growth
+theoryを結合した。single-lineとmulti-lineを扱い、thermal
+cameraおよび既報データで検証した。</p>
+<p><strong>結果:</strong> 2020年論文ではsingle-line予測の最大ずれが3.8
+°C、full scale比2%だった。MPhil thesisの2×2
+multi-line解析では、後続線による再加熱で結晶化可能時間が延び、single-lineより最終結晶化率が約10倍になった。convection
+coefficient、platformとのthermal contact、nozzle
+diameterの影響が大きかった。[2][3]</p>
+<p><strong>限界:</strong>
+platform・air温度、流れ、形状、核生成等を単純化しており、複雑形状や材料へそのまま移せない。</p>
+<p><strong>重要な読み方:</strong>
+高精度な数字そのものより、<code>process parameter → local temperature history → material structure → product quality</code>
+という因果鎖が、その後の研究でも使われ続けている点が重要である。</p>
+<h3 id="microneedle-machine-learning-精度と外挿を分ける">4.2 Microneedle
+× machine learning — 精度と外挿を分ける</h3>
+<p><strong>問い:</strong> 時間と費用がかかるin vitro skin permeation
+testを、どこまで予測で補えるか。</p>
+<p><strong>方法:</strong> 6種のdrug/chemicalとhuman/rat
+skin、plastic/hydrogel microneedleの既存実験を統合し、Fick’s
+law、multiple linear regression、random
+forest、XGBoostを比較した。train/testは7:3に分割した。</p>
+<table>
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 21%" />
+<col style="width: 21%" />
+<col style="width: 21%" />
+<col style="width: 21%" />
+</colgroup>
+<thead>
+<tr>
+<th>予測対象</th>
+<th style="text-align: right;">XGBoost</th>
+<th style="text-align: right;">Random Forest</th>
+<th style="text-align: right;">Fick</th>
+<th style="text-align: right;">MLR</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>permeation amount RMSE（µg）</td>
+<td style="text-align: right;"><strong>4,447.23</strong></td>
+<td style="text-align: right;">7,043.97</td>
+<td style="text-align: right;">6,778.17</td>
+<td style="text-align: right;">23,398.91</td>
+</tr>
+<tr>
+<td>permeation amount R²</td>
+<td style="text-align: right;"><strong>0.98</strong></td>
+<td style="text-align: right;">0.95</td>
+<td style="text-align: right;">0.95</td>
+<td style="text-align: right;">0.46</td>
+</tr>
+<tr>
+<td>permeation percentage RMSE（%）</td>
+<td style="text-align: right;"><strong>28.24</strong></td>
+<td style="text-align: right;">34.33</td>
+<td style="text-align: right;">85.58</td>
+<td style="text-align: right;">120.33</td>
+</tr>
+<tr>
+<td>permeation percentage R²</td>
+<td style="text-align: right;"><strong>0.98</strong></td>
+<td style="text-align: right;">0.97</td>
+<td style="text-align: right;">0.82</td>
+<td style="text-align: right;">0.65</td>
+</tr>
+</tbody>
+</table>
+<p><strong>結果:</strong> 既知drugを含む分割ではXGBoostが最良で、drug
+loading、permeation time、microneedle surface
+areaが主要featureだった。[5]</p>
+<p><strong>最重要の限界:</strong> 一つのdrugを丸ごとtraining
+setから外すleave-one-drug-out型の確認では大きく外れた。小規模・不均衡データでは、通常のrandom
+splitのR²が高くても、<strong>未知材料・未知drugへ一般化できるとは限らない</strong>。</p>
+<p><strong>Yuan氏の担当:</strong> CRediTではformal
+analysis、investigation、methodology、softwareがleadで、validation・visualization・writingも担当した。Yuan氏の計算・解析能力を最も直接的に確認できる原著である。</p>
+<h3 id="oxygen-releasing-suture-modelをdeviceとin-vivoへつなぐ">4.3
+Oxygen-releasing suture — modelをdeviceとin vivoへつなぐ</h3>
+<p><strong>問い:</strong> 酸素が通りにくいfull-thickness skin
+graftの深部へ、表面からではなく縫合糸に沿って酸素を届けられるか。</p>
+<p><strong>方法:</strong>
+内層のCaO₂がH₂O₂を作り、外層のcatalaseがO₂へ変換する二層hydrogel-coated
+sutureを設計した。microelectrode測定、Fick’s second lawの2D
+simulation、極低酸素下のendothelial cell、マウスskin
+graftで評価した。</p>
+<p><strong>結果:</strong> skin modelの深さ15 mmでtopical gaseous
+oxygenより100倍多い酸素を供給し、極低酸素下のendothelial cell
+proliferationを促進した。マウスではblood reperfusionとgraft survival
+areaが改善した。[6]</p>
+<p><strong>限界:</strong> modelはconstant diffusion
+coefficient等を仮定する。gel
+modelから実皮膚への換算、縫合間隔、大きなgraft、長期安全性は追加検証が必要である。</p>
+<p><strong>重要な読み方:</strong>
+<code>material design → diffusion model → cell response → animal outcome</code>
+を同じ問いへ接続したtranslational workflowの例である。</p>
+<h3 id="vancomycin-hydrogel-mechanicsとreleaseを結ぶ">4.4 Vancomycin
+hydrogel — mechanicsとreleaseを結ぶ</h3>
+<p><strong>問い:</strong> PF-PEGDA
+hydrogelの硬さ・厚さ・loading方法からvancomycin
+releaseを予測できるか。</p>
+<p><strong>結果:</strong> softer hydrogelほどdiffusion
+coefficientが大きいpower-law関係を報告した。gel内loadingはburst
+release、blank gel上にsolutionを置く構成はlag
+releaseとなり、数理モデルでdrug loading、gel
+thickness、stiffnessによるreleaseのcustomizationを扱った。rabbit median
+sternotomyのproof of conceptではosteogenic
+processの開始が早まった。[8]</p>
+<p><strong>意味:</strong>
+力学特性を単なる強度として扱わず、mesh・diffusion・dose
+profileへ接続している。指定4論文中のcollagen + growth factor
+reviewとも強くつながる。</p>
+<h3 id="sericin-review-原料名より履歴を記録する">4.5 Sericin review —
+原料名より履歴を記録する</h3>
+<p><strong>問い:</strong> silk fibroinのdegumming
+wasteとされてきたsericinを、再生医療・drug
+delivery・energy・sensor等へ使うには何を管理すべきか。</p>
+<p><strong>要点:</strong> sericinはcocoon
+massの約20–30%で、antioxidant、biocompatibility、low
+immunogenicity、controlled
+biodegradation等が報告される。一方、抽出温度・pH・圧力でmolecular
+weightと鎖構造が変わり、それがviscosity、β-sheet、mechanics、bioactivity、加工性を変える。[10]</p>
+<p><strong>限界:</strong> sustainable / scalable
+extraction、弱い力学、animal origin、抽出時分解、限られたclinical
+trialが課題である。抗菌性の由来もsericin自体か不純物かで議論が残る。</p>
+<p><strong>重要な読み方:</strong> <code>sericin</code>
+という材料名だけでは再現性がない。source、layer、extraction、MW、functionalisation、batchを同じ材料identityとして残す必要がある。</p>
+<h3 id="human-cornea-strategy-review-bigとの直接接点">4.6 Human cornea
+strategy review — BiGとの直接接点</h3>
+<p><strong>中心質問:</strong> 3D printingでbioengineered human
+corneaを作ることは可能か。</p>
+<p><strong>回答:</strong>
+技術的可能性は高まっているが、単に透明なcell-laden
+domeを作るだけでは不十分である。native corneaのmultilayer、collagen
+anisotropy、curvature、mechanics、refractive
+index/power、oxygen/nutrient
+permeabilityを同時に満たす必要がある。[1]</p>
+<p><strong>重要なgap:</strong> 公開研究は形状を示しても、design
+radiusやwall
+thicknessからの実測誤差をsystematicに報告していない。論文は、test
+domeを印刷し、high-resolution
+scanまたはOCTで次を測る案を具体的に示している。</p>
+<ul>
+<li>radius error</li>
+<li>local wall-thickness variation</li>
+<li>surface roughness</li>
+<li>topographic chordal error</li>
+</ul>
+<p>さらに、mechanics、transparency、refractive index /
+power、permeabilityを含む標準characterization
+protocolを提案している。これはTakumiが最初に担えるQC
+pilotとほぼ一致する。</p>
+<h3 id="dual-layer-cornea-reviewの要求を実物へ近づける">4.7 Dual-layer
+cornea — reviewの要求を実物へ近づける</h3>
+<p><strong>構成:</strong> type I collagen中のcorneal stromal
+cellsと、type IV collagenで支えたcorneal endothelial monolayerを、native
+posterior curvatureを模した曲面支持体へbioprintした。[11]</p>
+<p><strong>結果:</strong> cell
+viabilityは90%超で、明確な二層と連続したendothelial
+layerを形成した。3週間の培養中、curvature、transparency、interfacial
+integrityを保持し、ex vivo corneal tissue上でadherenceを示した。</p>
+<p><strong>読み方:</strong>
+donor不足を直ちに解決する移植片の完成報告ではなく、stromal–endothelial
+architectureと相互作用を調べるphysiologically relevant in vitro
+modelである。次の課題は、定量geometry、optics、mechanics、permeability、長期functionの標準評価である。</p>
+<h3 id="multiphysics-review-今後の計算研究の設計図">4.8 Multiphysics
+review — 今後の計算研究の設計図</h3>
+<p><strong>範囲:</strong> dot（inkjet）、line（material
+extrusion）、face（DLP）の3方式を、theory-based numerical
+simulationで比較する。[12]</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>現在の制約</th>
+<th>論文が示す方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Newtonian前提、実測rheology不足</td>
+<td>Herschel–Bulkley / Carreau–Yasuda、温度・shear依存粘度を導入</td>
+</tr>
+<tr>
+<td>flow、heat、light、curingを別々に計算</td>
+<td>multiphysics couplingとpolymerisation / diffusion
+parameterを統合</td>
+</tr>
+<tr>
+<td>cell-ladenでもinert materialとして扱う</td>
+<td>cell mechanics、nutrient / oxygen transport、viability
+dataと結合</td>
+</tr>
+<tr>
+<td>2D・単純geometry</td>
+<td>adaptive mesh、voxel / lattice-resolved model、topology
+optimization</td>
+</tr>
+<tr>
+<td>計算負荷が大きい</td>
+<td>physics-based solver + ML surrogate / digital twin</td>
+</tr>
+<tr>
+<td>benchmarkと定量検証がない</td>
+<td>open dataset、in situ imaging、standardized validation</td>
+</tr>
+</tbody>
+</table>
+<p><strong>中心的な判断:</strong>
+MLは複雑データに強いが、少量・不均衡データとoverfittingに弱い。physics-based
+modelは解釈可能でdata-efficientだが、仮定と計算負荷を持つ。したがって二者択一ではなく、<strong>physicsで制約したhybrid
+model</strong>が有望である。</p>
+<h3 id="ipsc-derived-corneal-endothelial-cells-造形後の細胞の正しさ">4.9
+iPSC-derived corneal endothelial cells — 造形後の「細胞の正しさ」</h3>
+<p>このreviewは、donor不足に対するrenewable cell
+sourceとしてiPSC-derived corneal endothelial
+cellを扱い、TGF-β、BMP、WNT等のpathwayとcharacterization
+practiceを比較する。[13]</p>
+<p>BiGとの接点は、印刷形状が正しいだけでなく、endothelial
+identityとfunctionをどのmarker・morphology・pump/barrier
+evidenceで証明するかにある。protocol間のefficiencyとreproducibilityが大きく、research
+markerとclinical standardを分けて評価する必要がある。</p>
+<h2 id="yuan氏の研究を表す重要フレーズ">5.
+Yuan氏の研究を表す重要フレーズ</h2>
+<p>以下は逐語引用ではなく、論文の主張を日本語で短く言い換えたものである。</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>重要フレーズ</th>
+<th>意味</th>
+<th>Takumiへの示唆</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>加工履歴が材料機能を決める</strong></td>
+<td>温度、光、shear、diffusionの履歴がstructureとfunctionへ伝わる</td>
+<td>最終値だけでなくrun-level conditionを残す</td>
+</tr>
+<tr>
+<td><strong>modelは実験を置き換えるのでなく、絞り込む</strong></td>
+<td>costly experimentの前にparameter sensitivityと候補を評価する</td>
+<td>予測値にはvalidation statusを付ける</td>
+</tr>
+<tr>
+<td><strong>random splitの高精度は外挿能力ではない</strong></td>
+<td>既知drug内R²と未知drug predictionは別問題</td>
+<td>batch / material単位でhold-outを設計する</td>
+</tr>
+<tr>
+<td><strong>material nameだけでは再現できない</strong></td>
+<td>extraction、MW、batch、functionalisationが性質を変える</td>
+<td>bioink identity schemaを作る</td>
+</tr>
+<tr>
+<td><strong>角膜は透明なhydrogel以上のもの</strong></td>
+<td>曲率、異方性、屈折、力学、透過、細胞機能が必要</td>
+<td>geometryとopticsを同一sampleで測る</td>
+</tr>
+<tr>
+<td><strong>形状誤差を定量報告する</strong></td>
+<td>radius、thickness、roughness、chordal errorが不足</td>
+<td>OCT / scan用のQC pipelineをpilotにする</td>
+</tr>
+<tr>
+<td><strong>physicsとMLは補完関係</strong></td>
+<td>theoryの解釈性とMLの速度・非線形性を組み合わせる</td>
+<td>小規模データではhybrid / surrogateを優先</td>
+</tr>
+<tr>
+<td><strong>標準化がtranslationの前提</strong></td>
+<td>study間で条件と評価が揃わないと比較・規制対応できない</td>
+<td>data dictionary、unit check、provenanceを先に作る</td>
+</tr>
+</tbody>
+</table>
+<h2 id="指定4論文との接続">6. 指定4論文との接続</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>指定論文</th>
+<th>Yuan氏の研究との接続</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Yu et al. — materials × light-based printing</td>
+<td>Yuan氏のDLP simulationとcornea
+reviewが、材料・光・geometryの相互依存を角膜へ具体化</td>
+</tr>
+<tr>
+<td>Bao — advanced photoinitiators</td>
+<td>visible / NIR、multi-component PIの性能と安全性を、DLP
+modelとevidence registryへ接続可能</td>
+</tr>
+<tr>
+<td>Lee et al. — cyto/genotoxicity</td>
+<td>dual-layer
+corneaの高viabilityを重要な第一段階としつつ、viabilityだけで安全を断定しない評価設計が必要</td>
+</tr>
+<tr>
+<td>Sarrigiannidis et al. — collagen mechanics / GF</td>
+<td>Col-I / Col-IV、hydrogel stiffness–diffusion、release
+modelが、力学・輸送・細胞機能の統合課題へ直結</td>
+</tr>
+</tbody>
+</table>
+<h2 id="最初に読む順番">7. 最初に読む順番</h2>
+<ol type="1">
+<li><strong>3D Printing Strategies for Bioengineering Human
+Cornea</strong> — 現在の直接テーマと未解決metricを把握する。</li>
+<li><strong>A New Bioprinted Dual-Layered Corneal Structure</strong> —
+BiGが実際に構築した曲面・多層modelをabstractから理解する。</li>
+<li><strong>Principle-based multiphysics simulation</strong> —
+物理モデル、ML、validationの全体像を得る。</li>
+<li><strong>Microneedled skin ML</strong> —
+Yuan氏本人の解析実装と、外挿限界の扱いを読む。</li>
+<li><strong>指定4論文review</strong> —
+photochemistry、安全性、collagenの設計変数を補う。</li>
+</ol>
+<p>時間が30分しかない場合は、cornea
+reviewのAbstract、Discussionのgeometry gap、Conclusion、dual-layer
+paperのAbstractを優先する。</p>
+<h2 id="面談で使える質問">8. 面談で使える質問</h2>
+<ol type="1">
+<li><em>Your cornea review proposes radius error, wall-thickness
+variation, surface roughness and chordal error. Which one is currently
+hardest to measure reproducibly in the lab?</em></li>
+<li><em>Would a first pilot be more useful as an OCT/scan geometry-QC
+workflow, or as a run-level registry linking bioink and
+photocrosslinking conditions to outcomes?</em></li>
+<li><em>For the dual-layer construct, what is the current experimental
+unit: print run, construct, region, or image field?</em></li>
+<li><em>Which existing dataset can be used without creating new wet-lab
+work, and what are its sharing and AI-use restrictions?</em></li>
+<li><em>For a hybrid physics–ML model, which variables are measured
+directly and which are currently estimated?</em></li>
+<li><em>What result after four weeks would make you trust and reuse the
+analysis?</em></li>
+</ol>
+<h2 id="出典と調査範囲">9. 出典と調査範囲</h2>
+<ol type="1">
+<li>Yuan Y, Lim KS, Sutton G, Wallace GG, You J. <a
+href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12988584/">3D Printing
+Strategies for Bioengineering Human Cornea</a>. <em>Advanced Healthcare
+Materials</em>. 2026;15:e02767. 著者略歴とcornea review本文。</li>
+<li>Yuan Y. <a
+href="https://research.manchester.ac.uk/en/studentTheses/modelling-of-temperature-evolution-and-crystal-growth-in-additive">Modelling
+of Temperature Evolution and Crystal Growth in Additive Manufacturing of
+PLA</a>. MPhil thesis, University of Manchester, 2019.</li>
+<li>Yuan Y, et al. <a
+href="https://research.manchester.ac.uk/en/publications/prediction-of-temperature-and-crystal-growth-evolution-during-3d-/">Prediction
+of Temperature and Crystal Growth Evolution during 3D Printing of
+Polymeric Materials via Extrusion</a>. <em>Materials &amp; Design</em>.
+2020;196:109121.</li>
+<li>Anwar-Fadzil AF, et al. <a
+href="https://academic.oup.com/jpp/article/74/10/1367/6534282">Recent
+progress in three-dimensionally-printed dosage forms from a pharmacist
+perspective</a>. <em>J Pharm Pharmacol</em>. 2022;74:1367–1390.</li>
+<li>Yuan Y, et al. <a
+href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10658566/">Prediction of
+drug permeation through microneedled skin by machine learning</a>.
+<em>Bioeng Transl Med</em>. 2023;8:e10512.</li>
+<li>Zai W, Yuan Y, et al. <a
+href="https://www.engineering.org.cn/engi/EN/1159860456275894549">Oxygen
+Penetration Through Full-Thickness Skin by Oxygen-Releasing Sutures</a>.
+<em>Engineering</em>. 2023;29:83–94.</li>
+<li>Wan Y, Gu Y, Yuan Y, et al. <a
+href="https://www.slarc.org.cn/dwyx/CN/10.12300/j.issn.1674-5817.2023.083">FDA
+Modernization Act 2.0 and disease models</a>. <em>Laboratory Animal and
+Comparative Medicine</em>. 2023;43:472–481.</li>
+<li>Nguyen D-V, Yuan Y, et al. <a
+href="https://www.sciencedirect.com/science/article/pii/S2772950824001390">Controlled
+release of vancomycin from PF-PEGDA hydrogel</a>. <em>Biomaterials
+Advances</em>. 2024;161:213896.</li>
+<li>Yang K, et al. <a
+href="https://pubmed.ncbi.nlm.nih.gov/39306280/">Recent applications of
+3D bioprinting in drug discovery and development</a>. <em>Advanced Drug
+Delivery Reviews</em>. 2024;214:115456.</li>
+<li>Yuan Y, et al. <a
+href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11554926/">Sericin coats
+of silk fibres, a degumming waste or future material?</a>. <em>Materials
+Today Bio</em>. 2024;29:101306.</li>
+<li>Huang H, Yuan Y, et al. <a
+href="https://pubmed.ncbi.nlm.nih.gov/41742708/">A New Bioprinted
+Dual-Layered Corneal Structure Using Collagen-Based Bioinks</a>.
+<em>Tissue Engineering Part A</em>. 2026. Online ahead of print.</li>
+<li>Yuan Y, et al. <a
+href="https://doi.org/10.1088/1758-5090/ae6ad0">Principle-based
+multiphysics simulation for 3D bioprinting systems</a>.
+<em>Biofabrication</em>. 2026;18:032001.</li>
+<li>Lin A, Yuan Y, et al. <a
+href="https://www.sciencedirect.com/science/article/pii/S0002944026001252">Advances
+in Differentiation of iPSC-Derived Corneal Endothelial Cells</a>.
+<em>The American Journal of Pathology</em>. 2026. In press.</li>
+</ol>
+<h3 id="調査上の限界">調査上の限界</h3>
+<ul>
+<li>本人同定には、氏名だけでなく所属、email、ORCID、共著者、研究テーマを照合した。</li>
+<li>数値はfull
+textを取得できた論文、または出版社・repositoryの公式abstractに限定した。</li>
+<li>引用数、h-index、ランキング等は研究内容の理解に不要で、変動しやすいため採用していない。</li>
+<li>PDFを取得できなかった論文の本文を、第三者サイトから無断で複製していない。</li>
+</ul>
+<hr />
+<p><strong>PDF索引:</strong> <a
+href="../../references/papers/yunong-yuan/README.md">references/papers/yunong-yuan/README.md</a><br />
+<strong>指定4論文レビュー:</strong> <a
+href="photopolymer-biomaterials-review.html">reviews/photopolymer-biomaterials/README.md</a><br />
+<strong>BiGでの貢献案:</strong> <a
+href="intern-contribution-map.html">contribution-map.md</a></p>
+      </article>
+    </div>
+  </main>
+
+  <footer class="page-footer">
+    <div class="footer-inner">
+      <div><div class="footer-title">BiG Lab Intern Guide</div><p class="footer-copy">Markdownを読みやすいHTMLへ変換。正式な担当・データ利用・公開範囲は、研究室との合意を優先します。</p></div>
+      <div class="footer-meta">INTERN / I-05<br>LOCAL HTML EDITION</div>
+    </div>
+  </footer>
+  <div class="sr-only" id="copy-status" role="status" aria-live="polite"></div>
+  <script src="../assets/claude-science-guide.js"></script>
+  <script src="../assets/bilingual-data.js"></script>
+  <script src="../assets/bilingual.js"></script>
+  <script src="../assets/copy-tools.js"></script>
+  <script src="../assets/site-directory.js"></script>
+</body>
+</html>

@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#0b2c3a">
+  <meta name="description" content="Curved corneal construct geometry QCを、設計形状・取得・校正・registration・記録の順に進める、BiG Labのlocal-first研究ロードマップ。">
+  <title>Curved Corneal Construct Geometry QC — Research Roadmap</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/roadmap.css">
+  <script src="assets/roadmap.js" defer></script>
+  <style>
+    .all-roadmaps-link {
+      display: block;
+      padding: 10px 24px;
+      background: #082733;
+      color: #dff4f1;
+      font: 600 13.5px/1.4 Inter, "Noto Sans JP", sans-serif;
+      text-decoration: none;
+      letter-spacing: 0.01em;
+    }
+    .all-roadmaps-link:hover {
+      background: #0c3849;
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <a class="all-roadmaps-link" href="../../html/index.html">← 研究ロードマップ一覧 <span aria-hidden="true">All research roadmaps</span></a>
+  <div class="reading-progress" aria-hidden="true"><span data-reading-progress></span></div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#top" aria-label="Curved Corneal Construct Geometry QC roadmapの先頭へ">
+        <span class="brand-mark">BiG</span>
+        <span class="brand-copy">
+          <strong>Corneal Geometry QC</strong>
+          <small>Research operating system</small>
+        </span>
+      </a>
+
+      <nav class="primary-nav" id="primary-nav" aria-label="ページ内ナビゲーション" data-primary-nav>
+        <a href="#definition" data-nav-link>定義</a>
+        <a href="#evidence" data-nav-link>根拠</a>
+        <a href="#roadmap" data-nav-link>Roadmap</a>
+        <a href="#experiment" data-nav-link>取得</a>
+        <a href="#analysis" data-nav-link>解析</a>
+        <a href="#risks" data-nav-link>Risk</a>
+        <a href="#files" data-nav-link>Files</a>
+        <a href="#prompt" data-nav-link>Prompt</a>
+        <a href="#next" data-nav-link>Gate 0</a>
+      </nav>
+
+      <div class="header-progress" role="group" aria-label="Roadmapの進捗">
+        <div class="header-progress-row">
+          <span>Progress</span>
+          <strong data-progress-label>0/14 · 0%</strong>
+        </div>
+        <progress class="progress-track" max="14" value="0" aria-label="研究ロードマップの進捗" data-progress-widget>0/14</progress>
+      </div>
+
+      <button class="nav-toggle" type="button" aria-label="ナビゲーションを開く" aria-controls="primary-nav" aria-expanded="false" data-nav-toggle>
+        <span aria-hidden="true">☰</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="page" id="main">
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">BiG Lab · Research roadmap · 19 July 2026</p>
+          <h1>
+            曲面を、<br>測れる誤差へ。
+            <span>Curved corneal construct geometry QC</span>
+          </h1>
+          <p class="hero-lede">
+            design geometryに対する実測偏差を、取得・校正・registration・reviewまで追跡します。
+            最初に固定するのは数値の見栄えではなく、<strong>何を測り、どの根拠で判定するか</strong>です。
+          </p>
+
+          <div class="hero-actions">
+            <a class="button" href="#roadmap">Gate 0–7を見る <span aria-hidden="true">↓</span></a>
+            <a class="button secondary" href="../README.md">研究フォルダを開く</a>
+            <button class="button secondary" type="button" data-print-page>印刷 / PDF</button>
+          </div>
+
+          <ul class="hero-chips" aria-label="研究原則">
+            <li>Calibration before mm</li>
+            <li>Registration RMSE ≠ geometry error</li>
+            <li>Batch-aware hierarchy</li>
+            <li>Failures stay recorded</li>
+            <li>PI approval pending</li>
+          </ul>
+
+          <div class="scope-triad" role="group" aria-label="本ロードマップで区別する3対象">
+            <article>
+              <span>01</span>
+              <h2>Geometry error</h2>
+              <p>design / nominal geometryに対する実測偏差。</p>
+            </article>
+            <article>
+              <span>02</span>
+              <h2>Print-process traceability</h2>
+              <p>誤差を説明しうるfabrication・材料・装置の記録層。</p>
+            </article>
+            <article>
+              <span>03</span>
+              <h2>Extended characterization</h2>
+              <p>Gate 7以降に別測定で扱う将来scope。</p>
+            </article>
+          </div>
+        </div>
+
+        <figure class="hero-figure">
+          <div class="hero-visual-frame">
+            <svg viewBox="0 0 820 560" role="img" aria-labelledby="hero-svg-title hero-svg-desc">
+              <title id="hero-svg-title">曲面角膜constructの設計曲線と説明用の実測曲線、OCT取得を示す概念図</title>
+              <desc id="hero-svg-desc">設計dome曲線に対して、わずかに異なる説明用の測定曲線を重ね、半径、壁厚、OCTまたはsurface scanによる取得、design-to-measurement QCの流れを示す。実測図ではない。</desc>
+              <defs>
+                <linearGradient id="hero-bg" x1="0" x2="1" y1="0" y2="1">
+                  <stop offset="0" stop-color="#153e4d"/>
+                  <stop offset="1" stop-color="#0a6870"/>
+                </linearGradient>
+                <linearGradient id="dome-fill" x1="0" x2="0" y1="0" y2="1">
+                  <stop offset="0" stop-color="#dff6f2" stop-opacity="0.92"/>
+                  <stop offset="1" stop-color="#7ccbc4" stop-opacity="0.18"/>
+                </linearGradient>
+                <filter id="soft-shadow" x="-20%" y="-20%" width="140%" height="150%">
+                  <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#031d28" flood-opacity="0.34"/>
+                </filter>
+                <marker id="hero-arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                  <path d="M 0 0 L 10 5 L 0 10 z" fill="#b9ede8"/>
+                </marker>
+                <pattern id="scan-grid" width="25" height="25" patternUnits="userSpaceOnUse">
+                  <path d="M 25 0 H 0 V 25" fill="none" stroke="#b9ede8" stroke-opacity="0.1"/>
+                </pattern>
+              </defs>
+              <rect width="820" height="560" rx="28" fill="url(#hero-bg)"/>
+              <rect width="820" height="560" rx="28" fill="url(#scan-grid)"/>
+              <g opacity="0.34" fill="none" stroke="#9de3df">
+                <path d="M 54 428 C 190 340, 284 318, 425 338 C 564 358, 665 421, 770 490" stroke-width="1"/>
+                <path d="M 46 461 C 192 365, 288 343, 431 362 C 578 382, 671 440, 774 508" stroke-width="1"/>
+              </g>
+              <g transform="translate(42 38)">
+                <rect width="236" height="36" rx="18" fill="#0a303e" fill-opacity="0.78" stroke="#89d8d2" stroke-opacity="0.34"/>
+                <text x="118" y="23" fill="#d9fffb" font-family="Arial, sans-serif" font-size="13" font-weight="800" text-anchor="middle" letter-spacing="1.1">概念図 / 非実測</text>
+              </g>
+              <g transform="translate(525 51)">
+                <rect x="0" y="0" width="224" height="80" rx="12" fill="#082c39" fill-opacity="0.82" stroke="#94ded8" stroke-opacity="0.3"/>
+                <text x="18" y="26" fill="#a5e8e1" font-family="Arial, sans-serif" font-size="11" font-weight="800" letter-spacing="1.2">MEASUREMENT PATH</text>
+                <text x="18" y="51" fill="#ffffff" font-family="Georgia, serif" font-size="18">scan / OCT → QC</text>
+                <text x="18" y="69" fill="#b8d9d6" font-family="Arial, sans-serif" font-size="11">calibration · registration · review</text>
+              </g>
+
+              <g filter="url(#soft-shadow)">
+                <path d="M 151 414 C 188 235, 309 151, 420 151 C 542 151, 644 245, 687 414 L 602 414 C 564 289, 499 232, 420 231 C 342 231, 268 291, 236 414 Z" fill="url(#dome-fill)" stroke="#d9fffb" stroke-width="3"/>
+                <path d="M 151 414 C 188 235, 309 151, 420 151 C 542 151, 644 245, 687 414" fill="none" stroke="#f8ffff" stroke-width="5" stroke-linecap="round" stroke-dasharray="12 10"/>
+                <path d="M 151 414 C 196 253, 315 181, 423 180 C 536 178, 627 257, 687 414" fill="none" stroke="#ff9a8c" stroke-width="5" stroke-linecap="round"/>
+                <path d="M 151 414 H 687" fill="none" stroke="#c6efeb" stroke-width="3"/>
+              </g>
+
+              <g font-family="Arial, sans-serif">
+                <rect x="124" y="186" width="137" height="31" rx="15.5" fill="#effffd"/>
+                <text x="192.5" y="207" fill="#0a5661" font-size="12" font-weight="800" text-anchor="middle">DESIGN CURVE</text>
+                <path d="M 257 210 L 321 224" stroke="#effffd" stroke-width="2"/>
+                <rect x="554" y="273" width="157" height="31" rx="15.5" fill="#fff0ec"/>
+                <text x="632.5" y="294" fill="#a3463a" font-size="12" font-weight="800" text-anchor="middle">MEASURED CURVE*</text>
+                <path d="M 556 304 L 541 321" stroke="#ffb3a8" stroke-width="2"/>
+                <text x="557" y="325" fill="#ffd3cc" font-size="11">*illustrative deviation</text>
+              </g>
+
+              <g fill="none" stroke="#b9ede8" stroke-width="2" marker-start="url(#hero-arrow)" marker-end="url(#hero-arrow)">
+                <path d="M 420 410 V 249"/>
+                <path d="M 293 291 L 270 315"/>
+              </g>
+              <g font-family="Arial, sans-serif">
+                <rect x="359" y="313" width="123" height="30" rx="7" fill="#0b3542" fill-opacity="0.86"/>
+                <text x="420.5" y="333" fill="#dffcf8" font-size="12" font-weight="800" text-anchor="middle">radius target</text>
+                <rect x="188" y="314" width="129" height="30" rx="7" fill="#0b3542" fill-opacity="0.86"/>
+                <text x="252.5" y="334" fill="#dffcf8" font-size="12" font-weight="800" text-anchor="middle">wall thickness</text>
+              </g>
+
+              <g transform="translate(89 425)">
+                <rect x="0" y="0" width="231" height="78" rx="14" fill="#092e3b" stroke="#8bdad4" stroke-opacity="0.38"/>
+                <g transform="translate(18 17)" fill="none" stroke="#9ee5df" stroke-width="2">
+                  <rect x="0" y="4" width="42" height="29" rx="4"/>
+                  <path d="M 10 42 H 32 M 21 33 V 52"/>
+                  <path d="M 56 8 C 78 14, 85 25, 93 43" stroke="#ff9b8e" stroke-width="3"/>
+                  <path d="M 69 12 L 92 43" stroke="#b9ede8" stroke-dasharray="3 3"/>
+                </g>
+                <text x="80" y="29" fill="#d9fffb" font-family="Arial, sans-serif" font-size="12" font-weight="800">OCT / scan acquisition</text>
+                <text x="80" y="51" fill="#a8cfcb" font-family="Arial, sans-serif" font-size="11">calibrate before physical units</text>
+              </g>
+              <text x="410" y="530" fill="#b8e5e0" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">DESIGN REFERENCE → CALIBRATION → REGISTRATION → METRIC → HUMAN REVIEW</text>
+            </svg>
+          </div>
+          <span class="figure-badge">Conceptual illustration · non-measured</span>
+          <aside class="hero-decision-card" aria-label="開始前に確認する項目">
+            <p>Start with 4 decisions</p>
+            <ol>
+              <li>design / nominal referenceは保存されているか</li>
+              <li>pixel / voxel → mmのcalibrationは確認できるか</li>
+              <li>画像・scan・OCTのdata-use permissionはあるか</li>
+              <li>primary endpointとQC ruleをPIが承認したか</li>
+            </ol>
+          </aside>
+          <figcaption>
+            Figure 1. 曲面constructのdesign-to-measurement chainを説明する手描きSVG。
+            <strong>概念図 / 非実測</strong>であり、曲線・寸法・差分はreal pilotの結果ではありません。
+            <a href="assets/hero-illustration-notes.md">illustration notes</a>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="status-strip" aria-label="プロジェクト概要">
+      <div class="container status-grid">
+        <div class="status-item"><span>Core evidence</span><strong>Yuan et al. 2026 review</strong></div>
+        <div class="status-item"><span>Geometry scope</span><strong>7 metric families</strong></div>
+        <div class="status-item"><span>Pilot horizon</span><strong>0–8 weeks</strong></div>
+        <div class="status-item"><span>Current status</span><strong>Gate 0 unresolved</strong></div>
+      </div>
+    </section>
+
+    <nav class="reading-map" aria-label="このページの読み方">
+      <div class="container">
+        <div class="reading-map-heading">
+          <span>Reading map</span>
+          <p>根拠、実行条件、未解決事項を区別して読むための入口です。</p>
+        </div>
+        <div class="reading-map-grid">
+          <a href="#definition"><span class="reading-map-number">01</span><span><strong>対象を分ける</strong><small>誤差・process・将来scope</small></span><span class="reading-map-arrow" aria-hidden="true">→</span></a>
+          <a href="#evidence"><span class="reading-map-number">02</span><span><strong>根拠を監査する</strong><small>reviewのgapとsynthetic demo</small></span><span class="reading-map-arrow" aria-hidden="true">→</span></a>
+          <a href="#experiment"><span class="reading-map-number">03</span><span><strong>取得・解析を設計する</strong><small>Tier、calibration、hierarchy</small></span><span class="reading-map-arrow" aria-hidden="true">→</span></a>
+          <a href="#next"><span class="reading-map-number">04</span><span><strong>Gate 0を決める</strong><small>PIへ確認する7項目</small></span><span class="reading-map-arrow" aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </nav>
+
+    <section class="section" id="definition">
+      <div class="container">
+        <header class="section-heading">
+          <span class="section-number">01 · Research definition</span>
+          <div class="section-heading-copy">
+            <h2>誤差、説明変数、将来の性能評価を混同しない。</h2>
+            <p>geometry QCはdesign geometryに対する偏差を測る研究です。print-processは誤差を説明しうる記録層であり、力学・光学・透過性はGate 7まで別の測定対象です。</p>
+          </div>
+        </header>
+
+        <div class="definition-grid">
+          <article class="definition-card">
+            <span class="definition-index">01</span>
+            <h3>Geometry error <small>Primary measurement domain</small></h3>
+            <p>design / nominal geometryに対する実測構造体の偏差。radius、wall thickness、surface fidelity、chordal、volume、shrinkage、interlayerを別変数として扱います。</p>
+            <span class="output">Output: predeclared geometry metric(s), with units and source mesh</span>
+          </article>
+          <article class="definition-card process-card">
+            <span class="definition-index">02</span>
+            <h3>Print-process traceability <small>Explanatory record layer</small></h3>
+            <p>fabrication strategy、layer thickness、slice angle、overhang angle、support removal、material / bioink batch、printer・optics settingsを記録し、geometry errorの説明要因として比較します。</p>
+            <span class="output">Not an outcome, biological proxy, or performance claim</span>
+          </article>
+          <article class="definition-card future-card">
+            <span class="definition-index">03</span>
+            <h3>Extended characterization <small>Future scope · Gate 7</small></h3>
+            <p>Young's modulus、transparency、refractive index / power、corneal permeabilityは専用測定を要する別scopeです。geometry QCだけからこれらを主張しません。</p>
+            <span class="output">Output: future characterization charter, not a Gate 0–6 endpoint</span>
+          </article>
+        </div>
+
+        <!-- TODO (Gate 0 / PI): A real construct type, acquisition tier, primary metric, and numeric success criterion have not been approved. Do not replace this proposal with an inferred endpoint. -->
+        <div class="callout">
+          <span class="callout-mark" aria-hidden="true">Q</span>
+          <div>
+            <h3>推奨するprimary research question <span class="label proposal">proposal · PI confirmation required</span></h3>
+            <p>「PIが定義するcurved corneal constructとdesign referenceについて、文書化したacquisition tierの下で、PIが選ぶgeometry-error endpointはdesign targetからどの程度偏差するか？」最初のpilotでは、primary endpointを一つに固定し、他のmetricはsecondary / exploratoryとして記録します。</p>
+          </div>
+        </div>
+
+        <div class="metric-family-grid" role="group" aria-label="Geometry metric family">
+          <article><code>radius_deviation_mm</code><span>best-fit radius − design radius · mm</span></article>
+          <article><code>thickness_variation_mm</code><span>local distribution vs design thickness · mm</span></article>
+          <article><code>surface_rmse_mm</code><span>registered surface fidelity · mm</span></article>
+          <article><code>chordal_error_mm</code><span>layer-wise faceting deviation · mm</span></article>
+          <article><code>volume_change_fraction</code><span>measured vs design volume · fraction</span></article>
+          <article><code>shrinkage_rate_fraction</code><span>as-printed vs post-process · fraction</span></article>
+          <article><code>interlayer_misalignment_mm</code><span>adjacent-layer offset · mm</span></article>
+          <article class="diagnostic"><code>registration_rmse_mm</code><span>fit-quality diagnostic, not geometry error · mm</span></article>
+        </div>
+
+        <div class="callout caution">
+          <span class="callout-mark" aria-hidden="true">!</span>
+          <div>
+            <h3>Registration RMSEの位置づけ</h3>
+            <p><code>registration_rmse_mm</code>はdesign meshへの位置合わせ品質を示す診断指標です。高い値のsampleはgeometry errorを自動的に確定せず、human reviewへ回します。誤差成分を一つの総合scoreへ統合しません。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="evidence">
+      <div class="container">
+        <header class="section-heading">
+          <span class="section-number">02 · Evidence &amp; provenance</span>
+          <div class="section-heading-copy">
+            <h2>文献のgapと、まだ実験で示していないことを分ける。</h2>
+            <p>このroadmapはYuan et al. (2026)のreviewが示したgeometry reporting gapを出発点にします。portfolio demoはpipelineの構造確認に限り、experimental evidenceではありません。</p>
+          </div>
+        </header>
+
+        <div class="split-grid">
+          <article class="panel evidence-panel">
+            <p class="kicker">Primary source · review evidence</p>
+            <h3>Systematic geometry-error reporting is the stated gap</h3>
+            <blockquote>
+              “To our knowledge, no study has systematically reported measured geometric errors … as a function of curvature in such constructs.”
+            </blockquote>
+            <p>Yuan et al. (2026) Section 5は、test domeを条件を変えて印刷し、高解像度scanまたはOCTで実測してcurvature angleとdimensional errorを対応づける案を示します。本roadmapはこの提案を実験計画へ翻訳するもので、同reviewが特定の手法の優劣を実証したとは扱いません。</p>
+            <a class="text-link" href="../../references/papers/yunong-yuan/3d-printing/08-yuan-2025-3d-printing-human-cornea.pdf">Local primary PDFを開く →</a>
+          </article>
+          <article class="panel evidence-panel">
+            <p class="kicker">Table 3 · future method context</p>
+            <h3>標準測定法の整理は、Gate 7の計画根拠。</h3>
+            <ul class="compact-list">
+              <li><strong>Young's modulus:</strong> AFM / uniaxial-biaxial tensile / strip extensometry</li>
+              <li><strong>Transparency:</strong> UV–Vis spectrophotometry</li>
+              <li><strong>Refractive index:</strong> OCT / Abbe refractometry</li>
+              <li><strong>Refractive power:</strong> keratometry / OCT</li>
+              <li><strong>Corneal permeability:</strong> fluorophotometry / diffusion chamber</li>
+            </ul>
+            <p>これらはYuan et al. (2026) Table 3が整理する測定法です。現時点では計画対象であり、本ページのgeometry QCやsynthetic demoから性能値を推定しません。</p>
+          </article>
+        </div>
+
+        <div class="source-boundary">
+          <span class="label literature">Literature fact</span>
+          <span>reviewが指摘したgapとmeasurement-method framing</span>
+          <span class="label proposal">Lab proposal</span>
+          <span>Gate 0–7の設計、metric operationalization、risk controls</span>
+          <span class="synthetic-badge">Synthetic demo only</span>
+          <span>portfolio dataの構造監査。experimental resultではない</span>
+        </div>
+
+        <figure class="synthetic-figure" aria-labelledby="synthetic-chart-heading" aria-describedby="synthetic-chart-caption" data-scrollable-figure>
+          <header class="chart-card-header">
+            <div>
+              <p class="kicker">Portfolio dataset structure audit</p>
+              <h3 id="synthetic-chart-heading">12 constructs / 3 batchesの構成だけを可視化する。</h3>
+            </div>
+            <span class="synthetic-badge">Synthetic demo · not experimental data</span>
+          </header>
+          <div class="synthetic-warning">
+            <strong>SYNTHETIC DEMO — portfolio only.</strong> <code>geometry-qc-synthetic.csv</code>の各rowは<code>synthetic_data_notice = portfolio_demo_not_experimental_data</code>です。下のcountsとstatusはdemo dataset由来で、real pilot result・PI承認済みQC threshold・clinical / biological findingではありません。
+          </div>
+          <svg viewBox="0 0 1080 385" role="img" aria-labelledby="synthetic-svg-title synthetic-svg-desc">
+            <title id="synthetic-svg-title">synthetic portfolio datasetに含まれる3 batchとデモQC stateの構造監査chart</title>
+            <desc id="synthetic-svg-desc">portfolioのsynthetic data 12 constructsをB01、B02、B03に4件ずつ分け、各batchのdemo QC stateをPASS、REVIEW、FAILとして表示する。実験データではない。</desc>
+            <rect x="1" y="1" width="1078" height="383" rx="18" fill="#fffaf8" stroke="#e3a096" stroke-width="2"/>
+            <rect x="31" y="26" width="333" height="37" rx="18.5" fill="#fff0ec"/>
+            <text x="197.5" y="50" fill="#a3463a" font-family="Arial, sans-serif" font-size="14" font-weight="800" text-anchor="middle">SYNTHETIC DEMO · NOT EXPERIMENTAL DATA</text>
+            <text x="58" y="102" fill="#36515c" font-family="Arial, sans-serif" font-size="13" font-weight="800">STRUCTURE AUDIT ONLY · 4 CONSTRUCTS PER BATCH</text>
+            <g font-family="Arial, sans-serif" font-size="13" font-weight="800">
+              <rect x="653" y="82" width="19" height="19" rx="4" fill="#076667"/><text x="681" y="97" fill="#246661">PASS (demo label)</text>
+              <rect x="820" y="82" width="19" height="19" rx="4" fill="#825d1a"/><text x="848" y="97" fill="#78581d">REVIEW (demo label)</text>
+              <rect x="653" y="114" width="19" height="19" rx="4" fill="#a3463a"/><text x="681" y="129" fill="#a3463a">FAIL (demo label)</text>
+            </g>
+            <g font-family="Arial, sans-serif">
+              <text x="59" y="181" fill="#102a35" font-size="22" font-weight="800">B01</text>
+              <text x="59" y="269" fill="#102a35" font-size="22" font-weight="800">B02</text>
+              <text x="59" y="357" fill="#102a35" font-size="22" font-weight="800">B03</text>
+              <g transform="translate(157 145)">
+                <rect width="540" height="52" rx="10" fill="#e8efee"/>
+                <rect width="405" height="52" rx="10" fill="#076667"/>
+                <rect x="405" width="135" height="52" rx="0" fill="#825d1a"/>
+                <text x="202" y="33" fill="#ffffff" font-size="16" font-weight="800" text-anchor="middle">3 PASS</text>
+                <text x="472" y="33" fill="#ffffff" font-size="16" font-weight="800" text-anchor="middle">1 REVIEW</text>
+              </g>
+              <g transform="translate(157 233)">
+                <rect width="540" height="52" rx="10" fill="#e8efee"/>
+                <rect width="270" height="52" rx="10" fill="#076667"/>
+                <rect x="270" width="135" height="52" rx="0" fill="#825d1a"/>
+                <rect x="405" width="135" height="52" rx="10" fill="#a3463a"/>
+                <text x="135" y="33" fill="#ffffff" font-size="16" font-weight="800" text-anchor="middle">2 PASS</text>
+                <text x="337" y="33" fill="#ffffff" font-size="16" font-weight="800" text-anchor="middle">1 REVIEW</text>
+                <text x="472" y="33" fill="#ffffff" font-size="16" font-weight="800" text-anchor="middle">1 FAIL</text>
+              </g>
+              <g transform="translate(157 321)">
+                <rect width="540" height="52" rx="10" fill="#e8efee"/>
+                <rect width="405" height="52" rx="10" fill="#076667"/>
+                <rect x="405" width="135" height="52" rx="0" fill="#825d1a"/>
+                <text x="202" y="33" fill="#ffffff" font-size="16" font-weight="800" text-anchor="middle">3 PASS</text>
+                <text x="472" y="33" fill="#ffffff" font-size="16" font-weight="800" text-anchor="middle">1 REVIEW</text>
+              </g>
+              <text x="724" y="177" fill="#36515c" font-size="14">B01: 4 synthetic constructs</text>
+              <text x="724" y="265" fill="#36515c" font-size="14">B02: 4 synthetic constructs</text>
+              <text x="724" y="353" fill="#36515c" font-size="14">B03: 4 synthetic constructs</text>
+            </g>
+          </svg>
+          <figcaption id="synthetic-chart-caption">
+            Figure 2. <strong>Synthetic demo / portfolio only.</strong> <code>geometry-qc-synthetic.csv</code>の12行・3 batchから作った構造監査です。PASS / REVIEW / FAILはportfolioのdemo labelであり、real-pilot acceptance ruleやnumeric QC thresholdを表示・移植するものではありません。
+          </figcaption>
+        </figure>
+
+        <div class="table-wrap spaced-24" data-scrollable-table>
+          <table>
+            <caption>Provenance audit — data sourceをreal pilotへ混在させない</caption>
+            <thead><tr><th>Asset</th><th>Source type</th><th>Permitted role on this page</th><th>Boundary</th></tr></thead>
+            <tbody>
+              <tr><td>Yuan et al. (2026) cornea review</td><td><span class="label literature">literature</span></td><td>geometry gap、chordal-error context、Table 3 method framing</td><td>reviewの記載範囲を超えて手法の優劣・performanceを主張しない</td></tr>
+              <tr class="synthetic-row"><td><span class="synthetic-badge">Synthetic demo</span> <code>geometry-qc-synthetic.csv</code></td><td><span class="synthetic-badge">synthetic_demo</span></td><td>loader / registration / metric codeのwarm-upと構造監査</td><td><strong>Real-pilot summary、acceptance threshold、experimental findingへ統合しない</strong></td></tr>
+              <tr class="synthetic-row"><td><span class="synthetic-badge">Synthetic demo</span> <code>pilot-charter.md</code></td><td><span class="synthetic-badge">synthetic_demo</span></td><td>portfolio capability demonstrationの境界確認</td><td><strong>demo ruleをGate 0のPI-approved ruleとして再利用しない</strong></td></tr>
+              <tr><td>Future raw scan / image / OCT</td><td><span class="label limit">not available</span></td><td>Gate 3以降のapproved measurement</td><td>data-use permission、design reference、calibration、hierarchyが揃うまで表示・解析しない</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="roadmap">
+      <div class="container">
+        <header class="section-heading">
+          <span class="section-number">03 · Gate 0–7 roadmap</span>
+          <div class="section-heading-copy">
+            <h2>Gateを越えずに、次の複雑さへ進まない。</h2>
+            <p>0–8週のpilot（Gate 0–5）、その後のprospective scale-up（Gate 6）、extended characterization（Gate 7）を分けます。checklistはこのbrowserのlocalStorageにだけ保存されます。</p>
+          </div>
+        </header>
+
+        <div class="roadmap-toolbar">
+          <div class="filter-group" role="group" aria-label="Roadmapのphase絞り込み">
+            <button class="filter-button" type="button" aria-pressed="true" data-phase-filter="all">All gates</button>
+            <button class="filter-button" type="button" aria-pressed="false" data-phase-filter="pilot">Pilot · Gate 0–5</button>
+            <button class="filter-button" type="button" aria-pressed="false" data-phase-filter="scale-up">Scale-up · Gate 6</button>
+            <button class="filter-button" type="button" aria-pressed="false" data-phase-filter="extended">Extended · Gate 7</button>
+          </div>
+          <div class="roadmap-summary"><span>Saved progress: <strong data-progress-label>0/14 · 0%</strong></span><button class="button light small" type="button" data-reset-progress>Reset</button></div>
+        </div>
+
+        <div class="table-wrap" data-scrollable-table>
+          <table class="roadmap-table">
+            <caption>Phase plan — requirements.md §6のGate定義。Gate 1のみ、real dataへのaccess許可を待たずに並行開始できる。</caption>
+            <thead><tr><th aria-label="完了"></th><th>Gate / timing</th><th>目的</th><th>主要タスク</th><th>成果物</th><th>Go / Hold基準</th></tr></thead>
+            <tbody>
+              <tr data-phase="pilot">
+                <td><input class="task-check" id="gate-0" type="checkbox" aria-label="Gate 0を完了にする" data-roadmap-check data-label="Gate 0 Scope &amp; Access Lock"></td>
+                <td class="gate-cell"><span class="gate"><span class="gate-number">0</span>1週</span><strong>Scope &amp; Access Lock</strong></td>
+                <td>PIと優先metric・data tier・primary endpointを確定する</td>
+                <td><code>docs/yunong-yuan-research-guide.md</code> L218–219の2つの質問をPIへ確認；利用可能なCAD/photo/scan/OCTを棚卸；calibration有無を確認；QC閾値をPI承認で新規設定</td>
+                <td>1ページcharter（<code>templates/study-charter.md</code>）、data inventory、primary metric決定記録</td>
+                <td>calibration・design reference・data-use許可のいずれかが欠ける場合はGate 1のみ継続しGate 2以降をHold</td>
+              </tr>
+              <tr class="parallel-row" data-phase="pilot">
+                <td><input class="task-check" id="gate-1" type="checkbox" aria-label="Gate 1を完了にする" data-roadmap-check data-label="Gate 1 Evidence &amp; Synthetic Pipeline Warm-up"></td>
+                <td class="gate-cell"><span class="gate"><span class="gate-number">1</span>Gate 0と並行、1–2週</span><strong>Evidence &amp; Synthetic Pipeline Warm-up</strong><span class="parallel-badge">parallel · no real data required</span></td>
+                <td>real dataなしで進められる作業を先に終える</td>
+                <td>Yuan et al. (2026) + dual-layer論文のrun-level data dictionary作成；<code>geometry-qc-synthetic.csv</code>を使ったloader/calibration/registration/metric codeのunit test；missing-field・duplicate-ID等のQC checker；公開論文のgeometry報告状況evidence matrix</td>
+                <td>tested code skeleton、synthetic dataでのend-to-end再現、evidence/missingness matrix</td>
+                <td>Gate 0の状態に関わらず開始可；ここで得た数値をreal pilotの結果として報告しない</td>
+              </tr>
+              <tr data-phase="pilot">
+                <td><input class="task-check" id="gate-2" type="checkbox" aria-label="Gate 2を完了にする" data-roadmap-check data-label="Gate 2 Define"></td>
+                <td class="gate-cell"><span class="gate"><span class="gate-number">2</span>1週</span><strong>Define</strong></td>
+                <td>研究charterとhierarchyを固定する</td>
+                <td>primary metric、experimental unit（print run/batch/construct/method version）、predeclared QC threshold、randomisation・blinding方針を確定</td>
+                <td><code>templates/study-charter.md</code>記入版、data dictionary v1</td>
+                <td>研究者（Takumi）とPIの両者がcharterを承認</td>
+              </tr>
+              <tr data-phase="pilot">
+                <td><input class="task-check" id="gate-3" type="checkbox" aria-label="Gate 3を完了にする" data-roadmap-check data-label="Gate 3 Build &amp; Baseline"></td>
+                <td class="gate-cell"><span class="gate"><span class="gate-number">3</span>1–2週</span><strong>Build &amp; Baseline</strong></td>
+                <td>pipelineを1–2件の承認済みsampleで検証する</td>
+                <td>calibration記録、design meshとのregistration実装、metric計算、overlay生成</td>
+                <td>manual reference値、calibration record、baseline overlay</td>
+                <td>manualとcodeの差の原因を説明できない場合はmetric追加をHold</td>
+              </tr>
+              <tr data-phase="pilot">
+                <td><input class="task-check" id="gate-4" type="checkbox" aria-label="Gate 4を完了にする" data-roadmap-check data-label="Gate 4 Batch Application"></td>
+                <td class="gate-cell"><span class="gate"><span class="gate-number">4</span>1–2週</span><strong>Batch Application</strong></td>
+                <td>承認された小規模set（例: <span class="synthetic-badge">Synthetic demo reference only · 12 constructs / 3 batches</span> と同規模をreal dataで置き換え）へ適用する</td>
+                <td>failure分類、registry記録、batch別集計</td>
+                <td>metric table、failure log、condition plot</td>
+                <td>sample独立性・batch構造が不明なら推測統計を行わない</td>
+              </tr>
+              <tr data-phase="pilot">
+                <td><input class="task-check" id="gate-5" type="checkbox" aria-label="Gate 5を完了にする" data-roadmap-check data-label="Gate 5 Verify &amp; Communicate"></td>
+                <td class="gate-cell"><span class="gate"><span class="gate-number">5</span>1週</span><strong>Verify &amp; Communicate</strong></td>
+                <td>PIレビューと再現性確認を行い、成果物を固定する</td>
+                <td>検証済み出力のみからfigure/report/posterを再生成；method・limitationを記述</td>
+                <td>versioned code、figure、1ページreport、次実験候補（最大3件）</td>
+                <td>PIがrawとの照合を完了し、synthetic demoとの違いを確認した時点でpilot完了</td>
+              </tr>
+              <tr data-phase="scale-up">
+                <td><input class="task-check" id="gate-6" type="checkbox" aria-label="Gate 6を完了にする" data-roadmap-check data-label="Gate 6 Prospective Scale-up"></td>
+                <td class="gate-cell"><span class="gate"><span class="gate-number">6</span>pilot後、継続</span><strong>Prospective Scale-up</strong></td>
+                <td>新しいprint run・材料条件へ前向きに適用する</td>
+                <td>事前登録した閾値とgroup-aware validationで複数batchを比較；一般化可能性を評価</td>
+                <td>prospective study charter、grouped validation report</td>
+                <td>閾値・成功基準を結果を見てから変更しない</td>
+              </tr>
+              <tr data-phase="extended">
+                <td><input class="task-check" id="gate-7" type="checkbox" aria-label="Gate 7を完了にする" data-roadmap-check data-label="Gate 7 Extended Characterization Roadmap"></td>
+                <td class="gate-cell"><span class="gate"><span class="gate-number">7</span>将来（本roadmapでは計画のみ）</span><strong>Extended Characterization Roadmap</strong></td>
+                <td>Yuan et al. (2026)が求める標準特性評価（力学・光学・透過性）へ拡張する</td>
+                <td>Young's modulus、transparency、refractive index/power、permeabilityの測定法をラボ設備に合わせて計画；Gate 0–6の知見と接続</td>
+                <td>extended characterization charter（草案）</td>
+                <td>Gate 0–6が検証済みになるまで着手しない</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <ul class="timeline-grid" aria-label="Roadmapのperiods">
+          <li class="roadmap-card" data-phase="pilot"><span class="week">Week 0–2</span><h3>Lock + warm-up</h3><p>Gate 0のaccess・calibration・PI確認と、real data不要のGate 1を並行させる。</p></li>
+          <li class="roadmap-card" data-phase="pilot"><span class="week">Week 1–8</span><h3>Define → verify</h3><p>charter、baseline、small approved set、PI reviewをGate 2–5で順に固定する。</p></li>
+          <li class="roadmap-card scale-card" data-phase="scale-up"><span class="week">After pilot</span><h3>Prospective scale-up</h3><p>frozen thresholdとgroup-aware validationを新しいprint run・batchへ適用する。</p></li>
+          <li class="roadmap-card extended-card" data-phase="extended"><span class="week">Future only</span><h3>Extended characterization</h3><p>geometry QCから独立した力学・光学・透過性の専用測定計画を作る。</p></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section alt" id="experiment">
+      <div class="container">
+        <header class="section-heading">
+          <span class="section-number">04 · Acquisition &amp; experiment design</span>
+          <div class="section-heading-copy">
+            <h2>物理単位へ進む前に、取得の根拠を残す。</h2>
+            <p>Tier AとTier Bは精度・取得対象が異なります。どちらもcalibration、design reference、raw-file provenanceなしにmm値を確定しません。</p>
+          </div>
+        </header>
+
+        <div class="method-boundary" role="note" aria-label="Methods sectionにおける3対象の再掲">
+          <strong>Methods boundary</strong>
+          <span><b>Geometry error</b> = outcome metric</span>
+          <span><b>Print-process traceability</b> = explanatory fields</span>
+          <span><b>Extended characterization</b> = separate Gate 7 measurements</span>
+        </div>
+
+        <figure class="acquisition-figure" aria-labelledby="tier-chart-heading" aria-describedby="tier-chart-caption" data-scrollable-figure>
+          <header class="chart-card-header">
+            <div><p class="kicker">Data acquisition comparison</p><h3 id="tier-chart-heading">Tier A / Tier Bは、同じmetricの代替ではなく取得能力の異なる経路。</h3></div>
+            <span>概念図 / 非実測</span>
+          </header>
+          <svg viewBox="0 0 1120 380" role="img" aria-labelledby="tier-svg-title tier-svg-desc">
+            <title id="tier-svg-title">Tier AとTier Bの角膜construct geometry data acquisition経路の概念図</title>
+            <desc id="tier-svg-desc">Tier Aは複数角度写真、structured light、surface scanから3D表面再構築へ進む。Tier BはOCT、confocal z-stack、profilometryから厚さ、前後面、層境界、局所曲率の空間解析へ進む。両方とも校正、design mesh registration、reviewへ進む。実測図ではない。</desc>
+            <defs>
+              <linearGradient id="tier-a" x1="0" x2="1"><stop offset="0" stop-color="#e7f6f3"/><stop offset="1" stop-color="#f6fcfb"/></linearGradient>
+              <linearGradient id="tier-b" x1="0" x2="1"><stop offset="0" stop-color="#fff4e6"/><stop offset="1" stop-color="#fffaf3"/></linearGradient>
+              <marker id="tier-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#78908f"/></marker>
+            </defs>
+            <rect x="1" y="1" width="1118" height="378" rx="18" fill="#ffffff" stroke="#cdd8d6"/>
+            <rect x="27" y="24" width="244" height="34" rx="17" fill="#fff0ec"/><text x="149" y="47" fill="#a3463a" font-family="Arial, sans-serif" font-size="13" font-weight="800" text-anchor="middle">概念図 / 非実測</text>
+            <g font-family="Arial, sans-serif">
+              <rect x="38" y="91" width="458" height="213" rx="16" fill="url(#tier-a)" stroke="#87c9c3" stroke-width="2"/>
+              <text x="67" y="126" fill="#076667" font-size="16" font-weight="900">TIER A · LOW-COST SURFACE PATH</text>
+              <rect x="67" y="153" width="118" height="108" rx="12" fill="#ffffff" stroke="#a8d9d4"/>
+              <text x="126" y="183" fill="#102a35" font-size="13" font-weight="800" text-anchor="middle">photos /</text><text x="126" y="203" fill="#102a35" font-size="13" font-weight="800" text-anchor="middle">structured light /</text><text x="126" y="223" fill="#102a35" font-size="13" font-weight="800" text-anchor="middle">surface scan</text>
+              <path d="M 194 207 H 248" fill="none" stroke="#78908f" stroke-width="3" marker-end="url(#tier-arrow)"/>
+              <rect x="260" y="153" width="199" height="108" rx="12" fill="#ffffff" stroke="#a8d9d4"/>
+              <text x="359" y="185" fill="#102a35" font-size="13" font-weight="800" text-anchor="middle">3D surface reconstruction</text><text x="359" y="210" fill="#36515c" font-size="12" text-anchor="middle">→ registered deviation map</text><text x="359" y="233" fill="#36515c" font-size="12" text-anchor="middle">transparent / wet sample caution</text>
+              <rect x="623" y="91" width="459" height="213" rx="16" fill="url(#tier-b)" stroke="#e2b46b" stroke-width="2"/>
+              <text x="652" y="126" fill="#8e641d" font-size="16" font-weight="900">TIER B · HIGH-RESOLUTION SPATIAL PATH</text>
+              <rect x="652" y="153" width="118" height="108" rx="12" fill="#ffffff" stroke="#edd49e"/>
+              <text x="711" y="183" fill="#102a35" font-size="13" font-weight="800" text-anchor="middle">OCT /</text><text x="711" y="203" fill="#102a35" font-size="13" font-weight="800" text-anchor="middle">confocal z-stack /</text><text x="711" y="223" fill="#102a35" font-size="13" font-weight="800" text-anchor="middle">profilometry</text>
+              <path d="M 779 207 H 833" fill="none" stroke="#78908f" stroke-width="3" marker-end="url(#tier-arrow)"/>
+              <rect x="845" y="153" width="199" height="108" rx="12" fill="#ffffff" stroke="#edd49e"/>
+              <text x="944" y="180" fill="#102a35" font-size="13" font-weight="800" text-anchor="middle">thickness · anterior / posterior</text><text x="944" y="203" fill="#102a35" font-size="13" font-weight="800" text-anchor="middle">layer boundary · local curvature</text><text x="944" y="231" fill="#36515c" font-size="12" text-anchor="middle">calibration + expert interpretation</text>
+              <path d="M 267 304 V 329 H 562 V 304 M 852 304 V 329 H 562" fill="none" stroke="#78908f" stroke-width="3" marker-end="url(#tier-arrow)"/>
+              <rect x="398" y="328" width="328" height="35" rx="17.5" fill="#0b2c3a"/>
+              <text x="562" y="351" fill="#dffcf8" font-size="13" font-weight="800" text-anchor="middle">CALIBRATION → DESIGN REGISTRATION → QC REVIEW</text>
+            </g>
+          </svg>
+          <figcaption id="tier-chart-caption">Figure 3. <strong>概念図 / 非実測。</strong> Tier選択は機器・sample・training・PI判断に依存します。Tier A / Bのどちらでも、calibration未確認の画像をmm値へ変換しません。</figcaption>
+        </figure>
+
+        <div class="table-wrap spaced-24" data-scrollable-table>
+          <table>
+            <caption>Acquisition tier comparison — requirements.md §3.3の区分</caption>
+            <thead><tr><th>Tier</th><th>Input / acquisition</th><th>Derived spatial object</th><th>Potential geometry outputs</th><th>Required caution</th></tr></thead>
+            <tbody>
+              <tr><td><span class="tier-badge tier-a">Tier A</span></td><td>複数角度写真 / structured light / surface scan</td><td>3D表面再構築</td><td>design meshとのregistration、deviation map、surface-based metric</td><td>透明・湿潤試料の取得条件を工夫する。<code>calibration_confirmed</code>がfalseなら物理単位は<code>not measurable</code>。</td></tr>
+              <tr><td><span class="tier-badge tier-b">Tier B</span></td><td>OCT / confocal z-stack / profilometry</td><td>厚さ・前後面・層境界・局所曲率の空間解析</td><td>thickness variation、interlayer misalignment、局所geometry解析</td><td>装置calibrationと専門家解釈が必要。Tier B measurement / layerはconstruct内technical measurementとして保持する。</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="table-wrap spaced-24" data-scrollable-table>
+          <table>
+            <caption>Calibration procedure — physical-unit metricを計算する前に残すrecord</caption>
+            <thead><tr><th>Step</th><th>Required record</th><th>Decision / quality rule</th><th>If the record is absent</th></tr></thead>
+            <tbody>
+              <tr><td>1. Source and reference inventory</td><td><code>raw_file</code>, <code>design_version</code>, <code>calibration_reference</code></td><td><code>raw_file</code> must exist and remain read-only; <code>design_version</code> must resolve to a stored design file.</td><td>design-relative metricを計算せず、source inventoryへ欠落として残す。</td></tr>
+              <tr><td>2. Calibration verification</td><td><code>calibration_confirmed</code></td><td>pixel/voxel to mm conversionがverifiedかをtrue / falseで記録する。</td><td>falseなら、すべてのlength / area / volume fieldは<code>not_measurable</code>。</td></tr>
+              <tr><td>3. Spatial resolution</td><td><code>voxel_or_pixel_size</code> · <code>µm/px or µm/voxel</code></td><td><code>calibration_confirmed</code>がtrueのときrequired。recorded spatial resolutionを保持する。</td><td>mm / µmのderived fieldを確定せず、calibration evidenceを確認する。</td></tr>
+              <tr><td>4. Registration record</td><td><code>registration_method</code>, <code>registration_rmse_mm</code> · mm</td><td>parameters versioned in code。RMSEはgeometry errorではなくfit-quality diagnostic。</td><td>metric値をautomatic passとして扱わず、review対象にする。</td></tr>
+              <tr><td>5. Provenance and review</td><td><code>source_reference</code>, <code>created_at</code>, <code>reviewed_by</code></td><td>source must resolve; timestamp includes timezone; independent reviewが必要な場合はreviewerを分ける。</td><td>監査可能なrecordになるまでGate 2以降をHoldする。</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="split-grid spaced-24">
+          <article class="panel">
+            <p class="kicker">Calibration record</p>
+            <h3>pixel / voxel → mmの前に残す順序</h3>
+            <ol class="numbered-list">
+              <li><strong>Referenceを確定:</strong> known reference（calibration target、CT/OCTのvoxel size等）を<code>calibration_reference</code>へ記録する。</li>
+              <li><strong>Verificationを記録:</strong> <code>calibration_confirmed</code>をtrue / falseとして残し、trueなら<code>voxel_or_pixel_size</code>を記録する。</li>
+              <li><strong>Rawを固定:</strong> <code>raw_file</code>は存在しread-onlyのまま保持する。unit conversionはscript化しtestする。</li>
+              <li><strong>欠落を測定値に見せない:</strong> calibrationがないdataはpixel単位または<code>not measurable</code>として扱い、mm・µm・mm³値へ換算しない。</li>
+            </ol>
+          </article>
+          <article class="panel">
+            <p class="kicker">Design mesh registration</p>
+            <h3>errorを算出する前に、fit品質を分離する。</h3>
+            <ol class="numbered-list">
+              <li>design / nominal meshまたはCADをversioned referenceとして解決する（<code>design_version</code>）。</li>
+              <li>実測meshをdesign meshへ位置合わせする（例: <code>registration_method</code> = ICP + scale）。rigid + scale補正の要否を明記する。</li>
+              <li><code>registration_rmse_mm</code>をfit品質として記録する。これはgeometry errorそのものではない。</li>
+              <li>事前登録上限を超えるnon-convergenceは自動除外せず、<code>qc_status</code>と<code>exclusion_reason</code>でflagする。</li>
+              <li>design−measured overlay、parameter、failure reasonをconstruct logへ残してhuman reviewへ渡す。</li>
+            </ol>
+          </article>
+        </div>
+
+        <figure class="process-figure spaced-24" aria-labelledby="process-chart-heading" aria-describedby="process-chart-caption" data-scrollable-figure>
+          <header class="chart-card-header">
+            <div><p class="kicker">Design-to-QC record chain</p><h3 id="process-chart-heading">測定値だけで終えず、decisionとfailure recordまでつなぐ。</h3></div>
+            <span>概念図 / 非実測</span>
+          </header>
+          <svg viewBox="0 0 1120 276" role="img" aria-labelledby="chain-svg-title chain-svg-desc">
+            <title id="chain-svg-title">design geometryからacquisition、calibration、registration、geometry metrics、QCとfailure recordまでの概念chain</title>
+            <desc id="chain-svg-desc">design geometryからraw acquisitionへ進み、calibration、design mesh registration、separate geometry metrics、QC reviewとfailure registry、construct logへ進む。どの段階でも欠落や失敗を削除せず記録する概念図であり、実測結果ではない。</desc>
+            <defs><marker id="chain-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#78908f"/></marker></defs>
+            <rect x="1" y="1" width="1118" height="274" rx="18" fill="#fbfcfb" stroke="#cdd8d6"/>
+            <rect x="29" y="22" width="210" height="31" rx="15.5" fill="#fff0ec"/><text x="134" y="43" fill="#a3463a" font-family="Arial, sans-serif" font-size="12" font-weight="800" text-anchor="middle">概念図 / 非実測</text>
+            <g fill="none" stroke="#78908f" stroke-width="3" marker-end="url(#chain-arrow)"><path d="M 187 145 H 237"/><path d="M 364 145 H 414"/><path d="M 541 145 H 591"/><path d="M 718 145 H 768"/><path d="M 895 145 H 945"/></g>
+            <g font-family="Arial, sans-serif">
+              <g transform="translate(40 101)"><rect width="147" height="89" rx="13" fill="#e7f6f3" stroke="#85c9c5"/><text x="73.5" y="34" fill="#076667" font-size="13" font-weight="900" text-anchor="middle">DESIGN</text><text x="73.5" y="56" fill="#102a35" font-size="12" font-weight="700" text-anchor="middle">CAD / mesh</text><text x="73.5" y="74" fill="#36515c" font-size="11" text-anchor="middle">design_version</text></g>
+              <g transform="translate(237 101)"><rect width="127" height="89" rx="13" fill="#e7f6f3" stroke="#85c9c5"/><text x="63.5" y="34" fill="#076667" font-size="13" font-weight="900" text-anchor="middle">ACQUIRE</text><text x="63.5" y="56" fill="#102a35" font-size="12" font-weight="700" text-anchor="middle">raw scan / OCT</text><text x="63.5" y="74" fill="#36515c" font-size="11" text-anchor="middle">raw_file</text></g>
+              <g transform="translate(414 101)"><rect width="127" height="89" rx="13" fill="#fff6de" stroke="#e4c779"/><text x="63.5" y="34" fill="#825d1a" font-size="13" font-weight="900" text-anchor="middle">CALIBRATE</text><text x="63.5" y="56" fill="#102a35" font-size="12" font-weight="700" text-anchor="middle">pixel / voxel → mm</text><text x="63.5" y="74" fill="#36515c" font-size="11" text-anchor="middle">confirmed?</text></g>
+              <g transform="translate(591 101)"><rect width="127" height="89" rx="13" fill="#e7f6f3" stroke="#85c9c5"/><text x="63.5" y="34" fill="#076667" font-size="13" font-weight="900" text-anchor="middle">REGISTER</text><text x="63.5" y="56" fill="#102a35" font-size="12" font-weight="700" text-anchor="middle">measured ↔ design</text><text x="63.5" y="74" fill="#36515c" font-size="11" text-anchor="middle">registration_rmse_mm</text></g>
+              <g transform="translate(768 101)"><rect width="127" height="89" rx="13" fill="#eef1ff" stroke="#b7afd9"/><text x="63.5" y="34" fill="#4c4388" font-size="13" font-weight="900" text-anchor="middle">METRICS</text><text x="63.5" y="56" fill="#102a35" font-size="12" font-weight="700" text-anchor="middle">separate endpoints</text><text x="63.5" y="74" fill="#36515c" font-size="11" text-anchor="middle">not one score</text></g>
+              <g transform="translate(945 101)"><rect width="135" height="89" rx="13" fill="#fff0ec" stroke="#e4a195"/><text x="67.5" y="34" fill="#a3463a" font-size="13" font-weight="900" text-anchor="middle">REVIEW + LOG</text><text x="67.5" y="56" fill="#102a35" font-size="12" font-weight="700" text-anchor="middle">QC / failure registry</text><text x="67.5" y="74" fill="#36515c" font-size="11" text-anchor="middle">construct log</text></g>
+              <text x="560" y="233" fill="#36515c" font-size="12" font-weight="800" text-anchor="middle">MISSING CALIBRATION · FAILED SEGMENTATION · NON-CONVERGENCE → FLAG AND RECORD, DO NOT SILENTLY DELETE</text>
+            </g>
+          </svg>
+          <figcaption id="process-chart-caption">Figure 4. <strong>概念図 / 非実測。</strong> geometry errorの計算はdesign reference、calibration、registrationが監査可能な場合に限ります。failureは<code>qc_status</code>と<code>exclusion_reason</code>、event trailは<code>construct-log.csv</code>へ残します。</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" id="analysis">
+      <div class="container">
+        <header class="section-heading">
+          <span class="section-number">05 · Analysis &amp; data architecture</span>
+          <div class="section-heading-copy">
+            <h2>階層、単位、fit品質を壊さずに解析する。</h2>
+            <p>experimental unitをconstructだけに単純化せず、study → print run → material / bioink batch → construct → Tier B measurement / layerの入れ子を保存します。print runとbatchをgroup化因子として扱います。</p>
+          </div>
+        </header>
+
+        <figure class="hierarchy-figure" aria-labelledby="hierarchy-heading">
+          <header class="chart-card-header">
+            <div><p class="kicker">Experimental hierarchy</p><h3 id="hierarchy-heading">sample単位の疑似反復を避ける入れ子。</h3></div>
+            <span>概念図 / 非実測</span>
+          </header>
+          <ol class="hierarchy-flow">
+            <li><strong>study</strong><span><code>study_id</code><br><code>protocol_version</code><br>question / protocol</span></li>
+            <li><strong>print run</strong><span><code>print_run_id</code><br>independent print run</span></li>
+            <li><strong>material / bioink batch</strong><span><code>batch_id</code><br><code>material_id</code><br>traceability group</span></li>
+            <li><strong>construct (sample)</strong><span><code>construct_id</code><br><code>design_version</code><br>physical printed construct</span></li>
+            <li><strong>measurement</strong><span><code>measurement_id</code><br><code>acquisition_tier</code><br>single acquisition event</span></li>
+            <li class="optional"><strong>Tier B section / layer</strong><span>technical measurement only<br>retain linkage to construct</span></li>
+          </ol>
+          <figcaption>Figure 5. <strong>概念図 / 非実測。</strong> <code>protocol_version</code>、<code>design_version</code>、<code>registration_method</code>などのversioned contextを対応する水準に残します。実際のbatchとprint runの入れ子はGate 0のPI確認事項であり、row orderから推測しません。</figcaption>
+        </figure>
+
+        <div class="equation-card spaced-24">
+          <h3>Metric equations · from templates/analysis-plan.md</h3>
+          <div class="equation-grid" role="group" aria-label="Geometry QC metric equations">
+            <div><code>radius_deviation = best_fit_radius − design_radius</code></div>
+            <div><code>wall_thickness_variation = local_thickness(x) − design_thickness(x)</code></div>
+            <div><code>surface_rmse = RMS( measured_surface − design_surface ), over registered region</code></div>
+            <div><code>chordal_error = max deviation of discretised print path from intended smooth curve</code></div>
+            <div><code>volume_change = ( measured_volume − design_volume ) / design_volume</code></div>
+            <div><code>shrinkage_rate = ( as_printed_dimension − post_process_dimension ) / as_printed_dimension</code></div>
+          </div>
+          <p>派生指標は、単位・基準面・正負の符号規約を記録します。<code>registration_rmse_mm</code>は上のequation群に含めず、fit品質のdiagnosticとして別に保存します。</p>
+        </div>
+
+        <!-- TODO (Gate 0 / PI): No real PI-approved numeric QC thresholds exist. The tolerance column below deliberately remains a visible placeholder and must not be replaced with the portfolio demo's ±0.18 mm rule. -->
+        <div class="table-wrap spaced-24" data-scrollable-table>
+          <table>
+            <caption>Metric definition, units, and acceptance status — equations and units sourced from analysis-plan.md and data-dictionary.csv</caption>
+            <thead><tr><th>Stored field / endpoint</th><th>Definition / equation</th><th>Unit</th><th>Quality interpretation</th><th>Predeclared tolerance</th></tr></thead>
+            <tbody>
+              <tr><td><code>best_fit_radius_mm</code><br><code>radius_deviation_mm</code></td><td>best-fit measured radius; <code>best_fit_radius_mm − design_radius_mm</code></td><td>mm</td><td>derived by versioned script; sign convention documented</td><td><span class="threshold-placeholder">PI approval pending — no numeric rule</span></td></tr>
+              <tr><td><code>median_thickness_mm</code><br><code>thickness_variation_mm</code></td><td>measured thickness distribution vs <code>design_thickness_mm</code>; report spread, not only median</td><td>mm</td><td>derived by versioned script</td><td><span class="threshold-placeholder">PI approval pending — no numeric rule</span></td></tr>
+              <tr><td><code>surface_rmse_mm</code></td><td>surface RMSE between measured and design mesh over registered region</td><td>mm</td><td>roadmap operationalizes surface fidelity; not classical texture roughness (Ra / Rq)</td><td><span class="threshold-placeholder">PI approval pending — no numeric rule</span></td></tr>
+              <tr><td><code>chordal_error_mm</code></td><td>maximum layer-wise topographic chordal deviation</td><td>mm</td><td>derived by versioned script</td><td><span class="threshold-placeholder">PI approval pending — no numeric rule</span></td></tr>
+              <tr><td><code>measured_volume_mm3</code><br><code>volume_change_fraction</code></td><td><code>(measured_volume − design_volume) / design_volume</code></td><td>mm3 / fraction</td><td>measured volume is derived by versioned script; design volume is computed from <code>design_version</code></td><td><span class="threshold-placeholder">PI approval pending — no numeric rule</span></td></tr>
+              <tr><td><code>shrinkage_rate_fraction</code></td><td>dimensional change between as-printed and post-process state</td><td>fraction</td><td>requires paired pre/post measurement</td><td><span class="threshold-placeholder">PI approval pending — no numeric rule</span></td></tr>
+              <tr><td><code>interlayer_misalignment_mm</code></td><td>offset between adjacent printed layers</td><td>mm</td><td>Tier B only unless otherwise justified</td><td><span class="threshold-placeholder">PI approval pending — no numeric rule</span></td></tr>
+              <tr class="diagnostic-row"><td><code>registration_rmse_mm</code></td><td>registration fit-quality diagnostic</td><td>mm</td><td>not itself a geometry error; high values trigger review</td><td><span class="threshold-placeholder">Review limit must be PI-predeclared at Gate 0</span></td></tr>
+              <tr><td><code>qc_status</code></td><td><code>pass | review | exclude_from_primary</code></td><td>category</td><td>raw row retained regardless of status; <code>exclusion_reason</code> required when status is not pass</td><td><span class="threshold-placeholder">PASS / REVIEW / FAIL display mapping and numeric thresholds: Gate 0 PI approval pending</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="table-wrap spaced-30" data-scrollable-table>
+          <table class="dictionary-table">
+            <caption>Minimum data dictionary — exact source field names, data types, units / allowed values, descriptions, and quality rules from templates/data-dictionary.csv</caption>
+            <thead><tr><th>field_name</th><th>level</th><th>required</th><th>data_type</th><th>unit_or_allowed_values</th><th>description</th><th>quality_rule</th></tr></thead>
+            <tbody>
+              <tr><td><code>study_id</code></td><td>study</td><td>yes</td><td>string</td><td>controlled ID</td><td>Study identifier</td><td>unique and immutable</td></tr>
+              <tr><td><code>protocol_version</code></td><td>study</td><td>yes</td><td>string</td><td>semantic version</td><td>Approved protocol version</td><td>must match decision log</td></tr>
+              <tr><td><code>study_status</code></td><td>study</td><td>yes</td><td>category</td><td>draft|approved|frozen|amended|closed</td><td>Study state</td><td>no unlogged transition</td></tr>
+              <tr><td><code>print_run_id</code></td><td>print_run</td><td>yes</td><td>string</td><td>controlled ID</td><td>Independent print run</td><td>not inferred from date alone</td></tr>
+              <tr><td><code>batch_id</code></td><td>batch</td><td>yes</td><td>string</td><td>controlled ID</td><td>Independent material/bioink batch</td><td>not inferred from row order</td></tr>
+              <tr><td><code>material_id</code></td><td>batch</td><td>yes</td><td>string</td><td>controlled ID</td><td>Bioink or material composition identifier</td><td>links to full formulation record</td></tr>
+              <tr><td><code>material_lot</code></td><td>batch</td><td>no</td><td>string</td><td>supplier lot</td><td>Material lot for traceability</td><td>record supplier separately</td></tr>
+              <tr><td><code>construct_id</code></td><td>construct</td><td>yes</td><td>string</td><td>controlled ID</td><td>Physical printed construct identifier</td><td>unique within batch</td></tr>
+              <tr><td><code>fabrication_strategy</code></td><td>construct</td><td>yes</td><td>category</td><td>mould_assisted|direct_support_free|other</td><td>Curved-construct fabrication approach</td><td>controlled vocabulary</td></tr>
+              <tr><td><code>print_method</code></td><td>construct</td><td>yes</td><td>category</td><td>ME|DLP|inkjet|SLA|other</td><td>Printing technology</td><td>controlled vocabulary</td></tr>
+              <tr><td><code>layer_thickness_um</code></td><td>construct</td><td>yes</td><td>number</td><td>µm</td><td>Nominal layer thickness used</td><td>positive value</td></tr>
+              <tr><td><code>slice_angle_deg</code></td><td>construct</td><td>no</td><td>number</td><td>degrees</td><td>Slicing angle relative to build plate</td><td>record when direct printing used</td></tr>
+              <tr><td><code>overhang_angle_deg</code></td><td>construct</td><td>no</td><td>number</td><td>degrees</td><td>Steepest overhang angle in the design</td><td>flag values exceeding the platform's printable limit</td></tr>
+              <tr><td><code>support_removed</code></td><td>construct</td><td>no</td><td>boolean</td><td>true|false</td><td>Whether support structures were removed post-print</td><td>record removal method separately</td></tr>
+              <tr><td><code>design_version</code></td><td>construct</td><td>yes</td><td>string</td><td>controlled ID</td><td>CAD/design reference version</td><td>must resolve to a stored design file</td></tr>
+              <tr><td><code>design_radius_mm</code></td><td>construct</td><td>yes</td><td>number</td><td>mm</td><td>Nominal/target radius from design</td><td>positive value</td></tr>
+              <tr><td><code>design_thickness_mm</code></td><td>construct</td><td>yes</td><td>number</td><td>mm</td><td>Nominal/target wall thickness from design</td><td>positive value</td></tr>
+              <tr><td><code>operator_id</code></td><td>construct</td><td>yes</td><td>string</td><td>pseudonymous ID</td><td>Operator identifier</td><td>no personal details in public output</td></tr>
+              <tr><td><code>fabrication_date</code></td><td>construct</td><td>yes</td><td>date</td><td>ISO 8601</td><td>Date of printing</td><td>YYYY-MM-DD</td></tr>
+              <tr><td><code>measurement_id</code></td><td>measurement</td><td>yes</td><td>string</td><td>controlled ID</td><td>Single acquisition/measurement event on a construct</td><td>unique within construct</td></tr>
+              <tr><td><code>acquisition_tier</code></td><td>measurement</td><td>yes</td><td>category</td><td>tier_a_photo_scan|tier_b_oct_confocal|both</td><td>Data acquisition tier</td><td>see requirements.md Tier A/B definition</td></tr>
+              <tr><td><code>acquisition_method</code></td><td>measurement</td><td>yes</td><td>string</td><td>controlled vocabulary</td><td>Specific method (photogrammetry / structured_light / OCT / confocal_z_stack / profilometry)</td><td>instrument model recorded separately</td></tr>
+              <tr><td><code>calibration_reference</code></td><td>measurement</td><td>yes</td><td>string</td><td>reference object or spec</td><td>Calibration source for pixel/voxel to mm conversion</td><td>required before any mm-unit value is recorded</td></tr>
+              <tr><td><code>calibration_confirmed</code></td><td>measurement</td><td>yes</td><td>boolean</td><td>true|false</td><td>Whether calibration was verified for this measurement</td><td>if false all length/area/volume fields are not_measurable</td></tr>
+              <tr><td><code>voxel_or_pixel_size</code></td><td>measurement</td><td>no</td><td>number</td><td>µm/px or µm/voxel</td><td>Recorded spatial resolution</td><td>required when calibration_confirmed is true</td></tr>
+              <tr><td><code>registration_method</code></td><td>measurement</td><td>yes</td><td>string</td><td>e.g. ICP + scale</td><td>Method used to align measured mesh to design mesh</td><td>parameters versioned in code</td></tr>
+              <tr><td><code>registration_rmse_mm</code></td><td>measurement</td><td>yes</td><td>number</td><td>mm</td><td>Registration fit-quality diagnostic</td><td>not itself a geometry error; high values trigger review</td></tr>
+              <tr><td><code>best_fit_radius_mm</code></td><td>measurement</td><td>no</td><td>number</td><td>mm</td><td>Best-fit measured radius</td><td>derived by versioned script</td></tr>
+              <tr><td><code>radius_deviation_mm</code></td><td>measurement</td><td>no</td><td>number</td><td>mm</td><td>best_fit_radius_mm minus design_radius_mm</td><td>derived; sign convention documented</td></tr>
+              <tr><td><code>median_thickness_mm</code></td><td>measurement</td><td>no</td><td>number</td><td>mm</td><td>Median measured wall thickness</td><td>derived by versioned script</td></tr>
+              <tr><td><code>thickness_variation_mm</code></td><td>measurement</td><td>no</td><td>number</td><td>mm</td><td>Measured thickness distribution vs design_thickness_mm</td><td>derived; report spread not only median</td></tr>
+              <tr><td><code>surface_rmse_mm</code></td><td>measurement</td><td>no</td><td>number</td><td>mm</td><td>Surface RMSE between measured and design mesh over registered region</td><td>derived by versioned script</td></tr>
+              <tr><td><code>chordal_error_mm</code></td><td>measurement</td><td>no</td><td>number</td><td>mm</td><td>Maximum layer-wise topographic chordal deviation</td><td>derived by versioned script</td></tr>
+              <tr><td><code>measured_volume_mm3</code></td><td>measurement</td><td>no</td><td>number</td><td>mm3</td><td>Measured construct volume</td><td>derived by versioned script</td></tr>
+              <tr><td><code>volume_change_fraction</code></td><td>measurement</td><td>no</td><td>number</td><td>fraction</td><td>(measured_volume - design_volume) / design_volume</td><td>derived; design_volume computed from design_version</td></tr>
+              <tr><td><code>shrinkage_rate_fraction</code></td><td>measurement</td><td>no</td><td>number</td><td>fraction</td><td>Dimensional change between as-printed and post-process state</td><td>requires paired pre/post measurement</td></tr>
+              <tr><td><code>interlayer_misalignment_mm</code></td><td>measurement</td><td>no</td><td>number</td><td>mm</td><td>Offset between adjacent printed layers</td><td>Tier B only unless otherwise justified</td></tr>
+              <tr><td><code>qc_status</code></td><td>measurement</td><td>yes</td><td>category</td><td>pass|review|exclude_from_primary</td><td>Quality status</td><td>raw row is retained regardless of status</td></tr>
+              <tr><td><code>exclusion_reason</code></td><td>measurement</td><td>no</td><td>string</td><td>controlled reason plus note</td><td>Reason for primary-analysis exclusion or review flag</td><td>required when qc_status is not pass</td></tr>
+              <tr><td><code>raw_file</code></td><td>measurement</td><td>yes</td><td>string</td><td>relative path</td><td>Raw scan/image/OCT file</td><td>must exist and remain read-only</td></tr>
+              <tr><td><code>source_type</code></td><td>provenance</td><td>yes</td><td>category</td><td>experiment|literature|simulation|synthetic_demo</td><td>Origin of row</td><td>synthetic_demo rows must never be merged into real-pilot summaries</td></tr>
+              <tr><td><code>source_reference</code></td><td>provenance</td><td>yes</td><td>string</td><td>DOI or local file</td><td>Traceable source</td><td>must resolve</td></tr>
+              <tr><td><code>created_at</code></td><td>provenance</td><td>yes</td><td>datetime</td><td>ISO 8601</td><td>Record creation timestamp</td><td>timezone included</td></tr>
+              <tr><td><code>reviewed_by</code></td><td>provenance</td><td>yes</td><td>string</td><td>pseudonymous ID</td><td>Human QC reviewer</td><td>not the same person where independent review is required</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout caution spaced-24">
+          <span class="callout-mark" aria-hidden="true">n</span>
+          <div>
+            <h3>Group-aware analysis before small-sample modelling</h3>
+            <p>constructを無条件に独立sampleとしてrandom splitしません。batch / print runをgroup keyとし、grouped repeated validation、leave-one-batch-out、prospective Gate 6を順に検討します。mechanistic / geometric baselineと個々のconstruct overlayを先に固定します。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="risks">
+      <div class="container">
+        <header class="section-heading">
+          <span class="section-number">06 · Risk register</span>
+          <div class="section-heading-copy">
+            <h2>失敗と欠落を消さず、判断の入力にする。</h2>
+            <p>fit失敗、segmentation失敗、calibration欠落、曲面外領域、permission不明を、静かな除外ではなくfailure registryとdecision logへ残します。</p>
+          </div>
+        </header>
+
+        <div class="table-wrap" data-scrollable-table>
+          <table>
+            <caption>Initial risk register — likelihood / impactはPI-approved pilot protocol後に更新する</caption>
+            <thead><tr><th>Risk</th><th>Priority</th><th>Early signal</th><th>Mitigation / record</th><th>Decision rule</th></tr></thead>
+            <tbody>
+              <tr><td>Calibration欠落</td><td><span class="risk-high">High</span></td><td><code>calibration_confirmed</code>がfalse、reference不明</td><td><code>calibration_reference</code>とraw evidenceを確認；unit conversionを停止</td><td>mm / µm / mm³値を<code>not measurable</code>として扱い、Gate 2以降をHold</td></tr>
+              <tr><td>design geometry / nominal reference不明</td><td><span class="risk-high">High</span></td><td><code>design_version</code>がstored design fileへ解決しない</td><td>CAD / mesh inventoryとversion linkageを作成</td><td>design-relative geometry errorを計算しない</td></tr>
+              <tr><td>data-use permissionまたはinstrument training不明</td><td><span class="risk-high">High</span></td><td>access owner、SOP、training recordが未確認</td><td>PI / lab SOP / decision logで確認</td><td>wet-lab、scan、private-image accessを開始しない</td></tr>
+              <tr><td>透明・湿潤sampleのsegmentation / acquisition失敗</td><td><span class="risk-high">High</span></td><td>surface reconstructionが欠損、境界が不安定</td><td>acquisition conditionとfailure reasonを<code>construct-log.csv</code>へ記録；Tier適合性をreview</td><td>削除せずreview / exclusion reasonとして残す</td></tr>
+              <tr><td>registration non-convergence</td><td><span class="risk-high">High</span></td><td><code>registration_rmse_mm</code>が事前登録上限を超える</td><td>parameter、registered region、overlayを保存しhuman review</td><td>geometry errorを自動確定せず<code>qc_status</code>でflag</td></tr>
+              <tr><td>print run / batch hierarchyの誤読</td><td><span class="risk-medium">Medium</span></td><td>IDがrow order / dateだけで推定される</td><td><code>print_run_id</code>と<code>batch_id</code>をsource recordから確認</td><td>grouped inference / random splitを停止する</td></tr>
+              <tr><td>synthetic demoとreal pilotの混同</td><td><span class="risk-high">High</span></td><td><code>source_type = synthetic_demo</code>がreal summaryへ混在</td><td>visible synthetic badge、separate tables / figures、source-type audit</td><td>real-pilot report / acceptance ruleから除外し、source separationを修正</td></tr>
+              <tr><td>Geometry QCからextended performanceを推論</td><td><span class="risk-medium">Medium</span></td><td>Young's modulus、transparency、refractive index/power、permeabilityをgeometry metricだけで記述</td><td>claim boundaryとGate 7 charterをreview</td><td>専用測定なしのclaimを撤回 / not supportedに分類</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="files">
+      <div class="container">
+        <header class="section-heading">
+          <span class="section-number">07 · Files &amp; references</span>
+          <div class="section-heading-copy">
+            <h2>Roadmapから、監査可能なローカル資産へ。</h2>
+            <p>すべてlocal relative linkです。CDN、外部font、外部scriptを使用せず、<code>file://</code>で開く構成にしています。</p>
+          </div>
+        </header>
+
+        <div class="asset-grid">
+          <a class="asset-card" href="../README.md"><div><span>Start here</span><h3>Project README</h3><p>研究中心、synthetic demoとの境界、folder構成。</p></div><strong>Open README →</strong></a>
+          <a class="asset-card" href="../requirements.md"><div><span>Locked specification</span><h3>要件定義</h3><p>content、functional、scientific、acceptance要件。</p></div><strong>Open requirements →</strong></a>
+          <a class="asset-card" href="../implementation-prompt.md"><div><span>Reusable prompt</span><h3>実行用指示文</h3><p>real data受領後も使うguardrails付きprompt。</p></div><strong>Open prompt →</strong></a>
+          <a class="asset-card" href="../final-status-report.md"><div><span>Final audit · Gate 0 status</span><h3>Execution status report</h3><p>最低限の出力、未解決依存、支持できるclaim、次のowner。</p></div><strong>Open status →</strong></a>
+          <a class="asset-card" href="../templates/study-charter.md"><div><span>Template</span><h3>Study charter</h3><p>primary endpoint、hierarchy、quality gates、amendments。</p></div><strong>Open template →</strong></a>
+          <a class="asset-card" href="../templates/analysis-plan.md"><div><span>Template</span><h3>Analysis plan</h3><p>calibration、registration、equations、claims boundary。</p></div><strong>Open plan →</strong></a>
+          <a class="asset-card" href="../templates/data-dictionary.csv"><div><span>Template · CSV</span><h3>Data dictionary</h3><p>studyからprovenanceまでのfield、unit、quality rule。</p></div><strong>Open CSV →</strong></a>
+          <a class="asset-card" href="../templates/imaging-sampling-plan.csv"><div><span>Template · CSV</span><h3>Imaging sampling plan</h3><p>Tier、calibration、registration、metric確認の計画行。</p></div><strong>Open CSV →</strong></a>
+          <a class="asset-card" href="../templates/construct-log.csv"><div><span>Template · CSV</span><h3>Construct log</h3><p>fabricationからdecisionまでのevent trail。</p></div><strong>Open CSV →</strong></a>
+          <a class="asset-card" href="../notes/decision-log.md"><div><span>Governance</span><h3>Decision log</h3><p>結果後変更を追跡する意思決定記録。</p></div><strong>Open log →</strong></a>
+          <a class="asset-card" href="../references/README.md"><div><span>Provenance index</span><h3>References README</h3><p>paper、metadata-only文献、portfolio demoの利用境界。</p></div><strong>Open index →</strong></a>
+          <a class="asset-card" href="assets/hero-illustration-notes.md"><div><span>Site asset</span><h3>Hero illustration notes</h3><p>手描きSVGの意味、非実測ラベル、offline-first意図。</p></div><strong>Open notes →</strong></a>
+        </div>
+
+        <div class="table-wrap spaced-30" data-scrollable-table>
+          <table>
+            <caption>Direct local research links — provenance and portfolio assets</caption>
+            <thead><tr><th>Asset</th><th>Role</th><th>Local link</th><th>Use boundary</th></tr></thead>
+            <tbody>
+              <tr><td>Yuan et al. (2026), 3D Printing Strategies for Bioengineering Human Cornea</td><td>primary review for geometry gap and Table 3 measurement framing</td><td><a href="../../references/papers/yunong-yuan/3d-printing/08-yuan-2025-3d-printing-human-cornea.pdf">PDF</a></td><td>review evidence; do not expand into untested performance claims</td></tr>
+              <tr><td>Reference provenance index</td><td>related Yuan papers and metadata-only dual-layer corneal paper</td><td><a href="../references/README.md">references/README.md</a></td><td>dual-layer full text remains unconfirmed at Gate 0</td></tr>
+              <tr><td>Related local Yuan papers</td><td>background disease-model, small-data ML, and future print-process simulation context</td><td><a href="../../references/papers/yunong-yuan/biomedical-research-policy/02-yuan-2023-fda-modernization-disease-models.pdf">disease-model PDF</a> · <a href="../../references/papers/yunong-yuan/microneedle/03-yuan-2023-machine-learning-microneedled-skin-permeation.pdf">ML PDF</a> · <a href="../../references/papers/yunong-yuan/3d-printing/10-yuan-2026-multiphysics-simulation-bioprinting.pdf">multiphysics PDF</a></td><td>background only; none is a real-pilot geometry result</td></tr>
+              <tr><td>Lab strategy and research context</td><td>proposal rationale, Yuan research guide, and acquisition-tier background</td><td><a href="../../docs/contribution-map.md">contribution map</a> · <a href="../../docs/yunong-yuan-research-guide.md">Yuan research guide</a> · <a href="../../docs/contribution-strategy.md">contribution strategy</a></td><td>discussion-draft context; Gate 0 decisions supersede assumptions</td></tr>
+              <tr class="synthetic-row"><td><span class="synthetic-badge">Synthetic demo</span> Portfolio pilot charter</td><td>capability demonstration and explicit demo-threshold boundary</td><td><a href="../../portfolio/pilot-charter.md">pilot-charter.md</a></td><td><strong>not a real study charter or acceptance rule</strong></td></tr>
+              <tr class="synthetic-row"><td><span class="synthetic-badge">Synthetic demo</span> Geometry QC dataset</td><td>12-construct / 3-batch structural audit and code warm-up</td><td><a href="../../portfolio/geometry-qc-synthetic.csv">geometry-qc-synthetic.csv</a></td><td><strong>all rows carry synthetic_data_notice; never merge with real pilot summary</strong></td></tr>
+              <tr class="synthetic-row"><td><span class="synthetic-badge">Synthetic demo</span> Portfolio audit trail</td><td>demo orchestration record and claim-evidence structure</td><td><a href="../../portfolio/multi-agent-run-log.json">multi-agent-run-log.json</a> · <a href="../../portfolio/claim-evidence-map.csv">claim-evidence-map.csv</a></td><td><strong>synthetic capability records, not experimental provenance</strong></td></tr>
+              <tr class="synthetic-row"><td><span class="synthetic-badge">Synthetic demo</span> Portfolio web / poster</td><td>reader-facing UI examples derived from the same synthetic assets</td><td><a href="../../website/pages/research-portfolio.html#geometry">research portfolio</a> · <a href="../../website/pages/geometry-qc-poster.html">geometry QC poster</a></td><td><strong>visual reference only; not real-pilot evidence</strong></td></tr>
+              <tr><td>Decision record</td><td>proposed decisions and impact on primary analysis</td><td><a href="../notes/decision-log.md">notes/decision-log.md</a></td><td>PI review pending for D-001 and no portfolio threshold transfer for D-002</td></tr>
+              <tr><td>Final execution status</td><td>minimum outputs, Gate 0 holds, supported/not-supported claims, and next owner</td><td><a href="../final-status-report.md">final-status-report.md</a></td><td>status artifact only; contains no fabricated research result or threshold</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark" id="prompt">
+      <div class="container">
+        <header class="section-heading">
+          <span class="section-number">08 · Instruction prompt</span>
+          <div class="section-heading-copy">
+            <h2>次のAI作業にも、同じ研究境界を引き継ぐ。</h2>
+            <p>下の研究prompt本体は<code>implementation-prompt.md</code>のtext code blockをそのまま埋め込んだものです。具体的なtaskを追加してcopyできます。</p>
+          </div>
+        </header>
+
+        <div class="prompt-shell">
+          <div class="prompt-toolbar"><span>Reusable research instruction · full source text</span><button class="button small" type="button" data-copy-prompt>指示文をコピー</button></div>
+          <pre id="implementation-prompt" tabindex="0" data-prompt-source><code>あなたはcorneal 3D bioprinting、biofabrication geometry QC、optical/mechanical characterization、
+small-sample statisticsの研究支援者です。
+
+目的:
+Curved corneal construct（曲面角膜構造体）のdesign geometryに対する実測誤差を、
+再現可能で監査可能な方法で研究する。geometry error、print-process要因、
+extended characterization（力学・光学・透過性）を混同しないこと。
+synthetic demo（portfolio）とreal pilot dataを常に区別すること。
+
+最初に読むローカル資産:
+1. big-lab/corneal-geometry-qc/README.md
+2. big-lab/corneal-geometry-qc/requirements.md
+3. big-lab/corneal-geometry-qc/references/README.md
+4. big-lab/corneal-geometry-qc/templates/study-charter.md
+5. big-lab/corneal-geometry-qc/templates/analysis-plan.md
+6. big-lab/corneal-geometry-qc/templates/data-dictionary.csv
+   （data dictionaryの一次source。imaging-sampling-plan.csv・construct-log.csvも同フォルダにある）
+7. big-lab/corneal-geometry-qc/notes/decision-log.md（研究判断の記録先）
+8. big-lab/docs/contribution-map.md（§3–4: Curved Corneal Construct Geometry QCの提案根拠）
+9. big-lab/docs/yunong-yuan-research-guide.md（L142–219: geometry gap、§8/L216–223: PIへの質問）
+10. big-lab/references/papers/yunong-yuan/3d-printing/08-yuan-2025-3d-printing-human-cornea.pdf
+11. big-lab/portfolio/pilot-charter.md、geometry-qc-synthetic.csv、claim-evidence-map.csv、
+    multi-agent-run-log.json（すべてsynthetic demoであり、real pilot dataではない）
+12. big-lab/drug-release-profile/site/index.html と assets/roadmap.css、assets/roadmap.js
+    （姉妹roadmapのUI/構造パターン。同じ品質・構造で作るための参考実装として読む）
+
+必須原則:
+- 文献に書かれた事実、ローカルデータから算出した結果、提案、仮定、
+  そしてsynthetic demoに由来する数値を、明示的に5つすべて分けて扱う。
+- Yuan et al. (2026)がgeometry error（radius、wall-thickness、surface roughness、
+  chordal error）の系統的報告不足を指摘した事実と、そこから導いた本ラボの研究提案を混同しない。
+- calibration（pixel/voxel → mm）が確認できないデータを、実測値として単位変換しない。
+- registration RMSEはfit品質の診断指標であり、geometry errorそのものではない。
+- QC threshold（PASS / REVIEW / FAIL）は、portfolio demoの`±0.18mm`を転用せず、
+  Gate 0でPI承認のもと新たに設定する。
+- constructをhierarchyとして study &gt; print run &gt; material/bioink batch &gt;
+  construct（sample） &gt; (Tier Bの場合)測定断面/layer として保持する。
+- raw scan / image / OCT出力を変更しない。前処理、除外理由、registration parameterをlogに残す。
+- geometry error（radius/thickness/surface/chordal/volume/shrinkage/interlayer）を
+  単一スコアへ統合しない。
+- 力学（Young's modulus）、光学（transparency、refractive index/power）、
+  permeabilityについて、Gate 7の専用測定なしに性能を主張しない。
+- wet-lab条件、機器（3D printer、OCT、scanner）利用は、ラボSOP、PI、training、
+  該当する承認を優先する。
+- 臨床効果、光学性能、生物学的安全性を、geometry QCの結果だけから主張しない。
+- synthetic demoの結果を、実験的knowledgeとして引用・報告しない。
+
+今回のタスク:
+[ここに具体的な依頼を書く]
+
+実行順:
+1. 研究質問とprimary metric（geometry errorのどの成分か）を一文で再掲する。
+2. 利用可能なfile、欠けているmetadata（calibration、design reference、
+   permission）を監査する。
+3. 対象がgeometry error / print-process traceability / extended characterization
+   のどれかを分類する。
+4. experimental hierarchy（study → print run → material/bioink batch → construct（sample） →（Tier B）測定断面/layer、および各水準に紐づく design/method version）を図示する。
+5. calibration、design mesh registration手法、metric定義range、
+   既知の失敗モード（segmentation失敗、透明試料の取得困難、calibration欠落）を確認する。
+6. predeclared QCに基づきsampleを評価する。除外は削除でなくflagとして残す。
+7. geometry errorの各成分（radius/thickness/surface/chordal/volume/shrinkage/
+   interlayer）を、print-process要因（fabrication strategy、layer厚、
+   slice angle、overhang角度）に対して比較・可視化する。
+8. 小sample統計またはgrouped validationを使う場合、batchをgroup単位とし、
+   leave-one-batch-outまたは同等の検証を実装する。
+9. 結果、限界、次の最小実験を、synthetic demoとreal pilotを区別して報告する。
+10. HTMLを更新する場合は概念図と実測図、そしてsynthetic demoに由来する図表を
+    明確に区別し、sourceと更新日を付ける。
+
+最低限の出力:
+- one-sentence research question（geometry errorのどの成分が対象か）
+- assumptions / unresolved questions（requirements.md §10の7項目を含む）
+- file and data audit
+- experimental design table（Tier A / Tier Bのどちらを使うか含む）
+- QC and acceptance table（新規設定したPASS/REVIEW/FAIL閾値と根拠）
+- analysis plan with equations and units
+- risk / mitigation table
+- reproducible file outputs and paths
+- claims supported / not yet supported（extended characterizationは明示的にnot yet supported）
+- next decision and owner
+
+停止条件:
+- calibration（pixel/voxel → mm）を復元できない
+- design geometry / nominal referenceが不明
+- 画像・scan・OCTデータのdata-use permissionが不明
+- construct、print run、batchのhierarchyを復元できない
+- primary metricまたはQC閾値を結果確認後に変更しようとしている
+- geometry QCの結果から力学・光学・透過性・臨床性能を主張しようとしている
+
+停止条件に当たる場合は推測で埋めず、欠けている項目、影響、確認先
+（多くの場合PIまたはdecision-log.mdの既存記録）を短く提示する。</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="next">
+      <div class="container">
+        <header class="section-heading">
+          <span class="section-number">09 · Next / Gate 0</span>
+          <div class="section-heading-copy">
+            <h2>PIと確認する7項目を、答えのないまま残す。</h2>
+            <p>このページはformal protocolやreal-pilot resultではなく、PI / supervisorとGate 0を通すためのdiscussion draftです。未確認事項を推測で埋めません。</p>
+          </div>
+        </header>
+
+        <!-- TODO (Gate 0 / PI): The seven questions below require PI or lab-owner answers. No primary endpoint, access decision, hierarchy, or QC threshold has been fabricated in this site. -->
+        <div class="next-grid">
+          <article class="panel">
+            <p class="kicker">PI questions · requirements.md §10</p>
+            <h3>7つの確認事項</h3>
+            <ol class="pi-questions">
+              <li>radius error、wall-thickness variation、surface roughness、topographic chordal errorのうち、ラボで再現可能に測るのが現在最も難しいのはどれか。</li>
+              <li>最初のpilotは、OCT / scan geometry-QC workflowと、bioink・photocrosslinking条件をoutcomeへ結びつけるrun-level registryの、どちらとして始めるのが有用か。</li>
+              <li>利用可能な既存データはCAD、複数角度写真、structured light scan、OCT、confocal z-stack、instrument CSVのいずれか。</li>
+              <li>3D scanner / OCT / CAD softwareへのアクセスと、必要なtrainingの有無。</li>
+              <li>dual-layer corneal bioprinting論文（Huang, Yuan et al. 2026）の全文入手可否（現状はURLのみ把握）。</li>
+              <li>surface roughnessをdesign meshからのsurface RMSEで代替してよいか、それともTier Bでclassical texture roughness（Ra / Rq等）を別途測る必要があるか（§3.1のoperationalizationの妥当性確認）。</li>
+              <li>material / bioink batchとprint runの実際の入れ子関係（1つのbatchが複数のprint runに供給されるか、print runごとにbatchを調製するか）。§3.3のhierarchyとgroup化因子の定義に影響する。</li>
+            </ol>
+          </article>
+          <article class="panel">
+            <p class="kicker">Action checklist</p>
+            <h3>Gate 0の完了条件</h3>
+            <ul class="checklist">
+              <li><input class="task-check" id="next-1" type="checkbox" aria-label="Primary metricの確認を完了にする" data-roadmap-check data-label="primary metricとprimary endpointの確認"><label class="check-label" for="next-1">Primary metric / endpointを一文でPIと確認<small>geometry-error component、unit、design / nominal referenceを記録</small></label></li>
+              <li><input class="task-check" id="next-2" type="checkbox" aria-label="Data inventoryの確認を完了にする" data-roadmap-check data-label="CAD・scan・OCT data inventoryの確認"><label class="check-label" for="next-2">CAD / photo / scan / OCT / instrument CSVを棚卸<small>利用可能なsourceと欠けるmetadataをdata inventoryへ残す</small></label></li>
+              <li><input class="task-check" id="next-3" type="checkbox" aria-label="Design referenceの確認を完了にする" data-roadmap-check data-label="design referenceの確認"><label class="check-label" for="next-3">design referenceと<code>design_version</code>の解決を確認<small>stored design fileへ解決しない場合はGate 2以降をHold</small></label></li>
+              <li><input class="task-check" id="next-4" type="checkbox" aria-label="Calibrationの確認を完了にする" data-roadmap-check data-label="calibrationの確認"><label class="check-label" for="next-4">calibration referenceとphysical-unit変換を確認<small><code>calibration_confirmed</code>がfalseのdataをmm値にしない</small></label></li>
+              <li><input class="task-check" id="next-5" type="checkbox" aria-label="Access permission trainingの確認を完了にする" data-roadmap-check data-label="access・permission・trainingの確認"><label class="check-label" for="next-5">instrument access、data-use permission、trainingを確認<small>PI、lab SOP、利用規定を優先し、未確認ならwet-lab / data accessを開始しない</small></label></li>
+              <li><input class="task-check" id="next-6" type="checkbox" aria-label="QC thresholdとhierarchyの確認を完了にする" data-roadmap-check data-label="QC thresholdとexperimental hierarchyの確認"><label class="check-label" for="next-6">PI-approved QC ruleと実際のhierarchyを記録<small>numeric PASS / REVIEW / FAIL thresholdをportfolio demoから転用せず、print run / batch関係をsourceから確認</small></label></li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="callout spaced-24">
+          <span class="callout-mark" aria-hidden="true">→</span>
+          <div><h3>Gate 0の最小成果物</h3><p>PI確認後に、1ページの<code>study-charter.md</code>、data inventory、primary metric決定記録、calibration / design / permissionのevidence linkを残します。不足が一つでもあれば、Gate 1のsynthetic pipeline warm-upだけを継続します。</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="references">
+      <div class="container">
+        <header class="section-heading">
+          <span class="section-number">10 · Sources &amp; interpretation limits</span>
+          <div class="section-heading-copy">
+            <h2>根拠と、まだ支持されない主張を一緒に置く。</h2>
+            <p>一次PDF、local reference index、template、decision logを優先します。未取得論文はmetadata以上を引用せず、synthetic demoをexperimental evidenceとして扱いません。</p>
+          </div>
+        </header>
+
+        <div class="split-grid">
+          <article class="panel">
+            <p class="kicker">Primary and related local material</p>
+            <ol class="reference-list">
+              <li><p>Yuan Y, Lim KS, Sutton G, Wallace GG, You J. <a href="../../references/papers/yunong-yuan/3d-printing/08-yuan-2025-3d-printing-human-cornea.pdf">3D Printing Strategies for Bioengineering Human Cornea</a>.<small><em>Advanced Healthcare Materials</em>. 2026;15:e02767. DOI: 10.1002/adhm.202502767. Local review PDF; Section 3.1, Table 3, and Section 5 frame this roadmap.</small></p></li>
+              <li><p><a href="../references/README.md">Curved Corneal Construct Geometry QC reference index</a>.<small>Local provenance for related Yuan papers, the metadata-only dual-layer corneal paper, and portfolio assets.</small></p></li>
+              <li><p><a href="../notes/decision-log.md">Decision log D-001 / D-002</a>.<small>Proposed separation of geometry/process/extended characterization; no transfer of synthetic-demo thresholds to real pilot criteria.</small></p></li>
+            </ol>
+          </article>
+          <article class="panel">
+            <p class="kicker">Interpretation boundary</p>
+            <ul class="compact-list">
+              <li>Supported by the source: the review identifies a geometry-error reporting gap and organizes standard measurement methods in Table 3.</li>
+              <li>Proposed here: a staged local-first geometry QC workflow, data hierarchy, and Gate 0–7 decision structure.</li>
+              <li>Not yet supported: real-pilot geometry performance, numeric QC acceptance thresholds, biological function, optical performance, mechanical performance, permeability, or clinical suitability.</li>
+              <li><span class="synthetic-badge">Synthetic demo only</span> portfolio counts, QC labels, and any derived figure remain non-experimental and are never merged into real-pilot reporting.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><strong>Curved Corneal Construct Geometry QC Research Roadmap</strong><p>Built as a local-first research operating document. Literature fact, lab proposal, conceptual diagram, and synthetic demo are visibly separated. Updated 19 July 2026.</p></div>
+      <div class="footer-meta">BiG Lab working guide<br>Discussion draft · v1.0</div>
+    </div>
+  </footer>
+
+  <div class="sr-only" role="status" aria-live="polite" data-status></div>
+</body>
+</html>

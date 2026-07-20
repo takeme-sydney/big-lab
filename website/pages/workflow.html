@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Claude Scienceで研究問い、解析計画、Artifact、Provenance、Reviewer、再利用Skillを扱う実践ワークフローとプロンプト集。">
+  <meta name="theme-color" content="#f3f5f7">
+  <title>Claude Scienceで研究を進める — Claude Science Guide</title>
+  <link rel="stylesheet" href="../assets/claude-science-guide.css">
+  <link rel="stylesheet" href="../assets/bilingual.css">
+  <link rel="stylesheet" href="../assets/copy-tools.css">
+  <link rel="stylesheet" href="../assets/site-directory.css">
+  <link rel="stylesheet" href="../assets/google-docs-typography.css">
+  <link rel="stylesheet" href="../assets/monochrome-theme.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <header class="site-header">
+    <div class="header-main">
+      <a class="brand" href="claude-science-overview.html" aria-label="Claude Science Guide ホーム">
+        <span class="brand-mark" aria-hidden="true">CS</span>
+        <span class="brand-copy">Claude Science Guide<small>BIG LAB / JAPANESE FIELD MANUAL</small></span>
+      </a>
+      <span class="header-note">Unofficial · Verified 16 Jul 2026</span>
+    </div>
+    <nav class="site-nav" aria-label="ガイドのページ">
+      <div class="site-nav-inner">
+        <a href="index.html">統合ホーム</a>
+        <a href="claude-science-overview.html">概要</a>
+        <a href="getting-started.html">導入する</a>
+        <a href="workflow.html" aria-current="page">研究を進める</a>
+        <a href="claude-science-big-lab.html">BiG Labで使う</a>
+        <a href="safety.html">安全に使う</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-hero subpage-hero" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <div>
+          <p class="spec-label">Manual CS-03 / Research workflow</p>
+          <h1 id="hero-title">問い、計画、証拠をつなぐ。</h1>
+          <p class="hero-copy">Claudeを「答えを出す人」ではなく、<strong>計画と記録を残しながら実行する担当者</strong>として使います。研究者は問い、判断基準、検証に責任を持ちます。</p>
+          <div class="hero-meta"><span class="meta-chip primary">解析を始める人向け</span><span class="meta-chip">Prompt library付き</span></div>
+        </div>
+        <aside class="hero-side">
+          <div class="module-index">03</div>
+          <h2>このページで完了すること</h2>
+          <p>研究問いから再現可能な成果物まで、7段階の共通手順を作ります。</p>
+          <div class="hero-finish"><strong>完了条件：</strong> raw dataからfinal figureまで、別の人が追跡・再実行できる。</div>
+        </aside>
+      </div>
+    </section>
+
+    <div class="notice">
+      <strong>基本の依頼</strong>
+      <p>「結果を作って」ではなく、「この判断を再現可能にするため、実行前の計画、途中のQC、成果物、検証記録を残して」と伝えます。</p>
+    </div>
+
+    <div class="page-layout">
+      <nav class="toc" aria-label="このページの目次">
+        <p class="toc-title">On this page</p>
+        <a href="#principle">役割分担</a>
+        <a href="#seven-steps">7段階</a>
+        <a href="#prompts">プロンプト</a>
+        <a href="#artifacts">Artifact</a>
+        <a href="#reviewer">Reviewer</a>
+        <a href="#skill">Skill化</a>
+      </nav>
+
+      <article class="article">
+        <section class="article-section" id="principle" aria-labelledby="principle-title">
+          <p class="eyebrow">Operating model</p>
+          <h2 id="principle-title">AIは実行者。研究者は責任者。</h2>
+          <p class="article-intro">自由度を探索段階で広げ、結論段階で狭めます。研究者が決めるべき内容をClaudeへ委ねると、速くても説明できない解析になります。</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>研究者が決める</th><th>Claudeへ任せられる</th><th>一緒に確認する</th></tr></thead>
+              <tbody>
+                <tr><td>研究問いと意思決定</td><td>file構造の調査</td><td>experimental unit</td></tr>
+                <tr><td>primary outcome</td><td>loaderとQC code</td><td>欠損・除外・変換</td></tr>
+                <tr><td>倫理・データ利用範囲</td><td>反復処理と可視化</td><td>統計手法と仮定</td></tr>
+                <tr><td>結論と研究上の責任</td><td>ArtifactとREADMEの生成</td><td>結果、限界、言えないこと</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="principle">
+            <strong>experimental unitを最初に書く。</strong>
+            <p>sample、run、image、field、cellのどれが独立単位かを決めます。ここを曖昧にすると、Claudeが正しく計算しても擬似反復や過大なnが生まれます。</p>
+          </div>
+        </section>
+
+        <section class="article-section" id="seven-steps" aria-labelledby="steps-title">
+          <p class="eyebrow">Seven-stage workflow</p>
+          <h2 id="steps-title">再現性を作る7段階。</h2>
+          <div class="steps">
+            <article class="step"><h3>問いと意思決定を固定</h3><p>何を比較し、その結果で次に何を決めるかを書く。探索、確認、仮説検定を混ぜない。</p><div class="step-output">SAVE → research_question.md</div></article>
+            <article class="step"><h3>データ境界を定義</h3><p>experimental unit、sample ID、単位、calibration、欠損表現、利用可能範囲をdata dictionaryへ記録。</p><div class="step-output">SAVE → data_dictionary.csv</div></article>
+            <article class="step"><h3>実行せずPlanだけ作る</h3><p>手法、仮定、欠損処理、QC、統計、想定failure mode、必要権限を先に出させる。</p><div class="step-output">CHECK → no execution yet</div></article>
+            <article class="step"><h3>数sampleでdry run</h3><p>loader、単位、向き、calibration、label、plotを目視確認してから全件へ広げる。</p><div class="step-output">SAVE → qc_preview.html</div></article>
+            <article class="step"><h3>中間結果をArtifact化</h3><p>重要な表、図、処理済みdata、scriptを明示的に保存する。scratch fileのまま残さない。</p><div class="step-output">SAVE → versioned artifacts</div></article>
+            <article class="step"><h3>Reviewerと人間の検証を分ける</h3><p>Reviewerは記録との整合を確認。手法の妥当性、臨床的意味、再現実験は担当研究者が確認。</p><div class="step-output">VERIFY → record + domain review</div></article>
+            <article class="step"><h3>再実行packageとして渡す</h3><p>rawからfigureまでのscript、environment、README、除外一覧、known limitationsを揃える。</p><div class="step-output">DONE → reproducibility bundle</div></article>
+          </div>
+        </section>
+
+        <section class="article-section" id="prompts" aria-labelledby="prompts-title">
+          <p class="eyebrow">Copy and adapt</p>
+          <h2 id="prompts-title">目的別プロンプト。</h2>
+          <p class="article-intro">項目を開き、角括弧を置き換えて使います。重要な制約は会話だけでなくProject instructionsにも保存してください。</p>
+
+          <div class="prompt-list">
+            <div class="prompt-item" data-prompt>
+              <button class="prompt-summary" type="button" aria-expanded="false" aria-controls="prompt-project">
+                <span class="prompt-number">01</span><span><strong>Project共通ルール</strong><small>各Sessionで守る分析方針を固定</small></span><span class="prompt-toggle" aria-hidden="true">+</span>
+              </button>
+              <div class="prompt-body" id="prompt-project" hidden>
+                <div class="prompt-text" data-copy>あなたは研究解析の実行担当です。
+目的: [研究目的]
+experimental unit: [sample / run / subject]
+primary outcome: [指標・単位]
+
+必須:
+- raw dataを変更しない
+- 実行前にplanと仮定を提示する
+- 欠損・除外・変換を記録する
+- random seedとpackage versionを固定する
+- 中間QCと最終成果をartifactとして保存する
+- 結果・限界・言えないことを分ける
+- 不明点は推測せず質問する<button class="copy-button" type="button">COPY</button></div>
+              </div>
+            </div>
+
+            <div class="prompt-item" data-prompt>
+              <button class="prompt-summary" type="button" aria-expanded="false" aria-controls="prompt-first">
+                <span class="prompt-number">02</span><span><strong>初回解析のPlan</strong><small>コードを動かす前に構造とリスクを確認</small></span><span class="prompt-toggle" aria-hidden="true">+</span>
+              </button>
+              <div class="prompt-body" id="prompt-first" hidden>
+                <div class="prompt-text" data-copy>@[入力フォルダ]をread-onlyで確認してください。
+まずコードを実行せず、次を提示してください。
+
+1. ファイル構造と想定schema
+2. experimental unitの候補
+3. data quality checks
+4. 最小の解析計画
+5. 必要な権限とpackage
+6. 保存するartifact
+7. 主なfailure mode
+
+私が承認するまで解析は開始しないでください。<button class="copy-button" type="button">COPY</button></div>
+              </div>
+            </div>
+
+            <div class="prompt-item" data-prompt>
+              <button class="prompt-summary" type="button" aria-expanded="false" aria-controls="prompt-literature">
+                <span class="prompt-number">03</span><span><strong>文献Evidence map</strong><small>主張を一次情報へ戻せる形に整理</small></span><span class="prompt-toggle" aria-hidden="true">+</span>
+              </button>
+              <div class="prompt-body" id="prompt-literature" hidden>
+                <div class="prompt-text" data-copy>[研究問い]について、[期間]の一次研究を優先して調べてください。
+
+- inclusion / exclusion criteriaを先に提案
+- 各論文のDOIまたはPubMed IDを記録
+- claim、method、sample、effect、limitationを表にする
+- preprintとpeer-reviewedを区別
+- 引用が主張を直接支えるかReviewerで確認
+- 不確実・矛盾する証拠を別欄にする
+
+最終成果: evidence_matrix.csv と review_notes.md<button class="copy-button" type="button">COPY</button></div>
+              </div>
+            </div>
+
+            <div class="prompt-item" data-prompt>
+              <button class="prompt-summary" type="button" aria-expanded="false" aria-controls="prompt-figure">
+                <span class="prompt-number">04</span><span><strong>Figure監査</strong><small>見た目と科学的正確さを同時に確認</small></span><span class="prompt-toggle" aria-hidden="true">+</span>
+              </button>
+              <div class="prompt-body" id="prompt-figure" hidden>
+                <div class="prompt-text" data-copy>このfigureを次の観点で監査し、変更前に提案を出してください。
+
+- 軸、単位、n、error bar、統計注記
+- color-blind accessibility
+- raw pointsと集約値の関係
+- panel間のscale一貫性
+- captionだけで解釈できるか
+- 図から言えること / 言えないこと
+
+承認後、元コードを編集して新versionとして保存し、
+変更点とprovenanceを残してください。<button class="copy-button" type="button">COPY</button></div>
+              </div>
+            </div>
+
+            <div class="prompt-item" data-prompt>
+              <button class="prompt-summary" type="button" aria-expanded="false" aria-controls="prompt-repro">
+                <span class="prompt-number">05</span><span><strong>再現性監査</strong><small>別の端末・別の人が再実行できるか確認</small></span><span class="prompt-toggle" aria-hidden="true">+</span>
+              </button>
+              <div class="prompt-body" id="prompt-repro" hidden>
+                <div class="prompt-text" data-copy>このProjectの最終成果について再現性監査をしてください。
+
+- Execution LogとCodeの差
+- inputからoutputまでの追跡可能性
+- environmentとpackage version
+- seed、parameter、hard-coded path
+- manual stepと未保存scratch file
+- 除外sampleと理由
+- 別端末で再実行する手順
+
+問題をseverity順に示し、
+reproducibility_report.mdを保存してください。<button class="copy-button" type="button">COPY</button></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="article-section" id="artifacts" aria-labelledby="artifacts-title">
+          <p class="eyebrow">Artifact anatomy</p>
+          <h2 id="artifacts-title">成果物は、fileだけではない。</h2>
+          <p class="article-intro">Artifactはfigure、processed dataset、report、notebookなどの保存成果です。同じfile名を再保存するとversionが増え、作成過程へ戻れます。</p>
+          <div class="artifact-anatomy">
+            <div class="artifact-file"><strong>geometry_qc.png</strong><span>Version 03<br>Saved artifact<br>Local project storage</span></div>
+            <div class="artifact-tabs">
+              <div class="artifact-tab"><strong>MESSAGES</strong><span>保存前後の会話と判断</span></div>
+              <div class="artifact-tab"><strong>CODE</strong><span>再現用scriptまたはnotebook</span></div>
+              <div class="artifact-tab"><strong>EXECUTION LOG</strong><span>実際に走ったcommandの正式記録</span></div>
+              <div class="artifact-tab"><strong>ENVIRONMENT</strong><span>languageとpackage version</span></div>
+              <div class="artifact-tab"><strong>REVIEW</strong><span>Reviewerの指摘と対応</span></div>
+            </div>
+          </div>
+          <div class="notice warning" style="margin-top:22px">
+            <strong>CodeとLogが違う場合</strong>
+            <p>Execution Logが実際に走った内容のauthoritative recordです。再現用Codeを修正し、新versionとして保存します。</p>
+          </div>
+        </section>
+
+        <section class="article-section" id="reviewer" aria-labelledby="reviewer-title">
+          <p class="eyebrow">Verification boundary</p>
+          <h2 id="reviewer-title">Reviewerが確認すること、しないこと。</h2>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>確認する</th><th>保証しない</th></tr></thead>
+              <tbody>
+                <tr><td>計算していない値を計算済みと報告していないか</td><td>選んだ解析手法が研究問いに最適か</td></tr>
+                <tr><td>回答の数値とfileが一致するか</td><td>data collectionや実験設計が妥当か</td></tr>
+                <tr><td>引用が主張を支えるか、DOIが正しいか</td><td>研究結果が真実か、再現実験で成立するか</td></tr>
+                <tr><td>承認Planのstepを完了したか</td><td>臨床判断、診断、患者への適用</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="article-section" id="skill" aria-labelledby="skill-title">
+          <p class="eyebrow">Reuse validated work</p>
+          <h2 id="skill-title">検証済み手順をSkillにする。</h2>
+          <p class="article-intro">毎回同じ説明を貼るのではなく、承認済みworkflowを手順、tool、QC、停止条件、成果物を含むSkillとして保存できます。</p>
+          <div class="prompt-text" data-copy>このSessionで承認・検証したworkflowを再利用可能なSkillにしてください。
+
+含める:
+- triggerとなる課題
+- 必要inputとschema
+- step-by-step procedure
+- 使用tool / package
+- QC checksと停止条件
+- expected artifacts
+- failure mode
+- human review checkpoints
+
+研究室固有のpathや機密情報は含めないでください。<button class="copy-button" type="button">COPY</button></div>
+          <a class="next-page" href="claude-science-big-lab.html"><span>NEXT / CS-04</span><strong>BiG Labの小さなQCで試す</strong><b aria-hidden="true">→</b></a>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <footer class="page-footer">
+    <div class="footer-inner">
+      <div><div class="footer-title">Claude Science Guide</div><p class="footer-copy">研究の速さではなく、問いから成果物まで追跡できることを優先した運用ガイド。</p></div>
+      <div class="footer-meta">CS-03 / WORKFLOW<br>Independent guide · Australia/Sydney</div>
+    </div>
+  </footer>
+  <div class="sr-only" id="copy-status" role="status" aria-live="polite"></div>
+  <script src="../assets/claude-science-guide.js"></script>
+  <script src="../assets/bilingual-data.js"></script>
+  <script src="../assets/bilingual.js"></script>
+  <script src="../assets/copy-tools.js"></script>
+  <script src="../assets/site-directory.js"></script>
+</body>
+</html>

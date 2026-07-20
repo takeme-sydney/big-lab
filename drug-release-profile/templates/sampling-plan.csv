@@ -1,0 +1,9 @@
+cell_id,timepoint_id,planned_elapsed_h,actual_elapsed_h,receptor_volume_ml,sample_volume_ml,replacement_volume_ml,target_temperature_c,actual_temperature_c,analyte_concentration_ug_ml,quantification_flag,cumulative_amount_ug,qc_status,notes
+CELL-001,T00,0,,,,,,,,,,,
+CELL-001,T01,,,,,,,,,,,,
+CELL-001,T02,,,,,,,,,,,,
+CELL-001,T03,,,,,,,,,,,,
+CELL-001,T04,,,,,,,,,,,,
+CELL-001,T05,,,,,,,,,,,,
+CELL-001,END,,,,,,,,,,,,
+

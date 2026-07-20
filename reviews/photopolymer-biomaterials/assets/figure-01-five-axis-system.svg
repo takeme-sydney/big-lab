@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">光重合性バイオマテリアルを評価する5つの連結軸</title>
+  <desc id="desc">材料化学、光と開始剤、造形、力学と輸送、細胞と安全性が中央の用途適合性につながることを示す図。</desc>
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#173b35" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L10,5 L0,10 z" fill="#7b8d88"/>
+    </marker>
+    <style>
+      .jp{font-family:"BIZ UDPGothic","Noto Sans JP","Hiragino Sans","Yu Gothic",sans-serif}
+      .mono{font-family:"SFMono-Regular",Consolas,monospace;letter-spacing:.08em}
+      .head{font-size:30px;font-weight:750;fill:#173b35}
+      .label{font-size:14px;font-weight:800;fill:#546b66}
+      .node-title{font-size:23px;font-weight:750;fill:#173b35}
+      .node-copy{font-size:16px;font-weight:520;fill:#4d625d}
+      .center-title{font-size:31px;font-weight:800;fill:#fff}
+      .center-copy{font-size:16px;font-weight:600;fill:#dcece8}
+      .foot{font-size:17px;font-weight:650;fill:#334a45}
+    </style>
+  </defs>
+  <rect width="1200" height="720" rx="34" fill="#f4f7f3"/>
+  <text x="70" y="70" class="jp head">光造形の成否は、5軸の同時設計で決まる</text>
+  <text x="70" y="101" class="mono label">CONNECTED DESIGN SPACE / ORIGINAL SYNTHESIS</text>
+
+  <path d="M340 211 C450 215 464 269 503 307" fill="none" stroke="#91a39e" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M860 211 C752 214 735 267 696 306" fill="none" stroke="#91a39e" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M300 472 C425 468 455 427 503 398" fill="none" stroke="#91a39e" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M900 472 C772 468 744 427 696 398" fill="none" stroke="#91a39e" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M600 573 L600 458" fill="none" stroke="#91a39e" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="70" y="145" width="300" height="136" rx="20" fill="#e6f2ef" stroke="#89bdb4"/>
+    <circle cx="109" cy="186" r="18" fill="#0e6b63"/>
+    <text x="109" y="192" text-anchor="middle" class="mono" font-size="15" font-weight="800" fill="#fff">01</text>
+    <text x="140" y="193" class="jp node-title">材料化学</text>
+    <text x="103" y="229" class="jp node-copy">polymer・濃度・官能化・添加物</text>
+    <text x="103" y="254" class="jp node-copy">batch・分解・bioactivity</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="830" y="145" width="300" height="136" rx="20" fill="#fff0e9" stroke="#dfa084"/>
+    <circle cx="869" cy="186" r="18" fill="#c86343"/>
+    <text x="869" y="192" text-anchor="middle" class="mono" font-size="15" font-weight="800" fill="#fff">02</text>
+    <text x="900" y="193" class="jp node-title">光・開始剤</text>
+    <text x="863" y="229" class="jp node-copy">PI全成分・波長・照度・時間</text>
+    <text x="863" y="254" class="jp node-copy">dose・conversion・radical</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="55" y="408" width="300" height="136" rx="20" fill="#eef2fb" stroke="#9cb4db"/>
+    <circle cx="94" cy="449" r="18" fill="#557fbd"/>
+    <text x="94" y="455" text-anchor="middle" class="mono" font-size="15" font-weight="800" fill="#fff">03</text>
+    <text x="125" y="456" class="jp node-title">造形</text>
+    <text x="88" y="492" class="jp node-copy">printer・layer/voxel・mask</text>
+    <text x="88" y="517" class="jp node-copy">曲率・厚さ・層・形状誤差</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="845" y="408" width="300" height="136" rx="20" fill="#fff7df" stroke="#dfbd5f"/>
+    <circle cx="884" cy="449" r="18" fill="#b58516"/>
+    <text x="884" y="455" text-anchor="middle" class="mono" font-size="15" font-weight="800" fill="#fff">04</text>
+    <text x="915" y="456" class="jp node-title">力学・輸送</text>
+    <text x="878" y="492" class="jp node-copy">mode・rate・hydration・分解</text>
+    <text x="878" y="517" class="jp node-copy">透明性・拡散・GF release</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="450" y="535" width="300" height="118" rx="20" fill="#eef5dd" stroke="#abc668"/>
+    <circle cx="489" cy="576" r="18" fill="#708f24"/>
+    <text x="489" y="582" text-anchor="middle" class="mono" font-size="15" font-weight="800" fill="#fff">05</text>
+    <text x="520" y="583" class="jp node-title">細胞・安全性</text>
+    <text x="483" y="619" class="jp node-copy">viability・代謝・phenotype・DNA</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <circle cx="600" cy="359" r="112" fill="#173b35"/>
+    <circle cx="600" cy="359" r="96" fill="none" stroke="#5fa59a" stroke-width="2" stroke-dasharray="5 7"/>
+    <text x="600" y="344" text-anchor="middle" class="jp center-title">用途適合性</text>
+    <text x="600" y="375" text-anchor="middle" class="mono center-copy">FIT FOR PURPOSE</text>
+    <text x="600" y="405" text-anchor="middle" class="jp center-copy">再現可能・検証可能</text>
+  </g>
+
+  <rect x="70" y="671" width="1060" height="1" fill="#cbd7d2"/>
+  <text x="600" y="703" text-anchor="middle" class="jp foot">一つの軸を改善すると、別の軸に新しい負荷が生じる。最適化より先に、同じrunへ結び付けて測る。</text>
+</svg>

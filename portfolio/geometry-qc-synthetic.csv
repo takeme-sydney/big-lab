@@ -1,0 +1,14 @@
+sample_id,batch_id,target_radius_mm,best_fit_radius_mm,radius_deviation_mm,target_thickness_mm,median_thickness_mm,surface_rmse_mm,registration_rmse_mm,qc_state,synthetic_data_notice
+C01,B01,7.80,7.82,0.02,0.55,0.56,0.08,0.04,PASS,portfolio_demo_not_experimental_data
+C02,B01,7.80,7.91,0.11,0.55,0.54,0.11,0.05,PASS,portfolio_demo_not_experimental_data
+C03,B01,7.80,8.06,0.26,0.55,0.57,0.18,0.08,REVIEW,portfolio_demo_not_experimental_data
+C04,B01,7.80,7.76,-0.04,0.55,0.53,0.09,0.04,PASS,portfolio_demo_not_experimental_data
+C05,B02,7.80,7.68,-0.12,0.55,0.58,0.12,0.06,PASS,portfolio_demo_not_experimental_data
+C06,B02,7.80,7.55,-0.25,0.55,0.61,0.21,0.09,REVIEW,portfolio_demo_not_experimental_data
+C07,B02,7.80,7.84,0.04,0.55,0.55,0.07,0.04,PASS,portfolio_demo_not_experimental_data
+C08,B02,7.80,8.18,0.38,0.55,0.59,0.27,0.13,FAIL,portfolio_demo_not_experimental_data
+C09,B03,7.80,7.72,-0.08,0.55,0.54,0.10,0.05,PASS,portfolio_demo_not_experimental_data
+C10,B03,7.80,7.88,0.08,0.55,0.56,0.09,0.05,PASS,portfolio_demo_not_experimental_data
+C11,B03,7.80,7.61,-0.19,0.55,0.52,0.16,0.08,REVIEW,portfolio_demo_not_experimental_data
+C12,B03,7.80,7.80,0.00,0.55,0.55,0.06,0.03,PASS,portfolio_demo_not_experimental_data
+

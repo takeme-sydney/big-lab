@@ -1,0 +1,59 @@
+{
+  "artifact_id": "A-02",
+  "run_id": "QC-PILOT-001",
+  "status": "human_review_required",
+  "timestamp": "2026-07-17T14:32:22+10:00",
+  "notice": "Synthetic portfolio demonstration. Not an experimental or clinical record.",
+  "inputs": {
+    "pilot_charter": "pilot-charter.md@0.3",
+    "dataset": "geometry-qc-synthetic.csv",
+    "dataset_sha256_demo": "not-calculated-demo-placeholder",
+    "target_radius_mm": 7.8,
+    "target_thickness_mm": 0.55
+  },
+  "agents": [
+    {
+      "id": "evidence",
+      "role": "Evidence Registry",
+      "output": "claim-to-source registry",
+      "stop_rule": "Do not fill an unverified source or claim by inference."
+    },
+    {
+      "id": "schema",
+      "role": "Data and Schema Auditor",
+      "output": "validated sample manifest and issue list",
+      "stop_rule": "Stop when identity, hierarchy, unit, calibration or permission is unresolved."
+    },
+    {
+      "id": "geometry",
+      "role": "Geometry Analyst",
+      "output": "metric table, overlay, deviation mesh and tests",
+      "stop_rule": "Do not tune parameters per sample or auto-exclude a failed fit."
+    },
+    {
+      "id": "visual",
+      "role": "Visual Evidence Designer",
+      "output": "all-sample figure, QC dashboard and poster composition",
+      "stop_rule": "Do not omit denominators, missingness, exclusions or inconvenient results."
+    },
+    {
+      "id": "reviewer",
+      "role": "Claim and Provenance Reviewer",
+      "output": "claim matrix, contradiction list and human review queue",
+      "stop_rule": "Do not claim methodological, biological, clinical or authorship authority."
+    }
+  ],
+  "events": [
+    { "time": "14:32:04", "agent": "orchestrator", "state": "ready", "message": "Loaded charter v0.3, dataset manifest and stop rules." },
+    { "time": "14:32:09", "agent": "schema", "state": "pass", "message": "Validated 12 samples, 3 batches, required units and fields." },
+    { "time": "14:32:13", "agent": "geometry", "state": "flag", "sample_id": "C08", "message": "Registration RMSE 0.13 mm; returned for human review without exclusion." },
+    { "time": "14:32:18", "agent": "visual", "state": "pass", "message": "Generated all-sample radius plot and per-sample 3D overlays." },
+    { "time": "14:32:22", "agent": "reviewer", "state": "human", "message": "Rejected the phrase 'highly reproducible' as unsupported by this synthetic pilot scope." }
+  ],
+  "human_decisions_required": [
+    "Approve or revise the scientific metric and tolerance.",
+    "Inspect source mesh and overlay for all flagged constructs.",
+    "Decide remeasurement, exclusion and final QC state.",
+    "Approve statistics, interpretation, authorship and sharing scope."
+  ]
+}

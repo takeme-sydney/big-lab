@@ -1,0 +1,1472 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#0b2c3a">
+  <meta name="description" content="Microneedle drug release profile研究を、release・skin permeation・retentionに分けて進める12週間の研究ロードマップ。">
+  <title>Microneedle Drug Release Profile — Research Roadmap</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/roadmap.css">
+  <script src="assets/roadmap.js" defer></script>
+  <style>
+    .all-roadmaps-link {
+      display: block;
+      padding: 10px 24px;
+      background: #082733;
+      color: #dff4f1;
+      font: 600 13.5px/1.4 Inter, "Noto Sans JP", sans-serif;
+      text-decoration: none;
+      letter-spacing: 0.01em;
+    }
+    .all-roadmaps-link:hover {
+      background: #0c3849;
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <a class="all-roadmaps-link" href="../../html/index.html">← 研究ロードマップ一覧 <span aria-hidden="true">All research roadmaps</span></a>
+  <div class="reading-progress" aria-hidden="true">
+    <span data-reading-progress></span>
+  </div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#top" aria-label="Microneedle research roadmapの先頭へ">
+        <span class="brand-mark">BiG</span>
+        <span class="brand-copy">
+          <strong>Drug Release Profile</strong>
+          <small>Research operating system</small>
+        </span>
+      </a>
+
+      <nav class="primary-nav" aria-label="ページ内ナビゲーション" data-primary-nav>
+        <a href="#definition" data-nav-link>定義</a>
+        <a href="#evidence" data-nav-link>資料監査</a>
+        <a href="#roadmap" data-nav-link>12週計画</a>
+        <a href="#experiment" data-nav-link>実験設計</a>
+        <a href="#analysis" data-nav-link>解析</a>
+        <a href="#files" data-nav-link>ファイル</a>
+        <a href="#next" data-nav-link>次の一手</a>
+      </nav>
+
+      <div class="header-progress">
+        <div class="header-progress-row">
+          <span>Progress</span>
+          <strong data-progress-label>0/13 · 0%</strong>
+        </div>
+        <progress class="progress-track" max="13" value="0" aria-label="研究ロードマップの進捗" data-progress-widget>0/13</progress>
+      </div>
+
+      <button class="nav-toggle" type="button" aria-label="ナビゲーションを開く" aria-expanded="false" data-nav-toggle>
+        <span aria-hidden="true">☰</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="page" id="main">
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">BiG Lab · Research Roadmap · 17 July 2026</p>
+          <h1>
+            マイクロニードルの<br>薬物放出を、測れる<br>問いへ。
+            <span>Microneedle drug release profile</span>
+          </h1>
+          <p class="hero-lede">
+            最初に固定するのはmodelではなく、<strong>どこから、どこまでを測るか</strong>です。
+            release、skin permeation、retention / recoveryを分け、分析法から前向き検証までを8つのGateで進めます。
+          </p>
+
+          <div class="hero-actions">
+            <a class="button" href="#roadmap">12週間のRoadmapを見る <span aria-hidden="true">↓</span></a>
+            <a class="button secondary" href="../README.md">研究フォルダを開く</a>
+            <button class="button secondary" type="button" data-print-page>印刷 / PDF</button>
+          </div>
+
+          <ul class="hero-chips" aria-label="研究原則">
+            <li>Release ≠ Permeation</li>
+            <li>Curve = experimental unit</li>
+            <li>Mass balance</li>
+            <li>Grouped validation</li>
+            <li>PI review pending</li>
+          </ul>
+        </div>
+
+        <figure class="hero-figure">
+          <div class="hero-image-frame">
+            <img src="assets/drug-release-hero.png" width="1672" height="941" alt="溶解性マイクロニードルが皮膚へ挿入され、薬物粒子が皮膚層を通過してFranz diffusion cellの受容液へ移動する概念イラスト">
+          </div>
+          <span class="figure-badge">Conceptual illustration</span>
+          <aside class="hero-decision-card" aria-label="開始前に確認する3項目">
+            <p>Start with 3 decisions</p>
+            <ol>
+              <li>Primary targetはreleaseかpermeationか</li>
+              <li>独立なexperimental unitは何か</li>
+              <li>何をもってGoとするか</li>
+            </ol>
+          </aside>
+          <figcaption>
+            Figure 1. 研究経路を説明するオリジナル概念図。実験装置の寸法、実測結果、臨床効果を示すものではない。
+            <a href="assets/drug-release-hero.prompt.md">生成記録</a>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="status-strip" aria-label="プロジェクト概要">
+      <div class="container status-grid">
+        <div class="status-item">
+          <span>Core paper</span>
+          <strong>Yuan et al. 2023</strong>
+        </div>
+        <div class="status-item">
+          <span>Public source data</span>
+          <strong>191 time points</strong>
+        </div>
+        <div class="status-item">
+          <span>Pilot horizon</span>
+          <strong>12 weeks</strong>
+        </div>
+        <div class="status-item">
+          <span>Current status</span>
+          <strong>PI review pending</strong>
+        </div>
+      </div>
+    </section>
+
+    <nav class="reading-map" aria-label="このページの読み方">
+      <div class="container">
+        <div class="reading-map-heading">
+          <span>Reading map</span>
+          <p>目的に合わせて、必要な場所から読めます。</p>
+        </div>
+        <div class="reading-map-grid">
+          <a href="#definition">
+            <span class="reading-map-number">01</span>
+            <span>
+              <strong>前提をそろえる</strong>
+              <small>Releaseとpermeationの違い</small>
+            </span>
+            <span class="reading-map-arrow" aria-hidden="true">→</span>
+          </a>
+          <a href="#roadmap">
+            <span class="reading-map-number">02</span>
+            <span>
+              <strong>12週間を俯瞰する</strong>
+              <small>8つのGateと完了条件</small>
+            </span>
+            <span class="reading-map-arrow" aria-hidden="true">→</span>
+          </a>
+          <a href="#experiment">
+            <span class="reading-map-number">03</span>
+            <span>
+              <strong>実験と解析を設計する</strong>
+              <small>測定系、補正、validation</small>
+            </span>
+            <span class="reading-map-arrow" aria-hidden="true">→</span>
+          </a>
+          <a href="#next">
+            <span class="reading-map-number">04</span>
+            <span>
+              <strong>次の行動を決める</strong>
+              <small>45分で確認する5項目</small>
+            </span>
+            <span class="reading-map-arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <section class="section" id="definition">
+      <div class="container">
+        <header class="section-heading">
+          <span class="section-number">01 · Define the system</span>
+          <div class="section-heading-copy">
+            <h2>同じcurveに見えても、答えている問いは違う。</h2>
+            <p>
+              Yuan et al.の原著は、主にmicroneedle処理皮膚を通過してreceptorへ到達した累積量を予測しています。
+              次の研究では、matrixからの放出とskin transportを別の測定段階として設計します。
+            </p>
+          </div>
+        </header>
+
+        <div class="definition-grid">
+          <article class="definition-card">
+            <span class="definition-index">01</span>
+            <h3>Release <small>Device → medium</small></h3>
+            <p>
+              matrixのhydration、dissolution、swelling、erosion、coating detachmentを含む、deviceから媒体へのpayload放出。
+              皮膚barrierを入れない系で切り分ける。
+            </p>
+            <span class="output">Primary output: Q<sub>release</sub>(t), % of confirmed load</span>
+          </article>
+
+          <article class="definition-card">
+            <span class="definition-index">02</span>
+            <h3>Permeation <small>Across skin → receptor</small></h3>
+            <p>
+              insertion、skin partition、tissue diffusion、receptor collectionが重なった結果。
+              releaseだけでなく、donor、barrier、mixing、samplingの影響を受ける。
+            </p>
+            <span class="output">Primary output: Q<sub>receptor</sub>(t) / area, flux, lag</span>
+          </article>
+
+          <article class="definition-card">
+            <span class="definition-index">03</span>
+            <h3>Retention &amp; Recovery <small>Where did the dose go?</small></h3>
+            <p>
+              skin内保持、patch残存、donor / wash、receptorをendpointで回収し、見えないlossやapparent low releaseを検証する。
+            </p>
+            <span class="output">Primary output: tissue amount + total mass balance</span>
+          </article>
+        </div>
+
+        <div class="callout">
+          <span class="callout-mark" aria-hidden="true">Q</span>
+          <div>
+            <h3>推奨するprimary research question</h3>
+            <p>
+              「定義したmicroneedle platformとpayloadにおいて、formulation / geometry変数は、
+              release-only profileとskin permeation profileのどの段階を変化させるか？」
+              最初のpilotでは一つのpayload、一つのplatform、少数の事前定義factorに絞る。
+            </p>
+          </div>
+        </div>
+
+        <figure class="process-figure">
+          <svg viewBox="0 0 1120 295" role="img" aria-labelledby="chain-title chain-desc">
+            <title id="chain-title">Microneedle drug deliveryの測定chain</title>
+            <desc id="chain-desc">Microneedle hydrationからrelease、skin partition、tissue diffusion、receptor sampling、endpoint recoveryまでの流れ。</desc>
+            <defs>
+              <linearGradient id="chain-bg" x1="0" x2="1">
+                <stop offset="0" stop-color="#eff8f6"/>
+                <stop offset="1" stop-color="#fff5f1"/>
+              </linearGradient>
+              <marker id="arrow-head" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="#78908f"/>
+              </marker>
+            </defs>
+            <rect x="1" y="1" width="1118" height="293" rx="20" fill="url(#chain-bg)" stroke="#d8e0df"/>
+            <path d="M 205 115 H 270 M 420 115 H 485 M 635 115 H 700 M 850 115 H 915" fill="none" stroke="#78908f" stroke-width="3" marker-end="url(#arrow-head)"/>
+            <g>
+              <rect x="40" y="60" width="165" height="110" rx="14" fill="#ffffff" stroke="#85c9c5"/>
+              <circle cx="68" cy="88" r="13" fill="#0b8586"/>
+              <text x="68" y="92" fill="#ffffff" font-size="11" font-weight="800" text-anchor="middle">1</text>
+              <text x="63" y="123" fill="#102a35" font-size="15" font-weight="800">Hydration /</text>
+              <text x="63" y="143" fill="#102a35" font-size="15" font-weight="800">dissolution</text>
+            </g>
+            <g>
+              <rect x="255" y="60" width="165" height="110" rx="14" fill="#ffffff" stroke="#85c9c5"/>
+              <circle cx="283" cy="88" r="13" fill="#0b8586"/>
+              <text x="283" y="92" fill="#ffffff" font-size="11" font-weight="800" text-anchor="middle">2</text>
+              <text x="278" y="123" fill="#102a35" font-size="15" font-weight="800">Payload</text>
+              <text x="278" y="143" fill="#102a35" font-size="15" font-weight="800">release</text>
+            </g>
+            <g>
+              <rect x="470" y="60" width="165" height="110" rx="14" fill="#ffffff" stroke="#e8a399"/>
+              <circle cx="498" cy="88" r="13" fill="#e86d5e"/>
+              <text x="498" y="92" fill="#ffffff" font-size="11" font-weight="800" text-anchor="middle">3</text>
+              <text x="493" y="123" fill="#102a35" font-size="15" font-weight="800">Skin partition</text>
+              <text x="493" y="143" fill="#102a35" font-size="15" font-weight="800">&amp; diffusion</text>
+            </g>
+            <g>
+              <rect x="685" y="60" width="165" height="110" rx="14" fill="#ffffff" stroke="#e8a399"/>
+              <circle cx="713" cy="88" r="13" fill="#e86d5e"/>
+              <text x="713" y="92" fill="#ffffff" font-size="11" font-weight="800" text-anchor="middle">4</text>
+              <text x="708" y="123" fill="#102a35" font-size="15" font-weight="800">Receptor</text>
+              <text x="708" y="143" fill="#102a35" font-size="15" font-weight="800">sampling</text>
+            </g>
+            <g>
+              <rect x="900" y="60" width="180" height="110" rx="14" fill="#ffffff" stroke="#ddbd74"/>
+              <circle cx="928" cy="88" r="13" fill="#d7982d"/>
+              <text x="928" y="92" fill="#ffffff" font-size="11" font-weight="800" text-anchor="middle">5</text>
+              <text x="923" y="123" fill="#102a35" font-size="15" font-weight="800">Endpoint</text>
+              <text x="923" y="143" fill="#102a35" font-size="15" font-weight="800">mass balance</text>
+            </g>
+            <rect x="42" y="207" width="376" height="46" rx="23" fill="#dff4f1"/>
+            <text x="230" y="236" fill="#076667" font-size="13" font-weight="800" text-anchor="middle">RELEASE-ONLY TEST CAN ISOLATE THIS STAGE</text>
+            <rect x="472" y="207" width="376" height="46" rx="23" fill="#fff0ec"/>
+            <text x="660" y="236" fill="#a3463a" font-size="13" font-weight="800" text-anchor="middle">BARRIER + COLLECTION ADD THESE STAGES</text>
+            <rect x="900" y="207" width="180" height="46" rx="23" fill="#fff6de"/>
+            <text x="990" y="236" fill="#8e641d" font-size="13" font-weight="800" text-anchor="middle">RECOVERY CHECK</text>
+          </svg>
+          <figcaption>
+            Figure 2. 測定chainの概念図。release-only test、skin permeation test、endpoint recoveryを分けることで、profile変化の位置を特定しやすくする。
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt" id="evidence">
+      <div class="container">
+        <header class="section-heading">
+          <span class="section-number">02 · Source &amp; data audit</span>
+          <div class="section-heading-copy">
+            <h2>依頼、論文、元データを一つのprovenanceへ。</h2>
+            <p>
+              共有メール、4本の全文、1本のmetadata、Yuan et al.のData S1 / SI 2 / SI 3を研究フォルダへ集約しました。
+              元の場所は保持し、既存サイトのlinkを壊していません。
+            </p>
+          </div>
+        </header>
+
+        <div class="split-grid">
+          <article class="panel">
+            <p class="kicker">Source request</p>
+            <h3>Yunong Yuan氏からのreference共有</h3>
+            <p>
+              2026-07-17のメールは、microneedle release / permeation予測とsmall-data MLを研究開始点として示しています。
+            </p>
+            <figure class="email-figure">
+              <div class="email-frame">
+                <img src="../references/correspondence/2026-07-17-yunong-yuan-microneedle-references-email.png" width="1940" height="504" loading="lazy" alt="Yunong Yuan氏からTakumi宛てに、microneedle drug releasing profile論文とsmall-data machine learning文献を共有したメール">
+              </div>
+              <figcaption>
+                Private correspondence · local use only. 画像は研究依頼の来歴確認用であり、外部公開を前提としない。
+              </figcaption>
+            </figure>
+          </article>
+
+          <article class="panel">
+            <p class="kicker">Data S1 · read-only audit</p>
+            <h3>191行は191独立実験ではない</h3>
+            <p>
+              公開XLSXは6 payload、191 time-point rowsを含みますが、curve / run / batch / donor IDを持ちません。
+              同じ説明変数とtimeを共有する別観測が多く、原著者確認なしにgroup構造を断定できません。
+            </p>
+
+            <div class="metric-grid" role="group" aria-label="Data S1の監査指標">
+              <div class="metric">
+                <strong>191</strong>
+                <span>time-point rows</span>
+              </div>
+              <div class="metric">
+                <strong>6</strong>
+                <span>payloads</span>
+              </div>
+              <div class="metric">
+                <strong>18</strong>
+                <span>unique non-time feature signatures</span>
+              </div>
+              <div class="metric">
+                <strong>140</strong>
+                <span>rows sharing feature + time signature</span>
+              </div>
+            </div>
+
+            <div class="bar-chart" role="img" aria-label="payload別のData S1行数">
+              <div class="bar-row"><span>Lidocaine</span><div class="bar-track"><i class="bar-100"></i></div><b>73</b></div>
+              <div class="bar-row"><span>BSA</span><div class="bar-track"><i class="bar-45-2"></i></div><b>33</b></div>
+              <div class="bar-row"><span>GHK peptide</span><div class="bar-track"><i class="bar-32-9"></i></div><b>24</b></div>
+              <div class="bar-row"><span>Copper ions</span><div class="bar-track"><i class="bar-32-9"></i></div><b>24</b></div>
+              <div class="bar-row"><span>Rhodamine B</span><div class="bar-track"><i class="bar-26"></i></div><b>19</b></div>
+              <div class="bar-row"><span>Caffeine</span><div class="bar-track"><i class="bar-24-7"></i></div><b>18</b></div>
+            </div>
+          </article>
+        </div>
+
+        <div class="callout danger">
+          <span class="callout-mark" aria-hidden="true">!</span>
+          <div>
+            <h3>解析開始前の停止条件</h3>
+            <p>
+              既存datasetでは、少なくともcurve対応、replicateの意味、source study、skin donor / batchを確認する。
+              復元できない場合はrandom point splitの再現をbenchmarkに限定し、未知drug一般化の証拠として使わない。
+            </p>
+          </div>
+        </div>
+
+        <div class="table-wrap spaced-24">
+          <table>
+            <caption>資料監査 — 何が利用でき、何がまだ不足しているか</caption>
+            <thead>
+              <tr>
+                <th>Asset</th>
+                <th>利用可能</th>
+                <th>研究上の役割</th>
+                <th>未解決 / restriction</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Yuan et al. 2023 PDF</td>
+                <td><span class="label">Full text</span></td>
+                <td>Permeation予測、4-model比較、既存限界</td>
+                <td>release-only dataではない</td>
+              </tr>
+              <tr>
+                <td>Data S1</td>
+                <td><span class="label">191 rows</span></td>
+                <td>原著Table / modelの再現</td>
+                <td>group ID不足</td>
+              </tr>
+              <tr>
+                <td>SI 2 code</td>
+                <td><span class="label">R + C</span></td>
+                <td>MLR / RF / XGBoost / Fickの再現起点</td>
+                <td>package version、split file、実行環境不足</td>
+              </tr>
+              <tr>
+                <td>SI 3</td>
+                <td><span class="label">Figures</span></td>
+                <td>leave-one-drug-out failureの確認</td>
+                <td>数値predictionsのmachine-readable fileなし</td>
+              </tr>
+              <tr>
+                <td>Wet-lab protocol</td>
+                <td><span class="label limit">Not provided</span></td>
+                <td>新規pilotの再現性</td>
+                <td>ラボSOP、機器、payload、materialをPIと確認</td>
+              </tr>
+              <tr>
+                <td>Ethics / data-use</td>
+                <td><span class="label limit">Not confirmed</span></td>
+                <td>tissue / private dataの利用境界</td>
+                <td>承認番号・access権限が明確になるまで開始しない</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="roadmap">
+      <div class="container">
+        <header class="section-heading">
+          <span class="section-number">03 · 12-week roadmap</span>
+          <div class="section-heading-copy">
+            <h2>8つのGateで、測定可能性を先に作る。</h2>
+            <p>
+              期間は初期planning estimateです。各Gateの成果物とGo / Hold基準を満たしてから次へ進みます。
+              checklistはこのブラウザのlocalStorageに保存されます。
+            </p>
+          </div>
+        </header>
+
+        <div class="roadmap-toolbar">
+          <div class="filter-group" role="group" aria-label="Roadmapのphase絞り込み">
+            <button class="filter-button" type="button" aria-pressed="true" data-phase-filter="all">All</button>
+            <button class="filter-button" type="button" aria-pressed="false" data-phase-filter="foundation">Foundation</button>
+            <button class="filter-button" type="button" aria-pressed="false" data-phase-filter="wet">Wet lab</button>
+            <button class="filter-button" type="button" aria-pressed="false" data-phase-filter="analysis">Analysis</button>
+            <button class="filter-button" type="button" aria-pressed="false" data-phase-filter="validation">Validation</button>
+          </div>
+          <div class="roadmap-summary">
+            <span>Saved progress: <strong data-progress-label>0/13 · 0%</strong></span>
+            <button class="button light small" type="button" data-reset-progress>Reset</button>
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <table class="roadmap-table">
+            <caption>Phase plan — Gateを通過しないまま次のanalysisへ進まない</caption>
+            <thead>
+              <tr>
+                <th aria-label="完了"></th>
+                <th>Gate / timing</th>
+                <th>Decision question</th>
+                <th>Core work</th>
+                <th>Deliverable</th>
+                <th>Go / Hold criterion</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr data-phase="foundation">
+                <td>
+                  <input class="task-check" id="gate-0" type="checkbox" aria-label="Gate 0を完了にする" data-roadmap-check data-label="Gate 0">
+                </td>
+                <td class="gate-cell"><span class="gate"><span class="gate-number">0</span> Week 0–1</span></td>
+                <td><strong>研究権限とprimary targetは明確か？</strong></td>
+                <td>PI面談、SOP / safety / ethics / data-use、payload・MN platform、out-of-scopeを確認</td>
+                <td>Approved study charter v1</td>
+                <td>Primary endpoint、owner、permission、停止条件が署名または記録される</td>
+              </tr>
+              <tr data-phase="foundation">
+                <td>
+                  <input class="task-check" id="gate-1" type="checkbox" aria-label="Gate 1を完了にする" data-roadmap-check data-label="Gate 1">
+                </td>
+                <td class="gate-cell"><span class="gate"><span class="gate-number">1</span> Week 1–2</span></td>
+                <td><strong>既存結果を説明・再現できるか？</strong></td>
+                <td>Data S1 schema、split、Table 4、SI 2を再現。group IDを原著者へ照会</td>
+                <td>Reproduction report + environment lock</td>
+                <td>published metricとの差が説明され、data limitationがdocument化される</td>
+              </tr>
+              <tr data-phase="wet">
+                <td>
+                  <input class="task-check" id="gate-2" type="checkbox" aria-label="Gate 2を完了にする" data-roadmap-check data-label="Gate 2">
+                </td>
+                <td class="gate-cell"><span class="gate"><span class="gate-number">2</span> Week 2–4</span></td>
+                <td><strong>濃度を信頼して測れるか？</strong></td>
+                <td>selectivity、range、precision、stability、recovery、receptor solubility、membrane binding、sampling accuracy</td>
+                <td>Assay readiness dossier</td>
+                <td>PIが事前承認したacceptance criteriaを満たす。満たさなければmethod修正</td>
+              </tr>
+              <tr data-phase="wet">
+                <td>
+                  <input class="task-check" id="gate-3" type="checkbox" aria-label="Gate 3を完了にする" data-roadmap-check data-label="Gate 3">
+                </td>
+                <td class="gate-cell"><span class="gate"><span class="gate-number">3</span> Week 4–6</span></td>
+                <td><strong>deviceからのreleaseを単独で測れるか？</strong></td>
+                <td>release-only setup、actual load、medium、exposed area、temperature、mixing、sampling correctionをpilot</td>
+                <td>Cell-level release curves + QC report</td>
+                <td>回収、再現性、profile durationがprimary comparisonに十分</td>
+              </tr>
+              <tr data-phase="wet">
+                <td>
+                  <input class="task-check" id="gate-4" type="checkbox" aria-label="Gate 4を完了にする" data-roadmap-check data-label="Gate 4">
+                </td>
+                <td class="gate-cell"><span class="gate"><span class="gate-number">4</span> Week 6–8</span></td>
+                <td><strong>skin barrierを追加した差を追えるか？</strong></td>
+                <td>permeation、skin integrity、insertion quality、endpoint retention、patch残存、wash fraction</td>
+                <td>Permeation + retention + mass balance</td>
+                <td>curve-level QCが通り、release vs barrier effectを区別できる</td>
+              </tr>
+              <tr data-phase="analysis">
+                <td>
+                  <input class="task-check" id="gate-5" type="checkbox" aria-label="Gate 5を完了にする" data-roadmap-check data-label="Gate 5">
+                </td>
+                <td class="gate-cell"><span class="gate"><span class="gate-number">5</span> Week 8–10</span></td>
+                <td><strong>profile差を過剰解釈せず説明できるか？</strong></td>
+                <td>curve plot、hierarchical model、zero/first/Higuchi/KP/Weibull、mechanistic baseline、residual audit</td>
+                <td>Frozen analysis report v1</td>
+                <td>experimental unit、model range、uncertainty、claims / non-claimsが明示される</td>
+              </tr>
+              <tr data-phase="analysis">
+                <td>
+                  <input class="task-check" id="gate-6" type="checkbox" aria-label="Gate 6を完了にする" data-roadmap-check data-label="Gate 6">
+                </td>
+                <td class="gate-cell"><span class="gate"><span class="gate-number">6</span> Week 10–12</span></td>
+                <td><strong>MLは次の実験選択に価値を足すか？</strong></td>
+                <td>GPR / RF / XGBoost / hybrid residual、grouped nested CV、applicability domain、active-learning候補</td>
+                <td>Model card + candidate experiment ranking</td>
+                <td>単純 / mechanistic baselineより外部groupで改善し、intervalがcalibrated</td>
+              </tr>
+              <tr data-phase="validation">
+                <td>
+                  <input class="task-check" id="gate-7" type="checkbox" aria-label="Gate 7を完了にする" data-roadmap-check data-label="Gate 7">
+                </td>
+                <td class="gate-cell"><span class="gate"><span class="gate-number">7</span> After Week 12</span></td>
+                <td><strong>freeze後の新規batchを予測できるか？</strong></td>
+                <td>protocol / code / modelをfreezeし、new batch / donor / dayのprospective curveをblind評価</td>
+                <td>Prospective validation report</td>
+                <td>事前定義metricとfailure ruleに基づき、adopt / revise / stopを判断</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <ul class="timeline-grid" aria-label="Roadmapの4つのperiod">
+          <li class="roadmap-card" data-phase="foundation">
+            <span class="week">Weeks 0–2</span>
+            <h3>問いと再現</h3>
+            <p>Primary target、権限、experimental unitを固定し、原著の再現で共通基準を作る。</p>
+          </li>
+          <li class="roadmap-card" data-phase="wet">
+            <span class="week">Weeks 2–8</span>
+            <h3>測定系を作る</h3>
+            <p>分析法 → release-only → skin permeationの順に複雑性を一つずつ追加する。</p>
+          </li>
+          <li class="roadmap-card" data-phase="analysis">
+            <span class="week">Weeks 8–12</span>
+            <h3>説明して予測する</h3>
+            <p>curve-level統計とmechanistic baselineを先に置き、MLを追加価値として評価する。</p>
+          </li>
+          <li class="roadmap-card" data-phase="validation">
+            <span class="week">After Week 12</span>
+            <h3>未知のrunで確かめる</h3>
+            <p>結果を見ない状態でmodelとcriteriaをfreezeし、新規batchを前向きに評価する。</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section alt" id="experiment">
+      <div class="container">
+        <header class="section-heading">
+          <span class="section-number">04 · Experimental architecture</span>
+          <div class="section-heading-copy">
+            <h2>一度に全部を測らず、一段ずつ複雑にする。</h2>
+            <p>
+              数値条件はpayload、matrix、装置、ラボSOPで変わります。ここでは固定値ではなく、
+              何をqualificationし、何を記録し、どこで止まるかを定義します。
+            </p>
+          </div>
+        </header>
+
+        <div class="method-grid">
+          <article class="method-card">
+            <span class="tag">Study A · isolate release</span>
+            <h3>Release-only pilot</h3>
+            <p>
+              皮膚barrierを入れず、device / matrixからの放出だけを評価する。synthetic membraneを使う場合も、
+              bindingとrate-limiting effectをqualificationする。
+            </p>
+            <ul>
+              <li>assay-confirmed exposed-needle loading</li>
+              <li>medium solubility / stability / binding</li>
+              <li>temperature、mixing、surface area、dwell</li>
+              <li>blank matrix、free-drug、reference formulation</li>
+              <li>residual patch extractionとtotal recovery</li>
+            </ul>
+          </article>
+
+          <article class="method-card">
+            <span class="tag">Study B · add the barrier</span>
+            <h3>Skin permeation pilot</h3>
+            <p>
+              release条件を理解した後にskinを追加し、insertion、barrier integrity、tissue retention、
+              receptor collectionを含むsystem responseを測る。
+            </p>
+            <ul>
+              <li>species / donor / site / thickness / preparation</li>
+              <li>applicator、force、dwell、insertion-success proxy</li>
+              <li>no-MN / untreated-skinとfree-drug control</li>
+              <li>cell position、operator、day、batchをblock</li>
+              <li>skin + patch + wash + receptorのendpoint recovery</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="equation-card">
+          <h3>Sampling correction · constant volume &amp; complete replacement</h3>
+          <div class="equation" role="math" aria-label="n時点の累積量は、受容液体積かける現在濃度に、採取体積かける過去濃度の総和を加える">
+            Q<sub>n</sub> = V<sub>r</sub>C<sub>n</sub> + V<sub>s</sub> Σ C<sub>i</sub> &nbsp; (i = 1 … n−1)
+          </div>
+          <p>
+            Q<sub>n</sub>: cumulative amount、V<sub>r</sub>: receptor volume、V<sub>s</sub>: sample volume、
+            C<sub>n</sub>: current concentration。volume、replacement、mixingが一定でない場合は実際のmass-balance recurrenceを使う。
+          </p>
+        </div>
+
+        <div class="table-wrap spaced-24">
+          <table>
+            <caption>Core study arms — 最終条件はPI / SOP / pilot varianceで確定する</caption>
+            <thead>
+              <tr>
+                <th>Arm</th>
+                <th>Barrier</th>
+                <th>Purpose</th>
+                <th>Primary readout</th>
+                <th>Critical control</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Blank matrix</td>
+                <td>Study-specific</td>
+                <td>matrix / assay interference</td>
+                <td>blank response</td>
+                <td>same material and process</td>
+              </tr>
+              <tr>
+                <td>Free payload</td>
+                <td>None / skin</td>
+                <td>device-controlled releaseとの差</td>
+                <td>recovery / permeation curve</td>
+                <td>matched dose and medium</td>
+              </tr>
+              <tr>
+                <td>MN formulation A</td>
+                <td>None</td>
+                <td>release-only reference</td>
+                <td>Q<sub>release</sub>(t)</td>
+                <td>actual load and exposed area</td>
+              </tr>
+              <tr>
+                <td>MN formulation A</td>
+                <td>Skin</td>
+                <td>permeation + retention</td>
+                <td>Q<sub>receptor</sub>(t), tissue amount</td>
+                <td>integrity and insertion QC</td>
+              </tr>
+              <tr>
+                <td>No-MN / untreated skin</td>
+                <td>Skin</td>
+                <td>barrier baseline</td>
+                <td>passive permeation</td>
+                <td>matched payload exposure</td>
+              </tr>
+              <tr>
+                <td>Recovery spikes</td>
+                <td>Each matrix</td>
+                <td>extraction / handling loss</td>
+                <td>% recovered</td>
+                <td>predefined concentration levels</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="split-grid spaced-24">
+          <article class="panel">
+            <p class="kicker">Before the first curve</p>
+            <h3>Minimum method qualification</h3>
+            <ul>
+              <li>assay selectivity、range、precision、carryover</li>
+              <li>sample / stock / autosampler stability</li>
+              <li>receptor medium solubilityとsink / non-saturation justification</li>
+              <li>membrane / tubing / vessel binding</li>
+              <li>sampling volume accuracyとreceptor mixing</li>
+              <li>temperature、evaporation、bubble、leak control</li>
+              <li>extraction recoveryとmass-balance acceptance</li>
+            </ul>
+          </article>
+
+          <article class="panel">
+            <p class="kicker">Replication is hierarchical</p>
+            <h3>nを時間点で水増ししない</h3>
+            <p>
+              pilotの出発案は「複数の独立batch × 各batch内の複数cell × 各cellの反復time points」。
+              ただし固定の万能minimumではない。pilot variance、primary estimand、donor / batch variabilityに基づいてprecision / powerを決める。
+            </p>
+            <div class="callout caution spaced-18">
+              <span class="callout-mark" aria-hidden="true">n</span>
+              <div>
+                <h4>Report all levels</h4>
+                <p>`n_batch`, `n_donor`, `n_cell`, `n_timepoint`を別々に報告する。</p>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="callout caution">
+          <span class="callout-mark" aria-hidden="true">i</span>
+          <div>
+            <h3>規制文書のscope</h3>
+            <p>
+              OECD Test No. 428はin vitro skin absorptionのdiffusion-cell原則を示します。
+              FDAの2022 IVRT / IVPT draft guidanceは特定のtopical generic product向けで、microneedle専用ではなく、
+              IVRT文書はtransdermal / topical delivery systemsをscope外と明記しています。本研究ではmethod-developmentの参考原則として扱い、直接適用とはしません。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="analysis">
+      <div class="container">
+        <header class="section-heading">
+          <span class="section-number">05 · Data &amp; analysis</span>
+          <div class="section-heading-copy">
+            <h2>Curveを壊さず、物理と不確実性を残す。</h2>
+            <p>
+              Data rowの階層を最初に作り、sampling correction、curve-level summary、hierarchical inference、
+              mechanistic baseline、small-data MLの順に進めます。
+            </p>
+          </div>
+        </header>
+
+        <div class="hierarchy" role="img" aria-label="推奨する実験データ階層">
+          <div class="hierarchy-node"><strong>Study</strong><span>question · protocol</span></div>
+          <div class="hierarchy-node"><strong>Batch</strong><span>independent formulation</span></div>
+          <div class="hierarchy-node"><strong>Patch</strong><span>device · actual load</span></div>
+          <div class="hierarchy-node"><strong>Donor / lot</strong><span>skin or membrane</span></div>
+          <div class="hierarchy-node"><strong>Run</strong><span>day · operator · instrument</span></div>
+          <div class="hierarchy-node"><strong>Cell / curve</strong><span>primary repeated-measure group</span></div>
+          <div class="hierarchy-node"><strong>Time point</strong><span>sample · concentration</span></div>
+        </div>
+
+        <div class="table-wrap spaced-24">
+          <table>
+            <caption>Minimum data dictionary — 完全版CSVはFilesから開ける</caption>
+            <thead>
+              <tr>
+                <th>Block</th>
+                <th>Required fields</th>
+                <th>Why it matters</th>
+                <th>Leakage / quality guard</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>IDs</td>
+                <td>study, batch, formulation, patch, donor / lot, run, cell, timepoint</td>
+                <td>independenceとrandom effectを定義</td>
+                <td>row orderから推測しない</td>
+              </tr>
+              <tr>
+                <td>MN / formulation</td>
+                <td>type, material, geometry, process, load, exposed area</td>
+                <td>device-controlled releaseを説明</td>
+                <td>nominalとmeasuredを分離</td>
+              </tr>
+              <tr>
+                <td>Payload</td>
+                <td>identity, form, MW, solubility, pKa, logP / logD</td>
+                <td>partition / diffusion / assayを説明</td>
+                <td>source、pH、temperatureを保持</td>
+              </tr>
+              <tr>
+                <td>Barrier / insertion</td>
+                <td>species, site, thickness, integrity, applicator, force, success</td>
+                <td>permeation varianceを説明</td>
+                <td>donorを跨ぐsplitを明示</td>
+              </tr>
+              <tr>
+                <td>Cell conditions</td>
+                <td>area, volume, medium, pH, temperature, agitation, position</td>
+                <td>mass transferとsampling correction</td>
+                <td>target値とactual値を分離</td>
+              </tr>
+              <tr>
+                <td>Outcome / QC</td>
+                <td>raw file, concentration, Q(t), amount/area, fraction, QC flag</td>
+                <td>再計算と監査</td>
+                <td>excludeしてもraw rowを削除しない</td>
+              </tr>
+              <tr>
+                <td>Recovery</td>
+                <td>receptor, skin, residual patch, donor / wash, extraction recovery</td>
+                <td>low signalの所在を特定</td>
+                <td>endpoint denominatorを固定</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <figure class="chart-card">
+          <div class="chart-card-header">
+            <div>
+              <p class="kicker">Expected shapes, not expected answers</p>
+              <h3>Profile形状の概念図</h3>
+            </div>
+            <span>Illustrative · non-measured</span>
+          </div>
+          <svg viewBox="0 0 1040 430" role="img" aria-labelledby="profile-title profile-desc">
+            <title id="profile-title">Burst、sustained、lagged profileの概念比較</title>
+            <desc id="profile-desc">横軸がtime、縦軸がcumulative amountで、三種類の概念曲線を比較する。実測値ではない。</desc>
+            <rect x="1" y="1" width="1038" height="428" rx="18" fill="#fbfcfb" stroke="#d8e0df"/>
+            <g stroke="#dfe5e4" stroke-width="1">
+              <line x1="100" y1="80" x2="960" y2="80"/>
+              <line x1="100" y1="150" x2="960" y2="150"/>
+              <line x1="100" y1="220" x2="960" y2="220"/>
+              <line x1="100" y1="290" x2="960" y2="290"/>
+              <line x1="100" y1="360" x2="960" y2="360"/>
+              <line x1="270" y1="50" x2="270" y2="360"/>
+              <line x1="440" y1="50" x2="440" y2="360"/>
+              <line x1="610" y1="50" x2="610" y2="360"/>
+              <line x1="780" y1="50" x2="780" y2="360"/>
+              <line x1="950" y1="50" x2="950" y2="360"/>
+            </g>
+            <g stroke="#6f8386" stroke-width="2">
+              <line x1="100" y1="360" x2="968" y2="360"/>
+              <line x1="100" y1="368" x2="100" y2="44"/>
+            </g>
+            <text x="530" y="402" fill="#36515c" font-size="15" font-weight="700" text-anchor="middle">TIME</text>
+            <text x="28" y="210" fill="#36515c" font-size="15" font-weight="700" text-anchor="middle" transform="rotate(-90 28 210)">CUMULATIVE AMOUNT / FRACTION</text>
+            <path d="M 100 360 C 125 225, 190 115, 320 89 C 470 60, 720 62, 950 61" fill="none" stroke="#e86d5e" stroke-width="6" stroke-linecap="round"/>
+            <path d="M 100 360 C 230 334, 365 282, 500 220 C 650 151, 800 99, 950 74" fill="none" stroke="#0b8586" stroke-width="6" stroke-linecap="round"/>
+            <path d="M 100 360 C 280 360, 340 348, 430 300 C 560 231, 720 145, 950 92" fill="none" stroke="#d7982d" stroke-width="6" stroke-linecap="round"/>
+            <g font-size="14" font-weight="800">
+              <rect x="675" y="92" width="202" height="37" rx="18" fill="#fff0ec"/>
+              <circle cx="697" cy="110" r="5" fill="#e86d5e"/>
+              <text x="711" y="115" fill="#a3463a">BURST + PLATEAU</text>
+              <rect x="675" y="141" width="202" height="37" rx="18" fill="#dff4f1"/>
+              <circle cx="697" cy="159" r="5" fill="#0b8586"/>
+              <text x="711" y="164" fill="#076667">SUSTAINED</text>
+              <rect x="675" y="190" width="202" height="37" rx="18" fill="#fff6de"/>
+              <circle cx="697" cy="208" r="5" fill="#d7982d"/>
+              <text x="711" y="213" fill="#8e641d">LAGGED / BARRIER</text>
+            </g>
+          </svg>
+          <figcaption>
+            Figure 3. 形状を先に決めつけず、raw cell curve、release-only、skin permeation、endpoint recoveryを照合する。
+            Burst、lag、plateauは複数の原因を持ち、curve fitだけではmechanismを確定できない。
+          </figcaption>
+        </figure>
+
+        <div class="table-wrap spaced-24">
+          <table>
+            <caption>Model ladder — 説明可能なbaselineから追加する</caption>
+            <thead>
+              <tr>
+                <th>Level</th>
+                <th>Candidate</th>
+                <th>Answers</th>
+                <th>Required checks</th>
+                <th>Do not claim</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>0</td>
+                <td>Raw curves + summaries</td>
+                <td>profile、variability、recovery</td>
+                <td>individual curves、units、n hierarchy</td>
+                <td>mechanism</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Zero / first-order, Higuchi, KP, Weibull</td>
+                <td>descriptive rate / shape</td>
+                <td>fit range、residual、AICc、parameter interval</td>
+                <td>最大R² = true mechanism</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Hierarchical curve model</td>
+                <td>batch / donor / cell variation</td>
+                <td>random-effect structure、sensitivity</td>
+                <td>time points are independent</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Diffusion / swelling / erosion model</td>
+                <td>mechanistic parameter hypothesis</td>
+                <td>boundary conditions、identifiability、units</td>
+                <td>unmeasured parameters are known</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>GPR / RF / XGBoost</td>
+                <td>nonlinear prediction</td>
+                <td>grouped nested CV、calibration、domain distance</td>
+                <td>random-split score = unknown-drug performance</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Physics + residual ML</td>
+                <td>structured prediction + correction</td>
+                <td>external curves、ablation、physical validity</td>
+                <td>simulation replaces experiment</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout">
+          <span class="callout-mark" aria-hidden="true">✓</span>
+          <div>
+            <h3>Validation matrix</h3>
+            <p>
+              grouped repeated CV（curve / run）→ leave-one-formulation / batch-out → leave-one-drug / platform-out →
+              frozen prospective batchの順に難しくする。preprocessing、imputation、feature selection、augmentationは各training fold内でfitする。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="risks">
+      <div class="container">
+        <header class="section-heading">
+          <span class="section-number">06 · Risk register</span>
+          <div class="section-heading-copy">
+            <h2>失敗を消さず、次の判断材料にする。</h2>
+            <p>
+              技術的な失敗、data leakage、scope driftを事前にriskとして登録し、
+              結果を見てから都合よく除外することを防ぎます。
+            </p>
+          </div>
+        </header>
+
+        <div class="table-wrap">
+          <table>
+            <caption>Initial risk register — likelihood / impactはpilot後に更新する</caption>
+            <thead>
+              <tr>
+                <th>Risk</th>
+                <th>Priority</th>
+                <th>Early signal</th>
+                <th>Mitigation</th>
+                <th>Decision rule</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Releaseとpermeationの混同</td>
+                <td><span class="risk-high">High</span></td>
+                <td>同じtarget名でskin有無を結合</td>
+                <td>endpoint familyとbarrier fieldを必須化</td>
+                <td>dataset mergeを停止</td>
+              </tr>
+              <tr>
+                <td>Sampling correction error</td>
+                <td><span class="risk-high">High</span></td>
+                <td>sampled massを足していない</td>
+                <td>volume log + unit-tested calculation</td>
+                <td>curve再計算まで解析停止</td>
+              </tr>
+              <tr>
+                <td>Assay saturation / instability</td>
+                <td><span class="risk-high">High</span></td>
+                <td>above-range、drift、poor recovery</td>
+                <td>range / stability / dilution qualification</td>
+                <td>method redevelopment</td>
+              </tr>
+              <tr>
+                <td>Insertion variability</td>
+                <td><span class="risk-high">High</span></td>
+                <td>cell間profileとinsertion proxyが連動</td>
+                <td>applicator、force、success proxyを記録</td>
+                <td>failed insertionを事前ruleでflag</td>
+              </tr>
+              <tr>
+                <td>Curve leakage</td>
+                <td><span class="risk-high">High</span></td>
+                <td>同一curveのtime pointsがtrain/testへ分散</td>
+                <td>group keyをsplit前に固定</td>
+                <td>model scoreを無効化し再学習</td>
+              </tr>
+              <tr>
+                <td>Small-data overfit</td>
+                <td><span class="risk-medium">Medium</span></td>
+                <td>foldで順位・importanceが反転</td>
+                <td>simple baseline、nested CV、interval</td>
+                <td>MLを探索扱いへdowngrade</td>
+              </tr>
+              <tr>
+                <td>Mass-balance loss</td>
+                <td><span class="risk-medium">Medium</span></td>
+                <td>回収率がconditionで系統的に変化</td>
+                <td>skin / patch / wash / vesselを分画</td>
+                <td>mechanism解釈を保留</td>
+              </tr>
+              <tr>
+                <td>Scope / permission drift</td>
+                <td><span class="risk-medium">Medium</span></td>
+                <td>未承認tissue / data / AI upload</td>
+                <td>charterとdecision logをreview</td>
+                <td>作業停止・PI確認</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="files">
+      <div class="container">
+        <header class="section-heading">
+          <span class="section-number">07 · Research files</span>
+          <div class="section-heading-copy">
+            <h2>Roadmapから、そのまま実行ファイルへ。</h2>
+            <p>
+              研究フォルダには、要件定義、実行用指示文、論文、元データ、補足コード、
+              study charter、data dictionary、sampling / experiment logをまとめています。
+            </p>
+          </div>
+        </header>
+
+        <div class="asset-grid">
+          <a class="asset-card" href="../README.md">
+            <div>
+              <span>Start here</span>
+              <h3>Project README</h3>
+              <p>研究定義、folder構成、Data S1監査、利用境界。</p>
+            </div>
+            <strong>Open README →</strong>
+          </a>
+          <a class="asset-card" href="../requirements.md">
+            <div>
+              <span>Specification</span>
+              <h3>要件定義</h3>
+              <p>functional / scientific / accessibility要件とacceptance checklist。</p>
+            </div>
+            <strong>Open requirements →</strong>
+          </a>
+          <a class="asset-card" href="../implementation-prompt.md">
+            <div>
+              <span>Reusable prompt</span>
+              <h3>実行用指示文</h3>
+              <p>データ解析、研究計画更新、HTML改訂に使うguardrails付きprompt。</p>
+            </div>
+            <strong>Open prompt →</strong>
+          </a>
+          <a class="asset-card" href="../templates/study-charter.md">
+            <div>
+              <span>Template</span>
+              <h3>Study charter</h3>
+              <p>primary endpoint、experimental unit、controls、quality gates、amendments。</p>
+            </div>
+            <strong>Open template →</strong>
+          </a>
+          <a class="asset-card" href="../templates/data-dictionary.csv">
+            <div>
+              <span>Template · CSV</span>
+              <h3>Data dictionary</h3>
+              <p>studyからtime point、recovery、provenanceまでの必須field。</p>
+            </div>
+            <strong>Open CSV →</strong>
+          </a>
+          <a class="asset-card" href="../templates/analysis-plan.md">
+            <div>
+              <span>Template</span>
+              <h3>Analysis plan</h3>
+              <p>sampling correction、model ladder、grouped validation、claims boundary。</p>
+            </div>
+            <strong>Open plan →</strong>
+          </a>
+        </div>
+
+        <div class="table-wrap spaced-30">
+          <table>
+            <caption>Local reference library</caption>
+            <thead>
+              <tr>
+                <th>No.</th>
+                <th>Reference / file</th>
+                <th>Role</th>
+                <th>Local</th>
+                <th>Online source</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>01</td>
+                <td>Yuan et al. 2023</td>
+                <td>Primary permeation + ML study</td>
+                <td><a href="../references/papers/01-yuan-2023-drug-permeation-microneedled-skin-ml.pdf">PDF</a></td>
+                <td><a href="https://doi.org/10.1002/btm2.10512" target="_blank" rel="noreferrer">DOI</a></td>
+              </tr>
+              <tr>
+                <td>02</td>
+                <td>Zheng et al. 2024</td>
+                <td>Microneedle device review</td>
+                <td><a href="../references/papers/02-zheng-2024-microneedle-biomedical-devices.pdf">PDF</a></td>
+                <td><a href="https://doi.org/10.1038/s44222-023-00141-6" target="_blank" rel="noreferrer">DOI</a></td>
+              </tr>
+              <tr>
+                <td>03</td>
+                <td>Xu et al. 2023</td>
+                <td>Small-data ML in materials</td>
+                <td><a href="../references/papers/03-xu-2023-small-data-ml-materials-science.pdf">PDF</a></td>
+                <td><a href="https://doi.org/10.1038/s41524-023-01000-z" target="_blank" rel="noreferrer">DOI</a></td>
+              </tr>
+              <tr>
+                <td>04</td>
+                <td>Dou et al. 2023</td>
+                <td>Small-data ML in molecular science</td>
+                <td><a href="../references/papers/04-dou-2023-ml-methods-small-data-molecular-science.pdf">PDF</a></td>
+                <td><a href="https://doi.org/10.1021/acs.chemrev.3c00189" target="_blank" rel="noreferrer">DOI</a></td>
+              </tr>
+              <tr>
+                <td>05</td>
+                <td>Achar &amp; Keith 2024</td>
+                <td>Metadata-only Highlight</td>
+                <td><a href="../references/papers/05-achar-keith-2024-highlight-metadata-only.md">Note</a></td>
+                <td><a href="https://doi.org/10.1021/acs.chemrev.4c00957" target="_blank" rel="noreferrer">DOI</a></td>
+              </tr>
+              <tr>
+                <td>06</td>
+                <td>Yuan et al. Data S1</td>
+                <td>191-point source data</td>
+                <td><a href="../references/supplementary/06-yuan-2023-data-s1.xlsx">XLSX</a></td>
+                <td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10658566/" target="_blank" rel="noreferrer">PMC</a></td>
+              </tr>
+              <tr>
+                <td>07</td>
+                <td>Yuan et al. SI 2</td>
+                <td>R / C source code</td>
+                <td><a href="../references/supplementary/07-yuan-2023-code-si2.docx">DOCX</a></td>
+                <td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10658566/" target="_blank" rel="noreferrer">PMC</a></td>
+              </tr>
+              <tr>
+                <td>08</td>
+                <td>Yuan et al. SI 3</td>
+                <td>New-drug prediction figures</td>
+                <td><a href="../references/supplementary/08-yuan-2023-new-drug-figures-si3.docx">DOCX</a></td>
+                <td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10658566/" target="_blank" rel="noreferrer">PMC</a></td>
+              </tr>
+              <tr>
+                <td>Index</td>
+                <td>Provenance &amp; access</td>
+                <td>source、rights、audit</td>
+                <td><a href="../references/README.md">README.md</a></td>
+                <td>—</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <details class="spaced-24">
+          <summary>追加templateを開く</summary>
+          <div class="details-body">
+            <ul>
+              <li><a href="../templates/sampling-plan.csv">Sampling plan CSV</a></li>
+              <li><a href="../templates/experiment-log.csv">Experiment log CSV</a></li>
+              <li><a href="../notes/decision-log.md">Decision log</a></li>
+              <li><a href="../../reviews/microneedle-small-data-ml/README.md">既存の詳細literature review</a></li>
+              <li><a href="../../website/pages/index.html">BiG Lab website portal</a></li>
+            </ul>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section class="section dark" id="prompt">
+      <div class="container">
+        <header class="section-heading">
+          <span class="section-number">08 · Instruction prompt</span>
+          <div class="section-heading-copy">
+            <h2>次のAI作業にも、同じ研究境界を引き継ぐ。</h2>
+            <p>
+              下のshort versionをコピーして具体的なtaskを追加できます。完全版は
+              <a href="../implementation-prompt.md">implementation-prompt.md</a> に保存しています。
+            </p>
+          </div>
+        </header>
+
+        <div class="prompt-shell">
+          <div class="prompt-toolbar">
+            <span>Reusable research instruction · short version</span>
+            <button class="button small" type="button" data-copy-prompt>指示文をコピー</button>
+          </div>
+          <pre id="implementation-prompt" tabindex="0"><code>あなたはmicroneedle drug delivery、diffusion-cell study、
+pharmaceutical analysis、small-data statisticsの研究支援者です。
+
+目的:
+microneedle systemのdrug release profileを、再現可能で監査可能な方法で研究する。
+release、skin permeation、skin retention / mass balanceを混同しないこと。
+
+最初に読む:
+- big-lab/drug-release-profile/README.md
+- big-lab/drug-release-profile/requirements.md
+- big-lab/drug-release-profile/references/README.md
+- big-lab/drug-release-profile/templates/study-charter.md
+- big-lab/drug-release-profile/templates/analysis-plan.md
+
+必須原則:
+1. 文献事実、data-derived result、提案、仮定を分ける。
+2. Yuan et al. 2023のtargetは主にskin permeationで、release-onlyではない。
+3. time pointを独立sampleとしてrandom splitしない。
+4. study > batch > patch > donor > run > cell/curve > time pointを保持する。
+5. raw dataを変更せず、cleaning、unit conversion、exclusionをlogに残す。
+6. sampling / replacementを補正し、nominal loadとmeasured loadを分ける。
+7. R²だけでmechanismを断定しない。residual、fit range、AICc、parameter plausibility、
+   held-out predictionを確認する。
+8. wet-lab条件はPI、SOP、training、ethics / biosafety approvalを優先する。
+9. FDA topical IVRT / IVPT文書をmicroneedleへ直接適用されるとは書かない。
+10. primary endpoint、model、time window、outlier rule、success criteriaを結果前にfreezeする。
+
+今回のタスク:
+[ここに具体的な依頼を書く]
+
+最低限の出力:
+- one-sentence research question
+- assumptions / unresolved questions
+- file and data audit
+- experimental unit and design table
+- QC / acceptance table
+- equations、units、analysis plan
+- risk / mitigation
+- reproducible output paths
+- supported / unsupported claims
+- next decision and owner
+
+experimental unit、sampling volume、actual loading、permission、
+primary endpointのいずれかが不明なら、推測せず停止条件として報告する。</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="next">
+      <div class="container">
+        <header class="section-heading">
+          <span class="section-number">09 · Next meeting</span>
+          <div class="section-heading-copy">
+            <h2>次の45分で決めること。</h2>
+            <p>
+              このページは正式protocolではなく、PI / supervisorと研究を定義するためのdiscussion draftです。
+              面談の終了時に、Gate 0を通過できる最小限の合意を残します。
+            </p>
+          </div>
+        </header>
+
+        <div class="next-grid">
+          <article class="panel">
+            <p class="kicker">Meeting outcomes</p>
+            <h3>5つの確認事項</h3>
+            <ol>
+              <li>研究対象はrelease-onlyか、skin permeationか、両者の分離か？</li>
+              <li>最初のpayload、MN type、formulation factorは何か？</li>
+              <li>利用可能なSOP、instrument、membrane / tissue、trainingは何か？</li>
+              <li>Data S1のcurve / replicate / batch mappingを復元できるか？</li>
+              <li>4週間後の最小成果物とGo / Hold基準は何か？</li>
+            </ol>
+          </article>
+
+          <article class="panel">
+            <p class="kicker">Action checklist</p>
+            <h3>Gate 0の完了条件</h3>
+            <ul class="checklist">
+              <li>
+                <input class="task-check" id="next-1" type="checkbox" aria-label="Primary targetの確認を完了にする" data-roadmap-check data-label="primary targetの確認">
+                <label class="check-label" for="next-1">
+                  Primary targetを一文で確認
+                  <small>release / permeation / retentionのどれかを明記</small>
+                </label>
+              </li>
+              <li>
+                <input class="task-check" id="next-2" type="checkbox" aria-label="Research systemの確認を完了にする" data-roadmap-check data-label="research systemの確認">
+                <label class="check-label" for="next-2">
+                  Payload、MN platform、factorを確認
+                  <small>pilotで変える変数を少数に限定</small>
+                </label>
+              </li>
+              <li>
+                <input class="task-check" id="next-3" type="checkbox" aria-label="Permissionの確認を完了にする" data-roadmap-check data-label="permissionの確認">
+                <label class="check-label" for="next-3">
+                  SOP / safety / ethics / data-useを確認
+                  <small>approvalとtrainingなしにwet-labを開始しない</small>
+                </label>
+              </li>
+              <li>
+                <input class="task-check" id="next-4" type="checkbox" aria-label="Experimental unitの確認を完了にする" data-roadmap-check data-label="experimental unitの確認">
+                <label class="check-label" for="next-4">
+                  Experimental unitとreplicateを図示
+                  <small>batch、donor、cell、time pointを分ける</small>
+                </label>
+              </li>
+              <li>
+                <input class="task-check" id="next-5" type="checkbox" aria-label="Deliverableの確認を完了にする" data-roadmap-check data-label="deliverableの確認">
+                <label class="check-label" for="next-5">
+                  4週間のdeliverableとreviewerを決定
+                  <small>owner、deadline、Go / Hold criterionを記録</small>
+                </label>
+              </li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="callout spaced-24">
+          <span class="callout-mark" aria-hidden="true">→</span>
+          <div>
+            <h3>推奨する最初の成果物</h3>
+            <p>
+              Wet-labを急ぐ前に、`study-charter.md` v1、Data S1の再現notebook、curve mapping質問票、
+              assay readiness checklistの4点を完成させる。これで「何を測るか」「何をまだ測れないか」を同時に共有できます。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="references">
+      <div class="container">
+        <header class="section-heading">
+          <span class="section-number">10 · Sources &amp; limits</span>
+          <div class="section-heading-copy">
+            <h2>根拠と適用範囲を一緒に読む。</h2>
+            <p>
+              一次論文、公開補足資料、公式guidanceを優先しました。規制文書は対象productとstudy purposeを確認し、
+              microneedleへ自動的に適用しません。
+            </p>
+          </div>
+        </header>
+
+        <div class="split-grid">
+          <article class="panel">
+            <p class="kicker">Scientific literature</p>
+            <ol class="reference-list">
+              <li>
+                <p>
+                  Yuan Y, Han Y, Yap CW, et al.
+                  <a href="https://doi.org/10.1002/btm2.10512" target="_blank" rel="noreferrer">Prediction of drug permeation through microneedled skin by machine learning</a>.
+                  <small>Bioengineering &amp; Translational Medicine. 2023;8:e10512. Primary study + CC BY supplementary data.</small>
+                </p>
+              </li>
+              <li>
+                <p>
+                  Zheng M, Sheng T, Yu J, Gu Z, Xu C.
+                  <a href="https://doi.org/10.1038/s44222-023-00141-6" target="_blank" rel="noreferrer">Microneedle biomedical devices</a>.
+                  <small>Nature Reviews Bioengineering. 2024;2:324–342.</small>
+                </p>
+              </li>
+              <li>
+                <p>
+                  Xu P, Ji X, Li M, Lu W.
+                  <a href="https://doi.org/10.1038/s41524-023-01000-z" target="_blank" rel="noreferrer">Small data machine learning in materials science</a>.
+                  <small>npj Computational Materials. 2023;9:42.</small>
+                </p>
+              </li>
+              <li>
+                <p>
+                  Dou B, Zhu Z, Merkurjev E, et al.
+                  <a href="https://doi.org/10.1021/acs.chemrev.3c00189" target="_blank" rel="noreferrer">Machine Learning Methods for Small Data Challenges in Molecular Science</a>.
+                  <small>Chemical Reviews. 2023;123:8736–8780.</small>
+                </p>
+              </li>
+            </ol>
+          </article>
+
+          <article class="panel">
+            <p class="kicker">Official method context</p>
+            <ol class="reference-list">
+              <li>
+                <p>
+                  OECD.
+                  <a href="https://www.oecd.org/en/publications/test-no-428-skin-absorption-in-vitro-method_9789264071087-en.html" target="_blank" rel="noreferrer">Test No. 428: Skin Absorption: In Vitro Method</a>.
+                  <small>Diffusion-cell skin absorption principles; 2004.</small>
+                </p>
+              </li>
+              <li>
+                <p>
+                  FDA.
+                  <a href="https://www.fda.gov/media/162476/download" target="_blank" rel="noreferrer">In Vitro Release Test Studies for Topical Drug Products Submitted in ANDAs</a>.
+                  <small>Draft, October 2022; scope is not microneedle-specific and excludes TDS.</small>
+                </p>
+              </li>
+              <li>
+                <p>
+                  FDA.
+                  <a href="https://www.fda.gov/regulatory-information/search-fda-guidance-documents/in-vitro-permeation-test-studies-topical-drug-products-submitted-andas" target="_blank" rel="noreferrer">In Vitro Permeation Test Studies for Topical Drug Products Submitted in ANDAs</a>.
+                  <small>Draft, October 2022; generic topical-product context.</small>
+                </p>
+              </li>
+              <li>
+                <p>
+                  ICH.
+                  <a href="https://database.ich.org/sites/default/files/ICH_Q14_Guideline_2023_1116.pdf" target="_blank" rel="noreferrer">Q14 Analytical Procedure Development</a>.
+                  <small>Final guideline, adopted 1 November 2023.</small>
+                </p>
+              </li>
+              <li>
+                <p>
+                  FDA / ICH.
+                  <a href="https://www.fda.gov/regulatory-information/search-fda-guidance-documents/m10-bioanalytical-method-validation-and-study-sample-analysis" target="_blank" rel="noreferrer">M10 Bioanalytical Method Validation and Study Sample Analysis</a>.
+                  <small>Final, November 2022; scope relevance depends on study matrix and purpose.</small>
+                </p>
+              </li>
+            </ol>
+          </article>
+        </div>
+
+        <div class="callout caution">
+          <span class="callout-mark" aria-hidden="true">!</span>
+          <div>
+            <h3>Interpretation limit</h3>
+            <p>
+              本ページはnarrative research-planning documentであり、systematic review、validated protocol、
+              clinical recommendation、regulatory determinationではありません。正式条件はPI、quality unit、SOP、ethics / biosafety、
+              applicable regulatory adviceで確定してください。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>Microneedle Drug Release Profile Research Roadmap</strong>
+        <p>
+          Built as a local-first research operating document. Literature fact, data audit, proposal, and limitation are labelled separately.
+          Updated 17 July 2026.
+        </p>
+      </div>
+      <div class="footer-meta">
+        BiG Lab working guide<br>
+        Discussion draft · v1.0
+      </div>
+    </div>
+  </footer>
+
+  <div class="sr-only" role="status" aria-live="polite" data-status></div>
+</body>
+</html>
