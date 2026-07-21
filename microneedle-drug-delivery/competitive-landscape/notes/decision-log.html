@@ -98,6 +98,9 @@ competitive-landscape」に関するMarkdown正本のHTML閲覧版。</p>
         id="toc-requirements.md-6-acceptance-checklistの自己採点">requirements.md
         §6 Acceptance checklistの自己採点</a></li>
         </ul></li>
+        <li><a href="#独立qa監査sonnet-5"
+        id="toc-独立qa監査sonnet-5">2026-07-21: 独立QA監査(Sonnet
+        5)</a></li>
         <li><a href="#このセクションは各ステージ完了時に追記される"
         id="toc-このセクションは各ステージ完了時に追記される">(このセクションは各ステージ完了時に追記される)</a></li>
         </ul></li>
@@ -217,6 +220,67 @@ competitive-landscape」に関するMarkdown正本のHTML閲覧版。</p>
                 がエラーなく完走する(「Validated Markdown-to-HTML
                 links.」を確認)</label></li>
                 </ul>
+                <h2 id="独立qa監査sonnet-5">2026-07-21:
+                独立QA監査(Sonnet 5)</h2>
+                <p><strong>実施</strong>:
+                別ワークツリーでの独立監査として、<code>competitive-landscape.md</code>の主要な主張を
+                再検証した。手法: (1)
+                <code>research/*.csv</code>を実際に読み込み、行数・<code>sources</code>列の内訳を
+                集計して本文の数字と突き合わせ、(2)
+                WebFetch/WebSearchで一次資料(Abdallah et al. 2024
+                のPLOS本文、Asgarkhanova et
+                al. 2026のWileyページ、小林製薬ページ、HuskinDB
+                2020論文) に直接アクセスして本文の記述と照合した。</p>
+                <p><strong>確認できたこと(修正不要)</strong>: -
+                214化合物データセットの内訳(<code>sources</code>列:
+                HuskinDB単独108 + SkinPiX単独82 + HuskinDB∩SkinPiX重複21
+                + INRS_new 3 = 214)は、§4が引用するAsgarkhanova et
+                al.データ
+                リポジトリの生ファイル内訳(129+103+3)と整合する(129=108+21,
+                103=82+21)。214 vs 209の
+                差分5件は本当に未解決のまま(捏造・誤帰属なし)。 -
+                Asgarkhanova et al. (doi:10.1002/minf.70030)
+                は実在の論文(Wiley, 2026年オンライン公開)。
+                WileyページはこちらのWebFetchでもHTTP 403 —
+                本文購読制の記述通り。 -
+                <code>research/CLAUDE.md</code>の統合QSPRデータセットDOI引用(doi:10.57745/ZUU1DH,
+                Asgarkhanova et al.)は、競合分析タスク(commit 8219674,
+                21:57)より前のコミット(6401e82, 20:32)で
+                既に存在していた。「最初から引用していた」という§4の記述は循環論法ではない。
+                -
+                小林製薬ページ(§9)を直接fetchし、ラマン分光+MCR-ALS・トラネキサム酸・3D皮膚モデル・
+                IFSCC Congress 2025の全要素を確認 —
+                decision-logが「直接確認済み」とする記述は正確。 -
+                HuskinDB
+                2020論文は実際に251化合物・546測定値を報告している(WebSearchで確認)
+                —
+                §8-3の未解決の問い自体は実在する数字に基づく妥当な問いである。
+                -
+                §8・§9・§10の「未確認」「未解決」表現は、<code>RESEARCH_PLAN.md</code>・<code>CLAUDE.md</code>を含め
+                リポジトリ全体で確認済みの事実として書き換えられている箇所は見つからなかった。</p>
+                <p><strong>修正した誤り</strong>: §3(Abdallah et
+                al. 2024)の「<strong>マイクロニードルへの言及なし</strong>」という
+                太字の断定は誤り。PLOS本文をWebFetchで直接確認したところ、参考文献リスト内に
+                Yuan et
+                al. 2023(本プロジェクトの前身論文)が”microneedled
+                skin”を含むタイトルで
+                1件引用されており、本文中の言及がゼロというのは事実に反する(本文・手法・考察に登場
+                しないという点は正しい)。これは同じ§3の脚注が「マイクロニードルに全く言及がなく…
+                という統合主張も2票中1票の僅差で不成立」とadversarial
+                verificationの結果を報告して
+                いた箇所と整合していなかった —
+                本文の断定的な太字表現が、脚注自身が示す「不成立」判定
+                と矛盾していた。該当箇所を「本文中での実質的な言及・応用はない(参考文献リストに
+                Yuan et
+                al. 2023が1件引用されているのみ)」という正確な表現に修正した。</p>
+                <p><strong>修正しなかった懸念点(要人間レビュー)</strong>:
+                §3のLightGBM R²=0.819 / Gradient Boosting R²=0.818 / ANN
+                R²=0.797という数字は、WebFetchによるPLOS本文の2回の再抽出で
+                0.823 / 0.820 /
+                0.795という近いが完全には一致しない値が返った(MLRの0.338は両方で
+                一致)。WebFetchは要約に小型モデルを使うため抽出誤差の可能性があり、どちらが正確か
+                断定できないためこの数字自体は変更していない。人間が論文Table
+                1を直接確認することを 推奨する。</p>
                 <h2
                 id="このセクションは各ステージ完了時に追記される">(このセクションは各ステージ完了時に追記される)</h2>
               </article>

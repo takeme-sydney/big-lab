@@ -34,7 +34,7 @@ Abdallah, Hasan & Hammad. "Predictive modeling of skin permeability for molecule
 - 441レコード・140化合物(本プロジェクトの214化合物と近い規模)、85/15分割。
 - LightGBM(R²=0.819)とGradient Boosting(R²=0.818)が上位。MLR(0.338)・ANN(0.797)を上回る。
 - 記述子のみでDrugBank全2326化合物へ適用(約16.6倍の外挿)。
-- **マイクロニードルへの言及なし**。バリデーションはランダム85/15分割のみで、leave-one-drug-out等のapplicability domain評価は行っていない。
+- **本文中でのマイクロニードルへの実質的な言及・応用はない**(2026-07-21のQA監査でPLOS本文を直接確認: 参考文献リストにYuan et al. 2023 — 本プロジェクトが再現・改良対象とする論文 — が"microneedled skin"を含むタイトルで1件引用されているのみで、本文・手法・考察中には一切登場しない)。バリデーションはランダム85/15分割のみで、leave-one-drug-out等のapplicability domain評価は行っていない。
 
 **本プロジェクトとの比較で言えること**:
 - 本プロジェクトが計画しているleave-one-drug-out交差検証は、Abdallah et al.のランダム分割よりも一般化性能の評価として厳格である。これは正当にアピールできる方法論的な強み。
