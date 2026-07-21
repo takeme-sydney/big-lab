@@ -1,0 +1,9 @@
+item,value,details
+random_state,42,Applied to all stochastic estimators and splitters.
+skin_dataset_rows,214,Experimental compounds; not synthetic.
+yuan_dataset_rows,191,Experimental microneedle observations; not synthetic.
+cosmetic_dataset_rows,48,Prediction-only ingredients; no MN parameters.
+yuan_small_molecule_rows,134,Rows for four drugs eligible for descriptor transfer.
+yuan_non_small_molecule_rows,57,BSA and copper-ion rows excluded from transfer feature.
+selected_4a_fitted_model,GaussianProcess,Chosen from saved 5-fold OOF results.
+physics_synthetic_file,phase4b_physics_augmented_points.csv,Explicitly flagged Potts--Guy grid points; never described as experiments.

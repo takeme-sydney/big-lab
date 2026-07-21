@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#edf2f0">
+  <meta name="description" content="BiG Labの「Transfer Learning for
+Microneedle Drug Permeation QSAR」に関するMarkdown正本のHTML閲覧版。">
+  <title>Transfer Learning for Microneedle Drug Permeation
+QSAR · BiG Lab</title>
+  <link rel="alternate" type="text/markdown" href="README.md" title="Markdown source">
+    <link rel="stylesheet" href="../../shared/website/assets/research-document.css">
+    </head>
+<body class="research-document">
+  <a class="skip-link" href="#document-content">本文へ移動</a>
+
+  <header class="document-topbar">
+    <div class="document-topbar-inner">
+      <a class="document-brand" href="../../shared/website/index.html" aria-label="BiG Lab 資料一覧へ">
+        <span class="document-brand-mark" aria-hidden="true">B</span>
+        <span class="document-brand-copy">
+          <strong>BiG Lab</strong>
+          <small>Research library</small>
+        </span>
+      </a>
+
+      <nav class="document-actions" aria-label="文書ナビゲーション">
+        <a href="../../shared/website/index.html">資料一覧</a>
+        <a class="source-action" href="README.md">Markdown正本 <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <header class="document-hero">
+    <div class="document-hero-copy">
+      <p class="document-kicker">
+        <span aria-hidden="true"></span>
+        DOCUMENT INDEX
+      </p>
+      <h1 class="long-title">Transfer Learning for Microneedle Drug
+Permeation QSAR</h1>
+      <p class="document-description">BiG Labの「Transfer Learning for
+Microneedle Drug Permeation QSAR」に関するMarkdown正本のHTML閲覧版。</p>
+
+      <dl class="document-meta">
+                        <div>
+          <dt>Format</dt>
+          <dd>HTML reading view</dd>
+        </div>
+      </dl>
+    </div>
+
+    <aside class="format-map" aria-label="MarkdownからHTMLへの文書フロー">
+      <div class="format-map-head">
+        <span>DOCUMENT PIPELINE</span>
+        <small>ONE SOURCE · TWO VIEWS</small>
+      </div>
+      <div class="format-map-flow">
+        <div class="format-node source-node">
+          <span>CANONICAL</span>
+          <strong>Markdown</strong>
+          <small>内容の正本</small>
+        </div>
+        <span class="format-arrow" aria-hidden="true">→</span>
+        <div class="format-node view-node">
+          <span>READING VIEW</span>
+          <strong>HTML</strong>
+          <small>閲覧用レンダリング</small>
+        </div>
+      </div>
+      <p>内容は同一に保ち、画面では読解・移動・参照に適した構造で表示します。</p>
+    </aside>
+  </header>
+
+  <div class="document-rule" aria-hidden="true">
+    <span></span><span></span><span></span>
+  </div>
+
+  <div class="document-shell">
+        <aside class="document-toc" aria-labelledby="document-toc-title">
+      <p id="document-toc-title">On this page</p>
+      <nav aria-label="目次">
+        <ul>
+        <li><a
+        href="#transfer-learning-for-microneedle-drug-permeation-qsar"
+        id="toc-transfer-learning-for-microneedle-drug-permeation-qsar">Transfer
+        Learning for Microneedle Drug Permeation QSAR</a>
+        <ul>
+        <li><a href="#start-here" id="toc-start-here">Start
+        here</a></li>
+        <li><a href="#このモジュールの位置づけ"
+        id="toc-このモジュールの位置づけ">このモジュールの位置づけ</a></li>
+        <li><a href="#実行物" id="toc-実行物">実行物</a></li>
+        <li><a href="#再実行" id="toc-再実行">再実行</a></li>
+        <li><a href="#守るべきデータ境界"
+        id="toc-守るべきデータ境界">守るべきデータ境界</a></li>
+        <li><a href="#関連モジュールと編集境界"
+        id="toc-関連モジュールと編集境界">関連モジュールと編集境界</a></li>
+        </ul></li>
+        </ul>
+      </nav>
+            <a class="toc-source-link" href="README.md">
+        <span>Source</span>
+        <strong>README.md</strong>
+      </a>
+          </aside>
+    
+    <main id="document-content" class="document-main">
+      <article class="document-content">
+                <p><a href="README.html">HTML版を開く</a></p>
+                <h1
+                id="transfer-learning-for-microneedle-drug-permeation-qsar">Transfer
+                Learning for Microneedle Drug Permeation QSAR</h1>
+                <p>更新日: 2026-07-21 状態:
+                Terra段の実計算・論文草稿・数値監査を完了。Sol段の独立検証・仕上げ待ち。</p>
+                <h2 id="start-here">Start here</h2>
+                <ol type="1">
+                <li>研究論文（英語）: <a
+                href="paper.md"><code>paper.md</code></a></li>
+                <li>要件定義: <a
+                href="requirements.md"><code>requirements.md</code></a></li>
+                <li>実行用指示文: <a
+                href="implementation-prompt.md"><code>implementation-prompt.md</code></a></li>
+                <li>実行判断・数値監査・自己採点: <a
+                href="notes/decision-log.md"><code>notes/decision-log.md</code></a></li>
+                <li>実行コード: <a
+                href="../research/transfer_learning_analysis.py"><code>../research/transfer_learning_analysis.py</code></a></li>
+                <li>数値監査コード: <a
+                href="../research/audit_transfer_learning_paper.py"><code>../research/audit_transfer_learning_paper.py</code></a></li>
+                <li>研究計画のチェックリスト: <a
+                href="../research/RESEARCH_PLAN.md"><code>../research/RESEARCH_PLAN.md</code></a></li>
+                </ol>
+                <h2
+                id="このモジュールの位置づけ">このモジュールの位置づけ</h2>
+                <p>このモジュールは、<code>../research/RESEARCH_PLAN.md</code>のフェーズ2〜6を<strong>実際に計算した</strong>研究論文である。214化合物の一般皮膚透過性QSAR（4A）と、191点・6薬剤のYuan
+                2023マイクロニードル透過データ（4B）を別の科学的対象として扱う。48美容成分は分子記述子しか持たないため、一般皮膚透過性の4Aによるスクリーニングに限定する。薬剤負荷量、MN長、MN表面積、透過時間などを仮定して4Bに通すことは行っていない。</p>
+                <p>Terra段で保存した主な結果は次のとおりである。</p>
+                <ul>
+                <li>214件の4AではGaussian Process
+                Regressionが選択され、5-fold OOF (R^2=0.492)、RMSE=0.831
+                log (K_p) だった。根拠: <a
+                href="../research/phase4a_model_performance.csv"><code>../research/phase4a_model_performance.csv</code></a></li>
+                <li>Yuanデータの固定70:30 splitではXGBoost
+                amountモデルが (R^2=0.967) だった一方、6薬剤LODOでは
+                (R^2=-0.122) となった。根拠: <a
+                href="../research/phase4b_random_split_performance.csv"><code>../research/phase4b_random_split_performance.csv</code></a>、<a
+                href="../research/phase4b_lodo_performance.csv"><code>../research/phase4b_lodo_performance.csv</code></a></li>
+                <li>4小分子薬剤だけを対象に一般皮膚log (K_p)
+                を第8特徴量として転移したが、XGBoostのLODO amount (R^2)
+                は7特徴量・8特徴量とも (-0.190)
+                で、改善しなかった。根拠: <a
+                href="../research/phase4b_transfer_lodo_performance.csv"><code>../research/phase4b_transfer_lodo_performance.csv</code></a></li>
+                <li>100点のPotts–Guy疑似データは<code>is_synthetic_physics_augmented=True</code>で分離して保存し、2記述子補助実験では性能を改善しなかった。根拠:
+                <a
+                href="../research/phase4b_physics_augmented_points.csv"><code>../research/phase4b_physics_augmented_points.csv</code></a>、<a
+                href="../research/phase4b_physics_augmentation_metrics.csv"><code>../research/phase4b_physics_augmentation_metrics.csv</code></a></li>
+                </ul>
+                <p>これらは独立レビュー前の結果であり、数値はすべて保存CSVから引用している。既報のYuan
+                et al. (2023)
+                の値は先行研究としてのみ扱い、本モジュールの計算結果とは区別している。</p>
+                <h2 id="実行物">実行物</h2>
+                <p><code>../research/</code>直下に、再実行可能なドライバ、全予測CSV、性能CSV、SHAP
+                CSV、適用範囲CSV、疑似データCSV、最終PNGを置く。入口となるファイルは次のとおり。</p>
+                <ul>
+                <li><code>transfer_learning_analysis.py</code> —
+                フェーズ2〜5の計算ドライバ。全乱数処理は<code>RANDOM_STATE = 42</code>。</li>
+                <li><code>transfer_learning_run_manifest.csv</code> —
+                データセット境界、選択4Aモデル、疑似データファイルの記録。</li>
+                <li><code>phase2_curation_summary.csv</code> —
+                重複・外れ値・記述子整合性・原データ不在の確認。</li>
+                <li><code>phase4a_model_performance.csv</code> /
+                <code>phase4a_cv_predictions.csv</code> —
+                4A比較とOOF予測。</li>
+                <li><code>phase4b_*</code> —
+                Yuan再現、LODO、転移、負荷量是正、物理拡張の各出力。</li>
+                <li><code>phase5_*</code> —
+                SHAP、4A-only美容成分予測、適用範囲、スコープ比較。</li>
+                <li><code>phase6_numerical_audit.csv</code> —
+                本文の実質的数値と保存CSVの照合結果。</li>
+                </ul>
+                <h2 id="再実行">再実行</h2>
+                <p>macOS標準のPython
+                3.9は既存<code>descriptors.py</code>の型注釈を解釈できないため、作業時は依存関係を変更せず、隔離したPython
+                3.11ランタイムを使用した。リポジトリのルートから以下を実行する。</p>
+                <div class="sourceCode" id="cb1"><pre
+                class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> run <span class="at">--python</span> 3.11 <span class="at">--with-requirements</span> microneedle-drug-delivery/research/requirements.txt <span class="dt">\</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  python microneedle-drug-delivery/research/transfer_learning_analysis.py</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> run <span class="at">--python</span> 3.11 <span class="at">--with-requirements</span> microneedle-drug-delivery/research/requirements.txt <span class="dt">\</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  python microneedle-drug-delivery/research/audit_transfer_learning_paper.py</span></code></pre></div>
+                <p>前者はCSV・PNGを再生成し、後者は<code>paper.md</code>の監査対象となる実質的な結果数値をCSV出力と照合する。各段階は先行CSVを実際に読み直してから引用する。</p>
+                <h2 id="守るべきデータ境界">守るべきデータ境界</h2>
+                <ul>
+                <li><strong>214化合物</strong>: 実測の一般皮膚透過性log
+                (K_p)。4Aモデルの学習・評価にのみ使用する。</li>
+                <li><strong>191観測・6薬剤</strong>:
+                実測のMN透過実験。4Bの再現・LODO・転移評価に使用する。</li>
+                <li><strong>48美容成分</strong>:
+                分子記述子のみ。4Aの一般皮膚透過性予測に限定する。</li>
+                <li><strong>100疑似点</strong>:
+                Potts–Guy式から生成し、<code>is_synthetic_physics_augmented=True</code>で明示した。214件または191件の実測数と合算して記述しない。</li>
+                <li><strong>BSA・copper ions</strong>:
+                RDKit小分子記述子の対象外。7特徴量4Bには残すが、8特徴量転移には入れない。</li>
+                </ul>
+                <h2
+                id="関連モジュールと編集境界">関連モジュールと編集境界</h2>
+                <p><code>../active-learning-paper/</code>、<code>../small-data-ml-paper/</code>、<code>../competitive-landscape/</code>は別ブランチの別モジュールであり、このタスクでは編集していない。比較が必要な場合も<code>git show &lt;branch&gt;:&lt;path&gt;</code>だけを使う。新規スクリプト、結果、図は<code>../research/</code>直下に置き、本文・要件・判断記録はこのディレクトリに置く。</p>
+              </article>
+    </main>
+
+    <aside class="reading-gauge" aria-hidden="true">
+      <p>READING DEPTH</p>
+      <div class="gauge-scale">
+        <span>00</span>
+        <span>25</span>
+        <span>50</span>
+        <span>75</span>
+        <span>100</span>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="document-footer">
+    <div>
+      <strong>BiG Lab Research Library</strong>
+      <p>Markdown is canonical. HTML is the synchronized reading view.</p>
+    </div>
+    <div class="document-footer-links">
+      <a href="../../shared/website/index.html">資料一覧へ戻る</a>
+      <a href="README.md">Markdownを開く</a>
+    </div>
+  </footer>
+</body>
+</html>

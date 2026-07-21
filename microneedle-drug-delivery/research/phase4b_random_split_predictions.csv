@@ -1,0 +1,465 @@
+row_index,drug_name,target,model,validation,observed,predicted
+152,copper ions,permeation_percentage,Fick_diffusion_proxy,random_70_30_test,6.1749661,77.28299926844475
+75,lidocaine,permeation_percentage,Fick_diffusion_proxy,random_70_30_test,26.0285567,87.57543586714056
+158,GHK peptide,permeation_percentage,Fick_diffusion_proxy,random_70_30_test,9.7465097,71.34841633818208
+66,lidocaine,permeation_percentage,Fick_diffusion_proxy,random_70_30_test,2.3593597,82.50011058447852
+60,lidocaine,permeation_percentage,Fick_diffusion_proxy,random_70_30_test,9.4920383,78.65354221250604
+15,BSA,permeation_percentage,Fick_diffusion_proxy,random_70_30_test,59.8994766,59.60961451563382
+9,BSA,permeation_percentage,Fick_diffusion_proxy,random_70_30_test,69.0601156,51.62461658629698
+16,BSA,permeation_percentage,Fick_diffusion_proxy,random_70_30_test,56.6249605,59.60961451563382
+128,caffeine,permeation_percentage,Fick_diffusion_proxy,random_70_30_test,1.4912863,93.2533332105087
+125,caffeine,permeation_percentage,Fick_diffusion_proxy,random_70_30_test,0.6112768,89.00461255555396
+139,copper ions,permeation_percentage,Fick_diffusion_proxy,random_70_30_test,0.6691034,38.64762307712327
+156,GHK peptide,permeation_percentage,Fick_diffusion_proxy,random_70_30_test,7.7147601,52.47921997289725
+18,BSA,permeation_percentage,Fick_diffusion_proxy,random_70_30_test,61.464777,70.78220864445031
+161,GHK peptide,permeation_percentage,Fick_diffusion_proxy,random_70_30_test,6.2920355,65.29247549289533
+112,Rhodamine B,permeation_percentage,Fick_diffusion_proxy,random_70_30_test,22.8122906,97.76208260228302
+181,lidocaine,permeation_percentage,Fick_diffusion_proxy,random_70_30_test,2.8926549,67.26038174415166
+155,GHK peptide,permeation_percentage,Fick_diffusion_proxy,random_70_30_test,5.7460151,27.066066745612936
+65,lidocaine,permeation_percentage,Fick_diffusion_proxy,random_70_30_test,2.4474498,82.50011058447852
+165,GHK peptide,permeation_percentage,Fick_diffusion_proxy,random_70_30_test,9.0041458,65.29247549289533
+42,lidocaine,permeation_percentage,Fick_diffusion_proxy,random_70_30_test,1.2837534,50.71052178879396
+30,BSA,permeation_percentage,Fick_diffusion_proxy,random_70_30_test,108.3982246,81.84751986498526
+24,BSA,permeation_percentage,Fick_diffusion_proxy,random_70_30_test,82.0372965,77.15825882242144
+67,lidocaine,permeation_percentage,Fick_diffusion_proxy,random_70_30_test,16.2602985,82.50011058447852
+98,Rhodamine B,permeation_percentage,Fick_diffusion_proxy,random_70_30_test,9.5060472,96.12482974664928
+69,lidocaine,permeation_percentage,Fick_diffusion_proxy,random_70_30_test,16.0061849,82.50011058447852
+113,caffeine,permeation_percentage,Fick_diffusion_proxy,random_70_30_test,0.0198437,55.75211288357881
+96,Rhodamine B,permeation_percentage,Fick_diffusion_proxy,random_70_30_test,4.7132336,93.67601941381827
+19,BSA,permeation_percentage,Fick_diffusion_proxy,random_70_30_test,68.5504493,70.78220864445031
+45,lidocaine,permeation_percentage,Fick_diffusion_proxy,random_70_30_test,1.2837534,55.296704538652854
+76,lidocaine,permeation_percentage,Fick_diffusion_proxy,random_70_30_test,23.2299181,87.57543586714056
+169,GHK peptide,permeation_percentage,Fick_diffusion_proxy,random_70_30_test,0.1807479,27.066066745612936
+68,lidocaine,permeation_percentage,Fick_diffusion_proxy,random_70_30_test,16.2278188,82.50011058447852
+5,BSA,permeation_percentage,Fick_diffusion_proxy,random_70_30_test,60.4525744,35.86050640937736
+132,copper ions,permeation_percentage,Fick_diffusion_proxy,random_70_30_test,1.0150345,61.707507745197375
+90,lidocaine,permeation_percentage,Fick_diffusion_proxy,random_70_30_test,18.9082354,93.7687441451813
+164,GHK peptide,permeation_percentage,Fick_diffusion_proxy,random_70_30_test,5.6861063,52.47921997289725
+108,Rhodamine B,permeation_percentage,Fick_diffusion_proxy,random_70_30_test,16.3370368,97.54854861421381
+182,lidocaine,permeation_percentage,Fick_diffusion_proxy,random_70_30_test,6.8148163,73.00697275800422
+186,lidocaine,permeation_percentage,Fick_diffusion_proxy,random_70_30_test,5.9165036,73.00697275800422
+35,lidocaine,permeation_percentage,Fick_diffusion_proxy,random_70_30_test,2.0977566,18.46066970214173
+100,Rhodamine B,permeation_percentage,Fick_diffusion_proxy,random_70_30_test,11.5925059,96.69488916402736
+55,lidocaine,permeation_percentage,Fick_diffusion_proxy,random_70_30_test,5.7532681,70.17298587407149
+135,copper ions,permeation_percentage,Fick_diffusion_proxy,random_70_30_test,0.8371034,38.64762307712327
+78,lidocaine,permeation_percentage,Fick_diffusion_proxy,random_70_30_test,27.6600463,93.0886656144863
+95,Rhodamine B,permeation_percentage,Fick_diffusion_proxy,random_70_30_test,6.3970482,93.67601941381827
+29,BSA,permeation_percentage,Fick_diffusion_proxy,random_70_30_test,88.4325192,80.61832212955025
+142,copper ions,permeation_percentage,Fick_diffusion_proxy,random_70_30_test,1.4770345,77.28299926844475
+51,lidocaine,permeation_percentage,Fick_diffusion_proxy,random_70_30_test,2.9352834,65.83194613660194
+162,GHK peptide,permeation_percentage,Fick_diffusion_proxy,random_70_30_test,7.2219962,71.34841633818208
+183,lidocaine,permeation_percentage,Fick_diffusion_proxy,random_70_30_test,0.0411237,30.06229881969068
+31,BSA,permeation_percentage,Fick_diffusion_proxy,random_70_30_test,95.1974867,81.84751986498526
+154,copper ions,permeation_percentage,Fick_diffusion_proxy,random_70_30_test,6.7594895,77.28299926844475
+12,BSA,permeation_percentage,Fick_diffusion_proxy,random_70_30_test,50.2869057,51.62461658629698
+41,lidocaine,permeation_percentage,Fick_diffusion_proxy,random_70_30_test,3.5109631,44.36925040836163
+124,caffeine,permeation_percentage,Fick_diffusion_proxy,random_70_30_test,2.4832009,94.55805179365423
+56,lidocaine,permeation_percentage,Fick_diffusion_proxy,random_70_30_test,9.1872652,70.17298587407149
+119,caffeine,permeation_percentage,Fick_diffusion_proxy,random_70_30_test,0.1772166,81.07575750037697
+117,caffeine,permeation_percentage,Fick_diffusion_proxy,random_70_30_test,0.1188347,86.72154628644718
+152,copper ions,permeation_percentage,MLR,random_70_30_test,6.1749661,5.507256184229064
+75,lidocaine,permeation_percentage,MLR,random_70_30_test,26.0285567,11.131397474101966
+158,GHK peptide,permeation_percentage,MLR,random_70_30_test,9.7465097,9.956279940209825
+66,lidocaine,permeation_percentage,MLR,random_70_30_test,2.3593597,7.863970238646203
+60,lidocaine,permeation_percentage,MLR,random_70_30_test,9.4920383,6.642794424459169
+15,BSA,permeation_percentage,MLR,random_70_30_test,59.8994766,54.19751256856189
+9,BSA,permeation_percentage,MLR,random_70_30_test,69.0601156,51.190875612488085
+16,BSA,permeation_percentage,MLR,random_70_30_test,56.6249605,54.20047201081799
+128,caffeine,permeation_percentage,MLR,random_70_30_test,1.4912863,17.37886381375008
+125,caffeine,permeation_percentage,MLR,random_70_30_test,0.6112768,2.287230048823126
+139,copper ions,permeation_percentage,MLR,random_70_30_test,0.6691034,1.7764177941550088
+156,GHK peptide,permeation_percentage,MLR,random_70_30_test,7.7147601,3.919626434239035
+18,BSA,permeation_percentage,MLR,random_70_30_test,61.464777,63.25249282751806
+161,GHK peptide,permeation_percentage,MLR,random_70_30_test,6.2920355,6.937953187224423
+112,Rhodamine B,permeation_percentage,MLR,random_70_30_test,22.8122906,32.215189882221296
+181,lidocaine,permeation_percentage,MLR,random_70_30_test,2.8926549,2.5713295099844515
+155,GHK peptide,permeation_percentage,MLR,random_70_30_test,5.7460151,1.9074085989154383
+65,lidocaine,permeation_percentage,MLR,random_70_30_test,2.4474498,7.863970238646203
+165,GHK peptide,permeation_percentage,MLR,random_70_30_test,9.0041458,6.937953187224423
+42,lidocaine,permeation_percentage,MLR,random_70_30_test,1.2837534,4.9659462280207975
+30,BSA,permeation_percentage,MLR,random_70_30_test,108.3982246,93.44157354751788
+24,BSA,permeation_percentage,MLR,random_70_30_test,82.0372965,75.32579983945962
+67,lidocaine,permeation_percentage,MLR,random_70_30_test,16.2602985,8.113070721116571
+98,Rhodamine B,permeation_percentage,MLR,random_70_30_test,9.5060472,0.019704517043791725
+69,lidocaine,permeation_percentage,MLR,random_70_30_test,16.0061849,8.113070721116571
+113,caffeine,permeation_percentage,MLR,random_70_30_test,0.0198437,-6.264695751302142
+96,Rhodamine B,permeation_percentage,MLR,random_70_30_test,4.7132336,-10.041384659574177
+19,BSA,permeation_percentage,MLR,random_70_30_test,68.5504493,63.25545226977416
+45,lidocaine,permeation_percentage,MLR,random_70_30_test,1.2837534,5.049788638496693
+76,lidocaine,permeation_percentage,MLR,random_70_30_test,23.2299181,11.131397474101966
+169,GHK peptide,permeation_percentage,MLR,random_70_30_test,0.1807479,-2.410624352304893
+68,lidocaine,permeation_percentage,MLR,random_70_30_test,16.2278188,8.113070721116571
+5,BSA,permeation_percentage,MLR,random_70_30_test,60.4525744,48.166672252737015
+132,copper ions,permeation_percentage,MLR,random_70_30_test,1.0150345,3.7886356294786054
+90,lidocaine,permeation_percentage,MLR,random_70_30_test,18.9082354,28.99225750954394
+164,GHK peptide,permeation_percentage,MLR,random_70_30_test,5.6861063,3.919626434239035
+108,Rhodamine B,permeation_percentage,MLR,random_70_30_test,16.3370368,24.166318540926916
+182,lidocaine,permeation_percentage,MLR,random_70_30_test,6.8148163,5.589656262969854
+186,lidocaine,permeation_percentage,MLR,random_70_30_test,5.9165036,5.589656262969854
+35,lidocaine,permeation_percentage,MLR,random_70_30_test,2.0977566,4.714418998605353
+100,Rhodamine B,permeation_percentage,MLR,random_70_30_test,11.5925059,6.056358023014575
+55,lidocaine,permeation_percentage,MLR,random_70_30_test,5.7532681,6.100852885792975
+135,copper ions,permeation_percentage,MLR,random_70_30_test,0.8371034,1.7764177941550088
+78,lidocaine,permeation_percentage,MLR,random_70_30_test,27.6600463,24.249700483540607
+95,Rhodamine B,permeation_percentage,MLR,random_70_30_test,6.3970482,-10.041384659574177
+29,BSA,permeation_percentage,MLR,random_70_30_test,88.4325192,87.40206629365728
+142,copper ions,permeation_percentage,MLR,random_70_30_test,1.4770345,9.825289135449395
+51,lidocaine,permeation_percentage,MLR,random_70_30_test,2.9352834,5.385158277381919
+162,GHK peptide,permeation_percentage,MLR,random_70_30_test,7.2219962,9.956279940209825
+183,lidocaine,permeation_percentage,MLR,random_70_30_test,0.0411237,-2.459215078324533
+31,BSA,permeation_percentage,MLR,random_70_30_test,95.1974867,93.43576035737196
+154,copper ions,permeation_percentage,MLR,random_70_30_test,6.7594895,5.507256184229064
+12,BSA,permeation_percentage,MLR,random_70_30_test,50.2869057,51.1821452578326
+41,lidocaine,permeation_percentage,MLR,random_70_30_test,3.5109631,4.882103818551016
+124,caffeine,permeation_percentage,MLR,random_70_30_test,2.4832009,4.523953469569349
+56,lidocaine,permeation_percentage,MLR,random_70_30_test,9.1872652,6.100852885792975
+119,caffeine,permeation_percentage,MLR,random_70_30_test,0.1772166,-3.749423457147657
+117,caffeine,permeation_percentage,MLR,random_70_30_test,0.1188347,-2.323591563017544
+152,copper ions,permeation_percentage,RandomForest,random_70_30_test,6.1749661,5.058616405643775
+75,lidocaine,permeation_percentage,RandomForest,random_70_30_test,26.0285567,16.95566011087646
+158,GHK peptide,permeation_percentage,RandomForest,random_70_30_test,9.7465097,9.543329468740493
+66,lidocaine,permeation_percentage,RandomForest,random_70_30_test,2.3593597,8.437990749715015
+60,lidocaine,permeation_percentage,RandomForest,random_70_30_test,9.4920383,9.056420970956708
+15,BSA,permeation_percentage,RandomForest,random_70_30_test,59.8994766,67.21563525200015
+9,BSA,permeation_percentage,RandomForest,random_70_30_test,69.0601156,51.062496788400146
+16,BSA,permeation_percentage,RandomForest,random_70_30_test,56.6249605,67.15914025060006
+128,caffeine,permeation_percentage,RandomForest,random_70_30_test,1.4912863,23.649087056929307
+125,caffeine,permeation_percentage,RandomForest,random_70_30_test,0.6112768,3.532079799337135
+139,copper ions,permeation_percentage,RandomForest,random_70_30_test,0.6691034,1.132849404796661
+156,GHK peptide,permeation_percentage,RandomForest,random_70_30_test,7.7147601,4.910460566003369
+18,BSA,permeation_percentage,RandomForest,random_70_30_test,61.464777,68.75240830580024
+161,GHK peptide,permeation_percentage,RandomForest,random_70_30_test,6.2920355,7.675630199935563
+112,Rhodamine B,permeation_percentage,RandomForest,random_70_30_test,22.8122906,23.69952750742666
+181,lidocaine,permeation_percentage,RandomForest,random_70_30_test,2.8926549,2.723392409802624
+155,GHK peptide,permeation_percentage,RandomForest,random_70_30_test,5.7460151,3.109037623251429
+65,lidocaine,permeation_percentage,RandomForest,random_70_30_test,2.4474498,8.437990749715015
+165,GHK peptide,permeation_percentage,RandomForest,random_70_30_test,9.0041458,7.675630199935563
+42,lidocaine,permeation_percentage,RandomForest,random_70_30_test,1.2837534,3.1904232489069058
+30,BSA,permeation_percentage,RandomForest,random_70_30_test,108.3982246,93.42337246140008
+24,BSA,permeation_percentage,RandomForest,random_70_30_test,82.0372965,76.65093817460013
+67,lidocaine,permeation_percentage,RandomForest,random_70_30_test,16.2602985,12.98105940295576
+98,Rhodamine B,permeation_percentage,RandomForest,random_70_30_test,9.5060472,11.284148423933264
+69,lidocaine,permeation_percentage,RandomForest,random_70_30_test,16.0061849,12.98105940295576
+113,caffeine,permeation_percentage,RandomForest,random_70_30_test,0.0198437,0.8048123644666717
+96,Rhodamine B,permeation_percentage,RandomForest,random_70_30_test,4.7132336,6.822713206836683
+19,BSA,permeation_percentage,RandomForest,random_70_30_test,68.5504493,65.95529146080013
+45,lidocaine,permeation_percentage,RandomForest,random_70_30_test,1.2837534,3.216149041044288
+76,lidocaine,permeation_percentage,RandomForest,random_70_30_test,23.2299181,16.95566011087646
+169,GHK peptide,permeation_percentage,RandomForest,random_70_30_test,0.1807479,0.2778590195385718
+68,lidocaine,permeation_percentage,RandomForest,random_70_30_test,16.2278188,12.98105940295576
+5,BSA,permeation_percentage,RandomForest,random_70_30_test,60.4525744,59.549065971200065
+132,copper ions,permeation_percentage,RandomForest,random_70_30_test,1.0150345,1.042790763589046
+90,lidocaine,permeation_percentage,RandomForest,random_70_30_test,18.9082354,19.8456034722748
+164,GHK peptide,permeation_percentage,RandomForest,random_70_30_test,5.6861063,4.910460566003369
+108,Rhodamine B,permeation_percentage,RandomForest,random_70_30_test,16.3370368,18.63729683780662
+182,lidocaine,permeation_percentage,RandomForest,random_70_30_test,6.8148163,5.353542181707105
+186,lidocaine,permeation_percentage,RandomForest,random_70_30_test,5.9165036,5.353542181707105
+35,lidocaine,permeation_percentage,RandomForest,random_70_30_test,2.0977566,1.642610001396505
+100,Rhodamine B,permeation_percentage,RandomForest,random_70_30_test,11.5925059,13.51267016742421
+55,lidocaine,permeation_percentage,RandomForest,random_70_30_test,5.7532681,6.279042866173331
+135,copper ions,permeation_percentage,RandomForest,random_70_30_test,0.8371034,1.132849404796661
+78,lidocaine,permeation_percentage,RandomForest,random_70_30_test,27.6600463,29.719547518210113
+95,Rhodamine B,permeation_percentage,RandomForest,random_70_30_test,6.3970482,6.822713206836683
+29,BSA,permeation_percentage,RandomForest,random_70_30_test,88.4325192,90.93722653859996
+142,copper ions,permeation_percentage,RandomForest,random_70_30_test,1.4770345,1.5268651698699964
+51,lidocaine,permeation_percentage,RandomForest,random_70_30_test,2.9352834,1.7142215599666768
+162,GHK peptide,permeation_percentage,RandomForest,random_70_30_test,7.2219962,9.543329468740493
+183,lidocaine,permeation_percentage,RandomForest,random_70_30_test,0.0411237,0.09946938260381011
+31,BSA,permeation_percentage,RandomForest,random_70_30_test,95.1974867,88.16244070520011
+154,copper ions,permeation_percentage,RandomForest,random_70_30_test,6.7594895,5.058616405643775
+12,BSA,permeation_percentage,RandomForest,random_70_30_test,50.2869057,55.49123309080001
+41,lidocaine,permeation_percentage,RandomForest,random_70_30_test,3.5109631,2.205568127128572
+124,caffeine,permeation_percentage,RandomForest,random_70_30_test,2.4832009,2.2055769353033297
+56,lidocaine,permeation_percentage,RandomForest,random_70_30_test,9.1872652,6.279042866173331
+119,caffeine,permeation_percentage,RandomForest,random_70_30_test,0.1772166,2.4671442051852366
+117,caffeine,permeation_percentage,RandomForest,random_70_30_test,0.1188347,0.16230960286666637
+152,copper ions,permeation_percentage,XGBoost,random_70_30_test,6.1749661,3.9270174503326416
+75,lidocaine,permeation_percentage,XGBoost,random_70_30_test,26.0285567,18.226675033569336
+158,GHK peptide,permeation_percentage,XGBoost,random_70_30_test,9.7465097,5.803588390350342
+66,lidocaine,permeation_percentage,XGBoost,random_70_30_test,2.3593597,5.837160587310791
+60,lidocaine,permeation_percentage,XGBoost,random_70_30_test,9.4920383,7.809739589691162
+15,BSA,permeation_percentage,XGBoost,random_70_30_test,59.8994766,68.39350891113281
+9,BSA,permeation_percentage,XGBoost,random_70_30_test,69.0601156,57.65331268310547
+16,BSA,permeation_percentage,XGBoost,random_70_30_test,56.6249605,68.61070251464844
+128,caffeine,permeation_percentage,XGBoost,random_70_30_test,1.4912863,22.047801971435547
+125,caffeine,permeation_percentage,XGBoost,random_70_30_test,0.6112768,3.31630539894104
+139,copper ions,permeation_percentage,XGBoost,random_70_30_test,0.6691034,1.2555615901947021
+156,GHK peptide,permeation_percentage,XGBoost,random_70_30_test,7.7147601,4.3721923828125
+18,BSA,permeation_percentage,XGBoost,random_70_30_test,61.464777,67.81094360351562
+161,GHK peptide,permeation_percentage,XGBoost,random_70_30_test,6.2920355,5.803588390350342
+112,Rhodamine B,permeation_percentage,XGBoost,random_70_30_test,22.8122906,25.347476959228516
+181,lidocaine,permeation_percentage,XGBoost,random_70_30_test,2.8926549,2.388411283493042
+155,GHK peptide,permeation_percentage,XGBoost,random_70_30_test,5.7460151,2.1203668117523193
+65,lidocaine,permeation_percentage,XGBoost,random_70_30_test,2.4474498,5.837160587310791
+165,GHK peptide,permeation_percentage,XGBoost,random_70_30_test,9.0041458,5.803588390350342
+42,lidocaine,permeation_percentage,XGBoost,random_70_30_test,1.2837534,2.5108602046966553
+30,BSA,permeation_percentage,XGBoost,random_70_30_test,108.3982246,93.0771255493164
+24,BSA,permeation_percentage,XGBoost,random_70_30_test,82.0372965,78.39594268798828
+67,lidocaine,permeation_percentage,XGBoost,random_70_30_test,16.2602985,16.643569946289062
+98,Rhodamine B,permeation_percentage,XGBoost,random_70_30_test,9.5060472,9.403258323669434
+69,lidocaine,permeation_percentage,XGBoost,random_70_30_test,16.0061849,16.643569946289062
+113,caffeine,permeation_percentage,XGBoost,random_70_30_test,0.0198437,-0.805036187171936
+96,Rhodamine B,permeation_percentage,XGBoost,random_70_30_test,4.7132336,6.443058490753174
+19,BSA,permeation_percentage,XGBoost,random_70_30_test,68.5504493,67.81094360351562
+45,lidocaine,permeation_percentage,XGBoost,random_70_30_test,1.2837534,2.5108602046966553
+76,lidocaine,permeation_percentage,XGBoost,random_70_30_test,23.2299181,18.226675033569336
+169,GHK peptide,permeation_percentage,XGBoost,random_70_30_test,0.1807479,-0.5913916826248169
+68,lidocaine,permeation_percentage,XGBoost,random_70_30_test,16.2278188,16.643569946289062
+5,BSA,permeation_percentage,XGBoost,random_70_30_test,60.4525744,52.30073547363281
+132,copper ions,permeation_percentage,XGBoost,random_70_30_test,1.0150345,2.0631370544433594
+90,lidocaine,permeation_percentage,XGBoost,random_70_30_test,18.9082354,21.986942291259766
+164,GHK peptide,permeation_percentage,XGBoost,random_70_30_test,5.6861063,4.3721923828125
+108,Rhodamine B,permeation_percentage,XGBoost,random_70_30_test,16.3370368,18.2874813079834
+182,lidocaine,permeation_percentage,XGBoost,random_70_30_test,6.8148163,2.388411283493042
+186,lidocaine,permeation_percentage,XGBoost,random_70_30_test,5.9165036,2.388411283493042
+35,lidocaine,permeation_percentage,XGBoost,random_70_30_test,2.0977566,1.9866394996643066
+100,Rhodamine B,permeation_percentage,XGBoost,random_70_30_test,11.5925059,14.217164993286133
+55,lidocaine,permeation_percentage,XGBoost,random_70_30_test,5.7532681,12.730184555053711
+135,copper ions,permeation_percentage,XGBoost,random_70_30_test,0.8371034,1.2555615901947021
+78,lidocaine,permeation_percentage,XGBoost,random_70_30_test,27.6600463,30.43710708618164
+95,Rhodamine B,permeation_percentage,XGBoost,random_70_30_test,6.3970482,6.443058490753174
+29,BSA,permeation_percentage,XGBoost,random_70_30_test,88.4325192,91.04000091552734
+142,copper ions,permeation_percentage,XGBoost,random_70_30_test,1.4770345,1.8982324600219727
+51,lidocaine,permeation_percentage,XGBoost,random_70_30_test,2.9352834,2.5108602046966553
+162,GHK peptide,permeation_percentage,XGBoost,random_70_30_test,7.2219962,5.803588390350342
+183,lidocaine,permeation_percentage,XGBoost,random_70_30_test,0.0411237,-0.1959395706653595
+31,BSA,permeation_percentage,XGBoost,random_70_30_test,95.1974867,87.41060638427734
+154,copper ions,permeation_percentage,XGBoost,random_70_30_test,6.7594895,3.9270174503326416
+12,BSA,permeation_percentage,XGBoost,random_70_30_test,50.2869057,54.37468719482422
+41,lidocaine,permeation_percentage,XGBoost,random_70_30_test,3.5109631,2.4290473461151123
+124,caffeine,permeation_percentage,XGBoost,random_70_30_test,2.4832009,2.4020040035247803
+56,lidocaine,permeation_percentage,XGBoost,random_70_30_test,9.1872652,12.730184555053711
+119,caffeine,permeation_percentage,XGBoost,random_70_30_test,0.1772166,2.35258412361145
+117,caffeine,permeation_percentage,XGBoost,random_70_30_test,0.1188347,-1.1546066999435425
+152,copper ions,permeation_amount_ug_cm2,Fick_diffusion_proxy,random_70_30_test,45.4848,569.266572611364
+75,lidocaine,permeation_amount_ug_cm2,Fick_diffusion_proxy,random_70_30_test,7033.95717,23666.385788736065
+158,GHK peptide,permeation_amount_ug_cm2,Fick_diffusion_proxy,random_70_30_test,768.8046883,5627.963080755802
+66,lidocaine,permeation_amount_ug_cm2,Fick_diffusion_proxy,random_70_30_test,1193.647249,41738.455946899376
+60,lidocaine,permeation_amount_ug_cm2,Fick_diffusion_proxy,random_70_30_test,6733.651992,55796.82284555179
+15,BSA,permeation_amount_ug_cm2,Fick_diffusion_proxy,random_70_30_test,980.5544326,975.8093896209257
+9,BSA,permeation_amount_ug_cm2,Fick_diffusion_proxy,random_70_30_test,366.7092141,274.12671407323694
+16,BSA,permeation_amount_ug_cm2,Fick_diffusion_proxy,random_70_30_test,768.4007143,808.902468977151
+128,caffeine,permeation_amount_ug_cm2,Fick_diffusion_proxy,random_70_30_test,79.1873,4951.751993478012
+125,caffeine,permeation_amount_ug_cm2,Fick_diffusion_proxy,random_70_30_test,32.4588,4726.144926699915
+139,copper ions,permeation_amount_ug_cm2,Fick_diffusion_proxy,random_70_30_test,4.928616,284.67839158609
+156,GHK peptide,permeation_amount_ug_cm2,Fick_diffusion_proxy,random_70_30_test,608.5402767,4139.560871462135
+18,BSA,permeation_amount_ug_cm2,Fick_diffusion_proxy,random_70_30_test,1006.1784,1158.7047555096515
+161,GHK peptide,permeation_amount_ug_cm2,Fick_diffusion_proxy,random_70_30_test,496.3157573,5150.270466879584
+112,Rhodamine B,permeation_amount_ug_cm2,Fick_diffusion_proxy,random_70_30_test,11.40614532,48.88104130114151
+181,lidocaine,permeation_amount_ug_cm2,Fick_diffusion_proxy,random_70_30_test,144.6327434,3363.0190872075827
+155,GHK peptide,permeation_amount_ug_cm2,Fick_diffusion_proxy,random_70_30_test,453.2456677,2134.9713448939488
+65,lidocaine,permeation_amount_ug_cm2,Fick_diffusion_proxy,random_70_30_test,1238.213787,41738.455946899376
+165,GHK peptide,permeation_amount_ug_cm2,Fick_diffusion_proxy,random_70_30_test,710.2470186,5150.270466879584
+42,lidocaine,permeation_amount_ug_cm2,Fick_diffusion_proxy,random_70_30_test,910.694674,35974.044156970434
+30,BSA,permeation_amount_ug_cm2,Fick_diffusion_proxy,random_70_30_test,1178.288701,889.6825409323898
+24,BSA,permeation_amount_ug_cm2,Fick_diffusion_proxy,random_70_30_test,1342.950544,1263.080696923039
+67,lidocaine,permeation_amount_ug_cm2,Fick_diffusion_proxy,random_70_30_test,4394.183075,22294.829884349478
+98,Rhodamine B,permeation_amount_ug_cm2,Fick_diffusion_proxy,random_70_30_test,4.753023597,48.06241487332464
+69,lidocaine,permeation_amount_ug_cm2,Fick_diffusion_proxy,random_70_30_test,4325.511402,22294.829884349478
+113,caffeine,permeation_amount_ug_cm2,Fick_diffusion_proxy,random_70_30_test,1.0537,2960.4371941180348
+96,Rhodamine B,permeation_amount_ug_cm2,Fick_diffusion_proxy,random_70_30_test,2.356616786,46.83800970690913
+19,BSA,permeation_amount_ug_cm2,Fick_diffusion_proxy,random_70_30_test,930.2295971,960.5145713051907
+45,lidocaine,permeation_amount_ug_cm2,Fick_diffusion_proxy,random_70_30_test,910.694674,39227.48219972033
+76,lidocaine,permeation_amount_ug_cm2,Fick_diffusion_proxy,random_70_30_test,6277.653062,23666.385788736065
+169,GHK peptide,permeation_amount_ug_cm2,Fick_diffusion_proxy,random_70_30_test,14.2573962,2134.9713448939488
+68,lidocaine,permeation_amount_ug_cm2,Fick_diffusion_proxy,random_70_30_test,4385.405754,22294.829884349478
+5,BSA,permeation_amount_ug_cm2,Fick_diffusion_proxy,random_70_30_test,657.1194841,389.80370466993185
+132,copper ions,permeation_amount_ug_cm2,Fick_diffusion_proxy,random_70_30_test,7.476744,454.5375020511239
+90,lidocaine,permeation_amount_ug_cm2,Fick_diffusion_proxy,random_70_30_test,9566.054457,47439.48303793013
+164,GHK peptide,permeation_amount_ug_cm2,Fick_diffusion_proxy,random_70_30_test,448.5200612,4139.560871462135
+108,Rhodamine B,permeation_amount_ug_cm2,Fick_diffusion_proxy,random_70_30_test,8.168518396,48.77427430710691
+182,lidocaine,permeation_amount_ug_cm2,Fick_diffusion_proxy,random_70_30_test,340.7408145,3650.348637900211
+186,lidocaine,permeation_amount_ug_cm2,Fick_diffusion_proxy,random_70_30_test,295.8251818,3650.348637900211
+35,lidocaine,permeation_amount_ug_cm2,Fick_diffusion_proxy,random_70_30_test,1488.148502,13095.999086699343
+100,Rhodamine B,permeation_amount_ug_cm2,Fick_diffusion_proxy,random_70_30_test,5.796252944,48.34744458201368
+55,lidocaine,permeation_amount_ug_cm2,Fick_diffusion_proxy,random_70_30_test,1554.763163,18963.54770260908
+135,copper ions,permeation_amount_ug_cm2,Fick_diffusion_proxy,random_70_30_test,6.166104,284.67839158609
+78,lidocaine,permeation_amount_ug_cm2,Fick_diffusion_proxy,random_70_30_test,19622.03687,66037.09938691658
+95,Rhodamine B,permeation_amount_ug_cm2,Fick_diffusion_proxy,random_70_30_test,3.19852408,46.83800970690913
+29,BSA,permeation_amount_ug_cm2,Fick_diffusion_proxy,random_70_30_test,1200.029285,1093.990631297997
+142,copper ions,permeation_amount_ug_cm2,Fick_diffusion_proxy,random_70_30_test,10.879836,569.266572611364
+51,lidocaine,permeation_amount_ug_cm2,Fick_diffusion_proxy,random_70_30_test,2082.29003,46701.18258930542
+162,GHK peptide,permeation_amount_ug_cm2,Fick_diffusion_proxy,random_70_30_test,569.6710595,5627.963080755802
+183,lidocaine,permeation_amount_ug_cm2,Fick_diffusion_proxy,random_70_30_test,2.05618266,1503.114940984534
+31,BSA,permeation_amount_ug_cm2,Fick_diffusion_proxy,random_70_30_test,1558.382857,1339.8439001898087
+154,copper ions,permeation_amount_ug_cm2,Fick_diffusion_proxy,random_70_30_test,49.7904,569.266572611364
+12,BSA,permeation_amount_ug_cm2,Fick_diffusion_proxy,random_70_30_test,682.3933104,700.54604707605
+41,lidocaine,permeation_amount_ug_cm2,Fick_diffusion_proxy,random_70_30_test,2490.677205,31475.54623969174
+124,caffeine,permeation_amount_ug_cm2,Fick_diffusion_proxy,random_70_30_test,54.3821,2070.8213342810277
+56,lidocaine,permeation_amount_ug_cm2,Fick_diffusion_proxy,random_70_30_test,2482.766544,18963.54770260908
+119,caffeine,permeation_amount_ug_cm2,Fick_diffusion_proxy,random_70_30_test,9.4102,4305.122723270017
+117,caffeine,permeation_amount_ug_cm2,Fick_diffusion_proxy,random_70_30_test,4.385,3200.025057969901
+152,copper ions,permeation_amount_ug_cm2,MLR,random_70_30_test,45.4848,512.293977598787
+75,lidocaine,permeation_amount_ug_cm2,MLR,random_70_30_test,7033.95717,4262.205095956389
+158,GHK peptide,permeation_amount_ug_cm2,MLR,random_70_30_test,768.8046883,1844.2278570629205
+66,lidocaine,permeation_amount_ug_cm2,MLR,random_70_30_test,1193.647249,5208.230972925245
+60,lidocaine,permeation_amount_ug_cm2,MLR,random_70_30_test,6733.651992,6343.076237867663
+15,BSA,permeation_amount_ug_cm2,MLR,random_70_30_test,980.5544326,-842.9780254743746
+9,BSA,permeation_amount_ug_cm2,MLR,random_70_30_test,366.7092141,-1515.6220629370873
+16,BSA,permeation_amount_ug_cm2,MLR,random_70_30_test,768.4007143,-861.3466554508996
+128,caffeine,permeation_amount_ug_cm2,MLR,random_70_30_test,79.1873,2973.016769601505
+125,caffeine,permeation_amount_ug_cm2,MLR,random_70_30_test,32.4588,-27.42297567564674
+139,copper ions,permeation_amount_ug_cm2,MLR,random_70_30_test,4.928616,-221.10378777238657
+156,GHK peptide,permeation_amount_ug_cm2,MLR,random_70_30_test,608.5402767,644.0519589520591
+18,BSA,permeation_amount_ug_cm2,MLR,random_70_30_test,1006.1784,957.2858216919158
+161,GHK peptide,permeation_amount_ug_cm2,MLR,random_70_30_test,496.3157573,1244.1399080074916
+112,Rhodamine B,permeation_amount_ug_cm2,MLR,random_70_30_test,11.40614532,3334.5295985766134
+181,lidocaine,permeation_amount_ug_cm2,MLR,random_70_30_test,144.6327434,189.395233609328
+155,GHK peptide,permeation_amount_ug_cm2,MLR,random_70_30_test,453.2456677,243.993326248441
+65,lidocaine,permeation_amount_ug_cm2,MLR,random_70_30_test,1238.213787,5208.230972925245
+165,GHK peptide,permeation_amount_ug_cm2,MLR,random_70_30_test,710.2470186,1244.1399080074916
+42,lidocaine,permeation_amount_ug_cm2,MLR,random_70_30_test,910.694674,6009.6940438813
+30,BSA,permeation_amount_ug_cm2,MLR,random_70_30_test,1178.288701,6922.084074792327
+24,BSA,permeation_amount_ug_cm2,MLR,random_70_30_test,1342.950544,3357.6376179136387
+67,lidocaine,permeation_amount_ug_cm2,MLR,random_70_30_test,4394.183075,3662.117146900957
+98,Rhodamine B,permeation_amount_ug_cm2,MLR,random_70_30_test,4.753023597,-3066.408524681312
+69,lidocaine,permeation_amount_ug_cm2,MLR,random_70_30_test,4325.511402,3662.117146900957
+113,caffeine,permeation_amount_ug_cm2,MLR,random_70_30_test,1.0537,-1727.6721646660335
+96,Rhodamine B,permeation_amount_ug_cm2,MLR,random_70_30_test,2.356616786,-5066.701688199413
+19,BSA,permeation_amount_ug_cm2,MLR,random_70_30_test,930.2295971,938.9171917153908
+45,lidocaine,permeation_amount_ug_cm2,MLR,random_70_30_test,910.694674,6026.363153710638
+76,lidocaine,permeation_amount_ug_cm2,MLR,random_70_30_test,6277.653062,4262.205095956389
+169,GHK peptide,permeation_amount_ug_cm2,MLR,random_70_30_test,14.2573962,-622.8434391948686
+68,lidocaine,permeation_amount_ug_cm2,MLR,random_70_30_test,4385.405754,3662.117146900957
+5,BSA,permeation_amount_ug_cm2,MLR,random_70_30_test,657.1194841,-2079.2351610391306
+132,copper ions,permeation_amount_ug_cm2,MLR,random_70_30_test,7.476744,178.9548449312315
+90,lidocaine,permeation_amount_ug_cm2,MLR,random_70_30_test,9566.054457,9408.84661631326
+164,GHK peptide,permeation_amount_ug_cm2,MLR,random_70_30_test,448.5200612,644.0519589520591
+108,Rhodamine B,permeation_amount_ug_cm2,MLR,random_70_30_test,8.168518396,1734.2950677621302
+182,lidocaine,permeation_amount_ug_cm2,MLR,random_70_30_test,340.7408145,789.4831826647569
+186,lidocaine,permeation_amount_ug_cm2,MLR,random_70_30_test,295.8251818,789.4831826647569
+35,lidocaine,permeation_amount_ug_cm2,MLR,random_70_30_test,1488.148502,5959.686714793348
+100,Rhodamine B,permeation_amount_ug_cm2,MLR,random_70_30_test,5.796252944,-1866.2326265704505
+55,lidocaine,permeation_amount_ug_cm2,MLR,random_70_30_test,1554.763163,3262.058514197339
+135,copper ions,permeation_amount_ug_cm2,MLR,random_70_30_test,6.166104,-221.10378777238657
+78,lidocaine,permeation_amount_ug_cm2,MLR,random_70_30_test,19622.03687,9843.589274024338
+95,Rhodamine B,permeation_amount_ug_cm2,MLR,random_70_30_test,3.19852408,-5066.701688199413
+29,BSA,permeation_amount_ug_cm2,MLR,random_70_30_test,1200.029285,5739.620784158837
+142,copper ions,permeation_amount_ug_cm2,MLR,random_70_30_test,10.879836,1379.130743042093
+51,lidocaine,permeation_amount_ug_cm2,MLR,random_70_30_test,2082.29003,6093.0395924279
+162,GHK peptide,permeation_amount_ug_cm2,MLR,random_70_30_test,569.6710595,1844.2278570629205
+183,lidocaine,permeation_amount_ug_cm2,MLR,random_70_30_test,2.05618266,-810.7513481497226
+31,BSA,permeation_amount_ug_cm2,MLR,random_70_30_test,1558.382857,6958.165312246221
+154,copper ions,permeation_amount_ug_cm2,MLR,random_70_30_test,49.7904,512.293977598787
+12,BSA,permeation_amount_ug_cm2,MLR,random_70_30_test,682.3933104,-1461.4346045063285
+41,lidocaine,permeation_amount_ug_cm2,MLR,random_70_30_test,2490.677205,5993.024934251993
+124,caffeine,permeation_amount_ug_cm2,MLR,random_70_30_test,54.3821,789.012127745078
+56,lidocaine,permeation_amount_ug_cm2,MLR,random_70_30_test,2482.766544,3262.058514197339
+119,caffeine,permeation_amount_ug_cm2,MLR,random_70_30_test,9.4102,-1227.5988737865082
+117,caffeine,permeation_amount_ug_cm2,MLR,random_70_30_test,4.385,-672.0103469364658
+152,copper ions,permeation_amount_ug_cm2,RandomForest,random_70_30_test,45.4848,50.60117202189549
+75,lidocaine,permeation_amount_ug_cm2,RandomForest,random_70_30_test,7033.95717,5106.6025333837915
+158,GHK peptide,permeation_amount_ug_cm2,RandomForest,random_70_30_test,768.8046883,763.8679458985148
+66,lidocaine,permeation_amount_ug_cm2,RandomForest,random_70_30_test,1193.647249,3951.7794656664396
+60,lidocaine,permeation_amount_ug_cm2,RandomForest,random_70_30_test,6733.651992,5319.3920997025925
+15,BSA,permeation_amount_ug_cm2,RandomForest,random_70_30_test,980.5544326,798.0309289588026
+9,BSA,permeation_amount_ug_cm2,RandomForest,random_70_30_test,366.7092141,305.52666737124315
+16,BSA,permeation_amount_ug_cm2,RandomForest,random_70_30_test,768.4007143,747.9062498305983
+128,caffeine,permeation_amount_ug_cm2,RandomForest,random_70_30_test,79.1873,411.117885493672
+125,caffeine,permeation_amount_ug_cm2,RandomForest,random_70_30_test,32.4588,147.26841013953012
+139,copper ions,permeation_amount_ug_cm2,RandomForest,random_70_30_test,4.928616,6.874466488420663
+156,GHK peptide,permeation_amount_ug_cm2,RandomForest,random_70_30_test,608.5402767,351.4222774056654
+18,BSA,permeation_amount_ug_cm2,RandomForest,random_70_30_test,1006.1784,974.241657689803
+161,GHK peptide,permeation_amount_ug_cm2,RandomForest,random_70_30_test,496.3157573,596.1630625477229
+112,Rhodamine B,permeation_amount_ug_cm2,RandomForest,random_70_30_test,11.40614532,17.328046081330193
+181,lidocaine,permeation_amount_ug_cm2,RandomForest,random_70_30_test,144.6327434,130.69629749070586
+155,GHK peptide,permeation_amount_ug_cm2,RandomForest,random_70_30_test,453.2456677,249.91866591299228
+65,lidocaine,permeation_amount_ug_cm2,RandomForest,random_70_30_test,1238.213787,3951.7794656664396
+165,GHK peptide,permeation_amount_ug_cm2,RandomForest,random_70_30_test,710.2470186,596.1630625477229
+42,lidocaine,permeation_amount_ug_cm2,RandomForest,random_70_30_test,910.694674,2263.2862371160877
+30,BSA,permeation_amount_ug_cm2,RandomForest,random_70_30_test,1178.288701,1095.7109934123994
+24,BSA,permeation_amount_ug_cm2,RandomForest,random_70_30_test,1342.950544,1144.1005664455997
+67,lidocaine,permeation_amount_ug_cm2,RandomForest,random_70_30_test,4394.183075,4374.581590011533
+98,Rhodamine B,permeation_amount_ug_cm2,RandomForest,random_70_30_test,4.753023597,35.25614222929842
+69,lidocaine,permeation_amount_ug_cm2,RandomForest,random_70_30_test,4325.511402,4374.581590011533
+113,caffeine,permeation_amount_ug_cm2,RandomForest,random_70_30_test,1.0537,25.04775978395661
+96,Rhodamine B,permeation_amount_ug_cm2,RandomForest,random_70_30_test,2.356616786,22.571289229304856
+19,BSA,permeation_amount_ug_cm2,RandomForest,random_70_30_test,930.2295971,826.8132875241954
+45,lidocaine,permeation_amount_ug_cm2,RandomForest,random_70_30_test,910.694674,2281.536113792171
+76,lidocaine,permeation_amount_ug_cm2,RandomForest,random_70_30_test,6277.653062,5106.6025333837915
+169,GHK peptide,permeation_amount_ug_cm2,RandomForest,random_70_30_test,14.2573962,24.946779689284973
+68,lidocaine,permeation_amount_ug_cm2,RandomForest,random_70_30_test,4385.405754,4374.581590011533
+5,BSA,permeation_amount_ug_cm2,RandomForest,random_70_30_test,657.1194841,687.2020219164024
+132,copper ions,permeation_amount_ug_cm2,RandomForest,random_70_30_test,7.476744,7.393171236114249
+90,lidocaine,permeation_amount_ug_cm2,RandomForest,random_70_30_test,9566.054457,10158.203065985632
+164,GHK peptide,permeation_amount_ug_cm2,RandomForest,random_70_30_test,448.5200612,351.4222774056654
+108,Rhodamine B,permeation_amount_ug_cm2,RandomForest,random_70_30_test,8.168518396,9.318648415701674
+182,lidocaine,permeation_amount_ug_cm2,RandomForest,random_70_30_test,340.7408145,265.873389284112
+186,lidocaine,permeation_amount_ug_cm2,RandomForest,random_70_30_test,295.8251818,265.873389284112
+35,lidocaine,permeation_amount_ug_cm2,RandomForest,random_70_30_test,1488.148502,1165.2675340618366
+100,Rhodamine B,permeation_amount_ug_cm2,RandomForest,random_70_30_test,5.796252944,7.413321480706072
+55,lidocaine,permeation_amount_ug_cm2,RandomForest,random_70_30_test,1554.763163,2424.2800291944104
+135,copper ions,permeation_amount_ug_cm2,RandomForest,random_70_30_test,6.166104,6.874466488420663
+78,lidocaine,permeation_amount_ug_cm2,RandomForest,random_70_30_test,19622.03687,19676.1168521961
+95,Rhodamine B,permeation_amount_ug_cm2,RandomForest,random_70_30_test,3.19852408,22.571289229304856
+29,BSA,permeation_amount_ug_cm2,RandomForest,random_70_30_test,1200.029285,1137.0450949933975
+142,copper ions,permeation_amount_ug_cm2,RandomForest,random_70_30_test,10.879836,17.131553868600037
+51,lidocaine,permeation_amount_ug_cm2,RandomForest,random_70_30_test,2082.29003,1216.1693057534765
+162,GHK peptide,permeation_amount_ug_cm2,RandomForest,random_70_30_test,569.6710595,763.8679458985148
+183,lidocaine,permeation_amount_ug_cm2,RandomForest,random_70_30_test,2.05618266,6.406065518076506
+31,BSA,permeation_amount_ug_cm2,RandomForest,random_70_30_test,1558.382857,1314.7120081033963
+154,copper ions,permeation_amount_ug_cm2,RandomForest,random_70_30_test,49.7904,50.60117202189549
+12,BSA,permeation_amount_ug_cm2,RandomForest,random_70_30_test,682.3933104,716.1483810890032
+41,lidocaine,permeation_amount_ug_cm2,RandomForest,random_70_30_test,2490.677205,1564.6300296592594
+124,caffeine,permeation_amount_ug_cm2,RandomForest,random_70_30_test,54.3821,42.42614460504586
+56,lidocaine,permeation_amount_ug_cm2,RandomForest,random_70_30_test,2482.766544,2424.2800291944104
+119,caffeine,permeation_amount_ug_cm2,RandomForest,random_70_30_test,9.4102,43.16476456605177
+117,caffeine,permeation_amount_ug_cm2,RandomForest,random_70_30_test,4.385,6.152642935664814
+152,copper ions,permeation_amount_ug_cm2,XGBoost,random_70_30_test,45.4848,37.919673919677734
+75,lidocaine,permeation_amount_ug_cm2,XGBoost,random_70_30_test,7033.95717,5903.61279296875
+158,GHK peptide,permeation_amount_ug_cm2,XGBoost,random_70_30_test,768.8046883,904.4871215820312
+66,lidocaine,permeation_amount_ug_cm2,XGBoost,random_70_30_test,1193.647249,2939.706298828125
+60,lidocaine,permeation_amount_ug_cm2,XGBoost,random_70_30_test,6733.651992,5933.1064453125
+15,BSA,permeation_amount_ug_cm2,XGBoost,random_70_30_test,980.5544326,1024.47607421875
+9,BSA,permeation_amount_ug_cm2,XGBoost,random_70_30_test,366.7092141,325.8126220703125
+16,BSA,permeation_amount_ug_cm2,XGBoost,random_70_30_test,768.4007143,863.3019409179688
+128,caffeine,permeation_amount_ug_cm2,XGBoost,random_70_30_test,79.1873,203.21826171875
+125,caffeine,permeation_amount_ug_cm2,XGBoost,random_70_30_test,32.4588,64.701904296875
+139,copper ions,permeation_amount_ug_cm2,XGBoost,random_70_30_test,4.928616,3.554699182510376
+156,GHK peptide,permeation_amount_ug_cm2,XGBoost,random_70_30_test,608.5402767,399.2337341308594
+18,BSA,permeation_amount_ug_cm2,XGBoost,random_70_30_test,1006.1784,1008.6138305664062
+161,GHK peptide,permeation_amount_ug_cm2,XGBoost,random_70_30_test,496.3157573,720.4130859375
+112,Rhodamine B,permeation_amount_ug_cm2,XGBoost,random_70_30_test,11.40614532,13.3644437789917
+181,lidocaine,permeation_amount_ug_cm2,XGBoost,random_70_30_test,144.6327434,147.94667053222656
+155,GHK peptide,permeation_amount_ug_cm2,XGBoost,random_70_30_test,453.2456677,234.00958251953125
+65,lidocaine,permeation_amount_ug_cm2,XGBoost,random_70_30_test,1238.213787,2939.706298828125
+165,GHK peptide,permeation_amount_ug_cm2,XGBoost,random_70_30_test,710.2470186,720.4130859375
+42,lidocaine,permeation_amount_ug_cm2,XGBoost,random_70_30_test,910.694674,2285.806640625
+30,BSA,permeation_amount_ug_cm2,XGBoost,random_70_30_test,1178.288701,1133.2537841796875
+24,BSA,permeation_amount_ug_cm2,XGBoost,random_70_30_test,1342.950544,1256.2672119140625
+67,lidocaine,permeation_amount_ug_cm2,XGBoost,random_70_30_test,4394.183075,4622.6640625
+98,Rhodamine B,permeation_amount_ug_cm2,XGBoost,random_70_30_test,4.753023597,8.17335319519043
+69,lidocaine,permeation_amount_ug_cm2,XGBoost,random_70_30_test,4325.511402,4622.6640625
+113,caffeine,permeation_amount_ug_cm2,XGBoost,random_70_30_test,1.0537,-51.00180435180664
+96,Rhodamine B,permeation_amount_ug_cm2,XGBoost,random_70_30_test,2.356616786,0.5216967463493347
+19,BSA,permeation_amount_ug_cm2,XGBoost,random_70_30_test,930.2295971,810.2860717773438
+45,lidocaine,permeation_amount_ug_cm2,XGBoost,random_70_30_test,910.694674,2285.806640625
+76,lidocaine,permeation_amount_ug_cm2,XGBoost,random_70_30_test,6277.653062,5903.61279296875
+169,GHK peptide,permeation_amount_ug_cm2,XGBoost,random_70_30_test,14.2573962,23.237157821655273
+68,lidocaine,permeation_amount_ug_cm2,XGBoost,random_70_30_test,4385.405754,4622.6640625
+5,BSA,permeation_amount_ug_cm2,XGBoost,random_70_30_test,657.1194841,682.2488403320312
+132,copper ions,permeation_amount_ug_cm2,XGBoost,random_70_30_test,7.476744,9.664815902709961
+90,lidocaine,permeation_amount_ug_cm2,XGBoost,random_70_30_test,9566.054457,9328.998046875
+164,GHK peptide,permeation_amount_ug_cm2,XGBoost,random_70_30_test,448.5200612,399.2337341308594
+108,Rhodamine B,permeation_amount_ug_cm2,XGBoost,random_70_30_test,8.168518396,8.605266571044922
+182,lidocaine,permeation_amount_ug_cm2,XGBoost,random_70_30_test,340.7408145,335.4230651855469
+186,lidocaine,permeation_amount_ug_cm2,XGBoost,random_70_30_test,295.8251818,335.4230651855469
+35,lidocaine,permeation_amount_ug_cm2,XGBoost,random_70_30_test,1488.148502,1068.04248046875
+100,Rhodamine B,permeation_amount_ug_cm2,XGBoost,random_70_30_test,5.796252944,3.0357210636138916
+55,lidocaine,permeation_amount_ug_cm2,XGBoost,random_70_30_test,1554.763163,1903.1094970703125
+135,copper ions,permeation_amount_ug_cm2,XGBoost,random_70_30_test,6.166104,3.554699182510376
+78,lidocaine,permeation_amount_ug_cm2,XGBoost,random_70_30_test,19622.03687,21343.884765625
+95,Rhodamine B,permeation_amount_ug_cm2,XGBoost,random_70_30_test,3.19852408,0.5216967463493347
+29,BSA,permeation_amount_ug_cm2,XGBoost,random_70_30_test,1200.029285,1165.945068359375
+142,copper ions,permeation_amount_ug_cm2,XGBoost,random_70_30_test,10.879836,11.40536880493164
+51,lidocaine,permeation_amount_ug_cm2,XGBoost,random_70_30_test,2082.29003,913.356689453125
+162,GHK peptide,permeation_amount_ug_cm2,XGBoost,random_70_30_test,569.6710595,904.4871215820312
+183,lidocaine,permeation_amount_ug_cm2,XGBoost,random_70_30_test,2.05618266,0.37838220596313477
+31,BSA,permeation_amount_ug_cm2,XGBoost,random_70_30_test,1558.382857,1491.115966796875
+154,copper ions,permeation_amount_ug_cm2,XGBoost,random_70_30_test,49.7904,37.919673919677734
+12,BSA,permeation_amount_ug_cm2,XGBoost,random_70_30_test,682.3933104,777.3656005859375
+41,lidocaine,permeation_amount_ug_cm2,XGBoost,random_70_30_test,2490.677205,1498.44189453125
+124,caffeine,permeation_amount_ug_cm2,XGBoost,random_70_30_test,54.3821,59.24460220336914
+56,lidocaine,permeation_amount_ug_cm2,XGBoost,random_70_30_test,2482.766544,1903.1094970703125
+119,caffeine,permeation_amount_ug_cm2,XGBoost,random_70_30_test,9.4102,16.551265716552734
+117,caffeine,permeation_amount_ug_cm2,XGBoost,random_70_30_test,4.385,-12.110074996948242

@@ -1,0 +1,49 @@
+validation,variant,target,model,held_out_drug,n_observations,pooled_r2,pooled_rmse,pooled_mae
+leave-one-drug-out fold,seven_feature_all_six_drugs,permeation_amount_ug_cm2,Fick_diffusion_proxy,BSA,33,0.8712242563518876,133.3191681034392,102.3866000557154
+leave-one-drug-out fold,seven_feature_all_six_drugs,permeation_amount_ug_cm2,Fick_diffusion_proxy,GHK peptide,24,-202.88161404119617,4176.465634092252,3973.7060293541176
+leave-one-drug-out fold,seven_feature_all_six_drugs,permeation_amount_ug_cm2,Fick_diffusion_proxy,Rhodamine B,19,-216.07076490910728,41.18291871117308,41.12205987497718
+leave-one-drug-out fold,seven_feature_all_six_drugs,permeation_amount_ug_cm2,Fick_diffusion_proxy,caffeine,18,-8484.815570205672,3307.19323215553,3151.8988777267195
+leave-one-drug-out fold,seven_feature_all_six_drugs,permeation_amount_ug_cm2,Fick_diffusion_proxy,copper ions,24,-1047.3651204673392,453.13654383369567,440.88552481266373
+leave-one-drug-out fold,seven_feature_all_six_drugs,permeation_amount_ug_cm2,Fick_diffusion_proxy,lidocaine,73,-26.14106387508885,31952.145205722012,27589.671878207242
+leave-one-drug-out fold,seven_feature_all_six_drugs,permeation_amount_ug_cm2,MLR,BSA,33,-1815.3747672802294,15833.549782123899,15248.583486487216
+leave-one-drug-out fold,seven_feature_all_six_drugs,permeation_amount_ug_cm2,MLR,GHK peptide,24,-3.5430069078442727,623.4355728794022,543.9165992843724
+leave-one-drug-out fold,seven_feature_all_six_drugs,permeation_amount_ug_cm2,MLR,Rhodamine B,19,-5648447.572187179,6643.256847053044,6077.291858942624
+leave-one-drug-out fold,seven_feature_all_six_drugs,permeation_amount_ug_cm2,MLR,caffeine,18,-7490.554550850112,3107.4113619022482,2656.990620665932
+leave-one-drug-out fold,seven_feature_all_six_drugs,permeation_amount_ug_cm2,MLR,copper ions,24,-3929.9214355615577,877.4451710121031,744.2452702412374
+leave-one-drug-out fold,seven_feature_all_six_drugs,permeation_amount_ug_cm2,MLR,lidocaine,73,-0.15553137289414787,6592.9147206942735,3944.649573989089
+leave-one-drug-out fold,seven_feature_all_six_drugs,permeation_amount_ug_cm2,RandomForest,BSA,33,-2.2025697485175666,664.851817452172,605.1602410187304
+leave-one-drug-out fold,seven_feature_all_six_drugs,permeation_amount_ug_cm2,RandomForest,GHK peptide,24,-0.4351040809575215,350.39796912313045,271.57753125101846
+leave-one-drug-out fold,seven_feature_all_six_drugs,permeation_amount_ug_cm2,RandomForest,Rhodamine B,19,-400865.74723934336,1769.7685388057173,1743.4997700306894
+leave-one-drug-out fold,seven_feature_all_six_drugs,permeation_amount_ug_cm2,RandomForest,caffeine,18,-623.9268195324116,897.4853288478807,730.0399754058218
+leave-one-drug-out fold,seven_feature_all_six_drugs,permeation_amount_ug_cm2,RandomForest,copper ions,24,-1013.7044370543506,445.80258859240564,333.1729437317041
+leave-one-drug-out fold,seven_feature_all_six_drugs,permeation_amount_ug_cm2,RandomForest,lidocaine,73,-0.6090439681465238,7779.837815109964,4961.123378206811
+leave-one-drug-out fold,seven_feature_all_six_drugs,permeation_amount_ug_cm2,XGBoost,BSA,33,-4.441158718241889,866.6051368544979,787.3989934510722
+leave-one-drug-out fold,seven_feature_all_six_drugs,permeation_amount_ug_cm2,XGBoost,GHK peptide,24,-0.25190220981112343,327.2691614297516,260.97605983386893
+leave-one-drug-out fold,seven_feature_all_six_drugs,permeation_amount_ug_cm2,XGBoost,Rhodamine B,19,-2573.9105433805526,141.83960955566437,119.18881081705449
+leave-one-drug-out fold,seven_feature_all_six_drugs,permeation_amount_ug_cm2,XGBoost,caffeine,18,-101.86374971727712,364.11951206674104,254.0998460201687
+leave-one-drug-out fold,seven_feature_all_six_drugs,permeation_amount_ug_cm2,XGBoost,copper ions,24,-88.42030041417057,132.33992021776083,105.42822663694763
+leave-one-drug-out fold,seven_feature_all_six_drugs,permeation_amount_ug_cm2,XGBoost,lidocaine,73,-0.5765838864993842,7700.964641788612,4876.260298417225
+leave-one-drug-out fold,seven_feature_all_six_drugs,permeation_percentage,Fick_diffusion_proxy,BSA,33,0.6894477640904745,12.311635730558814,9.458620051496116
+leave-one-drug-out fold,seven_feature_all_six_drugs,permeation_percentage,Fick_diffusion_proxy,GHK peptide,24,-202.88161322575897,52.947079543183065,50.376597741563565
+leave-one-drug-out fold,seven_feature_all_six_drugs,permeation_percentage,Fick_diffusion_proxy,Rhodamine B,19,-216.0707652833735,82.36583742082765,82.24411974858594
+leave-one-drug-out fold,seven_feature_all_six_drugs,permeation_percentage,Fick_diffusion_proxy,caffeine,18,-3321.86170860197,86.5558241467603,85.9956826079313
+leave-one-drug-out fold,seven_feature_all_six_drugs,permeation_percentage,Fick_diffusion_proxy,copper ions,24,-1047.3651184594341,61.51731521100986,59.854130443485424
+leave-one-drug-out fold,seven_feature_all_six_drugs,permeation_percentage,Fick_diffusion_proxy,lidocaine,73,-24.95650405482111,60.83653227167527,58.811960792821296
+leave-one-drug-out fold,seven_feature_all_six_drugs,permeation_percentage,MLR,BSA,33,-1407.5517622036389,829.1532985678743,829.0404433957585
+leave-one-drug-out fold,seven_feature_all_six_drugs,permeation_percentage,MLR,GHK peptide,24,0.5977378666294145,2.3518388266347126,2.0015432117898206
+leave-one-drug-out fold,seven_feature_all_six_drugs,permeation_percentage,MLR,Rhodamine B,19,-12.777031384051671,20.750294912653743,18.719473713975393
+leave-one-drug-out fold,seven_feature_all_six_drugs,permeation_percentage,MLR,caffeine,18,-96.6548053522622,14.838396497061732,12.833271194324745
+leave-one-drug-out fold,seven_feature_all_six_drugs,permeation_percentage,MLR,copper ions,24,-13.046145105126442,7.120650457820232,6.236665393934217
+leave-one-drug-out fold,seven_feature_all_six_drugs,permeation_percentage,MLR,lidocaine,73,0.5456662585404666,8.04875757775451,5.618674174864064
+leave-one-drug-out fold,seven_feature_all_six_drugs,permeation_percentage,RandomForest,BSA,33,-5.643362006108521,56.94326779949123,54.34721283352477
+leave-one-drug-out fold,seven_feature_all_six_drugs,permeation_percentage,RandomForest,GHK peptide,24,-0.3477887143901486,4.304908126648637,3.551353469431913
+leave-one-drug-out fold,seven_feature_all_six_drugs,permeation_percentage,RandomForest,Rhodamine B,19,-0.8310328280151971,7.564748866836511,6.5825807904382865
+leave-one-drug-out fold,seven_feature_all_six_drugs,permeation_percentage,RandomForest,caffeine,18,-101.3299152842126,15.189429749477464,12.623439478199359
+leave-one-drug-out fold,seven_feature_all_six_drugs,permeation_percentage,RandomForest,copper ions,24,-16.323162820939014,7.907781954680051,6.088367713646428
+leave-one-drug-out fold,seven_feature_all_six_drugs,permeation_percentage,RandomForest,lidocaine,73,-0.16607680040765227,12.894512539610465,8.201985230218272
+leave-one-drug-out fold,seven_feature_all_six_drugs,permeation_percentage,XGBoost,BSA,33,-6.541882358581688,60.671998985751046,57.89595296078963
+leave-one-drug-out fold,seven_feature_all_six_drugs,permeation_percentage,XGBoost,GHK peptide,24,-0.16918648355278498,4.0095429745309685,3.659558070985667
+leave-one-drug-out fold,seven_feature_all_six_drugs,permeation_percentage,XGBoost,Rhodamine B,19,-0.7061642498929992,7.302252876846877,6.3841162212389495
+leave-one-drug-out fold,seven_feature_all_six_drugs,permeation_percentage,XGBoost,caffeine,18,-56.64099046807122,11.400026995758202,7.88685332073695
+leave-one-drug-out fold,seven_feature_all_six_drugs,permeation_percentage,XGBoost,copper ions,24,-8.518196071204533,5.861630192544953,4.459655773607548
+leave-one-drug-out fold,seven_feature_all_six_drugs,permeation_percentage,XGBoost,lidocaine,73,-0.2162822728586018,13.169174120322733,8.319870142428531

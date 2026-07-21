@@ -1,0 +1,7 @@
+model,target,parameters
+Fick_diffusion_proxy,both,Analytical erfc proxy; 1 mm skin; MW^(-1/3) D; D clipped 50--1000 µm²/min; no fitted parameters.
+MLR,both,"LinearRegression(fit_intercept=False), matching SI2 Results ~ . - 1."
+RandomForest,amount,"n_estimators=500, max_features=5, random_state=42."
+RandomForest,percentage,"n_estimators=500, max_features=6, random_state=42."
+XGBoost,amount,"max_depth=4, learning_rate=0.4, n_estimators=100, random_state=42."
+XGBoost,percentage,"max_depth=3, learning_rate=0.2, n_estimators=45, random_state=42."

@@ -1,0 +1,9 @@
+dataset,validation,target,model,n_observations,pooled_r2,pooled_rmse,pooled_mae,n_train_experimental,n_test_experimental
+Yuan 2023 reconstructed 191 observations,"70:30 random split, random_state=42",permeation_amount_ug_cm2,Fick_diffusion_proxy,58,-29.882520537739985,17275.024389235157,9694.650050928074,133,58
+Yuan 2023 reconstructed 191 observations,"70:30 random split, random_state=42",permeation_amount_ug_cm2,MLR,58,0.19122745139313568,2795.6030185625464,1978.74449249274,133,58
+Yuan 2023 reconstructed 191 observations,"70:30 random split, random_state=42",permeation_amount_ug_cm2,RandomForest,58,0.9481400196534367,707.9106950534235,331.79927341752176,133,58
+Yuan 2023 reconstructed 191 observations,"70:30 random split, random_state=42",permeation_amount_ug_cm2,XGBoost,58,0.9672862593037519,562.2473319099707,291.4927247778582,133,58
+Yuan 2023 reconstructed 191 observations,"70:30 random split, random_state=42",permeation_percentage,Fick_diffusion_proxy,58,-3.78008091955202,60.21073663942438,53.72839573823892,133,58
+Yuan 2023 reconstructed 191 observations,"70:30 random split, random_state=42",permeation_percentage,MLR,58,0.935692468455355,6.983726708617866,5.159840647580395,133,58
+Yuan 2023 reconstructed 191 observations,"70:30 random split, random_state=42",permeation_percentage,RandomForest,58,0.9615940595078001,5.39703853030204,3.2370079002616423,133,58
+Yuan 2023 reconstructed 191 observations,"70:30 random split, random_state=42",permeation_percentage,XGBoost,58,0.9649880169623417,5.153053731631109,3.3580636157771213,133,58

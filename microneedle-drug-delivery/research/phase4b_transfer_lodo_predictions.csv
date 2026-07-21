@@ -1,0 +1,1609 @@
+row_index,variant,held_out_drug,model,target,n_train_experimental,n_test_experimental,observed,predicted
+155,seven_feature_small_molecules_only,GHK peptide,MLR,permeation_percentage,110,24,5.7460151,14.773212394703682
+156,seven_feature_small_molecules_only,GHK peptide,MLR,permeation_percentage,110,24,7.7147601,16.148929295954467
+157,seven_feature_small_molecules_only,GHK peptide,MLR,permeation_percentage,110,24,8.8721541,18.212504647830645
+158,seven_feature_small_molecules_only,GHK peptide,MLR,permeation_percentage,110,24,9.7465097,20.276079999706823
+159,seven_feature_small_molecules_only,GHK peptide,MLR,permeation_percentage,110,24,3.4974256,14.773212394703682
+160,seven_feature_small_molecules_only,GHK peptide,MLR,permeation_percentage,110,24,5.1038324,16.148929295954467
+161,seven_feature_small_molecules_only,GHK peptide,MLR,permeation_percentage,110,24,6.2920355,18.212504647830645
+162,seven_feature_small_molecules_only,GHK peptide,MLR,permeation_percentage,110,24,7.2219962,20.276079999706823
+163,seven_feature_small_molecules_only,GHK peptide,MLR,permeation_percentage,110,24,2.4619652,14.773212394703682
+164,seven_feature_small_molecules_only,GHK peptide,MLR,permeation_percentage,110,24,5.6861063,16.148929295954467
+165,seven_feature_small_molecules_only,GHK peptide,MLR,permeation_percentage,110,24,9.0041458,18.212504647830645
+166,seven_feature_small_molecules_only,GHK peptide,MLR,permeation_percentage,110,24,11.6244901,20.276079999706823
+167,seven_feature_small_molecules_only,GHK peptide,MLR,permeation_percentage,110,24,0.2891969,-7.325944323341112
+168,seven_feature_small_molecules_only,GHK peptide,MLR,permeation_percentage,110,24,0.2736605,-7.325944323341112
+169,seven_feature_small_molecules_only,GHK peptide,MLR,permeation_percentage,110,24,0.1807479,-7.325944323341112
+170,seven_feature_small_molecules_only,GHK peptide,MLR,permeation_percentage,110,24,0.424926,-5.950227422090327
+171,seven_feature_small_molecules_only,GHK peptide,MLR,permeation_percentage,110,24,0.3637388,-5.950227422090327
+172,seven_feature_small_molecules_only,GHK peptide,MLR,permeation_percentage,110,24,0.3524695,-5.950227422090327
+173,seven_feature_small_molecules_only,GHK peptide,MLR,permeation_percentage,110,24,0.5439803,-3.8866520702141494
+174,seven_feature_small_molecules_only,GHK peptide,MLR,permeation_percentage,110,24,0.4577203,-3.8866520702141494
+175,seven_feature_small_molecules_only,GHK peptide,MLR,permeation_percentage,110,24,0.4853251,-3.8866520702141494
+176,seven_feature_small_molecules_only,GHK peptide,MLR,permeation_percentage,110,24,0.620593,-1.8230767183379721
+177,seven_feature_small_molecules_only,GHK peptide,MLR,permeation_percentage,110,24,0.5221895,-1.8230767183379721
+178,seven_feature_small_molecules_only,GHK peptide,MLR,permeation_percentage,110,24,0.5927416,-1.8230767183379721
+155,seven_feature_small_molecules_only,GHK peptide,RandomForest,permeation_percentage,110,24,5.7460151,5.55348713386762
+156,seven_feature_small_molecules_only,GHK peptide,RandomForest,permeation_percentage,110,24,7.7147601,10.358038013770956
+157,seven_feature_small_molecules_only,GHK peptide,RandomForest,permeation_percentage,110,24,8.8721541,14.25758173445452
+158,seven_feature_small_molecules_only,GHK peptide,RandomForest,permeation_percentage,110,24,9.7465097,15.225756981763576
+159,seven_feature_small_molecules_only,GHK peptide,RandomForest,permeation_percentage,110,24,3.4974256,5.55348713386762
+160,seven_feature_small_molecules_only,GHK peptide,RandomForest,permeation_percentage,110,24,5.1038324,10.358038013770956
+161,seven_feature_small_molecules_only,GHK peptide,RandomForest,permeation_percentage,110,24,6.2920355,14.25758173445452
+162,seven_feature_small_molecules_only,GHK peptide,RandomForest,permeation_percentage,110,24,7.2219962,15.225756981763576
+163,seven_feature_small_molecules_only,GHK peptide,RandomForest,permeation_percentage,110,24,2.4619652,5.55348713386762
+164,seven_feature_small_molecules_only,GHK peptide,RandomForest,permeation_percentage,110,24,5.6861063,10.358038013770956
+165,seven_feature_small_molecules_only,GHK peptide,RandomForest,permeation_percentage,110,24,9.0041458,14.25758173445452
+166,seven_feature_small_molecules_only,GHK peptide,RandomForest,permeation_percentage,110,24,11.6244901,15.225756981763576
+167,seven_feature_small_molecules_only,GHK peptide,RandomForest,permeation_percentage,110,24,0.2891969,0.07761087656920662
+168,seven_feature_small_molecules_only,GHK peptide,RandomForest,permeation_percentage,110,24,0.2736605,0.07761087656920662
+169,seven_feature_small_molecules_only,GHK peptide,RandomForest,permeation_percentage,110,24,0.1807479,0.07761087656920662
+170,seven_feature_small_molecules_only,GHK peptide,RandomForest,permeation_percentage,110,24,0.424926,0.6895715607933338
+171,seven_feature_small_molecules_only,GHK peptide,RandomForest,permeation_percentage,110,24,0.3637388,0.6895715607933338
+172,seven_feature_small_molecules_only,GHK peptide,RandomForest,permeation_percentage,110,24,0.3524695,0.6895715607933338
+173,seven_feature_small_molecules_only,GHK peptide,RandomForest,permeation_percentage,110,24,0.5439803,2.7425981315130987
+174,seven_feature_small_molecules_only,GHK peptide,RandomForest,permeation_percentage,110,24,0.4577203,2.7425981315130987
+175,seven_feature_small_molecules_only,GHK peptide,RandomForest,permeation_percentage,110,24,0.4853251,2.7425981315130987
+176,seven_feature_small_molecules_only,GHK peptide,RandomForest,permeation_percentage,110,24,0.620593,6.2602578454799955
+177,seven_feature_small_molecules_only,GHK peptide,RandomForest,permeation_percentage,110,24,0.5221895,6.2602578454799955
+178,seven_feature_small_molecules_only,GHK peptide,RandomForest,permeation_percentage,110,24,0.5927416,6.2602578454799955
+155,seven_feature_small_molecules_only,GHK peptide,XGBoost,permeation_percentage,110,24,5.7460151,1.5598945617675781
+156,seven_feature_small_molecules_only,GHK peptide,XGBoost,permeation_percentage,110,24,7.7147601,5.218754768371582
+157,seven_feature_small_molecules_only,GHK peptide,XGBoost,permeation_percentage,110,24,8.8721541,7.791399955749512
+158,seven_feature_small_molecules_only,GHK peptide,XGBoost,permeation_percentage,110,24,9.7465097,8.41696834564209
+159,seven_feature_small_molecules_only,GHK peptide,XGBoost,permeation_percentage,110,24,3.4974256,1.5598945617675781
+160,seven_feature_small_molecules_only,GHK peptide,XGBoost,permeation_percentage,110,24,5.1038324,5.218754768371582
+161,seven_feature_small_molecules_only,GHK peptide,XGBoost,permeation_percentage,110,24,6.2920355,7.791399955749512
+162,seven_feature_small_molecules_only,GHK peptide,XGBoost,permeation_percentage,110,24,7.2219962,8.41696834564209
+163,seven_feature_small_molecules_only,GHK peptide,XGBoost,permeation_percentage,110,24,2.4619652,1.5598945617675781
+164,seven_feature_small_molecules_only,GHK peptide,XGBoost,permeation_percentage,110,24,5.6861063,5.218754768371582
+165,seven_feature_small_molecules_only,GHK peptide,XGBoost,permeation_percentage,110,24,9.0041458,7.791399955749512
+166,seven_feature_small_molecules_only,GHK peptide,XGBoost,permeation_percentage,110,24,11.6244901,8.41696834564209
+167,seven_feature_small_molecules_only,GHK peptide,XGBoost,permeation_percentage,110,24,0.2891969,0.2037232220172882
+168,seven_feature_small_molecules_only,GHK peptide,XGBoost,permeation_percentage,110,24,0.2736605,0.2037232220172882
+169,seven_feature_small_molecules_only,GHK peptide,XGBoost,permeation_percentage,110,24,0.1807479,0.2037232220172882
+170,seven_feature_small_molecules_only,GHK peptide,XGBoost,permeation_percentage,110,24,0.424926,0.9241164922714233
+171,seven_feature_small_molecules_only,GHK peptide,XGBoost,permeation_percentage,110,24,0.3637388,0.9241164922714233
+172,seven_feature_small_molecules_only,GHK peptide,XGBoost,permeation_percentage,110,24,0.3524695,0.9241164922714233
+173,seven_feature_small_molecules_only,GHK peptide,XGBoost,permeation_percentage,110,24,0.5439803,3.496762990951538
+174,seven_feature_small_molecules_only,GHK peptide,XGBoost,permeation_percentage,110,24,0.4577203,3.496762990951538
+175,seven_feature_small_molecules_only,GHK peptide,XGBoost,permeation_percentage,110,24,0.4853251,3.496762990951538
+176,seven_feature_small_molecules_only,GHK peptide,XGBoost,permeation_percentage,110,24,0.620593,5.618537425994873
+177,seven_feature_small_molecules_only,GHK peptide,XGBoost,permeation_percentage,110,24,0.5221895,5.618537425994873
+178,seven_feature_small_molecules_only,GHK peptide,XGBoost,permeation_percentage,110,24,0.5927416,5.618537425994873
+155,seven_feature_small_molecules_only,GHK peptide,MLR,permeation_amount_ug_cm2,110,24,453.2456677,219.44752747942448
+156,seven_feature_small_molecules_only,GHK peptide,MLR,permeation_amount_ug_cm2,110,24,608.5402767,792.0423449175582
+157,seven_feature_small_molecules_only,GHK peptide,MLR,permeation_amount_ug_cm2,110,24,699.8355176,1650.9345710747589
+158,seven_feature_small_molecules_only,GHK peptide,MLR,permeation_amount_ug_cm2,110,24,768.8046883,2509.8267972319595
+159,seven_feature_small_molecules_only,GHK peptide,MLR,permeation_amount_ug_cm2,110,24,275.8769329,219.44752747942448
+160,seven_feature_small_molecules_only,GHK peptide,MLR,permeation_amount_ug_cm2,110,24,402.590303,792.0423449175582
+161,seven_feature_small_molecules_only,GHK peptide,MLR,permeation_amount_ug_cm2,110,24,496.3157573,1650.9345710747589
+162,seven_feature_small_molecules_only,GHK peptide,MLR,permeation_amount_ug_cm2,110,24,569.6710595,2509.8267972319595
+163,seven_feature_small_molecules_only,GHK peptide,MLR,permeation_amount_ug_cm2,110,24,194.1998183,219.44752747942448
+164,seven_feature_small_molecules_only,GHK peptide,MLR,permeation_amount_ug_cm2,110,24,448.5200612,792.0423449175582
+165,seven_feature_small_molecules_only,GHK peptide,MLR,permeation_amount_ug_cm2,110,24,710.2470186,1650.9345710747589
+166,seven_feature_small_molecules_only,GHK peptide,MLR,permeation_amount_ug_cm2,110,24,916.9397782,2509.8267972319595
+167,seven_feature_small_molecules_only,GHK peptide,MLR,permeation_amount_ug_cm2,110,24,22.81185437,-4065.1688303243604
+168,seven_feature_small_molecules_only,GHK peptide,MLR,permeation_amount_ug_cm2,110,24,21.58634282,-4065.1688303243604
+169,seven_feature_small_molecules_only,GHK peptide,MLR,permeation_amount_ug_cm2,110,24,14.2573962,-4065.1688303243604
+170,seven_feature_small_molecules_only,GHK peptide,MLR,permeation_amount_ug_cm2,110,24,33.5181655,-3492.5740128862267
+171,seven_feature_small_molecules_only,GHK peptide,MLR,permeation_amount_ug_cm2,110,24,28.69171996,-3492.5740128862267
+172,seven_feature_small_molecules_only,GHK peptide,MLR,permeation_amount_ug_cm2,110,24,27.80279558,-3492.5740128862267
+173,seven_feature_small_molecules_only,GHK peptide,MLR,permeation_amount_ug_cm2,110,24,42.90916931,-2633.681786729026
+174,seven_feature_small_molecules_only,GHK peptide,MLR,permeation_amount_ug_cm2,110,24,36.10497467,-2633.681786729026
+175,seven_feature_small_molecules_only,GHK peptide,MLR,permeation_amount_ug_cm2,110,24,38.28244524,-2633.681786729026
+176,seven_feature_small_molecules_only,GHK peptide,MLR,permeation_amount_ug_cm2,110,24,48.95237426,-1774.7895605718254
+177,seven_feature_small_molecules_only,GHK peptide,MLR,permeation_amount_ug_cm2,110,24,41.19030492,-1774.7895605718254
+178,seven_feature_small_molecules_only,GHK peptide,MLR,permeation_amount_ug_cm2,110,24,46.75545732,-1774.7895605718254
+155,seven_feature_small_molecules_only,GHK peptide,RandomForest,permeation_amount_ug_cm2,110,24,453.2456677,214.47902539091075
+156,seven_feature_small_molecules_only,GHK peptide,RandomForest,permeation_amount_ug_cm2,110,24,608.5402767,484.4765473283413
+157,seven_feature_small_molecules_only,GHK peptide,RandomForest,permeation_amount_ug_cm2,110,24,699.8355176,783.9506212610968
+158,seven_feature_small_molecules_only,GHK peptide,RandomForest,permeation_amount_ug_cm2,110,24,768.8046883,935.5418850957353
+159,seven_feature_small_molecules_only,GHK peptide,RandomForest,permeation_amount_ug_cm2,110,24,275.8769329,214.47902539091075
+160,seven_feature_small_molecules_only,GHK peptide,RandomForest,permeation_amount_ug_cm2,110,24,402.590303,484.4765473283413
+161,seven_feature_small_molecules_only,GHK peptide,RandomForest,permeation_amount_ug_cm2,110,24,496.3157573,783.9506212610968
+162,seven_feature_small_molecules_only,GHK peptide,RandomForest,permeation_amount_ug_cm2,110,24,569.6710595,935.5418850957353
+163,seven_feature_small_molecules_only,GHK peptide,RandomForest,permeation_amount_ug_cm2,110,24,194.1998183,214.47902539091075
+164,seven_feature_small_molecules_only,GHK peptide,RandomForest,permeation_amount_ug_cm2,110,24,448.5200612,484.4765473283413
+165,seven_feature_small_molecules_only,GHK peptide,RandomForest,permeation_amount_ug_cm2,110,24,710.2470186,783.9506212610968
+166,seven_feature_small_molecules_only,GHK peptide,RandomForest,permeation_amount_ug_cm2,110,24,916.9397782,935.5418850957353
+167,seven_feature_small_molecules_only,GHK peptide,RandomForest,permeation_amount_ug_cm2,110,24,22.81185437,3.6440373699305644
+168,seven_feature_small_molecules_only,GHK peptide,RandomForest,permeation_amount_ug_cm2,110,24,21.58634282,3.6440373699305644
+169,seven_feature_small_molecules_only,GHK peptide,RandomForest,permeation_amount_ug_cm2,110,24,14.2573962,3.6440373699305644
+170,seven_feature_small_molecules_only,GHK peptide,RandomForest,permeation_amount_ug_cm2,110,24,33.5181655,31.793324968497117
+171,seven_feature_small_molecules_only,GHK peptide,RandomForest,permeation_amount_ug_cm2,110,24,28.69171996,31.793324968497117
+172,seven_feature_small_molecules_only,GHK peptide,RandomForest,permeation_amount_ug_cm2,110,24,27.80279558,31.793324968497117
+173,seven_feature_small_molecules_only,GHK peptide,RandomForest,permeation_amount_ug_cm2,110,24,42.90916931,137.3290865689562
+174,seven_feature_small_molecules_only,GHK peptide,RandomForest,permeation_amount_ug_cm2,110,24,36.10497467,137.3290865689562
+175,seven_feature_small_molecules_only,GHK peptide,RandomForest,permeation_amount_ug_cm2,110,24,38.28244524,137.3290865689562
+176,seven_feature_small_molecules_only,GHK peptide,RandomForest,permeation_amount_ug_cm2,110,24,48.95237426,312.92696408967254
+177,seven_feature_small_molecules_only,GHK peptide,RandomForest,permeation_amount_ug_cm2,110,24,41.19030492,312.92696408967254
+178,seven_feature_small_molecules_only,GHK peptide,RandomForest,permeation_amount_ug_cm2,110,24,46.75545732,312.92696408967254
+155,seven_feature_small_molecules_only,GHK peptide,XGBoost,permeation_amount_ug_cm2,110,24,453.2456677,1.7582135200500488
+156,seven_feature_small_molecules_only,GHK peptide,XGBoost,permeation_amount_ug_cm2,110,24,608.5402767,40.80344772338867
+157,seven_feature_small_molecules_only,GHK peptide,XGBoost,permeation_amount_ug_cm2,110,24,699.8355176,143.67831420898438
+158,seven_feature_small_molecules_only,GHK peptide,XGBoost,permeation_amount_ug_cm2,110,24,768.8046883,325.1172180175781
+159,seven_feature_small_molecules_only,GHK peptide,XGBoost,permeation_amount_ug_cm2,110,24,275.8769329,1.7582135200500488
+160,seven_feature_small_molecules_only,GHK peptide,XGBoost,permeation_amount_ug_cm2,110,24,402.590303,40.80344772338867
+161,seven_feature_small_molecules_only,GHK peptide,XGBoost,permeation_amount_ug_cm2,110,24,496.3157573,143.67831420898438
+162,seven_feature_small_molecules_only,GHK peptide,XGBoost,permeation_amount_ug_cm2,110,24,569.6710595,325.1172180175781
+163,seven_feature_small_molecules_only,GHK peptide,XGBoost,permeation_amount_ug_cm2,110,24,194.1998183,1.7582135200500488
+164,seven_feature_small_molecules_only,GHK peptide,XGBoost,permeation_amount_ug_cm2,110,24,448.5200612,40.80344772338867
+165,seven_feature_small_molecules_only,GHK peptide,XGBoost,permeation_amount_ug_cm2,110,24,710.2470186,143.67831420898438
+166,seven_feature_small_molecules_only,GHK peptide,XGBoost,permeation_amount_ug_cm2,110,24,916.9397782,325.1172180175781
+167,seven_feature_small_molecules_only,GHK peptide,XGBoost,permeation_amount_ug_cm2,110,24,22.81185437,1.7582135200500488
+168,seven_feature_small_molecules_only,GHK peptide,XGBoost,permeation_amount_ug_cm2,110,24,21.58634282,1.7582135200500488
+169,seven_feature_small_molecules_only,GHK peptide,XGBoost,permeation_amount_ug_cm2,110,24,14.2573962,1.7582135200500488
+170,seven_feature_small_molecules_only,GHK peptide,XGBoost,permeation_amount_ug_cm2,110,24,33.5181655,33.654964447021484
+171,seven_feature_small_molecules_only,GHK peptide,XGBoost,permeation_amount_ug_cm2,110,24,28.69171996,33.654964447021484
+172,seven_feature_small_molecules_only,GHK peptide,XGBoost,permeation_amount_ug_cm2,110,24,27.80279558,33.654964447021484
+173,seven_feature_small_molecules_only,GHK peptide,XGBoost,permeation_amount_ug_cm2,110,24,42.90916931,145.01548767089844
+174,seven_feature_small_molecules_only,GHK peptide,XGBoost,permeation_amount_ug_cm2,110,24,36.10497467,145.01548767089844
+175,seven_feature_small_molecules_only,GHK peptide,XGBoost,permeation_amount_ug_cm2,110,24,38.28244524,145.01548767089844
+176,seven_feature_small_molecules_only,GHK peptide,XGBoost,permeation_amount_ug_cm2,110,24,48.95237426,325.5140380859375
+177,seven_feature_small_molecules_only,GHK peptide,XGBoost,permeation_amount_ug_cm2,110,24,41.19030492,325.5140380859375
+178,seven_feature_small_molecules_only,GHK peptide,XGBoost,permeation_amount_ug_cm2,110,24,46.75545732,325.5140380859375
+94,seven_feature_small_molecules_only,Rhodamine B,MLR,permeation_percentage,115,19,5.7050696,7.3338050752437836
+95,seven_feature_small_molecules_only,Rhodamine B,MLR,permeation_percentage,115,19,6.3970482,7.3338050752437836
+96,seven_feature_small_molecules_only,Rhodamine B,MLR,permeation_percentage,115,19,4.7132336,7.3338050752437836
+97,seven_feature_small_molecules_only,Rhodamine B,MLR,permeation_percentage,115,19,9.4676039,16.251709154282405
+98,seven_feature_small_molecules_only,Rhodamine B,MLR,permeation_percentage,115,19,9.5060472,16.251709154282405
+99,seven_feature_small_molecules_only,Rhodamine B,MLR,permeation_percentage,115,19,12.779121,21.60245160170558
+100,seven_feature_small_molecules_only,Rhodamine B,MLR,permeation_percentage,115,19,11.5925059,21.60245160170558
+101,seven_feature_small_molecules_only,Rhodamine B,MLR,permeation_percentage,115,19,14.7766828,25.16961323332103
+102,seven_feature_small_molecules_only,Rhodamine B,MLR,permeation_percentage,115,19,12.7710002,25.16961323332103
+103,seven_feature_small_molecules_only,Rhodamine B,MLR,permeation_percentage,115,19,16.4452407,28.73677486493648
+104,seven_feature_small_molecules_only,Rhodamine B,MLR,permeation_percentage,115,19,14.0452258,28.73677486493648
+105,seven_feature_small_molecules_only,Rhodamine B,MLR,permeation_percentage,115,19,18.0232937,33.19572690445579
+106,seven_feature_small_molecules_only,Rhodamine B,MLR,permeation_percentage,115,19,15.2164335,33.19572690445579
+107,seven_feature_small_molecules_only,Rhodamine B,MLR,permeation_percentage,115,19,18.7169507,37.6546789439751
+108,seven_feature_small_molecules_only,Rhodamine B,MLR,permeation_percentage,115,19,16.3370368,37.6546789439751
+109,seven_feature_small_molecules_only,Rhodamine B,MLR,permeation_percentage,115,19,20.253696,41.22184057559055
+110,seven_feature_small_molecules_only,Rhodamine B,MLR,permeation_percentage,115,19,16.9128514,41.22184057559055
+111,seven_feature_small_molecules_only,Rhodamine B,MLR,permeation_percentage,115,19,26.52117,44.789002207205996
+112,seven_feature_small_molecules_only,Rhodamine B,MLR,permeation_percentage,115,19,22.8122906,44.789002207205996
+94,seven_feature_small_molecules_only,Rhodamine B,RandomForest,permeation_percentage,115,19,5.7050696,15.309283670174484
+95,seven_feature_small_molecules_only,Rhodamine B,RandomForest,permeation_percentage,115,19,6.3970482,15.309283670174484
+96,seven_feature_small_molecules_only,Rhodamine B,RandomForest,permeation_percentage,115,19,4.7132336,15.309283670174484
+97,seven_feature_small_molecules_only,Rhodamine B,RandomForest,permeation_percentage,115,19,9.4676039,22.177856513476723
+98,seven_feature_small_molecules_only,Rhodamine B,RandomForest,permeation_percentage,115,19,9.5060472,22.177856513476723
+99,seven_feature_small_molecules_only,Rhodamine B,RandomForest,permeation_percentage,115,19,12.779121,21.072147983160306
+100,seven_feature_small_molecules_only,Rhodamine B,RandomForest,permeation_percentage,115,19,11.5925059,21.072147983160306
+101,seven_feature_small_molecules_only,Rhodamine B,RandomForest,permeation_percentage,115,19,14.7766828,26.900737192987695
+102,seven_feature_small_molecules_only,Rhodamine B,RandomForest,permeation_percentage,115,19,12.7710002,26.900737192987695
+103,seven_feature_small_molecules_only,Rhodamine B,RandomForest,permeation_percentage,115,19,16.4452407,26.900737192987695
+104,seven_feature_small_molecules_only,Rhodamine B,RandomForest,permeation_percentage,115,19,14.0452258,26.900737192987695
+105,seven_feature_small_molecules_only,Rhodamine B,RandomForest,permeation_percentage,115,19,18.0232937,26.900737192987695
+106,seven_feature_small_molecules_only,Rhodamine B,RandomForest,permeation_percentage,115,19,15.2164335,26.900737192987695
+107,seven_feature_small_molecules_only,Rhodamine B,RandomForest,permeation_percentage,115,19,18.7169507,26.900737192987695
+108,seven_feature_small_molecules_only,Rhodamine B,RandomForest,permeation_percentage,115,19,16.3370368,26.900737192987695
+109,seven_feature_small_molecules_only,Rhodamine B,RandomForest,permeation_percentage,115,19,20.253696,26.900737192987695
+110,seven_feature_small_molecules_only,Rhodamine B,RandomForest,permeation_percentage,115,19,16.9128514,26.900737192987695
+111,seven_feature_small_molecules_only,Rhodamine B,RandomForest,permeation_percentage,115,19,26.52117,26.900737192987695
+112,seven_feature_small_molecules_only,Rhodamine B,RandomForest,permeation_percentage,115,19,22.8122906,26.900737192987695
+94,seven_feature_small_molecules_only,Rhodamine B,XGBoost,permeation_percentage,115,19,5.7050696,8.563011169433594
+95,seven_feature_small_molecules_only,Rhodamine B,XGBoost,permeation_percentage,115,19,6.3970482,8.563011169433594
+96,seven_feature_small_molecules_only,Rhodamine B,XGBoost,permeation_percentage,115,19,4.7132336,8.563011169433594
+97,seven_feature_small_molecules_only,Rhodamine B,XGBoost,permeation_percentage,115,19,9.4676039,8.81421947479248
+98,seven_feature_small_molecules_only,Rhodamine B,XGBoost,permeation_percentage,115,19,9.5060472,8.81421947479248
+99,seven_feature_small_molecules_only,Rhodamine B,XGBoost,permeation_percentage,115,19,12.779121,7.888407230377197
+100,seven_feature_small_molecules_only,Rhodamine B,XGBoost,permeation_percentage,115,19,11.5925059,7.888407230377197
+101,seven_feature_small_molecules_only,Rhodamine B,XGBoost,permeation_percentage,115,19,14.7766828,8.25853443145752
+102,seven_feature_small_molecules_only,Rhodamine B,XGBoost,permeation_percentage,115,19,12.7710002,8.25853443145752
+103,seven_feature_small_molecules_only,Rhodamine B,XGBoost,permeation_percentage,115,19,16.4452407,8.25853443145752
+104,seven_feature_small_molecules_only,Rhodamine B,XGBoost,permeation_percentage,115,19,14.0452258,8.25853443145752
+105,seven_feature_small_molecules_only,Rhodamine B,XGBoost,permeation_percentage,115,19,18.0232937,8.25853443145752
+106,seven_feature_small_molecules_only,Rhodamine B,XGBoost,permeation_percentage,115,19,15.2164335,8.25853443145752
+107,seven_feature_small_molecules_only,Rhodamine B,XGBoost,permeation_percentage,115,19,18.7169507,8.25853443145752
+108,seven_feature_small_molecules_only,Rhodamine B,XGBoost,permeation_percentage,115,19,16.3370368,8.25853443145752
+109,seven_feature_small_molecules_only,Rhodamine B,XGBoost,permeation_percentage,115,19,20.253696,8.25853443145752
+110,seven_feature_small_molecules_only,Rhodamine B,XGBoost,permeation_percentage,115,19,16.9128514,8.25853443145752
+111,seven_feature_small_molecules_only,Rhodamine B,XGBoost,permeation_percentage,115,19,26.52117,8.25853443145752
+112,seven_feature_small_molecules_only,Rhodamine B,XGBoost,permeation_percentage,115,19,22.8122906,8.25853443145752
+94,seven_feature_small_molecules_only,Rhodamine B,MLR,permeation_amount_ug_cm2,115,19,2.852534781,-571.0757194568419
+95,seven_feature_small_molecules_only,Rhodamine B,MLR,permeation_amount_ug_cm2,115,19,3.19852408,-571.0757194568419
+96,seven_feature_small_molecules_only,Rhodamine B,MLR,permeation_amount_ug_cm2,115,19,2.356616786,-571.0757194568419
+97,seven_feature_small_molecules_only,Rhodamine B,MLR,permeation_amount_ug_cm2,115,19,4.73380197,3857.1015177111244
+98,seven_feature_small_molecules_only,Rhodamine B,MLR,permeation_amount_ug_cm2,115,19,4.753023597,3857.1015177111244
+99,seven_feature_small_molecules_only,Rhodamine B,MLR,permeation_amount_ug_cm2,115,19,6.389560519,6514.007860011903
+100,seven_feature_small_molecules_only,Rhodamine B,MLR,permeation_amount_ug_cm2,115,19,5.796252944,6514.007860011903
+101,seven_feature_small_molecules_only,Rhodamine B,MLR,permeation_amount_ug_cm2,115,19,7.388341422,8285.27875487909
+102,seven_feature_small_molecules_only,Rhodamine B,MLR,permeation_amount_ug_cm2,115,19,6.385500108,8285.27875487909
+103,seven_feature_small_molecules_only,Rhodamine B,MLR,permeation_amount_ug_cm2,115,19,8.222620368,10056.549649746275
+104,seven_feature_small_molecules_only,Rhodamine B,MLR,permeation_amount_ug_cm2,115,19,7.022612893,10056.549649746275
+105,seven_feature_small_molecules_only,Rhodamine B,MLR,permeation_amount_ug_cm2,115,19,9.011646829,12270.638268330258
+106,seven_feature_small_molecules_only,Rhodamine B,MLR,permeation_amount_ug_cm2,115,19,7.608216742,12270.638268330258
+107,seven_feature_small_molecules_only,Rhodamine B,MLR,permeation_amount_ug_cm2,115,19,9.358475347,14484.72688691424
+108,seven_feature_small_molecules_only,Rhodamine B,MLR,permeation_amount_ug_cm2,115,19,8.168518396,14484.72688691424
+109,seven_feature_small_molecules_only,Rhodamine B,MLR,permeation_amount_ug_cm2,115,19,10.12684798,16255.997781781427
+110,seven_feature_small_molecules_only,Rhodamine B,MLR,permeation_amount_ug_cm2,115,19,8.456425715,16255.997781781427
+111,seven_feature_small_molecules_only,Rhodamine B,MLR,permeation_amount_ug_cm2,115,19,13.26058499,18027.268676648615
+112,seven_feature_small_molecules_only,Rhodamine B,MLR,permeation_amount_ug_cm2,115,19,11.40614532,18027.268676648615
+94,seven_feature_small_molecules_only,Rhodamine B,RandomForest,permeation_amount_ug_cm2,115,19,2.852534781,1457.3418757237298
+95,seven_feature_small_molecules_only,Rhodamine B,RandomForest,permeation_amount_ug_cm2,115,19,3.19852408,1457.3418757237298
+96,seven_feature_small_molecules_only,Rhodamine B,RandomForest,permeation_amount_ug_cm2,115,19,2.356616786,1457.3418757237298
+97,seven_feature_small_molecules_only,Rhodamine B,RandomForest,permeation_amount_ug_cm2,115,19,4.73380197,6135.036147729132
+98,seven_feature_small_molecules_only,Rhodamine B,RandomForest,permeation_amount_ug_cm2,115,19,4.753023597,6135.036147729132
+99,seven_feature_small_molecules_only,Rhodamine B,RandomForest,permeation_amount_ug_cm2,115,19,6.389560519,5298.795250626012
+100,seven_feature_small_molecules_only,Rhodamine B,RandomForest,permeation_amount_ug_cm2,115,19,5.796252944,5298.795250626012
+101,seven_feature_small_molecules_only,Rhodamine B,RandomForest,permeation_amount_ug_cm2,115,19,7.388341422,6728.918762595275
+102,seven_feature_small_molecules_only,Rhodamine B,RandomForest,permeation_amount_ug_cm2,115,19,6.385500108,6728.918762595275
+103,seven_feature_small_molecules_only,Rhodamine B,RandomForest,permeation_amount_ug_cm2,115,19,8.222620368,6728.918762595275
+104,seven_feature_small_molecules_only,Rhodamine B,RandomForest,permeation_amount_ug_cm2,115,19,7.022612893,6728.918762595275
+105,seven_feature_small_molecules_only,Rhodamine B,RandomForest,permeation_amount_ug_cm2,115,19,9.011646829,6728.918762595275
+106,seven_feature_small_molecules_only,Rhodamine B,RandomForest,permeation_amount_ug_cm2,115,19,7.608216742,6728.918762595275
+107,seven_feature_small_molecules_only,Rhodamine B,RandomForest,permeation_amount_ug_cm2,115,19,9.358475347,6728.918762595275
+108,seven_feature_small_molecules_only,Rhodamine B,RandomForest,permeation_amount_ug_cm2,115,19,8.168518396,6728.918762595275
+109,seven_feature_small_molecules_only,Rhodamine B,RandomForest,permeation_amount_ug_cm2,115,19,10.12684798,6728.918762595275
+110,seven_feature_small_molecules_only,Rhodamine B,RandomForest,permeation_amount_ug_cm2,115,19,8.456425715,6728.918762595275
+111,seven_feature_small_molecules_only,Rhodamine B,RandomForest,permeation_amount_ug_cm2,115,19,13.26058499,6728.918762595275
+112,seven_feature_small_molecules_only,Rhodamine B,RandomForest,permeation_amount_ug_cm2,115,19,11.40614532,6728.918762595275
+94,seven_feature_small_molecules_only,Rhodamine B,XGBoost,permeation_amount_ug_cm2,115,19,2.852534781,626.8841552734375
+95,seven_feature_small_molecules_only,Rhodamine B,XGBoost,permeation_amount_ug_cm2,115,19,3.19852408,626.8841552734375
+96,seven_feature_small_molecules_only,Rhodamine B,XGBoost,permeation_amount_ug_cm2,115,19,2.356616786,626.8841552734375
+97,seven_feature_small_molecules_only,Rhodamine B,XGBoost,permeation_amount_ug_cm2,115,19,4.73380197,765.1840209960938
+98,seven_feature_small_molecules_only,Rhodamine B,XGBoost,permeation_amount_ug_cm2,115,19,4.753023597,765.1840209960938
+99,seven_feature_small_molecules_only,Rhodamine B,XGBoost,permeation_amount_ug_cm2,115,19,6.389560519,365.0478820800781
+100,seven_feature_small_molecules_only,Rhodamine B,XGBoost,permeation_amount_ug_cm2,115,19,5.796252944,365.0478820800781
+101,seven_feature_small_molecules_only,Rhodamine B,XGBoost,permeation_amount_ug_cm2,115,19,7.388341422,208.70587158203125
+102,seven_feature_small_molecules_only,Rhodamine B,XGBoost,permeation_amount_ug_cm2,115,19,6.385500108,208.70587158203125
+103,seven_feature_small_molecules_only,Rhodamine B,XGBoost,permeation_amount_ug_cm2,115,19,8.222620368,208.70587158203125
+104,seven_feature_small_molecules_only,Rhodamine B,XGBoost,permeation_amount_ug_cm2,115,19,7.022612893,208.70587158203125
+105,seven_feature_small_molecules_only,Rhodamine B,XGBoost,permeation_amount_ug_cm2,115,19,9.011646829,208.70587158203125
+106,seven_feature_small_molecules_only,Rhodamine B,XGBoost,permeation_amount_ug_cm2,115,19,7.608216742,208.70587158203125
+107,seven_feature_small_molecules_only,Rhodamine B,XGBoost,permeation_amount_ug_cm2,115,19,9.358475347,208.70587158203125
+108,seven_feature_small_molecules_only,Rhodamine B,XGBoost,permeation_amount_ug_cm2,115,19,8.168518396,208.70587158203125
+109,seven_feature_small_molecules_only,Rhodamine B,XGBoost,permeation_amount_ug_cm2,115,19,10.12684798,208.70587158203125
+110,seven_feature_small_molecules_only,Rhodamine B,XGBoost,permeation_amount_ug_cm2,115,19,8.456425715,208.70587158203125
+111,seven_feature_small_molecules_only,Rhodamine B,XGBoost,permeation_amount_ug_cm2,115,19,13.26058499,208.70587158203125
+112,seven_feature_small_molecules_only,Rhodamine B,XGBoost,permeation_amount_ug_cm2,115,19,11.40614532,208.70587158203125
+113,seven_feature_small_molecules_only,caffeine,MLR,permeation_percentage,116,18,0.0198437,2.9423688172876385
+114,seven_feature_small_molecules_only,caffeine,MLR,permeation_percentage,116,18,0.0682791,9.893928739269393
+115,seven_feature_small_molecules_only,caffeine,MLR,permeation_percentage,116,18,0.2099406,13.645976911045677
+116,seven_feature_small_molecules_only,caffeine,MLR,permeation_percentage,116,18,0.0549341,3.3039218871598486
+117,seven_feature_small_molecules_only,caffeine,MLR,permeation_percentage,116,18,0.1188347,10.255481809141603
+118,seven_feature_small_molecules_only,caffeine,MLR,permeation_percentage,116,18,0.3530365,14.007529980917887
+119,seven_feature_small_molecules_only,caffeine,MLR,permeation_percentage,116,18,0.1772166,4.750134166648687
+120,seven_feature_small_molecules_only,caffeine,MLR,permeation_percentage,116,18,0.349122,11.701694088630441
+121,seven_feature_small_molecules_only,caffeine,MLR,permeation_percentage,116,18,1.409242,15.453742260406726
+122,seven_feature_small_molecules_only,caffeine,MLR,permeation_percentage,116,18,0.406661,6.919452585881946
+123,seven_feature_small_molecules_only,caffeine,MLR,permeation_percentage,116,18,0.6315799,13.8710125078637
+124,seven_feature_small_molecules_only,caffeine,MLR,permeation_percentage,116,18,2.4832009,17.623060679639984
+125,seven_feature_small_molecules_only,caffeine,MLR,permeation_percentage,116,18,0.6112768,9.088771005115206
+126,seven_feature_small_molecules_only,caffeine,MLR,permeation_percentage,116,18,0.9204309,16.04033092709696
+127,seven_feature_small_molecules_only,caffeine,MLR,permeation_percentage,116,18,3.3086575,19.792379098873244
+128,seven_feature_small_molecules_only,caffeine,MLR,permeation_percentage,116,18,1.4912863,19.9353631012815
+129,seven_feature_small_molecules_only,caffeine,MLR,permeation_percentage,116,18,2.4129892,26.886923023263254
+130,seven_feature_small_molecules_only,caffeine,MLR,permeation_percentage,116,18,5.9865845,30.638971195039538
+113,seven_feature_small_molecules_only,caffeine,RandomForest,permeation_percentage,116,18,0.0198437,0.7796877441618237
+114,seven_feature_small_molecules_only,caffeine,RandomForest,permeation_percentage,116,18,0.0682791,0.7977878195618241
+115,seven_feature_small_molecules_only,caffeine,RandomForest,permeation_percentage,116,18,0.2099406,0.7977878195618241
+116,seven_feature_small_molecules_only,caffeine,RandomForest,permeation_percentage,116,18,0.0549341,1.2610726243334898
+117,seven_feature_small_molecules_only,caffeine,RandomForest,permeation_percentage,116,18,0.1188347,1.2816701412751565
+118,seven_feature_small_molecules_only,caffeine,RandomForest,permeation_percentage,116,18,0.3530365,1.2816701412751565
+119,seven_feature_small_molecules_only,caffeine,RandomForest,permeation_percentage,116,18,0.1772166,2.5624805607566685
+120,seven_feature_small_molecules_only,caffeine,RandomForest,permeation_percentage,116,18,0.349122,2.9311833277323838
+121,seven_feature_small_molecules_only,caffeine,RandomForest,permeation_percentage,116,18,1.409242,2.9311833277323838
+122,seven_feature_small_molecules_only,caffeine,RandomForest,permeation_percentage,116,18,0.406661,4.843045633723414
+123,seven_feature_small_molecules_only,caffeine,RandomForest,permeation_percentage,116,18,0.6315799,5.461207016095319
+124,seven_feature_small_molecules_only,caffeine,RandomForest,permeation_percentage,116,18,2.4832009,5.461207016095319
+125,seven_feature_small_molecules_only,caffeine,RandomForest,permeation_percentage,116,18,0.6112768,7.932111760469124
+126,seven_feature_small_molecules_only,caffeine,RandomForest,permeation_percentage,116,18,0.9204309,8.542668250641025
+127,seven_feature_small_molecules_only,caffeine,RandomForest,permeation_percentage,116,18,3.3086575,8.542668250641025
+128,seven_feature_small_molecules_only,caffeine,RandomForest,permeation_percentage,116,18,1.4912863,29.079194534897823
+129,seven_feature_small_molecules_only,caffeine,RandomForest,permeation_percentage,116,18,2.4129892,36.172013478096396
+130,seven_feature_small_molecules_only,caffeine,RandomForest,permeation_percentage,116,18,5.9865845,36.172013478096396
+113,seven_feature_small_molecules_only,caffeine,XGBoost,permeation_percentage,116,18,0.0198437,-0.14407280087471008
+114,seven_feature_small_molecules_only,caffeine,XGBoost,permeation_percentage,116,18,0.0682791,-1.3849408626556396
+115,seven_feature_small_molecules_only,caffeine,XGBoost,permeation_percentage,116,18,0.2099406,-1.3849408626556396
+116,seven_feature_small_molecules_only,caffeine,XGBoost,permeation_percentage,116,18,0.0549341,0.25384780764579773
+117,seven_feature_small_molecules_only,caffeine,XGBoost,permeation_percentage,116,18,0.1188347,-0.9870206713676453
+118,seven_feature_small_molecules_only,caffeine,XGBoost,permeation_percentage,116,18,0.3530365,-0.9870206713676453
+119,seven_feature_small_molecules_only,caffeine,XGBoost,permeation_percentage,116,18,0.1772166,0.5537369847297668
+120,seven_feature_small_molecules_only,caffeine,XGBoost,permeation_percentage,116,18,0.349122,-0.6871312856674194
+121,seven_feature_small_molecules_only,caffeine,XGBoost,permeation_percentage,116,18,1.409242,-0.6871312856674194
+122,seven_feature_small_molecules_only,caffeine,XGBoost,permeation_percentage,116,18,0.406661,3.6748766899108887
+123,seven_feature_small_molecules_only,caffeine,XGBoost,permeation_percentage,116,18,0.6315799,2.4340085983276367
+124,seven_feature_small_molecules_only,caffeine,XGBoost,permeation_percentage,116,18,2.4832009,2.4340085983276367
+125,seven_feature_small_molecules_only,caffeine,XGBoost,permeation_percentage,116,18,0.6112768,5.764297008514404
+126,seven_feature_small_molecules_only,caffeine,XGBoost,permeation_percentage,116,18,0.9204309,5.238413333892822
+127,seven_feature_small_molecules_only,caffeine,XGBoost,permeation_percentage,116,18,3.3086575,5.238413333892822
+128,seven_feature_small_molecules_only,caffeine,XGBoost,permeation_percentage,116,18,1.4912863,38.29859924316406
+129,seven_feature_small_molecules_only,caffeine,XGBoost,permeation_percentage,116,18,2.4129892,15.17219352722168
+130,seven_feature_small_molecules_only,caffeine,XGBoost,permeation_percentage,116,18,5.9865845,15.17219352722168
+113,seven_feature_small_molecules_only,caffeine,MLR,permeation_amount_ug_cm2,116,18,1.0537,-1448.0742372766827
+114,seven_feature_small_molecules_only,caffeine,MLR,permeation_amount_ug_cm2,116,18,2.5195,-503.65712552021307
+115,seven_feature_small_molecules_only,caffeine,MLR,permeation_amount_ug_cm2,116,18,4.5977,-53.47638689932279
+116,seven_feature_small_molecules_only,caffeine,MLR,permeation_amount_ug_cm2,116,18,2.917,-1294.9206751674903
+117,seven_feature_small_molecules_only,caffeine,MLR,permeation_amount_ug_cm2,116,18,4.385,-350.50356341102065
+118,seven_feature_small_molecules_only,caffeine,MLR,permeation_amount_ug_cm2,116,18,7.7315,99.67717520986963
+119,seven_feature_small_molecules_only,caffeine,MLR,permeation_amount_ug_cm2,116,18,9.4102,-682.3064267307209
+120,seven_feature_small_molecules_only,caffeine,MLR,permeation_amount_ug_cm2,116,18,12.8826,262.1106850257488
+121,seven_feature_small_molecules_only,caffeine,MLR,permeation_amount_ug_cm2,116,18,30.8624,712.291423646639
+122,seven_feature_small_molecules_only,caffeine,MLR,permeation_amount_ug_cm2,116,18,21.5937,236.6149459244334
+123,seven_feature_small_molecules_only,caffeine,MLR,permeation_amount_ug_cm2,116,18,23.3053,1181.0320576809033
+124,seven_feature_small_molecules_only,caffeine,MLR,permeation_amount_ug_cm2,116,18,54.3821,1631.2127963017936
+125,seven_feature_small_molecules_only,caffeine,MLR,permeation_amount_ug_cm2,116,18,32.4588,1155.5363185795877
+126,seven_feature_small_molecules_only,caffeine,MLR,permeation_amount_ug_cm2,116,18,33.9639,2099.953430336058
+127,seven_feature_small_molecules_only,caffeine,MLR,permeation_amount_ug_cm2,116,18,72.4596,2550.1341689569476
+128,seven_feature_small_molecules_only,caffeine,MLR,permeation_amount_ug_cm2,116,18,79.1873,5750.143181855359
+129,seven_feature_small_molecules_only,caffeine,MLR,permeation_amount_ug_cm2,116,18,89.0393,6694.560293611829
+130,seven_feature_small_molecules_only,caffeine,MLR,permeation_amount_ug_cm2,116,18,131.1062,7144.7410322327205
+113,seven_feature_small_molecules_only,caffeine,RandomForest,permeation_amount_ug_cm2,116,18,1.0537,211.77950302063604
+114,seven_feature_small_molecules_only,caffeine,RandomForest,permeation_amount_ug_cm2,116,18,2.5195,230.42572017826683
+115,seven_feature_small_molecules_only,caffeine,RandomForest,permeation_amount_ug_cm2,116,18,4.5977,230.52919215862127
+116,seven_feature_small_molecules_only,caffeine,RandomForest,permeation_amount_ug_cm2,116,18,2.917,231.4489476719742
+117,seven_feature_small_molecules_only,caffeine,RandomForest,permeation_amount_ug_cm2,116,18,4.385,257.3564131999096
+118,seven_feature_small_molecules_only,caffeine,RandomForest,permeation_amount_ug_cm2,116,18,7.7315,257.45988518026405
+119,seven_feature_small_molecules_only,caffeine,RandomForest,permeation_amount_ug_cm2,116,18,9.4102,528.9496834389249
+120,seven_feature_small_molecules_only,caffeine,RandomForest,permeation_amount_ug_cm2,116,18,12.8826,586.4536828713902
+121,seven_feature_small_molecules_only,caffeine,RandomForest,permeation_amount_ug_cm2,116,18,30.8624,588.0535083880261
+122,seven_feature_small_molecules_only,caffeine,RandomForest,permeation_amount_ug_cm2,116,18,21.5937,798.2832417846271
+123,seven_feature_small_molecules_only,caffeine,RandomForest,permeation_amount_ug_cm2,116,18,23.3053,865.9809356457497
+124,seven_feature_small_molecules_only,caffeine,RandomForest,permeation_amount_ug_cm2,116,18,54.3821,873.555964768025
+125,seven_feature_small_molecules_only,caffeine,RandomForest,permeation_amount_ug_cm2,116,18,32.4588,902.9391317821112
+126,seven_feature_small_molecules_only,caffeine,RandomForest,permeation_amount_ug_cm2,116,18,33.9639,945.8130742790004
+127,seven_feature_small_molecules_only,caffeine,RandomForest,permeation_amount_ug_cm2,116,18,72.4596,963.9811618424311
+128,seven_feature_small_molecules_only,caffeine,RandomForest,permeation_amount_ug_cm2,116,18,79.1873,2472.634768141085
+129,seven_feature_small_molecules_only,caffeine,RandomForest,permeation_amount_ug_cm2,116,18,89.0393,3057.811730468137
+130,seven_feature_small_molecules_only,caffeine,RandomForest,permeation_amount_ug_cm2,116,18,131.1062,3076.745784399192
+113,seven_feature_small_molecules_only,caffeine,XGBoost,permeation_amount_ug_cm2,116,18,1.0537,-20.575639724731445
+114,seven_feature_small_molecules_only,caffeine,XGBoost,permeation_amount_ug_cm2,116,18,2.5195,-69.08464050292969
+115,seven_feature_small_molecules_only,caffeine,XGBoost,permeation_amount_ug_cm2,116,18,4.5977,-69.08464050292969
+116,seven_feature_small_molecules_only,caffeine,XGBoost,permeation_amount_ug_cm2,116,18,2.917,1.9759531021118164
+117,seven_feature_small_molecules_only,caffeine,XGBoost,permeation_amount_ug_cm2,116,18,4.385,-46.53298568725586
+118,seven_feature_small_molecules_only,caffeine,XGBoost,permeation_amount_ug_cm2,116,18,7.7315,-46.53298568725586
+119,seven_feature_small_molecules_only,caffeine,XGBoost,permeation_amount_ug_cm2,116,18,9.4102,33.4376335144043
+120,seven_feature_small_molecules_only,caffeine,XGBoost,permeation_amount_ug_cm2,116,18,12.8826,22.183046340942383
+121,seven_feature_small_molecules_only,caffeine,XGBoost,permeation_amount_ug_cm2,116,18,30.8624,22.183046340942383
+122,seven_feature_small_molecules_only,caffeine,XGBoost,permeation_amount_ug_cm2,116,18,21.5937,142.63165283203125
+123,seven_feature_small_molecules_only,caffeine,XGBoost,permeation_amount_ug_cm2,116,18,23.3053,57.03548049926758
+124,seven_feature_small_molecules_only,caffeine,XGBoost,permeation_amount_ug_cm2,116,18,54.3821,57.03548049926758
+125,seven_feature_small_molecules_only,caffeine,XGBoost,permeation_amount_ug_cm2,116,18,32.4588,327.9620666503906
+126,seven_feature_small_molecules_only,caffeine,XGBoost,permeation_amount_ug_cm2,116,18,33.9639,206.28628540039062
+127,seven_feature_small_molecules_only,caffeine,XGBoost,permeation_amount_ug_cm2,116,18,72.4596,206.28628540039062
+128,seven_feature_small_molecules_only,caffeine,XGBoost,permeation_amount_ug_cm2,116,18,79.1873,994.8278198242188
+129,seven_feature_small_molecules_only,caffeine,XGBoost,permeation_amount_ug_cm2,116,18,89.0393,82.38155364990234
+130,seven_feature_small_molecules_only,caffeine,XGBoost,permeation_amount_ug_cm2,116,18,131.1062,82.38155364990234
+33,seven_feature_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,1.4442226,18.07987781063847
+34,seven_feature_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,1.5646029,18.07987781063847
+35,seven_feature_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,2.0977566,18.07987781063847
+36,seven_feature_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,1.2837534,18.10736074601131
+37,seven_feature_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,3.128349,18.10736074601131
+38,seven_feature_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,3.7167494,18.10736074601131
+39,seven_feature_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,1.2837534,18.134843681054353
+40,seven_feature_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,2.9352834,18.134843681054353
+41,seven_feature_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,3.5109631,18.134843681054353
+42,seven_feature_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,1.2837534,18.162326616097396
+43,seven_feature_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,2.9352834,18.162326616097396
+44,seven_feature_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,3.5109631,18.162326616097396
+45,seven_feature_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,1.2837534,18.18980955147023
+46,seven_feature_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,2.9352834,18.18980955147023
+47,seven_feature_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,3.5109631,18.18980955147023
+48,seven_feature_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,1.2837534,18.217292486513273
+49,seven_feature_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,2.9352834,18.217292486513273
+50,seven_feature_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,1.2837534,18.299741291972193
+51,seven_feature_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,2.9352834,18.299741291972193
+52,seven_feature_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,4.035592,18.382190097431113
+53,seven_feature_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,5.0122475,18.382190097431113
+54,seven_feature_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,7.0138816,10.005617079485889
+55,seven_feature_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,5.7532681,10.005617079485889
+56,seven_feature_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,9.1872652,10.005617079485889
+57,seven_feature_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,6.078239,18.547087708348954
+58,seven_feature_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,7.3378683,18.547087708348954
+59,seven_feature_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,8.371411,18.711985319266795
+60,seven_feature_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,9.4920383,18.711985319266795
+61,seven_feature_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,14.8085004,10.335412301321572
+62,seven_feature_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,11.7574187,10.335412301321572
+63,seven_feature_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,10.9104547,19.04178054110248
+64,seven_feature_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,11.9575269,19.04178054110248
+65,seven_feature_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,2.4474498,15.16058672178493
+66,seven_feature_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,2.3593597,15.16058672178493
+67,seven_feature_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,16.2602985,10.665207523157253
+68,seven_feature_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,16.2278188,10.665207523157253
+69,seven_feature_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,16.0061849,10.665207523157253
+70,seven_feature_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,18.313884,20.031166206609527
+71,seven_feature_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,20.1212327,20.031166206609527
+72,seven_feature_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,7.4552469,16.149972387291978
+73,seven_feature_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,4.7798289,16.149972387291978
+74,seven_feature_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,6.8844586,16.149972387291978
+75,seven_feature_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,26.0285567,11.654593188664302
+76,seven_feature_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,23.2299181,11.654593188664302
+77,seven_feature_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,21.9195207,11.654593188664302
+78,seven_feature_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,27.6600463,24.48340170139124
+79,seven_feature_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,30.0873734,24.48340170139124
+80,seven_feature_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,34.0816817,16.271726294363855
+81,seven_feature_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,34.6172156,16.271726294363855
+82,seven_feature_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,16.7655732,21.096900714827218
+83,seven_feature_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,14.5749793,21.096900714827218
+84,seven_feature_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,16.2430834,21.096900714827218
+85,seven_feature_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,31.5933219,25.96748019965181
+86,seven_feature_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,34.1279637,25.96748019965181
+87,seven_feature_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,40.8934142,25.96748019965181
+88,seven_feature_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,20.6770156,22.086286380334265
+89,seven_feature_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,16.2169387,22.086286380334265
+90,seven_feature_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,18.9082354,22.086286380334265
+91,seven_feature_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,47.967593,17.590907181706587
+92,seven_feature_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,38.909355,17.590907181706587
+93,seven_feature_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,41.6449883,17.590907181706587
+179,seven_feature_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,0.0407876,-1.567937709816694
+180,seven_feature_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,0.6606969,-0.908347266145329
+181,seven_feature_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,2.8926549,0.08103839936171853
+182,seven_feature_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,6.8148163,1.070424064868766
+183,seven_feature_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,0.0411237,-1.567937709816694
+184,seven_feature_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,0.6565894,-0.908347266145329
+185,seven_feature_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,2.7240229,0.08103839936171853
+186,seven_feature_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,5.9165036,1.070424064868766
+187,seven_feature_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,0.0404142,-1.567937709816694
+188,seven_feature_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,0.675932,-0.908347266145329
+189,seven_feature_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,2.945007,0.08103839936171853
+190,seven_feature_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,6.9493559,1.070424064868766
+33,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,1.4442226,3.911382838578811
+34,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,1.5646029,3.911382838578811
+35,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,2.0977566,3.911382838578811
+36,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,1.2837534,3.911382838578811
+37,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,3.128349,3.911382838578811
+38,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,3.7167494,3.911382838578811
+39,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,1.2837534,3.911382838578811
+40,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,2.9352834,3.911382838578811
+41,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,3.5109631,3.911382838578811
+42,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,1.2837534,3.911382838578811
+43,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,2.9352834,3.911382838578811
+44,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,3.5109631,3.911382838578811
+45,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,1.2837534,3.911382838578811
+46,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,2.9352834,3.911382838578811
+47,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,3.5109631,3.911382838578811
+48,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,1.2837534,3.911382838578811
+49,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,2.9352834,3.911382838578811
+50,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,1.2837534,3.911382838578811
+51,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,2.9352834,3.911382838578811
+52,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,4.035592,3.9126901655788124
+53,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,5.0122475,3.9126901655788124
+54,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,7.0138816,3.9126901655788124
+55,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,5.7532681,3.9126901655788124
+56,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,9.1872652,3.9126901655788124
+57,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,6.078239,3.9126901655788124
+58,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,7.3378683,3.9126901655788124
+59,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,8.371411,3.9130049113788123
+60,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,9.4920383,3.9130049113788123
+61,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,14.8085004,3.9130049113788123
+62,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,11.7574187,3.9130049113788123
+63,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,10.9104547,5.6862048847172195
+64,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,11.9575269,5.6862048847172195
+65,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,2.4474498,5.6862048847172195
+66,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,2.3593597,5.6862048847172195
+67,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,16.2602985,5.6862048847172195
+68,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,16.2278188,5.6862048847172195
+69,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,16.0061849,5.6862048847172195
+70,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,18.313884,6.918210184319137
+71,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,20.1212327,6.918210184319137
+72,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,7.4552469,6.918210184319137
+73,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,4.7798289,6.918210184319137
+74,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,6.8844586,6.918210184319137
+75,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,26.0285567,6.918210184319137
+76,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,23.2299181,6.918210184319137
+77,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,21.9195207,6.918210184319137
+78,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,27.6600463,10.312692335047133
+79,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,30.0873734,10.312692335047133
+80,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,34.0816817,10.312692335047133
+81,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,34.6172156,10.312692335047133
+82,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,16.7655732,10.312692335047133
+83,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,14.5749793,10.312692335047133
+84,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,16.2430834,10.312692335047133
+85,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,31.5933219,10.306494301397136
+86,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,34.1279637,10.306494301397136
+87,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,40.8934142,10.306494301397136
+88,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,20.6770156,10.306494301397136
+89,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,16.2169387,10.306494301397136
+90,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,18.9082354,10.306494301397136
+91,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,47.967593,10.306494301397136
+92,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,38.909355,10.306494301397136
+93,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,41.6449883,10.306494301397136
+179,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,0.0407876,0.21266705477301542
+180,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,0.6606969,0.35665579896174515
+181,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,2.8926549,0.5140876620009539
+182,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,6.8148163,0.666074179318096
+183,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,0.0411237,0.21266705477301542
+184,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,0.6565894,0.35665579896174515
+185,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,2.7240229,0.5140876620009539
+186,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,5.9165036,0.666074179318096
+187,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,0.0404142,0.21266705477301542
+188,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,0.675932,0.35665579896174515
+189,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,2.945007,0.5140876620009539
+190,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,6.9493559,0.666074179318096
+33,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,1.4442226,4.139994144439697
+34,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,1.5646029,4.139994144439697
+35,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,2.0977566,4.139994144439697
+36,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,1.2837534,4.139994144439697
+37,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,3.128349,4.139994144439697
+38,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,3.7167494,4.139994144439697
+39,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,1.2837534,4.139994144439697
+40,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,2.9352834,4.139994144439697
+41,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,3.5109631,4.139994144439697
+42,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,1.2837534,4.139994144439697
+43,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,2.9352834,4.139994144439697
+44,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,3.5109631,4.139994144439697
+45,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,1.2837534,4.139994144439697
+46,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,2.9352834,4.139994144439697
+47,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,3.5109631,4.139994144439697
+48,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,1.2837534,4.139994144439697
+49,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,2.9352834,4.139994144439697
+50,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,1.2837534,4.139994144439697
+51,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,2.9352834,4.139994144439697
+52,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,4.035592,4.104794025421143
+53,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,5.0122475,4.104794025421143
+54,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,7.0138816,4.104794025421143
+55,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,5.7532681,4.104794025421143
+56,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,9.1872652,4.104794025421143
+57,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,6.078239,4.104794025421143
+58,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,7.3378683,4.104794025421143
+59,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,8.371411,4.104794025421143
+60,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,9.4920383,4.104794025421143
+61,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,14.8085004,4.104794025421143
+62,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,11.7574187,4.104794025421143
+63,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,10.9104547,5.886579513549805
+64,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,11.9575269,5.886579513549805
+65,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,2.4474498,5.886579513549805
+66,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,2.3593597,5.886579513549805
+67,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,16.2602985,5.886579513549805
+68,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,16.2278188,5.886579513549805
+69,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,16.0061849,5.886579513549805
+70,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,18.313884,6.788374900817871
+71,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,20.1212327,6.788374900817871
+72,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,7.4552469,6.788374900817871
+73,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,4.7798289,6.788374900817871
+74,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,6.8844586,6.788374900817871
+75,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,26.0285567,6.788374900817871
+76,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,23.2299181,6.788374900817871
+77,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,21.9195207,6.788374900817871
+78,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,27.6600463,9.283631324768066
+79,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,30.0873734,9.283631324768066
+80,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,34.0816817,9.283631324768066
+81,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,34.6172156,9.283631324768066
+82,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,16.7655732,9.283631324768066
+83,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,14.5749793,9.283631324768066
+84,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,16.2430834,9.283631324768066
+85,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,31.5933219,8.891624450683594
+86,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,34.1279637,8.891624450683594
+87,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,40.8934142,8.891624450683594
+88,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,20.6770156,8.891624450683594
+89,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,16.2169387,8.891624450683594
+90,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,18.9082354,8.891624450683594
+91,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,47.967593,8.891624450683594
+92,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,38.909355,8.891624450683594
+93,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,41.6449883,8.891624450683594
+179,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,0.0407876,0.06909772008657455
+180,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,0.6606969,0.4572201073169708
+181,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,2.8926549,0.9727833271026611
+182,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,6.8148163,1.0539358854293823
+183,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,0.0411237,0.06909772008657455
+184,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,0.6565894,0.4572201073169708
+185,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,2.7240229,0.9727833271026611
+186,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,5.9165036,1.0539358854293823
+187,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,0.0404142,0.06909772008657455
+188,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,0.675932,0.4572201073169708
+189,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,2.945007,0.9727833271026611
+190,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,6.9493559,1.0539358854293823
+33,seven_feature_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,1024.531509,4925.0055890716785
+34,seven_feature_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,1109.929295,4925.0055890716785
+35,seven_feature_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,1488.148502,4925.0055890716785
+36,seven_feature_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,910.694674,4925.205425192666
+37,seven_feature_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,2219.250807,4925.205425192666
+38,seven_feature_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,2636.662022,4925.205425192666
+39,seven_feature_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,910.694674,4925.4052613112535
+40,seven_feature_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,2082.29003,4925.4052613112535
+41,seven_feature_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,2490.677205,4925.4052613112535
+42,seven_feature_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,910.694674,4925.605097429841
+43,seven_feature_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,2082.29003,4925.605097429841
+44,seven_feature_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,2490.677205,4925.605097429841
+45,seven_feature_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,910.694674,4925.8049335508285
+46,seven_feature_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,2082.29003,4925.8049335508285
+47,seven_feature_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,2490.677205,4925.8049335508285
+48,seven_feature_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,910.694674,4926.004769669416
+49,seven_feature_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,2082.29003,4926.004769669416
+50,seven_feature_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,910.694674,4926.604278027579
+51,seven_feature_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,2082.29003,4926.604278027579
+52,seven_feature_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,2862.848942,4927.203786385742
+53,seven_feature_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,3555.688395,4927.203786385742
+54,seven_feature_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,1895.431377,2018.4993274495046
+55,seven_feature_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,1554.763163,2018.4993274495046
+56,seven_feature_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,2482.766544,2018.4993274495046
+57,seven_feature_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,4311.902742,4928.402803102068
+58,seven_feature_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,5205.483748,4928.402803102068
+59,seven_feature_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,5938.678996,4929.601819818394
+60,seven_feature_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,6733.651992,4929.601819818394
+61,seven_feature_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,4001.849144,2020.8973608821561
+62,seven_feature_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,3177.324831,2020.8973608821561
+63,seven_feature_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,7739.876585,4931.999853251045
+64,seven_feature_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,8482.669584,4931.999853251045
+65,seven_feature_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,1238.213787,3584.2833414914453
+66,seven_feature_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,1193.647249,3584.2833414914453
+67,seven_feature_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,4394.183075,2023.2953943148077
+68,seven_feature_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,4385.405754,2023.2953943148077
+69,seven_feature_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,4325.511402,2023.2953943148077
+70,seven_feature_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,12991.86928,4939.193953548999
+71,seven_feature_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,14274.00249,4939.193953548999
+72,seven_feature_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,3771.758529,3591.4774417893996
+73,seven_feature_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,2418.211041,3591.4774417893996
+74,seven_feature_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,3482.985285,3591.4774417893996
+75,seven_feature_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,7033.95717,2030.489494612762
+76,seven_feature_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,6277.653062,2030.489494612762
+77,seven_feature_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,5923.531283,2030.489494612762
+78,seven_feature_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,19622.03687,4971.567404889794
+79,seven_feature_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,21343.98269,4971.567404889794
+80,seven_feature_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,9210.233657,2064.061962669882
+81,seven_feature_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,9354.956357,2064.061962669882
+82,seven_feature_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,8482.038772,3627.4479432791713
+83,seven_feature_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,7373.773512,3627.4479432791713
+84,seven_feature_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,8217.700744,3627.4479432791713
+85,seven_feature_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,22412.30259,4982.358555336726
+86,seven_feature_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,24210.37745,4982.358555336726
+87,seven_feature_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,29009.78801,4982.358555336726
+88,seven_feature_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,10460.91572,3634.642043577126
+89,seven_feature_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,8204.473607,3634.642043577126
+90,seven_feature_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,9566.054457,3634.642043577126
+91,seven_feature_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,12962.76232,2073.654096400488
+92,seven_feature_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,10514.86409,2073.654096400488
+93,seven_feature_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,11254.14165,2073.654096400488
+179,seven_feature_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,2.039379206,-42.38762474517552
+180,seven_feature_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,33.03484383,-37.59155787987261
+181,seven_feature_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,144.6327434,-30.397457581918253
+182,seven_feature_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,340.7408145,-23.20335728396389
+183,seven_feature_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,2.05618266,-42.38762474517552
+184,seven_feature_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,32.82946828,-37.59155787987261
+185,seven_feature_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,136.2011436,-30.397457581918253
+186,seven_feature_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,295.8251818,-23.20335728396389
+187,seven_feature_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,2.020708701,-42.38762474517552
+188,seven_feature_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,33.79660041,-37.59155787987261
+189,seven_feature_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,147.2503481,-30.397457581918253
+190,seven_feature_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,347.4677973,-23.20335728396389
+33,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,1024.531509,71.34231368136557
+34,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,1109.929295,71.34231368136557
+35,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,1488.148502,71.34231368136557
+36,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,910.694674,71.34231368136557
+37,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,2219.250807,71.34231368136557
+38,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,2636.662022,71.34231368136557
+39,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,910.694674,71.34231368136557
+40,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,2082.29003,71.34231368136557
+41,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,2490.677205,71.34231368136557
+42,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,910.694674,71.34231368136557
+43,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,2082.29003,71.34231368136557
+44,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,2490.677205,71.34231368136557
+45,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,910.694674,71.34231368136557
+46,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,2082.29003,71.34231368136557
+47,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,2490.677205,71.34231368136557
+48,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,910.694674,71.34231368136557
+49,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,2082.29003,71.34231368136557
+50,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,910.694674,71.34231368136557
+51,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,2082.29003,71.34231368136557
+52,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,2862.848942,71.94362248136571
+53,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,3555.688395,71.94362248136571
+54,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,1895.431377,71.94362248136571
+55,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,1554.763163,71.94362248136571
+56,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,2482.766544,71.94362248136571
+57,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,4311.902742,71.94362248136571
+58,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,5205.483748,71.94362248136571
+59,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,5938.678996,72.4951908813657
+60,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,6733.651992,72.4951908813657
+61,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,4001.849144,72.4951908813657
+62,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,3177.324831,72.4951908813657
+63,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,7739.876585,116.65244174093465
+64,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,8482.669584,116.65244174093465
+65,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,1238.213787,116.65244174093465
+66,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,1193.647249,116.65244174093465
+67,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,4394.183075,116.65244174093465
+68,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,4385.405754,116.65244174093465
+69,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,4325.511402,116.65244174093465
+70,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,12991.86928,155.9479549738183
+71,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,14274.00249,155.9479549738183
+72,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,3771.758529,155.9479549738183
+73,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,2418.211041,155.9479549738183
+74,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,3482.985285,155.9479549738183
+75,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,7033.95717,155.9479549738183
+76,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,6277.653062,155.9479549738183
+77,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,5923.531283,155.9479549738183
+78,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,19622.03687,214.59171555120363
+79,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,21343.98269,214.59171555120363
+80,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,9210.233657,214.59171555120363
+81,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,9354.956357,214.59171555120363
+82,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,8482.038772,214.81664055120362
+83,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,7373.773512,214.81664055120362
+84,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,8217.700744,214.81664055120362
+85,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,22412.30259,215.9241974755403
+86,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,24210.37745,215.9241974755403
+87,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,29009.78801,215.9241974755403
+88,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,10460.91572,215.9241974755403
+89,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,8204.473607,215.9241974755403
+90,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,9566.054457,215.9241974755403
+91,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,12962.76232,215.9241974755403
+92,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,10514.86409,215.9241974755403
+93,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,11254.14165,215.9241974755403
+179,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,2.039379206,20.086321882728214
+180,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,33.03484383,27.848873329949043
+181,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,144.6327434,40.43624715098248
+182,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,340.7408145,52.17098975459626
+183,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,2.05618266,20.086321882728214
+184,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,32.82946828,27.848873329949043
+185,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,136.2011436,40.43624715098248
+186,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,295.8251818,52.17098975459626
+187,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,2.020708701,20.086321882728214
+188,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,33.79660041,27.848873329949043
+189,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,147.2503481,40.43624715098248
+190,seven_feature_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,347.4677973,52.17098975459626
+33,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,1024.531509,306.65972900390625
+34,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,1109.929295,306.65972900390625
+35,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,1488.148502,306.65972900390625
+36,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,910.694674,306.65972900390625
+37,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,2219.250807,306.65972900390625
+38,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,2636.662022,306.65972900390625
+39,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,910.694674,306.65972900390625
+40,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,2082.29003,306.65972900390625
+41,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,2490.677205,306.65972900390625
+42,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,910.694674,306.65972900390625
+43,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,2082.29003,306.65972900390625
+44,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,2490.677205,306.65972900390625
+45,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,910.694674,306.65972900390625
+46,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,2082.29003,306.65972900390625
+47,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,2490.677205,306.65972900390625
+48,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,910.694674,306.65972900390625
+49,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,2082.29003,306.65972900390625
+50,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,910.694674,306.65972900390625
+51,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,2082.29003,306.65972900390625
+52,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,2862.848942,308.21466064453125
+53,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,3555.688395,308.21466064453125
+54,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,1895.431377,308.21466064453125
+55,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,1554.763163,308.21466064453125
+56,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,2482.766544,308.21466064453125
+57,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,4311.902742,308.21466064453125
+58,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,5205.483748,308.21466064453125
+59,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,5938.678996,308.21466064453125
+60,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,6733.651992,308.21466064453125
+61,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,4001.849144,308.21466064453125
+62,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,3177.324831,308.21466064453125
+63,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,7739.876585,486.4176940917969
+64,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,8482.669584,486.4176940917969
+65,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,1238.213787,486.4176940917969
+66,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,1193.647249,486.4176940917969
+67,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,4394.183075,486.4176940917969
+68,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,4385.405754,486.4176940917969
+69,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,4325.511402,486.4176940917969
+70,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,12991.86928,634.8803100585938
+71,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,14274.00249,634.8803100585938
+72,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,3771.758529,634.8803100585938
+73,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,2418.211041,634.8803100585938
+74,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,3482.985285,634.8803100585938
+75,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,7033.95717,634.8803100585938
+76,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,6277.653062,634.8803100585938
+77,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,5923.531283,634.8803100585938
+78,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,19622.03687,751.4120483398438
+79,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,21343.98269,751.4120483398438
+80,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,9210.233657,751.4120483398438
+81,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,9354.956357,751.4120483398438
+82,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,8482.038772,751.4120483398438
+83,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,7373.773512,751.4120483398438
+84,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,8217.700744,751.4120483398438
+85,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,22412.30259,751.9610595703125
+86,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,24210.37745,751.9610595703125
+87,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,29009.78801,751.9610595703125
+88,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,10460.91572,751.9610595703125
+89,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,8204.473607,751.9610595703125
+90,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,9566.054457,751.9610595703125
+91,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,12962.76232,751.9610595703125
+92,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,10514.86409,751.9610595703125
+93,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,11254.14165,751.9610595703125
+179,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,2.039379206,15.742457389831543
+180,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,33.03484383,30.738386154174805
+181,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,144.6327434,52.19010543823242
+182,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,340.7408145,69.16049194335938
+183,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,2.05618266,15.742457389831543
+184,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,32.82946828,30.738386154174805
+185,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,136.2011436,52.19010543823242
+186,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,295.8251818,69.16049194335938
+187,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,2.020708701,15.742457389831543
+188,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,33.79660041,30.738386154174805
+189,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,147.2503481,52.19010543823242
+190,seven_feature_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,347.4677973,69.16049194335938
+155,eight_feature_transfer_small_molecules_only,GHK peptide,MLR,permeation_percentage,110,24,5.7460151,19.743186840438263
+156,eight_feature_transfer_small_molecules_only,GHK peptide,MLR,permeation_percentage,110,24,7.7147601,21.102100163689695
+157,eight_feature_transfer_small_molecules_only,GHK peptide,MLR,permeation_percentage,110,24,8.8721541,23.140470148566855
+158,eight_feature_transfer_small_molecules_only,GHK peptide,MLR,permeation_percentage,110,24,9.7465097,25.178840133444027
+159,eight_feature_transfer_small_molecules_only,GHK peptide,MLR,permeation_percentage,110,24,3.4974256,19.743186840438256
+160,eight_feature_transfer_small_molecules_only,GHK peptide,MLR,permeation_percentage,110,24,5.1038324,21.102100163689695
+161,eight_feature_transfer_small_molecules_only,GHK peptide,MLR,permeation_percentage,110,24,6.2920355,23.140470148566855
+162,eight_feature_transfer_small_molecules_only,GHK peptide,MLR,permeation_percentage,110,24,7.2219962,25.17884013344402
+163,eight_feature_transfer_small_molecules_only,GHK peptide,MLR,permeation_percentage,110,24,2.4619652,19.743186840438263
+164,eight_feature_transfer_small_molecules_only,GHK peptide,MLR,permeation_percentage,110,24,5.6861063,21.102100163689695
+165,eight_feature_transfer_small_molecules_only,GHK peptide,MLR,permeation_percentage,110,24,9.0041458,23.140470148566855
+166,eight_feature_transfer_small_molecules_only,GHK peptide,MLR,permeation_percentage,110,24,11.6244901,25.178840133444027
+167,eight_feature_transfer_small_molecules_only,GHK peptide,MLR,permeation_percentage,110,24,0.2891969,-8.85925591137181
+168,eight_feature_transfer_small_molecules_only,GHK peptide,MLR,permeation_percentage,110,24,0.2736605,-8.85925591137181
+169,eight_feature_transfer_small_molecules_only,GHK peptide,MLR,permeation_percentage,110,24,0.1807479,-8.85925591137181
+170,eight_feature_transfer_small_molecules_only,GHK peptide,MLR,permeation_percentage,110,24,0.424926,-7.500342588120368
+171,eight_feature_transfer_small_molecules_only,GHK peptide,MLR,permeation_percentage,110,24,0.3637388,-7.500342588120363
+172,eight_feature_transfer_small_molecules_only,GHK peptide,MLR,permeation_percentage,110,24,0.3524695,-7.500342588120368
+173,eight_feature_transfer_small_molecules_only,GHK peptide,MLR,permeation_percentage,110,24,0.5439803,-5.461972603243207
+174,eight_feature_transfer_small_molecules_only,GHK peptide,MLR,permeation_percentage,110,24,0.4577203,-5.461972603243201
+175,eight_feature_transfer_small_molecules_only,GHK peptide,MLR,permeation_percentage,110,24,0.4853251,-5.461972603243207
+176,eight_feature_transfer_small_molecules_only,GHK peptide,MLR,permeation_percentage,110,24,0.620593,-3.4236026183660453
+177,eight_feature_transfer_small_molecules_only,GHK peptide,MLR,permeation_percentage,110,24,0.5221895,-3.4236026183660453
+178,eight_feature_transfer_small_molecules_only,GHK peptide,MLR,permeation_percentage,110,24,0.5927416,-3.4236026183660453
+155,eight_feature_transfer_small_molecules_only,GHK peptide,RandomForest,permeation_percentage,110,24,5.7460151,5.453915705821189
+156,eight_feature_transfer_small_molecules_only,GHK peptide,RandomForest,permeation_percentage,110,24,7.7147601,10.670628727648328
+157,eight_feature_transfer_small_molecules_only,GHK peptide,RandomForest,permeation_percentage,110,24,8.8721541,15.20235353846198
+158,eight_feature_transfer_small_molecules_only,GHK peptide,RandomForest,permeation_percentage,110,24,9.7465097,16.14093148104738
+159,eight_feature_transfer_small_molecules_only,GHK peptide,RandomForest,permeation_percentage,110,24,3.4974256,5.453915705821189
+160,eight_feature_transfer_small_molecules_only,GHK peptide,RandomForest,permeation_percentage,110,24,5.1038324,10.670628727648328
+161,eight_feature_transfer_small_molecules_only,GHK peptide,RandomForest,permeation_percentage,110,24,6.2920355,15.20235353846198
+162,eight_feature_transfer_small_molecules_only,GHK peptide,RandomForest,permeation_percentage,110,24,7.2219962,16.14093148104738
+163,eight_feature_transfer_small_molecules_only,GHK peptide,RandomForest,permeation_percentage,110,24,2.4619652,5.453915705821189
+164,eight_feature_transfer_small_molecules_only,GHK peptide,RandomForest,permeation_percentage,110,24,5.6861063,10.670628727648328
+165,eight_feature_transfer_small_molecules_only,GHK peptide,RandomForest,permeation_percentage,110,24,9.0041458,15.20235353846198
+166,eight_feature_transfer_small_molecules_only,GHK peptide,RandomForest,permeation_percentage,110,24,11.6244901,16.14093148104738
+167,eight_feature_transfer_small_molecules_only,GHK peptide,RandomForest,permeation_percentage,110,24,0.2891969,0.0857228277868257
+168,eight_feature_transfer_small_molecules_only,GHK peptide,RandomForest,permeation_percentage,110,24,0.2736605,0.0857228277868257
+169,eight_feature_transfer_small_molecules_only,GHK peptide,RandomForest,permeation_percentage,110,24,0.1807479,0.0857228277868257
+170,eight_feature_transfer_small_molecules_only,GHK peptide,RandomForest,permeation_percentage,110,24,0.424926,0.7029741577528579
+171,eight_feature_transfer_small_molecules_only,GHK peptide,RandomForest,permeation_percentage,110,24,0.3637388,0.7029741577528579
+172,eight_feature_transfer_small_molecules_only,GHK peptide,RandomForest,permeation_percentage,110,24,0.3524695,0.7029741577528579
+173,eight_feature_transfer_small_molecules_only,GHK peptide,RandomForest,permeation_percentage,110,24,0.5439803,2.737104793527991
+174,eight_feature_transfer_small_molecules_only,GHK peptide,RandomForest,permeation_percentage,110,24,0.4577203,2.737104793527991
+175,eight_feature_transfer_small_molecules_only,GHK peptide,RandomForest,permeation_percentage,110,24,0.4853251,2.737104793527991
+176,eight_feature_transfer_small_molecules_only,GHK peptide,RandomForest,permeation_percentage,110,24,0.620593,6.244302101576663
+177,eight_feature_transfer_small_molecules_only,GHK peptide,RandomForest,permeation_percentage,110,24,0.5221895,6.244302101576663
+178,eight_feature_transfer_small_molecules_only,GHK peptide,RandomForest,permeation_percentage,110,24,0.5927416,6.244302101576663
+155,eight_feature_transfer_small_molecules_only,GHK peptide,XGBoost,permeation_percentage,110,24,5.7460151,1.5598945617675781
+156,eight_feature_transfer_small_molecules_only,GHK peptide,XGBoost,permeation_percentage,110,24,7.7147601,5.218754768371582
+157,eight_feature_transfer_small_molecules_only,GHK peptide,XGBoost,permeation_percentage,110,24,8.8721541,7.791399955749512
+158,eight_feature_transfer_small_molecules_only,GHK peptide,XGBoost,permeation_percentage,110,24,9.7465097,8.41696834564209
+159,eight_feature_transfer_small_molecules_only,GHK peptide,XGBoost,permeation_percentage,110,24,3.4974256,1.5598945617675781
+160,eight_feature_transfer_small_molecules_only,GHK peptide,XGBoost,permeation_percentage,110,24,5.1038324,5.218754768371582
+161,eight_feature_transfer_small_molecules_only,GHK peptide,XGBoost,permeation_percentage,110,24,6.2920355,7.791399955749512
+162,eight_feature_transfer_small_molecules_only,GHK peptide,XGBoost,permeation_percentage,110,24,7.2219962,8.41696834564209
+163,eight_feature_transfer_small_molecules_only,GHK peptide,XGBoost,permeation_percentage,110,24,2.4619652,1.5598945617675781
+164,eight_feature_transfer_small_molecules_only,GHK peptide,XGBoost,permeation_percentage,110,24,5.6861063,5.218754768371582
+165,eight_feature_transfer_small_molecules_only,GHK peptide,XGBoost,permeation_percentage,110,24,9.0041458,7.791399955749512
+166,eight_feature_transfer_small_molecules_only,GHK peptide,XGBoost,permeation_percentage,110,24,11.6244901,8.41696834564209
+167,eight_feature_transfer_small_molecules_only,GHK peptide,XGBoost,permeation_percentage,110,24,0.2891969,0.2037232220172882
+168,eight_feature_transfer_small_molecules_only,GHK peptide,XGBoost,permeation_percentage,110,24,0.2736605,0.2037232220172882
+169,eight_feature_transfer_small_molecules_only,GHK peptide,XGBoost,permeation_percentage,110,24,0.1807479,0.2037232220172882
+170,eight_feature_transfer_small_molecules_only,GHK peptide,XGBoost,permeation_percentage,110,24,0.424926,0.9241164922714233
+171,eight_feature_transfer_small_molecules_only,GHK peptide,XGBoost,permeation_percentage,110,24,0.3637388,0.9241164922714233
+172,eight_feature_transfer_small_molecules_only,GHK peptide,XGBoost,permeation_percentage,110,24,0.3524695,0.9241164922714233
+173,eight_feature_transfer_small_molecules_only,GHK peptide,XGBoost,permeation_percentage,110,24,0.5439803,3.496762990951538
+174,eight_feature_transfer_small_molecules_only,GHK peptide,XGBoost,permeation_percentage,110,24,0.4577203,3.496762990951538
+175,eight_feature_transfer_small_molecules_only,GHK peptide,XGBoost,permeation_percentage,110,24,0.4853251,3.496762990951538
+176,eight_feature_transfer_small_molecules_only,GHK peptide,XGBoost,permeation_percentage,110,24,0.620593,5.618537425994873
+177,eight_feature_transfer_small_molecules_only,GHK peptide,XGBoost,permeation_percentage,110,24,0.5221895,5.618537425994873
+178,eight_feature_transfer_small_molecules_only,GHK peptide,XGBoost,permeation_percentage,110,24,0.5927416,5.618537425994873
+155,eight_feature_transfer_small_molecules_only,GHK peptide,MLR,permeation_amount_ug_cm2,110,24,453.2456677,1338.6527966655826
+156,eight_feature_transfer_small_molecules_only,GHK peptide,MLR,permeation_amount_ug_cm2,110,24,608.5402767,1907.463601503047
+157,eight_feature_transfer_small_molecules_only,GHK peptide,MLR,permeation_amount_ug_cm2,110,24,699.8355176,2760.6798087592456
+158,eight_feature_transfer_small_molecules_only,GHK peptide,MLR,permeation_amount_ug_cm2,110,24,768.8046883,3613.8960160154456
+159,eight_feature_transfer_small_molecules_only,GHK peptide,MLR,permeation_amount_ug_cm2,110,24,275.8769329,1338.6527966655813
+160,eight_feature_transfer_small_molecules_only,GHK peptide,MLR,permeation_amount_ug_cm2,110,24,402.590303,1907.463601503047
+161,eight_feature_transfer_small_molecules_only,GHK peptide,MLR,permeation_amount_ug_cm2,110,24,496.3157573,2760.6798087592456
+162,eight_feature_transfer_small_molecules_only,GHK peptide,MLR,permeation_amount_ug_cm2,110,24,569.6710595,3613.8960160154443
+163,eight_feature_transfer_small_molecules_only,GHK peptide,MLR,permeation_amount_ug_cm2,110,24,194.1998183,1338.6527966655826
+164,eight_feature_transfer_small_molecules_only,GHK peptide,MLR,permeation_amount_ug_cm2,110,24,448.5200612,1907.463601503047
+165,eight_feature_transfer_small_molecules_only,GHK peptide,MLR,permeation_amount_ug_cm2,110,24,710.2470186,2760.6798087592456
+166,eight_feature_transfer_small_molecules_only,GHK peptide,MLR,permeation_amount_ug_cm2,110,24,916.9397782,3613.8960160154456
+167,eight_feature_transfer_small_molecules_only,GHK peptide,MLR,permeation_amount_ug_cm2,110,24,22.81185437,-4409.4165729731085
+168,eight_feature_transfer_small_molecules_only,GHK peptide,MLR,permeation_amount_ug_cm2,110,24,21.58634282,-4409.4165729731085
+169,eight_feature_transfer_small_molecules_only,GHK peptide,MLR,permeation_amount_ug_cm2,110,24,14.2573962,-4409.4165729731085
+170,eight_feature_transfer_small_molecules_only,GHK peptide,MLR,permeation_amount_ug_cm2,110,24,33.5181655,-3840.6057681356433
+171,eight_feature_transfer_small_molecules_only,GHK peptide,MLR,permeation_amount_ug_cm2,110,24,28.69171996,-3840.6057681356415
+172,eight_feature_transfer_small_molecules_only,GHK peptide,MLR,permeation_amount_ug_cm2,110,24,27.80279558,-3840.6057681356433
+173,eight_feature_transfer_small_molecules_only,GHK peptide,MLR,permeation_amount_ug_cm2,110,24,42.90916931,-2987.3895608794446
+174,eight_feature_transfer_small_molecules_only,GHK peptide,MLR,permeation_amount_ug_cm2,110,24,36.10497467,-2987.389560879443
+175,eight_feature_transfer_small_molecules_only,GHK peptide,MLR,permeation_amount_ug_cm2,110,24,38.28244524,-2987.3895608794446
+176,eight_feature_transfer_small_molecules_only,GHK peptide,MLR,permeation_amount_ug_cm2,110,24,48.95237426,-2134.173353623246
+177,eight_feature_transfer_small_molecules_only,GHK peptide,MLR,permeation_amount_ug_cm2,110,24,41.19030492,-2134.173353623246
+178,eight_feature_transfer_small_molecules_only,GHK peptide,MLR,permeation_amount_ug_cm2,110,24,46.75545732,-2134.173353623246
+155,eight_feature_transfer_small_molecules_only,GHK peptide,RandomForest,permeation_amount_ug_cm2,110,24,453.2456677,373.5602330559712
+156,eight_feature_transfer_small_molecules_only,GHK peptide,RandomForest,permeation_amount_ug_cm2,110,24,608.5402767,815.7425638151956
+157,eight_feature_transfer_small_molecules_only,GHK peptide,RandomForest,permeation_amount_ug_cm2,110,24,699.8355176,1210.8374398668557
+158,eight_feature_transfer_small_molecules_only,GHK peptide,RandomForest,permeation_amount_ug_cm2,110,24,768.8046883,1350.9707467642575
+159,eight_feature_transfer_small_molecules_only,GHK peptide,RandomForest,permeation_amount_ug_cm2,110,24,275.8769329,373.5602330559712
+160,eight_feature_transfer_small_molecules_only,GHK peptide,RandomForest,permeation_amount_ug_cm2,110,24,402.590303,815.7425638151956
+161,eight_feature_transfer_small_molecules_only,GHK peptide,RandomForest,permeation_amount_ug_cm2,110,24,496.3157573,1210.8374398668557
+162,eight_feature_transfer_small_molecules_only,GHK peptide,RandomForest,permeation_amount_ug_cm2,110,24,569.6710595,1350.9707467642575
+163,eight_feature_transfer_small_molecules_only,GHK peptide,RandomForest,permeation_amount_ug_cm2,110,24,194.1998183,373.5602330559712
+164,eight_feature_transfer_small_molecules_only,GHK peptide,RandomForest,permeation_amount_ug_cm2,110,24,448.5200612,815.7425638151956
+165,eight_feature_transfer_small_molecules_only,GHK peptide,RandomForest,permeation_amount_ug_cm2,110,24,710.2470186,1210.8374398668557
+166,eight_feature_transfer_small_molecules_only,GHK peptide,RandomForest,permeation_amount_ug_cm2,110,24,916.9397782,1350.9707467642575
+167,eight_feature_transfer_small_molecules_only,GHK peptide,RandomForest,permeation_amount_ug_cm2,110,24,22.81185437,7.06192513726126
+168,eight_feature_transfer_small_molecules_only,GHK peptide,RandomForest,permeation_amount_ug_cm2,110,24,21.58634282,7.06192513726126
+169,eight_feature_transfer_small_molecules_only,GHK peptide,RandomForest,permeation_amount_ug_cm2,110,24,14.2573962,7.06192513726126
+170,eight_feature_transfer_small_molecules_only,GHK peptide,RandomForest,permeation_amount_ug_cm2,110,24,33.5181655,31.534065215125004
+171,eight_feature_transfer_small_molecules_only,GHK peptide,RandomForest,permeation_amount_ug_cm2,110,24,28.69171996,31.534065215125004
+172,eight_feature_transfer_small_molecules_only,GHK peptide,RandomForest,permeation_amount_ug_cm2,110,24,27.80279558,31.534065215125004
+173,eight_feature_transfer_small_molecules_only,GHK peptide,RandomForest,permeation_amount_ug_cm2,110,24,42.90916931,136.14991474211448
+174,eight_feature_transfer_small_molecules_only,GHK peptide,RandomForest,permeation_amount_ug_cm2,110,24,36.10497467,136.14991474211448
+175,eight_feature_transfer_small_molecules_only,GHK peptide,RandomForest,permeation_amount_ug_cm2,110,24,38.28244524,136.14991474211448
+176,eight_feature_transfer_small_molecules_only,GHK peptide,RandomForest,permeation_amount_ug_cm2,110,24,48.95237426,311.4672061154008
+177,eight_feature_transfer_small_molecules_only,GHK peptide,RandomForest,permeation_amount_ug_cm2,110,24,41.19030492,311.4672061154008
+178,eight_feature_transfer_small_molecules_only,GHK peptide,RandomForest,permeation_amount_ug_cm2,110,24,46.75545732,311.4672061154008
+155,eight_feature_transfer_small_molecules_only,GHK peptide,XGBoost,permeation_amount_ug_cm2,110,24,453.2456677,1.7582135200500488
+156,eight_feature_transfer_small_molecules_only,GHK peptide,XGBoost,permeation_amount_ug_cm2,110,24,608.5402767,40.80344772338867
+157,eight_feature_transfer_small_molecules_only,GHK peptide,XGBoost,permeation_amount_ug_cm2,110,24,699.8355176,143.67831420898438
+158,eight_feature_transfer_small_molecules_only,GHK peptide,XGBoost,permeation_amount_ug_cm2,110,24,768.8046883,325.1172180175781
+159,eight_feature_transfer_small_molecules_only,GHK peptide,XGBoost,permeation_amount_ug_cm2,110,24,275.8769329,1.7582135200500488
+160,eight_feature_transfer_small_molecules_only,GHK peptide,XGBoost,permeation_amount_ug_cm2,110,24,402.590303,40.80344772338867
+161,eight_feature_transfer_small_molecules_only,GHK peptide,XGBoost,permeation_amount_ug_cm2,110,24,496.3157573,143.67831420898438
+162,eight_feature_transfer_small_molecules_only,GHK peptide,XGBoost,permeation_amount_ug_cm2,110,24,569.6710595,325.1172180175781
+163,eight_feature_transfer_small_molecules_only,GHK peptide,XGBoost,permeation_amount_ug_cm2,110,24,194.1998183,1.7582135200500488
+164,eight_feature_transfer_small_molecules_only,GHK peptide,XGBoost,permeation_amount_ug_cm2,110,24,448.5200612,40.80344772338867
+165,eight_feature_transfer_small_molecules_only,GHK peptide,XGBoost,permeation_amount_ug_cm2,110,24,710.2470186,143.67831420898438
+166,eight_feature_transfer_small_molecules_only,GHK peptide,XGBoost,permeation_amount_ug_cm2,110,24,916.9397782,325.1172180175781
+167,eight_feature_transfer_small_molecules_only,GHK peptide,XGBoost,permeation_amount_ug_cm2,110,24,22.81185437,1.7582135200500488
+168,eight_feature_transfer_small_molecules_only,GHK peptide,XGBoost,permeation_amount_ug_cm2,110,24,21.58634282,1.7582135200500488
+169,eight_feature_transfer_small_molecules_only,GHK peptide,XGBoost,permeation_amount_ug_cm2,110,24,14.2573962,1.7582135200500488
+170,eight_feature_transfer_small_molecules_only,GHK peptide,XGBoost,permeation_amount_ug_cm2,110,24,33.5181655,33.654964447021484
+171,eight_feature_transfer_small_molecules_only,GHK peptide,XGBoost,permeation_amount_ug_cm2,110,24,28.69171996,33.654964447021484
+172,eight_feature_transfer_small_molecules_only,GHK peptide,XGBoost,permeation_amount_ug_cm2,110,24,27.80279558,33.654964447021484
+173,eight_feature_transfer_small_molecules_only,GHK peptide,XGBoost,permeation_amount_ug_cm2,110,24,42.90916931,145.01548767089844
+174,eight_feature_transfer_small_molecules_only,GHK peptide,XGBoost,permeation_amount_ug_cm2,110,24,36.10497467,145.01548767089844
+175,eight_feature_transfer_small_molecules_only,GHK peptide,XGBoost,permeation_amount_ug_cm2,110,24,38.28244524,145.01548767089844
+176,eight_feature_transfer_small_molecules_only,GHK peptide,XGBoost,permeation_amount_ug_cm2,110,24,48.95237426,325.5140380859375
+177,eight_feature_transfer_small_molecules_only,GHK peptide,XGBoost,permeation_amount_ug_cm2,110,24,41.19030492,325.5140380859375
+178,eight_feature_transfer_small_molecules_only,GHK peptide,XGBoost,permeation_amount_ug_cm2,110,24,46.75545732,325.5140380859375
+94,eight_feature_transfer_small_molecules_only,Rhodamine B,MLR,permeation_percentage,115,19,5.7050696,7.6679418071888845
+95,eight_feature_transfer_small_molecules_only,Rhodamine B,MLR,permeation_percentage,115,19,6.3970482,7.6679418071888845
+96,eight_feature_transfer_small_molecules_only,Rhodamine B,MLR,permeation_percentage,115,19,4.7132336,7.6679418071888845
+97,eight_feature_transfer_small_molecules_only,Rhodamine B,MLR,permeation_percentage,115,19,9.4676039,16.587470618562275
+98,eight_feature_transfer_small_molecules_only,Rhodamine B,MLR,permeation_percentage,115,19,9.5060472,16.587470618562275
+99,eight_feature_transfer_small_molecules_only,Rhodamine B,MLR,permeation_percentage,115,19,12.779121,21.93918790538631
+100,eight_feature_transfer_small_molecules_only,Rhodamine B,MLR,permeation_percentage,115,19,11.5925059,21.93918790538631
+101,eight_feature_transfer_small_molecules_only,Rhodamine B,MLR,permeation_percentage,115,19,14.7766828,25.506999429935664
+102,eight_feature_transfer_small_molecules_only,Rhodamine B,MLR,permeation_percentage,115,19,12.7710002,25.506999429935664
+103,eight_feature_transfer_small_molecules_only,Rhodamine B,MLR,permeation_percentage,115,19,16.4452407,29.074810954485024
+104,eight_feature_transfer_small_molecules_only,Rhodamine B,MLR,permeation_percentage,115,19,14.0452258,29.074810954485024
+105,eight_feature_transfer_small_molecules_only,Rhodamine B,MLR,permeation_percentage,115,19,18.0232937,33.534575360171715
+106,eight_feature_transfer_small_molecules_only,Rhodamine B,MLR,permeation_percentage,115,19,15.2164335,33.534575360171715
+107,eight_feature_transfer_small_molecules_only,Rhodamine B,MLR,permeation_percentage,115,19,18.7169507,37.99433976585841
+108,eight_feature_transfer_small_molecules_only,Rhodamine B,MLR,permeation_percentage,115,19,16.3370368,37.99433976585841
+109,eight_feature_transfer_small_molecules_only,Rhodamine B,MLR,permeation_percentage,115,19,20.253696,41.56215129040777
+110,eight_feature_transfer_small_molecules_only,Rhodamine B,MLR,permeation_percentage,115,19,16.9128514,41.56215129040777
+111,eight_feature_transfer_small_molecules_only,Rhodamine B,MLR,permeation_percentage,115,19,26.52117,45.129962814957125
+112,eight_feature_transfer_small_molecules_only,Rhodamine B,MLR,permeation_percentage,115,19,22.8122906,45.129962814957125
+94,eight_feature_transfer_small_molecules_only,Rhodamine B,RandomForest,permeation_percentage,115,19,5.7050696,12.772567167702357
+95,eight_feature_transfer_small_molecules_only,Rhodamine B,RandomForest,permeation_percentage,115,19,6.3970482,12.772567167702357
+96,eight_feature_transfer_small_molecules_only,Rhodamine B,RandomForest,permeation_percentage,115,19,4.7132336,12.772567167702357
+97,eight_feature_transfer_small_molecules_only,Rhodamine B,RandomForest,permeation_percentage,115,19,9.4676039,22.27482313706672
+98,eight_feature_transfer_small_molecules_only,Rhodamine B,RandomForest,permeation_percentage,115,19,9.5060472,22.27482313706672
+99,eight_feature_transfer_small_molecules_only,Rhodamine B,RandomForest,permeation_percentage,115,19,12.779121,20.763183044032672
+100,eight_feature_transfer_small_molecules_only,Rhodamine B,RandomForest,permeation_percentage,115,19,11.5925059,20.763183044032672
+101,eight_feature_transfer_small_molecules_only,Rhodamine B,RandomForest,permeation_percentage,115,19,14.7766828,27.06988980861242
+102,eight_feature_transfer_small_molecules_only,Rhodamine B,RandomForest,permeation_percentage,115,19,12.7710002,27.06988980861242
+103,eight_feature_transfer_small_molecules_only,Rhodamine B,RandomForest,permeation_percentage,115,19,16.4452407,27.06988980861242
+104,eight_feature_transfer_small_molecules_only,Rhodamine B,RandomForest,permeation_percentage,115,19,14.0452258,27.06988980861242
+105,eight_feature_transfer_small_molecules_only,Rhodamine B,RandomForest,permeation_percentage,115,19,18.0232937,27.06988980861242
+106,eight_feature_transfer_small_molecules_only,Rhodamine B,RandomForest,permeation_percentage,115,19,15.2164335,27.06988980861242
+107,eight_feature_transfer_small_molecules_only,Rhodamine B,RandomForest,permeation_percentage,115,19,18.7169507,27.06988980861242
+108,eight_feature_transfer_small_molecules_only,Rhodamine B,RandomForest,permeation_percentage,115,19,16.3370368,27.06988980861242
+109,eight_feature_transfer_small_molecules_only,Rhodamine B,RandomForest,permeation_percentage,115,19,20.253696,27.06988980861242
+110,eight_feature_transfer_small_molecules_only,Rhodamine B,RandomForest,permeation_percentage,115,19,16.9128514,27.06988980861242
+111,eight_feature_transfer_small_molecules_only,Rhodamine B,RandomForest,permeation_percentage,115,19,26.52117,27.06988980861242
+112,eight_feature_transfer_small_molecules_only,Rhodamine B,RandomForest,permeation_percentage,115,19,22.8122906,27.06988980861242
+94,eight_feature_transfer_small_molecules_only,Rhodamine B,XGBoost,permeation_percentage,115,19,5.7050696,8.563011169433594
+95,eight_feature_transfer_small_molecules_only,Rhodamine B,XGBoost,permeation_percentage,115,19,6.3970482,8.563011169433594
+96,eight_feature_transfer_small_molecules_only,Rhodamine B,XGBoost,permeation_percentage,115,19,4.7132336,8.563011169433594
+97,eight_feature_transfer_small_molecules_only,Rhodamine B,XGBoost,permeation_percentage,115,19,9.4676039,8.81421947479248
+98,eight_feature_transfer_small_molecules_only,Rhodamine B,XGBoost,permeation_percentage,115,19,9.5060472,8.81421947479248
+99,eight_feature_transfer_small_molecules_only,Rhodamine B,XGBoost,permeation_percentage,115,19,12.779121,7.888407230377197
+100,eight_feature_transfer_small_molecules_only,Rhodamine B,XGBoost,permeation_percentage,115,19,11.5925059,7.888407230377197
+101,eight_feature_transfer_small_molecules_only,Rhodamine B,XGBoost,permeation_percentage,115,19,14.7766828,8.25853443145752
+102,eight_feature_transfer_small_molecules_only,Rhodamine B,XGBoost,permeation_percentage,115,19,12.7710002,8.25853443145752
+103,eight_feature_transfer_small_molecules_only,Rhodamine B,XGBoost,permeation_percentage,115,19,16.4452407,8.25853443145752
+104,eight_feature_transfer_small_molecules_only,Rhodamine B,XGBoost,permeation_percentage,115,19,14.0452258,8.25853443145752
+105,eight_feature_transfer_small_molecules_only,Rhodamine B,XGBoost,permeation_percentage,115,19,18.0232937,8.25853443145752
+106,eight_feature_transfer_small_molecules_only,Rhodamine B,XGBoost,permeation_percentage,115,19,15.2164335,8.25853443145752
+107,eight_feature_transfer_small_molecules_only,Rhodamine B,XGBoost,permeation_percentage,115,19,18.7169507,8.25853443145752
+108,eight_feature_transfer_small_molecules_only,Rhodamine B,XGBoost,permeation_percentage,115,19,16.3370368,8.25853443145752
+109,eight_feature_transfer_small_molecules_only,Rhodamine B,XGBoost,permeation_percentage,115,19,20.253696,8.25853443145752
+110,eight_feature_transfer_small_molecules_only,Rhodamine B,XGBoost,permeation_percentage,115,19,16.9128514,8.25853443145752
+111,eight_feature_transfer_small_molecules_only,Rhodamine B,XGBoost,permeation_percentage,115,19,26.52117,8.25853443145752
+112,eight_feature_transfer_small_molecules_only,Rhodamine B,XGBoost,permeation_percentage,115,19,22.8122906,8.25853443145752
+94,eight_feature_transfer_small_molecules_only,Rhodamine B,MLR,permeation_amount_ug_cm2,115,19,2.852534781,-129.53592060011079
+95,eight_feature_transfer_small_molecules_only,Rhodamine B,MLR,permeation_amount_ug_cm2,115,19,3.19852408,-129.53592060011079
+96,eight_feature_transfer_small_molecules_only,Rhodamine B,MLR,permeation_amount_ug_cm2,115,19,2.356616786,-129.53592060011079
+97,eight_feature_transfer_small_molecules_only,Rhodamine B,MLR,permeation_amount_ug_cm2,115,19,4.73380197,4305.557167112857
+98,eight_feature_transfer_small_molecules_only,Rhodamine B,MLR,permeation_amount_ug_cm2,115,19,4.753023597,4305.557167112857
+99,eight_feature_transfer_small_molecules_only,Rhodamine B,MLR,permeation_amount_ug_cm2,115,19,6.389560519,6966.613019740637
+100,eight_feature_transfer_small_molecules_only,Rhodamine B,MLR,permeation_amount_ug_cm2,115,19,5.796252944,6966.613019740637
+101,eight_feature_transfer_small_molecules_only,Rhodamine B,MLR,permeation_amount_ug_cm2,115,19,7.388341422,8740.650254825825
+102,eight_feature_transfer_small_molecules_only,Rhodamine B,MLR,permeation_amount_ug_cm2,115,19,6.385500108,8740.650254825825
+103,eight_feature_transfer_small_molecules_only,Rhodamine B,MLR,permeation_amount_ug_cm2,115,19,8.222620368,10514.687489911012
+104,eight_feature_transfer_small_molecules_only,Rhodamine B,MLR,permeation_amount_ug_cm2,115,19,7.022612893,10514.687489911012
+105,eight_feature_transfer_small_molecules_only,Rhodamine B,MLR,permeation_amount_ug_cm2,115,19,9.011646829,12732.234033767498
+106,eight_feature_transfer_small_molecules_only,Rhodamine B,MLR,permeation_amount_ug_cm2,115,19,7.608216742,12732.234033767498
+107,eight_feature_transfer_small_molecules_only,Rhodamine B,MLR,permeation_amount_ug_cm2,115,19,9.358475347,14949.78057762398
+108,eight_feature_transfer_small_molecules_only,Rhodamine B,MLR,permeation_amount_ug_cm2,115,19,8.168518396,14949.78057762398
+109,eight_feature_transfer_small_molecules_only,Rhodamine B,MLR,permeation_amount_ug_cm2,115,19,10.12684798,16723.817812709167
+110,eight_feature_transfer_small_molecules_only,Rhodamine B,MLR,permeation_amount_ug_cm2,115,19,8.456425715,16723.817812709167
+111,eight_feature_transfer_small_molecules_only,Rhodamine B,MLR,permeation_amount_ug_cm2,115,19,13.26058499,18497.855047794354
+112,eight_feature_transfer_small_molecules_only,Rhodamine B,MLR,permeation_amount_ug_cm2,115,19,11.40614532,18497.855047794354
+94,eight_feature_transfer_small_molecules_only,Rhodamine B,RandomForest,permeation_amount_ug_cm2,115,19,2.852534781,1739.1852183832893
+95,eight_feature_transfer_small_molecules_only,Rhodamine B,RandomForest,permeation_amount_ug_cm2,115,19,3.19852408,1739.1852183832893
+96,eight_feature_transfer_small_molecules_only,Rhodamine B,RandomForest,permeation_amount_ug_cm2,115,19,2.356616786,1739.1852183832893
+97,eight_feature_transfer_small_molecules_only,Rhodamine B,RandomForest,permeation_amount_ug_cm2,115,19,4.73380197,6233.768151017795
+98,eight_feature_transfer_small_molecules_only,Rhodamine B,RandomForest,permeation_amount_ug_cm2,115,19,4.753023597,6233.768151017795
+99,eight_feature_transfer_small_molecules_only,Rhodamine B,RandomForest,permeation_amount_ug_cm2,115,19,6.389560519,5295.980934298513
+100,eight_feature_transfer_small_molecules_only,Rhodamine B,RandomForest,permeation_amount_ug_cm2,115,19,5.796252944,5295.980934298513
+101,eight_feature_transfer_small_molecules_only,Rhodamine B,RandomForest,permeation_amount_ug_cm2,115,19,7.388341422,6692.127892490025
+102,eight_feature_transfer_small_molecules_only,Rhodamine B,RandomForest,permeation_amount_ug_cm2,115,19,6.385500108,6692.127892490025
+103,eight_feature_transfer_small_molecules_only,Rhodamine B,RandomForest,permeation_amount_ug_cm2,115,19,8.222620368,6692.127892490025
+104,eight_feature_transfer_small_molecules_only,Rhodamine B,RandomForest,permeation_amount_ug_cm2,115,19,7.022612893,6692.127892490025
+105,eight_feature_transfer_small_molecules_only,Rhodamine B,RandomForest,permeation_amount_ug_cm2,115,19,9.011646829,6692.127892490025
+106,eight_feature_transfer_small_molecules_only,Rhodamine B,RandomForest,permeation_amount_ug_cm2,115,19,7.608216742,6692.127892490025
+107,eight_feature_transfer_small_molecules_only,Rhodamine B,RandomForest,permeation_amount_ug_cm2,115,19,9.358475347,6692.127892490025
+108,eight_feature_transfer_small_molecules_only,Rhodamine B,RandomForest,permeation_amount_ug_cm2,115,19,8.168518396,6692.127892490025
+109,eight_feature_transfer_small_molecules_only,Rhodamine B,RandomForest,permeation_amount_ug_cm2,115,19,10.12684798,6692.127892490025
+110,eight_feature_transfer_small_molecules_only,Rhodamine B,RandomForest,permeation_amount_ug_cm2,115,19,8.456425715,6692.127892490025
+111,eight_feature_transfer_small_molecules_only,Rhodamine B,RandomForest,permeation_amount_ug_cm2,115,19,13.26058499,6692.127892490025
+112,eight_feature_transfer_small_molecules_only,Rhodamine B,RandomForest,permeation_amount_ug_cm2,115,19,11.40614532,6692.127892490025
+94,eight_feature_transfer_small_molecules_only,Rhodamine B,XGBoost,permeation_amount_ug_cm2,115,19,2.852534781,626.8841552734375
+95,eight_feature_transfer_small_molecules_only,Rhodamine B,XGBoost,permeation_amount_ug_cm2,115,19,3.19852408,626.8841552734375
+96,eight_feature_transfer_small_molecules_only,Rhodamine B,XGBoost,permeation_amount_ug_cm2,115,19,2.356616786,626.8841552734375
+97,eight_feature_transfer_small_molecules_only,Rhodamine B,XGBoost,permeation_amount_ug_cm2,115,19,4.73380197,765.1840209960938
+98,eight_feature_transfer_small_molecules_only,Rhodamine B,XGBoost,permeation_amount_ug_cm2,115,19,4.753023597,765.1840209960938
+99,eight_feature_transfer_small_molecules_only,Rhodamine B,XGBoost,permeation_amount_ug_cm2,115,19,6.389560519,365.0478820800781
+100,eight_feature_transfer_small_molecules_only,Rhodamine B,XGBoost,permeation_amount_ug_cm2,115,19,5.796252944,365.0478820800781
+101,eight_feature_transfer_small_molecules_only,Rhodamine B,XGBoost,permeation_amount_ug_cm2,115,19,7.388341422,208.70587158203125
+102,eight_feature_transfer_small_molecules_only,Rhodamine B,XGBoost,permeation_amount_ug_cm2,115,19,6.385500108,208.70587158203125
+103,eight_feature_transfer_small_molecules_only,Rhodamine B,XGBoost,permeation_amount_ug_cm2,115,19,8.222620368,208.70587158203125
+104,eight_feature_transfer_small_molecules_only,Rhodamine B,XGBoost,permeation_amount_ug_cm2,115,19,7.022612893,208.70587158203125
+105,eight_feature_transfer_small_molecules_only,Rhodamine B,XGBoost,permeation_amount_ug_cm2,115,19,9.011646829,208.70587158203125
+106,eight_feature_transfer_small_molecules_only,Rhodamine B,XGBoost,permeation_amount_ug_cm2,115,19,7.608216742,208.70587158203125
+107,eight_feature_transfer_small_molecules_only,Rhodamine B,XGBoost,permeation_amount_ug_cm2,115,19,9.358475347,208.70587158203125
+108,eight_feature_transfer_small_molecules_only,Rhodamine B,XGBoost,permeation_amount_ug_cm2,115,19,8.168518396,208.70587158203125
+109,eight_feature_transfer_small_molecules_only,Rhodamine B,XGBoost,permeation_amount_ug_cm2,115,19,10.12684798,208.70587158203125
+110,eight_feature_transfer_small_molecules_only,Rhodamine B,XGBoost,permeation_amount_ug_cm2,115,19,8.456425715,208.70587158203125
+111,eight_feature_transfer_small_molecules_only,Rhodamine B,XGBoost,permeation_amount_ug_cm2,115,19,13.26058499,208.70587158203125
+112,eight_feature_transfer_small_molecules_only,Rhodamine B,XGBoost,permeation_amount_ug_cm2,115,19,11.40614532,208.70587158203125
+113,eight_feature_transfer_small_molecules_only,caffeine,MLR,permeation_percentage,116,18,0.0198437,6.0759380833076
+114,eight_feature_transfer_small_molecules_only,caffeine,MLR,permeation_percentage,116,18,0.0682791,10.57518989851256
+115,eight_feature_transfer_small_molecules_only,caffeine,MLR,permeation_percentage,116,18,0.2099406,13.038475059228487
+116,eight_feature_transfer_small_molecules_only,caffeine,MLR,permeation_percentage,116,18,0.0549341,6.437661842639963
+117,eight_feature_transfer_small_molecules_only,caffeine,MLR,permeation_percentage,116,18,0.1188347,10.936913657844922
+118,eight_feature_transfer_small_molecules_only,caffeine,MLR,permeation_percentage,116,18,0.3530365,13.400198818560847
+119,eight_feature_transfer_small_molecules_only,caffeine,MLR,permeation_percentage,116,18,0.1772166,7.884556879969402
+120,eight_feature_transfer_small_molecules_only,caffeine,MLR,permeation_percentage,116,18,0.349122,12.383808695174363
+121,eight_feature_transfer_small_molecules_only,caffeine,MLR,permeation_percentage,116,18,1.409242,14.84709385589029
+122,eight_feature_transfer_small_molecules_only,caffeine,MLR,permeation_percentage,116,18,0.406661,10.054899435963566
+123,eight_feature_transfer_small_molecules_only,caffeine,MLR,permeation_percentage,116,18,0.6315799,14.554151251168527
+124,eight_feature_transfer_small_molecules_only,caffeine,MLR,permeation_percentage,116,18,2.4832009,17.017436411884457
+125,eight_feature_transfer_small_molecules_only,caffeine,MLR,permeation_percentage,116,18,0.6112768,12.225241991957729
+126,eight_feature_transfer_small_molecules_only,caffeine,MLR,permeation_percentage,116,18,0.9204309,16.72449380716269
+127,eight_feature_transfer_small_molecules_only,caffeine,MLR,permeation_percentage,116,18,3.3086575,19.187778967878614
+128,eight_feature_transfer_small_molecules_only,caffeine,MLR,permeation_percentage,116,18,1.4912863,23.076954771928545
+129,eight_feature_transfer_small_molecules_only,caffeine,MLR,permeation_percentage,116,18,2.4129892,27.576206587133505
+130,eight_feature_transfer_small_molecules_only,caffeine,MLR,permeation_percentage,116,18,5.9865845,30.039491747849432
+113,eight_feature_transfer_small_molecules_only,caffeine,RandomForest,permeation_percentage,116,18,0.0198437,1.6645634116299977
+114,eight_feature_transfer_small_molecules_only,caffeine,RandomForest,permeation_percentage,116,18,0.0682791,1.7090768777442837
+115,eight_feature_transfer_small_molecules_only,caffeine,RandomForest,permeation_percentage,116,18,0.2099406,1.7090768777442837
+116,eight_feature_transfer_small_molecules_only,caffeine,RandomForest,permeation_percentage,116,18,0.0549341,2.4231811823866654
+117,eight_feature_transfer_small_molecules_only,caffeine,RandomForest,permeation_percentage,116,18,0.1188347,2.4806856408438085
+118,eight_feature_transfer_small_molecules_only,caffeine,RandomForest,permeation_percentage,116,18,0.3530365,2.4806856408438085
+119,eight_feature_transfer_small_molecules_only,caffeine,RandomForest,permeation_percentage,116,18,0.1772166,4.437910495558096
+120,eight_feature_transfer_small_molecules_only,caffeine,RandomForest,permeation_percentage,116,18,0.349122,5.079540187844762
+121,eight_feature_transfer_small_molecules_only,caffeine,RandomForest,permeation_percentage,116,18,1.409242,5.100948396244761
+122,eight_feature_transfer_small_molecules_only,caffeine,RandomForest,permeation_percentage,116,18,0.406661,7.125465324042695
+123,eight_feature_transfer_small_molecules_only,caffeine,RandomForest,permeation_percentage,116,18,0.6315799,8.308844530435076
+124,eight_feature_transfer_small_molecules_only,caffeine,RandomForest,permeation_percentage,116,18,2.4832009,8.327761305635075
+125,eight_feature_transfer_small_molecules_only,caffeine,RandomForest,permeation_percentage,116,18,0.6112768,9.565098089529592
+126,eight_feature_transfer_small_molecules_only,caffeine,RandomForest,permeation_percentage,116,18,0.9204309,10.748477295921978
+127,eight_feature_transfer_small_molecules_only,caffeine,RandomForest,permeation_percentage,116,18,3.3086575,10.75329502578531
+128,eight_feature_transfer_small_molecules_only,caffeine,RandomForest,permeation_percentage,116,18,1.4912863,29.50929635794905
+129,eight_feature_transfer_small_molecules_only,caffeine,RandomForest,permeation_percentage,116,18,2.4129892,35.290313825631884
+130,eight_feature_transfer_small_molecules_only,caffeine,RandomForest,permeation_percentage,116,18,5.9865845,35.290313825631884
+113,eight_feature_transfer_small_molecules_only,caffeine,XGBoost,permeation_percentage,116,18,0.0198437,-0.14407280087471008
+114,eight_feature_transfer_small_molecules_only,caffeine,XGBoost,permeation_percentage,116,18,0.0682791,-1.3849408626556396
+115,eight_feature_transfer_small_molecules_only,caffeine,XGBoost,permeation_percentage,116,18,0.2099406,-1.3849408626556396
+116,eight_feature_transfer_small_molecules_only,caffeine,XGBoost,permeation_percentage,116,18,0.0549341,0.25384780764579773
+117,eight_feature_transfer_small_molecules_only,caffeine,XGBoost,permeation_percentage,116,18,0.1188347,-0.9870206713676453
+118,eight_feature_transfer_small_molecules_only,caffeine,XGBoost,permeation_percentage,116,18,0.3530365,-0.9870206713676453
+119,eight_feature_transfer_small_molecules_only,caffeine,XGBoost,permeation_percentage,116,18,0.1772166,0.5537369847297668
+120,eight_feature_transfer_small_molecules_only,caffeine,XGBoost,permeation_percentage,116,18,0.349122,-0.6871312856674194
+121,eight_feature_transfer_small_molecules_only,caffeine,XGBoost,permeation_percentage,116,18,1.409242,-0.6871312856674194
+122,eight_feature_transfer_small_molecules_only,caffeine,XGBoost,permeation_percentage,116,18,0.406661,3.6748766899108887
+123,eight_feature_transfer_small_molecules_only,caffeine,XGBoost,permeation_percentage,116,18,0.6315799,2.4340085983276367
+124,eight_feature_transfer_small_molecules_only,caffeine,XGBoost,permeation_percentage,116,18,2.4832009,2.4340085983276367
+125,eight_feature_transfer_small_molecules_only,caffeine,XGBoost,permeation_percentage,116,18,0.6112768,5.764297008514404
+126,eight_feature_transfer_small_molecules_only,caffeine,XGBoost,permeation_percentage,116,18,0.9204309,5.238413333892822
+127,eight_feature_transfer_small_molecules_only,caffeine,XGBoost,permeation_percentage,116,18,3.3086575,5.238413333892822
+128,eight_feature_transfer_small_molecules_only,caffeine,XGBoost,permeation_percentage,116,18,1.4912863,38.29859924316406
+129,eight_feature_transfer_small_molecules_only,caffeine,XGBoost,permeation_percentage,116,18,2.4129892,15.17219352722168
+130,eight_feature_transfer_small_molecules_only,caffeine,XGBoost,permeation_percentage,116,18,5.9865845,15.17219352722168
+113,eight_feature_transfer_small_molecules_only,caffeine,MLR,permeation_amount_ug_cm2,116,18,1.0537,-1670.6838877545592
+114,eight_feature_transfer_small_molecules_only,caffeine,MLR,permeation_amount_ug_cm2,116,18,2.5195,-573.8403007616101
+115,eight_feature_transfer_small_molecules_only,caffeine,MLR,permeation_amount_ug_cm2,116,18,4.5977,-43.723395794784835
+116,eight_feature_transfer_small_molecules_only,caffeine,MLR,permeation_amount_ug_cm2,116,18,2.917,-1517.419431603094
+117,eight_feature_transfer_small_molecules_only,caffeine,MLR,permeation_amount_ug_cm2,116,18,4.385,-420.57584461014494
+118,eight_feature_transfer_small_molecules_only,caffeine,MLR,permeation_amount_ug_cm2,116,18,7.7315,109.54106035668036
+119,eight_feature_transfer_small_molecules_only,caffeine,MLR,permeation_amount_ug_cm2,116,18,9.4102,-904.3616069972331
+120,eight_feature_transfer_small_molecules_only,caffeine,MLR,permeation_amount_ug_cm2,116,18,12.8826,192.48197999571585
+121,eight_feature_transfer_small_molecules_only,caffeine,MLR,permeation_amount_ug_cm2,116,18,30.8624,722.598884962541
+122,eight_feature_transfer_small_molecules_only,caffeine,MLR,permeation_amount_ug_cm2,116,18,21.5937,15.225129911557815
+123,eight_feature_transfer_small_molecules_only,caffeine,MLR,permeation_amount_ug_cm2,116,18,23.3053,1112.068716904507
+124,eight_feature_transfer_small_molecules_only,caffeine,MLR,permeation_amount_ug_cm2,116,18,54.3821,1642.185621871332
+125,eight_feature_transfer_small_molecules_only,caffeine,MLR,permeation_amount_ug_cm2,116,18,32.4588,934.8118668203492
+126,eight_feature_transfer_small_molecules_only,caffeine,MLR,permeation_amount_ug_cm2,116,18,33.9639,2031.6554538132984
+127,eight_feature_transfer_small_molecules_only,caffeine,MLR,permeation_amount_ug_cm2,116,18,72.4596,2561.772358780124
+128,eight_feature_transfer_small_molecules_only,caffeine,MLR,permeation_amount_ug_cm2,116,18,79.1873,5532.745551364305
+129,eight_feature_transfer_small_molecules_only,caffeine,MLR,permeation_amount_ug_cm2,116,18,89.0393,6629.589138357254
+130,eight_feature_transfer_small_molecules_only,caffeine,MLR,permeation_amount_ug_cm2,116,18,131.1062,7159.7060433240795
+113,eight_feature_transfer_small_molecules_only,caffeine,RandomForest,permeation_amount_ug_cm2,116,18,1.0537,372.87752321230295
+114,eight_feature_transfer_small_molecules_only,caffeine,RandomForest,permeation_amount_ug_cm2,116,18,2.5195,404.53671462451035
+115,eight_feature_transfer_small_molecules_only,caffeine,RandomForest,permeation_amount_ug_cm2,116,18,4.5977,404.57119919058243
+116,eight_feature_transfer_small_molecules_only,caffeine,RandomForest,permeation_amount_ug_cm2,116,18,2.917,419.55636669802664
+117,eight_feature_transfer_small_molecules_only,caffeine,RandomForest,permeation_amount_ug_cm2,116,18,4.385,454.51918531596766
+118,eight_feature_transfer_small_molecules_only,caffeine,RandomForest,permeation_amount_ug_cm2,116,18,7.7315,454.55366988203957
+119,eight_feature_transfer_small_molecules_only,caffeine,RandomForest,permeation_amount_ug_cm2,116,18,9.4102,882.0667746425926
+120,eight_feature_transfer_small_molecules_only,caffeine,RandomForest,permeation_amount_ug_cm2,116,18,12.8826,958.1419477031294
+121,eight_feature_transfer_small_molecules_only,caffeine,RandomForest,permeation_amount_ug_cm2,116,18,30.8624,959.3047169588131
+122,eight_feature_transfer_small_molecules_only,caffeine,RandomForest,permeation_amount_ug_cm2,116,18,21.5937,1306.2149321890852
+123,eight_feature_transfer_small_molecules_only,caffeine,RandomForest,permeation_amount_ug_cm2,116,18,23.3053,1408.394682929075
+124,eight_feature_transfer_small_molecules_only,caffeine,RandomForest,permeation_amount_ug_cm2,116,18,54.3821,1413.0192810806127
+125,eight_feature_transfer_small_molecules_only,caffeine,RandomForest,permeation_amount_ug_cm2,116,18,32.4588,1407.105813127927
+126,eight_feature_transfer_small_molecules_only,caffeine,RandomForest,permeation_amount_ug_cm2,116,18,33.9639,1496.0037033933565
+127,eight_feature_transfer_small_molecules_only,caffeine,RandomForest,permeation_amount_ug_cm2,116,18,72.4596,1505.0504856422692
+128,eight_feature_transfer_small_molecules_only,caffeine,RandomForest,permeation_amount_ug_cm2,116,18,79.1873,3903.280215203877
+129,eight_feature_transfer_small_molecules_only,caffeine,RandomForest,permeation_amount_ug_cm2,116,18,89.0393,4420.234291280063
+130,eight_feature_transfer_small_molecules_only,caffeine,RandomForest,permeation_amount_ug_cm2,116,18,131.1062,4428.568310767559
+113,eight_feature_transfer_small_molecules_only,caffeine,XGBoost,permeation_amount_ug_cm2,116,18,1.0537,-20.575639724731445
+114,eight_feature_transfer_small_molecules_only,caffeine,XGBoost,permeation_amount_ug_cm2,116,18,2.5195,-69.08464050292969
+115,eight_feature_transfer_small_molecules_only,caffeine,XGBoost,permeation_amount_ug_cm2,116,18,4.5977,-69.08464050292969
+116,eight_feature_transfer_small_molecules_only,caffeine,XGBoost,permeation_amount_ug_cm2,116,18,2.917,1.9759531021118164
+117,eight_feature_transfer_small_molecules_only,caffeine,XGBoost,permeation_amount_ug_cm2,116,18,4.385,-46.53298568725586
+118,eight_feature_transfer_small_molecules_only,caffeine,XGBoost,permeation_amount_ug_cm2,116,18,7.7315,-46.53298568725586
+119,eight_feature_transfer_small_molecules_only,caffeine,XGBoost,permeation_amount_ug_cm2,116,18,9.4102,33.4376335144043
+120,eight_feature_transfer_small_molecules_only,caffeine,XGBoost,permeation_amount_ug_cm2,116,18,12.8826,22.183046340942383
+121,eight_feature_transfer_small_molecules_only,caffeine,XGBoost,permeation_amount_ug_cm2,116,18,30.8624,22.183046340942383
+122,eight_feature_transfer_small_molecules_only,caffeine,XGBoost,permeation_amount_ug_cm2,116,18,21.5937,142.63165283203125
+123,eight_feature_transfer_small_molecules_only,caffeine,XGBoost,permeation_amount_ug_cm2,116,18,23.3053,57.03548049926758
+124,eight_feature_transfer_small_molecules_only,caffeine,XGBoost,permeation_amount_ug_cm2,116,18,54.3821,57.03548049926758
+125,eight_feature_transfer_small_molecules_only,caffeine,XGBoost,permeation_amount_ug_cm2,116,18,32.4588,327.9620666503906
+126,eight_feature_transfer_small_molecules_only,caffeine,XGBoost,permeation_amount_ug_cm2,116,18,33.9639,206.28628540039062
+127,eight_feature_transfer_small_molecules_only,caffeine,XGBoost,permeation_amount_ug_cm2,116,18,72.4596,206.28628540039062
+128,eight_feature_transfer_small_molecules_only,caffeine,XGBoost,permeation_amount_ug_cm2,116,18,79.1873,994.8278198242188
+129,eight_feature_transfer_small_molecules_only,caffeine,XGBoost,permeation_amount_ug_cm2,116,18,89.0393,82.38155364990234
+130,eight_feature_transfer_small_molecules_only,caffeine,XGBoost,permeation_amount_ug_cm2,116,18,131.1062,82.38155364990234
+33,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,1.4442226,-140.60753237124433
+34,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,1.5646029,-140.60753237124436
+35,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,2.0977566,-140.60753237124436
+36,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,1.2837534,-140.58005560828133
+37,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,3.128349,-140.58005560828133
+38,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,3.7167494,-140.58005560828133
+39,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,1.2837534,-140.55257884564804
+40,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,2.9352834,-140.55257884564807
+41,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,3.5109631,-140.55257884564804
+42,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,1.2837534,-140.52510208301476
+43,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,2.9352834,-140.52510208301476
+44,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,3.5109631,-140.52510208301476
+45,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,1.2837534,-140.49762532005178
+46,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,2.9352834,-140.49762532005175
+47,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,3.5109631,-140.49762532005178
+48,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,1.2837534,-140.4701485574185
+49,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,2.9352834,-140.47014855741847
+50,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,1.2837534,-140.3877182691889
+51,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,2.9352834,-140.3877182691889
+52,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,4.035592,-140.30528798095932
+53,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,5.0122475,-140.30528798095935
+54,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,7.0138816,-46.33566581829056
+55,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,5.7532681,-46.33566581829057
+56,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,9.1872652,-46.33566581829057
+57,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,6.078239,-140.14042740450017
+58,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,7.3378683,-140.14042740450017
+59,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,8.371411,-139.975566828041
+60,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,9.4920383,-139.975566828041
+61,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,14.8085004,-46.00594466537226
+62,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,11.7574187,-46.00594466537225
+63,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,10.9104547,-139.6458456751227
+64,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,11.9575269,-139.6458456751227
+65,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,2.4474498,-96.10604533433612
+66,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,2.3593597,-96.10604533433612
+67,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,16.2602985,-45.676223512453944
+68,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,16.2278188,-45.676223512453944
+69,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,16.0061849,-45.67622351245396
+70,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,18.313884,-138.65668221636778
+71,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,20.1212327,-138.6566822163678
+72,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,7.4552469,-95.11688187558121
+73,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,4.7798289,-95.1168818755812
+74,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,6.8844586,-95.1168818755812
+75,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,26.0285567,-44.68706005369903
+76,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,23.2299181,-44.68706005369903
+77,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,21.9195207,-44.68706005369904
+78,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,27.6600463,-134.20544665197068
+79,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,30.0873734,-134.2054466519707
+80,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,34.0816817,-40.070963912842764
+81,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,34.6172156,-40.07096391284275
+82,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,16.7655732,-90.17106458180662
+83,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,14.5749793,-90.17106458180662
+84,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,16.2430834,-90.17106458180662
+85,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,31.5933219,-132.72170146383831
+86,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,34.1279637,-132.7217014638383
+87,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,40.8934142,-132.72170146383831
+88,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,20.6770156,-89.18190112305172
+89,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,16.2169387,-89.1819011230517
+90,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,18.9082354,-89.1819011230517
+91,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,47.967593,-38.75207930116953
+92,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,38.909355,-38.75207930116953
+93,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,41.6449883,-38.752079301169545
+179,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,0.0407876,6.863525694417187
+180,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,0.6606969,7.522968000253802
+181,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,2.8926549,8.512131459008703
+182,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,6.8148163,9.50129491776363
+183,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,0.0411237,6.863525694417175
+184,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,0.6565894,7.522968000253787
+185,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,2.7240229,8.512131459008714
+186,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,5.9165036,9.50129491776362
+187,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,0.0404142,6.863525694417175
+188,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,0.675932,7.522968000253802
+189,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,2.945007,8.512131459008703
+190,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_percentage,61,73,6.9493559,9.50129491776363
+33,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,1.4442226,3.737531239332141
+34,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,1.5646029,3.737531239332141
+35,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,2.0977566,3.737531239332141
+36,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,1.2837534,3.737531239332141
+37,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,3.128349,3.737531239332141
+38,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,3.7167494,3.737531239332141
+39,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,1.2837534,3.737531239332141
+40,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,2.9352834,3.737531239332141
+41,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,3.5109631,3.737531239332141
+42,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,1.2837534,3.737531239332141
+43,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,2.9352834,3.737531239332141
+44,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,3.5109631,3.737531239332141
+45,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,1.2837534,3.737531239332141
+46,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,2.9352834,3.737531239332141
+47,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,3.5109631,3.737531239332141
+48,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,1.2837534,3.737531239332141
+49,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,2.9352834,3.737531239332141
+50,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,1.2837534,3.737531239332141
+51,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,2.9352834,3.737531239332141
+52,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,4.035592,3.7395035003321433
+53,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,5.0122475,3.7395035003321433
+54,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,7.0138816,3.7395035003321433
+55,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,5.7532681,3.7395035003321433
+56,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,9.1872652,3.7395035003321433
+57,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,6.078239,3.7395035003321433
+58,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,7.3378683,3.7395035003321433
+59,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,8.371411,3.7403799319321434
+60,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,9.4920383,3.7403799319321434
+61,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,14.8085004,3.7403799319321434
+62,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,11.7574187,3.7403799319321434
+63,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,10.9104547,5.484632820049758
+64,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,11.9575269,5.484632820049758
+65,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,2.4474498,5.484632820049758
+66,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,2.3593597,5.484632820049758
+67,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,16.2602985,5.484632820049758
+68,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,16.2278188,5.484632820049758
+69,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,16.0061849,5.484632820049758
+70,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,18.313884,6.688140519879776
+71,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,20.1212327,6.688140519879776
+72,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,7.4552469,6.688140519879776
+73,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,4.7798289,6.688140519879776
+74,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,6.8844586,6.688140519879776
+75,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,26.0285567,6.688140519879776
+76,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,23.2299181,6.688140519879776
+77,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,21.9195207,6.688140519879776
+78,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,27.6600463,9.637691017773097
+79,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,30.0873734,9.637691017773097
+80,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,34.0816817,9.637691017773097
+81,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,34.6172156,9.637691017773097
+82,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,16.7655732,9.637691017773097
+83,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,14.5749793,9.637691017773097
+84,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,16.2430834,9.637691017773097
+85,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,31.5933219,9.658569242078334
+86,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,34.1279637,9.658569242078334
+87,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,40.8934142,9.658569242078334
+88,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,20.6770156,9.658569242078334
+89,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,16.2169387,9.658569242078334
+90,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,18.9082354,9.658569242078334
+91,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,47.967593,9.658569242078334
+92,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,38.909355,9.658569242078334
+93,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,41.6449883,9.658569242078334
+179,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,0.0407876,0.2222612449492059
+180,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,0.6606969,0.37185121765293594
+181,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,2.8926549,0.5432149543325404
+182,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,6.8148163,0.7026603570338096
+183,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,0.0411237,0.2222612449492059
+184,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,0.6565894,0.37185121765293594
+185,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,2.7240229,0.5432149543325404
+186,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,5.9165036,0.7026603570338096
+187,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,0.0404142,0.2222612449492059
+188,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,0.675932,0.37185121765293594
+189,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,2.945007,0.5432149543325404
+190,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_percentage,61,73,6.9493559,0.7026603570338096
+33,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,1.4442226,4.139994144439697
+34,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,1.5646029,4.139994144439697
+35,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,2.0977566,4.139994144439697
+36,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,1.2837534,4.139994144439697
+37,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,3.128349,4.139994144439697
+38,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,3.7167494,4.139994144439697
+39,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,1.2837534,4.139994144439697
+40,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,2.9352834,4.139994144439697
+41,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,3.5109631,4.139994144439697
+42,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,1.2837534,4.139994144439697
+43,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,2.9352834,4.139994144439697
+44,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,3.5109631,4.139994144439697
+45,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,1.2837534,4.139994144439697
+46,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,2.9352834,4.139994144439697
+47,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,3.5109631,4.139994144439697
+48,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,1.2837534,4.139994144439697
+49,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,2.9352834,4.139994144439697
+50,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,1.2837534,4.139994144439697
+51,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,2.9352834,4.139994144439697
+52,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,4.035592,4.104794025421143
+53,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,5.0122475,4.104794025421143
+54,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,7.0138816,4.104794025421143
+55,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,5.7532681,4.104794025421143
+56,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,9.1872652,4.104794025421143
+57,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,6.078239,4.104794025421143
+58,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,7.3378683,4.104794025421143
+59,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,8.371411,4.104794025421143
+60,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,9.4920383,4.104794025421143
+61,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,14.8085004,4.104794025421143
+62,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,11.7574187,4.104794025421143
+63,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,10.9104547,5.886579513549805
+64,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,11.9575269,5.886579513549805
+65,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,2.4474498,5.886579513549805
+66,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,2.3593597,5.886579513549805
+67,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,16.2602985,5.886579513549805
+68,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,16.2278188,5.886579513549805
+69,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,16.0061849,5.886579513549805
+70,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,18.313884,6.788374900817871
+71,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,20.1212327,6.788374900817871
+72,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,7.4552469,6.788374900817871
+73,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,4.7798289,6.788374900817871
+74,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,6.8844586,6.788374900817871
+75,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,26.0285567,6.788374900817871
+76,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,23.2299181,6.788374900817871
+77,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,21.9195207,6.788374900817871
+78,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,27.6600463,9.283631324768066
+79,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,30.0873734,9.283631324768066
+80,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,34.0816817,9.283631324768066
+81,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,34.6172156,9.283631324768066
+82,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,16.7655732,9.283631324768066
+83,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,14.5749793,9.283631324768066
+84,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,16.2430834,9.283631324768066
+85,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,31.5933219,8.891624450683594
+86,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,34.1279637,8.891624450683594
+87,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,40.8934142,8.891624450683594
+88,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,20.6770156,8.891624450683594
+89,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,16.2169387,8.891624450683594
+90,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,18.9082354,8.891624450683594
+91,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,47.967593,8.891624450683594
+92,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,38.909355,8.891624450683594
+93,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,41.6449883,8.891624450683594
+179,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,0.0407876,0.06909772008657455
+180,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,0.6606969,0.4572201073169708
+181,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,2.8926549,0.9727833271026611
+182,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,6.8148163,1.0539358854293823
+183,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,0.0411237,0.06909772008657455
+184,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,0.6565894,0.4572201073169708
+185,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,2.7240229,0.9727833271026611
+186,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,5.9165036,1.0539358854293823
+187,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,0.0404142,0.06909772008657455
+188,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,0.675932,0.4572201073169708
+189,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,2.945007,0.9727833271026611
+190,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_percentage,61,73,6.9493559,1.0539358854293823
+33,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,1024.531509,-1762.7764678113629
+34,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,1109.929295,-1762.7764678113633
+35,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,1488.148502,-1762.7764678113633
+36,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,910.694674,-1762.5768919358027
+37,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,2219.250807,-1762.5768919358034
+38,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,2636.662022,-1762.576891935803
+39,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,910.694674,-1762.3773160626379
+40,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,2082.29003,-1762.3773160626386
+41,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,2490.677205,-1762.3773160626379
+42,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,910.694674,-1762.1777401894726
+43,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,2082.29003,-1762.1777401894726
+44,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,2490.677205,-1762.1777401894724
+45,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,910.694674,-1761.978164313913
+46,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,2082.29003,-1761.9781643139127
+47,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,2490.677205,-1761.978164313913
+48,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,910.694674,-1761.778588440748
+49,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,2082.29003,-1761.7785884407476
+50,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,910.694674,-1761.1798608188576
+51,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,2082.29003,-1761.1798608188576
+52,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,2862.848942,-1760.5811331969671
+53,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,3555.688395,-1760.5811331969678
+54,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,1895.431377,-354.21551607949567
+55,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,1554.763163,-354.2155160794961
+56,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,2482.766544,-354.2155160794961
+57,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,4311.902742,-1759.383677953187
+58,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,5205.483748,-1759.383677953187
+59,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,5938.678996,-1758.1862227094068
+60,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,6733.651992,-1758.1862227094066
+61,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,4001.849144,-351.8206055919356
+62,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,3177.324831,-351.82060559193513
+63,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,7739.876585,-1755.7913122218467
+64,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,8482.669584,-1755.7913122218467
+65,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,1238.213787,-1104.1671302128677
+66,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,1193.647249,-1104.1671302128677
+67,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,4394.183075,-349.4256951043747
+68,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,4385.405754,-349.42569510437454
+69,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,4325.511402,-349.42569510437517
+70,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,12991.86928,-1748.606580759165
+71,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,14274.00249,-1748.6065807591654
+72,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,3771.758529,-1096.9823987501868
+73,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,2418.211041,-1096.9823987501863
+74,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,3482.985285,-1096.9823987501863
+75,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,7033.95717,-342.2409636416931
+76,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,6277.653062,-342.24096364169293
+77,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,5923.531283,-342.24096364169355
+78,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,19622.03687,-1716.2752891770979
+79,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,21343.98269,-1716.2752891770983
+80,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,9210.233657,-308.7122168158464
+81,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,9354.956357,-308.7122168158459
+82,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,8482.038772,-1061.0587414367785
+83,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,7373.773512,-1061.0587414367785
+84,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,8217.700744,-1061.0587414367783
+85,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,22412.30259,-1705.498191983076
+86,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,24210.37745,-1705.4981919830755
+87,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,29009.78801,-1705.498191983076
+88,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,10460.91572,-1053.8740099740974
+89,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,8204.473607,-1053.874009974097
+90,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,9566.054457,-1053.874009974097
+91,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,12962.76232,-299.1325748656039
+92,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,10514.86409,-299.1325748656037
+93,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,11254.14165,-299.13257486560434
+179,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,2.039379206,310.30731468815355
+180,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,33.03484383,315.0971356632747
+181,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,144.6327434,322.28186712595567
+182,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,340.7408145,329.4665985886376
+183,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,2.05618266,310.3073146881531
+184,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,32.82946828,315.09713566327406
+185,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,136.2011436,322.2818671259561
+186,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,295.8251818,329.46659858863717
+187,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,2.020708701,310.3073146881531
+188,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,33.79660041,315.0971356632747
+189,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,147.2503481,322.28186712595567
+190,eight_feature_transfer_small_molecules_only,lidocaine,MLR,permeation_amount_ug_cm2,61,73,347.4677973,329.4665985886376
+33,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,1024.531509,55.31484389486342
+34,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,1109.929295,55.31484389486342
+35,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,1488.148502,55.31484389486342
+36,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,910.694674,55.31484389486342
+37,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,2219.250807,55.31484389486342
+38,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,2636.662022,55.31484389486342
+39,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,910.694674,55.31484389486342
+40,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,2082.29003,55.31484389486342
+41,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,2490.677205,55.31484389486342
+42,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,910.694674,55.31484389486342
+43,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,2082.29003,55.31484389486342
+44,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,2490.677205,55.31484389486342
+45,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,910.694674,55.31484389486342
+46,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,2082.29003,55.31484389486342
+47,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,2490.677205,55.31484389486342
+48,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,910.694674,55.31484389486342
+49,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,2082.29003,55.31484389486342
+50,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,910.694674,55.31484389486342
+51,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,2082.29003,55.31484389486342
+52,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,2862.848942,55.953076553724415
+53,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,3555.688395,55.953076553724415
+54,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,1895.431377,55.953076553724415
+55,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,1554.763163,55.953076553724415
+56,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,2482.766544,55.953076553724415
+57,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,4311.902742,55.953076553724415
+58,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,5205.483748,55.953076553724415
+59,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,5938.678996,56.719257153724435
+60,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,6733.651992,56.719257153724435
+61,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,4001.849144,56.719257153724435
+62,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,3177.324831,56.719257153724435
+63,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,7739.876585,91.40142995909154
+64,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,8482.669584,91.40142995909154
+65,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,1238.213787,91.40142995909154
+66,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,1193.647249,91.40142995909154
+67,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,4394.183075,91.40142995909154
+68,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,4385.405754,91.40142995909154
+69,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,4325.511402,91.40142995909154
+70,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,12991.86928,121.51728703032117
+71,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,14274.00249,121.51728703032117
+72,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,3771.758529,121.51728703032117
+73,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,2418.211041,121.51728703032117
+74,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,3482.985285,121.51728703032117
+75,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,7033.95717,121.51728703032117
+76,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,6277.653062,121.51728703032117
+77,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,5923.531283,121.51728703032117
+78,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,19622.03687,178.31983103813124
+79,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,21343.98269,178.31983103813124
+80,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,9210.233657,178.26714847139223
+81,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,9354.956357,178.26714847139223
+82,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,8482.038772,178.38030947139222
+83,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,7373.773512,178.38030947139222
+84,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,8217.700744,178.38030947139222
+85,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,22412.30259,179.1096228833621
+86,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,24210.37745,179.1096228833621
+87,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,29009.78801,179.1096228833621
+88,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,10460.91572,179.1096228833621
+89,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,8204.473607,179.1096228833621
+90,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,9566.054457,179.1096228833621
+91,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,12962.76232,179.1096228833621
+92,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,10514.86409,179.1096228833621
+93,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,11254.14165,179.1096228833621
+179,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,2.039379206,18.31843700473993
+180,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,33.03484383,27.452093361654462
+181,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,144.6327434,40.2765519447916
+182,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,340.7408145,53.723856689242204
+183,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,2.05618266,18.31843700473993
+184,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,32.82946828,27.452093361654462
+185,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,136.2011436,40.2765519447916
+186,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,295.8251818,53.723856689242204
+187,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,2.020708701,18.31843700473993
+188,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,33.79660041,27.452093361654462
+189,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,147.2503481,40.2765519447916
+190,eight_feature_transfer_small_molecules_only,lidocaine,RandomForest,permeation_amount_ug_cm2,61,73,347.4677973,53.723856689242204
+33,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,1024.531509,306.65972900390625
+34,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,1109.929295,306.65972900390625
+35,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,1488.148502,306.65972900390625
+36,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,910.694674,306.65972900390625
+37,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,2219.250807,306.65972900390625
+38,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,2636.662022,306.65972900390625
+39,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,910.694674,306.65972900390625
+40,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,2082.29003,306.65972900390625
+41,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,2490.677205,306.65972900390625
+42,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,910.694674,306.65972900390625
+43,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,2082.29003,306.65972900390625
+44,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,2490.677205,306.65972900390625
+45,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,910.694674,306.65972900390625
+46,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,2082.29003,306.65972900390625
+47,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,2490.677205,306.65972900390625
+48,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,910.694674,306.65972900390625
+49,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,2082.29003,306.65972900390625
+50,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,910.694674,306.65972900390625
+51,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,2082.29003,306.65972900390625
+52,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,2862.848942,308.21466064453125
+53,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,3555.688395,308.21466064453125
+54,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,1895.431377,308.21466064453125
+55,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,1554.763163,308.21466064453125
+56,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,2482.766544,308.21466064453125
+57,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,4311.902742,308.21466064453125
+58,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,5205.483748,308.21466064453125
+59,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,5938.678996,308.21466064453125
+60,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,6733.651992,308.21466064453125
+61,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,4001.849144,308.21466064453125
+62,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,3177.324831,308.21466064453125
+63,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,7739.876585,486.4176940917969
+64,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,8482.669584,486.4176940917969
+65,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,1238.213787,486.4176940917969
+66,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,1193.647249,486.4176940917969
+67,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,4394.183075,486.4176940917969
+68,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,4385.405754,486.4176940917969
+69,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,4325.511402,486.4176940917969
+70,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,12991.86928,634.8803100585938
+71,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,14274.00249,634.8803100585938
+72,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,3771.758529,634.8803100585938
+73,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,2418.211041,634.8803100585938
+74,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,3482.985285,634.8803100585938
+75,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,7033.95717,634.8803100585938
+76,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,6277.653062,634.8803100585938
+77,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,5923.531283,634.8803100585938
+78,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,19622.03687,751.4120483398438
+79,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,21343.98269,751.4120483398438
+80,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,9210.233657,751.4120483398438
+81,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,9354.956357,751.4120483398438
+82,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,8482.038772,751.4120483398438
+83,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,7373.773512,751.4120483398438
+84,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,8217.700744,751.4120483398438
+85,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,22412.30259,751.9610595703125
+86,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,24210.37745,751.9610595703125
+87,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,29009.78801,751.9610595703125
+88,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,10460.91572,751.9610595703125
+89,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,8204.473607,751.9610595703125
+90,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,9566.054457,751.9610595703125
+91,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,12962.76232,751.9610595703125
+92,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,10514.86409,751.9610595703125
+93,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,11254.14165,751.9610595703125
+179,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,2.039379206,15.742457389831543
+180,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,33.03484383,30.738386154174805
+181,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,144.6327434,52.19010543823242
+182,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,340.7408145,69.16049194335938
+183,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,2.05618266,15.742457389831543
+184,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,32.82946828,30.738386154174805
+185,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,136.2011436,52.19010543823242
+186,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,295.8251818,69.16049194335938
+187,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,2.020708701,15.742457389831543
+188,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,33.79660041,30.738386154174805
+189,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,147.2503481,52.19010543823242
+190,eight_feature_transfer_small_molecules_only,lidocaine,XGBoost,permeation_amount_ug_cm2,61,73,347.4677973,69.16049194335938

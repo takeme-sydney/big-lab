@@ -1,0 +1,135 @@
+row_index,Drug name,is_small_molecule,Drug loading in MN patch (µg),Drug MW (Dalton),MN Length (mm),Skin type (rat =1; human = 2),MN type (hydrogel =1; plastic = 2),MN surface area (mm2),Permeation time (hour),predicted_general_skin_logKp,exclusion_note
+33,lidocaine,True,70940.0,234.34,0.889,1,1,32.12727744,0.083333333,-3.1568333615587436,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+34,lidocaine,True,70940.0,234.34,0.889,1,1,32.12727744,0.083333333,-3.1568333615587423,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+35,lidocaine,True,70940.0,234.34,0.889,1,1,32.12727744,0.083333333,-3.1568333615587423,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+36,lidocaine,True,70940.0,234.34,0.889,1,1,32.12727744,0.166666667,-3.156833361558744,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+37,lidocaine,True,70940.0,234.34,0.889,1,1,32.12727744,0.166666667,-3.1568333615587423,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+38,lidocaine,True,70940.0,234.34,0.889,1,1,32.12727744,0.166666667,-3.1568333615587436,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+39,lidocaine,True,70940.0,234.34,0.889,1,1,32.12727744,0.25,-3.1568333615587436,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+40,lidocaine,True,70940.0,234.34,0.889,1,1,32.12727744,0.25,-3.1568333615587414,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+41,lidocaine,True,70940.0,234.34,0.889,1,1,32.12727744,0.25,-3.1568333615587436,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+42,lidocaine,True,70940.0,234.34,0.889,1,1,32.12727744,0.333333333,-3.1568333615587436,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+43,lidocaine,True,70940.0,234.34,0.889,1,1,32.12727744,0.333333333,-3.1568333615587436,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+44,lidocaine,True,70940.0,234.34,0.889,1,1,32.12727744,0.333333333,-3.156833361558744,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+45,lidocaine,True,70940.0,234.34,0.889,1,1,32.12727744,0.416666667,-3.1568333615587423,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+46,lidocaine,True,70940.0,234.34,0.889,1,1,32.12727744,0.416666667,-3.1568333615587436,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+47,lidocaine,True,70940.0,234.34,0.889,1,1,32.12727744,0.416666667,-3.1568333615587423,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+48,lidocaine,True,70940.0,234.34,0.889,1,1,32.12727744,0.5,-3.1568333615587423,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+49,lidocaine,True,70940.0,234.34,0.889,1,1,32.12727744,0.5,-3.1568333615587436,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+50,lidocaine,True,70940.0,234.34,0.889,1,1,32.12727744,0.75,-3.1568333615587436,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+51,lidocaine,True,70940.0,234.34,0.889,1,1,32.12727744,0.75,-3.1568333615587436,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+52,lidocaine,True,70940.0,234.34,0.889,1,1,32.12727744,1.0,-3.156833361558744,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+53,lidocaine,True,70940.0,234.34,0.889,1,1,32.12727744,1.0,-3.1568333615587423,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+54,lidocaine,True,27024.0,234.34,0.889,1,1,32.12727744,1.0,-3.1568333615587436,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+55,lidocaine,True,27024.0,234.34,0.889,1,1,32.12727744,1.0,-3.1568333615587423,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+56,lidocaine,True,27024.0,234.34,0.889,1,1,32.12727744,1.0,-3.1568333615587423,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+57,lidocaine,True,70940.0,234.34,0.889,1,1,32.12727744,1.5,-3.1568333615587436,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+58,lidocaine,True,70940.0,234.34,0.889,1,1,32.12727744,1.5,-3.1568333615587436,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+59,lidocaine,True,70940.0,234.34,0.889,1,1,32.12727744,2.0,-3.1568333615587436,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+60,lidocaine,True,70940.0,234.34,0.889,1,1,32.12727744,2.0,-3.156833361558744,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+61,lidocaine,True,27024.0,234.34,0.889,1,1,32.12727744,2.0,-3.1568333615587423,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+62,lidocaine,True,27024.0,234.34,0.889,1,1,32.12727744,2.0,-3.1568333615587436,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+63,lidocaine,True,70940.0,234.34,0.889,1,1,32.12727744,3.0,-3.1568333615587423,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+64,lidocaine,True,70940.0,234.34,0.889,1,1,32.12727744,3.0,-3.1568333615587423,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+65,lidocaine,True,50592.0,234.34,0.889,1,1,32.12727744,3.0,-3.1568333615587436,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+66,lidocaine,True,50592.0,234.34,0.889,1,1,32.12727744,3.0,-3.1568333615587436,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+67,lidocaine,True,27024.0,234.34,0.889,1,1,32.12727744,3.0,-3.1568333615587436,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+68,lidocaine,True,27024.0,234.34,0.889,1,1,32.12727744,3.0,-3.156833361558744,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+69,lidocaine,True,27024.0,234.34,0.889,1,1,32.12727744,3.0,-3.1568333615587423,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+70,lidocaine,True,70940.0,234.34,0.889,1,1,32.12727744,6.0,-3.1568333615587436,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+71,lidocaine,True,70940.0,234.34,0.889,1,1,32.12727744,6.0,-3.1568333615587423,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+72,lidocaine,True,50592.0,234.34,0.889,1,1,32.12727744,6.0,-3.1568333615587423,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+73,lidocaine,True,50592.0,234.34,0.889,1,1,32.12727744,6.0,-3.1568333615587436,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+74,lidocaine,True,50592.0,234.34,0.889,1,1,32.12727744,6.0,-3.1568333615587436,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+75,lidocaine,True,27024.0,234.34,0.889,1,1,32.12727744,6.0,-3.1568333615587436,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+76,lidocaine,True,27024.0,234.34,0.889,1,1,32.12727744,6.0,-3.156833361558744,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+77,lidocaine,True,27024.0,234.34,0.889,1,1,32.12727744,6.0,-3.1568333615587423,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+78,lidocaine,True,70940.0,234.34,0.889,1,1,32.12727744,19.5,-3.1568333615587436,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+79,lidocaine,True,70940.0,234.34,0.889,1,1,32.12727744,19.5,-3.1568333615587423,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+80,lidocaine,True,27024.0,234.34,0.889,1,1,32.12727744,20.0,-3.1568333615587423,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+81,lidocaine,True,27024.0,234.34,0.889,1,1,32.12727744,20.0,-3.1568333615587436,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+82,lidocaine,True,50592.0,234.34,0.889,1,1,32.12727744,21.0,-3.1568333615587436,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+83,lidocaine,True,50592.0,234.34,0.889,1,1,32.12727744,21.0,-3.1568333615587436,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+84,lidocaine,True,50592.0,234.34,0.889,1,1,32.12727744,21.0,-3.156833361558744,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+85,lidocaine,True,70940.0,234.34,0.889,1,1,32.12727744,24.0,-3.1568333615587423,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+86,lidocaine,True,70940.0,234.34,0.889,1,1,32.12727744,24.0,-3.1568333615587436,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+87,lidocaine,True,70940.0,234.34,0.889,1,1,32.12727744,24.0,-3.1568333615587423,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+88,lidocaine,True,50592.0,234.34,0.889,1,1,32.12727744,24.0,-3.1568333615587423,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+89,lidocaine,True,50592.0,234.34,0.889,1,1,32.12727744,24.0,-3.1568333615587436,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+90,lidocaine,True,50592.0,234.34,0.889,1,1,32.12727744,24.0,-3.1568333615587436,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+91,lidocaine,True,27024.0,234.34,0.889,1,1,32.12727744,24.0,-3.1568333615587436,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+92,lidocaine,True,27024.0,234.34,0.889,1,1,32.12727744,24.0,-3.156833361558744,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+93,lidocaine,True,27024.0,234.34,0.889,1,1,32.12727744,24.0,-3.1568333615587423,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+94,Rhodamine B,True,50.0,479.02,1.25,1,1,29.96883853,6.0,-2.388372405105373,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+95,Rhodamine B,True,50.0,479.02,1.25,1,1,29.96883853,6.0,-2.388372405105373,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+96,Rhodamine B,True,50.0,479.02,1.25,1,1,29.96883853,6.0,-2.388372405105373,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+97,Rhodamine B,True,50.0,479.02,1.25,1,1,29.96883853,16.0,-2.388372405105373,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+98,Rhodamine B,True,50.0,479.02,1.25,1,1,29.96883853,16.0,-2.388372405105373,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+99,Rhodamine B,True,50.0,479.02,1.25,1,1,29.96883853,22.0,-2.388372405105373,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+100,Rhodamine B,True,50.0,479.02,1.25,1,1,29.96883853,22.0,-2.388372405105373,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+101,Rhodamine B,True,50.0,479.02,1.25,1,1,29.96883853,26.0,-2.388372405105373,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+102,Rhodamine B,True,50.0,479.02,1.25,1,1,29.96883853,26.0,-2.388372405105373,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+103,Rhodamine B,True,50.0,479.02,1.25,1,1,29.96883853,30.0,-2.388372405105373,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+104,Rhodamine B,True,50.0,479.02,1.25,1,1,29.96883853,30.0,-2.388372405105373,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+105,Rhodamine B,True,50.0,479.02,1.25,1,1,29.96883853,35.0,-2.388372405105373,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+106,Rhodamine B,True,50.0,479.02,1.25,1,1,29.96883853,35.0,-2.388372405105373,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+107,Rhodamine B,True,50.0,479.02,1.25,1,1,29.96883853,40.0,-2.388372405105373,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+108,Rhodamine B,True,50.0,479.02,1.25,1,1,29.96883853,40.0,-2.388372405105373,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+109,Rhodamine B,True,50.0,479.02,1.25,1,1,29.96883853,44.0,-2.388372405105373,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+110,Rhodamine B,True,50.0,479.02,1.25,1,1,29.96883853,44.0,-2.388372405105373,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+111,Rhodamine B,True,50.0,479.02,1.25,1,1,29.96883853,48.0,-2.388372405105373,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+112,Rhodamine B,True,50.0,479.02,1.25,1,1,29.96883853,48.0,-2.388372405105373,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+113,caffeine,True,5310.0,194.19,0.875973,2,1,28.53528595,0.5,-3.4995316736103463,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+114,caffeine,True,3690.0,194.19,0.998619,2,1,32.43964704,0.5,-3.4995316736103463,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+115,caffeine,True,2190.0,194.19,1.062965,2,1,34.49080218,0.5,-3.4995316736103463,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+116,caffeine,True,5310.0,194.19,0.875973,2,1,28.53528595,1.0,-3.4995316736103472,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+117,caffeine,True,3690.0,194.19,0.998619,2,1,32.43964704,1.0,-3.4995316736103463,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+118,caffeine,True,2190.0,194.19,1.062965,2,1,34.49080218,1.0,-3.4995316736103463,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+119,caffeine,True,5310.0,194.19,0.875973,2,1,28.53528595,3.0,-3.4995316736103463,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+120,caffeine,True,3690.0,194.19,0.998619,2,1,32.43964704,3.0,-3.4995316736103463,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+121,caffeine,True,2190.0,194.19,1.062965,2,1,34.49080218,3.0,-3.4995316736103463,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+122,caffeine,True,5310.0,194.19,0.875973,2,1,28.53528595,6.0,-3.4995316736103463,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+123,caffeine,True,3690.0,194.19,0.998619,2,1,32.43964704,6.0,-3.4995316736103463,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+124,caffeine,True,2190.0,194.19,1.062965,2,1,34.49080218,6.0,-3.4995316736103472,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+125,caffeine,True,5310.0,194.19,0.875973,2,1,28.53528595,9.0,-3.4995316736103463,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+126,caffeine,True,3690.0,194.19,0.998619,2,1,32.43964704,9.0,-3.4995316736103463,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+127,caffeine,True,2190.0,194.19,1.062965,2,1,34.49080218,9.0,-3.4995316736103463,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+128,caffeine,True,5310.0,194.19,0.875973,2,1,28.53528595,24.0,-3.4995316736103463,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+129,caffeine,True,3690.0,194.19,0.998619,2,1,32.43964704,24.0,-3.4995316736103463,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+130,caffeine,True,2190.0,194.19,1.062965,2,1,34.49080218,24.0,-3.4995316736103463,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+155,GHK peptide,True,7888.0,340.38,0.7,1,2,36.855,1.0,-2.878669996588222,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+156,GHK peptide,True,7888.0,340.38,0.7,1,2,36.855,3.0,-2.8786699965882216,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+157,GHK peptide,True,7888.0,340.38,0.7,1,2,36.855,6.0,-2.8786699965882216,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+158,GHK peptide,True,7888.0,340.38,0.7,1,2,36.855,9.0,-2.878669996588222,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+159,GHK peptide,True,7888.0,340.38,0.7,1,2,36.855,1.0,-2.8786699965882216,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+160,GHK peptide,True,7888.0,340.38,0.7,1,2,36.855,3.0,-2.8786699965882216,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+161,GHK peptide,True,7888.0,340.38,0.7,1,2,36.855,6.0,-2.8786699965882216,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+162,GHK peptide,True,7888.0,340.38,0.7,1,2,36.855,9.0,-2.8786699965882216,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+163,GHK peptide,True,7888.0,340.38,0.7,1,2,36.855,1.0,-2.878669996588222,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+164,GHK peptide,True,7888.0,340.38,0.7,1,2,36.855,3.0,-2.8786699965882216,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+165,GHK peptide,True,7888.0,340.38,0.7,1,2,36.855,6.0,-2.8786699965882216,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+166,GHK peptide,True,7888.0,340.38,0.7,1,2,36.855,9.0,-2.878669996588222,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+167,GHK peptide,True,7888.0,340.38,0.7,2,2,36.855,1.0,-2.8786699965882216,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+168,GHK peptide,True,7888.0,340.38,0.7,2,2,36.855,1.0,-2.8786699965882216,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+169,GHK peptide,True,7888.0,340.38,0.7,2,2,36.855,1.0,-2.8786699965882216,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+170,GHK peptide,True,7888.0,340.38,0.7,2,2,36.855,3.0,-2.8786699965882216,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+171,GHK peptide,True,7888.0,340.38,0.7,2,2,36.855,3.0,-2.878669996588222,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+172,GHK peptide,True,7888.0,340.38,0.7,2,2,36.855,3.0,-2.8786699965882216,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+173,GHK peptide,True,7888.0,340.38,0.7,2,2,36.855,6.0,-2.8786699965882216,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+174,GHK peptide,True,7888.0,340.38,0.7,2,2,36.855,6.0,-2.878669996588222,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+175,GHK peptide,True,7888.0,340.38,0.7,2,2,36.855,6.0,-2.8786699965882216,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+176,GHK peptide,True,7888.0,340.38,0.7,2,2,36.855,9.0,-2.8786699965882216,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+177,GHK peptide,True,7888.0,340.38,0.7,2,2,36.855,9.0,-2.8786699965882216,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+178,GHK peptide,True,7888.0,340.38,0.7,2,2,36.855,9.0,-2.8786699965882216,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+179,lidocaine,True,5000.0,234.34,0.7,2,2,36.855,1.0,-3.1568333615587436,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+180,lidocaine,True,5000.0,234.34,0.7,2,2,36.855,3.0,-3.156833361558744,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+181,lidocaine,True,5000.0,234.34,0.7,2,2,36.855,6.0,-3.1568333615587423,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+182,lidocaine,True,5000.0,234.34,0.7,2,2,36.855,9.0,-3.1568333615587436,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+183,lidocaine,True,5000.0,234.34,0.7,2,2,36.855,1.0,-3.1568333615587423,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+184,lidocaine,True,5000.0,234.34,0.7,2,2,36.855,3.0,-3.1568333615587423,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+185,lidocaine,True,5000.0,234.34,0.7,2,2,36.855,6.0,-3.1568333615587436,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+186,lidocaine,True,5000.0,234.34,0.7,2,2,36.855,9.0,-3.1568333615587423,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+187,lidocaine,True,5000.0,234.34,0.7,2,2,36.855,1.0,-3.1568333615587423,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+188,lidocaine,True,5000.0,234.34,0.7,2,2,36.855,3.0,-3.156833361558744,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+189,lidocaine,True,5000.0,234.34,0.7,2,2,36.855,6.0,-3.1568333615587423,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.
+190,lidocaine,True,5000.0,234.34,0.7,2,2,36.855,9.0,-3.1568333615587436,BSA and copper ions are not in this table because RDKit descriptors are structurally inapplicable.

@@ -1,50 +1,67 @@
 [HTML版を開く](README.html)
 
-# Transfer Learning for Microneedle Drug Permeation QSAR — Executing RESEARCH_PLAN.md Phases 2–6
+# Transfer Learning for Microneedle Drug Permeation QSAR
 
 更新日: 2026-07-21
-状態: 要件定義・指示文作成済み / Codex実行前
+状態: Terra段の実計算・論文草稿・数値監査を完了。Sol段の独立検証・仕上げ待ち。
 
 ## Start here
 
-1. 要件定義: [`requirements.md`](requirements.md)
-2. 実行用指示文: [`implementation-prompt.md`](implementation-prompt.md)
-3. 論文本文: [`paper.md`](paper.md)(作成予定)
-4. 判断記録: [`notes/decision-log.md`](notes/decision-log.md)
-5. 根拠資料(データ・コード・研究計画): [`../research/`](../research/)
-6. 関連モジュール(別ブランチ、参照のみ): `../active-learning-paper/`(能動学習の補足研究ノート)、`../small-data-ml-paper/`(Perspective論文、新規計算なし)、`../competitive-landscape/`(学術的競合分析)
+1. 研究論文（英語）: [`paper.md`](paper.md)
+2. 要件定義: [`requirements.md`](requirements.md)
+3. 実行用指示文: [`implementation-prompt.md`](implementation-prompt.md)
+4. 実行判断・数値監査・自己採点: [`notes/decision-log.md`](notes/decision-log.md)
+5. 実行コード: [`../research/transfer_learning_analysis.py`](../research/transfer_learning_analysis.py)
+6. 数値監査コード: [`../research/audit_transfer_learning_paper.py`](../research/audit_transfer_learning_paper.py)
+7. 研究計画のチェックリスト: [`../research/RESEARCH_PLAN.md`](../research/RESEARCH_PLAN.md)
 
 ## このモジュールの位置づけ
 
-`../research/RESEARCH_PLAN.md`はフェーズ0・1・1.5(スコープ定義・データ収集・Yuan 2023データセット再現)のみ完了している。フェーズ2〜6(データキュレーション、EDA、皮膚透過性QSARモデルとYuan 2023マイクロニードルモデルの2系統構築、転移学習、物理モデル併用データ拡張、SHAP解析、美容成分48件への応用)は本モジュールで**実際に計算・実行する**。
+このモジュールは、`../research/RESEARCH_PLAN.md`のフェーズ2〜6を**実際に計算した**研究論文である。214化合物の一般皮膚透過性QSAR（4A）と、191点・6薬剤のYuan 2023マイクロニードル透過データ（4B）を別の科学的対象として扱う。48美容成分は分子記述子しか持たないため、一般皮膚透過性の4Aによるスクリーニングに限定する。薬剤負荷量、MN長、MN表面積、透過時間などを仮定して4Bに通すことは行っていない。
 
-`../active-learning-paper/`(既に完了済みの能動学習シミュレーションを書き上げる)や`../small-data-ml-paper/`(新規計算を含まないPerspective論文)とは逆に、本モジュールは新規のPythonコードを書き、実際に実行し、その出力から論文を書く計算タスクである。
+Terra段で保存した主な結果は次のとおりである。
 
-## 執筆パイプライン
+- 214件の4AではGaussian Process Regressionが選択され、5-fold OOF (R^2=0.492)、RMSE=0.831 log (K_p) だった。根拠: [`../research/phase4a_model_performance.csv`](../research/phase4a_model_performance.csv)
+- Yuanデータの固定70:30 splitではXGBoost amountモデルが (R^2=0.967) だった一方、6薬剤LODOでは (R^2=-0.122) となった。根拠: [`../research/phase4b_random_split_performance.csv`](../research/phase4b_random_split_performance.csv)、[`../research/phase4b_lodo_performance.csv`](../research/phase4b_lodo_performance.csv)
+- 4小分子薬剤だけを対象に一般皮膚log (K_p) を第8特徴量として転移したが、XGBoostのLODO amount (R^2) は7特徴量・8特徴量とも (-0.190) で、改善しなかった。根拠: [`../research/phase4b_transfer_lodo_performance.csv`](../research/phase4b_transfer_lodo_performance.csv)
+- 100点のPotts–Guy疑似データは`is_synthetic_physics_augmented=True`で分離して保存し、2記述子補助実験では性能を改善しなかった。根拠: [`../research/phase4b_physics_augmented_points.csv`](../research/phase4b_physics_augmented_points.csv)、[`../research/phase4b_physics_augmentation_metrics.csv`](../research/phase4b_physics_augmentation_metrics.csv)
 
-1. Claude Sonnet 5 — `../research/`の全データ・コード・計画文書を精読し、`requirements.md`・`implementation-prompt.md`をフェーズ別マイルストームとして起草
-2. Claude Fable 5 — 起草内容を独立レビュー・改善
-3. Codex `gpt-5.6-terra`(reasoning effort: max) — 実際にデータキュレーション・モデル構築・転移学習・物理モデル拡張・SHAP解析・美容成分応用を計算し、`paper.md`を起草
-4. Codex `gpt-5.6-sol`(reasoning effort: ultra) — 未完了マイルストームの継続、全数値の独立検証、仕上げ
-5. Claude Sonnet 5 — 最終監査(サンプル再実行含む)、PR作成
+これらは独立レビュー前の結果であり、数値はすべて保存CSVから引用している。既報のYuan et al. (2023) の値は先行研究としてのみ扱い、本モジュールの計算結果とは区別している。
 
-## フォルダ構成
+## 実行物
 
-```text
-transfer-learning-paper/
-├── README.md
-├── requirements.md
-├── implementation-prompt.md
-├── paper.md              # 論文本文(英語、作成予定)
-└── notes/
-    └── decision-log.md   # 研究判断・パイプライン実行記録
+`../research/`直下に、再実行可能なドライバ、全予測CSV、性能CSV、SHAP CSV、適用範囲CSV、疑似データCSV、最終PNGを置く。入口となるファイルは次のとおり。
+
+- `transfer_learning_analysis.py` — フェーズ2〜5の計算ドライバ。全乱数処理は`RANDOM_STATE = 42`。
+- `transfer_learning_run_manifest.csv` — データセット境界、選択4Aモデル、疑似データファイルの記録。
+- `phase2_curation_summary.csv` — 重複・外れ値・記述子整合性・原データ不在の確認。
+- `phase4a_model_performance.csv` / `phase4a_cv_predictions.csv` — 4A比較とOOF予測。
+- `phase4b_*` — Yuan再現、LODO、転移、負荷量是正、物理拡張の各出力。
+- `phase5_*` — SHAP、4A-only美容成分予測、適用範囲、スコープ比較。
+- `phase6_numerical_audit.csv` — 本文の実質的数値と保存CSVの照合結果。
+
+## 再実行
+
+macOS標準のPython 3.9は既存`descriptors.py`の型注釈を解釈できないため、作業時は依存関係を変更せず、隔離したPython 3.11ランタイムを使用した。リポジトリのルートから以下を実行する。
+
+```sh
+uv run --python 3.11 --with-requirements microneedle-drug-delivery/research/requirements.txt \
+  python microneedle-drug-delivery/research/transfer_learning_analysis.py
+
+uv run --python 3.11 --with-requirements microneedle-drug-delivery/research/requirements.txt \
+  python microneedle-drug-delivery/research/audit_transfer_learning_paper.py
 ```
 
-新規スクリプト・生成データ・図表は`../research/`直下に置く(既存モジュールと同じ規約)。
+前者はCSV・PNGを再生成し、後者は`paper.md`の監査対象となる実質的な結果数値をCSV出力と照合する。各段階は先行CSVを実際に読み直してから引用する。
 
-## 利用上の境界
+## 守るべきデータ境界
 
-- `../active-learning-paper/`・`../small-data-ml-paper/`・`../competitive-landscape/`(いずれも別ブランチ・別PR)のファイルは編集しない。参照は`git show <branch>:<path>`のみ。
-- 214化合物・191点Yuanデータセット・48成分データセットの用途を混同しない。
-- 美容成分48件にマイクロニードル実験パラメータを仮定しない。
-- 物理モデル併用データ拡張の疑似データは実測データと明確に区別する。
+- **214化合物**: 実測の一般皮膚透過性log (K_p)。4Aモデルの学習・評価にのみ使用する。
+- **191観測・6薬剤**: 実測のMN透過実験。4Bの再現・LODO・転移評価に使用する。
+- **48美容成分**: 分子記述子のみ。4Aの一般皮膚透過性予測に限定する。
+- **100疑似点**: Potts–Guy式から生成し、`is_synthetic_physics_augmented=True`で明示した。214件または191件の実測数と合算して記述しない。
+- **BSA・copper ions**: RDKit小分子記述子の対象外。7特徴量4Bには残すが、8特徴量転移には入れない。
+
+## 関連モジュールと編集境界
+
+`../active-learning-paper/`、`../small-data-ml-paper/`、`../competitive-landscape/`は別ブランチの別モジュールであり、このタスクでは編集していない。比較が必要な場合も`git show <branch>:<path>`だけを使う。新規スクリプト、結果、図は`../research/`直下に置き、本文・要件・判断記録はこのディレクトリに置く。

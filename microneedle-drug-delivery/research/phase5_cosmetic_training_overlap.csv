@@ -1,0 +1,5 @@
+ingredient,canon_smiles,logKp_cm_h,n_measurements,sources,interpretation
+Niacinamide,NC(=O)c1cccnc1,-4.2,1,SkinPiX,In-training-set structural overlap; not an external validation set.
+Urea,NC(N)=O,-3.76,1,HuskinDB,In-training-set structural overlap; not an external validation set.
+Salicylic acid,O=C(O)c1ccccc1O,-2.2,1,HuskinDB,In-training-set structural overlap; not an external validation set.
+Ethanol,CCO,-2.79,1,HuskinDB,In-training-set structural overlap; not an external validation set.
