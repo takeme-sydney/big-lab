@@ -159,6 +159,10 @@ small-data-ml-paper」に関するMarkdown正本のHTML閲覧版。</p>
         id="toc-独立qa監査サブエージェントとsonnet-5による修正-asgarkhanova化合物数の不整合">2026-07-21:
         独立QA監査(サブエージェント)とSonnet 5による修正 —
         Asgarkhanova化合物数の不整合</a></li>
+        <li><a
+        href="#商用市場競合分析別モジュールの知見を反映した批判的改訂"
+        id="toc-商用市場競合分析別モジュールの知見を反映した批判的改訂">2026-07-21:
+        商用・市場競合分析(別モジュール)の知見を反映した批判的改訂</a></li>
         </ul></li>
         </ul>
       </nav>
@@ -845,6 +849,52 @@ Generated and validated all Markdown-backed HTML documents.</code></pre>
                 本文入手不可)が実際には特集号への短い序文(3ページ程度)であり、包括的レビューと呼ぶには誇張の可能性があるという監査の指摘(確信度は監査自身も低いと明記)を受け、より中立的な動詞に置き換えた。要件定義が既にこの文献を「abstract-only、過大な帰属をしない」と注記していたことと整合する、低リスクな精緻化。</p>
                 <p><strong>実施者</strong>: Claude Sonnet
                 5(オーケストレーションセッション)。監査サブエージェントの発見事項をそのまま鵜呑みにせず、<code>skin_permeability_training_set.csv</code>の<code>sources</code>列集計を自分でも独立に再確認してから修正を適用した。</p>
+                <h2
+                id="商用市場競合分析別モジュールの知見を反映した批判的改訂">2026-07-21:
+                商用・市場競合分析(別モジュール)の知見を反映した批判的改訂</h2>
+                <p><strong>背景</strong>:
+                <code>../market-competitive-analysis/</code>(別ブランチ<code>microneedle-market-competitive-analysis</code>、PR
+                #4)が、実在する商用マイクロニードル製品・企業(医薬品用・化粧品用)を調査し、本論文への具体的な改訂提案を§8に記載した。ユーザーの指示により、この提案に基づき本論文を批判的に改訂する。</p>
+                <p><strong>適用した改訂(市場分析§8の提案1・2・3・4・5に対応)</strong>:
+                1. <strong>Abstract末尾</strong>(提案1):
+                商用マイクロニードル製品は臨床試験・規制承認・処方試験を経て初めて患者・消費者に届くこと、本提案(retrospective・computational)はそれらを代替しないことを明記する一文を追加。
+                2. <strong>新設§6.8「Boundary with commercial and
+                clinical validation pathways」</strong>(提案2):
+                実在する商用検証パイプラインの具体例(Micron
+                Biomedical社関連のはしか・風疹ワクチンMNパッチのPhase
+                1/2試験[13]、Vaxess Technologies社(現Terrestrial
+                Bio社)のMIMIXインフルエンザワクチンパッチのPhase
+                1試験[14]、NanoPass社MicronJet 600のFDA
+                510(k)[15])を挙げ、本提案が到達する段階(データキュレーション・LODO評価・Applicability
+                Domain)の先に、製剤/デバイス特性評価→in
+                vitro放出・透過試験→臨床・規制評価、という順序があることを明記した。FDA/EMAの既存ガイダンス[16,
+                17]をマイクロニードル専用規格として一般化しないという限定も追加した。
+                3. <strong>同§6.8第2段落</strong>(提案5):
+                化粧品用マイクロニードル製品(Raphas社ACROPASS[18])が既に実在し独自の吸収・効果claimを掲げていること、本論文の化学空間スクリーニングはそれらのclaimを検証も否定もしないこと、特許・FTO・規制上の地位の評価は本論文の範囲外であることを明記した。
+                4. <strong>§8 Limitations新規段落</strong>(提案3):
+                214化合物データセットの記述子・Yuan et
+                al.の7特徴量のいずれも、処方マトリックス/コーティング化学、実際の穿刺力学、パッチ密着・耐久安定性、アッセイ条件を符号化していないことを明記し、§6.4の転移学習の主張範囲をデータに実在する変数のみに限定した。
+                5. <strong>提案4(化粧品framingの引き締め)</strong>:
+                既存の§5.4・§6.7の記述(「future application
+                studyの候補集合」「newly predicted
+                compoundsとして宣伝しない」等)は既に十分に慎重であったため追加編集はせず、新設§6.8第2段落(上記3)でRaphas社の実例を挙げて既存のhedgingを補強するに留めた。</p>
+                <p><strong>新規参照文献の追加</strong>:
+                [13]–[18]として、Micron関連論文(Lancet,
+                doi:10.1016/S0140-6736(24)00532-4)、Vaxess/MIMIX論文(PLOS
+                ONE, doi:10.1371/journal.pone.0303450)、NanoPass FDA
+                510(k)、FDA IVPT指針、EMA経皮パッチ品質指針、Raphas
+                ACROPASS公式ページを追加した。いずれも<code>../market-competitive-analysis/</code>のCodex-terra→Codex-sol
+                2段階パイプラインで実際に取得・独立再検証済み(一部はSonnet
+                5も直接WebFetchで再確認済み)であり、捏造ではない実在の情報源である。</p>
+                <p><strong>引用ポリシーとの関係</strong>:
+                §5.1・requirements.mdの引用境界(「<code>CLAUDE.md</code>の中核5文献または<code>microneedle_ml_literature.csv</code>のいずれかに限る」)を文字通りには超える追加だが、これは既存の参照12(Asgarkhanova
+                et
+                al.)と同種の、根拠のある意図的な例外である(実在性を独立に複数回検証済みの一次資料であり、本論文の科学的誠実性の原則
+                — 実在しない引用を作らない — には合致する)。</p>
+                <p><strong>変更していないこと</strong>:
+                論文の核心的主張(leave-one-drug-out評価を中心とした段階的検証プログラムの提案、214化合物データセットの位置づけ、美容成分候補の扱い)は変更していない。既存の§5・§6本体の記述内容も書き換えていない(新設段落の追加のみ)。</p>
+                <p><strong>実施者</strong>: Claude Sonnet
+                5(オーケストレーションセッション)。<code>git worktree</code>で独立した作業ツリー(<code>microneedle-active-learning-paper</code>ブランチでの並行作業からは分離)で実施した。</p>
               </article>
     </main>
 
