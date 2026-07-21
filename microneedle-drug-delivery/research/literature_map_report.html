@@ -1,0 +1,494 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#edf2f0">
+  <meta name="description" content="BiG Labの「Recent Literature Map:
+Machine Learning &amp; Computational Modeling for Microneedle and
+Transdermal Drug Delivery」に関するMarkdown正本のHTML閲覧版。">
+  <title>Recent Literature Map: Machine Learning &amp; Computational
+Modeling for Microneedle and Transdermal Drug Delivery · BiG Lab</title>
+  <link rel="alternate" type="text/markdown" href="literature_map_report.md" title="Markdown source">
+    <link rel="stylesheet" href="../../shared/website/assets/research-document.css">
+    </head>
+<body class="research-document">
+  <a class="skip-link" href="#document-content">本文へ移動</a>
+
+  <header class="document-topbar">
+    <div class="document-topbar-inner">
+      <a class="document-brand" href="../../shared/website/index.html" aria-label="BiG Lab 資料一覧へ">
+        <span class="document-brand-mark" aria-hidden="true">B</span>
+        <span class="document-brand-copy">
+          <strong>BiG Lab</strong>
+          <small>Research library</small>
+        </span>
+      </a>
+
+      <nav class="document-actions" aria-label="文書ナビゲーション">
+        <a href="../../shared/website/index.html">資料一覧</a>
+        <a class="source-action" href="literature_map_report.md">Markdown正本 <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <header class="document-hero">
+    <div class="document-hero-copy">
+      <p class="document-kicker">
+        <span aria-hidden="true"></span>
+        RESEARCH DOCUMENT
+      </p>
+      <h1 class="extra-long-title">Recent Literature Map: Machine
+Learning &amp; Computational Modeling for Microneedle and Transdermal
+Drug Delivery</h1>
+      <p class="document-description">BiG Labの「Recent Literature Map:
+Machine Learning &amp; Computational Modeling for Microneedle and
+Transdermal Drug Delivery」に関するMarkdown正本のHTML閲覧版。</p>
+
+      <dl class="document-meta">
+                        <div>
+          <dt>Format</dt>
+          <dd>HTML reading view</dd>
+        </div>
+      </dl>
+    </div>
+
+    <aside class="format-map" aria-label="MarkdownからHTMLへの文書フロー">
+      <div class="format-map-head">
+        <span>DOCUMENT PIPELINE</span>
+        <small>ONE SOURCE · TWO VIEWS</small>
+      </div>
+      <div class="format-map-flow">
+        <div class="format-node source-node">
+          <span>CANONICAL</span>
+          <strong>Markdown</strong>
+          <small>内容の正本</small>
+        </div>
+        <span class="format-arrow" aria-hidden="true">→</span>
+        <div class="format-node view-node">
+          <span>READING VIEW</span>
+          <strong>HTML</strong>
+          <small>閲覧用レンダリング</small>
+        </div>
+      </div>
+      <p>内容は同一に保ち、画面では読解・移動・参照に適した構造で表示します。</p>
+    </aside>
+  </header>
+
+  <div class="document-rule" aria-hidden="true">
+    <span></span><span></span><span></span>
+  </div>
+
+  <div class="document-shell">
+        <aside class="document-toc" aria-labelledby="document-toc-title">
+      <p id="document-toc-title">On this page</p>
+      <nav aria-label="目次">
+        <ul>
+        <li><a
+        href="#recent-literature-map-machine-learning-computational-modeling-for-microneedle-and-transdermal-drug-delivery"
+        id="toc-recent-literature-map-machine-learning-computational-modeling-for-microneedle-and-transdermal-drug-delivery">Recent
+        Literature Map: Machine Learning &amp; Computational Modeling
+        for Microneedle and Transdermal Drug Delivery</a>
+        <ul>
+        <li><a href="#scope-and-method" id="toc-scope-and-method">1.
+        Scope and method</a></li>
+        <li><a href="#the-headline-a-subfield-in-steep-take-off"
+        id="toc-the-headline-a-subfield-in-steep-take-off">2. The
+        headline: a subfield in steep take-off</a></li>
+        <li><a href="#the-five-thematic-clusters"
+        id="toc-the-five-thematic-clusters">3. The five thematic
+        clusters</a>
+        <ul>
+        <li><a
+        href="#skin-permeability-qsar-ml-the-largest-and-oldest-cluster-48-papers"
+        id="toc-skin-permeability-qsar-ml-the-largest-and-oldest-cluster-48-papers">3.1
+        Skin-permeability QSAR / ML — <em>the largest and oldest cluster
+        (48 papers)</em></a></li>
+        <li><a href="#formulation-optimization-by-ml-18-papers"
+        id="toc-formulation-optimization-by-ml-18-papers">3.2
+        Formulation optimization by ML (18 papers)</a></li>
+        <li><a
+        href="#microneedle-ml-permeation-the-groups-home-cluster-17-papers"
+        id="toc-microneedle-ml-permeation-the-groups-home-cluster-17-papers">3.3
+        Microneedle ML permeation — <em>the group’s home cluster (17
+        papers)</em></a></li>
+        <li><a href="#molecular-dynamics-of-skin-14-papers"
+        id="toc-molecular-dynamics-of-skin-14-papers">3.4 Molecular
+        dynamics of skin (14 papers)</a></li>
+        <li><a
+        href="#microneedle-design-finite-element-simulation-8-papers"
+        id="toc-microneedle-design-finite-element-simulation-8-papers">3.5
+        Microneedle design &amp; finite-element simulation (8
+        papers)</a></li>
+        </ul></li>
+        <li><a href="#methods-landscape" id="toc-methods-landscape">4.
+        Methods landscape</a></li>
+        <li><a href="#who-and-where" id="toc-who-and-where">5. Who and
+        where</a></li>
+        <li><a href="#research-frontier-20252026-and-open-gaps"
+        id="toc-research-frontier-20252026-and-open-gaps">6. Research
+        frontier (2025–2026) and open gaps</a></li>
+        </ul></li>
+        </ul>
+      </nav>
+            <a class="toc-source-link" href="literature_map_report.md">
+        <span>Source</span>
+        <strong>literature_map_report.md</strong>
+      </a>
+          </aside>
+    
+    <main id="document-content" class="document-main">
+      <article class="document-content">
+                <p><a
+                href="literature_map_report.html">HTML版を開く</a></p>
+                <h1
+                id="recent-literature-map-machine-learning-computational-modeling-for-microneedle-and-transdermal-drug-delivery">Recent
+                Literature Map: Machine Learning &amp; Computational
+                Modeling for Microneedle and Transdermal Drug
+                Delivery</h1>
+                <p><em>Prepared for an intern in Yuan Yunong’s group
+                (BIG, University of Sydney). Anchored on the group’s own
+                work — Yuan et al. (2023), “Prediction of drug
+                permeation through microneedled skin by machine
+                learning” (35 citations) — this map surveys the subfield
+                that paper sits in: using computational and
+                machine-learning models to predict, design, and optimize
+                drug transport through skin.</em></p>
+                <hr />
+                <h2 id="scope-and-method">1. Scope and method</h2>
+                <p><strong>Question mapped:</strong> Where does the
+                literature stand on <strong>data-driven / computational
+                prediction of drug permeation and delivery through
+                skin</strong> — spanning microneedle-treated skin,
+                intact-skin permeability (QSAR), formulation
+                optimization, and physics-based simulation (molecular
+                dynamics, finite-element)?</p>
+                <p><strong>How this map was built.</strong> I queried
+                Crossref (≈480 records across 8 topic searches) and
+                PubMed/E-utilities (≈600 records across 4 searches) for
+                2015–2026, merged and deduplicated by DOI and normalized
+                title (<strong>990 unique records</strong>), then scored
+                each record for presence of <em>both</em> a
+                skin-delivery dimension and a computational-method
+                dimension. An LLM classifier read every title+abstract
+                and retained the records genuinely at that intersection
+                — filtering out near-neighbours such as transdermal
+                <em>alcohol biosensing</em>, wearable glucose sensing,
+                image-based dermatology, and pure microneedle
+                <em>fabrication</em> with no modeling. <strong>Final
+                curated corpus: 116 in-scope papers.</strong> Citation
+                counts are from Crossref, fetched from each paper’s own
+                DOI.</p>
+                <p><strong>Caveats.</strong> No OpenAlex/contact-email
+                access was available this session, so the corpus rests
+                on Crossref + PubMed; several 2026 papers have low or
+                zero citation counts simply because they are new. A few
+                broadly-cited reviews (e.g., a topical-delivery history)
+                reflect general reach rather than subfield-specific
+                influence. Theme and method labels come from
+                abstract-level LLM classification, so borderline papers
+                could shift category — the full curated list with DOIs
+                is in the attached CSV for spot-checking.</p>
+                <hr />
+                <h2 id="the-headline-a-subfield-in-steep-take-off">2.
+                The headline: a subfield in steep take-off</h2>
+                <p>The corpus spans 2015–2026. Publication volume was
+                flat at ~5–7 papers/year through 2015–2023, then
+                inflected sharply: <strong>16 papers in 2024, 22 in
+                2025, and 30 already logged for 2026.</strong> 59% of
+                the entire corpus was published in 2024 or later. This
+                is a young, fast-moving area — the Yuan (2023)
+                microneedle-permeation paper arrived right as the wave
+                began building.</p>
+                <p>Two forces drive the surge: (i) the broad diffusion
+                of gradient-boosting/deep-learning tooling into
+                pharmaceutics, and (ii) regulatory momentum behind
+                <em>in silico</em> dermal-exposure assessment (PBK/PBPK
+                models, model-informed drug development) as an
+                alternative to animal and Franz-cell testing.</p>
+                <hr />
+                <h2 id="the-five-thematic-clusters">3. The five thematic
+                clusters</h2>
+                <p>The subfield organizes into distinct communities,
+                each with its own methods and venues:</p>
+                <h3
+                id="skin-permeability-qsar-ml-the-largest-and-oldest-cluster-48-papers">3.1
+                Skin-permeability QSAR / ML — <em>the largest and oldest
+                cluster (48 papers)</em></h3>
+                <p>Predicting the permeability coefficient (log
+                <em>Kp</em>) or flux of small molecules through intact
+                skin from molecular descriptors. This is the
+                intellectual ancestor of the whole field
+                (Potts–Guy-style relationships), now modernized with
+                ensemble ML and larger curated datasets. - Roberts et
+                al. (2021). Topical drug delivery: History, percutaneous
+                absorption, and product development. <em>Advanced drug
+                delivery reviews</em>, — <strong>196 cites</strong> <a
+                href="https://doi.org/10.1016/j.addr.2021.113929">doi:10.1016/j.addr.2021.113929</a>
+                - Toropova et al. (2017). The index of ideality of
+                correlation: A criterion of predictability of QSAR
+                models for skin permeability?. <em>The Science of the
+                total environment</em>, — <strong>111 cites</strong> <a
+                href="https://doi.org/10.1016/j.scitotenv.2017.01.198">doi:10.1016/j.scitotenv.2017.01.198</a>
+                - Tsakovska et al. (2017). Quantitative structure-skin
+                permeability relationships. <em>Toxicology</em>, —
+                <strong>93 cites</strong> <a
+                href="https://doi.org/10.1016/j.tox.2017.06.008">doi:10.1016/j.tox.2017.06.008</a>
+                - Alves et al. (2015). Predicting chemically-induced
+                skin reactions. Part II: QSAR models of skin
+                permeability and the relationships between skin
+                permeability and skin sensitization. <em>Toxicology and
+                Applied Pharmacology</em>, — <strong>69 cites</strong>
+                <a
+                href="https://doi.org/10.1016/j.taap.2014.12.013">doi:10.1016/j.taap.2014.12.013</a>
+                - Pecoraro et al. (2019). Predicting Skin Permeability
+                by Means of Computational Approaches: Reliability and
+                Caveats in Pharmaceutical Studies. <em>Journal of
+                chemical information and modeling</em>, — <strong>63
+                cites</strong> <a
+                href="https://doi.org/10.1021/acs.jcim.8b00934">doi:10.1021/acs.jcim.8b00934</a></p>
+                <h3 id="formulation-optimization-by-ml-18-papers">3.2
+                Formulation optimization by ML (18 papers)</h3>
+                <p>Using ML/DoE to optimize transdermal formulations,
+                patches, nanocarriers, and process parameters — often
+                coupling experimental screening with predictive
+                surrogates. - Gormley (2024). Machine learning in drug
+                delivery. <em>Journal of Controlled Release</em>, —
+                <strong>73 cites</strong> <a
+                href="https://doi.org/10.1016/j.jconrel.2024.06.045">doi:10.1016/j.jconrel.2024.06.045</a>
+                - Lefnaoui et al. (2020). Artificial neural network for
+                modeling formulation and drug permeation of topical
+                patches containing diclofenac sodium. <em>Drug delivery
+                and translational research</em>, — <strong>31
+                cites</strong> <a
+                href="https://doi.org/10.1007/s13346-019-00671-w">doi:10.1007/s13346-019-00671-w</a>
+                - Salma et al. (2021). Efficient Prediction of In Vitro
+                Piroxicam Release and Diffusion From Topical Films Based
+                on Biopolymers Using Deep Learning Models and Generative
+                Adversarial Networks. <em>Journal of pharmaceutical
+                sciences</em>, — <strong>25 cites</strong> <a
+                href="https://doi.org/10.1016/j.xphs.2021.01.032">doi:10.1016/j.xphs.2021.01.032</a>
+                - Suriyaamporn et al. (2024). The artificial
+                intelligence and design of experiment assisted in the
+                development of progesterone-loaded solid-lipid
+                nanoparticles for transdermal drug delivery.
+                <em>Pharmacia</em>, — <strong>22 cites</strong> <a
+                href="https://doi.org/10.3897/pharmacia.71.e123549">doi:10.3897/pharmacia.71.e123549</a></p>
+                <h3
+                id="microneedle-ml-permeation-the-groups-home-cluster-17-papers">3.3
+                Microneedle ML permeation — <em>the group’s home cluster
+                (17 papers)</em></h3>
+                <p>Directly predicting drug transport through
+                microneedle-treated skin, and ML-assisted microneedle
+                design/application. This is where Yuan (2023) sits. -
+                Xue et al. (2022). Artificial Intelligence-Assisted
+                Bioinformatics, Microneedle, and Diabetic Wound Healing:
+                A “New Deal” of an Old Drug. <em>ACS applied materials
+                &amp; interfaces</em>, — <strong>58 cites</strong> <a
+                href="https://doi.org/10.1021/acsami.2c08994">doi:10.1021/acsami.2c08994</a>
+                - Bagde et al. (2023). Biphasic burst and sustained
+                transdermal delivery in vivo using an AI-optimized
+                3D-printed MN patch. <em>International journal of
+                pharmaceutics</em>, — <strong>49 cites</strong> <a
+                href="https://doi.org/10.1016/j.ijpharm.2023.122647">doi:10.1016/j.ijpharm.2023.122647</a>
+                - Albayati et al. (2025). AI-Driven Innovation in Skin
+                Kinetics for Transdermal Drug Delivery: Overcoming
+                Barriers and Enhancing Precision.
+                <em>Pharmaceutics</em>, — <strong>41 cites</strong> <a
+                href="https://doi.org/10.3390/pharmaceutics17020188">doi:10.3390/pharmaceutics17020188</a>
+                - Abdallah et al. (2024). Predictive modeling of skin
+                permeability for molecules: Investigating FDA-approved
+                drug permeability with various AI algorithms. <em>PLOS
+                digital health</em>, — <strong>36 cites</strong> <a
+                href="https://doi.org/10.1371/journal.pdig.0000483">doi:10.1371/journal.pdig.0000483</a>
+                - Yuan et al. (2023). Prediction of drug permeation
+                through microneedled skin by machine learning.
+                <em>Bioengineering &amp; Translational Medicine</em>, —
+                <strong>35 cites</strong> <a
+                href="https://doi.org/10.1002/btm2.10512">doi:10.1002/btm2.10512</a>
+                - Han et al. (2025). On-patient medical record and mRNA
+                therapeutics using intradermal microneedles. <em>Nature
+                materials</em>, — <strong>33 cites</strong> <a
+                href="https://doi.org/10.1038/s41563-024-02115-4">doi:10.1038/s41563-024-02115-4</a></p>
+                <h3 id="molecular-dynamics-of-skin-14-papers">3.4
+                Molecular dynamics of skin (14 papers)</h3>
+                <p>Atomistic/coarse-grained simulation of the
+                stratum-corneum lipid matrix to compute permeation
+                free-energy profiles from first principles. Dominated by
+                the Lundborg–Lindahl–Norlén (Stockholm) group. -
+                Lundborg et al. (2018). Predicting drug permeability
+                through skin using molecular dynamics simulation.
+                <em>Journal of controlled release : official journal of
+                the Controlled Release Society</em>, — <strong>123
+                cites</strong> <a
+                href="https://doi.org/10.1016/j.jconrel.2018.05.026">doi:10.1016/j.jconrel.2018.05.026</a>
+                - Lundborg et al. (2018). Human skin barrier structure
+                and function analyzed by cryo-EM and molecular dynamics
+                simulation. <em>Journal of structural biology</em>, —
+                <strong>74 cites</strong> <a
+                href="https://doi.org/10.1016/j.jsb.2018.04.005">doi:10.1016/j.jsb.2018.04.005</a>
+                - Chen et al. (2015). In silico prediction of
+                percutaneous absorption and disposition kinetics of
+                chemicals. <em>Pharmaceutical research</em>, —
+                <strong>51 cites</strong> <a
+                href="https://doi.org/10.1007/s11095-014-1575-0">doi:10.1007/s11095-014-1575-0</a>
+                - Chen et al. (2016). In Silico Modelling of Transdermal
+                and Systemic Kinetics of Topically Applied Solutes:
+                Model Development and Initial Validation for Transdermal
+                Nicotine. <em>Pharmaceutical research</em>, — <strong>36
+                cites</strong> <a
+                href="https://doi.org/10.1007/s11095-016-1900-x">doi:10.1007/s11095-016-1900-x</a>
+                - Wennberg et al. (2023). Understanding Drug Skin
+                Permeation Enhancers Using Molecular Dynamics
+                Simulations. <em>Journal of chemical information and
+                modeling</em>, — <strong>23 cites</strong> <a
+                href="https://doi.org/10.1021/acs.jcim.3c00625">doi:10.1021/acs.jcim.3c00625</a></p>
+                <h3
+                id="microneedle-design-finite-element-simulation-8-papers">3.5
+                Microneedle design &amp; finite-element simulation (8
+                papers)</h3>
+                <p>Mechanical/insertion modeling and FEM co-design of
+                microneedle geometry — the physics complement to the
+                data-driven permeation work. - Sarabi et al. (2022).
+                Machine Learning-Enabled Prediction of 3D-Printed
+                Microneedle Features. <em>Biosensors</em>, — <strong>76
+                cites</strong> <a
+                href="https://doi.org/10.3390/bios12070491">doi:10.3390/bios12070491</a>
+                - Abdullah et al. (2024). Optimizing Solid Microneedle
+                Design: A Comprehensive ML-Augmented DOE Approach.
+                <em>ACS measurement science au</em>, — <strong>32
+                cites</strong> <a
+                href="https://doi.org/10.1021/acsmeasuresciau.4c00021">doi:10.1021/acsmeasuresciau.4c00021</a>
+                - Tarar et al. (2023). Machine Learning-Enabled
+                Optimization of Interstitial Fluid Collection via a
+                Sweeping Microneedle Design. <em>ACS omega</em>, —
+                <strong>26 cites</strong> <a
+                href="https://doi.org/10.1021/acsomega.3c01744">doi:10.1021/acsomega.3c01744</a>
+                - Yan et al. (2025). Machine Learning-Driven
+                Optimization of Therapeutic Substance Composition for
+                High-Hardness, Fast-Dissolving Microneedles for
+                Androgenetic Alopecia Treatment. <em>ACS nano</em>, —
+                <strong>10 cites</strong> <a
+                href="https://doi.org/10.1021/acsnano.5c05505">doi:10.1021/acsnano.5c05505</a></p>
+                <p><em>Smaller clusters:</em> nanoparticle dermal
+                delivery with ML (7), reviews/perspectives (3), and
+                physical-enhancement modeling (1).</p>
+                <hr />
+                <h2 id="methods-landscape">4. Methods landscape</h2>
+                <p>The modeling toolkit splits into two camps:
+                <strong>data-driven ML</strong> (tree
+                ensembles/XGBoost/RF — the approach in Yuan 2023 —
+                QSAR/QSPR, and neural networks together account for the
+                majority of papers) and <strong>physics-based
+                simulation</strong> (molecular dynamics and
+                finite-element analysis). Tree ensembles and mixed-ML
+                pipelines are the single most common approach, closely
+                followed by classical QSAR/QSPR. Deep learning is rising
+                but not yet dominant; generative AI is just appearing (2
+                papers, both 2025+). See Figure 2b.</p>
+                <hr />
+                <h2 id="who-and-where">5. Who and where</h2>
+                <p><strong>Most active author groups (by in-scope paper
+                count):</strong> - Guoping Lian — 6 papers - Phuvamin
+                Suriyaamporn — 5 papers - Boonnada Pamornpathomkul — 5
+                papers - Tanasait Ngawhirunpat — 5 papers - Praneet
+                Opanasopit — 5 papers - Magnus Lundborg — 5 papers -
+                Erik Lindahl — 5 papers - Lars Norlén — 5 papers</p>
+                <p>Three research clusters stand out: -
+                <strong>Silpakorn University (Thailand)</strong> —
+                Opanasopit, Ngawhirunpat, Pamornpathomkul, Suriyaamporn:
+                microneedle + AI-driven patch design and formulation. -
+                <strong>Stockholm (KTH/Karolinska)</strong> — Lundborg,
+                Lindahl, Norlén: molecular-dynamics skin-permeation
+                simulation (the most-cited methodological line). -
+                <strong>University of Surrey</strong> — Lian, Chen:
+                mechanistic + ML skin-permeability modeling and PBK
+                dermal exposure.</p>
+                <p><strong>Leading venues:</strong> - <em>International
+                journal of pharmaceutics</em> — 9 papers -
+                <em>International Journal of Drug Delivery
+                Technology</em> — 6 papers - <em>Pharmaceutical
+                research</em> — 6 papers - <em>Pharmaceutics</em> — 4
+                papers - <em>Journal of controlled release : official
+                journal of the Controlled Release Society</em> — 3
+                papers - <em>Journal of chemical information and
+                modeling</em> — 3 papers - <em>Journal of Drug Delivery
+                and Therapeutics</em> — 2 papers - <em>Journal of Drug
+                Targeting</em> — 2 papers</p>
+                <p><em>International Journal of Pharmaceutics</em>,
+                <em>Pharmaceutical Research</em>, and
+                <em>Pharmaceutics</em> are the core homes; <em>Journal
+                of Controlled Release</em> and <em>Journal of Chemical
+                Information and Modeling</em> carry the higher-impact
+                methodological work.</p>
+                <hr />
+                <h2 id="research-frontier-20252026-and-open-gaps">6.
+                Research frontier (2025–2026) and open gaps</h2>
+                <p>The newest work (52 papers from 2025–26) points where
+                the field is heading: - <strong>AI-integrated “smart”
+                microneedles</strong> — patches coupling ML with
+                wearable sensing, closed-loop dosing, and theranostics
+                (e.g., Suriyaamporn 2025 on AI-driven hydrogel
+                microneedle patches; 3D-printed microneedles +
+                wearables). - <strong>AI for skin kinetics &amp;
+                transdermal systems</strong> — perspective and framework
+                papers on embedding ML across the transdermal-delivery
+                pipeline (Albayati 2025; Sabbagh 2025). -
+                <strong>First-principles permeation</strong> — atomistic
+                stratum-corneum models and MD of ionizable-molecule
+                permeation (Stockholm group). - <strong>FEM-guided
+                microneedle co-design</strong> — coupling mechanical
+                simulation with delivery objectives.</p>
+                <p><strong>Gaps a microneedle-ML project could
+                target:</strong> 1. <strong>Data scarcity &amp;
+                standardization.</strong> Microneedle-permeation ML
+                (Yuan’s cluster) is one of the <em>smaller</em> modeling
+                clusters (17 papers) despite microneedles being a major
+                delivery route — public, standardized
+                microneedle-permeation datasets barely exist. Curating
+                one would be high-value. 2. <strong>Bridging QSAR and
+                microneedle models.</strong> The large intact-skin QSAR
+                literature (48 papers) and the microneedle literature
+                are largely separate; transfer learning from
+                log-<em>Kp</em> models to microneedle-perturbed skin is
+                under-explored. 3. <strong>Physics-ML hybrids.</strong>
+                MD-derived free energies and FEM insertion mechanics are
+                rarely fed as features into permeation ML — a natural
+                integration point. 4. <strong>Generative &amp;
+                foundation models</strong> are nearly absent (2 papers)
+                — inverse design of microneedle geometry/formulation for
+                a target flux is open territory.</p>
+                <hr />
+                <p><em>Corpus and analysis: Crossref + PubMed,
+                2015–2026, 116 curated in-scope papers. Full
+                bibliography with DOIs, themes, methods, and citation
+                counts in
+                <code>microneedle_ml_literature.csv</code>.</em></p>
+              </article>
+    </main>
+
+    <aside class="reading-gauge" aria-hidden="true">
+      <p>READING DEPTH</p>
+      <div class="gauge-scale">
+        <span>00</span>
+        <span>25</span>
+        <span>50</span>
+        <span>75</span>
+        <span>100</span>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="document-footer">
+    <div>
+      <strong>BiG Lab Research Library</strong>
+      <p>Markdown is canonical. HTML is the synchronized reading view.</p>
+    </div>
+    <div class="document-footer-links">
+      <a href="../../shared/website/index.html">資料一覧へ戻る</a>
+      <a href="literature_map_report.md">Markdownを開く</a>
+    </div>
+  </footer>
+</body>
+</html>
