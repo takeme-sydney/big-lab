@@ -112,6 +112,31 @@ market-competitive-analysis」に関するMarkdown正本のHTML閲覧版。</p>
         id="toc-acceptance-checklist-codex-terra最終自己採点">Acceptance
         checklist — Codex-terra最終自己採点</a></li>
         </ul></li>
+        <li><a
+        href="#sonnet-5-codex-terra成果物のレビュー独立スポットチェックビルド修復"
+        id="toc-sonnet-5-codex-terra成果物のレビュー独立スポットチェックビルド修復">2026-07-21:
+        Sonnet 5 —
+        Codex-terra成果物のレビュー、独立スポットチェック、ビルド修復</a></li>
+        <li><a
+        href="#codex-gpt-5.6-sol-残り13参照の独立再検証と最終監査"
+        id="toc-codex-gpt-5.6-sol-残り13参照の独立再検証と最終監査">2026-07-21:
+        Codex gpt-5.6-sol — 残り13参照の独立再検証と最終監査</a>
+        <ul>
+        <li><a href="#再取得手段と参照別の判定"
+        id="toc-再取得手段と参照別の判定">再取得手段と参照別の判定</a></li>
+        <li><a href="#時点整合性の追加修正"
+        id="toc-時点整合性の追加修正">時点整合性の追加修正</a></li>
+        <li><a href="#最終全体読み重複監査"
+        id="toc-最終全体読み重複監査">最終全体読み・重複監査</a></li>
+        <li><a href="#html-buildと生成物確認"
+        id="toc-html-buildと生成物確認">HTML buildと生成物確認</a></li>
+        <li><a href="#acceptance-checklist-codex-sol最終自己採点"
+        id="toc-acceptance-checklist-codex-sol最終自己採点">Acceptance
+        checklist — Codex-sol最終自己採点</a></li>
+        </ul></li>
+        <li><a href="#sonnet-5-codex-sol成果物の最終レビュー"
+        id="toc-sonnet-5-codex-sol成果物の最終レビュー">2026-07-21:
+        Sonnet 5 — Codex-sol成果物の最終レビュー</a></li>
         </ul></li>
         </ul>
       </nav>
@@ -425,6 +450,293 @@ market-competitive-analysis」に関するMarkdown正本のHTML閲覧版。</p>
                 </tr>
                 </tbody>
                 </table>
+                <h2
+                id="sonnet-5-codex-terra成果物のレビュー独立スポットチェックビルド修復">2026-07-21:
+                Sonnet 5 —
+                Codex-terra成果物のレビュー、独立スポットチェック、ビルド修復</h2>
+                <p><strong>無関係な差分の除去</strong>:
+                <code>build-website.sh</code>のリポジトリ全体実行に伴う既存の副作用として、<code>Notes/2026-07-20-microneedle-research-examples.html</code>と<code>references/translated  papers/README.html</code>にpandocの表列幅再計算のみの軽微な差分が生じていた。本タスクと無関係なため<code>git checkout --</code>で除外した。</p>
+                <p><strong>独立引用検証(WebFetch/WebSearchで直接取得・再確認)</strong>:
+                terra段階の「検証済み」という自己申告を鵜呑みにせず、実質的な主張のうち3件を独立に再取得した:
+                - <strong>R1</strong>(Adigweme et al., Lancet 2024,
+                doi:10.1016/S0140-6736(24)00532-4): LSHTM repository
+                PDFを直接取得し、タイトル・誌名・年・DOI・Phase
+                1/2試験である旨が本文の記載と完全に一致することを確認した。
+                - <strong>R5</strong>(FDA 510(k) K092746):
+                <code>accessdata.fda.gov</code>への直接WebFetchは404で失敗したため(動的ページの制約と推測)、WebSearchで独立に照合したところ、K092746は実在するNanoPass
+                MicronJet 600の510(k)(2010-02-03許可、Class II、product
+                code
+                FMI)であることを確認した。本文の記載(「デバイス記録であり、特定の薬剤・パッチの承認根拠ではない」)は正確である。
+                - <strong>R11</strong>(Shiseido VOYAGER):
+                プレスリリースを直接取得し、Accentureとの共同開発AI「VOYAGER」、ミスト状日焼け止め、“fibona”ブランド、2026年発売という具体的な記載が本文と一致することを確認した。</p>
+                <p>3件とも独立検証で一致し、いずれも捏造や誇張は見つからなかった。R5のURLが直接WebFetchで404になった事象は、リンク先が誤り・捏造という意味ではなく、FDAサイトの動的ページ特有の取得制約と判断する(WebSearchで実在を確認済みのため)。</p>
+                <p><strong>既存の未修正リンク不備の是正(機械的修正、内容変更なし)</strong>:
+                <code>build-website.sh</code>実行後、<code>research/CLAUDE.md</code>が<code>[HTML版を開く]</code>行を欠くという、本タスク開始前から存在する不備でリポジトリ全体のリンク検証が停止することをterra段階が発見していた。同じ不備が<code>research/README.md</code>・<code>RESEARCH_PLAN.md</code>・<code>literature_map_report.md</code>にも存在することを確認した(<code>microneedle-active-learning-paper</code>ブランチで同一の不備が発見・是正された前例と同型)。この4ファイルは本モジュールの記述対象ではないが、リンク行1行を追加するのみの機械的修正であり内容変更を伴わないため、前例(active-learning-paperブランチ)に倣いこの場で是正した。是正後、<code>shared/scripts/build-website.sh</code>はリポジトリ全体で<code>Validated Markdown-to-HTML links.</code>/<code>Generated and validated all Markdown-backed HTML documents.</code>を出力し、完全にクリーンな状態になった。</p>
+                <p><strong>次段階への申し送り</strong>: Codex
+                gpt-5.6-solには、残りの13件の参照(R2, R3, R4, R6–R10,
+                R12–R16)を含む全16件の独立再検証を依頼する。上記3件は既にSonnet
+                5が検証済みだが、solには独立性維持のため重複確認を妨げない(むしろ推奨する)。</p>
+                <h2
+                id="codex-gpt-5.6-sol-残り13参照の独立再検証と最終監査">2026-07-21:
+                Codex gpt-5.6-sol —
+                残り13参照の独立再検証と最終監査</h2>
+                <h3
+                id="再取得手段と参照別の判定">再取得手段と参照別の判定</h3>
+                <p>Sonnet
+                5が先に確認したR1・R5・R11の判定を流用せず、指定された残り13件をNative
+                Webの直接取得と、必要な場合の<code>curl</code>で独立に再取得した。検索結果のスニペットだけでは判定せず、HTML本文、査読論文本文、規制PDF、または公式レジストリJSONにある該当箇所を報告書の主張と照合した。</p>
+                <table>
+                <colgroup>
+                <col style="width: 25%" />
+                <col style="width: 25%" />
+                <col style="width: 25%" />
+                <col style="width: 25%" />
+                </colgroup>
+                <thead>
+                <tr>
+                <th>ID</th>
+                <th>今回再取得したURL</th>
+                <th>独立照合の結果</th>
+                <th>区分</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td>R2</td>
+                <td>https://clinicaltrials.gov/study/NCT04394689
+                （補助取得:
+                https://clinicaltrials.gov/api/v2/studies/NCT04394689）</td>
+                <td>直接URLがHTTP 200であることを確認し、公式v2
+                APIでNCT番号、Micron Biomedical、Phase
+                1/2、MRV-MNP、溶解性MN、試験デザインを再確認した。レジストリ自体に結果投稿はないが、本文は結果をR2単独に依存していない。</td>
+                <td>登録試験なので(a)が正しい。</td>
+                </tr>
+                <tr>
+                <td>R3</td>
+                <td>https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0303450</td>
+                <td>PLOS本文を再取得し、<code>Peer-reviewed</code>表示、DOI、Phase
+                1、VX-103/MIMIX、H1N1、slowly dissolving
+                tips、安全性・reactogenicity・tolerability・immunogenicity、Vaxess所属著者、処方・11×11
+                array印刷工程を確認した。AI/ML透過予測の記載はなかった。</td>
+                <td>査読論文なので(a)が正しい。</td>
+                </tr>
+                <tr>
+                <td>R4</td>
+                <td>https://clinicaltrials.gov/study/NCT06125717
+                （補助取得:
+                https://clinicaltrials.gov/api/v2/studies/NCT06125717）</td>
+                <td>直接URLと公式v2 APIを再取得し、Phase 1、VX-103/MIMIX
+                MAP、H1 influenza antigen、7.5/15
+                µg、安全性等の評価を確認した。AI/ML透過予測の記載はなかった。現在の登録主体名はTerrestrial
+                Bioである。</td>
+                <td>登録試験なので(a)が正しい。</td>
+                </tr>
+                <tr>
+                <td>R6</td>
+                <td>https://www.nanopass.com/product/</td>
+                <td>MicronJetが中空MNによる皮内投与デバイスであり、会社ページがFDA-cleared/CE-marked、当該投与経路で承認された物質・薬剤用と述べることを確認した。特定drug–device
+                combinationや予測設計法の証拠にはしていない本文の限定も妥当。</td>
+                <td>会社公式製品ページなので(b)が正しい。</td>
+                </tr>
+                <tr>
+                <td>R7</td>
+                <td>https://raphas.co.jp/acropass/</td>
+                <td>ACROPASSの溶解性MN製品、レチノールとアスコルビルグルコシドを含むpatch、VITA
+                KMAP、送達範囲の脚注「角質層まで」、価格・販売導線を確認した。送達量、臨床効果、計算モデルの独立証拠ではない。</td>
+                <td>会社公式製品ページなので(b)が正しい。</td>
+                </tr>
+                <tr>
+                <td>R8</td>
+                <td>https://odm.raphas.com/en/wzcFJ/170</td>
+                <td>White LabelのRetinol Anti-Aging Microneedle
+                Patch、retinol 3,300 IU/g、HA 800,000
+                ppmを確認した。259%等の数値claimには<code>Based on internal and/or clinical testing</code>との一括脚注があり、protocol、dataset、特許番号は提示されていない。</td>
+                <td>会社公式ODMページなので(b)が正しい。</td>
+                </tr>
+                <tr>
+                <td>R9</td>
+                <td>https://www.biocom.co.jp/skin-cad/</td>
+                <td>SKIN-CADが皮膚拡散・分配/全身compartment
+                modelを使い、<em>in vitro</em>皮膚透過データと既知PK
+                parameterから皮内・血中推移等を算出するソフトウェアであること、年間licenseと受託計算サービスがあることを確認した。ページはAI/MLと表示していない。</td>
+                <td>会社公式製品・サービスページなので(b)が正しい。</td>
+                </tr>
+                <tr>
+                <td>R10</td>
+                <td>https://www.biocom.co.jp/in-vitro-in-silico/</td>
+                <td>拡散cellでの放出試験、hairless-mouse intact/stripped
+                skin透過試験、flux/time lag、拡散・分配係数、human
+                PK入力、clinical血中濃度との比較という公開workflowを確認した。会社提示の一例であり、一般的な独立validationとはしていない本文が正しい。</td>
+                <td>会社公式技術ページなので(b)が正しい。</td>
+                </tr>
+                <tr>
+                <td>R12</td>
+                <td>https://skincare.kobayashi.co.jp/field/skincare/penetration02.html</td>
+                <td>Raman spectra＋ML-based multivariate
+                analysis、creamを塗布した3D skin model、tranexamic-acid
+                signalの抽出と濃度相関、断面分布の推定・可視化、2025
+                IFSCC
+                posterを確認した。実験後の測定解析であり、構造からMN透過を事前予測する手法ではない。</td>
+                <td>会社公式研究ページで、poster本文を独立取得していないため(b)が正しい。</td>
+                </tr>
+                <tr>
+                <td>R13</td>
+                <td>https://www.fda.gov/regulatory-information/search-fda-guidance-documents/in-vitro-permeation-test-studies-topical-drug-products-submitted-andas</td>
+                <td>FDAページとguidance
+                PDFを再取得した。2022年10月の<code>Draft</code>、<code>Not for implementation</code>であり、generic
+                topical productとreference
+                standardを比較してBEを支えるIVPTを扱う。transdermal/topical
+                delivery
+                systemsとpatchesはscope外で、本文の「MN専用規則ではない」という限定が正しい。</td>
+                <td>FDA一次文書なので(a)が正しい。draftであることとは別軸の区分である。</td>
+                </tr>
+                <tr>
+                <td>R14</td>
+                <td>https://www.fda.gov/media/71141/download?attachment=</td>
+                <td>40頁のFDA最終PDF（May 1997,
+                SUPAC-SS）を再取得した。open-chamber/Franz
+                cell、通常synthetic membrane、receptor
+                fluidの逐次sample、assay、method
+                validation、formulation-specific release
+                rateを確認した。postapproval change用semisolid
+                guidanceであり、本文はMN規則へ一般化していない。</td>
+                <td>FDA一次文書なので(a)が正しい。</td>
+                </tr>
+                <tr>
+                <td>R15</td>
+                <td>https://www.fda.gov/medical-devices/aesthetic-cosmetic-devices/microneedling-devices</td>
+                <td>FDAが認めた用途は限定された瘢痕・しわ等であり、cosmetics、topical
+                medications、vitamin
+                solutions、drugs等の皮内送達用にはapprovedではないという注意を確認した。</td>
+                <td>FDA一次説明なので(a)が正しい。</td>
+                </tr>
+                <tr>
+                <td>R16</td>
+                <td>https://www.ema.europa.eu/en/quality-transdermal-patches-scientific-guideline</td>
+                <td><code>Current effective version</code>、EMA/CHMP/QWP/608924/2014、systemic
+                delivery用transdermal
+                patchの開発・品質・承認申請等の範囲を確認した。dissolvable
+                MN cosmetic
+                patchの分類決定ではないとする本文が正しい。</td>
+                <td>EMA規制文書なので(a)が正しい。</td>
+                </tr>
+                </tbody>
+                </table>
+                <p><strong>13件の結論</strong>:
+                R2、R3、R4、R6、R7、R8、R9、R10、R12、R13、R14、R15、R16は、すべて報告書で帰属された具体的な主張を支持していた。誤URL、取得不能、裏付けのない実質的claim、または(a)/(b)の誤分類は見つからず、主張の弱化・削除・区分変更は不要だった。</p>
+                <p><strong>取得上の注意</strong>: Native
+                WebでClinicalTrials.govのR2/R4を直接開くと動的page
+                shellしか展開されなかった。このため、<code>curl -I -L</code>で引用URL自体がHTTP
+                200であることを確認し、同じClinicalTrials.govの公式v2
+                APIを<code>curl</code>で取得して構造化record全文を照合した。これはURLの失敗ではなく表示方式による取得制約である。他の11件は引用URLの本文またはPDFを直接取得できた。</p>
+                <h3 id="時点整合性の追加修正">時点整合性の追加修正</h3>
+                <p>R4の2026-07-21時点の公式recordは試験組織を<code>Terrestrial Bio, Inc.</code>と表示していた。追加で同社の公式発表
+                https://www.terrestrialbio.com/news-terrestrial-bio-announces-50m-series-c-and-rebrands-from-vaxess-technologies
+                を直接取得し、2026-03-26にVaxess
+                TechnologiesからTerrestrial
+                Bioへrebrandしたことを確認した。この公式発表をR17(b)として追加し、<code>market-competitive-analysis.md</code>の現在の企業名を<code>Terrestrial Bio (formerly Vaxess Technologies)</code>へ更新した。R3が扱う試験・論文当時のVaxess表記とVaxess所属著者は歴史的に正しいため、臨床claim自体は変更していない。</p>
+                <h3
+                id="最終全体読み重複監査">最終全体読み・重複監査</h3>
+                <p><code>market-competitive-analysis.md</code>を再度先頭からReferencesまで通読し、product/claimの時制、AI/MLの三つの役割、IVRTとIVPT、企業claimと独立証拠、current-projectのretrospective境界が互いに矛盾しないことを確認した。新しいR17も会社公式発表なので(b)とし、査読済みR3(a)や登録R4(a)と混同していない。</p>
+                <p>さらに、<code>git show microneedle-competitive-gap-analysis:microneedle-drug-delivery/competitive-landscape/competitive-landscape.md</code>で146行の文書全体を再読した。本報告書はCertara/Simcyp、GastroPlus、BIOiSIM、Abdallah、Asgarkhanova、Stevens、MAML/KERMT等の学術的手法・性能比較を再掲していない。両文書で共通する小林製薬ページは、本報告書では「企業公式のML
+                claimとその商用上の境界」を検証するために限定使用しており、学術benchmarksや手法表を転記していない。このため、<code>competitive-landscape</code>のacademic-methods内容との実質的重複はない。</p>
+                <h3 id="html-buildと生成物確認">HTML
+                buildと生成物確認</h3>
+                <p>報告書、上記の検証記録、および古い「Codex-sol検証待ち」表示を修正した<code>README.md</code>を反映した状態で、repository
+                rootから<code>shared/scripts/build-website.sh</code>を実行した。終了codeは0で、末尾に次を確認した。</p>
+                <pre class="text"><code>Validated Markdown-to-HTML links.
+Generated and validated all Markdown-backed HTML documents.</code></pre>
+                <p>本モジュールの<code>README.html</code>、<code>implementation-prompt.html</code>、<code>requirements.html</code>、<code>market-competitive-analysis.html</code>、<code>notes/decision-log.html</code>が再生成され、Markdown
+                5件の先頭本文行はいずれも実在する同名HTMLへの<code>[HTML版を開く]</code>リンクである。生成済み<code>market-competitive-analysis.html</code>にはTerrestrial
+                Bio、R17、更新後のcompany
+                mapとReferencesが含まれ、<code>decision-log.html</code>には13件の検証表が含まれることを確認した。</p>
+                <p>buildにより本モジュール外で次の既存HTML
+                2件にpandoc由来のincidental
+                diffが再発した。ユーザー指示どおり内容を編集・revertせず、そのまま残した。</p>
+                <ul>
+                <li><code>microneedle-drug-delivery/Notes/2026-07-20-microneedle-research-examples.html</code></li>
+                <li><code>microneedle-drug-delivery/references/translated  papers/README.html</code></li>
+                </ul>
+                <h3
+                id="acceptance-checklist-codex-sol最終自己採点">Acceptance
+                checklist — Codex-sol最終自己採点</h3>
+                <table>
+                <colgroup>
+                <col style="width: 33%" />
+                <col style="width: 33%" />
+                <col style="width: 33%" />
+                </colgroup>
+                <thead>
+                <tr>
+                <th>requirements.md §10項目</th>
+                <th>評価</th>
+                <th>根拠</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td><code>market-competitive-analysis.md</code>の必須全章</td>
+                <td>達成</td>
+                <td>Executive
+                summaryからReferencesまで、要件§4の1–10に対応する内容が完成している。</td>
+                </tr>
+                <tr>
+                <td>実質的claimの実URL/DOI/番号と(a/b/c)</td>
+                <td>達成</td>
+                <td>R1–R17をReferencesに記録し、企業・製品・AI/ML・規制claimに(a)/(b)を付与した。指定13件の区分を今回独立再確認し、(c)依存の実質的結論はない。</td>
+                </tr>
+                <tr>
+                <td><code>competitive-landscape</code>との非重複</td>
+                <td>達成</td>
+                <td>branch上の全文を再読し、academic-methods、model性能、academic
+                comparator表を転記していないことを確認した。</td>
+                </tr>
+                <tr>
+                <td>実在しない企業・製品・URL・特許がないことの独立検証</td>
+                <td>達成</td>
+                <td>Sonnet
+                5がR1/R5/R11、Codex-solが残り13件、さらにCodex-solがR17を直接再取得した。未取得のRaphas特許番号は主張していない。</td>
+                </tr>
+                <tr>
+                <td><code>README.md</code>・<code>notes/decision-log.md</code>完成</td>
+                <td>達成</td>
+                <td>READMEのpipeline/statusを実績に同期し、本logに全13
+                URL、取得制約、修正、全体監査を記録した。</td>
+                </tr>
+                <tr>
+                <td>全MarkdownのHTML link・build完走</td>
+                <td>達成</td>
+                <td>5/5の先頭linkとtargetを確認し、buildはexit
+                0でrepository-wide validationまで完走した。</td>
+                </tr>
+                <tr>
+                <td>Web手段の利用可否・失敗事例の記録</td>
+                <td>達成</td>
+                <td>Native Web、<code>curl</code>
+                fallback、R2/R4のdynamic
+                shell、以前のPubMed/PMC・EMA(FR)・R5取得事象を区別して記録した。</td>
+                </tr>
+                <tr>
+                <td>§8の両論文への具体的改訂提案</td>
+                <td>達成</td>
+                <td>small-data ML paperとactive-learning
+                paperに各5項目の挿入内容、境界、実験・再現性gateを提示している。</td>
+                </tr>
+                </tbody>
+                </table>
+                <p><strong>総合自己採点: 8/8項目達成。</strong>
+                commit、push、<code>gh</code>操作は行っていない。</p>
+                <h2
+                id="sonnet-5-codex-sol成果物の最終レビュー">2026-07-21:
+                Sonnet 5 — Codex-sol成果物の最終レビュー</h2>
+                <p>Codex-solの13件再検証・R17追加(Terrestrial Bio
+                rebrand)を、自己申告のまま受け入れず、最も新規性の高い主張(R17:
+                Vaxess Technologies社が2026年にTerrestrial
+                Bioへ社名変更)を独立にWebFetchで再取得した。2026-03-26のリブランド、5,000万ドルSeries
+                C(RA
+                Capital主導)という具体的事実が公式発表ページと完全に一致することを確認した。捏造・誤認は見つからなかった。</p>
+                <p>git commit・push・PR作成はSonnet
+                5(このセッション)が行う。本モジュールはPR可能な状態と判断する。</p>
               </article>
     </main>
 

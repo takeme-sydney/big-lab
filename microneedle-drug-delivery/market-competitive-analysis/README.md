@@ -3,7 +3,7 @@
 # Microneedle ML 商用・市場競合分析
 
 更新日: 2026-07-21
-状態: Codex-terraによるWeb調査・初稿・HTML生成完了 / Codex-sol独立検証待ち（リポジトリ全体のHTML validatorは既存の`research/CLAUDE.md`リンク不備で停止）
+状態: Codex-terraによるWeb調査・初稿、Sonnet 5による3参照の確認、Codex-solによる残り13参照の独立再検証、HTML生成・全体validator完了
 
 ## 概要
 
@@ -43,8 +43,9 @@
 
 1. Claude Sonnet 5 — `requirements.md`・`implementation-prompt.md`を起草(deep-research失敗を受けてCodex実行前提の内容に設計)
 2. Codex `gpt-5.6-terra`(reasoning effort: max) — 実際にWeb調査を行い、`market-competitive-analysis.md`を起草
-3. Codex `gpt-5.6-sol`(reasoning effort: ultra) — 主要な主張を独立に再検証し、仕上げる
-4. Claude Sonnet 5 — 最終レビュー・PR作成
+3. Claude Sonnet 5 — R1・R5・R11の独立確認とHTML build阻害要因の修復
+4. Codex `gpt-5.6-sol`(reasoning effort: ultra) — 残り13参照を独立に再検証し、最終整合性・重複・受入条件を監査
+5. Human reviewer — 差分をレビューし、commit/PRの要否を判断
 
 ## フォルダ構成
 

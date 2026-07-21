@@ -114,9 +114,8 @@
                 <h1 id="microneedle-ml-商用市場競合分析">Microneedle ML
                 商用・市場競合分析</h1>
                 <p>更新日: 2026-07-21 状態:
-                Codex-terraによるWeb調査・初稿・HTML生成完了 /
-                Codex-sol独立検証待ち（リポジトリ全体のHTML
-                validatorは既存の<code>research/CLAUDE.md</code>リンク不備で停止）</p>
+                Codex-terraによるWeb調査・初稿、Sonnet
+                5による3参照の確認、Codex-solによる残り13参照の独立再検証、HTML生成・全体validator完了</p>
                 <h2 id="概要">概要</h2>
                 <p><code>research/</code>で進めるsmall-data
                 MLアプローチについて、実在する企業・製品・受託開発・商用検証を調べた商用・市場gap
@@ -180,9 +179,13 @@
                 <li>Codex <code>gpt-5.6-terra</code>(reasoning effort:
                 max) —
                 実際にWeb調査を行い、<code>market-competitive-analysis.md</code>を起草</li>
+                <li>Claude Sonnet 5 — R1・R5・R11の独立確認とHTML
+                build阻害要因の修復</li>
                 <li>Codex <code>gpt-5.6-sol</code>(reasoning effort:
-                ultra) — 主要な主張を独立に再検証し、仕上げる</li>
-                <li>Claude Sonnet 5 — 最終レビュー・PR作成</li>
+                ultra) —
+                残り13参照を独立に再検証し、最終整合性・重複・受入条件を監査</li>
+                <li>Human reviewer —
+                差分をレビューし、commit/PRの要否を判断</li>
                 </ol>
                 <h2 id="フォルダ構成">フォルダ構成</h2>
                 <pre class="text"><code>market-competitive-analysis/
