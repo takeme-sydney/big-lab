@@ -53,7 +53,7 @@
 - ベースライン: `descriptors.py`の`potts_guy_baseline`関数(既存実装を確認して使用。再実装しない)。
 - MLR, Random Forest, XGBoost, Gaussian Process Regression(`sklearn.gaussian_process`)の比較。
 - **5-fold交差検証**(`CLAUDE.md`規約通り、単純train/test splitは不可 — 214件のみのため)。
-- Applicability Domain: レバレッジ法(hat行列対角、Williams plot相当)。`cosmetic_ingredients_descriptors.csv`に既存の`in_MW_domain`/`in_LogP_domain`列との整合性を確認する(矛盾があれば`notes/decision-log.md`に記録)。
+- Applicability Domain: レバレッジ法(hat行列対角、Williams plot相当)。**既存の`descriptors.py::check_applicability_domain`関数(MW・LogP範囲の単純な範囲判定)が、`cosmetic_ingredients_descriptors.csv`の既存`in_MW_domain`/`in_LogP_domain`列を生成した実装である可能性が高い(要確認)。** レバレッジ法はこれより厳密な統計的手法であり、単純な範囲判定を置き換えるものではなく補完するものとして実装する。両者の結果に矛盾がある場合(単純範囲内だがレバレッジ法では圏外、等)は`notes/decision-log.md`に記録し、`check_applicability_domain`を無断で書き換えない。
 
 ### Phase 4B(優先)— Yuan 2023マイクロニードルモデルの再現・改良
 
