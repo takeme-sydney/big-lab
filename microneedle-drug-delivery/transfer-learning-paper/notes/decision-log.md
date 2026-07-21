@@ -123,3 +123,19 @@
 **ビルド修復(機械的修正、内容変更なし)**: `research/CLAUDE.md`に加え、本ブランチでは`research/README.md`・`literature_map_report.md`にも同型の`[HTML版を開く]`リンク欠落が存在した(`RESEARCH_PLAN.md`はTerra自身が既に追加済み)。前例(active-learning-paper・market-competitive-analysisブランチ)に倣い、この場で3ファイルに1行ずつ追加した。是正後、`shared/scripts/build-website.sh`はリポジトリ全体で`Validated Markdown-to-HTML links.`を出力し、完全にクリーンな状態になった。
 
 **結論**: 独立検証したすべての数値・フラグ・画像がTerraの成果物と一致した。捏造・誇張は見つからなかった。Codex gpt-5.6-solへの引き継ぎ準備が整ったと判断する。
+
+## 2026-07-21: Codex gpt-5.6-sol段階 — 2回死亡のため、Sonnet 5が独立検証を代行
+
+**発生した事象**: Codex gpt-5.6-sol(ultra)を2回起動したが、いずれもバックグラウンド実行中に強制終了された(`status: killed`)。1回目は作業ツリーに変更を残さず終了。2回目は複数のCSVファイルの列構成を確認する作業(本タスクで指示した検証作業そのもの)を実際に実行していたことをログで確認したが、やはり変更を残さず終了した([[codex-cli-ultra-tier-background-kills]]と一致する既知の不具合)。2回連続で死亡したため、`codex exec resume`は試みず(死亡したultraセッションへのresumeは失敗することが既知)、この段階の独立検証をSonnet 5が直接代行する。
+
+**実施した独立検証(codex-solに依頼していた検証項目を、そのまま自分で実施)**:
+- `phase2_curation_summary.csv`: 欠損0、重複canonical SMILES 0、IQR外れ値0、z-score外れ値0、leverage外れ値11件(閾値0.168224)、SMILES再解析不一致0、記述子不一致0、生HuskinDB/SkinPiXファイル発見数0 — paper.md §2.2・§3.1の記述と完全一致。`phase2_duplicate_smiles.csv`はヘッダのみ(0行)で「重複なし」を裏付ける。
+- `phase3_eda_summary.csv`: 平均-2.6571→-2.657、標準偏差1.1684→1.168、中央値-2.650、最小-6.0、最大0.12 — paper.md §3.1の記述と完全一致。
+- `phase4b_random_split_performance.csv`: XGBoost amount R²=0.9673→0.967・RMSE=562.247、RF amount R²=0.9481→0.948、MLR amount R²=0.1912→0.191、percentage側もXGBoost 0.965・RF 0.962・MLR 0.936、Fick proxy amount R²=-29.883・percentage R²=-3.780 — すべてpaper.md §3.3のTableと完全一致。
+- `phase4b_fick_proxy_parameters.csv`と`transfer_learning_analysis.py`のソースコード(713行目`erfc`使用、764行目のコメント"Analytical erfc proxy; 1 mm skin; MW^(-1/3) D; D clipped 50--1000 µm²/min; no fitted parameters.")を直接確認し、paper.md §2.4の物理proxy記述と一致することを確認した。BSA(MW=66000)の残存皮膚厚0.18mm(=1mm-MN長0.82mm)、拡散係数106.79µm²/min(50-1000範囲内)も妥当。
+- `phase5_shap_4a_feature_importance.csv`: LogP 0.3500→0.350、MW 0.3078→0.308、MolarRefractivity 0.1980→0.198、HBD 0.1773→0.177、TPSA 0.1574→0.157 — paper.md §3.6と完全一致。
+- `phase5_shap_4b_feature_importance.csv`: drug loading 3112.84→3,112.842、permeation time 1693.76→1,693.756、MN type=0.0(ゼロ) — paper.md §3.6と完全一致。
+- Yuan et al. (2023)和訳(`references/translated  papers/01-yuan-2023-...-ja.md`)の269行目「191点の実験データ...7:3の比率で学習セットとテストセットへ無作為に分割」と500行目の表4(透過量R²: XGBoost 0.98/RF 0.95/Fick 0.95/MLR 0.46、透過率R²: 0.98/0.97/0.82/0.65)を直接確認し、paper.md Introduction「70:30 random split」「XGBoost R²=0.98 for both permeation amount and percentage」という既報値の帰属が正確であることを確認した。
+- **引用の実在性(このパイプラインで過去に問題になった失敗モード — 未承認の書誌詳細の追加 — が再発していないかの重点確認)**: WebSearchで2件を独立検証した。(1) 参考文献5(Chedik et al., doi:10.1038/s41597-024-03026-4)は、CLAUDE.mdが引用するSkinPiXのデータリポジトリDOI(10.57745/7FHQOY)とは別の、実在する2024年Scientific Data誌の論文(PMC10881585, 著者Chedik/Baybekov/Cosnier/Marcou/Varnek/Champmartin)であることを確認した — データセットの説明論文であり、捏造ではなく正当な追加引用と判断した。(2) 参考文献2(Xu et al., doi:10.1038/s41524-023-01000-z)の巻号・ページ表記「2023;9:42」を検索し、実際にVolume 9, Issue 1, article 42, 著者Xu Pengcheng/Ji Xiaobo/Li Minjie/Lu Wencongであることを確認した — Terra段階は今回、過去に問題となった「検証不能な書誌詳細の追加」を繰り返していない。
+
+**結論**: 上記の全項目で、paper.mdの数値・記述・引用が一次資料(保存CSV・ソースコード・Yuan和訳・外部検索)と完全に一致することを確認した。捏造・誤帰属は見つからなかった。本モジュールはPR可能な状態と判断する。Codex-sol不在により得られなかった追加価値(独立した第三者の視点)は限定的リスクとして受け入れる — Sonnet 5自身がTerraの成果物を最初から起草していないため、一定の独立性は保たれている。
