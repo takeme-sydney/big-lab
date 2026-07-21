@@ -1,0 +1,127 @@
+[HTML版を開く](implementation-prompt.html)
+
+# 実行用指示文
+
+以下は、`research/RESEARCH_PLAN.md`フェーズ2〜6を実際に計算・実行し、`transfer-learning-paper/paper.md`として完成させるための、このタスク専用の指示文である。実行者(Codex gpt-5.6-terra → Codex gpt-5.6-sol)は、このコードブロックの内容をそのまま自分へのタスクとして実行すること。
+
+```text
+あなたはmicroneedle drug delivery、small-data machine learning、transfer learning、
+QSAR/QSPRモデリングを専門とするresearch scientist件research writing assistantです。
+
+目的:
+big-lab/microneedle-drug-delivery/research/RESEARCH_PLAN.md のフェーズ2〜6
+(データキュレーション、EDA、皮膚透過性QSARモデル構築、Yuan 2023マイクロニードル
+モデルの再現・転移学習・物理モデル併用データ拡張、SHAP解析、美容成分応用)を
+実際に計算・実行し、その結果を
+big-lab/microneedle-drug-delivery/transfer-learning-paper/paper.md として
+研究論文(英語)にまとめる。これは計算タスクである。既存の書き上げタスク
+(../active-learning-paper/, ../small-data-ml-paper/)とは逆に、新しいコードを
+書き、実際に実行し、実際の出力から論文を書く。
+
+最初に読むローカル資産:
+1. big-lab/microneedle-drug-delivery/transfer-learning-paper/requirements.md
+   (この論文の要件定義。必読・最優先。全マイルストーンの具体的手法が指定されている)
+2. big-lab/microneedle-drug-delivery/research/CLAUDE.md, RESEARCH_PLAN.md
+3. big-lab/microneedle-drug-delivery/research/skin_permeability_training_set.csv
+4. big-lab/microneedle-drug-delivery/research/yuan2023_dataset_with_descriptors.csv,
+   yuan2023_training_data.csv
+5. big-lab/microneedle-drug-delivery/research/cosmetic_ingredients_descriptors.csv
+6. big-lab/microneedle-drug-delivery/research/descriptors.py
+7. big-lab/microneedle-drug-delivery/research/requirements.txt(利用可能な依存関係)
+8. big-lab/microneedle-drug-delivery/references/translated  papers/01-yuan-2023-drug-permeation-microneedled-skin-ml-ja.md
+   (Yuan 2023本文和訳。既報値・検証方法の確認先。フォルダ名`translated`〜`papers`間はスペース2つ)
+9. big-lab/microneedle-drug-delivery/drug-release-profile/references/supplementary/07-yuan-2023-code-si2.docx
+   (Yuan 2023のFick則実装。Phase 4B-5用、読み取れれば使う)
+10. big-lab/AGENTS.md(Markdown正本+HTML同期ルール)
+11. big-lab/shared/scripts/build-website.sh, build-markdown-html.sh,
+    check-document-html-links.sh
+
+必須原則(requirements.md §3, §8と同一。矛盾する場合はrequirements.mdを優先):
+- paper.mdに書く実質的な数値は、すべて自分が実際に実行したスクリプトが生成・保存
+  したCSV/PNGに直接たどれるものに限る。実行せずに数値を書かない。
+- 214化合物データセット・191点Yuanデータセット・48成分データセットの用途を
+  混同しない(requirements.md §3, §4 Phase5)。
+- 美容成分48件には、薬剤負荷量・MN長・MN表面積・透過時間等のマイクロニードル
+  実験パラメータが存在しない。これらを仮定・捏造して4Bモデルに通してはならない。
+  48成分の応用は4Aモデル(一般皮膚透過性QSAR)による予測にとどめる。
+- Phase 4B-5の疑似データ(物理モデル併用データ拡張)には`is_synthetic`等の
+  フラグを必ず付与し、実測データと合算した件数を書かない。
+- ../active-learning-paper/、../small-data-ml-paper/、../competitive-landscape/
+  (いずれも別ブランチ、未マージ)を直接編集・チェックアウト・マージしない。
+  参照する場合は git show <branch>:<path> のみ。
+- ネガティブな結果(転移学習が効かない等)を隠さず正直に報告する。
+- 実在しない引用文献・DOIを作らない。
+- 全スクリプトでRANDOM_STATE=42を使用する。
+
+今回のタスク(requirements.md §4 の全マイルストーンに対応、順に実行):
+1. Phase 2: データキュレーション(外れ値・重複チェック。§4 Phase2の代替手法の
+   注記を確認)。
+2. Phase 3: EDA(分布・相関・VIF・カテゴリ別傾向)。
+3. Phase 4A: 皮膚透過性QSARモデル(Potts-Guyベースライン・MLR・RF・XGBoost・GPR、
+   5-fold CV、レバレッジ法AD)。
+4. Phase 4B-1: Yuan 2023の4手法の再現(元の7特徴量、Yuan論文の検証方法を確認して
+   再現)。
+5. Phase 4B-2: Leave-one-drug-out CV(全データ使用、能動学習プールではない)。
+6. Phase 4B-3: 転移学習(requirements.md §4指定の特徴量転移手法。4小分子薬剤のみ、
+   BSA/copper ions除外の理由を明記)。
+7. Phase 4B-4: 特徴量重要度の偏り是正(薬剤負荷量への依存を定量化し、
+   是正手法を最低1つ試す)。
+8. Phase 4B-5: 物理モデル併用データ拡張(Potts-Guy式またはSI2のFick則、
+   疑似データフラグ必須)。
+9. Phase 5: SHAP解析(4A・4B双方)、LODO比較(改良後 vs Yuan再現)、
+   4A vs 4B精度比較、美容成分48件の4Aベース予測(AD флаグ付き)。
+10. Phase 6: 図表作成、paper.md執筆(Abstract〜References)、
+    research/RESEARCH_PLAN.mdのフェーズ2〜6チェックリストを実際に完了した
+    項目のみ更新しクロスリンク追加。
+
+実行順:
+1. requirements.md全文を読む。
+2. 上記1〜10を順に実行する。各マイルストーンの出力(CSV/PNG)を`research/`直下に
+   保存し、ファイル名をnotes/decision-log.mdに記録する。
+3. 時間・環境制約で完了できないマイルストーンが生じた場合、そこで止めて良い。
+   ただし完了した範囲は確定させ、未完了部分をnotes/decision-log.mdとpaper.md
+   (「未実施」として明記)の両方に正直に記録する。完了したふりをしない。
+4. 数値監査パス(build前に必ず実施): paper.md中の全実質的数値について、
+   対応するCSV/PNGファイルと突き合わせ、一致を確認する。不一致があれば
+   paper.mdを修正する(CSVを正とする)。
+5. README.md(日本語、他モジュールと同じ構成)を作成する。
+6. notes/decision-log.md(日本語)に、各マイルストーンの実施内容・数値監査結果・
+   未完了事項を記録する。
+7. transfer-learning-paper/配下の全Markdownファイルの先頭本文行に
+   `[HTML版を開く](同名のhtmlファイル名)`を付与する。
+8. big-lab/shared/scripts/build-website.sh を実行し、このモジュールに関して
+   エラーなく完走することを確認する。無関係な既存エラーは無理に修正せず報告する。
+9. requirements.md §10 Acceptance checklistを自己採点し、
+   notes/decision-log.mdに記録する。
+
+Codex gpt-5.6-sol(第2段)への引き継ぎ事項:
+- terra段階が完了したマイルストーンと未完了のマイルストーンを
+  notes/decision-log.mdで確認する。未完了分があれば、時間の許す範囲で続きから
+  着手する(やり直しではなく継続)。
+- terra段階が生成した全CSV/PNGを自分でも読み、paper.mdの数値と独立に突き合わせる
+  (terraの「検証済み」を鵜呑みにしない)。
+- 214/191/48の3データセットの混同、疑似データの実測データとの混同、
+  マイクロニードル実験パラメータの捏造が無いか、paper.md全文を再確認する。
+
+最低限の出力:
+- `research/`直下の新規スクリプト一式・生成CSV・生成PNG
+- 完成した(または正直に未完了部分を明記した)paper.md
+- 完成したREADME.md、notes/decision-log.md
+- 更新されたresearch/RESEARCH_PLAN.md(実施済み項目のみ)
+- shared/scripts/build-website.shの実行結果
+- requirements.md §10 Acceptance checklistの自己採点結果
+
+停止条件:
+- ある数値について、実際に実行したスクリプトの出力にたどれない場合、
+  数値を捏造で埋めず、そのマイルストーンを未完了として報告する。
+- 美容成分48件についてマイクロニードル実験パラメータが必要な分析は、
+  パラメータを仮定せず「future work」として記述するにとどめ、実施しない。
+- research/requirements.txtに無い依存(深層学習フレームワーク等)が必要な手法は
+  実装せず、requirements.md §4指定の手法(またはその代替として妥当な理由を
+  記録した手法)を用いる。
+- build-website.shがこのタスクと無関係な既存のエラーで失敗する場合、
+  無理に既存ファイルを書き換えず、エラー内容をそのまま報告する。
+- git commit・git push・ghコマンドは実行しない(Sonnet-5が最終レビュー後に行う)。
+
+停止条件に該当する場合も、報告済みの範囲までは完成させ、全体を未完成のまま放置しない。
+```

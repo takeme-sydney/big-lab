@@ -1,0 +1,15 @@
+variant,feature,importance_fraction,included_in_learned_component,rank_within_variant
+baseline_7feature_amount_XGBoost,Drug loading in MN patch (µg),0.6246158080053571,True,1.0
+baseline_7feature_amount_XGBoost,Drug MW (Dalton),0.020301495308030788,True,3.0
+baseline_7feature_amount_XGBoost,MN Length (mm),0.00022009054417148507,True,5.0
+baseline_7feature_amount_XGBoost,Skin type (rat =1; human = 2),0.006293525515689684,True,4.0
+baseline_7feature_amount_XGBoost,MN type (hydrogel =1; plastic = 2),0.0,True,7.0
+baseline_7feature_amount_XGBoost,MN surface area (mm2),4.95691060719627e-05,True,6.0
+baseline_7feature_amount_XGBoost,Permeation time (hour),0.34851951152067895,True,2.0
+percentage_first_no_loading_XGBoost,Drug loading in MN patch (µg),0.0,False,6.0
+percentage_first_no_loading_XGBoost,Drug MW (Dalton),0.7418079293317207,True,1.0
+percentage_first_no_loading_XGBoost,MN Length (mm),0.024757155871870117,True,5.0
+percentage_first_no_loading_XGBoost,Skin type (rat =1; human = 2),0.026068942330007155,True,4.0
+percentage_first_no_loading_XGBoost,MN type (hydrogel =1; plastic = 2),0.0,True,6.0
+percentage_first_no_loading_XGBoost,MN surface area (mm2),0.13224357218768182,True,2.0
+percentage_first_no_loading_XGBoost,Permeation time (hour),0.07512240027872026,True,3.0

@@ -1,0 +1,15 @@
+metric,value,details
+n_experimental_compounds,214.0,Input dataset row count.
+n_missing_values,0.0,All input columns.
+n_duplicate_canon_smiles,0.0,Exact canonical SMILES.
+n_duplicate_groups,0.0,Groups with more than one row.
+n_iqr_target_outliers,0.0,1.5×IQR rule.
+n_abs_zscore_gt_3,0.0,Population z-score threshold.
+n_descriptor_leverage_outliers,11.0,Williams threshold.
+n_any_statistical_flag,11.0,Union of the three flags.
+n_smiles_reparse_mismatches,0.0,RDKit canonicalization check.
+n_descriptor_mismatches,0.0,Maximum absolute difference > 1e-6.
+target_iqr_lower,-6.15625,logKp_cm_h.
+target_iqr_upper,0.87375,logKp_cm_h.
+leverage_threshold,0.16822429906542055,3(p+1)/n with p=11 descriptors.
+raw_huskindb_skinpix_files_found,0.0,None under research/.

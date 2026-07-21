@@ -1,0 +1,9 @@
+analysis,statistic,value
+experimental_skin_logKp_distribution,count,214.0
+experimental_skin_logKp_distribution,mean,-2.6571261682242993
+experimental_skin_logKp_distribution,std,1.1684247804522634
+experimental_skin_logKp_distribution,min,-6.0
+experimental_skin_logKp_distribution,25%,-3.52
+experimental_skin_logKp_distribution,50%,-2.6500000000000004
+experimental_skin_logKp_distribution,75%,-1.7625
+experimental_skin_logKp_distribution,max,0.12

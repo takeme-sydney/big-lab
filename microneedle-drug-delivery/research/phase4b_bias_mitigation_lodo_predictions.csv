@@ -1,0 +1,383 @@
+row_index,held_out_drug,variant,target,n_train_experimental,n_test_experimental,observed,predicted,predicted_permeation_percentage_for_reconstruction
+0,BSA,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,158,33,93.96515777,-12.269957542419434,
+1,BSA,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,158,33,103.1324902,-12.269957542419434,
+2,BSA,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,158,33,345.4938423,-12.885334968566895,
+3,BSA,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,158,33,230.5838763,-7.529031276702881,
+4,BSA,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,158,33,216.0052712,-7.529031276702881,
+5,BSA,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,158,33,657.1194841,-8.144408226013184,
+6,BSA,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,158,33,722.8187001,-8.144408226013184,
+7,BSA,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,158,33,642.57271,-8.144408226013184,
+8,BSA,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,158,33,706.9031923,-8.144408226013184,
+9,BSA,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,158,33,366.7092141,-0.704238772392273,
+10,BSA,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,158,33,645.5966565,0.8302624821662903,
+11,BSA,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,158,33,858.5461502,0.8302624821662903,
+12,BSA,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,158,33,682.3933104,0.8302624821662903,
+13,BSA,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,158,33,448.8173186,13.048666954040527,
+14,BSA,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,158,33,752.7398547,15.182024002075195,
+15,BSA,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,158,33,980.5544326,15.182024002075195,
+16,BSA,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,158,33,768.4007143,15.182024002075195,
+17,BSA,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,158,33,710.309111,-36.39160919189453,
+18,BSA,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,158,33,1006.1784,-36.39160919189453,
+19,BSA,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,158,33,930.2295971,-36.39160919189453,
+20,BSA,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,158,33,787.3401685,23.82833480834961,
+21,BSA,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,158,33,1202.225625,23.82833480834961,
+22,BSA,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,158,33,872.2016558,23.82833480834961,
+23,BSA,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,158,33,930.038611,23.407026290893555,
+24,BSA,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,158,33,1342.950544,23.407026290893555,
+25,BSA,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,158,33,1021.457288,23.407026290893555,
+26,BSA,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,158,33,463.4118392,20.783000946044922,
+27,BSA,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,158,33,1059.527182,23.871227264404297,
+28,BSA,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,158,33,1433.255135,23.871227264404297,
+29,BSA,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,158,33,1200.029285,23.871227264404297,
+30,BSA,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,158,33,1178.288701,25.991348266601562,
+31,BSA,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,158,33,1558.382857,25.991348266601562,
+32,BSA,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,158,33,1244.210734,25.991348266601562,
+155,GHK peptide,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,167,24,453.2456677,-20.652904510498047,
+156,GHK peptide,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,167,24,608.5402767,40.41127014160156,
+157,GHK peptide,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,167,24,699.8355176,155.10214233398438,
+158,GHK peptide,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,167,24,768.8046883,328.7245178222656,
+159,GHK peptide,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,167,24,275.8769329,-20.652904510498047,
+160,GHK peptide,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,167,24,402.590303,40.41127014160156,
+161,GHK peptide,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,167,24,496.3157573,155.10214233398438,
+162,GHK peptide,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,167,24,569.6710595,328.7245178222656,
+163,GHK peptide,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,167,24,194.1998183,-20.652904510498047,
+164,GHK peptide,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,167,24,448.5200612,40.41127014160156,
+165,GHK peptide,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,167,24,710.2470186,155.10214233398438,
+166,GHK peptide,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,167,24,916.9397782,328.7245178222656,
+167,GHK peptide,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,167,24,22.81185437,1.2714266777038574,
+168,GHK peptide,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,167,24,21.58634282,1.2714266777038574,
+169,GHK peptide,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,167,24,14.2573962,1.2714266777038574,
+170,GHK peptide,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,167,24,33.5181655,35.01935577392578,
+171,GHK peptide,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,167,24,28.69171996,35.01935577392578,
+172,GHK peptide,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,167,24,27.80279558,35.01935577392578,
+173,GHK peptide,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,167,24,42.90916931,143.83251953125,
+174,GHK peptide,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,167,24,36.10497467,143.83251953125,
+175,GHK peptide,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,167,24,38.28244524,143.83251953125,
+176,GHK peptide,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,167,24,48.95237426,327.4013671875,
+177,GHK peptide,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,167,24,41.19030492,327.4013671875,
+178,GHK peptide,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,167,24,46.75545732,327.4013671875,
+94,Rhodamine B,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,172,19,2.852534781,92.63819122314453,
+95,Rhodamine B,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,172,19,3.19852408,92.63819122314453,
+96,Rhodamine B,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,172,19,2.356616786,92.63819122314453,
+97,Rhodamine B,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,172,19,4.73380197,158.94387817382812,
+98,Rhodamine B,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,172,19,4.753023597,158.94387817382812,
+99,Rhodamine B,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,172,19,6.389560519,14.38620376586914,
+100,Rhodamine B,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,172,19,5.796252944,14.38620376586914,
+101,Rhodamine B,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,172,19,7.388341422,14.38620376586914,
+102,Rhodamine B,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,172,19,6.385500108,14.38620376586914,
+103,Rhodamine B,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,172,19,8.222620368,140.186767578125,
+104,Rhodamine B,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,172,19,7.022612893,140.186767578125,
+105,Rhodamine B,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,172,19,9.011646829,140.186767578125,
+106,Rhodamine B,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,172,19,7.608216742,140.186767578125,
+107,Rhodamine B,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,172,19,9.358475347,140.186767578125,
+108,Rhodamine B,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,172,19,8.168518396,140.186767578125,
+109,Rhodamine B,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,172,19,10.12684798,155.48452758789062,
+110,Rhodamine B,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,172,19,8.456425715,155.48452758789062,
+111,Rhodamine B,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,172,19,13.26058499,297.82342529296875,
+112,Rhodamine B,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,172,19,11.40614532,297.82342529296875,
+113,caffeine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,173,18,1.0537,-285.7395324707031,
+114,caffeine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,173,18,2.5195,-346.6343688964844,
+115,caffeine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,173,18,4.5977,-346.6343688964844,
+116,caffeine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,173,18,2.917,-76.77091979980469,
+117,caffeine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,173,18,4.385,-137.665771484375,
+118,caffeine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,173,18,7.7315,-137.665771484375,
+119,caffeine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,173,18,9.4102,54.65825271606445,
+120,caffeine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,173,18,12.8826,45.11155319213867,
+121,caffeine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,173,18,30.8624,45.11155319213867,
+122,caffeine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,173,18,21.5937,140.07931518554688,
+123,caffeine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,173,18,23.3053,134.13165283203125,
+124,caffeine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,173,18,54.3821,134.13165283203125,
+125,caffeine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,173,18,32.4588,271.9339294433594,
+126,caffeine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,173,18,33.9639,261.177734375,
+127,caffeine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,173,18,72.4596,261.177734375,
+128,caffeine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,173,18,79.1873,1224.485107421875,
+129,caffeine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,173,18,89.0393,619.0675048828125,
+130,caffeine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,173,18,131.1062,619.0675048828125,
+131,copper ions,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,167,24,6.227064,-69.45494079589844,
+132,copper ions,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,167,24,7.476744,-26.751283645629883,
+133,copper ions,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,167,24,8.319516,141.93295288085938,
+134,copper ions,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,167,24,9.05256,302.21929931640625,
+135,copper ions,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,167,24,6.166104,-69.45494079589844,
+136,copper ions,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,167,24,7.438644,-26.751283645629883,
+137,copper ions,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,167,24,8.456676,141.93295288085938,
+138,copper ions,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,167,24,9.447276,302.21929931640625,
+139,copper ions,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,167,24,4.928616,-69.45494079589844,
+140,copper ions,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,167,24,7.02564,-26.751283645629883,
+141,copper ions,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,167,24,9.011412,141.93295288085938,
+142,copper ions,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,167,24,10.879836,302.21929931640625,
+143,copper ions,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,167,24,19.5168,-42.119483947753906,
+144,copper ions,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,167,24,18.288,-42.119483947753906,
+145,copper ions,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,167,24,13.0368,-42.119483947753906,
+146,copper ions,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,167,24,29.2368,-45.0402946472168,
+147,copper ions,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,167,24,25.0512,-45.0402946472168,
+148,copper ions,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,167,24,25.1808,-45.0402946472168,
+149,copper ions,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,167,24,38.1696,72.4629135131836,
+150,copper ions,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,167,24,32.3568,72.4629135131836,
+151,copper ions,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,167,24,38.28,72.4629135131836,
+152,copper ions,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,167,24,45.4848,186.3925323486328,
+153,copper ions,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,167,24,39.168,186.3925323486328,
+154,copper ions,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,167,24,49.7904,186.3925323486328,
+33,lidocaine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,118,73,1024.531509,305.4064025878906,
+34,lidocaine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,118,73,1109.929295,305.4064025878906,
+35,lidocaine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,118,73,1488.148502,305.4064025878906,
+36,lidocaine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,118,73,910.694674,305.4064025878906,
+37,lidocaine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,118,73,2219.250807,305.4064025878906,
+38,lidocaine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,118,73,2636.662022,305.4064025878906,
+39,lidocaine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,118,73,910.694674,305.4064025878906,
+40,lidocaine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,118,73,2082.29003,305.4064025878906,
+41,lidocaine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,118,73,2490.677205,305.4064025878906,
+42,lidocaine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,118,73,910.694674,305.4064025878906,
+43,lidocaine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,118,73,2082.29003,305.4064025878906,
+44,lidocaine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,118,73,2490.677205,305.4064025878906,
+45,lidocaine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,118,73,910.694674,305.4064025878906,
+46,lidocaine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,118,73,2082.29003,305.4064025878906,
+47,lidocaine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,118,73,2490.677205,305.4064025878906,
+48,lidocaine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,118,73,910.694674,305.4064025878906,
+49,lidocaine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,118,73,2082.29003,305.4064025878906,
+50,lidocaine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,118,73,910.694674,305.4064025878906,
+51,lidocaine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,118,73,2082.29003,305.4064025878906,
+52,lidocaine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,118,73,2862.848942,306.5308532714844,
+53,lidocaine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,118,73,3555.688395,306.5308532714844,
+54,lidocaine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,118,73,1895.431377,306.5308532714844,
+55,lidocaine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,118,73,1554.763163,306.5308532714844,
+56,lidocaine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,118,73,2482.766544,306.5308532714844,
+57,lidocaine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,118,73,4311.902742,306.5308532714844,
+58,lidocaine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,118,73,5205.483748,306.5308532714844,
+59,lidocaine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,118,73,5938.678996,306.5308532714844,
+60,lidocaine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,118,73,6733.651992,306.5308532714844,
+61,lidocaine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,118,73,4001.849144,306.5308532714844,
+62,lidocaine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,118,73,3177.324831,306.5308532714844,
+63,lidocaine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,118,73,7739.876585,484.3809509277344,
+64,lidocaine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,118,73,8482.669584,484.3809509277344,
+65,lidocaine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,118,73,1238.213787,484.3809509277344,
+66,lidocaine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,118,73,1193.647249,484.3809509277344,
+67,lidocaine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,118,73,4394.183075,484.3809509277344,
+68,lidocaine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,118,73,4385.405754,484.3809509277344,
+69,lidocaine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,118,73,4325.511402,484.3809509277344,
+70,lidocaine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,118,73,12991.86928,632.120361328125,
+71,lidocaine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,118,73,14274.00249,632.120361328125,
+72,lidocaine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,118,73,3771.758529,632.120361328125,
+73,lidocaine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,118,73,2418.211041,632.120361328125,
+74,lidocaine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,118,73,3482.985285,632.120361328125,
+75,lidocaine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,118,73,7033.95717,632.120361328125,
+76,lidocaine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,118,73,6277.653062,632.120361328125,
+77,lidocaine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,118,73,5923.531283,632.120361328125,
+78,lidocaine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,118,73,19622.03687,656.151611328125,
+79,lidocaine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,118,73,21343.98269,656.151611328125,
+80,lidocaine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,118,73,9210.233657,656.151611328125,
+81,lidocaine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,118,73,9354.956357,656.151611328125,
+82,lidocaine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,118,73,8482.038772,656.151611328125,
+83,lidocaine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,118,73,7373.773512,656.151611328125,
+84,lidocaine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,118,73,8217.700744,656.151611328125,
+85,lidocaine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,118,73,22412.30259,751.9083862304688,
+86,lidocaine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,118,73,24210.37745,751.9083862304688,
+87,lidocaine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,118,73,29009.78801,751.9083862304688,
+88,lidocaine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,118,73,10460.91572,751.9083862304688,
+89,lidocaine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,118,73,8204.473607,751.9083862304688,
+90,lidocaine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,118,73,9566.054457,751.9083862304688,
+91,lidocaine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,118,73,12962.76232,751.9083862304688,
+92,lidocaine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,118,73,10514.86409,751.9083862304688,
+93,lidocaine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,118,73,11254.14165,751.9083862304688,
+179,lidocaine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,118,73,2.039379206,6.770495891571045,
+180,lidocaine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,118,73,33.03484383,16.780210494995117,
+181,lidocaine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,118,73,144.6327434,30.61062240600586,
+182,lidocaine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,118,73,340.7408145,38.270809173583984,
+183,lidocaine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,118,73,2.05618266,6.770495891571045,
+184,lidocaine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,118,73,32.82946828,16.780210494995117,
+185,lidocaine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,118,73,136.2011436,30.61062240600586,
+186,lidocaine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,118,73,295.8251818,38.270809173583984,
+187,lidocaine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,118,73,2.020708701,6.770495891571045,
+188,lidocaine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,118,73,33.79660041,16.780210494995117,
+189,lidocaine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,118,73,147.2503481,30.61062240600586,
+190,lidocaine,baseline_7feature_amount_XGBoost,permeation_amount_ug_cm2,118,73,347.4677973,38.270809173583984,
+0,BSA,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,158,33,93.96515777,14.546584460735321,2.7394697666168213
+1,BSA,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,158,33,103.1324902,14.40961097240448,2.7394697666168213
+2,BSA,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,158,33,345.4938423,44.845120079517365,2.7394697666168213
+3,BSA,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,158,33,230.5838763,30.921580595970156,5.823273181915283
+4,BSA,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,158,33,216.0052712,30.63041693687439,5.823273181915283
+5,BSA,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,158,33,657.1194841,63.29897948741913,5.823273181915283
+6,BSA,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,158,33,722.8187001,62.54195397377014,5.823273181915283
+7,BSA,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,158,33,642.57271,95.32698198795319,5.823273181915283
+8,BSA,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,158,33,706.9031923,79.02181707859039,5.823273181915283
+9,BSA,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,158,33,366.7092141,36.00946549415588,6.7814435958862305
+10,BSA,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,158,33,645.5966565,73.71429188728332,6.7814435958862305
+11,BSA,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,158,33,858.5461502,111.01223166465759,6.7814435958862305
+12,BSA,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,158,33,682.3933104,92.02418959617614,6.7814435958862305
+13,BSA,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,158,33,448.8173186,39.62808341503143,7.462915897369385
+14,BSA,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,158,33,752.7398547,81.12189580440521,7.462915897369385
+15,BSA,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,158,33,980.5544326,122.16793323993683,7.462915897369385
+16,BSA,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,158,33,768.4007143,101.27176872730256,7.462915897369385
+17,BSA,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,158,33,710.309111,102.96950463294984,9.47281551361084
+18,BSA,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,158,33,1006.1784,155.06998995780944,9.47281551361084
+19,BSA,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,158,33,930.2295971,128.5461065196991,9.47281551361084
+20,BSA,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,158,33,787.3401685,219.6945077896118,20.21108627319336
+21,BSA,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,158,33,1202.225625,330.8554822921753,20.21108627319336
+22,BSA,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,158,33,872.2016558,274.2644407272339,20.21108627319336
+23,BSA,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,158,33,930.038611,224.57378368377687,20.659961700439453
+24,BSA,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,158,33,1342.950544,338.20357303619386,20.659961700439453
+25,BSA,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,158,33,1021.457288,280.3556802749634,20.659961700439453
+26,BSA,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,158,33,463.4118392,120.48998977661132,22.691146850585938
+27,BSA,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,158,33,1059.527182,246.65276626586913,22.691146850585938
+28,BSA,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,158,33,1433.255135,371.4540739440918,22.691146850585938
+29,BSA,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,158,33,1200.029285,307.91886276245117,22.691146850585938
+30,BSA,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,158,33,1178.288701,308.5466318511963,28.385154724121094
+31,BSA,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,158,33,1558.382857,464.6649828338623,28.385154724121094
+32,BSA,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,158,33,1244.210734,385.18654960632324,28.385154724121094
+155,GHK peptide,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,167,24,453.2456677,74.57193895339965,0.9453846216201782
+156,GHK peptide,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,167,24,608.5402767,396.84401199340823,5.030983924865723
+157,GHK peptide,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,167,24,699.8355176,634.2609443664551,8.040833473205566
+158,GHK peptide,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,167,24,768.8046883,679.0822241210938,8.609054565429688
+159,GHK peptide,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,167,24,275.8769329,74.57193895339965,0.9453846216201782
+160,GHK peptide,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,167,24,402.590303,396.84401199340823,5.030983924865723
+161,GHK peptide,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,167,24,496.3157573,634.2609443664551,8.040833473205566
+162,GHK peptide,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,167,24,569.6710595,679.0822241210938,8.609054565429688
+163,GHK peptide,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,167,24,194.1998183,74.57193895339965,0.9453846216201782
+164,GHK peptide,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,167,24,448.5200612,396.84401199340823,5.030983924865723
+165,GHK peptide,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,167,24,710.2470186,634.2609443664551,8.040833473205566
+166,GHK peptide,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,167,24,916.9397782,679.0822241210938,8.609054565429688
+167,GHK peptide,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,167,24,22.81185437,0.0,0.0
+168,GHK peptide,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,167,24,21.58634282,0.0,0.0
+169,GHK peptide,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,167,24,14.2573962,0.0,0.0
+170,GHK peptide,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,167,24,33.5181655,213.78797256469727,2.710293769836426
+171,GHK peptide,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,167,24,28.69171996,213.78797256469727,2.710293769836426
+172,GHK peptide,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,167,24,27.80279558,213.78797256469727,2.710293769836426
+173,GHK peptide,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,167,24,42.90916931,417.5153554534912,5.293044567108154
+174,GHK peptide,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,167,24,36.10497467,417.5153554534912,5.293044567108154
+175,GHK peptide,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,167,24,38.28244524,417.5153554534912,5.293044567108154
+176,GHK peptide,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,167,24,48.95237426,462.33671043396,5.861266613006592
+177,GHK peptide,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,167,24,41.19030492,462.33671043396,5.861266613006592
+178,GHK peptide,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,167,24,46.75545732,462.33671043396,5.861266613006592
+94,Rhodamine B,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,172,19,2.852534781,5.669332027435303,11.338664054870605
+95,Rhodamine B,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,172,19,3.19852408,5.669332027435303,11.338664054870605
+96,Rhodamine B,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,172,19,2.356616786,5.669332027435303,11.338664054870605
+97,Rhodamine B,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,172,19,4.73380197,6.402946472167969,12.805892944335938
+98,Rhodamine B,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,172,19,4.753023597,6.402946472167969,12.805892944335938
+99,Rhodamine B,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,172,19,6.389560519,9.027941703796387,18.055883407592773
+100,Rhodamine B,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,172,19,5.796252944,9.027941703796387,18.055883407592773
+101,Rhodamine B,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,172,19,7.388341422,14.227299690246582,28.454599380493164
+102,Rhodamine B,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,172,19,6.385500108,14.227299690246582,28.454599380493164
+103,Rhodamine B,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,172,19,8.222620368,21.566253662109375,43.13250732421875
+104,Rhodamine B,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,172,19,7.022612893,21.566253662109375,43.13250732421875
+105,Rhodamine B,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,172,19,9.011646829,21.566253662109375,43.13250732421875
+106,Rhodamine B,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,172,19,7.608216742,21.566253662109375,43.13250732421875
+107,Rhodamine B,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,172,19,9.358475347,21.566253662109375,43.13250732421875
+108,Rhodamine B,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,172,19,8.168518396,21.566253662109375,43.13250732421875
+109,Rhodamine B,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,172,19,10.12684798,26.012386322021484,52.02477264404297
+110,Rhodamine B,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,172,19,8.456425715,26.012386322021484,52.02477264404297
+111,Rhodamine B,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,172,19,13.26058499,29.536365509033203,59.072731018066406
+112,Rhodamine B,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,172,19,11.40614532,29.536365509033203,59.072731018066406
+113,caffeine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,173,18,1.0537,96.19651544094086,1.811610460281372
+114,caffeine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,173,18,2.5195,49.79858447313309,1.3495551347732544
+115,caffeine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,173,18,4.5977,29.55525745153427,1.3495551347732544
+116,caffeine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,173,18,2.917,162.90933558940887,3.067972421646118
+117,caffeine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,173,18,4.385,115.33360555171967,3.1255719661712646
+118,caffeine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,173,18,7.7315,68.4500260591507,3.1255719661712646
+119,caffeine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,173,18,9.4102,682.7797923088074,12.858376502990723
+120,caffeine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,173,18,12.8826,342.6777611732483,9.286660194396973
+121,caffeine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,173,18,30.8624,203.3778582572937,9.286660194396973
+122,caffeine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,173,18,21.5937,830.8343971252441,15.646598815917969
+123,caffeine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,173,18,23.3053,449.0938356399536,12.170564651489258
+124,caffeine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,173,18,54.3821,266.53536586761476,12.170564651489258
+125,caffeine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,173,18,32.4588,862.6969493865967,16.246646881103516
+126,caffeine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,173,18,33.9639,471.2357500076294,12.77061653137207
+127,caffeine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,173,18,72.4596,279.67650203704835,12.77061653137207
+128,caffeine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,173,18,79.1873,1660.3315916061401,31.268014907836914
+129,caffeine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,173,18,89.0393,1089.219958305359,29.518156051635742
+130,caffeine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,173,18,131.1062,646.4476175308228,29.518156051635742
+131,copper ions,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,167,24,6.227064,21.36691865539551,2.9007492065429688
+132,copper ions,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,167,24,7.476744,58.780588818550115,7.979987621307373
+133,copper ions,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,167,24,8.319516,73.12106705284118,9.926835060119629
+134,copper ions,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,167,24,9.05256,72.64416980552673,9.862092018127441
+135,copper ions,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,167,24,6.166104,21.36691865539551,2.9007492065429688
+136,copper ions,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,167,24,7.438644,58.780588818550115,7.979987621307373
+137,copper ions,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,167,24,8.456676,73.12106705284118,9.926835060119629
+138,copper ions,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,167,24,9.447276,72.64416980552673,9.862092018127441
+139,copper ions,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,167,24,4.928616,21.36691865539551,2.9007492065429688
+140,copper ions,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,167,24,7.02564,58.780588818550115,7.979987621307373
+141,copper ions,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,167,24,9.011412,73.12106705284118,9.926835060119629
+142,copper ions,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,167,24,10.879836,72.64416980552673,9.862092018127441
+143,copper ions,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,167,24,19.5168,0.0,0.0
+144,copper ions,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,167,24,18.288,0.0,0.0
+145,copper ions,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,167,24,13.0368,0.0,0.0
+146,copper ions,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,167,24,29.2368,10.307836361408233,1.3993804454803467
+147,copper ions,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,167,24,25.0512,10.307836361408233,1.3993804454803467
+148,copper ions,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,167,24,25.1808,10.307836361408233,1.3993804454803467
+149,copper ions,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,167,24,38.1696,9.807642359018326,1.3314746618270874
+150,copper ions,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,167,24,32.3568,9.807642359018326,1.3314746618270874
+151,copper ions,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,167,24,38.28,9.807642359018326,1.3314746618270874
+152,copper ions,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,167,24,45.4848,9.330750380277633,1.2667323350906372
+153,copper ions,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,167,24,39.168,9.330750380277633,1.2667323350906372
+154,copper ions,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,167,24,49.7904,9.330750380277633,1.2667323350906372
+33,lidocaine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,118,73,1024.531509,195.51870644688606,0.27561137080192566
+34,lidocaine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,118,73,1109.929295,195.51870644688606,0.27561137080192566
+35,lidocaine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,118,73,1488.148502,195.51870644688606,0.27561137080192566
+36,lidocaine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,118,73,910.694674,195.51870644688606,0.27561137080192566
+37,lidocaine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,118,73,2219.250807,195.51870644688606,0.27561137080192566
+38,lidocaine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,118,73,2636.662022,195.51870644688606,0.27561137080192566
+39,lidocaine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,118,73,910.694674,195.51870644688606,0.27561137080192566
+40,lidocaine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,118,73,2082.29003,195.51870644688606,0.27561137080192566
+41,lidocaine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,118,73,2490.677205,195.51870644688606,0.27561137080192566
+42,lidocaine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,118,73,910.694674,195.51870644688606,0.27561137080192566
+43,lidocaine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,118,73,2082.29003,195.51870644688606,0.27561137080192566
+44,lidocaine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,118,73,2490.677205,195.51870644688606,0.27561137080192566
+45,lidocaine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,118,73,910.694674,195.51870644688606,0.27561137080192566
+46,lidocaine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,118,73,2082.29003,195.51870644688606,0.27561137080192566
+47,lidocaine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,118,73,2490.677205,195.51870644688606,0.27561137080192566
+48,lidocaine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,118,73,910.694674,195.51870644688606,0.27561137080192566
+49,lidocaine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,118,73,2082.29003,195.51870644688606,0.27561137080192566
+50,lidocaine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,118,73,910.694674,195.51870644688606,0.27561137080192566
+51,lidocaine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,118,73,2082.29003,195.51870644688606,0.27561137080192566
+52,lidocaine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,118,73,2862.848942,195.51870644688606,0.27561137080192566
+53,lidocaine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,118,73,3555.688395,195.51870644688606,0.27561137080192566
+54,lidocaine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,118,73,1895.431377,74.48121684551239,0.27561137080192566
+55,lidocaine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,118,73,1554.763163,74.48121684551239,0.27561137080192566
+56,lidocaine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,118,73,2482.766544,74.48121684551239,0.27561137080192566
+57,lidocaine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,118,73,4311.902742,195.51870644688606,0.27561137080192566
+58,lidocaine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,118,73,5205.483748,195.51870644688606,0.27561137080192566
+59,lidocaine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,118,73,5938.678996,195.51870644688606,0.27561137080192566
+60,lidocaine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,118,73,6733.651992,195.51870644688606,0.27561137080192566
+61,lidocaine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,118,73,4001.849144,74.48121684551239,0.27561137080192566
+62,lidocaine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,118,73,3177.324831,74.48121684551239,0.27561137080192566
+63,lidocaine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,118,73,7739.876585,1299.0588639974594,1.8312078714370728
+64,lidocaine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,118,73,8482.669584,1299.0588639974594,1.8312078714370728
+65,lidocaine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,118,73,1238.213787,926.4446863174438,1.8312078714370728
+66,lidocaine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,118,73,1193.647249,926.4446863174438,1.8312078714370728
+67,lidocaine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,118,73,4394.183075,494.86561517715455,1.8312078714370728
+68,lidocaine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,118,73,4385.405754,494.86561517715455,1.8312078714370728
+69,lidocaine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,118,73,4325.511402,494.86561517715455,1.8312078714370728
+70,lidocaine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,118,73,12991.86928,1212.4529664993286,1.7091245651245117
+71,lidocaine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,118,73,14274.00249,1212.4529664993286,1.7091245651245117
+72,lidocaine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,118,73,3771.758529,864.680299987793,1.7091245651245117
+73,lidocaine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,118,73,2418.211041,864.680299987793,1.7091245651245117
+74,lidocaine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,118,73,3482.985285,864.680299987793,1.7091245651245117
+75,lidocaine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,118,73,7033.95717,461.873822479248,1.7091245651245117
+76,lidocaine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,118,73,6277.653062,461.873822479248,1.7091245651245117
+77,lidocaine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,118,73,5923.531283,461.873822479248,1.7091245651245117
+78,lidocaine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,118,73,19622.03687,2434.5898773193358,3.4319000244140625
+79,lidocaine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,118,73,21343.98269,2434.5898773193358,3.4319000244140625
+80,lidocaine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,118,73,9210.233657,927.4366625976562,3.4319000244140625
+81,lidocaine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,118,73,9354.956357,927.4366625976562,3.4319000244140625
+82,lidocaine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,118,73,8482.038772,1736.2668603515624,3.4319000244140625
+83,lidocaine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,118,73,7373.773512,1736.2668603515624,3.4319000244140625
+84,lidocaine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,118,73,8217.700744,1736.2668603515624,3.4319000244140625
+85,lidocaine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,118,73,22412.30259,2708.145405769348,3.8175153732299805
+86,lidocaine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,118,73,24210.37745,2708.145405769348,3.8175153732299805
+87,lidocaine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,118,73,29009.78801,2708.145405769348,3.8175153732299805
+88,lidocaine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,118,73,10460.91572,1931.3573776245116,3.8175153732299805
+89,lidocaine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,118,73,8204.473607,1931.3573776245116,3.8175153732299805
+90,lidocaine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,118,73,9566.054457,1931.3573776245116,3.8175153732299805
+91,lidocaine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,118,73,12962.76232,1031.64535446167,3.8175153732299805
+92,lidocaine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,118,73,10514.86409,1031.64535446167,3.8175153732299805
+93,lidocaine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,118,73,11254.14165,1031.64535446167,3.8175153732299805
+179,lidocaine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,118,73,2.039379206,63.13696503639221,1.2627393007278442
+180,lidocaine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,118,73,33.03484383,135.9031081199646,2.718062162399292
+181,lidocaine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,118,73,144.6327434,146.98448181152344,2.9396896362304688
+182,lidocaine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,118,73,340.7408145,192.81904697418213,3.8563809394836426
+183,lidocaine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,118,73,2.05618266,63.13696503639221,1.2627393007278442
+184,lidocaine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,118,73,32.82946828,135.9031081199646,2.718062162399292
+185,lidocaine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,118,73,136.2011436,146.98448181152344,2.9396896362304688
+186,lidocaine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,118,73,295.8251818,192.81904697418213,3.8563809394836426
+187,lidocaine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,118,73,2.020708701,63.13696503639221,1.2627393007278442
+188,lidocaine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,118,73,33.79660041,135.9031081199646,2.718062162399292
+189,lidocaine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,118,73,147.2503481,146.98448181152344,2.9396896362304688
+190,lidocaine,percentage_first_no_loading_XGBoost,permeation_amount_ug_cm2,118,73,347.4677973,192.81904697418213,3.8563809394836426

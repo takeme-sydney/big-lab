@@ -1,0 +1,554 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#edf2f0">
+  <meta name="description" content="BiG Labの「要件定義 — Transfer
+Learning for Small-Data Microneedle Drug Permeation QSAR: Executing
+RESEARCH_PLAN.md Phases 2–6」に関するMarkdown正本のHTML閲覧版。">
+  <title>要件定義 — Transfer Learning for Small-Data Microneedle Drug
+Permeation QSAR: Executing RESEARCH_PLAN.md Phases 2–6 · BiG Lab</title>
+  <link rel="alternate" type="text/markdown" href="requirements.md" title="Markdown source">
+    <link rel="stylesheet" href="../../shared/website/assets/research-document.css">
+    </head>
+<body class="research-document">
+  <a class="skip-link" href="#document-content">本文へ移動</a>
+
+  <header class="document-topbar">
+    <div class="document-topbar-inner">
+      <a class="document-brand" href="../../shared/website/index.html" aria-label="BiG Lab 資料一覧へ">
+        <span class="document-brand-mark" aria-hidden="true">B</span>
+        <span class="document-brand-copy">
+          <strong>BiG Lab</strong>
+          <small>Research library</small>
+        </span>
+      </a>
+
+      <nav class="document-actions" aria-label="文書ナビゲーション">
+        <a href="../../shared/website/index.html">資料一覧</a>
+        <a class="source-action" href="requirements.md">Markdown正本 <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <header class="document-hero">
+    <div class="document-hero-copy">
+      <p class="document-kicker">
+        <span aria-hidden="true"></span>
+        PROJECT REQUIREMENTS
+      </p>
+      <h1 class="extra-long-title">要件定義 — Transfer Learning for
+Small-Data Microneedle Drug Permeation QSAR: Executing RESEARCH_PLAN.md
+Phases 2–6</h1>
+      <p class="document-description">BiG Labの「要件定義 — Transfer
+Learning for Small-Data Microneedle Drug Permeation QSAR: Executing
+RESEARCH_PLAN.md Phases 2–6」に関するMarkdown正本のHTML閲覧版。</p>
+
+      <dl class="document-meta">
+                        <div>
+          <dt>Format</dt>
+          <dd>HTML reading view</dd>
+        </div>
+      </dl>
+    </div>
+
+    <aside class="format-map" aria-label="MarkdownからHTMLへの文書フロー">
+      <div class="format-map-head">
+        <span>DOCUMENT PIPELINE</span>
+        <small>ONE SOURCE · TWO VIEWS</small>
+      </div>
+      <div class="format-map-flow">
+        <div class="format-node source-node">
+          <span>CANONICAL</span>
+          <strong>Markdown</strong>
+          <small>内容の正本</small>
+        </div>
+        <span class="format-arrow" aria-hidden="true">→</span>
+        <div class="format-node view-node">
+          <span>READING VIEW</span>
+          <strong>HTML</strong>
+          <small>閲覧用レンダリング</small>
+        </div>
+      </div>
+      <p>内容は同一に保ち、画面では読解・移動・参照に適した構造で表示します。</p>
+    </aside>
+  </header>
+
+  <div class="document-rule" aria-hidden="true">
+    <span></span><span></span><span></span>
+  </div>
+
+  <div class="document-shell">
+        <aside class="document-toc" aria-labelledby="document-toc-title">
+      <p id="document-toc-title">On this page</p>
+      <nav aria-label="目次">
+        <ul>
+        <li><a
+        href="#要件定義-transfer-learning-for-small-data-microneedle-drug-permeation-qsar-executing-research_plan.md-phases-26"
+        id="toc-要件定義-transfer-learning-for-small-data-microneedle-drug-permeation-qsar-executing-research_plan.md-phases-26">要件定義
+        — Transfer Learning for Small-Data Microneedle Drug Permeation
+        QSAR: Executing RESEARCH_PLAN.md Phases 2–6</a>
+        <ul>
+        <li><a href="#目的" id="toc-目的">1. 目的</a></li>
+        <li><a href="#想定読者" id="toc-想定読者">2. 想定読者</a></li>
+        <li><a
+        href="#論文の位置づけジャンル最重要制約-他モジュールとは逆方向の規律"
+        id="toc-論文の位置づけジャンル最重要制約-他モジュールとは逆方向の規律">3.
+        論文の位置づけ・ジャンル(最重要制約 —
+        他モジュールとは逆方向の規律)</a></li>
+        <li><a href="#必須コンテンツフェーズ別マイルストーン"
+        id="toc-必須コンテンツフェーズ別マイルストーン">4.
+        必須コンテンツ(フェーズ別マイルストーン)</a>
+        <ul>
+        <li><a href="#phase-2-データキュレーション前提作業"
+        id="toc-phase-2-データキュレーション前提作業">Phase 2 —
+        データキュレーション(前提作業)</a></li>
+        <li><a href="#phase-3-探索的データ分析eda"
+        id="toc-phase-3-探索的データ分析eda">Phase 3 —
+        探索的データ分析(EDA)</a></li>
+        <li><a
+        href="#phase-4a-皮膚透過性qsarモデル化粧品成分向け214化合物データセット"
+        id="toc-phase-4a-皮膚透過性qsarモデル化粧品成分向け214化合物データセット">Phase
+        4A —
+        皮膚透過性QSARモデル(化粧品成分向け、214化合物データセット)</a></li>
+        <li><a
+        href="#phase-4b優先-yuan-2023マイクロニードルモデルの再現改良"
+        id="toc-phase-4b優先-yuan-2023マイクロニードルモデルの再現改良">Phase
+        4B(優先)— Yuan 2023マイクロニードルモデルの再現・改良</a></li>
+        <li><a href="#phase-5-解釈応用" id="toc-phase-5-解釈応用">Phase
+        5 — 解釈・応用</a></li>
+        <li><a href="#phase-6-成果物整理"
+        id="toc-phase-6-成果物整理">Phase 6 — 成果物整理</a></li>
+        </ul></li>
+        <li><a href="#使用可能な情報源" id="toc-使用可能な情報源">5.
+        使用可能な情報源</a></li>
+        <li><a href="#functional-requirements"
+        id="toc-functional-requirements">6. Functional
+        requirements</a></li>
+        <li><a href="#non-functional-requirements"
+        id="toc-non-functional-requirements">7. Non-functional
+        requirements</a></li>
+        <li><a
+        href="#scientific-requirements計算的完全性プロトコル-数値allowlistの代替"
+        id="toc-scientific-requirements計算的完全性プロトコル-数値allowlistの代替">8.
+        Scientific requirements(計算的完全性プロトコル —
+        数値allowlistの代替)</a></li>
+        <li><a href="#out-of-scope" id="toc-out-of-scope">9. Out of
+        scope</a></li>
+        <li><a href="#acceptance-checklist"
+        id="toc-acceptance-checklist">10. Acceptance checklist</a></li>
+        </ul></li>
+        </ul>
+      </nav>
+            <a class="toc-source-link" href="requirements.md">
+        <span>Source</span>
+        <strong>requirements.md</strong>
+      </a>
+          </aside>
+    
+    <main id="document-content" class="document-main">
+      <article class="document-content">
+                <p><a href="requirements.html">HTML版を開く</a></p>
+                <h1
+                id="要件定義-transfer-learning-for-small-data-microneedle-drug-permeation-qsar-executing-research_plan.md-phases-26">要件定義
+                — Transfer Learning for Small-Data Microneedle Drug
+                Permeation QSAR: Executing RESEARCH_PLAN.md Phases
+                2–6</h1>
+                <p>文書版: 1.0 作成日: 2026-07-21 対象:
+                <code>big-lab/microneedle-drug-delivery/transfer-learning-paper/paper.md</code>(新規)
+                根拠資料:
+                <code>big-lab/microneedle-drug-delivery/research/</code>(全データ・コード・計画文書)</p>
+                <h2 id="目的">1. 目的</h2>
+                <p><code>research/RESEARCH_PLAN.md</code>はフェーズ0・1・1.5のみ完了しており、フェーズ2〜6(データキュレーション、EDA、2系統のモデル構築、転移学習、物理モデル併用データ拡張、SHAP解析、美容成分への応用、最終論文)は未着手である。本モジュールは、この未着手フェーズを<strong>実際に計算・実行し</strong>、real,
+                newly-computed
+                resultsを報告する研究論文として完成させる。</p>
+                <p>これは<a
+                href="../small-data-ml-paper/"><code>../small-data-ml-paper/</code></a>(Perspective/proposal論文、新規計算結果を一切含まない)とも<a
+                href="../active-learning-paper/"><code>../active-learning-paper/</code></a>(既に完了済みの計算を書き上げるresearch
+                note)とも性格が異なる:
+                <strong>本モジュールでは実際に新しいコードを書き、実際に実行し、実際の出力から論文を書く。</strong>
+                計算タスクであり執筆タスクではない、という点が他2モジュールと逆である。</p>
+                <h2 id="想定読者">2. 想定読者</h2>
+                <ul>
+                <li>Yunong Yuan(PI)—
+                モデルの実用性・次の実験計画への示唆を評価する読者</li>
+                <li>将来この研究に参加する学生・研究補助者</li>
+                <li>(将来的な拡張として)QSAR/QSPR・small-data
+                ML分野の専門誌の査読者</li>
+                </ul>
+                <h2
+                id="論文の位置づけジャンル最重要制約-他モジュールとは逆方向の規律">3.
+                論文の位置づけ・ジャンル(最重要制約 —
+                他モジュールとは逆方向の規律)</h2>
+                <ul>
+                <li>ジャンル: <strong>実計算に基づく研究論文(Research
+                article)</strong>。新規モデル構築・転移学習・物理モデル併用データ拡張・SHAP解析・応用予測を実際に実行し、その結果を報告する。</li>
+                <li><strong>絶対に行ってはならないこと</strong>:
+                <ul>
+                <li><strong><code>paper.md</code>に書く実質的な数値(R²、RMSE、LODO性能、SHAP値、予測logKp値など)は、すべて本モジュールの中で実際に実行したPythonスクリプトが生成し保存したファイル(CSV/画像)に直接たどれるものに限る。</strong>
+                実行せずに「妥当と思われる数値」を書かない。既存文献(Yuan
+                et al. 2023等)の既報値を引用する場合は”Yuan et
+                al. reported”等の帰属を明示し、本研究の結果と混同しない。</li>
+                <li><strong><a
+                href="../active-learning-paper/"><code>../active-learning-paper/</code></a>の3結果CSV(<code>active_learning_curves_within_distribution.csv</code>等)・<a
+                href="../small-data-ml-paper/"><code>../small-data-ml-paper/</code></a>の記述内容を、本モジュール自身の計算結果として転用・転記しない。</strong>
+                参照する場合は<code>git show &lt;branch&gt;:&lt;path&gt;</code>のみ。</li>
+                <li><strong>214化合物データセット(<code>skin_permeability_training_set.csv</code>)による予測を、実験未実施のマイクロニードル固有パラメータ(薬剤負荷量・MN長・MN表面積・透過時間など)込みの「マイクロニードル送達性能予測」であるかのように書かない。</strong>
+                美容成分48件のデータセット(<code>cosmetic_ingredients_descriptors.csv</code>)にはこれらのマイクロニードル実験パラメータが存在しない(§4
+                Phase
+                5-4で詳述)。これらのパラメータを仮定・捏造して4Bモデルに通すことは禁止。48成分の応用は<strong>皮膚透過性の一般的スクリーニング(4Aモデル)</strong>
+                として扱い、「マイクロニードル送達に適するか」は4Aの一般皮膚透過性予測からの示唆にとどめ、断定しない。</li>
+                <li><strong>物理モデル併用データ拡張(Phase
+                4B-5)で生成する疑似データ点を、実測データと混同・合算しない。</strong>
+                疑似データには明示的なフラグ列(例:
+                <code>is_synthetic</code>)を付与し、本文・図表・件数表記のいずれでも実測214件・191件と混ざらないようにする。</li>
+                <li>Yuan et al. (2023)の既報値(XGBoost
+                R²=0.98等)を本研究が計算したかのように書かない。</li>
+                <li>実在しない引用文献・DOIを作らない。引用は<code>research/CLAUDE.md</code>「中核となる参考文献」節の中核5文献、<code>research/literature_map_report.md</code>の116件の文献リスト(<code>microneedle_ml_literature.csv</code>)、またはこれらに実在が確認できる追加文献に限る。</li>
+                <li>転移学習・物理モデル拡張について、実装不可能な手法(深層学習フレームワーク等、<code>research/requirements.txt</code>に無い依存)を前提とした記述をしない。§4
+                Phase 4B-3,
+                4B-5に指定する具体的手法を用いる(正当な理由があれば代替可、ただし<code>notes/decision-log.md</code>に理由を記録すること)。</li>
+                </ul></li>
+                <li><strong>区別のための明確化</strong>:
+                §4の各Phaseで実際に計算し保存した数値は、“we found”/“we
+                show”等の確定的な語彙で報告してよい。ネガティブな結果(転移学習が改善しない、LODOが依然として悪い等)も、Yuan
+                et
+                al.自身の限界報告やactive-learning-paperの誠実な報告姿勢に倣い、隠さず正直に報告する。</li>
+                </ul>
+                <h2 id="必須コンテンツフェーズ別マイルストーン">4.
+                必須コンテンツ(フェーズ別マイルストーン)</h2>
+                <p><code>research/RESEARCH_PLAN.md</code>の未着手項目を、以下の順序でマイルストーンとして実行する。各マイルストーンは独立してチェックポイント可能とし、時間・実行環境の制約で全てを完了できない場合は、<strong>完了したマイルストーンまでを確定させ、<code>notes/decision-log.md</code>に未完了部分を明記して次段階(Codex-sol)に引き継ぐ</strong>(捏造で埋めるより正直な未完の方が良い)。</p>
+                <p>新規スクリプトは<code>research/</code>直下に置く(既存の<code>descriptors.py</code>,
+                <code>active_learning.py</code>と同じ配置。生成物 —
+                CSV・PNG —
+                も<code>research/</code>直下)。<code>transfer-learning-paper/</code>には論文本文・要件文書のみを置き、コード・データは置かない(既存2モジュールと同じ規約)。全スクリプトで<code>RANDOM_STATE = 42</code>を使用する(<code>CLAUDE.md</code>規約)。</p>
+                <h3 id="phase-2-データキュレーション前提作業">Phase 2 —
+                データキュレーション(前提作業)</h3>
+                <ul>
+                <li><strong>2-1(必須)</strong>:
+                <code>skin_permeability_training_set.csv</code>(214行)の外れ値・整合性チェック。<strong>注意</strong>:
+                <code>RESEARCH_PLAN.md</code>は「SkinPiXのnotes列のsuspicious
+                pointフラグ確認」を挙げているが、実際にこのCSVには<code>notes</code>列や”suspicious”に類するフラグ列は存在しない(§5で確認済み)。生データ(HuskinDB/SkinPiX原本)がこのリポジトリに存在するかも<code>research/</code>配下で確認し、無ければ統計的手法(logKp_cm_hの分布に対するIQR/z-score、または記述子空間でのレバレッジ)による外れ値検出に代替する。この代替の理由を<code>notes/decision-log.md</code>に記録する。</li>
+                <li><strong>2-2(必須)</strong>:
+                <code>canon_smiles</code>列の重複チェック(同一化合物が複数行に存在し、<code>logKp_cm_h</code>が矛盾していないか)。</li>
+                <li><strong>2-3(任意・厳格なゲート付き)</strong>:
+                美容成分特化データの追加収集(目標20〜30件、<code>RESEARCH_PLAN.md</code>フェーズ2)。<strong>実在する文献引用(著者・誌名・年・DOIまたはURL)を提示できるデータ点のみ追加可。1件も確認できない場合は追加せず、その旨を記録する。</strong>
+                これは達成目標であり必須要件ではない。</li>
+                </ul>
+                <h3 id="phase-3-探索的データ分析eda">Phase 3 —
+                探索的データ分析(EDA)</h3>
+                <ul>
+                <li>214化合物データセットの<code>logKp_cm_h</code>分布(ヒストグラム)、記述子間相関行列・VIF、美容成分カテゴリ別(<code>cosmetic_ingredients_descriptors.csv</code>の<code>category</code>列、親水性=LogP低
+                vs 親油性=LogP高)の透過性傾向可視化。</li>
+                </ul>
+                <h3
+                id="phase-4a-皮膚透過性qsarモデル化粧品成分向け214化合物データセット">Phase
+                4A —
+                皮膚透過性QSARモデル(化粧品成分向け、214化合物データセット)</h3>
+                <ul>
+                <li>ベースライン:
+                <code>descriptors.py</code>の<code>potts_guy_baseline</code>関数(既存実装を確認して使用。再実装しない)。</li>
+                <li>MLR, Random Forest, XGBoost, Gaussian Process
+                Regression(<code>sklearn.gaussian_process</code>)の比較。</li>
+                <li><strong>5-fold交差検証</strong>(<code>CLAUDE.md</code>規約通り、単純train/test
+                splitは不可 — 214件のみのため)。</li>
+                <li>Applicability Domain:
+                レバレッジ法(hat行列対角、Williams
+                plot相当)。<strong>既存の<code>descriptors.py::check_applicability_domain</code>関数(MW・LogP範囲の単純な範囲判定)が、<code>cosmetic_ingredients_descriptors.csv</code>の既存<code>in_MW_domain</code>/<code>in_LogP_domain</code>列を生成した実装である可能性が高い(要確認)。</strong>
+                レバレッジ法はこれより厳密な統計的手法であり、単純な範囲判定を置き換えるものではなく補完するものとして実装する。両者の結果に矛盾がある場合(単純範囲内だがレバレッジ法では圏外、等)は<code>notes/decision-log.md</code>に記録し、<code>check_applicability_domain</code>を無断で書き換えない。</li>
+                </ul>
+                <h3
+                id="phase-4b優先-yuan-2023マイクロニードルモデルの再現改良">Phase
+                4B(優先)— Yuan
+                2023マイクロニードルモデルの再現・改良</h3>
+                <ul>
+                <li><strong>4B-1(再現)</strong>:
+                <code>yuan2023_dataset_with_descriptors.csv</code>(191行、6薬剤)の元の7特徴量(薬剤負荷量・薬剤分子量・MN長・皮膚タイプ・MNタイプ・MN表面積・透過時間)を用い、Yuan
+                et
+                al. (2023)の4手法(Fick則・MLR・RF・XGBoost)を再現する。<strong>検証方法はYuan
+                et
+                al. (2023)本文(<code>references/translated  papers/01-yuan-2023-drug-permeation-microneedled-skin-ml-ja.md</code>)が実際に使った分割方法を確認し、可能な限り同じ方法で再現する</strong>(単純に5-fold
+                CVを当てはめて数値が異なる場合、それを「再現の失敗」ではなく「検証方法の違い」として明記する)。報告済みXGBoost
+                R²=0.98との近さ・乖離を正直に報告する。</li>
+                <li><strong>4B-2(LODO、必須)</strong>:
+                Leave-one-drug-out交差検証。<strong><a
+                href="../active-learning-paper/"><code>../active-learning-paper/</code></a>のLODO(能動学習プールを用いた、RF評価器固定の獲得戦略比較)とは目的が異なる</strong>
+                —
+                本タスクのLODOは、各foldで残り5薬剤の全データを学習に使い(能動学習的なプール制限なし)、Yuan
+                2023の主要手法(RF・XGBoostは必須、Fick・MLRは可能なら)で外挿性能(Yuan論文が定性的にしか示していない乖離)を定量評価する。</li>
+                <li><strong>4B-3(転移学習、必須 —
+                具体的手法を指定)</strong>:
+                <strong>推奨手法(特徴量転移)</strong>: (a)
+                214化合物データセットで皮膚透過性の一般モデル(Phase
+                4Aの最良モデル)を学習する。(b) Yuan
+                データセット中、RDKit記述子を持つ4薬剤(lidocaine, GHK
+                peptide, Rhodamine B, caffeine —
+                <code>is_small_molecule=True</code>)についてのみ、この一般モデルによる予測値を新規特徴量(<code>predicted_general_skin_logKp</code>)として追加し、8特徴量モデルを学習・LODO評価する。(c)
+                BSA・copper
+                ions(<code>is_small_molecule=False</code>、RDKit記述子が構造的に適用不可)は、この転移学習強化モデルの対象<strong>外</strong>とし、元の7特徴量モデル(4B-1/4B-2)には引き続き含めて比較する。この除外理由(タンパク質・金属イオンにRDKit記述子は適用できない)を本文で明記し、隠さない。<strong>代替手法を用いる場合</strong>(Xu
+                2023・Dou
+                2023が整理する他の転移学習戦略でも可)、その選択理由を<code>notes/decision-log.md</code>に記録すること。7特徴量モデル(4B-1/2)と8特徴量転移学習モデルのLODO性能を比較し、改善の有無を正直に報告する(改善しなくても良い結果として報告する
+                — active-learning-paperの前例に倣う)。</li>
+                <li><strong>4B-4(特徴量重要度の偏り是正、必須)</strong>:
+                4B-1の再現モデルで特徴量重要度(またはSHAP、Phase
+                5で本格実施)を計算し、Yuan論文が指摘する「薬剤負荷量への過度な依存」を定量的に確認する。是正手法(例:
+                正則化・max_depth制限・薬剤負荷量の重み低減・アンサンブル)を最低1つ試し、LODO性能への影響を報告する(改善してもしなくても正直に報告)。</li>
+                <li><strong>4B-5(物理モデル併用データ拡張、必須 —
+                疑似データの明示フラグ必須)</strong>:
+                <code>descriptors.py::potts_guy_baseline</code>(Potts-Guy式、既存実装)、または<code>drug-release-profile/references/supplementary/07-yuan-2023-code-si2.docx</code>(Yuan
+                2023のFick則実装、SI2)が読み取り可能であればその式、のいずれかを用いて、化学空間(MW・LogP)グリッド上に疑似データ点を生成し、214化合物データセットまたはYuanデータセットを拡張して4A/4Bモデルを再学習し、性能変化を報告する。<strong>疑似データ点には必ず<code>is_synthetic_physics_augmented=True</code>等のフラグを付与し、実測データ件数(214件・191件)との合算表記を一切行わない。</strong>
+                SI2
+                docxが読み取れない場合はPotts-Guy式を使用し、その旨を記録する。</li>
+                </ul>
+                <h3 id="phase-5-解釈応用">Phase 5 — 解釈・応用</h3>
+                <ul>
+                <li>SHAP値による特徴量重要度分析(4A・4Bモデル双方)。</li>
+                <li>LODO性能比較: 改良モデル(4B-3転移学習後)vs Yuan
+                2023オリジナル(4B-1再現)。</li>
+                <li>4Aモデル(医薬品ベース)と4Bモデル(マイクロニードル特化)の予測精度比較。</li>
+                <li><strong>美容成分48件への応用(重要な範囲限定)</strong>:
+                <code>cosmetic_ingredients_descriptors.csv</code>には薬剤負荷量・MN長・MN表面積・透過時間等のマイクロニードル実験パラメータが存在しない(分子記述子のみ)。したがって48成分の予測は<strong>4Aモデル(一般皮膚透過性QSAR)による<code>logKp</code>予測</strong>にとどめ、Applicability
+                Domainフラグ(既存<code>in_MW_domain</code>/<code>in_LogP_domain</code>列、または4A-ADの結果)を付与する。<strong>マイクロニードル実験パラメータを仮定して4Bモデルに通すことは、実施しない実験を実施したかのように書く捏造に相当するため禁止。</strong>
+                マイクロニードル送達への適性は、4Aの一般皮膚透過性予測からの「示唆」としてのみ論じ、断定的なマイクロニードル送達性能予測とは書かない。</li>
+                </ul>
+                <h3 id="phase-6-成果物整理">Phase 6 — 成果物整理</h3>
+                <ul>
+                <li>図表(既存図<code>fig1_landscape.png</code>等と視覚的に一貫したスタイルのmatplotlib図。ワークスペース内に実体を伴う<code>figure-style</code>スキル・設定ファイルは確認できなかった
+                — 既存4図との統一感を優先する)。</li>
+                <li><code>paper.md</code>草稿(英語、Abstract〜Referencesの構成、§4の全マイルストーン結果を統合)。</li>
+                <li><code>research/RESEARCH_PLAN.md</code>のフェーズ2〜6チェックリストのうち、実際に完了した項目のみ<code>- [x]</code>に更新し、本モジュールへのクロスリンクを追記する(未完了の項目は<code>- [ ]</code>のまま残す
+                — 実施していないことを実施したかのように書かない)。</li>
+                </ul>
+                <h2 id="使用可能な情報源">5. 使用可能な情報源</h2>
+                <ul>
+                <li><code>microneedle-drug-delivery/research/CLAUDE.md</code>,
+                <code>RESEARCH_PLAN.md</code></li>
+                <li><code>microneedle-drug-delivery/research/skin_permeability_training_set.csv</code>(214行。列:
+                MW, LogP, TPSA, HBD, HBA, RotB, NumRings,
+                NumAromaticRings, FractionCSP3, MolarRefractivity,
+                NumHeteroatoms, canon_smiles, logKp_cm_h,
+                n_measurements,
+                sources。<code>notes</code>列は存在しない)</li>
+                <li><code>microneedle-drug-delivery/research/yuan2023_dataset_with_descriptors.csv</code>(191行)、<code>yuan2023_training_data.csv</code>(同191行、記述子なし版)</li>
+                <li><code>microneedle-drug-delivery/research/cosmetic_ingredients_descriptors.csv</code>(48行。<code>logKp_PottsGuy_baseline</code>,
+                <code>in_MW_domain</code>, <code>in_LogP_domain</code>,
+                <code>large_molecule_flag</code>,
+                <code>highly_polar_flag</code>列が既に存在)</li>
+                <li><code>microneedle-drug-delivery/research/descriptors.py</code>(RDKit記述子計算、<code>potts_guy_baseline</code>関数を含む
+                — 実装を確認してから使用)</li>
+                <li><code>microneedle-drug-delivery/research/active_learning.py</code>(コーディングスタイル・<code>RANDOM_STATE</code>規約の参照用。本モジュールの計算に流用しない)</li>
+                <li><code>microneedle-drug-delivery/research/literature_map_report.md</code>,
+                <code>microneedle_ml_literature.csv</code>(方法論の先行研究文脈、Xu
+                2023/Dou 2023の転移学習分類など)</li>
+                <li><code>microneedle-drug-delivery/research/requirements.txt</code>(利用可能な依存:
+                rdkit, xgboost, scikit-learn, pandas, numpy, scipy,
+                matplotlib, seaborn, shap, openpyxl —
+                この範囲で実装可能な手法のみ用いる)</li>
+                <li><code>microneedle-drug-delivery/references/translated  papers/01-yuan-2023-drug-permeation-microneedled-skin-ml-ja.md</code>(Yuan
+                2023本文和訳。既報値・検証方法の一次確認先)</li>
+                <li><code>microneedle-drug-delivery/drug-release-profile/references/supplementary/07-yuan-2023-code-si2.docx</code>(Yuan
+                2023 Fick則実装、Phase
+                4B-5用。読み取れない場合はPotts-Guy式で代替)</li>
+                <li><code>git show microneedle-active-learning-paper:microneedle-drug-delivery/active-learning-paper/paper.md</code>,
+                <code>git show microneedle-small-data-ml-paper:microneedle-drug-delivery/small-data-ml-paper/paper.md</code>(前例確認用。チェックアウト・マージ不可、内容を本モジュールの結果として転用しない)</li>
+                <li><code>AGENTS.md</code>(Markdown正本+HTML同期規則)</li>
+                <li><code>shared/scripts/build-website.sh</code>等のビルドスクリプト(<code>transfer-learning-paper/</code>はカスタムレンダリング対象として登録されていないため、<code>build-markdown-html.sh</code>の汎用パスが使われる)</li>
+                </ul>
+                <h2 id="functional-requirements">6. Functional
+                requirements</h2>
+                <table>
+                <colgroup>
+                <col style="width: 33%" />
+                <col style="width: 33%" />
+                <col style="width: 33%" />
+                </colgroup>
+                <thead>
+                <tr>
+                <th>ID</th>
+                <th>要件</th>
+                <th>受入条件</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td>F-01</td>
+                <td>論文本文</td>
+                <td><code>transfer-learning-paper/paper.md</code>に§4の全マイルストーン(完了分)の結果が、Abstract〜Referencesの構成で記述されている</td>
+                </tr>
+                <tr>
+                <td>F-02</td>
+                <td>数値の追跡可能性</td>
+                <td>本文の実質的数値がすべて、本モジュールが実際に生成・保存したCSV/スクリプト出力にたどれる</td>
+                </tr>
+                <tr>
+                <td>F-03</td>
+                <td>データセット境界</td>
+                <td>214化合物・48成分・191点データセットの用途混同がない(§3,
+                §4 Phase5参照)</td>
+                </tr>
+                <tr>
+                <td>F-04</td>
+                <td>疑似データフラグ</td>
+                <td>Phase
+                4B-5の疑似データ点が実測データと明確に区別され、件数が混同されていない</td>
+                </tr>
+                <tr>
+                <td>F-05</td>
+                <td>言語・HTML同期</td>
+                <td><code>paper.md</code>は英語。README/requirements/implementation-prompt/decision-logは日本語。全MarkdownにAGENTS.md規則の<code>[HTML版を開く]</code>リンクがあり<code>build-website.sh</code>後にHTML生成される</td>
+                </tr>
+                <tr>
+                <td>F-06</td>
+                <td>ファイル構成</td>
+                <td><code>README.md</code>,
+                <code>requirements.md</code>,
+                <code>implementation-prompt.md</code>,
+                <code>paper.md</code>,
+                <code>notes/decision-log.md</code>が揃っている</td>
+                </tr>
+                <tr>
+                <td>F-07</td>
+                <td>RESEARCH_PLAN.md更新</td>
+                <td>実際に完了したフェーズ2〜6の項目のみ<code>- [x]</code>化され、本モジュールへのクロスリンクが追加されている</td>
+                </tr>
+                <tr>
+                <td>F-08</td>
+                <td>未完了の扱い</td>
+                <td>時間・環境制約で完了できなかったマイルストーンは、<code>notes/decision-log.md</code>に明記され、<code>paper.md</code>でも「未実施」として正直に記述される(実施したかのように書かない)</td>
+                </tr>
+                </tbody>
+                </table>
+                <h2 id="non-functional-requirements">7. Non-functional
+                requirements</h2>
+                <table>
+                <colgroup>
+                <col style="width: 33%" />
+                <col style="width: 33%" />
+                <col style="width: 33%" />
+                </colgroup>
+                <thead>
+                <tr>
+                <th>ID</th>
+                <th>要件</th>
+                <th>基準</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td>NF-01</td>
+                <td>分量</td>
+                <td>論文本文(参考文献除く)はおおよそ4,000〜7,000語(§4の対象範囲の広さに応じた分量。内容のない水増しはしない)</td>
+                </tr>
+                <tr>
+                <td>NF-02</td>
+                <td>Scientific integrity</td>
+                <td>§3の制約を厳守。実施した計算・実施していない計算・先行研究の既報値を語彙で明確に区別する</td>
+                </tr>
+                <tr>
+                <td>NF-03</td>
+                <td>Reproducibility</td>
+                <td>各スクリプトの入出力ファイルパスをData and Code
+                Availability節に正確に記述する(存在しないdriverや自動化を主張しない)</td>
+                </tr>
+                <tr>
+                <td>NF-04</td>
+                <td>Consistency</td>
+                <td><code>../active-learning-paper/</code>・<code>../small-data-ml-paper/</code>との用語・データセット記述の矛盾がない(参照は<code>git show</code>のみ)</td>
+                </tr>
+                <tr>
+                <td>NF-05</td>
+                <td>Style</td>
+                <td>確定的な語彙(“we found”)と先行研究の帰属(“Yuan et
+                al. reported”)を明確に書き分ける</td>
+                </tr>
+                </tbody>
+                </table>
+                <h2
+                id="scientific-requirements計算的完全性プロトコル-数値allowlistの代替">8.
+                Scientific requirements(計算的完全性プロトコル —
+                数値allowlistの代替)</h2>
+                <p>他モジュール(active-learning-paper等)は「既存CSVの数値を書き写す」ため事前のallowlistが機能したが、本モジュールは<strong>新規計算</strong>が本質のため、代わりに以下のプロトコルを適用する:</p>
+                <ol type="1">
+                <li><strong>すべての新規スクリプトは<code>research/</code>直下に保存し、実行結果(CSV・PNG)も同様に保存する。</strong>
+                paper.mdのどの数値も、対応するCSV/PNGファイル名を<code>notes/decision-log.md</code>または本文中で明示できること。</li>
+                <li><strong>各段階(codex-terra,
+                codex-sol)は、前段階が生成したCSVを実際に読んで数値を突き合わせてから引用する。前段階の「検証済み」という自己申告を鵜呑みにしない。</strong></li>
+                <li><strong>すべてのモデルで<code>RANDOM_STATE=42</code>を使用し、乱数依存の結果には(可能な範囲で)複数シードまたは交差検証のfoldごとの分散も報告する。</strong></li>
+                <li><strong>ネガティブな結果(転移学習が効かない、偏り是正が効かない等)を、有効な結果に見せかけて書き換えない。</strong>
+                Yuan et
+                al.自身の限界報告、<code>../active-learning-paper/</code>の「一貫した改善なし」という誠実な報告に倣う。</li>
+                <li><strong>疑似データ(Phase
+                4B-5)には<code>is_synthetic</code>等のフラグを必ず付与し、実測データと合算した件数を一切書かない。</strong></li>
+                <li><strong>§3で禁止した「マイクロニードル実験パラメータの仮定」を、48美容成分のいかなる予測にも適用しない。</strong></li>
+                </ol>
+                <h2 id="out-of-scope">9. Out of scope</h2>
+                <ul>
+                <li><code>../active-learning-paper/</code>・<code>../small-data-ml-paper/</code>・<code>../competitive-landscape/</code>(いずれも別ブランチ)の直接編集・チェックアウト・マージ。参照は<code>git show</code>のみ。</li>
+                <li><code>research/requirements.txt</code>に無い依存(深層学習フレームワーク等)を要求する手法の実装。</li>
+                <li>美容成分48件へのマイクロニードル実験パラメータの仮定・捏造(§3,
+                §4 Phase5)。</li>
+                <li>新規のwet-lab実験・新規データ収集(Phase
+                2-3の任意項目を除く。§4参照)。</li>
+                <li>PDF生成(このワークスペースの標準パイプラインはMarkdown→HTMLのみ)。</li>
+                <li>投稿ジャーナルの選定・実際の投稿手続き。</li>
+                </ul>
+                <h2 id="acceptance-checklist">10. Acceptance
+                checklist</h2>
+                <ul class="task-list">
+                <li><label><input
+                type="checkbox" /><code>paper.md</code>の全実質的数値が、本モジュールが実際に生成したCSV/スクリプト出力に独立にたどれる</label></li>
+                <li><label><input
+                type="checkbox" />214化合物・191点・48成分データセットの用途混同がない(§3,
+                §4 Phase5)</label></li>
+                <li><label><input type="checkbox" />Phase
+                4B-5の疑似データが実測データと明確に区別され、件数混同がない</label></li>
+                <li><label><input
+                type="checkbox" />48美容成分の予測がマイクロニードル実験パラメータの仮定を伴わない、4Aモデルベースの一般皮膚透過性予測にとどまっている</label></li>
+                <li><label><input type="checkbox" />Phase
+                4B-3の転移学習の対象範囲(4小分子薬剤のみ、BSA/copper
+                ions除外)とその理由が本文に明記されている</label></li>
+                <li><label><input type="checkbox" />Yuan et
+                al.の既報値が先行研究の値として明示的に引用され、本研究の結果と区別されている</label></li>
+                <li><label><input
+                type="checkbox" />完了できなかったマイルストーンが<code>notes/decision-log.md</code>と<code>paper.md</code>の両方で正直に記述されている</label></li>
+                <li><label><input
+                type="checkbox" /><code>research/RESEARCH_PLAN.md</code>フェーズ2〜6が、実際に完了した項目のみ更新され、本モジュールへのクロスリンクが追加されている</label></li>
+                <li><label><input
+                type="checkbox" />引用文献がすべて実在し、DOIが確認可能である</label></li>
+                <li><label><input
+                type="checkbox" /><code>README.md</code>,
+                <code>notes/decision-log.md</code>が完成している</label></li>
+                <li><label><input
+                type="checkbox" />全Markdownファイルの先頭本文行に<code>[HTML版を開く]</code>リンクがあり、<code>shared/scripts/build-website.sh</code>がエラーなく完走する</label></li>
+                <li><label><input
+                type="checkbox" />全スクリプトで<code>RANDOM_STATE=42</code>が使用されている</label></li>
+                </ul>
+              </article>
+    </main>
+
+    <aside class="reading-gauge" aria-hidden="true">
+      <p>READING DEPTH</p>
+      <div class="gauge-scale">
+        <span>00</span>
+        <span>25</span>
+        <span>50</span>
+        <span>75</span>
+        <span>100</span>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="document-footer">
+    <div>
+      <strong>BiG Lab Research Library</strong>
+      <p>Markdown is canonical. HTML is the synchronized reading view.</p>
+    </div>
+    <div class="document-footer-links">
+      <a href="../../shared/website/index.html">資料一覧へ戻る</a>
+      <a href="requirements.md">Markdownを開く</a>
+    </div>
+  </footer>
+</body>
+</html>

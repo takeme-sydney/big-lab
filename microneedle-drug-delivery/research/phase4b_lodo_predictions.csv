@@ -1,0 +1,1529 @@
+row_index,variant,held_out_drug,model,target,n_train_experimental,n_test_experimental,observed,predicted
+0,seven_feature_all_six_drugs,BSA,Fick_diffusion_proxy,permeation_percentage,158,33,17.6958866,11.181940970812505
+1,seven_feature_all_six_drugs,BSA,Fick_diffusion_proxy,permeation_percentage,158,33,19.6069373,11.181940970812505
+2,seven_feature_all_six_drugs,BSA,Fick_diffusion_proxy,permeation_percentage,158,33,21.105305,11.181940970812505
+3,seven_feature_all_six_drugs,BSA,Fick_diffusion_proxy,permeation_percentage,158,33,43.4244588,35.86050640937736
+4,seven_feature_all_six_drugs,BSA,Fick_diffusion_proxy,permeation_percentage,158,33,41.0656409,35.86050640937736
+5,seven_feature_all_six_drugs,BSA,Fick_diffusion_proxy,permeation_percentage,158,33,60.4525744,35.86050640937736
+6,seven_feature_all_six_drugs,BSA,Fick_diffusion_proxy,permeation_percentage,158,33,67.3015549,35.86050640937736
+7,seven_feature_all_six_drugs,BSA,Fick_diffusion_proxy,permeation_percentage,158,33,39.2530672,35.86050640937736
+8,seven_feature_all_six_drugs,BSA,Fick_diffusion_proxy,permeation_percentage,158,33,52.0930871,35.86050640937736
+9,seven_feature_all_six_drugs,BSA,Fick_diffusion_proxy,permeation_percentage,158,33,69.0601156,51.62461658629698
+10,seven_feature_all_six_drugs,BSA,Fick_diffusion_proxy,permeation_percentage,158,33,59.3925167,51.62461658629698
+11,seven_feature_all_six_drugs,BSA,Fick_diffusion_proxy,permeation_percentage,158,33,52.4463134,51.62461658629698
+12,seven_feature_all_six_drugs,BSA,Fick_diffusion_proxy,permeation_percentage,158,33,50.2869057,51.62461658629698
+13,seven_feature_all_six_drugs,BSA,Fick_diffusion_proxy,permeation_percentage,158,33,84.5230355,59.60961451563382
+14,seven_feature_all_six_drugs,BSA,Fick_diffusion_proxy,permeation_percentage,158,33,69.2492967,59.60961451563382
+15,seven_feature_all_six_drugs,BSA,Fick_diffusion_proxy,permeation_percentage,158,33,59.8994766,59.60961451563382
+16,seven_feature_all_six_drugs,BSA,Fick_diffusion_proxy,permeation_percentage,158,33,56.6249605,59.60961451563382
+17,seven_feature_all_six_drugs,BSA,Fick_diffusion_proxy,permeation_percentage,158,33,65.3458244,70.78220864445031
+18,seven_feature_all_six_drugs,BSA,Fick_diffusion_proxy,permeation_percentage,158,33,61.464777,70.78220864445031
+19,seven_feature_all_six_drugs,BSA,Fick_diffusion_proxy,permeation_percentage,158,33,68.5504493,70.78220864445031
+20,seven_feature_all_six_drugs,BSA,Fick_diffusion_proxy,permeation_percentage,158,33,72.4323982,74.5505526247208
+21,seven_feature_all_six_drugs,BSA,Fick_diffusion_proxy,permeation_percentage,158,33,73.4407834,74.5505526247208
+22,seven_feature_all_six_drugs,BSA,Fick_diffusion_proxy,permeation_percentage,158,33,64.2742561,74.5505526247208
+23,seven_feature_all_six_drugs,BSA,Fick_diffusion_proxy,permeation_percentage,158,33,85.5601298,77.15825882242144
+24,seven_feature_all_six_drugs,BSA,Fick_diffusion_proxy,permeation_percentage,158,33,82.0372965,77.15825882242144
+25,seven_feature_all_six_drugs,BSA,Fick_diffusion_proxy,permeation_percentage,158,33,75.2731973,77.15825882242144
+26,seven_feature_all_six_drugs,BSA,Fick_diffusion_proxy,permeation_percentage,158,33,87.2715328,80.61832212955025
+27,seven_feature_all_six_drugs,BSA,Fick_diffusion_proxy,permeation_percentage,158,33,97.4726018,80.61832212955025
+28,seven_feature_all_six_drugs,BSA,Fick_diffusion_proxy,permeation_percentage,158,33,87.5537651,80.61832212955025
+29,seven_feature_all_six_drugs,BSA,Fick_diffusion_proxy,permeation_percentage,158,33,88.4325192,80.61832212955025
+30,seven_feature_all_six_drugs,BSA,Fick_diffusion_proxy,permeation_percentage,158,33,108.3982246,81.84751986498526
+31,seven_feature_all_six_drugs,BSA,Fick_diffusion_proxy,permeation_percentage,158,33,95.1974867,81.84751986498526
+32,seven_feature_all_six_drugs,BSA,Fick_diffusion_proxy,permeation_percentage,158,33,91.6883371,81.84751986498526
+0,seven_feature_all_six_drugs,BSA,MLR,permeation_percentage,158,33,17.6958866,882.0039169367601
+1,seven_feature_all_six_drugs,BSA,MLR,permeation_percentage,158,33,19.6069373,882.0042764225742
+2,seven_feature_all_six_drugs,BSA,MLR,permeation_percentage,158,33,21.105305,881.9243986746833
+3,seven_feature_all_six_drugs,BSA,MLR,permeation_percentage,158,33,43.4244588,883.4679064017794
+4,seven_feature_all_six_drugs,BSA,MLR,permeation_percentage,158,33,41.0656409,883.4682658875934
+5,seven_feature_all_six_drugs,BSA,MLR,permeation_percentage,158,33,60.4525744,883.4279315792525
+6,seven_feature_all_six_drugs,BSA,MLR,permeation_percentage,158,33,67.3015549,883.428866242369
+7,seven_feature_all_six_drugs,BSA,MLR,permeation_percentage,158,33,39.2530672,883.3883881397026
+8,seven_feature_all_six_drugs,BSA,MLR,permeation_percentage,158,33,52.0930871,883.4085193452916
+9,seven_feature_all_six_drugs,BSA,MLR,permeation_percentage,158,33,69.0601156,885.6638905993082
+10,seven_feature_all_six_drugs,BSA,MLR,permeation_percentage,158,33,59.3925167,885.6239157767814
+11,seven_feature_all_six_drugs,BSA,MLR,permeation_percentage,158,33,52.4463134,885.5843723372313
+12,seven_feature_all_six_drugs,BSA,MLR,permeation_percentage,158,33,50.2869057,885.6045035428205
+13,seven_feature_all_six_drugs,BSA,MLR,permeation_percentage,158,33,84.5230355,887.8598747968371
+14,seven_feature_all_six_drugs,BSA,MLR,permeation_percentage,158,33,69.2492967,887.8198999743101
+15,seven_feature_all_six_drugs,BSA,MLR,permeation_percentage,158,33,59.8994766,887.7803565347602
+16,seven_feature_all_six_drugs,BSA,MLR,permeation_percentage,158,33,56.6249605,887.8004877403494
+17,seven_feature_all_six_drugs,BSA,MLR,permeation_percentage,158,33,65.3458244,894.4078525668968
+18,seven_feature_all_six_drugs,BSA,MLR,permeation_percentage,158,33,61.464777,894.3683091273468
+19,seven_feature_all_six_drugs,BSA,MLR,permeation_percentage,158,33,68.5504493,894.3884403329359
+20,seven_feature_all_six_drugs,BSA,MLR,permeation_percentage,158,33,72.4323982,898.7998209619545
+21,seven_feature_all_six_drugs,BSA,MLR,permeation_percentage,158,33,73.4407834,898.7602775224046
+22,seven_feature_all_six_drugs,BSA,MLR,permeation_percentage,158,33,64.2742561,898.7804087279936
+23,seven_feature_all_six_drugs,BSA,MLR,permeation_percentage,158,33,85.5601298,903.1917893570122
+24,seven_feature_all_six_drugs,BSA,MLR,permeation_percentage,158,33,82.0372965,903.1522459174623
+25,seven_feature_all_six_drugs,BSA,MLR,permeation_percentage,158,33,75.2731973,903.1723771230514
+26,seven_feature_all_six_drugs,BSA,MLR,permeation_percentage,158,33,87.2715328,912.0157009696546
+27,seven_feature_all_six_drugs,BSA,MLR,permeation_percentage,158,33,97.4726018,911.9757261471277
+28,seven_feature_all_six_drugs,BSA,MLR,permeation_percentage,158,33,87.5537651,911.9361827075778
+29,seven_feature_all_six_drugs,BSA,MLR,permeation_percentage,158,33,88.4325192,911.9563139131669
+30,seven_feature_all_six_drugs,BSA,MLR,permeation_percentage,158,33,108.3982246,916.3676945421855
+31,seven_feature_all_six_drugs,BSA,MLR,permeation_percentage,158,33,95.1974867,916.3281511026355
+32,seven_feature_all_six_drugs,BSA,MLR,permeation_percentage,158,33,91.6883371,916.3482823082246
+0,seven_feature_all_six_drugs,BSA,RandomForest,permeation_percentage,158,33,17.6958866,3.595740585990243
+1,seven_feature_all_six_drugs,BSA,RandomForest,permeation_percentage,158,33,19.6069373,3.595740585990243
+2,seven_feature_all_six_drugs,BSA,RandomForest,permeation_percentage,158,33,21.105305,3.584486709303575
+3,seven_feature_all_six_drugs,BSA,RandomForest,permeation_percentage,158,33,43.4244588,4.568754161588492
+4,seven_feature_all_six_drugs,BSA,RandomForest,permeation_percentage,158,33,41.0656409,4.568754161588492
+5,seven_feature_all_six_drugs,BSA,RandomForest,permeation_percentage,158,33,60.4525744,4.568754161588492
+6,seven_feature_all_six_drugs,BSA,RandomForest,permeation_percentage,158,33,67.3015549,4.568754161588492
+7,seven_feature_all_six_drugs,BSA,RandomForest,permeation_percentage,158,33,39.2530672,4.568497755628493
+8,seven_feature_all_six_drugs,BSA,RandomForest,permeation_percentage,158,33,52.0930871,4.568754161588492
+9,seven_feature_all_six_drugs,BSA,RandomForest,permeation_percentage,158,33,69.0601156,5.290912408468334
+10,seven_feature_all_six_drugs,BSA,RandomForest,permeation_percentage,158,33,59.3925167,5.290912408468334
+11,seven_feature_all_six_drugs,BSA,RandomForest,permeation_percentage,158,33,52.4463134,5.304256497735001
+12,seven_feature_all_six_drugs,BSA,RandomForest,permeation_percentage,158,33,50.2869057,5.290912408468334
+13,seven_feature_all_six_drugs,BSA,RandomForest,permeation_percentage,158,33,84.5230355,6.8129990984976185
+14,seven_feature_all_six_drugs,BSA,RandomForest,permeation_percentage,158,33,69.2492967,6.8129990984976185
+15,seven_feature_all_six_drugs,BSA,RandomForest,permeation_percentage,158,33,59.8994766,6.816232856630951
+16,seven_feature_all_six_drugs,BSA,RandomForest,permeation_percentage,158,33,56.6249605,6.8129990984976185
+17,seven_feature_all_six_drugs,BSA,RandomForest,permeation_percentage,158,33,65.3458244,15.468088144242856
+18,seven_feature_all_six_drugs,BSA,RandomForest,permeation_percentage,158,33,61.464777,15.056692575756195
+19,seven_feature_all_six_drugs,BSA,RandomForest,permeation_percentage,158,33,68.5504493,15.056692575756195
+20,seven_feature_all_six_drugs,BSA,RandomForest,permeation_percentage,158,33,72.4323982,15.850783199888081
+21,seven_feature_all_six_drugs,BSA,RandomForest,permeation_percentage,158,33,73.4407834,15.384606603268091
+22,seven_feature_all_six_drugs,BSA,RandomForest,permeation_percentage,158,33,64.2742561,15.384606603268091
+23,seven_feature_all_six_drugs,BSA,RandomForest,permeation_percentage,158,33,85.5601298,17.615785158498568
+24,seven_feature_all_six_drugs,BSA,RandomForest,permeation_percentage,158,33,82.0372965,16.991859467048574
+25,seven_feature_all_six_drugs,BSA,RandomForest,permeation_percentage,158,33,75.2731973,16.991859467048574
+26,seven_feature_all_six_drugs,BSA,RandomForest,permeation_percentage,158,33,87.2715328,19.50815195321187
+27,seven_feature_all_six_drugs,BSA,RandomForest,permeation_percentage,158,33,97.4726018,19.50815195321187
+28,seven_feature_all_six_drugs,BSA,RandomForest,permeation_percentage,158,33,87.5537651,18.759258681345223
+29,seven_feature_all_six_drugs,BSA,RandomForest,permeation_percentage,158,33,88.4325192,18.759258681345223
+30,seven_feature_all_six_drugs,BSA,RandomForest,permeation_percentage,158,33,108.3982246,23.184443318678113
+31,seven_feature_all_six_drugs,BSA,RandomForest,permeation_percentage,158,33,95.1974867,22.137994995498126
+32,seven_feature_all_six_drugs,BSA,RandomForest,permeation_percentage,158,33,91.6883371,22.137994995498126
+0,seven_feature_all_six_drugs,BSA,XGBoost,permeation_percentage,158,33,17.6958866,1.7359817028045654
+1,seven_feature_all_six_drugs,BSA,XGBoost,permeation_percentage,158,33,19.6069373,1.7359817028045654
+2,seven_feature_all_six_drugs,BSA,XGBoost,permeation_percentage,158,33,21.105305,1.7359817028045654
+3,seven_feature_all_six_drugs,BSA,XGBoost,permeation_percentage,158,33,43.4244588,3.358490228652954
+4,seven_feature_all_six_drugs,BSA,XGBoost,permeation_percentage,158,33,41.0656409,3.358490228652954
+5,seven_feature_all_six_drugs,BSA,XGBoost,permeation_percentage,158,33,60.4525744,3.358490228652954
+6,seven_feature_all_six_drugs,BSA,XGBoost,permeation_percentage,158,33,67.3015549,3.358490228652954
+7,seven_feature_all_six_drugs,BSA,XGBoost,permeation_percentage,158,33,39.2530672,3.358490228652954
+8,seven_feature_all_six_drugs,BSA,XGBoost,permeation_percentage,158,33,52.0930871,3.358490228652954
+9,seven_feature_all_six_drugs,BSA,XGBoost,permeation_percentage,158,33,69.0601156,5.398569583892822
+10,seven_feature_all_six_drugs,BSA,XGBoost,permeation_percentage,158,33,59.3925167,5.398569583892822
+11,seven_feature_all_six_drugs,BSA,XGBoost,permeation_percentage,158,33,52.4463134,5.398569583892822
+12,seven_feature_all_six_drugs,BSA,XGBoost,permeation_percentage,158,33,50.2869057,5.398569583892822
+13,seven_feature_all_six_drugs,BSA,XGBoost,permeation_percentage,158,33,84.5230355,6.163097381591797
+14,seven_feature_all_six_drugs,BSA,XGBoost,permeation_percentage,158,33,69.2492967,6.163097381591797
+15,seven_feature_all_six_drugs,BSA,XGBoost,permeation_percentage,158,33,59.8994766,6.163097381591797
+16,seven_feature_all_six_drugs,BSA,XGBoost,permeation_percentage,158,33,56.6249605,6.163097381591797
+17,seven_feature_all_six_drugs,BSA,XGBoost,permeation_percentage,158,33,65.3458244,8.002106666564941
+18,seven_feature_all_six_drugs,BSA,XGBoost,permeation_percentage,158,33,61.464777,8.002106666564941
+19,seven_feature_all_six_drugs,BSA,XGBoost,permeation_percentage,158,33,68.5504493,8.002106666564941
+20,seven_feature_all_six_drugs,BSA,XGBoost,permeation_percentage,158,33,72.4323982,7.140582084655762
+21,seven_feature_all_six_drugs,BSA,XGBoost,permeation_percentage,158,33,73.4407834,7.140582084655762
+22,seven_feature_all_six_drugs,BSA,XGBoost,permeation_percentage,158,33,64.2742561,7.140582084655762
+23,seven_feature_all_six_drugs,BSA,XGBoost,permeation_percentage,158,33,85.5601298,10.080633163452148
+24,seven_feature_all_six_drugs,BSA,XGBoost,permeation_percentage,158,33,82.0372965,10.080633163452148
+25,seven_feature_all_six_drugs,BSA,XGBoost,permeation_percentage,158,33,75.2731973,10.080633163452148
+26,seven_feature_all_six_drugs,BSA,XGBoost,permeation_percentage,158,33,87.2715328,17.309659957885742
+27,seven_feature_all_six_drugs,BSA,XGBoost,permeation_percentage,158,33,97.4726018,12.039135932922363
+28,seven_feature_all_six_drugs,BSA,XGBoost,permeation_percentage,158,33,87.5537651,12.039135932922363
+29,seven_feature_all_six_drugs,BSA,XGBoost,permeation_percentage,158,33,88.4325192,12.039135932922363
+30,seven_feature_all_six_drugs,BSA,XGBoost,permeation_percentage,158,33,108.3982246,18.868558883666992
+31,seven_feature_all_six_drugs,BSA,XGBoost,permeation_percentage,158,33,95.1974867,18.868558883666992
+32,seven_feature_all_six_drugs,BSA,XGBoost,permeation_percentage,158,33,91.6883371,18.868558883666992
+0,seven_feature_all_six_drugs,BSA,Fick_diffusion_proxy,permeation_amount_ug_cm2,158,33,93.96515777,59.3761065550144
+1,seven_feature_all_six_drugs,BSA,Fick_diffusion_proxy,permeation_amount_ug_cm2,158,33,103.1324902,58.81700950647378
+2,seven_feature_all_six_drugs,BSA,Fick_diffusion_proxy,permeation_amount_ug_cm2,158,33,345.4938423,183.0483736922007
+3,seven_feature_all_six_drugs,BSA,Fick_diffusion_proxy,permeation_amount_ug_cm2,158,33,230.5838763,190.41928903379377
+4,seven_feature_all_six_drugs,BSA,Fick_diffusion_proxy,permeation_amount_ug_cm2,158,33,216.0052712,188.6262637133249
+5,seven_feature_all_six_drugs,BSA,Fick_diffusion_proxy,permeation_amount_ug_cm2,158,33,657.1194841,389.80370466993185
+6,seven_feature_all_six_drugs,BSA,Fick_diffusion_proxy,permeation_amount_ug_cm2,158,33,722.8187001,385.1418388367128
+7,seven_feature_all_six_drugs,BSA,Fick_diffusion_proxy,permeation_amount_ug_cm2,158,33,642.57271,587.0364899215074
+8,seven_feature_all_six_drugs,BSA,Fick_diffusion_proxy,permeation_amount_ug_cm2,158,33,706.9031923,486.6270719752507
+9,seven_feature_all_six_drugs,BSA,Fick_diffusion_proxy,permeation_amount_ug_cm2,158,33,366.7092141,274.12671407323694
+10,seven_feature_all_six_drugs,BSA,Fick_diffusion_proxy,permeation_amount_ug_cm2,158,33,645.5966565,561.1595822930482
+11,seven_feature_all_six_drugs,BSA,Fick_diffusion_proxy,permeation_amount_ug_cm2,158,33,858.5461502,845.0949735176815
+12,seven_feature_all_six_drugs,BSA,Fick_diffusion_proxy,permeation_amount_ug_cm2,158,33,682.3933104,700.54604707605
+13,seven_feature_all_six_drugs,BSA,Fick_diffusion_proxy,permeation_amount_ug_cm2,158,33,448.8173186,316.5270530780156
+14,seven_feature_all_six_drugs,BSA,Fick_diffusion_proxy,permeation_amount_ug_cm2,158,33,752.7398547,647.9565097849396
+15,seven_feature_all_six_drugs,BSA,Fick_diffusion_proxy,permeation_amount_ug_cm2,158,33,980.5544326,975.8093896209257
+16,seven_feature_all_six_drugs,BSA,Fick_diffusion_proxy,permeation_amount_ug_cm2,158,33,768.4007143,808.902468977151
+17,seven_feature_all_six_drugs,BSA,Fick_diffusion_proxy,permeation_amount_ug_cm2,158,33,710.309111,769.4026079651749
+18,seven_feature_all_six_drugs,BSA,Fick_diffusion_proxy,permeation_amount_ug_cm2,158,33,1006.1784,1158.7047555096515
+19,seven_feature_all_six_drugs,BSA,Fick_diffusion_proxy,permeation_amount_ug_cm2,158,33,930.2295971,960.5145713051907
+20,seven_feature_all_six_drugs,BSA,Fick_diffusion_proxy,permeation_amount_ug_cm2,158,33,787.3401685,810.364507030715
+21,seven_feature_all_six_drugs,BSA,Fick_diffusion_proxy,permeation_amount_ug_cm2,158,33,1202.225625,1220.3925464666793
+22,seven_feature_all_six_drugs,BSA,Fick_diffusion_proxy,permeation_amount_ug_cm2,158,33,872.2016558,1011.6509991174611
+23,seven_feature_all_six_drugs,BSA,Fick_diffusion_proxy,permeation_amount_ug_cm2,158,33,930.038611,838.7102733997211
+24,seven_feature_all_six_drugs,BSA,Fick_diffusion_proxy,permeation_amount_ug_cm2,158,33,1342.950544,1263.080696923039
+25,seven_feature_all_six_drugs,BSA,Fick_diffusion_proxy,permeation_amount_ug_cm2,158,33,1021.457288,1047.0375722202589
+26,seven_feature_all_six_drugs,BSA,Fick_diffusion_proxy,permeation_amount_ug_cm2,158,33,463.4118392,428.08329050791184
+27,seven_feature_all_six_drugs,BSA,Fick_diffusion_proxy,permeation_amount_ug_cm2,158,33,1059.527182,876.3211615482113
+28,seven_feature_all_six_drugs,BSA,Fick_diffusion_proxy,permeation_amount_ug_cm2,158,33,1433.255135,1319.7219332607376
+29,seven_feature_all_six_drugs,BSA,Fick_diffusion_proxy,permeation_amount_ug_cm2,158,33,1200.029285,1093.990631297997
+30,seven_feature_all_six_drugs,BSA,Fick_diffusion_proxy,permeation_amount_ug_cm2,158,33,1178.288701,889.6825409323898
+31,seven_feature_all_six_drugs,BSA,Fick_diffusion_proxy,permeation_amount_ug_cm2,158,33,1558.382857,1339.8439001898087
+32,seven_feature_all_six_drugs,BSA,Fick_diffusion_proxy,permeation_amount_ug_cm2,158,33,1244.210734,1110.67084456785
+0,seven_feature_all_six_drugs,BSA,MLR,permeation_amount_ug_cm2,158,33,93.96515777,11115.800520446297
+1,seven_feature_all_six_drugs,BSA,MLR,permeation_amount_ug_cm2,158,33,103.1324902,11115.492862189487
+2,seven_feature_all_six_drugs,BSA,MLR,permeation_amount_ug_cm2,158,33,345.4938423,11183.854526853203
+3,seven_feature_all_six_drugs,BSA,MLR,permeation_amount_ug_cm2,158,33,230.5838763,11675.587501777263
+4,seven_feature_all_six_drugs,BSA,MLR,permeation_amount_ug_cm2,158,33,216.0052712,11675.279843520453
+5,seven_feature_all_six_drugs,BSA,MLR,permeation_amount_ug_cm2,158,33,657.1194841,11709.799099934804
+6,seven_feature_all_six_drugs,BSA,MLR,permeation_amount_ug_cm2,158,33,722.8187001,11708.999188467096
+7,seven_feature_all_six_drugs,BSA,MLR,permeation_amount_ug_cm2,158,33,642.57271,11743.64150818417
+8,seven_feature_all_six_drugs,BSA,MLR,permeation_amount_ug_cm2,158,33,706.9031923,11726.412645802677
+9,seven_feature_all_six_drugs,BSA,MLR,permeation_amount_ug_cm2,158,33,366.7092141,12515.267973773713
+10,seven_feature_all_six_drugs,BSA,MLR,permeation_amount_ug_cm2,158,33,645.5966565,12549.479571931253
+11,seven_feature_all_six_drugs,BSA,MLR,permeation_amount_ug_cm2,158,33,858.5461502,12583.321980180619
+12,seven_feature_all_six_drugs,BSA,MLR,permeation_amount_ug_cm2,158,33,682.3933104,12566.093117799126
+13,seven_feature_all_six_drugs,BSA,MLR,permeation_amount_ug_cm2,158,33,448.8173186,13354.948445770162
+14,seven_feature_all_six_drugs,BSA,MLR,permeation_amount_ug_cm2,158,33,752.7398547,13389.160043927703
+15,seven_feature_all_six_drugs,BSA,MLR,permeation_amount_ug_cm2,158,33,980.5544326,13423.002452177068
+16,seven_feature_all_six_drugs,BSA,MLR,permeation_amount_ug_cm2,158,33,768.4007143,13405.773589795575
+17,seven_feature_all_six_drugs,BSA,MLR,permeation_amount_ug_cm2,158,33,710.309111,15908.201459917054
+18,seven_feature_all_six_drugs,BSA,MLR,permeation_amount_ug_cm2,158,33,1006.1784,15942.04386816642
+19,seven_feature_all_six_drugs,BSA,MLR,permeation_amount_ug_cm2,158,33,930.2295971,15924.815005784927
+20,seven_feature_all_six_drugs,BSA,MLR,permeation_amount_ug_cm2,158,33,787.3401685,17587.562403909953
+21,seven_feature_all_six_drugs,BSA,MLR,permeation_amount_ug_cm2,158,33,1202.225625,17621.40481215932
+22,seven_feature_all_six_drugs,BSA,MLR,permeation_amount_ug_cm2,158,33,872.2016558,17604.175949777826
+23,seven_feature_all_six_drugs,BSA,MLR,permeation_amount_ug_cm2,158,33,930.038611,19266.92334790285
+24,seven_feature_all_six_drugs,BSA,MLR,permeation_amount_ug_cm2,158,33,1342.950544,19300.765756152217
+25,seven_feature_all_six_drugs,BSA,MLR,permeation_amount_ug_cm2,158,33,1021.457288,19283.536893770724
+26,seven_feature_all_six_drugs,BSA,MLR,permeation_amount_ug_cm2,158,33,463.4118392,22591.433637731112
+27,seven_feature_all_six_drugs,BSA,MLR,permeation_amount_ug_cm2,158,33,1059.527182,22625.645235888653
+28,seven_feature_all_six_drugs,BSA,MLR,permeation_amount_ug_cm2,158,33,1433.255135,22659.48764413802
+29,seven_feature_all_six_drugs,BSA,MLR,permeation_amount_ug_cm2,158,33,1200.029285,22642.258781756525
+30,seven_feature_all_six_drugs,BSA,MLR,permeation_amount_ug_cm2,158,33,1178.288701,24305.00617988155
+31,seven_feature_all_six_drugs,BSA,MLR,permeation_amount_ug_cm2,158,33,1558.382857,24338.848588130917
+32,seven_feature_all_six_drugs,BSA,MLR,permeation_amount_ug_cm2,158,33,1244.210734,24321.619725749424
+0,seven_feature_all_six_drugs,BSA,RandomForest,permeation_amount_ug_cm2,158,33,93.96515777,14.984361624691452
+1,seven_feature_all_six_drugs,BSA,RandomForest,permeation_amount_ug_cm2,158,33,103.1324902,14.984361624691452
+2,seven_feature_all_six_drugs,BSA,RandomForest,permeation_amount_ug_cm2,158,33,345.4938423,15.133975083162733
+3,seven_feature_all_six_drugs,BSA,RandomForest,permeation_amount_ug_cm2,158,33,230.5838763,17.864721372491466
+4,seven_feature_all_six_drugs,BSA,RandomForest,permeation_amount_ug_cm2,158,33,216.0052712,17.864721372491466
+5,seven_feature_all_six_drugs,BSA,RandomForest,permeation_amount_ug_cm2,158,33,657.1194841,17.864721372491466
+6,seven_feature_all_six_drugs,BSA,RandomForest,permeation_amount_ug_cm2,158,33,722.8187001,17.864721372491466
+7,seven_feature_all_six_drugs,BSA,RandomForest,permeation_amount_ug_cm2,158,33,642.57271,19.646657399133897
+8,seven_feature_all_six_drugs,BSA,RandomForest,permeation_amount_ug_cm2,158,33,706.9031923,18.09404320379535
+9,seven_feature_all_six_drugs,BSA,RandomForest,permeation_amount_ug_cm2,158,33,366.7092141,35.02649418959503
+10,seven_feature_all_six_drugs,BSA,RandomForest,permeation_amount_ug_cm2,158,33,645.5966565,35.02649418959503
+11,seven_feature_all_six_drugs,BSA,RandomForest,permeation_amount_ug_cm2,158,33,858.5461502,39.314958751026175
+12,seven_feature_all_six_drugs,BSA,RandomForest,permeation_amount_ug_cm2,158,33,682.3933104,35.44926942089891
+13,seven_feature_all_six_drugs,BSA,RandomForest,permeation_amount_ug_cm2,158,33,448.8173186,42.33589054317324
+14,seven_feature_all_six_drugs,BSA,RandomForest,permeation_amount_ug_cm2,158,33,752.7398547,42.33589054317324
+15,seven_feature_all_six_drugs,BSA,RandomForest,permeation_amount_ug_cm2,158,33,980.5544326,49.759641099861796
+16,seven_feature_all_six_drugs,BSA,RandomForest,permeation_amount_ug_cm2,158,33,768.4007143,42.98926337447713
+17,seven_feature_all_six_drugs,BSA,RandomForest,permeation_amount_ug_cm2,158,33,710.309111,294.71954060219093
+18,seven_feature_all_six_drugs,BSA,RandomForest,permeation_amount_ug_cm2,158,33,1006.1784,308.7360518040121
+19,seven_feature_all_six_drugs,BSA,RandomForest,permeation_amount_ug_cm2,158,33,930.2295971,297.04549022381826
+20,seven_feature_all_six_drugs,BSA,RandomForest,permeation_amount_ug_cm2,158,33,787.3401685,381.89741960109563
+21,seven_feature_all_six_drugs,BSA,RandomForest,permeation_amount_ug_cm2,158,33,1202.225625,396.305418749862
+22,seven_feature_all_six_drugs,BSA,RandomForest,permeation_amount_ug_cm2,158,33,872.2016558,384.6957315501966
+23,seven_feature_all_six_drugs,BSA,RandomForest,permeation_amount_ug_cm2,158,33,930.038611,358.98954051494803
+24,seven_feature_all_six_drugs,BSA,RandomForest,permeation_amount_ug_cm2,158,33,1342.950544,373.3147328900635
+25,seven_feature_all_six_drugs,BSA,RandomForest,permeation_amount_ug_cm2,158,33,1021.457288,361.75171123932734
+26,seven_feature_all_six_drugs,BSA,RandomForest,permeation_amount_ug_cm2,158,33,463.4118392,359.7843124813478
+27,seven_feature_all_six_drugs,BSA,RandomForest,permeation_amount_ug_cm2,158,33,1059.527182,359.7843124813478
+28,seven_feature_all_six_drugs,BSA,RandomForest,permeation_amount_ug_cm2,158,33,1433.255135,373.99036007277994
+29,seven_feature_all_six_drugs,BSA,RandomForest,permeation_amount_ug_cm2,158,33,1200.029285,362.5182703730933
+30,seven_feature_all_six_drugs,BSA,RandomForest,permeation_amount_ug_cm2,158,33,1178.288701,361.8184818223617
+31,seven_feature_all_six_drugs,BSA,RandomForest,permeation_amount_ug_cm2,158,33,1558.382857,375.7355954579184
+32,seven_feature_all_six_drugs,BSA,RandomForest,permeation_amount_ug_cm2,158,33,1244.210734,364.4739992502932
+0,seven_feature_all_six_drugs,BSA,XGBoost,permeation_amount_ug_cm2,158,33,93.96515777,-12.269957542419434
+1,seven_feature_all_six_drugs,BSA,XGBoost,permeation_amount_ug_cm2,158,33,103.1324902,-12.269957542419434
+2,seven_feature_all_six_drugs,BSA,XGBoost,permeation_amount_ug_cm2,158,33,345.4938423,-12.885334968566895
+3,seven_feature_all_six_drugs,BSA,XGBoost,permeation_amount_ug_cm2,158,33,230.5838763,-7.529031276702881
+4,seven_feature_all_six_drugs,BSA,XGBoost,permeation_amount_ug_cm2,158,33,216.0052712,-7.529031276702881
+5,seven_feature_all_six_drugs,BSA,XGBoost,permeation_amount_ug_cm2,158,33,657.1194841,-8.144408226013184
+6,seven_feature_all_six_drugs,BSA,XGBoost,permeation_amount_ug_cm2,158,33,722.8187001,-8.144408226013184
+7,seven_feature_all_six_drugs,BSA,XGBoost,permeation_amount_ug_cm2,158,33,642.57271,-8.144408226013184
+8,seven_feature_all_six_drugs,BSA,XGBoost,permeation_amount_ug_cm2,158,33,706.9031923,-8.144408226013184
+9,seven_feature_all_six_drugs,BSA,XGBoost,permeation_amount_ug_cm2,158,33,366.7092141,-0.704238772392273
+10,seven_feature_all_six_drugs,BSA,XGBoost,permeation_amount_ug_cm2,158,33,645.5966565,0.8302624821662903
+11,seven_feature_all_six_drugs,BSA,XGBoost,permeation_amount_ug_cm2,158,33,858.5461502,0.8302624821662903
+12,seven_feature_all_six_drugs,BSA,XGBoost,permeation_amount_ug_cm2,158,33,682.3933104,0.8302624821662903
+13,seven_feature_all_six_drugs,BSA,XGBoost,permeation_amount_ug_cm2,158,33,448.8173186,13.048666954040527
+14,seven_feature_all_six_drugs,BSA,XGBoost,permeation_amount_ug_cm2,158,33,752.7398547,15.182024002075195
+15,seven_feature_all_six_drugs,BSA,XGBoost,permeation_amount_ug_cm2,158,33,980.5544326,15.182024002075195
+16,seven_feature_all_six_drugs,BSA,XGBoost,permeation_amount_ug_cm2,158,33,768.4007143,15.182024002075195
+17,seven_feature_all_six_drugs,BSA,XGBoost,permeation_amount_ug_cm2,158,33,710.309111,-36.39160919189453
+18,seven_feature_all_six_drugs,BSA,XGBoost,permeation_amount_ug_cm2,158,33,1006.1784,-36.39160919189453
+19,seven_feature_all_six_drugs,BSA,XGBoost,permeation_amount_ug_cm2,158,33,930.2295971,-36.39160919189453
+20,seven_feature_all_six_drugs,BSA,XGBoost,permeation_amount_ug_cm2,158,33,787.3401685,23.82833480834961
+21,seven_feature_all_six_drugs,BSA,XGBoost,permeation_amount_ug_cm2,158,33,1202.225625,23.82833480834961
+22,seven_feature_all_six_drugs,BSA,XGBoost,permeation_amount_ug_cm2,158,33,872.2016558,23.82833480834961
+23,seven_feature_all_six_drugs,BSA,XGBoost,permeation_amount_ug_cm2,158,33,930.038611,23.407026290893555
+24,seven_feature_all_six_drugs,BSA,XGBoost,permeation_amount_ug_cm2,158,33,1342.950544,23.407026290893555
+25,seven_feature_all_six_drugs,BSA,XGBoost,permeation_amount_ug_cm2,158,33,1021.457288,23.407026290893555
+26,seven_feature_all_six_drugs,BSA,XGBoost,permeation_amount_ug_cm2,158,33,463.4118392,20.783000946044922
+27,seven_feature_all_six_drugs,BSA,XGBoost,permeation_amount_ug_cm2,158,33,1059.527182,23.871227264404297
+28,seven_feature_all_six_drugs,BSA,XGBoost,permeation_amount_ug_cm2,158,33,1433.255135,23.871227264404297
+29,seven_feature_all_six_drugs,BSA,XGBoost,permeation_amount_ug_cm2,158,33,1200.029285,23.871227264404297
+30,seven_feature_all_six_drugs,BSA,XGBoost,permeation_amount_ug_cm2,158,33,1178.288701,25.991348266601562
+31,seven_feature_all_six_drugs,BSA,XGBoost,permeation_amount_ug_cm2,158,33,1558.382857,25.991348266601562
+32,seven_feature_all_six_drugs,BSA,XGBoost,permeation_amount_ug_cm2,158,33,1244.210734,25.991348266601562
+155,seven_feature_all_six_drugs,GHK peptide,Fick_diffusion_proxy,permeation_percentage,167,24,5.7460151,27.066066745612936
+156,seven_feature_all_six_drugs,GHK peptide,Fick_diffusion_proxy,permeation_percentage,167,24,7.7147601,52.47921997289725
+157,seven_feature_all_six_drugs,GHK peptide,Fick_diffusion_proxy,permeation_percentage,167,24,8.8721541,65.29247549289533
+158,seven_feature_all_six_drugs,GHK peptide,Fick_diffusion_proxy,permeation_percentage,167,24,9.7465097,71.34841633818208
+159,seven_feature_all_six_drugs,GHK peptide,Fick_diffusion_proxy,permeation_percentage,167,24,3.4974256,27.066066745612936
+160,seven_feature_all_six_drugs,GHK peptide,Fick_diffusion_proxy,permeation_percentage,167,24,5.1038324,52.47921997289725
+161,seven_feature_all_six_drugs,GHK peptide,Fick_diffusion_proxy,permeation_percentage,167,24,6.2920355,65.29247549289533
+162,seven_feature_all_six_drugs,GHK peptide,Fick_diffusion_proxy,permeation_percentage,167,24,7.2219962,71.34841633818208
+163,seven_feature_all_six_drugs,GHK peptide,Fick_diffusion_proxy,permeation_percentage,167,24,2.4619652,27.066066745612936
+164,seven_feature_all_six_drugs,GHK peptide,Fick_diffusion_proxy,permeation_percentage,167,24,5.6861063,52.47921997289725
+165,seven_feature_all_six_drugs,GHK peptide,Fick_diffusion_proxy,permeation_percentage,167,24,9.0041458,65.29247549289533
+166,seven_feature_all_six_drugs,GHK peptide,Fick_diffusion_proxy,permeation_percentage,167,24,11.6244901,71.34841633818208
+167,seven_feature_all_six_drugs,GHK peptide,Fick_diffusion_proxy,permeation_percentage,167,24,0.2891969,27.066066745612936
+168,seven_feature_all_six_drugs,GHK peptide,Fick_diffusion_proxy,permeation_percentage,167,24,0.2736605,27.066066745612936
+169,seven_feature_all_six_drugs,GHK peptide,Fick_diffusion_proxy,permeation_percentage,167,24,0.1807479,27.066066745612936
+170,seven_feature_all_six_drugs,GHK peptide,Fick_diffusion_proxy,permeation_percentage,167,24,0.424926,52.47921997289725
+171,seven_feature_all_six_drugs,GHK peptide,Fick_diffusion_proxy,permeation_percentage,167,24,0.3637388,52.47921997289725
+172,seven_feature_all_six_drugs,GHK peptide,Fick_diffusion_proxy,permeation_percentage,167,24,0.3524695,52.47921997289725
+173,seven_feature_all_six_drugs,GHK peptide,Fick_diffusion_proxy,permeation_percentage,167,24,0.5439803,65.29247549289533
+174,seven_feature_all_six_drugs,GHK peptide,Fick_diffusion_proxy,permeation_percentage,167,24,0.4577203,65.29247549289533
+175,seven_feature_all_six_drugs,GHK peptide,Fick_diffusion_proxy,permeation_percentage,167,24,0.4853251,65.29247549289533
+176,seven_feature_all_six_drugs,GHK peptide,Fick_diffusion_proxy,permeation_percentage,167,24,0.620593,71.34841633818208
+177,seven_feature_all_six_drugs,GHK peptide,Fick_diffusion_proxy,permeation_percentage,167,24,0.5221895,71.34841633818208
+178,seven_feature_all_six_drugs,GHK peptide,Fick_diffusion_proxy,permeation_percentage,167,24,0.5927416,71.34841633818208
+155,seven_feature_all_six_drugs,GHK peptide,MLR,permeation_percentage,167,24,5.7460151,2.5348744377673285
+156,seven_feature_all_six_drugs,GHK peptide,MLR,permeation_percentage,167,24,7.7147601,4.4007359133690045
+157,seven_feature_all_six_drugs,GHK peptide,MLR,permeation_percentage,167,24,8.8721541,7.199528126771511
+158,seven_feature_all_six_drugs,GHK peptide,MLR,permeation_percentage,167,24,9.7465097,9.998320340174004
+159,seven_feature_all_six_drugs,GHK peptide,MLR,permeation_percentage,167,24,3.4974256,2.5348744377673285
+160,seven_feature_all_six_drugs,GHK peptide,MLR,permeation_percentage,167,24,5.1038324,4.4007359133690045
+161,seven_feature_all_six_drugs,GHK peptide,MLR,permeation_percentage,167,24,6.2920355,7.199528126771511
+162,seven_feature_all_six_drugs,GHK peptide,MLR,permeation_percentage,167,24,7.2219962,9.998320340174004
+163,seven_feature_all_six_drugs,GHK peptide,MLR,permeation_percentage,167,24,2.4619652,2.5348744377673285
+164,seven_feature_all_six_drugs,GHK peptide,MLR,permeation_percentage,167,24,5.6861063,4.4007359133690045
+165,seven_feature_all_six_drugs,GHK peptide,MLR,permeation_percentage,167,24,9.0041458,7.199528126771511
+166,seven_feature_all_six_drugs,GHK peptide,MLR,permeation_percentage,167,24,11.6244901,9.998320340174004
+167,seven_feature_all_six_drugs,GHK peptide,MLR,permeation_percentage,167,24,0.2891969,-2.554784605135737
+168,seven_feature_all_six_drugs,GHK peptide,MLR,permeation_percentage,167,24,0.2736605,-2.554784605135737
+169,seven_feature_all_six_drugs,GHK peptide,MLR,permeation_percentage,167,24,0.1807479,-2.554784605135737
+170,seven_feature_all_six_drugs,GHK peptide,MLR,permeation_percentage,167,24,0.424926,-0.6889231295340608
+171,seven_feature_all_six_drugs,GHK peptide,MLR,permeation_percentage,167,24,0.3637388,-0.6889231295340608
+172,seven_feature_all_six_drugs,GHK peptide,MLR,permeation_percentage,167,24,0.3524695,-0.6889231295340608
+173,seven_feature_all_six_drugs,GHK peptide,MLR,permeation_percentage,167,24,0.5439803,2.109869083868446
+174,seven_feature_all_six_drugs,GHK peptide,MLR,permeation_percentage,167,24,0.4577203,2.109869083868446
+175,seven_feature_all_six_drugs,GHK peptide,MLR,permeation_percentage,167,24,0.4853251,2.109869083868446
+176,seven_feature_all_six_drugs,GHK peptide,MLR,permeation_percentage,167,24,0.620593,4.908661297270939
+177,seven_feature_all_six_drugs,GHK peptide,MLR,permeation_percentage,167,24,0.5221895,4.908661297270939
+178,seven_feature_all_six_drugs,GHK peptide,MLR,permeation_percentage,167,24,0.5927416,4.908661297270939
+155,seven_feature_all_six_drugs,GHK peptide,RandomForest,permeation_percentage,167,24,5.7460151,0.374165056814999
+156,seven_feature_all_six_drugs,GHK peptide,RandomForest,permeation_percentage,167,24,7.7147601,1.003425521258919
+157,seven_feature_all_six_drugs,GHK peptide,RandomForest,permeation_percentage,167,24,8.8721541,2.33502284547048
+158,seven_feature_all_six_drugs,GHK peptide,RandomForest,permeation_percentage,167,24,9.7465097,3.886977856666673
+159,seven_feature_all_six_drugs,GHK peptide,RandomForest,permeation_percentage,167,24,3.4974256,0.374165056814999
+160,seven_feature_all_six_drugs,GHK peptide,RandomForest,permeation_percentage,167,24,5.1038324,1.003425521258919
+161,seven_feature_all_six_drugs,GHK peptide,RandomForest,permeation_percentage,167,24,6.2920355,2.33502284547048
+162,seven_feature_all_six_drugs,GHK peptide,RandomForest,permeation_percentage,167,24,7.2219962,3.886977856666673
+163,seven_feature_all_six_drugs,GHK peptide,RandomForest,permeation_percentage,167,24,2.4619652,0.374165056814999
+164,seven_feature_all_six_drugs,GHK peptide,RandomForest,permeation_percentage,167,24,5.6861063,1.003425521258919
+165,seven_feature_all_six_drugs,GHK peptide,RandomForest,permeation_percentage,167,24,9.0041458,2.33502284547048
+166,seven_feature_all_six_drugs,GHK peptide,RandomForest,permeation_percentage,167,24,11.6244901,3.886977856666673
+167,seven_feature_all_six_drugs,GHK peptide,RandomForest,permeation_percentage,167,24,0.2891969,0.09355192451642874
+168,seven_feature_all_six_drugs,GHK peptide,RandomForest,permeation_percentage,167,24,0.2736605,0.09355192451642874
+169,seven_feature_all_six_drugs,GHK peptide,RandomForest,permeation_percentage,167,24,0.1807479,0.09355192451642874
+170,seven_feature_all_six_drugs,GHK peptide,RandomForest,permeation_percentage,167,24,0.424926,0.715499114018442
+171,seven_feature_all_six_drugs,GHK peptide,RandomForest,permeation_percentage,167,24,0.3637388,0.715499114018442
+172,seven_feature_all_six_drugs,GHK peptide,RandomForest,permeation_percentage,167,24,0.3524695,0.715499114018442
+173,seven_feature_all_six_drugs,GHK peptide,RandomForest,permeation_percentage,167,24,0.5439803,2.762342841308817
+174,seven_feature_all_six_drugs,GHK peptide,RandomForest,permeation_percentage,167,24,0.4577203,2.762342841308817
+175,seven_feature_all_six_drugs,GHK peptide,RandomForest,permeation_percentage,167,24,0.4853251,2.762342841308817
+176,seven_feature_all_six_drugs,GHK peptide,RandomForest,permeation_percentage,167,24,0.620593,6.175676571522215
+177,seven_feature_all_six_drugs,GHK peptide,RandomForest,permeation_percentage,167,24,0.5221895,6.175676571522215
+178,seven_feature_all_six_drugs,GHK peptide,RandomForest,permeation_percentage,167,24,0.5927416,6.175676571522215
+155,seven_feature_all_six_drugs,GHK peptide,XGBoost,permeation_percentage,167,24,5.7460151,-1.080879807472229
+156,seven_feature_all_six_drugs,GHK peptide,XGBoost,permeation_percentage,167,24,7.7147601,2.430990219116211
+157,seven_feature_all_six_drugs,GHK peptide,XGBoost,permeation_percentage,167,24,8.8721541,4.207139492034912
+158,seven_feature_all_six_drugs,GHK peptide,XGBoost,permeation_percentage,167,24,9.7465097,4.207139492034912
+159,seven_feature_all_six_drugs,GHK peptide,XGBoost,permeation_percentage,167,24,3.4974256,-1.080879807472229
+160,seven_feature_all_six_drugs,GHK peptide,XGBoost,permeation_percentage,167,24,5.1038324,2.430990219116211
+161,seven_feature_all_six_drugs,GHK peptide,XGBoost,permeation_percentage,167,24,6.2920355,4.207139492034912
+162,seven_feature_all_six_drugs,GHK peptide,XGBoost,permeation_percentage,167,24,7.2219962,4.207139492034912
+163,seven_feature_all_six_drugs,GHK peptide,XGBoost,permeation_percentage,167,24,2.4619652,-1.080879807472229
+164,seven_feature_all_six_drugs,GHK peptide,XGBoost,permeation_percentage,167,24,5.6861063,2.430990219116211
+165,seven_feature_all_six_drugs,GHK peptide,XGBoost,permeation_percentage,167,24,9.0041458,4.207139492034912
+166,seven_feature_all_six_drugs,GHK peptide,XGBoost,permeation_percentage,167,24,11.6244901,4.207139492034912
+167,seven_feature_all_six_drugs,GHK peptide,XGBoost,permeation_percentage,167,24,0.2891969,-0.7487531900405884
+168,seven_feature_all_six_drugs,GHK peptide,XGBoost,permeation_percentage,167,24,0.2736605,-0.7487531900405884
+169,seven_feature_all_six_drugs,GHK peptide,XGBoost,permeation_percentage,167,24,0.1807479,-0.7487531900405884
+170,seven_feature_all_six_drugs,GHK peptide,XGBoost,permeation_percentage,167,24,0.424926,2.7631161212921143
+171,seven_feature_all_six_drugs,GHK peptide,XGBoost,permeation_percentage,167,24,0.3637388,2.7631161212921143
+172,seven_feature_all_six_drugs,GHK peptide,XGBoost,permeation_percentage,167,24,0.3524695,2.7631161212921143
+173,seven_feature_all_six_drugs,GHK peptide,XGBoost,permeation_percentage,167,24,0.5439803,4.539266109466553
+174,seven_feature_all_six_drugs,GHK peptide,XGBoost,permeation_percentage,167,24,0.4577203,4.539266109466553
+175,seven_feature_all_six_drugs,GHK peptide,XGBoost,permeation_percentage,167,24,0.4853251,4.539266109466553
+176,seven_feature_all_six_drugs,GHK peptide,XGBoost,permeation_percentage,167,24,0.620593,4.539266109466553
+177,seven_feature_all_six_drugs,GHK peptide,XGBoost,permeation_percentage,167,24,0.5221895,4.539266109466553
+178,seven_feature_all_six_drugs,GHK peptide,XGBoost,permeation_percentage,167,24,0.5927416,4.539266109466553
+155,seven_feature_all_six_drugs,GHK peptide,Fick_diffusion_proxy,permeation_amount_ug_cm2,167,24,453.2456677,2134.9713448939488
+156,seven_feature_all_six_drugs,GHK peptide,Fick_diffusion_proxy,permeation_amount_ug_cm2,167,24,608.5402767,4139.560871462135
+157,seven_feature_all_six_drugs,GHK peptide,Fick_diffusion_proxy,permeation_amount_ug_cm2,167,24,699.8355176,5150.270466879584
+158,seven_feature_all_six_drugs,GHK peptide,Fick_diffusion_proxy,permeation_amount_ug_cm2,167,24,768.8046883,5627.963080755802
+159,seven_feature_all_six_drugs,GHK peptide,Fick_diffusion_proxy,permeation_amount_ug_cm2,167,24,275.8769329,2134.9713448939488
+160,seven_feature_all_six_drugs,GHK peptide,Fick_diffusion_proxy,permeation_amount_ug_cm2,167,24,402.590303,4139.560871462135
+161,seven_feature_all_six_drugs,GHK peptide,Fick_diffusion_proxy,permeation_amount_ug_cm2,167,24,496.3157573,5150.270466879584
+162,seven_feature_all_six_drugs,GHK peptide,Fick_diffusion_proxy,permeation_amount_ug_cm2,167,24,569.6710595,5627.963080755802
+163,seven_feature_all_six_drugs,GHK peptide,Fick_diffusion_proxy,permeation_amount_ug_cm2,167,24,194.1998183,2134.9713448939488
+164,seven_feature_all_six_drugs,GHK peptide,Fick_diffusion_proxy,permeation_amount_ug_cm2,167,24,448.5200612,4139.560871462135
+165,seven_feature_all_six_drugs,GHK peptide,Fick_diffusion_proxy,permeation_amount_ug_cm2,167,24,710.2470186,5150.270466879584
+166,seven_feature_all_six_drugs,GHK peptide,Fick_diffusion_proxy,permeation_amount_ug_cm2,167,24,916.9397782,5627.963080755802
+167,seven_feature_all_six_drugs,GHK peptide,Fick_diffusion_proxy,permeation_amount_ug_cm2,167,24,22.81185437,2134.9713448939488
+168,seven_feature_all_six_drugs,GHK peptide,Fick_diffusion_proxy,permeation_amount_ug_cm2,167,24,21.58634282,2134.9713448939488
+169,seven_feature_all_six_drugs,GHK peptide,Fick_diffusion_proxy,permeation_amount_ug_cm2,167,24,14.2573962,2134.9713448939488
+170,seven_feature_all_six_drugs,GHK peptide,Fick_diffusion_proxy,permeation_amount_ug_cm2,167,24,33.5181655,4139.560871462135
+171,seven_feature_all_six_drugs,GHK peptide,Fick_diffusion_proxy,permeation_amount_ug_cm2,167,24,28.69171996,4139.560871462135
+172,seven_feature_all_six_drugs,GHK peptide,Fick_diffusion_proxy,permeation_amount_ug_cm2,167,24,27.80279558,4139.560871462135
+173,seven_feature_all_six_drugs,GHK peptide,Fick_diffusion_proxy,permeation_amount_ug_cm2,167,24,42.90916931,5150.270466879584
+174,seven_feature_all_six_drugs,GHK peptide,Fick_diffusion_proxy,permeation_amount_ug_cm2,167,24,36.10497467,5150.270466879584
+175,seven_feature_all_six_drugs,GHK peptide,Fick_diffusion_proxy,permeation_amount_ug_cm2,167,24,38.28244524,5150.270466879584
+176,seven_feature_all_six_drugs,GHK peptide,Fick_diffusion_proxy,permeation_amount_ug_cm2,167,24,48.95237426,5627.963080755802
+177,seven_feature_all_six_drugs,GHK peptide,Fick_diffusion_proxy,permeation_amount_ug_cm2,167,24,41.19030492,5627.963080755802
+178,seven_feature_all_six_drugs,GHK peptide,Fick_diffusion_proxy,permeation_amount_ug_cm2,167,24,46.75545732,5627.963080755802
+155,seven_feature_all_six_drugs,GHK peptide,MLR,permeation_amount_ug_cm2,167,24,453.2456677,589.3113849092078
+156,seven_feature_all_six_drugs,GHK peptide,MLR,permeation_amount_ug_cm2,167,24,608.5402767,913.223566819579
+157,seven_feature_all_six_drugs,GHK peptide,MLR,permeation_amount_ug_cm2,167,24,699.8355176,1399.091839685134
+158,seven_feature_all_six_drugs,GHK peptide,MLR,permeation_amount_ug_cm2,167,24,768.8046883,1884.9601125506888
+159,seven_feature_all_six_drugs,GHK peptide,MLR,permeation_amount_ug_cm2,167,24,275.8769329,589.3113849092078
+160,seven_feature_all_six_drugs,GHK peptide,MLR,permeation_amount_ug_cm2,167,24,402.590303,913.223566819579
+161,seven_feature_all_six_drugs,GHK peptide,MLR,permeation_amount_ug_cm2,167,24,496.3157573,1399.091839685134
+162,seven_feature_all_six_drugs,GHK peptide,MLR,permeation_amount_ug_cm2,167,24,569.6710595,1884.9601125506888
+163,seven_feature_all_six_drugs,GHK peptide,MLR,permeation_amount_ug_cm2,167,24,194.1998183,589.3113849092078
+164,seven_feature_all_six_drugs,GHK peptide,MLR,permeation_amount_ug_cm2,167,24,448.5200612,913.223566819579
+165,seven_feature_all_six_drugs,GHK peptide,MLR,permeation_amount_ug_cm2,167,24,710.2470186,1399.091839685134
+166,seven_feature_all_six_drugs,GHK peptide,MLR,permeation_amount_ug_cm2,167,24,916.9397782,1884.9601125506888
+167,seven_feature_all_six_drugs,GHK peptide,MLR,permeation_amount_ug_cm2,167,24,22.81185437,-609.0952972346458
+168,seven_feature_all_six_drugs,GHK peptide,MLR,permeation_amount_ug_cm2,167,24,21.58634282,-609.0952972346458
+169,seven_feature_all_six_drugs,GHK peptide,MLR,permeation_amount_ug_cm2,167,24,14.2573962,-609.0952972346458
+170,seven_feature_all_six_drugs,GHK peptide,MLR,permeation_amount_ug_cm2,167,24,33.5181655,-285.1831153242747
+171,seven_feature_all_six_drugs,GHK peptide,MLR,permeation_amount_ug_cm2,167,24,28.69171996,-285.1831153242747
+172,seven_feature_all_six_drugs,GHK peptide,MLR,permeation_amount_ug_cm2,167,24,27.80279558,-285.1831153242747
+173,seven_feature_all_six_drugs,GHK peptide,MLR,permeation_amount_ug_cm2,167,24,42.90916931,200.6851575412802
+174,seven_feature_all_six_drugs,GHK peptide,MLR,permeation_amount_ug_cm2,167,24,36.10497467,200.6851575412802
+175,seven_feature_all_six_drugs,GHK peptide,MLR,permeation_amount_ug_cm2,167,24,38.28244524,200.6851575412802
+176,seven_feature_all_six_drugs,GHK peptide,MLR,permeation_amount_ug_cm2,167,24,48.95237426,686.5534304068351
+177,seven_feature_all_six_drugs,GHK peptide,MLR,permeation_amount_ug_cm2,167,24,41.19030492,686.5534304068351
+178,seven_feature_all_six_drugs,GHK peptide,MLR,permeation_amount_ug_cm2,167,24,46.75545732,686.5534304068351
+155,seven_feature_all_six_drugs,GHK peptide,RandomForest,permeation_amount_ug_cm2,167,24,453.2456677,5.416041903756298
+156,seven_feature_all_six_drugs,GHK peptide,RandomForest,permeation_amount_ug_cm2,167,24,608.5402767,25.49494153655291
+157,seven_feature_all_six_drugs,GHK peptide,RandomForest,permeation_amount_ug_cm2,167,24,699.8355176,98.80584982020193
+158,seven_feature_all_six_drugs,GHK peptide,RandomForest,permeation_amount_ug_cm2,167,24,768.8046883,229.73443629929494
+159,seven_feature_all_six_drugs,GHK peptide,RandomForest,permeation_amount_ug_cm2,167,24,275.8769329,5.416041903756298
+160,seven_feature_all_six_drugs,GHK peptide,RandomForest,permeation_amount_ug_cm2,167,24,402.590303,25.49494153655291
+161,seven_feature_all_six_drugs,GHK peptide,RandomForest,permeation_amount_ug_cm2,167,24,496.3157573,98.80584982020193
+162,seven_feature_all_six_drugs,GHK peptide,RandomForest,permeation_amount_ug_cm2,167,24,569.6710595,229.73443629929494
+163,seven_feature_all_six_drugs,GHK peptide,RandomForest,permeation_amount_ug_cm2,167,24,194.1998183,5.416041903756298
+164,seven_feature_all_six_drugs,GHK peptide,RandomForest,permeation_amount_ug_cm2,167,24,448.5200612,25.49494153655291
+165,seven_feature_all_six_drugs,GHK peptide,RandomForest,permeation_amount_ug_cm2,167,24,710.2470186,98.80584982020193
+166,seven_feature_all_six_drugs,GHK peptide,RandomForest,permeation_amount_ug_cm2,167,24,916.9397782,229.73443629929494
+167,seven_feature_all_six_drugs,GHK peptide,RandomForest,permeation_amount_ug_cm2,167,24,22.81185437,3.429166807035452
+168,seven_feature_all_six_drugs,GHK peptide,RandomForest,permeation_amount_ug_cm2,167,24,21.58634282,3.429166807035452
+169,seven_feature_all_six_drugs,GHK peptide,RandomForest,permeation_amount_ug_cm2,167,24,14.2573962,3.429166807035452
+170,seven_feature_all_six_drugs,GHK peptide,RandomForest,permeation_amount_ug_cm2,167,24,33.5181655,29.631497300135344
+171,seven_feature_all_six_drugs,GHK peptide,RandomForest,permeation_amount_ug_cm2,167,24,28.69171996,29.631497300135344
+172,seven_feature_all_six_drugs,GHK peptide,RandomForest,permeation_amount_ug_cm2,167,24,27.80279558,29.631497300135344
+173,seven_feature_all_six_drugs,GHK peptide,RandomForest,permeation_amount_ug_cm2,167,24,42.90916931,125.19488264099336
+174,seven_feature_all_six_drugs,GHK peptide,RandomForest,permeation_amount_ug_cm2,167,24,36.10497467,125.19488264099336
+175,seven_feature_all_six_drugs,GHK peptide,RandomForest,permeation_amount_ug_cm2,167,24,38.28244524,125.19488264099336
+176,seven_feature_all_six_drugs,GHK peptide,RandomForest,permeation_amount_ug_cm2,167,24,48.95237426,291.67150565728383
+177,seven_feature_all_six_drugs,GHK peptide,RandomForest,permeation_amount_ug_cm2,167,24,41.19030492,291.67150565728383
+178,seven_feature_all_six_drugs,GHK peptide,RandomForest,permeation_amount_ug_cm2,167,24,46.75545732,291.67150565728383
+155,seven_feature_all_six_drugs,GHK peptide,XGBoost,permeation_amount_ug_cm2,167,24,453.2456677,-20.652904510498047
+156,seven_feature_all_six_drugs,GHK peptide,XGBoost,permeation_amount_ug_cm2,167,24,608.5402767,40.41127014160156
+157,seven_feature_all_six_drugs,GHK peptide,XGBoost,permeation_amount_ug_cm2,167,24,699.8355176,155.10214233398438
+158,seven_feature_all_six_drugs,GHK peptide,XGBoost,permeation_amount_ug_cm2,167,24,768.8046883,328.7245178222656
+159,seven_feature_all_six_drugs,GHK peptide,XGBoost,permeation_amount_ug_cm2,167,24,275.8769329,-20.652904510498047
+160,seven_feature_all_six_drugs,GHK peptide,XGBoost,permeation_amount_ug_cm2,167,24,402.590303,40.41127014160156
+161,seven_feature_all_six_drugs,GHK peptide,XGBoost,permeation_amount_ug_cm2,167,24,496.3157573,155.10214233398438
+162,seven_feature_all_six_drugs,GHK peptide,XGBoost,permeation_amount_ug_cm2,167,24,569.6710595,328.7245178222656
+163,seven_feature_all_six_drugs,GHK peptide,XGBoost,permeation_amount_ug_cm2,167,24,194.1998183,-20.652904510498047
+164,seven_feature_all_six_drugs,GHK peptide,XGBoost,permeation_amount_ug_cm2,167,24,448.5200612,40.41127014160156
+165,seven_feature_all_six_drugs,GHK peptide,XGBoost,permeation_amount_ug_cm2,167,24,710.2470186,155.10214233398438
+166,seven_feature_all_six_drugs,GHK peptide,XGBoost,permeation_amount_ug_cm2,167,24,916.9397782,328.7245178222656
+167,seven_feature_all_six_drugs,GHK peptide,XGBoost,permeation_amount_ug_cm2,167,24,22.81185437,1.2714266777038574
+168,seven_feature_all_six_drugs,GHK peptide,XGBoost,permeation_amount_ug_cm2,167,24,21.58634282,1.2714266777038574
+169,seven_feature_all_six_drugs,GHK peptide,XGBoost,permeation_amount_ug_cm2,167,24,14.2573962,1.2714266777038574
+170,seven_feature_all_six_drugs,GHK peptide,XGBoost,permeation_amount_ug_cm2,167,24,33.5181655,35.01935577392578
+171,seven_feature_all_six_drugs,GHK peptide,XGBoost,permeation_amount_ug_cm2,167,24,28.69171996,35.01935577392578
+172,seven_feature_all_six_drugs,GHK peptide,XGBoost,permeation_amount_ug_cm2,167,24,27.80279558,35.01935577392578
+173,seven_feature_all_six_drugs,GHK peptide,XGBoost,permeation_amount_ug_cm2,167,24,42.90916931,143.83251953125
+174,seven_feature_all_six_drugs,GHK peptide,XGBoost,permeation_amount_ug_cm2,167,24,36.10497467,143.83251953125
+175,seven_feature_all_six_drugs,GHK peptide,XGBoost,permeation_amount_ug_cm2,167,24,38.28244524,143.83251953125
+176,seven_feature_all_six_drugs,GHK peptide,XGBoost,permeation_amount_ug_cm2,167,24,48.95237426,327.4013671875
+177,seven_feature_all_six_drugs,GHK peptide,XGBoost,permeation_amount_ug_cm2,167,24,41.19030492,327.4013671875
+178,seven_feature_all_six_drugs,GHK peptide,XGBoost,permeation_amount_ug_cm2,167,24,46.75545732,327.4013671875
+94,seven_feature_all_six_drugs,Rhodamine B,Fick_diffusion_proxy,permeation_percentage,172,19,5.7050696,93.67601941381827
+95,seven_feature_all_six_drugs,Rhodamine B,Fick_diffusion_proxy,permeation_percentage,172,19,6.3970482,93.67601941381827
+96,seven_feature_all_six_drugs,Rhodamine B,Fick_diffusion_proxy,permeation_percentage,172,19,4.7132336,93.67601941381827
+97,seven_feature_all_six_drugs,Rhodamine B,Fick_diffusion_proxy,permeation_percentage,172,19,9.4676039,96.12482974664928
+98,seven_feature_all_six_drugs,Rhodamine B,Fick_diffusion_proxy,permeation_percentage,172,19,9.5060472,96.12482974664928
+99,seven_feature_all_six_drugs,Rhodamine B,Fick_diffusion_proxy,permeation_percentage,172,19,12.779121,96.69488916402736
+100,seven_feature_all_six_drugs,Rhodamine B,Fick_diffusion_proxy,permeation_percentage,172,19,11.5925059,96.69488916402736
+101,seven_feature_all_six_drugs,Rhodamine B,Fick_diffusion_proxy,permeation_percentage,172,19,14.7766828,96.95960640350023
+102,seven_feature_all_six_drugs,Rhodamine B,Fick_diffusion_proxy,permeation_percentage,172,19,12.7710002,96.95960640350023
+103,seven_feature_all_six_drugs,Rhodamine B,Fick_diffusion_proxy,permeation_percentage,172,19,16.4452407,97.16945623823364
+104,seven_feature_all_six_drugs,Rhodamine B,Fick_diffusion_proxy,permeation_percentage,172,19,14.0452258,97.16945623823364
+105,seven_feature_all_six_drugs,Rhodamine B,Fick_diffusion_proxy,permeation_percentage,172,19,18.0232937,97.37934714538392
+106,seven_feature_all_six_drugs,Rhodamine B,Fick_diffusion_proxy,permeation_percentage,172,19,15.2164335,97.37934714538392
+107,seven_feature_all_six_drugs,Rhodamine B,Fick_diffusion_proxy,permeation_percentage,172,19,18.7169507,97.54854861421381
+108,seven_feature_all_six_drugs,Rhodamine B,Fick_diffusion_proxy,permeation_percentage,172,19,16.3370368,97.54854861421381
+109,seven_feature_all_six_drugs,Rhodamine B,Fick_diffusion_proxy,permeation_percentage,172,19,20.253696,97.66259937654782
+110,seven_feature_all_six_drugs,Rhodamine B,Fick_diffusion_proxy,permeation_percentage,172,19,16.9128514,97.66259937654782
+111,seven_feature_all_six_drugs,Rhodamine B,Fick_diffusion_proxy,permeation_percentage,172,19,26.52117,97.76208260228302
+112,seven_feature_all_six_drugs,Rhodamine B,Fick_diffusion_proxy,permeation_percentage,172,19,22.8122906,97.76208260228302
+94,seven_feature_all_six_drugs,Rhodamine B,MLR,permeation_percentage,172,19,5.7050696,9.803457431801345
+95,seven_feature_all_six_drugs,Rhodamine B,MLR,permeation_percentage,172,19,6.3970482,9.803457431801345
+96,seven_feature_all_six_drugs,Rhodamine B,MLR,permeation_percentage,172,19,4.7132336,9.803457431801345
+97,seven_feature_all_six_drugs,Rhodamine B,MLR,permeation_percentage,172,19,9.4676039,20.188359097559722
+98,seven_feature_all_six_drugs,Rhodamine B,MLR,permeation_percentage,172,19,9.5060472,20.188359097559722
+99,seven_feature_all_six_drugs,Rhodamine B,MLR,permeation_percentage,172,19,12.779121,26.419300097014748
+100,seven_feature_all_six_drugs,Rhodamine B,MLR,permeation_percentage,172,19,11.5925059,26.419300097014748
+101,seven_feature_all_six_drugs,Rhodamine B,MLR,permeation_percentage,172,19,14.7766828,30.5732607633181
+102,seven_feature_all_six_drugs,Rhodamine B,MLR,permeation_percentage,172,19,12.7710002,30.5732607633181
+103,seven_feature_all_six_drugs,Rhodamine B,MLR,permeation_percentage,172,19,16.4452407,34.72722142962145
+104,seven_feature_all_six_drugs,Rhodamine B,MLR,permeation_percentage,172,19,14.0452258,34.72722142962145
+105,seven_feature_all_six_drugs,Rhodamine B,MLR,permeation_percentage,172,19,18.0232937,39.91967226250064
+106,seven_feature_all_six_drugs,Rhodamine B,MLR,permeation_percentage,172,19,15.2164335,39.91967226250064
+107,seven_feature_all_six_drugs,Rhodamine B,MLR,permeation_percentage,172,19,18.7169507,45.11212309537983
+108,seven_feature_all_six_drugs,Rhodamine B,MLR,permeation_percentage,172,19,16.3370368,45.11212309537983
+109,seven_feature_all_six_drugs,Rhodamine B,MLR,permeation_percentage,172,19,20.253696,49.266083761683184
+110,seven_feature_all_six_drugs,Rhodamine B,MLR,permeation_percentage,172,19,16.9128514,49.266083761683184
+111,seven_feature_all_six_drugs,Rhodamine B,MLR,permeation_percentage,172,19,26.52117,53.42004442798653
+112,seven_feature_all_six_drugs,Rhodamine B,MLR,permeation_percentage,172,19,22.8122906,53.42004442798653
+94,seven_feature_all_six_drugs,Rhodamine B,RandomForest,permeation_percentage,172,19,5.7050696,6.337731369966906
+95,seven_feature_all_six_drugs,Rhodamine B,RandomForest,permeation_percentage,172,19,6.3970482,6.337731369966906
+96,seven_feature_all_six_drugs,Rhodamine B,RandomForest,permeation_percentage,172,19,4.7132336,6.337731369966906
+97,seven_feature_all_six_drugs,Rhodamine B,RandomForest,permeation_percentage,172,19,9.4676039,20.695985708232428
+98,seven_feature_all_six_drugs,Rhodamine B,RandomForest,permeation_percentage,172,19,9.5060472,20.695985708232428
+99,seven_feature_all_six_drugs,Rhodamine B,RandomForest,permeation_percentage,172,19,12.779121,19.458972796340547
+100,seven_feature_all_six_drugs,Rhodamine B,RandomForest,permeation_percentage,172,19,11.5925059,19.458972796340547
+101,seven_feature_all_six_drugs,Rhodamine B,RandomForest,permeation_percentage,172,19,14.7766828,24.557745183921458
+102,seven_feature_all_six_drugs,Rhodamine B,RandomForest,permeation_percentage,172,19,12.7710002,24.557745183921458
+103,seven_feature_all_six_drugs,Rhodamine B,RandomForest,permeation_percentage,172,19,16.4452407,24.557745183921458
+104,seven_feature_all_six_drugs,Rhodamine B,RandomForest,permeation_percentage,172,19,14.0452258,24.557745183921458
+105,seven_feature_all_six_drugs,Rhodamine B,RandomForest,permeation_percentage,172,19,18.0232937,24.557745183921458
+106,seven_feature_all_six_drugs,Rhodamine B,RandomForest,permeation_percentage,172,19,15.2164335,24.557745183921458
+107,seven_feature_all_six_drugs,Rhodamine B,RandomForest,permeation_percentage,172,19,18.7169507,24.557745183921458
+108,seven_feature_all_six_drugs,Rhodamine B,RandomForest,permeation_percentage,172,19,16.3370368,24.557745183921458
+109,seven_feature_all_six_drugs,Rhodamine B,RandomForest,permeation_percentage,172,19,20.253696,24.557745183921458
+110,seven_feature_all_six_drugs,Rhodamine B,RandomForest,permeation_percentage,172,19,16.9128514,24.557745183921458
+111,seven_feature_all_six_drugs,Rhodamine B,RandomForest,permeation_percentage,172,19,26.52117,24.557745183921458
+112,seven_feature_all_six_drugs,Rhodamine B,RandomForest,permeation_percentage,172,19,22.8122906,24.557745183921458
+94,seven_feature_all_six_drugs,Rhodamine B,XGBoost,permeation_percentage,172,19,5.7050696,5.783609390258789
+95,seven_feature_all_six_drugs,Rhodamine B,XGBoost,permeation_percentage,172,19,6.3970482,5.783609390258789
+96,seven_feature_all_six_drugs,Rhodamine B,XGBoost,permeation_percentage,172,19,4.7132336,5.783609390258789
+97,seven_feature_all_six_drugs,Rhodamine B,XGBoost,permeation_percentage,172,19,9.4676039,5.9911603927612305
+98,seven_feature_all_six_drugs,Rhodamine B,XGBoost,permeation_percentage,172,19,9.5060472,5.9911603927612305
+99,seven_feature_all_six_drugs,Rhodamine B,XGBoost,permeation_percentage,172,19,12.779121,3.448965072631836
+100,seven_feature_all_six_drugs,Rhodamine B,XGBoost,permeation_percentage,172,19,11.5925059,3.448965072631836
+101,seven_feature_all_six_drugs,Rhodamine B,XGBoost,permeation_percentage,172,19,14.7766828,8.492987632751465
+102,seven_feature_all_six_drugs,Rhodamine B,XGBoost,permeation_percentage,172,19,12.7710002,8.492987632751465
+103,seven_feature_all_six_drugs,Rhodamine B,XGBoost,permeation_percentage,172,19,16.4452407,8.492987632751465
+104,seven_feature_all_six_drugs,Rhodamine B,XGBoost,permeation_percentage,172,19,14.0452258,8.492987632751465
+105,seven_feature_all_six_drugs,Rhodamine B,XGBoost,permeation_percentage,172,19,18.0232937,8.492987632751465
+106,seven_feature_all_six_drugs,Rhodamine B,XGBoost,permeation_percentage,172,19,15.2164335,8.492987632751465
+107,seven_feature_all_six_drugs,Rhodamine B,XGBoost,permeation_percentage,172,19,18.7169507,8.492987632751465
+108,seven_feature_all_six_drugs,Rhodamine B,XGBoost,permeation_percentage,172,19,16.3370368,8.492987632751465
+109,seven_feature_all_six_drugs,Rhodamine B,XGBoost,permeation_percentage,172,19,20.253696,6.6291608810424805
+110,seven_feature_all_six_drugs,Rhodamine B,XGBoost,permeation_percentage,172,19,16.9128514,6.6291608810424805
+111,seven_feature_all_six_drugs,Rhodamine B,XGBoost,permeation_percentage,172,19,26.52117,18.27941131591797
+112,seven_feature_all_six_drugs,Rhodamine B,XGBoost,permeation_percentage,172,19,22.8122906,18.27941131591797
+94,seven_feature_all_six_drugs,Rhodamine B,Fick_diffusion_proxy,permeation_amount_ug_cm2,172,19,2.852534781,46.83800970690913
+95,seven_feature_all_six_drugs,Rhodamine B,Fick_diffusion_proxy,permeation_amount_ug_cm2,172,19,3.19852408,46.83800970690913
+96,seven_feature_all_six_drugs,Rhodamine B,Fick_diffusion_proxy,permeation_amount_ug_cm2,172,19,2.356616786,46.83800970690913
+97,seven_feature_all_six_drugs,Rhodamine B,Fick_diffusion_proxy,permeation_amount_ug_cm2,172,19,4.73380197,48.06241487332464
+98,seven_feature_all_six_drugs,Rhodamine B,Fick_diffusion_proxy,permeation_amount_ug_cm2,172,19,4.753023597,48.06241487332464
+99,seven_feature_all_six_drugs,Rhodamine B,Fick_diffusion_proxy,permeation_amount_ug_cm2,172,19,6.389560519,48.34744458201368
+100,seven_feature_all_six_drugs,Rhodamine B,Fick_diffusion_proxy,permeation_amount_ug_cm2,172,19,5.796252944,48.34744458201368
+101,seven_feature_all_six_drugs,Rhodamine B,Fick_diffusion_proxy,permeation_amount_ug_cm2,172,19,7.388341422,48.479803201750116
+102,seven_feature_all_six_drugs,Rhodamine B,Fick_diffusion_proxy,permeation_amount_ug_cm2,172,19,6.385500108,48.479803201750116
+103,seven_feature_all_six_drugs,Rhodamine B,Fick_diffusion_proxy,permeation_amount_ug_cm2,172,19,8.222620368,48.58472811911682
+104,seven_feature_all_six_drugs,Rhodamine B,Fick_diffusion_proxy,permeation_amount_ug_cm2,172,19,7.022612893,48.58472811911682
+105,seven_feature_all_six_drugs,Rhodamine B,Fick_diffusion_proxy,permeation_amount_ug_cm2,172,19,9.011646829,48.68967357269196
+106,seven_feature_all_six_drugs,Rhodamine B,Fick_diffusion_proxy,permeation_amount_ug_cm2,172,19,7.608216742,48.68967357269196
+107,seven_feature_all_six_drugs,Rhodamine B,Fick_diffusion_proxy,permeation_amount_ug_cm2,172,19,9.358475347,48.77427430710691
+108,seven_feature_all_six_drugs,Rhodamine B,Fick_diffusion_proxy,permeation_amount_ug_cm2,172,19,8.168518396,48.77427430710691
+109,seven_feature_all_six_drugs,Rhodamine B,Fick_diffusion_proxy,permeation_amount_ug_cm2,172,19,10.12684798,48.83129968827391
+110,seven_feature_all_six_drugs,Rhodamine B,Fick_diffusion_proxy,permeation_amount_ug_cm2,172,19,8.456425715,48.83129968827391
+111,seven_feature_all_six_drugs,Rhodamine B,Fick_diffusion_proxy,permeation_amount_ug_cm2,172,19,13.26058499,48.88104130114151
+112,seven_feature_all_six_drugs,Rhodamine B,Fick_diffusion_proxy,permeation_amount_ug_cm2,172,19,11.40614532,48.88104130114151
+94,seven_feature_all_six_drugs,Rhodamine B,MLR,permeation_amount_ug_cm2,172,19,2.852534781,1661.8632895493865
+95,seven_feature_all_six_drugs,Rhodamine B,MLR,permeation_amount_ug_cm2,172,19,3.19852408,1661.8632895493865
+96,seven_feature_all_six_drugs,Rhodamine B,MLR,permeation_amount_ug_cm2,172,19,2.356616786,1661.8632895493865
+97,seven_feature_all_six_drugs,Rhodamine B,MLR,permeation_amount_ug_cm2,172,19,4.73380197,3634.390028264375
+98,seven_feature_all_six_drugs,Rhodamine B,MLR,permeation_amount_ug_cm2,172,19,4.753023597,3634.390028264375
+99,seven_feature_all_six_drugs,Rhodamine B,MLR,permeation_amount_ug_cm2,172,19,6.389560519,4817.906071493368
+100,seven_feature_all_six_drugs,Rhodamine B,MLR,permeation_amount_ug_cm2,172,19,5.796252944,4817.906071493368
+101,seven_feature_all_six_drugs,Rhodamine B,MLR,permeation_amount_ug_cm2,172,19,7.388341422,5606.916766979363
+102,seven_feature_all_six_drugs,Rhodamine B,MLR,permeation_amount_ug_cm2,172,19,6.385500108,5606.916766979363
+103,seven_feature_all_six_drugs,Rhodamine B,MLR,permeation_amount_ug_cm2,172,19,8.222620368,6395.927462465359
+104,seven_feature_all_six_drugs,Rhodamine B,MLR,permeation_amount_ug_cm2,172,19,7.022612893,6395.927462465359
+105,seven_feature_all_six_drugs,Rhodamine B,MLR,permeation_amount_ug_cm2,172,19,9.011646829,7382.1908318228525
+106,seven_feature_all_six_drugs,Rhodamine B,MLR,permeation_amount_ug_cm2,172,19,7.608216742,7382.1908318228525
+107,seven_feature_all_six_drugs,Rhodamine B,MLR,permeation_amount_ug_cm2,172,19,9.358475347,8368.454201180346
+108,seven_feature_all_six_drugs,Rhodamine B,MLR,permeation_amount_ug_cm2,172,19,8.168518396,8368.454201180346
+109,seven_feature_all_six_drugs,Rhodamine B,MLR,permeation_amount_ug_cm2,172,19,10.12684798,9157.464896666343
+110,seven_feature_all_six_drugs,Rhodamine B,MLR,permeation_amount_ug_cm2,172,19,8.456425715,9157.464896666343
+111,seven_feature_all_six_drugs,Rhodamine B,MLR,permeation_amount_ug_cm2,172,19,13.26058499,9946.475592152337
+112,seven_feature_all_six_drugs,Rhodamine B,MLR,permeation_amount_ug_cm2,172,19,11.40614532,9946.475592152337
+94,seven_feature_all_six_drugs,Rhodamine B,RandomForest,permeation_amount_ug_cm2,172,19,2.852534781,1084.862883175268
+95,seven_feature_all_six_drugs,Rhodamine B,RandomForest,permeation_amount_ug_cm2,172,19,3.19852408,1084.862883175268
+96,seven_feature_all_six_drugs,Rhodamine B,RandomForest,permeation_amount_ug_cm2,172,19,2.356616786,1084.862883175268
+97,seven_feature_all_six_drugs,Rhodamine B,RandomForest,permeation_amount_ug_cm2,172,19,4.73380197,1782.8109411609203
+98,seven_feature_all_six_drugs,Rhodamine B,RandomForest,permeation_amount_ug_cm2,172,19,4.753023597,1782.8109411609203
+99,seven_feature_all_six_drugs,Rhodamine B,RandomForest,permeation_amount_ug_cm2,172,19,6.389560519,1611.7833006822775
+100,seven_feature_all_six_drugs,Rhodamine B,RandomForest,permeation_amount_ug_cm2,172,19,5.796252944,1611.7833006822775
+101,seven_feature_all_six_drugs,Rhodamine B,RandomForest,permeation_amount_ug_cm2,172,19,7.388341422,1921.4495353914908
+102,seven_feature_all_six_drugs,Rhodamine B,RandomForest,permeation_amount_ug_cm2,172,19,6.385500108,1921.4495353914908
+103,seven_feature_all_six_drugs,Rhodamine B,RandomForest,permeation_amount_ug_cm2,172,19,8.222620368,1932.0919646870925
+104,seven_feature_all_six_drugs,Rhodamine B,RandomForest,permeation_amount_ug_cm2,172,19,7.022612893,1932.0919646870925
+105,seven_feature_all_six_drugs,Rhodamine B,RandomForest,permeation_amount_ug_cm2,172,19,9.011646829,1933.9491618194925
+106,seven_feature_all_six_drugs,Rhodamine B,RandomForest,permeation_amount_ug_cm2,172,19,7.608216742,1933.9491618194925
+107,seven_feature_all_six_drugs,Rhodamine B,RandomForest,permeation_amount_ug_cm2,172,19,9.358475347,1935.0423662130909
+108,seven_feature_all_six_drugs,Rhodamine B,RandomForest,permeation_amount_ug_cm2,172,19,8.168518396,1935.0423662130909
+109,seven_feature_all_six_drugs,Rhodamine B,RandomForest,permeation_amount_ug_cm2,172,19,10.12684798,1935.0423662130909
+110,seven_feature_all_six_drugs,Rhodamine B,RandomForest,permeation_amount_ug_cm2,172,19,8.456425715,1935.0423662130909
+111,seven_feature_all_six_drugs,Rhodamine B,RandomForest,permeation_amount_ug_cm2,172,19,13.26058499,1952.031979754692
+112,seven_feature_all_six_drugs,Rhodamine B,RandomForest,permeation_amount_ug_cm2,172,19,11.40614532,1952.031979754692
+94,seven_feature_all_six_drugs,Rhodamine B,XGBoost,permeation_amount_ug_cm2,172,19,2.852534781,92.63819122314453
+95,seven_feature_all_six_drugs,Rhodamine B,XGBoost,permeation_amount_ug_cm2,172,19,3.19852408,92.63819122314453
+96,seven_feature_all_six_drugs,Rhodamine B,XGBoost,permeation_amount_ug_cm2,172,19,2.356616786,92.63819122314453
+97,seven_feature_all_six_drugs,Rhodamine B,XGBoost,permeation_amount_ug_cm2,172,19,4.73380197,158.94387817382812
+98,seven_feature_all_six_drugs,Rhodamine B,XGBoost,permeation_amount_ug_cm2,172,19,4.753023597,158.94387817382812
+99,seven_feature_all_six_drugs,Rhodamine B,XGBoost,permeation_amount_ug_cm2,172,19,6.389560519,14.38620376586914
+100,seven_feature_all_six_drugs,Rhodamine B,XGBoost,permeation_amount_ug_cm2,172,19,5.796252944,14.38620376586914
+101,seven_feature_all_six_drugs,Rhodamine B,XGBoost,permeation_amount_ug_cm2,172,19,7.388341422,14.38620376586914
+102,seven_feature_all_six_drugs,Rhodamine B,XGBoost,permeation_amount_ug_cm2,172,19,6.385500108,14.38620376586914
+103,seven_feature_all_six_drugs,Rhodamine B,XGBoost,permeation_amount_ug_cm2,172,19,8.222620368,140.186767578125
+104,seven_feature_all_six_drugs,Rhodamine B,XGBoost,permeation_amount_ug_cm2,172,19,7.022612893,140.186767578125
+105,seven_feature_all_six_drugs,Rhodamine B,XGBoost,permeation_amount_ug_cm2,172,19,9.011646829,140.186767578125
+106,seven_feature_all_six_drugs,Rhodamine B,XGBoost,permeation_amount_ug_cm2,172,19,7.608216742,140.186767578125
+107,seven_feature_all_six_drugs,Rhodamine B,XGBoost,permeation_amount_ug_cm2,172,19,9.358475347,140.186767578125
+108,seven_feature_all_six_drugs,Rhodamine B,XGBoost,permeation_amount_ug_cm2,172,19,8.168518396,140.186767578125
+109,seven_feature_all_six_drugs,Rhodamine B,XGBoost,permeation_amount_ug_cm2,172,19,10.12684798,155.48452758789062
+110,seven_feature_all_six_drugs,Rhodamine B,XGBoost,permeation_amount_ug_cm2,172,19,8.456425715,155.48452758789062
+111,seven_feature_all_six_drugs,Rhodamine B,XGBoost,permeation_amount_ug_cm2,172,19,13.26058499,297.82342529296875
+112,seven_feature_all_six_drugs,Rhodamine B,XGBoost,permeation_amount_ug_cm2,172,19,11.40614532,297.82342529296875
+113,seven_feature_all_six_drugs,caffeine,Fick_diffusion_proxy,permeation_percentage,173,18,0.0198437,55.75211288357881
+114,seven_feature_all_six_drugs,caffeine,Fick_diffusion_proxy,permeation_percentage,173,18,0.0682791,81.30823270862109
+115,seven_feature_all_six_drugs,caffeine,Fick_diffusion_proxy,permeation_percentage,173,18,0.2099406,81.30823270862109
+116,seven_feature_all_six_drugs,caffeine,Fick_diffusion_proxy,permeation_percentage,173,18,0.0549341,67.8334056336627
+117,seven_feature_all_six_drugs,caffeine,Fick_diffusion_proxy,permeation_percentage,173,18,0.1188347,86.72154628644718
+118,seven_feature_all_six_drugs,caffeine,Fick_diffusion_proxy,permeation_percentage,173,18,0.3530365,86.72154628644718
+119,seven_feature_all_six_drugs,caffeine,Fick_diffusion_proxy,permeation_percentage,173,18,0.1772166,81.07575750037697
+120,seven_feature_all_six_drugs,caffeine,Fick_diffusion_proxy,permeation_percentage,173,18,0.349122,92.30989130337268
+121,seven_feature_all_six_drugs,caffeine,Fick_diffusion_proxy,permeation_percentage,173,18,1.409242,92.30989130337268
+122,seven_feature_all_six_drugs,caffeine,Fick_diffusion_proxy,permeation_percentage,173,18,0.406661,86.55481803672883
+123,seven_feature_all_six_drugs,caffeine,Fick_diffusion_proxy,permeation_percentage,173,18,0.6315799,94.55805179365423
+124,seven_feature_all_six_drugs,caffeine,Fick_diffusion_proxy,permeation_percentage,173,18,2.4832009,94.55805179365423
+125,seven_feature_all_six_drugs,caffeine,Fick_diffusion_proxy,permeation_percentage,173,18,0.6112768,89.00461255555396
+126,seven_feature_all_six_drugs,caffeine,Fick_diffusion_proxy,permeation_percentage,173,18,0.9204309,95.5555182329247
+127,seven_feature_all_six_drugs,caffeine,Fick_diffusion_proxy,permeation_percentage,173,18,3.3086575,95.5555182329247
+128,seven_feature_all_six_drugs,caffeine,Fick_diffusion_proxy,permeation_percentage,173,18,1.4912863,93.2533332105087
+129,seven_feature_all_six_drugs,caffeine,Fick_diffusion_proxy,permeation_percentage,173,18,2.4129892,97.27744138615671
+130,seven_feature_all_six_drugs,caffeine,Fick_diffusion_proxy,permeation_percentage,173,18,5.9865845,97.27744138615671
+113,seven_feature_all_six_drugs,caffeine,MLR,permeation_percentage,173,18,0.0198437,1.9944856640471045
+114,seven_feature_all_six_drugs,caffeine,MLR,permeation_percentage,173,18,0.0682791,8.665305783887348
+115,seven_feature_all_six_drugs,caffeine,MLR,permeation_percentage,173,18,0.2099406,12.284145084804152
+116,seven_feature_all_six_drugs,caffeine,MLR,permeation_percentage,173,18,0.0549341,2.465055123312183
+117,seven_feature_all_six_drugs,caffeine,MLR,permeation_percentage,173,18,0.1188347,9.135875243152427
+118,seven_feature_all_six_drugs,caffeine,MLR,permeation_percentage,173,18,0.3530365,12.75471454406923
+119,seven_feature_all_six_drugs,caffeine,MLR,permeation_percentage,173,18,0.1772166,4.3473329603724835
+120,seven_feature_all_six_drugs,caffeine,MLR,permeation_percentage,173,18,0.349122,11.018153080212727
+121,seven_feature_all_six_drugs,caffeine,MLR,permeation_percentage,173,18,1.409242,14.63699238112953
+122,seven_feature_all_six_drugs,caffeine,MLR,permeation_percentage,173,18,0.406661,7.170749715962955
+123,seven_feature_all_six_drugs,caffeine,MLR,permeation_percentage,173,18,0.6315799,13.841569835803199
+124,seven_feature_all_six_drugs,caffeine,MLR,permeation_percentage,173,18,2.4832009,17.460409136720003
+125,seven_feature_all_six_drugs,caffeine,MLR,permeation_percentage,173,18,0.6112768,9.994166471553413
+126,seven_feature_all_six_drugs,caffeine,MLR,permeation_percentage,173,18,0.9204309,16.664986591393657
+127,seven_feature_all_six_drugs,caffeine,MLR,permeation_percentage,173,18,3.3086575,20.28382589231046
+128,seven_feature_all_six_drugs,caffeine,MLR,permeation_percentage,173,18,1.4912863,24.111250249505744
+129,seven_feature_all_six_drugs,caffeine,MLR,permeation_percentage,173,18,2.4129892,30.782070369345988
+130,seven_feature_all_six_drugs,caffeine,MLR,permeation_percentage,173,18,5.9865845,34.40090967026279
+113,seven_feature_all_six_drugs,caffeine,RandomForest,permeation_percentage,173,18,0.0198437,3.429550686743096
+114,seven_feature_all_six_drugs,caffeine,RandomForest,permeation_percentage,173,18,0.0682791,3.541666664903097
+115,seven_feature_all_six_drugs,caffeine,RandomForest,permeation_percentage,173,18,0.2099406,3.7454454977726215
+116,seven_feature_all_six_drugs,caffeine,RandomForest,permeation_percentage,173,18,0.0549341,5.696728240650712
+117,seven_feature_all_six_drugs,caffeine,RandomForest,permeation_percentage,173,18,0.1188347,5.862552503639287
+118,seven_feature_all_six_drugs,caffeine,RandomForest,permeation_percentage,173,18,0.3530365,6.066331336508812
+119,seven_feature_all_six_drugs,caffeine,RandomForest,permeation_percentage,173,18,0.1772166,9.137762735057784
+120,seven_feature_all_six_drugs,caffeine,RandomForest,permeation_percentage,173,18,0.349122,11.166456289357301
+121,seven_feature_all_six_drugs,caffeine,RandomForest,permeation_percentage,173,18,1.409242,11.356778292837303
+122,seven_feature_all_six_drugs,caffeine,RandomForest,permeation_percentage,173,18,0.406661,12.359376270723486
+123,seven_feature_all_six_drugs,caffeine,RandomForest,permeation_percentage,173,18,0.6315799,15.98426200355826
+124,seven_feature_all_six_drugs,caffeine,RandomForest,permeation_percentage,173,18,2.4832009,16.116213955712073
+125,seven_feature_all_six_drugs,caffeine,RandomForest,permeation_percentage,173,18,0.6112768,12.959666129690877
+126,seven_feature_all_six_drugs,caffeine,RandomForest,permeation_percentage,173,18,0.9204309,16.582125922275644
+127,seven_feature_all_six_drugs,caffeine,RandomForest,permeation_percentage,173,18,3.3086575,16.562995224108025
+128,seven_feature_all_six_drugs,caffeine,RandomForest,permeation_percentage,173,18,1.4912863,28.099620315304335
+129,seven_feature_all_six_drugs,caffeine,RandomForest,permeation_percentage,173,18,2.4129892,34.78374741937289
+130,seven_feature_all_six_drugs,caffeine,RandomForest,permeation_percentage,173,18,5.9865845,34.78374741937289
+113,seven_feature_all_six_drugs,caffeine,XGBoost,permeation_percentage,173,18,0.0198437,1.8717373609542847
+114,seven_feature_all_six_drugs,caffeine,XGBoost,permeation_percentage,173,18,0.0682791,1.5273141860961914
+115,seven_feature_all_six_drugs,caffeine,XGBoost,permeation_percentage,173,18,0.2099406,1.5273141860961914
+116,seven_feature_all_six_drugs,caffeine,XGBoost,permeation_percentage,173,18,0.0549341,3.127206802368164
+117,seven_feature_all_six_drugs,caffeine,XGBoost,permeation_percentage,173,18,0.1188347,2.782783269882202
+118,seven_feature_all_six_drugs,caffeine,XGBoost,permeation_percentage,173,18,0.3530365,2.782783269882202
+119,seven_feature_all_six_drugs,caffeine,XGBoost,permeation_percentage,173,18,0.1772166,5.672821521759033
+120,seven_feature_all_six_drugs,caffeine,XGBoost,permeation_percentage,173,18,0.349122,5.32839822769165
+121,seven_feature_all_six_drugs,caffeine,XGBoost,permeation_percentage,173,18,1.409242,5.32839822769165
+122,seven_feature_all_six_drugs,caffeine,XGBoost,permeation_percentage,173,18,0.406661,7.6027092933654785
+123,seven_feature_all_six_drugs,caffeine,XGBoost,permeation_percentage,173,18,0.6315799,7.143355369567871
+124,seven_feature_all_six_drugs,caffeine,XGBoost,permeation_percentage,173,18,2.4832009,7.143355369567871
+125,seven_feature_all_six_drugs,caffeine,XGBoost,permeation_percentage,173,18,0.6112768,8.363340377807617
+126,seven_feature_all_six_drugs,caffeine,XGBoost,permeation_percentage,173,18,0.9204309,7.90398645401001
+127,seven_feature_all_six_drugs,caffeine,XGBoost,permeation_percentage,173,18,3.3086575,7.90398645401001
+128,seven_feature_all_six_drugs,caffeine,XGBoost,permeation_percentage,173,18,1.4912863,29.29523277282715
+129,seven_feature_all_six_drugs,caffeine,XGBoost,permeation_percentage,173,18,2.4129892,28.83587646484375
+130,seven_feature_all_six_drugs,caffeine,XGBoost,permeation_percentage,173,18,5.9865845,28.83587646484375
+113,seven_feature_all_six_drugs,caffeine,Fick_diffusion_proxy,permeation_amount_ug_cm2,173,18,1.0537,2960.4371941180348
+114,seven_feature_all_six_drugs,caffeine,Fick_diffusion_proxy,permeation_amount_ug_cm2,173,18,2.5195,3000.2737869481184
+115,seven_feature_all_six_drugs,caffeine,Fick_diffusion_proxy,permeation_amount_ug_cm2,173,18,4.5977,1780.650296318802
+116,seven_feature_all_six_drugs,caffeine,Fick_diffusion_proxy,permeation_amount_ug_cm2,173,18,2.917,3601.953839147489
+117,seven_feature_all_six_drugs,caffeine,Fick_diffusion_proxy,permeation_amount_ug_cm2,173,18,4.385,3200.025057969901
+118,seven_feature_all_six_drugs,caffeine,Fick_diffusion_proxy,permeation_amount_ug_cm2,173,18,7.7315,1899.2018636731932
+119,seven_feature_all_six_drugs,caffeine,Fick_diffusion_proxy,permeation_amount_ug_cm2,173,18,9.4102,4305.122723270017
+120,seven_feature_all_six_drugs,caffeine,Fick_diffusion_proxy,permeation_amount_ug_cm2,173,18,12.8826,3406.234989094452
+121,seven_feature_all_six_drugs,caffeine,Fick_diffusion_proxy,permeation_amount_ug_cm2,173,18,30.8624,2021.5866195438618
+122,seven_feature_all_six_drugs,caffeine,Fick_diffusion_proxy,permeation_amount_ug_cm2,173,18,21.5937,4596.060837750301
+123,seven_feature_all_six_drugs,caffeine,Fick_diffusion_proxy,permeation_amount_ug_cm2,173,18,23.3053,3489.192111185841
+124,seven_feature_all_six_drugs,caffeine,Fick_diffusion_proxy,permeation_amount_ug_cm2,173,18,54.3821,2070.8213342810277
+125,seven_feature_all_six_drugs,caffeine,Fick_diffusion_proxy,permeation_amount_ug_cm2,173,18,32.4588,4726.144926699915
+126,seven_feature_all_six_drugs,caffeine,Fick_diffusion_proxy,permeation_amount_ug_cm2,173,18,33.9639,3525.998622794921
+127,seven_feature_all_six_drugs,caffeine,Fick_diffusion_proxy,permeation_amount_ug_cm2,173,18,72.4596,2092.665849301051
+128,seven_feature_all_six_drugs,caffeine,Fick_diffusion_proxy,permeation_amount_ug_cm2,173,18,79.1873,4951.751993478012
+129,seven_feature_all_six_drugs,caffeine,Fick_diffusion_proxy,permeation_amount_ug_cm2,173,18,89.0393,3589.537587149183
+130,seven_feature_all_six_drugs,caffeine,Fick_diffusion_proxy,permeation_amount_ug_cm2,173,18,131.1062,2130.375966356832
+113,seven_feature_all_six_drugs,caffeine,MLR,permeation_amount_ug_cm2,173,18,1.0537,277.0125889281953
+114,seven_feature_all_six_drugs,caffeine,MLR,permeation_amount_ug_cm2,173,18,2.5195,1836.5908704956237
+115,seven_feature_all_six_drugs,caffeine,MLR,permeation_amount_ug_cm2,173,18,4.5977,2637.7735236833396
+116,seven_feature_all_six_drugs,caffeine,MLR,permeation_amount_ug_cm2,173,18,2.917,359.03491433290037
+117,seven_feature_all_six_drugs,caffeine,MLR,permeation_amount_ug_cm2,173,18,4.385,1918.6131959003287
+118,seven_feature_all_six_drugs,caffeine,MLR,permeation_amount_ug_cm2,173,18,7.7315,2719.7958490880446
+119,seven_feature_all_six_drugs,caffeine,MLR,permeation_amount_ug_cm2,173,18,9.4102,687.1242159517315
+120,seven_feature_all_six_drugs,caffeine,MLR,permeation_amount_ug_cm2,173,18,12.8826,2246.70249751916
+121,seven_feature_all_six_drugs,caffeine,MLR,permeation_amount_ug_cm2,173,18,30.8624,3047.8851507068757
+122,seven_feature_all_six_drugs,caffeine,MLR,permeation_amount_ug_cm2,173,18,21.5937,1179.2581683799726
+123,seven_feature_all_six_drugs,caffeine,MLR,permeation_amount_ug_cm2,173,18,23.3053,2738.836449947401
+124,seven_feature_all_six_drugs,caffeine,MLR,permeation_amount_ug_cm2,173,18,54.3821,3540.019103135117
+125,seven_feature_all_six_drugs,caffeine,MLR,permeation_amount_ug_cm2,173,18,32.4588,1671.3921208082174
+126,seven_feature_all_six_drugs,caffeine,MLR,permeation_amount_ug_cm2,173,18,33.9639,3230.970402375646
+127,seven_feature_all_six_drugs,caffeine,MLR,permeation_amount_ug_cm2,173,18,72.4596,4032.1530555633617
+128,seven_feature_all_six_drugs,caffeine,MLR,permeation_amount_ug_cm2,173,18,79.1873,4132.061882949431
+129,seven_feature_all_six_drugs,caffeine,MLR,permeation_amount_ug_cm2,173,18,89.0393,5691.640164516859
+130,seven_feature_all_six_drugs,caffeine,MLR,permeation_amount_ug_cm2,173,18,131.1062,6492.822817704575
+113,seven_feature_all_six_drugs,caffeine,RandomForest,permeation_amount_ug_cm2,173,18,1.0537,155.99566740277393
+114,seven_feature_all_six_drugs,caffeine,RandomForest,permeation_amount_ug_cm2,173,18,2.5195,258.7921073579427
+115,seven_feature_all_six_drugs,caffeine,RandomForest,permeation_amount_ug_cm2,173,18,4.5977,265.3928101368873
+116,seven_feature_all_six_drugs,caffeine,RandomForest,permeation_amount_ug_cm2,173,18,2.917,182.89453496581672
+117,seven_feature_all_six_drugs,caffeine,RandomForest,permeation_amount_ug_cm2,173,18,4.385,302.7946482035523
+118,seven_feature_all_six_drugs,caffeine,RandomForest,permeation_amount_ug_cm2,173,18,7.7315,309.39535098249723
+119,seven_feature_all_six_drugs,caffeine,RandomForest,permeation_amount_ug_cm2,173,18,9.4102,355.5410706021211
+120,seven_feature_all_six_drugs,caffeine,RandomForest,permeation_amount_ug_cm2,173,18,12.8826,619.5116679435816
+121,seven_feature_all_six_drugs,caffeine,RandomForest,permeation_amount_ug_cm2,173,18,30.8624,616.1081660116927
+122,seven_feature_all_six_drugs,caffeine,RandomForest,permeation_amount_ug_cm2,173,18,21.5937,592.7488164389815
+123,seven_feature_all_six_drugs,caffeine,RandomForest,permeation_amount_ug_cm2,173,18,23.3053,1020.2112945773247
+124,seven_feature_all_six_drugs,caffeine,RandomForest,permeation_amount_ug_cm2,173,18,54.3821,969.3876194754823
+125,seven_feature_all_six_drugs,caffeine,RandomForest,permeation_amount_ug_cm2,173,18,32.4588,717.7406443733336
+126,seven_feature_all_six_drugs,caffeine,RandomForest,permeation_amount_ug_cm2,173,18,33.9639,1134.7391489295007
+127,seven_feature_all_six_drugs,caffeine,RandomForest,permeation_amount_ug_cm2,173,18,72.4596,998.1654302368355
+128,seven_feature_all_six_drugs,caffeine,RandomForest,permeation_amount_ug_cm2,173,18,79.1873,1214.3762459217432
+129,seven_feature_all_six_drugs,caffeine,RandomForest,permeation_amount_ug_cm2,173,18,89.0393,2087.0506601221628
+130,seven_feature_all_six_drugs,caffeine,RandomForest,permeation_amount_ug_cm2,173,18,131.1062,1953.7294736225626
+113,seven_feature_all_six_drugs,caffeine,XGBoost,permeation_amount_ug_cm2,173,18,1.0537,-285.7395324707031
+114,seven_feature_all_six_drugs,caffeine,XGBoost,permeation_amount_ug_cm2,173,18,2.5195,-346.6343688964844
+115,seven_feature_all_six_drugs,caffeine,XGBoost,permeation_amount_ug_cm2,173,18,4.5977,-346.6343688964844
+116,seven_feature_all_six_drugs,caffeine,XGBoost,permeation_amount_ug_cm2,173,18,2.917,-76.77091979980469
+117,seven_feature_all_six_drugs,caffeine,XGBoost,permeation_amount_ug_cm2,173,18,4.385,-137.665771484375
+118,seven_feature_all_six_drugs,caffeine,XGBoost,permeation_amount_ug_cm2,173,18,7.7315,-137.665771484375
+119,seven_feature_all_six_drugs,caffeine,XGBoost,permeation_amount_ug_cm2,173,18,9.4102,54.65825271606445
+120,seven_feature_all_six_drugs,caffeine,XGBoost,permeation_amount_ug_cm2,173,18,12.8826,45.11155319213867
+121,seven_feature_all_six_drugs,caffeine,XGBoost,permeation_amount_ug_cm2,173,18,30.8624,45.11155319213867
+122,seven_feature_all_six_drugs,caffeine,XGBoost,permeation_amount_ug_cm2,173,18,21.5937,140.07931518554688
+123,seven_feature_all_six_drugs,caffeine,XGBoost,permeation_amount_ug_cm2,173,18,23.3053,134.13165283203125
+124,seven_feature_all_six_drugs,caffeine,XGBoost,permeation_amount_ug_cm2,173,18,54.3821,134.13165283203125
+125,seven_feature_all_six_drugs,caffeine,XGBoost,permeation_amount_ug_cm2,173,18,32.4588,271.9339294433594
+126,seven_feature_all_six_drugs,caffeine,XGBoost,permeation_amount_ug_cm2,173,18,33.9639,261.177734375
+127,seven_feature_all_six_drugs,caffeine,XGBoost,permeation_amount_ug_cm2,173,18,72.4596,261.177734375
+128,seven_feature_all_six_drugs,caffeine,XGBoost,permeation_amount_ug_cm2,173,18,79.1873,1224.485107421875
+129,seven_feature_all_six_drugs,caffeine,XGBoost,permeation_amount_ug_cm2,173,18,89.0393,619.0675048828125
+130,seven_feature_all_six_drugs,caffeine,XGBoost,permeation_amount_ug_cm2,173,18,131.1062,619.0675048828125
+131,seven_feature_all_six_drugs,copper ions,Fick_diffusion_proxy,permeation_percentage,167,24,0.8453793,38.64762307712327
+132,seven_feature_all_six_drugs,copper ions,Fick_diffusion_proxy,permeation_percentage,167,24,1.0150345,61.707507745197375
+133,seven_feature_all_six_drugs,copper ions,Fick_diffusion_proxy,permeation_percentage,167,24,1.1294483,72.36736098317631
+134,seven_feature_all_six_drugs,copper ions,Fick_diffusion_proxy,permeation_percentage,167,24,1.2289655,77.28299926844475
+135,seven_feature_all_six_drugs,copper ions,Fick_diffusion_proxy,permeation_percentage,167,24,0.8371034,38.64762307712327
+136,seven_feature_all_six_drugs,copper ions,Fick_diffusion_proxy,permeation_percentage,167,24,1.0098621,61.707507745197375
+137,seven_feature_all_six_drugs,copper ions,Fick_diffusion_proxy,permeation_percentage,167,24,1.148069,72.36736098317631
+138,seven_feature_all_six_drugs,copper ions,Fick_diffusion_proxy,permeation_percentage,167,24,1.2825517,77.28299926844475
+139,seven_feature_all_six_drugs,copper ions,Fick_diffusion_proxy,permeation_percentage,167,24,0.6691034,38.64762307712327
+140,seven_feature_all_six_drugs,copper ions,Fick_diffusion_proxy,permeation_percentage,167,24,0.9537931,61.707507745197375
+141,seven_feature_all_six_drugs,copper ions,Fick_diffusion_proxy,permeation_percentage,167,24,1.2233793,72.36736098317631
+142,seven_feature_all_six_drugs,copper ions,Fick_diffusion_proxy,permeation_percentage,167,24,1.4770345,77.28299926844475
+143,seven_feature_all_six_drugs,copper ions,Fick_diffusion_proxy,permeation_percentage,167,24,2.6495791,38.64762307712327
+144,seven_feature_all_six_drugs,copper ions,Fick_diffusion_proxy,permeation_percentage,167,24,2.4827586,38.64762307712327
+145,seven_feature_all_six_drugs,copper ions,Fick_diffusion_proxy,permeation_percentage,167,24,1.7698615,38.64762307712327
+146,seven_feature_all_six_drugs,copper ions,Fick_diffusion_proxy,permeation_percentage,167,24,3.9691556,61.707507745197375
+147,seven_feature_all_six_drugs,copper ions,Fick_diffusion_proxy,permeation_percentage,167,24,3.4009232,61.707507745197375
+148,seven_feature_all_six_drugs,copper ions,Fick_diffusion_proxy,permeation_percentage,167,24,3.4185175,61.707507745197375
+149,seven_feature_all_six_drugs,copper ions,Fick_diffusion_proxy,permeation_percentage,167,24,5.1818626,72.36736098317631
+150,seven_feature_all_six_drugs,copper ions,Fick_diffusion_proxy,permeation_percentage,167,24,4.3927233,72.36736098317631
+151,seven_feature_all_six_drugs,copper ions,Fick_diffusion_proxy,permeation_percentage,167,24,5.1968504,72.36736098317631
+152,seven_feature_all_six_drugs,copper ions,Fick_diffusion_proxy,permeation_percentage,167,24,6.1749661,77.28299926844475
+153,seven_feature_all_six_drugs,copper ions,Fick_diffusion_proxy,permeation_percentage,167,24,5.3174043,77.28299926844475
+154,seven_feature_all_six_drugs,copper ions,Fick_diffusion_proxy,permeation_percentage,167,24,6.7594895,77.28299926844475
+131,seven_feature_all_six_drugs,copper ions,MLR,permeation_percentage,167,24,0.8453793,6.586519289785798
+132,seven_feature_all_six_drugs,copper ions,MLR,permeation_percentage,167,24,1.0150345,8.423036957271762
+133,seven_feature_all_six_drugs,copper ions,MLR,permeation_percentage,167,24,1.1294483,11.177813458500708
+134,seven_feature_all_six_drugs,copper ions,MLR,permeation_percentage,167,24,1.2289655,13.93258995972964
+135,seven_feature_all_six_drugs,copper ions,MLR,permeation_percentage,167,24,0.8371034,6.586519289785798
+136,seven_feature_all_six_drugs,copper ions,MLR,permeation_percentage,167,24,1.0098621,8.423036957271762
+137,seven_feature_all_six_drugs,copper ions,MLR,permeation_percentage,167,24,1.148069,11.177813458500708
+138,seven_feature_all_six_drugs,copper ions,MLR,permeation_percentage,167,24,1.2825517,13.93258995972964
+139,seven_feature_all_six_drugs,copper ions,MLR,permeation_percentage,167,24,0.6691034,6.586519289785798
+140,seven_feature_all_six_drugs,copper ions,MLR,permeation_percentage,167,24,0.9537931,8.423036957271762
+141,seven_feature_all_six_drugs,copper ions,MLR,permeation_percentage,167,24,1.2233793,11.177813458500708
+142,seven_feature_all_six_drugs,copper ions,MLR,permeation_percentage,167,24,1.4770345,13.93258995972964
+143,seven_feature_all_six_drugs,copper ions,MLR,permeation_percentage,167,24,2.6495791,-2.728947531415969
+144,seven_feature_all_six_drugs,copper ions,MLR,permeation_percentage,167,24,2.4827586,-2.728947531415969
+145,seven_feature_all_six_drugs,copper ions,MLR,permeation_percentage,167,24,1.7698615,-2.728947531415969
+146,seven_feature_all_six_drugs,copper ions,MLR,permeation_percentage,167,24,3.9691556,-0.8924298639300048
+147,seven_feature_all_six_drugs,copper ions,MLR,permeation_percentage,167,24,3.4009232,-0.8924298639300048
+148,seven_feature_all_six_drugs,copper ions,MLR,permeation_percentage,167,24,3.4185175,-0.8924298639300048
+149,seven_feature_all_six_drugs,copper ions,MLR,permeation_percentage,167,24,5.1818626,1.8623466372989412
+150,seven_feature_all_six_drugs,copper ions,MLR,permeation_percentage,167,24,4.3927233,1.8623466372989412
+151,seven_feature_all_six_drugs,copper ions,MLR,permeation_percentage,167,24,5.1968504,1.8623466372989412
+152,seven_feature_all_six_drugs,copper ions,MLR,permeation_percentage,167,24,6.1749661,4.617123138527873
+153,seven_feature_all_six_drugs,copper ions,MLR,permeation_percentage,167,24,5.3174043,4.617123138527873
+154,seven_feature_all_six_drugs,copper ions,MLR,permeation_percentage,167,24,6.7594895,4.617123138527873
+131,seven_feature_all_six_drugs,copper ions,RandomForest,permeation_percentage,167,24,0.8453793,4.726046328717304
+132,seven_feature_all_six_drugs,copper ions,RandomForest,permeation_percentage,167,24,1.0150345,10.219585523984831
+133,seven_feature_all_six_drugs,copper ions,RandomForest,permeation_percentage,167,24,1.1294483,14.59131463500569
+134,seven_feature_all_six_drugs,copper ions,RandomForest,permeation_percentage,167,24,1.2289655,15.502827604833094
+135,seven_feature_all_six_drugs,copper ions,RandomForest,permeation_percentage,167,24,0.8371034,4.726046328717304
+136,seven_feature_all_six_drugs,copper ions,RandomForest,permeation_percentage,167,24,1.0098621,10.219585523984831
+137,seven_feature_all_six_drugs,copper ions,RandomForest,permeation_percentage,167,24,1.148069,14.59131463500569
+138,seven_feature_all_six_drugs,copper ions,RandomForest,permeation_percentage,167,24,1.2825517,15.502827604833094
+139,seven_feature_all_six_drugs,copper ions,RandomForest,permeation_percentage,167,24,0.6691034,4.726046328717304
+140,seven_feature_all_six_drugs,copper ions,RandomForest,permeation_percentage,167,24,0.9537931,10.219585523984831
+141,seven_feature_all_six_drugs,copper ions,RandomForest,permeation_percentage,167,24,1.2233793,14.59131463500569
+142,seven_feature_all_six_drugs,copper ions,RandomForest,permeation_percentage,167,24,1.4770345,15.502827604833094
+143,seven_feature_all_six_drugs,copper ions,RandomForest,permeation_percentage,167,24,2.6495791,0.24231219968214304
+144,seven_feature_all_six_drugs,copper ions,RandomForest,permeation_percentage,167,24,2.4827586,0.24231219968214304
+145,seven_feature_all_six_drugs,copper ions,RandomForest,permeation_percentage,167,24,1.7698615,0.24231219968214304
+146,seven_feature_all_six_drugs,copper ions,RandomForest,permeation_percentage,167,24,3.9691556,0.9020273479065396
+147,seven_feature_all_six_drugs,copper ions,RandomForest,permeation_percentage,167,24,3.4009232,0.9020273479065396
+148,seven_feature_all_six_drugs,copper ions,RandomForest,permeation_percentage,167,24,3.4185175,0.9020273479065396
+149,seven_feature_all_six_drugs,copper ions,RandomForest,permeation_percentage,167,24,5.1818626,2.5580340659973864
+150,seven_feature_all_six_drugs,copper ions,RandomForest,permeation_percentage,167,24,4.3927233,2.5580340659973864
+151,seven_feature_all_six_drugs,copper ions,RandomForest,permeation_percentage,167,24,5.1968504,2.5580340659973864
+152,seven_feature_all_six_drugs,copper ions,RandomForest,permeation_percentage,167,24,6.1749661,5.2619146364500855
+153,seven_feature_all_six_drugs,copper ions,RandomForest,permeation_percentage,167,24,5.3174043,5.2619146364500855
+154,seven_feature_all_six_drugs,copper ions,RandomForest,permeation_percentage,167,24,6.7594895,5.2619146364500855
+131,seven_feature_all_six_drugs,copper ions,XGBoost,permeation_percentage,167,24,0.8453793,2.1917386054992676
+132,seven_feature_all_six_drugs,copper ions,XGBoost,permeation_percentage,167,24,1.0150345,5.989715099334717
+133,seven_feature_all_six_drugs,copper ions,XGBoost,permeation_percentage,167,24,1.1294483,11.515401840209961
+134,seven_feature_all_six_drugs,copper ions,XGBoost,permeation_percentage,167,24,1.2289655,12.030624389648438
+135,seven_feature_all_six_drugs,copper ions,XGBoost,permeation_percentage,167,24,0.8371034,2.1917386054992676
+136,seven_feature_all_six_drugs,copper ions,XGBoost,permeation_percentage,167,24,1.0098621,5.989715099334717
+137,seven_feature_all_six_drugs,copper ions,XGBoost,permeation_percentage,167,24,1.148069,11.515401840209961
+138,seven_feature_all_six_drugs,copper ions,XGBoost,permeation_percentage,167,24,1.2825517,12.030624389648438
+139,seven_feature_all_six_drugs,copper ions,XGBoost,permeation_percentage,167,24,0.6691034,2.1917386054992676
+140,seven_feature_all_six_drugs,copper ions,XGBoost,permeation_percentage,167,24,0.9537931,5.989715099334717
+141,seven_feature_all_six_drugs,copper ions,XGBoost,permeation_percentage,167,24,1.2233793,11.515401840209961
+142,seven_feature_all_six_drugs,copper ions,XGBoost,permeation_percentage,167,24,1.4770345,12.030624389648438
+143,seven_feature_all_six_drugs,copper ions,XGBoost,permeation_percentage,167,24,2.6495791,-1.2959442138671875
+144,seven_feature_all_six_drugs,copper ions,XGBoost,permeation_percentage,167,24,2.4827586,-1.2959442138671875
+145,seven_feature_all_six_drugs,copper ions,XGBoost,permeation_percentage,167,24,1.7698615,-1.2959442138671875
+146,seven_feature_all_six_drugs,copper ions,XGBoost,permeation_percentage,167,24,3.9691556,0.08883710205554962
+147,seven_feature_all_six_drugs,copper ions,XGBoost,permeation_percentage,167,24,3.4009232,0.08883710205554962
+148,seven_feature_all_six_drugs,copper ions,XGBoost,permeation_percentage,167,24,3.4185175,0.08883710205554962
+149,seven_feature_all_six_drugs,copper ions,XGBoost,permeation_percentage,167,24,5.1818626,5.513256549835205
+150,seven_feature_all_six_drugs,copper ions,XGBoost,permeation_percentage,167,24,4.3927233,5.513256549835205
+151,seven_feature_all_six_drugs,copper ions,XGBoost,permeation_percentage,167,24,5.1968504,5.513256549835205
+152,seven_feature_all_six_drugs,copper ions,XGBoost,permeation_percentage,167,24,6.1749661,6.028478622436523
+153,seven_feature_all_six_drugs,copper ions,XGBoost,permeation_percentage,167,24,5.3174043,6.028478622436523
+154,seven_feature_all_six_drugs,copper ions,XGBoost,permeation_percentage,167,24,6.7594895,6.028478622436523
+131,seven_feature_all_six_drugs,copper ions,Fick_diffusion_proxy,permeation_amount_ug_cm2,167,24,6.227064,284.67839158609
+132,seven_feature_all_six_drugs,copper ions,Fick_diffusion_proxy,permeation_amount_ug_cm2,167,24,7.476744,454.5375020511239
+133,seven_feature_all_six_drugs,copper ions,Fick_diffusion_proxy,permeation_amount_ug_cm2,167,24,8.319516,533.0579810020768
+134,seven_feature_all_six_drugs,copper ions,Fick_diffusion_proxy,permeation_amount_ug_cm2,167,24,9.05256,569.266572611364
+135,seven_feature_all_six_drugs,copper ions,Fick_diffusion_proxy,permeation_amount_ug_cm2,167,24,6.166104,284.67839158609
+136,seven_feature_all_six_drugs,copper ions,Fick_diffusion_proxy,permeation_amount_ug_cm2,167,24,7.438644,454.5375020511239
+137,seven_feature_all_six_drugs,copper ions,Fick_diffusion_proxy,permeation_amount_ug_cm2,167,24,8.456676,533.0579810020768
+138,seven_feature_all_six_drugs,copper ions,Fick_diffusion_proxy,permeation_amount_ug_cm2,167,24,9.447276,569.266572611364
+139,seven_feature_all_six_drugs,copper ions,Fick_diffusion_proxy,permeation_amount_ug_cm2,167,24,4.928616,284.67839158609
+140,seven_feature_all_six_drugs,copper ions,Fick_diffusion_proxy,permeation_amount_ug_cm2,167,24,7.02564,454.5375020511239
+141,seven_feature_all_six_drugs,copper ions,Fick_diffusion_proxy,permeation_amount_ug_cm2,167,24,9.011412,533.0579810020768
+142,seven_feature_all_six_drugs,copper ions,Fick_diffusion_proxy,permeation_amount_ug_cm2,167,24,10.879836,569.266572611364
+143,seven_feature_all_six_drugs,copper ions,Fick_diffusion_proxy,permeation_amount_ug_cm2,167,24,19.5168,284.67839158609
+144,seven_feature_all_six_drugs,copper ions,Fick_diffusion_proxy,permeation_amount_ug_cm2,167,24,18.288,284.67839158609
+145,seven_feature_all_six_drugs,copper ions,Fick_diffusion_proxy,permeation_amount_ug_cm2,167,24,13.0368,284.67839158609
+146,seven_feature_all_six_drugs,copper ions,Fick_diffusion_proxy,permeation_amount_ug_cm2,167,24,29.2368,454.5375020511239
+147,seven_feature_all_six_drugs,copper ions,Fick_diffusion_proxy,permeation_amount_ug_cm2,167,24,25.0512,454.5375020511239
+148,seven_feature_all_six_drugs,copper ions,Fick_diffusion_proxy,permeation_amount_ug_cm2,167,24,25.1808,454.5375020511239
+149,seven_feature_all_six_drugs,copper ions,Fick_diffusion_proxy,permeation_amount_ug_cm2,167,24,38.1696,533.0579810020768
+150,seven_feature_all_six_drugs,copper ions,Fick_diffusion_proxy,permeation_amount_ug_cm2,167,24,32.3568,533.0579810020768
+151,seven_feature_all_six_drugs,copper ions,Fick_diffusion_proxy,permeation_amount_ug_cm2,167,24,38.28,533.0579810020768
+152,seven_feature_all_six_drugs,copper ions,Fick_diffusion_proxy,permeation_amount_ug_cm2,167,24,45.4848,569.266572611364
+153,seven_feature_all_six_drugs,copper ions,Fick_diffusion_proxy,permeation_amount_ug_cm2,167,24,39.168,569.266572611364
+154,seven_feature_all_six_drugs,copper ions,Fick_diffusion_proxy,permeation_amount_ug_cm2,167,24,49.7904,569.266572611364
+131,seven_feature_all_six_drugs,copper ions,MLR,permeation_amount_ug_cm2,167,24,6.227064,279.0152672404838
+132,seven_feature_all_six_drugs,copper ions,MLR,permeation_amount_ug_cm2,167,24,7.476744,602.0216039023071
+133,seven_feature_all_six_drugs,copper ions,MLR,permeation_amount_ug_cm2,167,24,8.319516,1086.5311088950439
+134,seven_feature_all_six_drugs,copper ions,MLR,permeation_amount_ug_cm2,167,24,9.05256,1571.0406138877806
+135,seven_feature_all_six_drugs,copper ions,MLR,permeation_amount_ug_cm2,167,24,6.166104,279.0152672404838
+136,seven_feature_all_six_drugs,copper ions,MLR,permeation_amount_ug_cm2,167,24,7.438644,602.0216039023071
+137,seven_feature_all_six_drugs,copper ions,MLR,permeation_amount_ug_cm2,167,24,8.456676,1086.5311088950439
+138,seven_feature_all_six_drugs,copper ions,MLR,permeation_amount_ug_cm2,167,24,9.447276,1571.0406138877806
+139,seven_feature_all_six_drugs,copper ions,MLR,permeation_amount_ug_cm2,167,24,4.928616,279.0152672404838
+140,seven_feature_all_six_drugs,copper ions,MLR,permeation_amount_ug_cm2,167,24,7.02564,602.0216039023071
+141,seven_feature_all_six_drugs,copper ions,MLR,permeation_amount_ug_cm2,167,24,9.011412,1086.5311088950439
+142,seven_feature_all_six_drugs,copper ions,MLR,permeation_amount_ug_cm2,167,24,10.879836,1571.0406138877806
+143,seven_feature_all_six_drugs,copper ions,MLR,permeation_amount_ug_cm2,167,24,19.5168,-1125.2179478366852
+144,seven_feature_all_six_drugs,copper ions,MLR,permeation_amount_ug_cm2,167,24,18.288,-1125.2179478366852
+145,seven_feature_all_six_drugs,copper ions,MLR,permeation_amount_ug_cm2,167,24,13.0368,-1125.2179478366852
+146,seven_feature_all_six_drugs,copper ions,MLR,permeation_amount_ug_cm2,167,24,29.2368,-802.2116111748619
+147,seven_feature_all_six_drugs,copper ions,MLR,permeation_amount_ug_cm2,167,24,25.0512,-802.2116111748619
+148,seven_feature_all_six_drugs,copper ions,MLR,permeation_amount_ug_cm2,167,24,25.1808,-802.2116111748619
+149,seven_feature_all_six_drugs,copper ions,MLR,permeation_amount_ug_cm2,167,24,38.1696,-317.70210618212514
+150,seven_feature_all_six_drugs,copper ions,MLR,permeation_amount_ug_cm2,167,24,32.3568,-317.70210618212514
+151,seven_feature_all_six_drugs,copper ions,MLR,permeation_amount_ug_cm2,167,24,38.28,-317.70210618212514
+152,seven_feature_all_six_drugs,copper ions,MLR,permeation_amount_ug_cm2,167,24,45.4848,166.80739881061163
+153,seven_feature_all_six_drugs,copper ions,MLR,permeation_amount_ug_cm2,167,24,39.168,166.80739881061163
+154,seven_feature_all_six_drugs,copper ions,MLR,permeation_amount_ug_cm2,167,24,49.7904,166.80739881061163
+131,seven_feature_all_six_drugs,copper ions,RandomForest,permeation_amount_ug_cm2,167,24,6.227064,263.0242351715103
+132,seven_feature_all_six_drugs,copper ions,RandomForest,permeation_amount_ug_cm2,167,24,7.476744,500.0460385623285
+133,seven_feature_all_six_drugs,copper ions,RandomForest,permeation_amount_ug_cm2,167,24,8.319516,724.3238170679793
+134,seven_feature_all_six_drugs,copper ions,RandomForest,permeation_amount_ug_cm2,167,24,9.05256,843.8098832527853
+135,seven_feature_all_six_drugs,copper ions,RandomForest,permeation_amount_ug_cm2,167,24,6.166104,263.0242351715103
+136,seven_feature_all_six_drugs,copper ions,RandomForest,permeation_amount_ug_cm2,167,24,7.438644,500.0460385623285
+137,seven_feature_all_six_drugs,copper ions,RandomForest,permeation_amount_ug_cm2,167,24,8.456676,724.3238170679793
+138,seven_feature_all_six_drugs,copper ions,RandomForest,permeation_amount_ug_cm2,167,24,9.447276,843.8098832527853
+139,seven_feature_all_six_drugs,copper ions,RandomForest,permeation_amount_ug_cm2,167,24,4.928616,263.0242351715103
+140,seven_feature_all_six_drugs,copper ions,RandomForest,permeation_amount_ug_cm2,167,24,7.02564,500.0460385623285
+141,seven_feature_all_six_drugs,copper ions,RandomForest,permeation_amount_ug_cm2,167,24,9.011412,724.3238170679793
+142,seven_feature_all_six_drugs,copper ions,RandomForest,permeation_amount_ug_cm2,167,24,10.879836,843.8098832527853
+143,seven_feature_all_six_drugs,copper ions,RandomForest,permeation_amount_ug_cm2,167,24,19.5168,4.368582980501392
+144,seven_feature_all_six_drugs,copper ions,RandomForest,permeation_amount_ug_cm2,167,24,18.288,4.368582980501392
+145,seven_feature_all_six_drugs,copper ions,RandomForest,permeation_amount_ug_cm2,167,24,13.0368,4.368582980501392
+146,seven_feature_all_six_drugs,copper ions,RandomForest,permeation_amount_ug_cm2,167,24,29.2368,32.07446295090606
+147,seven_feature_all_six_drugs,copper ions,RandomForest,permeation_amount_ug_cm2,167,24,25.0512,32.07446295090606
+148,seven_feature_all_six_drugs,copper ions,RandomForest,permeation_amount_ug_cm2,167,24,25.1808,32.07446295090606
+149,seven_feature_all_six_drugs,copper ions,RandomForest,permeation_amount_ug_cm2,167,24,38.1696,130.95224230414317
+150,seven_feature_all_six_drugs,copper ions,RandomForest,permeation_amount_ug_cm2,167,24,32.3568,130.95224230414317
+151,seven_feature_all_six_drugs,copper ions,RandomForest,permeation_amount_ug_cm2,167,24,38.28,130.95224230414317
+152,seven_feature_all_six_drugs,copper ions,RandomForest,permeation_amount_ug_cm2,167,24,45.4848,297.6237495244813
+153,seven_feature_all_six_drugs,copper ions,RandomForest,permeation_amount_ug_cm2,167,24,39.168,297.6237495244813
+154,seven_feature_all_six_drugs,copper ions,RandomForest,permeation_amount_ug_cm2,167,24,49.7904,297.6237495244813
+131,seven_feature_all_six_drugs,copper ions,XGBoost,permeation_amount_ug_cm2,167,24,6.227064,-69.45494079589844
+132,seven_feature_all_six_drugs,copper ions,XGBoost,permeation_amount_ug_cm2,167,24,7.476744,-26.751283645629883
+133,seven_feature_all_six_drugs,copper ions,XGBoost,permeation_amount_ug_cm2,167,24,8.319516,141.93295288085938
+134,seven_feature_all_six_drugs,copper ions,XGBoost,permeation_amount_ug_cm2,167,24,9.05256,302.21929931640625
+135,seven_feature_all_six_drugs,copper ions,XGBoost,permeation_amount_ug_cm2,167,24,6.166104,-69.45494079589844
+136,seven_feature_all_six_drugs,copper ions,XGBoost,permeation_amount_ug_cm2,167,24,7.438644,-26.751283645629883
+137,seven_feature_all_six_drugs,copper ions,XGBoost,permeation_amount_ug_cm2,167,24,8.456676,141.93295288085938
+138,seven_feature_all_six_drugs,copper ions,XGBoost,permeation_amount_ug_cm2,167,24,9.447276,302.21929931640625
+139,seven_feature_all_six_drugs,copper ions,XGBoost,permeation_amount_ug_cm2,167,24,4.928616,-69.45494079589844
+140,seven_feature_all_six_drugs,copper ions,XGBoost,permeation_amount_ug_cm2,167,24,7.02564,-26.751283645629883
+141,seven_feature_all_six_drugs,copper ions,XGBoost,permeation_amount_ug_cm2,167,24,9.011412,141.93295288085938
+142,seven_feature_all_six_drugs,copper ions,XGBoost,permeation_amount_ug_cm2,167,24,10.879836,302.21929931640625
+143,seven_feature_all_six_drugs,copper ions,XGBoost,permeation_amount_ug_cm2,167,24,19.5168,-42.119483947753906
+144,seven_feature_all_six_drugs,copper ions,XGBoost,permeation_amount_ug_cm2,167,24,18.288,-42.119483947753906
+145,seven_feature_all_six_drugs,copper ions,XGBoost,permeation_amount_ug_cm2,167,24,13.0368,-42.119483947753906
+146,seven_feature_all_six_drugs,copper ions,XGBoost,permeation_amount_ug_cm2,167,24,29.2368,-45.0402946472168
+147,seven_feature_all_six_drugs,copper ions,XGBoost,permeation_amount_ug_cm2,167,24,25.0512,-45.0402946472168
+148,seven_feature_all_six_drugs,copper ions,XGBoost,permeation_amount_ug_cm2,167,24,25.1808,-45.0402946472168
+149,seven_feature_all_six_drugs,copper ions,XGBoost,permeation_amount_ug_cm2,167,24,38.1696,72.4629135131836
+150,seven_feature_all_six_drugs,copper ions,XGBoost,permeation_amount_ug_cm2,167,24,32.3568,72.4629135131836
+151,seven_feature_all_six_drugs,copper ions,XGBoost,permeation_amount_ug_cm2,167,24,38.28,72.4629135131836
+152,seven_feature_all_six_drugs,copper ions,XGBoost,permeation_amount_ug_cm2,167,24,45.4848,186.3925323486328
+153,seven_feature_all_six_drugs,copper ions,XGBoost,permeation_amount_ug_cm2,167,24,39.168,186.3925323486328
+154,seven_feature_all_six_drugs,copper ions,XGBoost,permeation_amount_ug_cm2,167,24,49.7904,186.3925323486328
+33,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_percentage,118,73,1.4442226,18.46066970214173
+34,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_percentage,118,73,1.5646029,18.46066970214173
+35,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_percentage,118,73,2.0977566,18.46066970214173
+36,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_percentage,118,73,1.2837534,34.81821169357465
+37,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_percentage,118,73,3.128349,34.81821169357465
+38,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_percentage,118,73,3.7167494,34.81821169357465
+39,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_percentage,118,73,1.2837534,44.36925040836163
+40,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_percentage,118,73,2.9352834,44.36925040836163
+41,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_percentage,118,73,3.5109631,44.36925040836163
+42,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_percentage,118,73,1.2837534,50.71052178879396
+43,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_percentage,118,73,2.9352834,50.71052178879396
+44,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_percentage,118,73,3.5109631,50.71052178879396
+45,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_percentage,118,73,1.2837534,55.296704538652854
+46,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_percentage,118,73,2.9352834,55.296704538652854
+47,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_percentage,118,73,3.5109631,55.296704538652854
+48,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_percentage,118,73,1.2837534,58.80771825834954
+49,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_percentage,118,73,2.9352834,58.80771825834954
+50,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_percentage,118,73,1.2837534,65.83194613660194
+51,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_percentage,118,73,2.9352834,65.83194613660194
+52,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_percentage,118,73,4.035592,70.17298587407149
+53,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_percentage,118,73,5.0122475,70.17298587407149
+54,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_percentage,118,73,7.0138816,70.17298587407149
+55,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_percentage,118,73,5.7532681,70.17298587407149
+56,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_percentage,118,73,9.1872652,70.17298587407149
+57,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_percentage,118,73,6.078239,75.45032204614202
+58,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_percentage,118,73,7.3378683,75.45032204614202
+59,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_percentage,118,73,8.371411,78.65354221250604
+60,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_percentage,118,73,9.4920383,78.65354221250604
+61,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_percentage,118,73,14.8085004,78.65354221250604
+62,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_percentage,118,73,11.7574187,78.65354221250604
+63,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_percentage,118,73,10.9104547,82.50011058447852
+64,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_percentage,118,73,11.9575269,82.50011058447852
+65,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_percentage,118,73,2.4474498,82.50011058447852
+66,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_percentage,118,73,2.3593597,82.50011058447852
+67,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_percentage,118,73,16.2602985,82.50011058447852
+68,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_percentage,118,73,16.2278188,82.50011058447852
+69,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_percentage,118,73,16.0061849,82.50011058447852
+70,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_percentage,118,73,18.313884,87.57543586714056
+71,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_percentage,118,73,20.1212327,87.57543586714056
+72,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_percentage,118,73,7.4552469,87.57543586714056
+73,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_percentage,118,73,4.7798289,87.57543586714056
+74,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_percentage,118,73,6.8844586,87.57543586714056
+75,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_percentage,118,73,26.0285567,87.57543586714056
+76,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_percentage,118,73,23.2299181,87.57543586714056
+77,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_percentage,118,73,21.9195207,87.57543586714056
+78,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_percentage,118,73,27.6600463,93.0886656144863
+79,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_percentage,118,73,30.0873734,93.0886656144863
+80,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_percentage,118,73,34.0816817,93.17539042008943
+81,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_percentage,118,73,34.6172156,93.17539042008943
+82,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_percentage,118,73,16.7655732,93.33947571329848
+83,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_percentage,118,73,14.5749793,93.33947571329848
+84,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_percentage,118,73,16.2430834,93.33947571329848
+85,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_percentage,118,73,31.5933219,93.7687441451813
+86,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_percentage,118,73,34.1279637,93.7687441451813
+87,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_percentage,118,73,40.8934142,93.7687441451813
+88,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_percentage,118,73,20.6770156,93.7687441451813
+89,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_percentage,118,73,16.2169387,93.7687441451813
+90,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_percentage,118,73,18.9082354,93.7687441451813
+91,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_percentage,118,73,47.967593,93.7687441451813
+92,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_percentage,118,73,38.909355,93.7687441451813
+93,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_percentage,118,73,41.6449883,93.7687441451813
+179,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_percentage,118,73,0.0407876,30.06229881969068
+180,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_percentage,118,73,0.6606969,55.00973172303968
+181,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_percentage,118,73,2.8926549,67.26038174415166
+182,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_percentage,118,73,6.8148163,73.00697275800422
+183,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_percentage,118,73,0.0411237,30.06229881969068
+184,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_percentage,118,73,0.6565894,55.00973172303968
+185,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_percentage,118,73,2.7240229,67.26038174415166
+186,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_percentage,118,73,5.9165036,73.00697275800422
+187,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_percentage,118,73,0.0404142,30.06229881969068
+188,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_percentage,118,73,0.675932,55.00973172303968
+189,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_percentage,118,73,2.945007,67.26038174415166
+190,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_percentage,118,73,6.9493559,73.00697275800422
+33,seven_feature_all_six_drugs,lidocaine,MLR,permeation_percentage,118,73,1.4442226,5.2031467663385556
+34,seven_feature_all_six_drugs,lidocaine,MLR,permeation_percentage,118,73,1.5646029,5.2031467663385556
+35,seven_feature_all_six_drugs,lidocaine,MLR,permeation_percentage,118,73,2.0977566,5.2031467663385556
+36,seven_feature_all_six_drugs,lidocaine,MLR,permeation_percentage,118,73,1.2837534,5.273507148879016
+37,seven_feature_all_six_drugs,lidocaine,MLR,permeation_percentage,118,73,3.128349,5.273507148879016
+38,seven_feature_all_six_drugs,lidocaine,MLR,permeation_percentage,118,73,3.7167494,5.273507148879016
+39,seven_feature_all_six_drugs,lidocaine,MLR,permeation_percentage,118,73,1.2837534,5.343867530575157
+40,seven_feature_all_six_drugs,lidocaine,MLR,permeation_percentage,118,73,2.9352834,5.343867530575157
+41,seven_feature_all_six_drugs,lidocaine,MLR,permeation_percentage,118,73,3.5109631,5.343867530575157
+42,seven_feature_all_six_drugs,lidocaine,MLR,permeation_percentage,118,73,1.2837534,5.414227912271297
+43,seven_feature_all_six_drugs,lidocaine,MLR,permeation_percentage,118,73,2.9352834,5.414227912271297
+44,seven_feature_all_six_drugs,lidocaine,MLR,permeation_percentage,118,73,3.5109631,5.414227912271297
+45,seven_feature_all_six_drugs,lidocaine,MLR,permeation_percentage,118,73,1.2837534,5.484588294811761
+46,seven_feature_all_six_drugs,lidocaine,MLR,permeation_percentage,118,73,2.9352834,5.484588294811761
+47,seven_feature_all_six_drugs,lidocaine,MLR,permeation_percentage,118,73,3.5109631,5.484588294811761
+48,seven_feature_all_six_drugs,lidocaine,MLR,permeation_percentage,118,73,1.2837534,5.554948676507898
+49,seven_feature_all_six_drugs,lidocaine,MLR,permeation_percentage,118,73,2.9352834,5.554948676507898
+50,seven_feature_all_six_drugs,lidocaine,MLR,permeation_percentage,118,73,1.2837534,5.76602982244064
+51,seven_feature_all_six_drugs,lidocaine,MLR,permeation_percentage,118,73,2.9352834,5.76602982244064
+52,seven_feature_all_six_drugs,lidocaine,MLR,permeation_percentage,118,73,4.035592,5.977110968373381
+53,seven_feature_all_six_drugs,lidocaine,MLR,permeation_percentage,118,73,5.0122475,5.977110968373381
+54,seven_feature_all_six_drugs,lidocaine,MLR,permeation_percentage,118,73,7.0138816,2.0187401672732044
+55,seven_feature_all_six_drugs,lidocaine,MLR,permeation_percentage,118,73,5.7532681,2.0187401672732044
+56,seven_feature_all_six_drugs,lidocaine,MLR,permeation_percentage,118,73,9.1872652,2.0187401672732044
+57,seven_feature_all_six_drugs,lidocaine,MLR,permeation_percentage,118,73,6.078239,6.399273260238866
+58,seven_feature_all_six_drugs,lidocaine,MLR,permeation_percentage,118,73,7.3378683,6.399273260238866
+59,seven_feature_all_six_drugs,lidocaine,MLR,permeation_percentage,118,73,8.371411,6.821435552104349
+60,seven_feature_all_six_drugs,lidocaine,MLR,permeation_percentage,118,73,9.4920383,6.821435552104349
+61,seven_feature_all_six_drugs,lidocaine,MLR,permeation_percentage,118,73,14.8085004,2.863064751004174
+62,seven_feature_all_six_drugs,lidocaine,MLR,permeation_percentage,118,73,11.7574187,2.863064751004174
+63,seven_feature_all_six_drugs,lidocaine,MLR,permeation_percentage,118,73,10.9104547,7.665760135835317
+64,seven_feature_all_six_drugs,lidocaine,MLR,permeation_percentage,118,73,11.9575269,7.665760135835317
+65,seven_feature_all_six_drugs,lidocaine,MLR,permeation_percentage,118,73,2.4474498,5.831692163779884
+66,seven_feature_all_six_drugs,lidocaine,MLR,permeation_percentage,118,73,2.3593597,5.831692163779884
+67,seven_feature_all_six_drugs,lidocaine,MLR,permeation_percentage,118,73,16.2602985,3.70738933473514
+68,seven_feature_all_six_drugs,lidocaine,MLR,permeation_percentage,118,73,16.2278188,3.70738933473514
+69,seven_feature_all_six_drugs,lidocaine,MLR,permeation_percentage,118,73,16.0061849,3.70738933473514
+70,seven_feature_all_six_drugs,lidocaine,MLR,permeation_percentage,118,73,18.313884,10.198733887028217
+71,seven_feature_all_six_drugs,lidocaine,MLR,permeation_percentage,118,73,20.1212327,10.198733887028217
+72,seven_feature_all_six_drugs,lidocaine,MLR,permeation_percentage,118,73,7.4552469,8.364665914972784
+73,seven_feature_all_six_drugs,lidocaine,MLR,permeation_percentage,118,73,4.7798289,8.364665914972784
+74,seven_feature_all_six_drugs,lidocaine,MLR,permeation_percentage,118,73,6.8844586,8.364665914972784
+75,seven_feature_all_six_drugs,lidocaine,MLR,permeation_percentage,118,73,26.0285567,6.24036308592804
+76,seven_feature_all_six_drugs,lidocaine,MLR,permeation_percentage,118,73,23.2299181,6.24036308592804
+77,seven_feature_all_six_drugs,lidocaine,MLR,permeation_percentage,118,73,21.9195207,6.24036308592804
+78,seven_feature_all_six_drugs,lidocaine,MLR,permeation_percentage,118,73,27.6600463,21.597115767396275
+79,seven_feature_all_six_drugs,lidocaine,MLR,permeation_percentage,118,73,30.0873734,21.597115767396275
+80,seven_feature_all_six_drugs,lidocaine,MLR,permeation_percentage,118,73,34.0816817,18.060907258161578
+81,seven_feature_all_six_drugs,lidocaine,MLR,permeation_percentage,118,73,34.6172156,18.060907258161578
+82,seven_feature_all_six_drugs,lidocaine,MLR,permeation_percentage,118,73,16.7655732,21.02953467093729
+83,seven_feature_all_six_drugs,lidocaine,MLR,permeation_percentage,118,73,14.5749793,21.02953467093729
+84,seven_feature_all_six_drugs,lidocaine,MLR,permeation_percentage,118,73,16.2430834,21.02953467093729
+85,seven_feature_all_six_drugs,lidocaine,MLR,permeation_percentage,118,73,31.5933219,25.396576394185626
+86,seven_feature_all_six_drugs,lidocaine,MLR,permeation_percentage,118,73,34.1279637,25.396576394185626
+87,seven_feature_all_six_drugs,lidocaine,MLR,permeation_percentage,118,73,40.8934142,25.396576394185626
+88,seven_feature_all_six_drugs,lidocaine,MLR,permeation_percentage,118,73,20.6770156,23.562508422130193
+89,seven_feature_all_six_drugs,lidocaine,MLR,permeation_percentage,118,73,16.2169387,23.562508422130193
+90,seven_feature_all_six_drugs,lidocaine,MLR,permeation_percentage,118,73,18.9082354,23.562508422130193
+91,seven_feature_all_six_drugs,lidocaine,MLR,permeation_percentage,118,73,47.967593,21.43820559308545
+92,seven_feature_all_six_drugs,lidocaine,MLR,permeation_percentage,118,73,38.909355,21.43820559308545
+93,seven_feature_all_six_drugs,lidocaine,MLR,permeation_percentage,118,73,41.6449883,21.43820559308545
+179,seven_feature_all_six_drugs,lidocaine,MLR,permeation_percentage,118,73,0.0407876,-0.8778574351719222
+180,seven_feature_all_six_drugs,lidocaine,MLR,permeation_percentage,118,73,0.6606969,0.8107917322900136
+181,seven_feature_all_six_drugs,lidocaine,MLR,permeation_percentage,118,73,2.8926549,3.3437654834829154
+182,seven_feature_all_six_drugs,lidocaine,MLR,permeation_percentage,118,73,6.8148163,5.876739234675817
+183,seven_feature_all_six_drugs,lidocaine,MLR,permeation_percentage,118,73,0.0411237,-0.8778574351719222
+184,seven_feature_all_six_drugs,lidocaine,MLR,permeation_percentage,118,73,0.6565894,0.8107917322900136
+185,seven_feature_all_six_drugs,lidocaine,MLR,permeation_percentage,118,73,2.7240229,3.3437654834829154
+186,seven_feature_all_six_drugs,lidocaine,MLR,permeation_percentage,118,73,5.9165036,5.876739234675817
+187,seven_feature_all_six_drugs,lidocaine,MLR,permeation_percentage,118,73,0.0404142,-0.8778574351719222
+188,seven_feature_all_six_drugs,lidocaine,MLR,permeation_percentage,118,73,0.675932,0.8107917322900136
+189,seven_feature_all_six_drugs,lidocaine,MLR,permeation_percentage,118,73,2.945007,3.3437654834829154
+190,seven_feature_all_six_drugs,lidocaine,MLR,permeation_percentage,118,73,6.9493559,5.876739234675817
+33,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_percentage,118,73,1.4442226,2.3750668330809543
+34,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_percentage,118,73,1.5646029,2.3750668330809543
+35,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_percentage,118,73,2.0977566,2.3750668330809543
+36,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_percentage,118,73,1.2837534,2.3750668330809543
+37,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_percentage,118,73,3.128349,2.3750668330809543
+38,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_percentage,118,73,3.7167494,2.3750668330809543
+39,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_percentage,118,73,1.2837534,2.3750668330809543
+40,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_percentage,118,73,2.9352834,2.3750668330809543
+41,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_percentage,118,73,3.5109631,2.3750668330809543
+42,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_percentage,118,73,1.2837534,2.3750668330809543
+43,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_percentage,118,73,2.9352834,2.3750668330809543
+44,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_percentage,118,73,3.5109631,2.3750668330809543
+45,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_percentage,118,73,1.2837534,2.3750668330809543
+46,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_percentage,118,73,2.9352834,2.3750668330809543
+47,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_percentage,118,73,3.5109631,2.3750668330809543
+48,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_percentage,118,73,1.2837534,2.3750668330809543
+49,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_percentage,118,73,2.9352834,2.3750668330809543
+50,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_percentage,118,73,1.2837534,2.3750668330809543
+51,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_percentage,118,73,2.9352834,2.3750668330809543
+52,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_percentage,118,73,4.035592,2.3877164376809534
+53,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_percentage,118,73,5.0122475,2.3877164376809534
+54,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_percentage,118,73,7.0138816,2.3877164376809534
+55,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_percentage,118,73,5.7532681,2.3877164376809534
+56,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_percentage,118,73,9.1872652,2.3877164376809534
+57,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_percentage,118,73,6.078239,2.3877164376809534
+58,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_percentage,118,73,7.3378683,2.3877164376809534
+59,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_percentage,118,73,8.371411,2.395589864480953
+60,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_percentage,118,73,9.4920383,2.395589864480953
+61,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_percentage,118,73,14.8085004,2.395589864480953
+62,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_percentage,118,73,11.7574187,2.395589864480953
+63,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_percentage,118,73,10.9104547,3.7966071445639695
+64,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_percentage,118,73,11.9575269,3.7966071445639695
+65,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_percentage,118,73,2.4474498,3.7966071445639695
+66,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_percentage,118,73,2.3593597,3.7966071445639695
+67,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_percentage,118,73,16.2602985,3.7966071445639695
+68,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_percentage,118,73,16.2278188,3.7966071445639695
+69,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_percentage,118,73,16.0061849,3.7966071445639695
+70,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_percentage,118,73,18.313884,4.972808261261273
+71,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_percentage,118,73,20.1212327,4.972808261261273
+72,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_percentage,118,73,7.4552469,4.972808261261273
+73,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_percentage,118,73,4.7798289,4.972808261261273
+74,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_percentage,118,73,6.8844586,4.972808261261273
+75,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_percentage,118,73,26.0285567,4.972808261261273
+76,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_percentage,118,73,23.2299181,4.972808261261273
+77,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_percentage,118,73,21.9195207,4.972808261261273
+78,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_percentage,118,73,27.6600463,6.955003890637938
+79,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_percentage,118,73,30.0873734,6.955003890637938
+80,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_percentage,118,73,34.0816817,6.955003890637938
+81,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_percentage,118,73,34.6172156,6.955003890637938
+82,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_percentage,118,73,16.7655732,6.955003890637938
+83,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_percentage,118,73,14.5749793,6.955003890637938
+84,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_percentage,118,73,16.2430834,6.955003890637938
+85,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_percentage,118,73,31.5933219,6.964591320554604
+86,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_percentage,118,73,34.1279637,6.964591320554604
+87,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_percentage,118,73,40.8934142,6.964591320554604
+88,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_percentage,118,73,20.6770156,6.964591320554604
+89,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_percentage,118,73,16.2169387,6.964591320554604
+90,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_percentage,118,73,18.9082354,6.964591320554604
+91,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_percentage,118,73,47.967593,6.964591320554604
+92,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_percentage,118,73,38.909355,6.964591320554604
+93,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_percentage,118,73,41.6449883,6.964591320554604
+179,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_percentage,118,73,0.0407876,0.3851918568819842
+180,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_percentage,118,73,0.6606969,0.6669947764211919
+181,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_percentage,118,73,2.8926549,1.0660902117328566
+182,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_percentage,118,73,6.8148163,1.6279571101488906
+183,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_percentage,118,73,0.0411237,0.3851918568819842
+184,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_percentage,118,73,0.6565894,0.6669947764211919
+185,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_percentage,118,73,2.7240229,1.0660902117328566
+186,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_percentage,118,73,5.9165036,1.6279571101488906
+187,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_percentage,118,73,0.0404142,0.3851918568819842
+188,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_percentage,118,73,0.675932,0.6669947764211919
+189,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_percentage,118,73,2.945007,1.0660902117328566
+190,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_percentage,118,73,6.9493559,1.6279571101488906
+33,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_percentage,118,73,1.4442226,2.6497747898101807
+34,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_percentage,118,73,1.5646029,2.6497747898101807
+35,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_percentage,118,73,2.0977566,2.6497747898101807
+36,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_percentage,118,73,1.2837534,2.6497747898101807
+37,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_percentage,118,73,3.128349,2.6497747898101807
+38,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_percentage,118,73,3.7167494,2.6497747898101807
+39,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_percentage,118,73,1.2837534,2.6497747898101807
+40,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_percentage,118,73,2.9352834,2.6497747898101807
+41,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_percentage,118,73,3.5109631,2.6497747898101807
+42,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_percentage,118,73,1.2837534,2.6497747898101807
+43,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_percentage,118,73,2.9352834,2.6497747898101807
+44,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_percentage,118,73,3.5109631,2.6497747898101807
+45,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_percentage,118,73,1.2837534,2.6497747898101807
+46,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_percentage,118,73,2.9352834,2.6497747898101807
+47,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_percentage,118,73,3.5109631,2.6497747898101807
+48,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_percentage,118,73,1.2837534,2.6497747898101807
+49,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_percentage,118,73,2.9352834,2.6497747898101807
+50,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_percentage,118,73,1.2837534,2.6497747898101807
+51,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_percentage,118,73,2.9352834,2.6497747898101807
+52,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_percentage,118,73,4.035592,2.6497747898101807
+53,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_percentage,118,73,5.0122475,2.6497747898101807
+54,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_percentage,118,73,7.0138816,2.6497747898101807
+55,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_percentage,118,73,5.7532681,2.6497747898101807
+56,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_percentage,118,73,9.1872652,2.6497747898101807
+57,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_percentage,118,73,6.078239,2.6497747898101807
+58,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_percentage,118,73,7.3378683,2.6497747898101807
+59,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_percentage,118,73,8.371411,2.6497747898101807
+60,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_percentage,118,73,9.4920383,2.6497747898101807
+61,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_percentage,118,73,14.8085004,2.6497747898101807
+62,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_percentage,118,73,11.7574187,2.6497747898101807
+63,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_percentage,118,73,10.9104547,3.4137089252471924
+64,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_percentage,118,73,11.9575269,3.4137089252471924
+65,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_percentage,118,73,2.4474498,3.4137089252471924
+66,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_percentage,118,73,2.3593597,3.4137089252471924
+67,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_percentage,118,73,16.2602985,3.4137089252471924
+68,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_percentage,118,73,16.2278188,3.4137089252471924
+69,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_percentage,118,73,16.0061849,3.4137089252471924
+70,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_percentage,118,73,18.313884,4.257372856140137
+71,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_percentage,118,73,20.1212327,4.257372856140137
+72,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_percentage,118,73,7.4552469,4.257372856140137
+73,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_percentage,118,73,4.7798289,4.257372856140137
+74,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_percentage,118,73,6.8844586,4.257372856140137
+75,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_percentage,118,73,26.0285567,4.257372856140137
+76,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_percentage,118,73,23.2299181,4.257372856140137
+77,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_percentage,118,73,21.9195207,4.257372856140137
+78,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_percentage,118,73,27.6600463,6.4864606857299805
+79,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_percentage,118,73,30.0873734,6.4864606857299805
+80,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_percentage,118,73,34.0816817,6.4864606857299805
+81,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_percentage,118,73,34.6172156,6.4864606857299805
+82,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_percentage,118,73,16.7655732,6.4864606857299805
+83,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_percentage,118,73,14.5749793,6.4864606857299805
+84,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_percentage,118,73,16.2430834,6.4864606857299805
+85,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_percentage,118,73,31.5933219,6.333162784576416
+86,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_percentage,118,73,34.1279637,6.333162784576416
+87,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_percentage,118,73,40.8934142,6.333162784576416
+88,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_percentage,118,73,20.6770156,6.333162784576416
+89,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_percentage,118,73,16.2169387,6.333162784576416
+90,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_percentage,118,73,18.9082354,6.333162784576416
+91,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_percentage,118,73,47.967593,6.333162784576416
+92,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_percentage,118,73,38.909355,6.333162784576416
+93,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_percentage,118,73,41.6449883,6.333162784576416
+179,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_percentage,118,73,0.0407876,0.4086706340312958
+180,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_percentage,118,73,0.6606969,1.1726049184799194
+181,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_percentage,118,73,2.8926549,2.016268253326416
+182,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_percentage,118,73,6.8148163,2.4400510787963867
+183,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_percentage,118,73,0.0411237,0.4086706340312958
+184,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_percentage,118,73,0.6565894,1.1726049184799194
+185,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_percentage,118,73,2.7240229,2.016268253326416
+186,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_percentage,118,73,5.9165036,2.4400510787963867
+187,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_percentage,118,73,0.0404142,0.4086706340312958
+188,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_percentage,118,73,0.675932,1.1726049184799194
+189,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_percentage,118,73,2.945007,2.016268253326416
+190,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_percentage,118,73,6.9493559,2.4400510787963867
+33,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_amount_ug_cm2,118,73,1024.531509,13095.999086699343
+34,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_amount_ug_cm2,118,73,1109.929295,13095.999086699343
+35,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_amount_ug_cm2,118,73,1488.148502,13095.999086699343
+36,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_amount_ug_cm2,118,73,910.694674,24700.039375421857
+37,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_amount_ug_cm2,118,73,2219.250807,24700.039375421857
+38,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_amount_ug_cm2,118,73,2636.662022,24700.039375421857
+39,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_amount_ug_cm2,118,73,910.694674,31475.54623969174
+40,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_amount_ug_cm2,118,73,2082.29003,31475.54623969174
+41,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_amount_ug_cm2,118,73,2490.677205,31475.54623969174
+42,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_amount_ug_cm2,118,73,910.694674,35974.044156970434
+43,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_amount_ug_cm2,118,73,2082.29003,35974.044156970434
+44,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_amount_ug_cm2,118,73,2490.677205,35974.044156970434
+45,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_amount_ug_cm2,118,73,910.694674,39227.48219972033
+46,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_amount_ug_cm2,118,73,2082.29003,39227.48219972033
+47,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_amount_ug_cm2,118,73,2490.677205,39227.48219972033
+48,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_amount_ug_cm2,118,73,910.694674,41718.195332473166
+49,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_amount_ug_cm2,118,73,2082.29003,41718.195332473166
+50,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_amount_ug_cm2,118,73,910.694674,46701.18258930542
+51,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_amount_ug_cm2,118,73,2082.29003,46701.18258930542
+52,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_amount_ug_cm2,118,73,2862.848942,49780.716179066316
+53,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_amount_ug_cm2,118,73,3555.688395,49780.716179066316
+54,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_amount_ug_cm2,118,73,1895.431377,18963.54770260908
+55,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_amount_ug_cm2,118,73,1554.763163,18963.54770260908
+56,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_amount_ug_cm2,118,73,2482.766544,18963.54770260908
+57,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_amount_ug_cm2,118,73,4311.902742,53524.45845953315
+58,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_amount_ug_cm2,118,73,5205.483748,53524.45845953315
+59,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_amount_ug_cm2,118,73,5938.678996,55796.82284555179
+60,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_amount_ug_cm2,118,73,6733.651992,55796.82284555179
+61,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_amount_ug_cm2,118,73,4001.849144,21255.333247507635
+62,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_amount_ug_cm2,118,73,3177.324831,21255.333247507635
+63,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_amount_ug_cm2,118,73,7739.876585,58525.578448629065
+64,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_amount_ug_cm2,118,73,8482.669584,58525.578448629065
+65,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_amount_ug_cm2,118,73,1238.213787,41738.455946899376
+66,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_amount_ug_cm2,118,73,1193.647249,41738.455946899376
+67,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_amount_ug_cm2,118,73,4394.183075,22294.829884349478
+68,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_amount_ug_cm2,118,73,4385.405754,22294.829884349478
+69,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_amount_ug_cm2,118,73,4325.511402,22294.829884349478
+70,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_amount_ug_cm2,118,73,12991.86928,62126.01420414951
+71,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_amount_ug_cm2,118,73,14274.00249,62126.01420414951
+72,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_amount_ug_cm2,118,73,3771.758529,44306.16451390375
+73,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_amount_ug_cm2,118,73,2418.211041,44306.16451390375
+74,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_amount_ug_cm2,118,73,3482.985285,44306.16451390375
+75,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_amount_ug_cm2,118,73,7033.95717,23666.385788736065
+76,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_amount_ug_cm2,118,73,6277.653062,23666.385788736065
+77,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_amount_ug_cm2,118,73,5923.531283,23666.385788736065
+78,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_amount_ug_cm2,118,73,19622.03687,66037.09938691658
+79,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_amount_ug_cm2,118,73,21343.98269,66037.09938691658
+80,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_amount_ug_cm2,118,73,9210.233657,25179.717507124966
+81,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_amount_ug_cm2,118,73,9354.956357,25179.717507124966
+82,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_amount_ug_cm2,118,73,8482.038772,47222.30755287197
+83,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_amount_ug_cm2,118,73,7373.773512,47222.30755287197
+84,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_amount_ug_cm2,118,73,8217.700744,47222.30755287197
+85,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_amount_ug_cm2,118,73,22412.30259,66519.54709659162
+86,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_amount_ug_cm2,118,73,24210.37745,66519.54709659162
+87,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_amount_ug_cm2,118,73,29009.78801,66519.54709659162
+88,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_amount_ug_cm2,118,73,10460.91572,47439.48303793013
+89,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_amount_ug_cm2,118,73,8204.473607,47439.48303793013
+90,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_amount_ug_cm2,118,73,9566.054457,47439.48303793013
+91,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_amount_ug_cm2,118,73,12962.76232,25340.065417793794
+92,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_amount_ug_cm2,118,73,10514.86409,25340.065417793794
+93,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_amount_ug_cm2,118,73,11254.14165,25340.065417793794
+179,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_amount_ug_cm2,118,73,2.039379206,1503.114940984534
+180,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_amount_ug_cm2,118,73,33.03484383,2750.486586151984
+181,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_amount_ug_cm2,118,73,144.6327434,3363.0190872075827
+182,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_amount_ug_cm2,118,73,340.7408145,3650.348637900211
+183,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_amount_ug_cm2,118,73,2.05618266,1503.114940984534
+184,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_amount_ug_cm2,118,73,32.82946828,2750.486586151984
+185,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_amount_ug_cm2,118,73,136.2011436,3363.0190872075827
+186,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_amount_ug_cm2,118,73,295.8251818,3650.348637900211
+187,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_amount_ug_cm2,118,73,2.020708701,1503.114940984534
+188,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_amount_ug_cm2,118,73,33.79660041,2750.486586151984
+189,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_amount_ug_cm2,118,73,147.2503481,3363.0190872075827
+190,seven_feature_all_six_drugs,lidocaine,Fick_diffusion_proxy,permeation_amount_ug_cm2,118,73,347.4677973,3650.348637900211
+33,seven_feature_all_six_drugs,lidocaine,MLR,permeation_amount_ug_cm2,118,73,1024.531509,3106.281136164274
+34,seven_feature_all_six_drugs,lidocaine,MLR,permeation_amount_ug_cm2,118,73,1109.929295,3106.281136164274
+35,seven_feature_all_six_drugs,lidocaine,MLR,permeation_amount_ug_cm2,118,73,1488.148502,3106.281136164274
+36,seven_feature_all_six_drugs,lidocaine,MLR,permeation_amount_ug_cm2,118,73,910.694674,3107.2479934642884
+37,seven_feature_all_six_drugs,lidocaine,MLR,permeation_amount_ug_cm2,118,73,2219.250807,3107.2479934642884
+38,seven_feature_all_six_drugs,lidocaine,MLR,permeation_amount_ug_cm2,118,73,2636.662022,3107.2479934642884
+39,seven_feature_all_six_drugs,lidocaine,MLR,permeation_amount_ug_cm2,118,73,910.694674,3108.214850752701
+40,seven_feature_all_six_drugs,lidocaine,MLR,permeation_amount_ug_cm2,118,73,2082.29003,3108.214850752701
+41,seven_feature_all_six_drugs,lidocaine,MLR,permeation_amount_ug_cm2,118,73,2490.677205,3108.214850752701
+42,seven_feature_all_six_drugs,lidocaine,MLR,permeation_amount_ug_cm2,118,73,910.694674,3109.181708041113
+43,seven_feature_all_six_drugs,lidocaine,MLR,permeation_amount_ug_cm2,118,73,2082.29003,3109.181708041113
+44,seven_feature_all_six_drugs,lidocaine,MLR,permeation_amount_ug_cm2,118,73,2490.677205,3109.181708041113
+45,seven_feature_all_six_drugs,lidocaine,MLR,permeation_amount_ug_cm2,118,73,910.694674,3110.1485653411273
+46,seven_feature_all_six_drugs,lidocaine,MLR,permeation_amount_ug_cm2,118,73,2082.29003,3110.1485653411273
+47,seven_feature_all_six_drugs,lidocaine,MLR,permeation_amount_ug_cm2,118,73,2490.677205,3110.1485653411273
+48,seven_feature_all_six_drugs,lidocaine,MLR,permeation_amount_ug_cm2,118,73,910.694674,3111.1154226295394
+49,seven_feature_all_six_drugs,lidocaine,MLR,permeation_amount_ug_cm2,118,73,2082.29003,3111.1154226295394
+50,seven_feature_all_six_drugs,lidocaine,MLR,permeation_amount_ug_cm2,118,73,910.694674,3114.0159945063783
+51,seven_feature_all_six_drugs,lidocaine,MLR,permeation_amount_ug_cm2,118,73,2082.29003,3114.0159945063783
+52,seven_feature_all_six_drugs,lidocaine,MLR,permeation_amount_ug_cm2,118,73,2862.848942,3116.9165663832173
+53,seven_feature_all_six_drugs,lidocaine,MLR,permeation_amount_ug_cm2,118,73,3555.688395,3116.9165663832173
+54,seven_feature_all_six_drugs,lidocaine,MLR,permeation_amount_ug_cm2,118,73,1895.431377,1282.909296790745
+55,seven_feature_all_six_drugs,lidocaine,MLR,permeation_amount_ug_cm2,118,73,1554.763163,1282.909296790745
+56,seven_feature_all_six_drugs,lidocaine,MLR,permeation_amount_ug_cm2,118,73,2482.766544,1282.909296790745
+57,seven_feature_all_six_drugs,lidocaine,MLR,permeation_amount_ug_cm2,118,73,4311.902742,3122.717710136895
+58,seven_feature_all_six_drugs,lidocaine,MLR,permeation_amount_ug_cm2,118,73,5205.483748,3122.717710136895
+59,seven_feature_all_six_drugs,lidocaine,MLR,permeation_amount_ug_cm2,118,73,5938.678996,3128.5188538905727
+60,seven_feature_all_six_drugs,lidocaine,MLR,permeation_amount_ug_cm2,118,73,6733.651992,3128.5188538905727
+61,seven_feature_all_six_drugs,lidocaine,MLR,permeation_amount_ug_cm2,118,73,4001.849144,1294.5115842981004
+62,seven_feature_all_six_drugs,lidocaine,MLR,permeation_amount_ug_cm2,118,73,3177.324831,1294.5115842981004
+63,seven_feature_all_six_drugs,lidocaine,MLR,permeation_amount_ug_cm2,118,73,7739.876585,3140.121141397928
+64,seven_feature_all_six_drugs,lidocaine,MLR,permeation_amount_ug_cm2,118,73,8482.669584,3140.121141397928
+65,seven_feature_all_six_drugs,lidocaine,MLR,permeation_amount_ug_cm2,118,73,1238.213787,2290.3538601868063
+66,seven_feature_all_six_drugs,lidocaine,MLR,permeation_amount_ug_cm2,118,73,1193.647249,2290.3538601868063
+67,seven_feature_all_six_drugs,lidocaine,MLR,permeation_amount_ug_cm2,118,73,4394.183075,1306.1138718054558
+68,seven_feature_all_six_drugs,lidocaine,MLR,permeation_amount_ug_cm2,118,73,4385.405754,1306.1138718054558
+69,seven_feature_all_six_drugs,lidocaine,MLR,permeation_amount_ug_cm2,118,73,4325.511402,1306.1138718054558
+70,seven_feature_all_six_drugs,lidocaine,MLR,permeation_amount_ug_cm2,118,73,12991.86928,3174.928003919995
+71,seven_feature_all_six_drugs,lidocaine,MLR,permeation_amount_ug_cm2,118,73,14274.00249,3174.928003919995
+72,seven_feature_all_six_drugs,lidocaine,MLR,permeation_amount_ug_cm2,118,73,3771.758529,2325.160722708873
+73,seven_feature_all_six_drugs,lidocaine,MLR,permeation_amount_ug_cm2,118,73,2418.211041,2325.160722708873
+74,seven_feature_all_six_drugs,lidocaine,MLR,permeation_amount_ug_cm2,118,73,3482.985285,2325.160722708873
+75,seven_feature_all_six_drugs,lidocaine,MLR,permeation_amount_ug_cm2,118,73,7033.95717,1340.9207343275225
+76,seven_feature_all_six_drugs,lidocaine,MLR,permeation_amount_ug_cm2,118,73,6277.653062,1340.9207343275225
+77,seven_feature_all_six_drugs,lidocaine,MLR,permeation_amount_ug_cm2,118,73,5923.531283,1340.9207343275225
+78,seven_feature_all_six_drugs,lidocaine,MLR,permeation_amount_ug_cm2,118,73,19622.03687,3331.558885269294
+79,seven_feature_all_six_drugs,lidocaine,MLR,permeation_amount_ug_cm2,118,73,21343.98269,3331.558885269294
+80,seven_feature_all_six_drugs,lidocaine,MLR,permeation_amount_ug_cm2,118,73,9210.233657,1503.3527594304994
+81,seven_feature_all_six_drugs,lidocaine,MLR,permeation_amount_ug_cm2,118,73,9354.956357,1503.3527594304994
+82,seven_feature_all_six_drugs,lidocaine,MLR,permeation_amount_ug_cm2,118,73,8482.038772,2499.1950353192055
+83,seven_feature_all_six_drugs,lidocaine,MLR,permeation_amount_ug_cm2,118,73,7373.773512,2499.1950353192055
+84,seven_feature_all_six_drugs,lidocaine,MLR,permeation_amount_ug_cm2,118,73,8217.700744,2499.1950353192055
+85,seven_feature_all_six_drugs,lidocaine,MLR,permeation_amount_ug_cm2,118,73,22412.30259,3383.7691790523936
+86,seven_feature_all_six_drugs,lidocaine,MLR,permeation_amount_ug_cm2,118,73,24210.37745,3383.7691790523936
+87,seven_feature_all_six_drugs,lidocaine,MLR,permeation_amount_ug_cm2,118,73,29009.78801,3383.7691790523936
+88,seven_feature_all_six_drugs,lidocaine,MLR,permeation_amount_ug_cm2,118,73,10460.91572,2534.001897841272
+89,seven_feature_all_six_drugs,lidocaine,MLR,permeation_amount_ug_cm2,118,73,8204.473607,2534.001897841272
+90,seven_feature_all_six_drugs,lidocaine,MLR,permeation_amount_ug_cm2,118,73,9566.054457,2534.001897841272
+91,seven_feature_all_six_drugs,lidocaine,MLR,permeation_amount_ug_cm2,118,73,12962.76232,1549.7619094599215
+92,seven_feature_all_six_drugs,lidocaine,MLR,permeation_amount_ug_cm2,118,73,10514.86409,1549.7619094599215
+93,seven_feature_all_six_drugs,lidocaine,MLR,permeation_amount_ug_cm2,118,73,11254.14165,1549.7619094599215
+179,seven_feature_all_six_drugs,lidocaine,MLR,permeation_amount_ug_cm2,118,73,2.039379206,18.027636721686576
+180,seven_feature_all_six_drugs,lidocaine,MLR,permeation_amount_ug_cm2,118,73,33.03484383,41.23221173639763
+181,seven_feature_all_six_drugs,lidocaine,MLR,permeation_amount_ug_cm2,118,73,144.6327434,76.0390742584641
+182,seven_feature_all_six_drugs,lidocaine,MLR,permeation_amount_ug_cm2,118,73,340.7408145,110.84593678053079
+183,seven_feature_all_six_drugs,lidocaine,MLR,permeation_amount_ug_cm2,118,73,2.05618266,18.027636721686576
+184,seven_feature_all_six_drugs,lidocaine,MLR,permeation_amount_ug_cm2,118,73,32.82946828,41.23221173639763
+185,seven_feature_all_six_drugs,lidocaine,MLR,permeation_amount_ug_cm2,118,73,136.2011436,76.0390742584641
+186,seven_feature_all_six_drugs,lidocaine,MLR,permeation_amount_ug_cm2,118,73,295.8251818,110.84593678053079
+187,seven_feature_all_six_drugs,lidocaine,MLR,permeation_amount_ug_cm2,118,73,2.020708701,18.027636721686576
+188,seven_feature_all_six_drugs,lidocaine,MLR,permeation_amount_ug_cm2,118,73,33.79660041,41.23221173639763
+189,seven_feature_all_six_drugs,lidocaine,MLR,permeation_amount_ug_cm2,118,73,147.2503481,76.0390742584641
+190,seven_feature_all_six_drugs,lidocaine,MLR,permeation_amount_ug_cm2,118,73,347.4677973,110.84593678053079
+33,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_amount_ug_cm2,118,73,1024.531509,236.8688455736265
+34,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_amount_ug_cm2,118,73,1109.929295,236.8688455736265
+35,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_amount_ug_cm2,118,73,1488.148502,236.8688455736265
+36,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_amount_ug_cm2,118,73,910.694674,236.8688455736265
+37,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_amount_ug_cm2,118,73,2219.250807,236.8688455736265
+38,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_amount_ug_cm2,118,73,2636.662022,236.8688455736265
+39,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_amount_ug_cm2,118,73,910.694674,236.8688455736265
+40,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_amount_ug_cm2,118,73,2082.29003,236.8688455736265
+41,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_amount_ug_cm2,118,73,2490.677205,236.8688455736265
+42,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_amount_ug_cm2,118,73,910.694674,236.8688455736265
+43,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_amount_ug_cm2,118,73,2082.29003,236.8688455736265
+44,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_amount_ug_cm2,118,73,2490.677205,236.8688455736265
+45,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_amount_ug_cm2,118,73,910.694674,236.8688455736265
+46,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_amount_ug_cm2,118,73,2082.29003,236.8688455736265
+47,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_amount_ug_cm2,118,73,2490.677205,236.8688455736265
+48,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_amount_ug_cm2,118,73,910.694674,236.8688455736265
+49,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_amount_ug_cm2,118,73,2082.29003,236.8688455736265
+50,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_amount_ug_cm2,118,73,910.694674,236.8688455736265
+51,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_amount_ug_cm2,118,73,2082.29003,236.8688455736265
+52,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_amount_ug_cm2,118,73,2862.848942,237.0287100616264
+53,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_amount_ug_cm2,118,73,3555.688395,237.0287100616264
+54,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_amount_ug_cm2,118,73,1895.431377,237.0287100616264
+55,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_amount_ug_cm2,118,73,1554.763163,237.0287100616264
+56,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_amount_ug_cm2,118,73,2482.766544,237.0287100616264
+57,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_amount_ug_cm2,118,73,4311.902742,237.0287100616264
+58,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_amount_ug_cm2,118,73,5205.483748,237.0287100616264
+59,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_amount_ug_cm2,118,73,5938.678996,237.1668486616264
+60,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_amount_ug_cm2,118,73,6733.651992,237.1668486616264
+61,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_amount_ug_cm2,118,73,4001.849144,237.1668486616264
+62,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_amount_ug_cm2,118,73,3177.324831,237.1668486616264
+63,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_amount_ug_cm2,118,73,7739.876585,361.65767779964756
+64,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_amount_ug_cm2,118,73,8482.669584,361.65767779964756
+65,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_amount_ug_cm2,118,73,1238.213787,361.65767779964756
+66,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_amount_ug_cm2,118,73,1193.647249,361.65767779964756
+67,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_amount_ug_cm2,118,73,4394.183075,361.65767779964756
+68,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_amount_ug_cm2,118,73,4385.405754,361.65767779964756
+69,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_amount_ug_cm2,118,73,4325.511402,361.65767779964756
+70,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_amount_ug_cm2,118,73,12991.86928,479.06940631012395
+71,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_amount_ug_cm2,118,73,14274.00249,479.06940631012395
+72,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_amount_ug_cm2,118,73,3771.758529,479.06940631012395
+73,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_amount_ug_cm2,118,73,2418.211041,479.06940631012395
+74,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_amount_ug_cm2,118,73,3482.985285,479.06940631012395
+75,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_amount_ug_cm2,118,73,7033.95717,479.06940631012395
+76,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_amount_ug_cm2,118,73,6277.653062,479.06940631012395
+77,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_amount_ug_cm2,118,73,5923.531283,479.06940631012395
+78,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_amount_ug_cm2,118,73,19622.03687,579.0113530734953
+79,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_amount_ug_cm2,118,73,21343.98269,579.0113530734953
+80,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_amount_ug_cm2,118,73,9210.233657,579.0113530734953
+81,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_amount_ug_cm2,118,73,9354.956357,579.0113530734953
+82,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_amount_ug_cm2,118,73,8482.038772,579.0113530734953
+83,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_amount_ug_cm2,118,73,7373.773512,579.0113530734953
+84,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_amount_ug_cm2,118,73,8217.700744,579.0113530734953
+85,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_amount_ug_cm2,118,73,22412.30259,582.3024728507929
+86,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_amount_ug_cm2,118,73,24210.37745,582.3024728507929
+87,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_amount_ug_cm2,118,73,29009.78801,582.3024728507929
+88,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_amount_ug_cm2,118,73,10460.91572,582.3024728507929
+89,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_amount_ug_cm2,118,73,8204.473607,582.3024728507929
+90,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_amount_ug_cm2,118,73,9566.054457,582.3024728507929
+91,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_amount_ug_cm2,118,73,12962.76232,582.3024728507929
+92,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_amount_ug_cm2,118,73,10514.86409,582.3024728507929
+93,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_amount_ug_cm2,118,73,11254.14165,582.3024728507929
+179,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_amount_ug_cm2,118,73,2.039379206,13.25570382027169
+180,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_amount_ug_cm2,118,73,33.03484383,21.45021252527264
+181,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_amount_ug_cm2,118,73,144.6327434,34.06740168140544
+182,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_amount_ug_cm2,118,73,340.7408145,43.65768905656803
+183,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_amount_ug_cm2,118,73,2.05618266,13.25570382027169
+184,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_amount_ug_cm2,118,73,32.82946828,21.45021252527264
+185,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_amount_ug_cm2,118,73,136.2011436,34.06740168140544
+186,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_amount_ug_cm2,118,73,295.8251818,43.65768905656803
+187,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_amount_ug_cm2,118,73,2.020708701,13.25570382027169
+188,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_amount_ug_cm2,118,73,33.79660041,21.45021252527264
+189,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_amount_ug_cm2,118,73,147.2503481,34.06740168140544
+190,seven_feature_all_six_drugs,lidocaine,RandomForest,permeation_amount_ug_cm2,118,73,347.4677973,43.65768905656803
+33,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_amount_ug_cm2,118,73,1024.531509,305.4064025878906
+34,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_amount_ug_cm2,118,73,1109.929295,305.4064025878906
+35,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_amount_ug_cm2,118,73,1488.148502,305.4064025878906
+36,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_amount_ug_cm2,118,73,910.694674,305.4064025878906
+37,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_amount_ug_cm2,118,73,2219.250807,305.4064025878906
+38,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_amount_ug_cm2,118,73,2636.662022,305.4064025878906
+39,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_amount_ug_cm2,118,73,910.694674,305.4064025878906
+40,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_amount_ug_cm2,118,73,2082.29003,305.4064025878906
+41,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_amount_ug_cm2,118,73,2490.677205,305.4064025878906
+42,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_amount_ug_cm2,118,73,910.694674,305.4064025878906
+43,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_amount_ug_cm2,118,73,2082.29003,305.4064025878906
+44,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_amount_ug_cm2,118,73,2490.677205,305.4064025878906
+45,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_amount_ug_cm2,118,73,910.694674,305.4064025878906
+46,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_amount_ug_cm2,118,73,2082.29003,305.4064025878906
+47,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_amount_ug_cm2,118,73,2490.677205,305.4064025878906
+48,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_amount_ug_cm2,118,73,910.694674,305.4064025878906
+49,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_amount_ug_cm2,118,73,2082.29003,305.4064025878906
+50,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_amount_ug_cm2,118,73,910.694674,305.4064025878906
+51,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_amount_ug_cm2,118,73,2082.29003,305.4064025878906
+52,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_amount_ug_cm2,118,73,2862.848942,306.5308532714844
+53,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_amount_ug_cm2,118,73,3555.688395,306.5308532714844
+54,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_amount_ug_cm2,118,73,1895.431377,306.5308532714844
+55,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_amount_ug_cm2,118,73,1554.763163,306.5308532714844
+56,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_amount_ug_cm2,118,73,2482.766544,306.5308532714844
+57,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_amount_ug_cm2,118,73,4311.902742,306.5308532714844
+58,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_amount_ug_cm2,118,73,5205.483748,306.5308532714844
+59,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_amount_ug_cm2,118,73,5938.678996,306.5308532714844
+60,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_amount_ug_cm2,118,73,6733.651992,306.5308532714844
+61,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_amount_ug_cm2,118,73,4001.849144,306.5308532714844
+62,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_amount_ug_cm2,118,73,3177.324831,306.5308532714844
+63,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_amount_ug_cm2,118,73,7739.876585,484.3809509277344
+64,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_amount_ug_cm2,118,73,8482.669584,484.3809509277344
+65,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_amount_ug_cm2,118,73,1238.213787,484.3809509277344
+66,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_amount_ug_cm2,118,73,1193.647249,484.3809509277344
+67,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_amount_ug_cm2,118,73,4394.183075,484.3809509277344
+68,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_amount_ug_cm2,118,73,4385.405754,484.3809509277344
+69,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_amount_ug_cm2,118,73,4325.511402,484.3809509277344
+70,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_amount_ug_cm2,118,73,12991.86928,632.120361328125
+71,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_amount_ug_cm2,118,73,14274.00249,632.120361328125
+72,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_amount_ug_cm2,118,73,3771.758529,632.120361328125
+73,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_amount_ug_cm2,118,73,2418.211041,632.120361328125
+74,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_amount_ug_cm2,118,73,3482.985285,632.120361328125
+75,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_amount_ug_cm2,118,73,7033.95717,632.120361328125
+76,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_amount_ug_cm2,118,73,6277.653062,632.120361328125
+77,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_amount_ug_cm2,118,73,5923.531283,632.120361328125
+78,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_amount_ug_cm2,118,73,19622.03687,656.151611328125
+79,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_amount_ug_cm2,118,73,21343.98269,656.151611328125
+80,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_amount_ug_cm2,118,73,9210.233657,656.151611328125
+81,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_amount_ug_cm2,118,73,9354.956357,656.151611328125
+82,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_amount_ug_cm2,118,73,8482.038772,656.151611328125
+83,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_amount_ug_cm2,118,73,7373.773512,656.151611328125
+84,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_amount_ug_cm2,118,73,8217.700744,656.151611328125
+85,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_amount_ug_cm2,118,73,22412.30259,751.9083862304688
+86,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_amount_ug_cm2,118,73,24210.37745,751.9083862304688
+87,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_amount_ug_cm2,118,73,29009.78801,751.9083862304688
+88,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_amount_ug_cm2,118,73,10460.91572,751.9083862304688
+89,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_amount_ug_cm2,118,73,8204.473607,751.9083862304688
+90,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_amount_ug_cm2,118,73,9566.054457,751.9083862304688
+91,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_amount_ug_cm2,118,73,12962.76232,751.9083862304688
+92,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_amount_ug_cm2,118,73,10514.86409,751.9083862304688
+93,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_amount_ug_cm2,118,73,11254.14165,751.9083862304688
+179,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_amount_ug_cm2,118,73,2.039379206,6.770495891571045
+180,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_amount_ug_cm2,118,73,33.03484383,16.780210494995117
+181,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_amount_ug_cm2,118,73,144.6327434,30.61062240600586
+182,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_amount_ug_cm2,118,73,340.7408145,38.270809173583984
+183,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_amount_ug_cm2,118,73,2.05618266,6.770495891571045
+184,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_amount_ug_cm2,118,73,32.82946828,16.780210494995117
+185,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_amount_ug_cm2,118,73,136.2011436,30.61062240600586
+186,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_amount_ug_cm2,118,73,295.8251818,38.270809173583984
+187,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_amount_ug_cm2,118,73,2.020708701,6.770495891571045
+188,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_amount_ug_cm2,118,73,33.79660041,16.780210494995117
+189,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_amount_ug_cm2,118,73,147.2503481,30.61062240600586
+190,seven_feature_all_six_drugs,lidocaine,XGBoost,permeation_amount_ug_cm2,118,73,347.4677973,38.270809173583984

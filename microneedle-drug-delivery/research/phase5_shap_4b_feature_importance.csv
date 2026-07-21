@@ -1,0 +1,8 @@
+model,feature,mean_abs_shap,rank
+4B_XGBoost_amount,Drug loading in MN patch (µg),3112.8417436689606,1
+4B_XGBoost_amount,Permeation time (hour),1693.7558416396535,2
+4B_XGBoost_amount,Drug MW (Dalton),111.5232330342238,3
+4B_XGBoost_amount,Skin type (rat =1; human = 2),81.85967629118116,4
+4B_XGBoost_amount,MN Length (mm),5.578225075574445,5
+4B_XGBoost_amount,MN surface area (mm2),3.2776261358985104,6
+4B_XGBoost_amount,MN type (hydrogel =1; plastic = 2),0.0,7

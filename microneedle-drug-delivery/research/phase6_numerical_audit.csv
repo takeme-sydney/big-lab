@@ -1,0 +1,117 @@
+claim,source_file,source_value,expected_paper_token,paper_token_occurrences,status,details
+Experimental 4A compound count,transfer_learning_run_manifest.csv,214,214,18,PASS,Experimental 4A compound count
+Experimental Yuan observation count,transfer_learning_run_manifest.csv,191,191,11,PASS,Experimental Yuan observation count
+Cosmetic screening count,transfer_learning_run_manifest.csv,48,48,15,PASS,Cosmetic screening count
+Descriptor-transfer eligible Yuan rows,transfer_learning_run_manifest.csv,134,134,2,PASS,Descriptor-transfer eligible Yuan rows
+BSA/copper excluded transfer rows,transfer_learning_run_manifest.csv,57,57,5,PASS,BSA/copper excluded transfer rows
+Curation missing values,phase2_curation_summary.csv,0.0,0,219,PASS,Curation missing values
+Curation duplicate canonical SMILES,phase2_curation_summary.csv,0.0,0,219,PASS,Curation duplicate canonical SMILES
+Curation leverage-flagged compounds,phase2_curation_summary.csv,11.0,11,7,PASS,Curation leverage-flagged compounds
+Curation leverage threshold,phase2_curation_summary.csv,0.1682242990654205,0.1682,1,PASS,Curation leverage threshold
+Curation IQR lower bound,phase2_curation_summary.csv,-6.15625,-6.156,1,PASS,Curation IQR lower bound
+Curation IQR upper bound,phase2_curation_summary.csv,0.87375,0.874,1,PASS,Curation IQR upper bound
+Skin logKp mean,phase3_eda_summary.csv,-2.6571261682242993,-2.657,1,PASS,Experimental 214-compound target distribution.
+Skin logKp std,phase3_eda_summary.csv,1.1684247804522634,1.168,1,PASS,Experimental 214-compound target distribution.
+Skin logKp 50%,phase3_eda_summary.csv,-2.6500000000000004,-2.650,1,PASS,Experimental 214-compound target distribution.
+Skin logKp min,phase3_eda_summary.csv,-6.0,-6.000,1,PASS,Experimental 214-compound target distribution.
+Skin logKp max,phase3_eda_summary.csv,0.12,0.120,1,PASS,Experimental 214-compound target distribution.
+VIF MolarRefractivity,phase3_vif.csv,35.40279798091884,35.403,1,PASS,Largest reported multicollinearity diagnostics.
+VIF MW,phase3_vif.csv,27.382948461030416,27.383,1,PASS,Largest reported multicollinearity diagnostics.
+VIF TPSA,phase3_vif.csv,13.76147405232349,13.761,1,PASS,Largest reported multicollinearity diagnostics.
+VIF NumHeteroatoms,phase3_vif.csv,8.812292642480449,8.812,1,PASS,Largest reported multicollinearity diagnostics.
+4A Potts-Guy pooled_r2,phase4a_model_performance.csv,-0.2356386095387932,-0.236,2,PASS,Pooled five-fold out-of-fold metric.
+4A Potts-Guy pooled_rmse,phase4a_model_performance.csv,1.2957744407042318,1.296,2,PASS,Pooled five-fold out-of-fold metric.
+4A Potts-Guy pooled_mae,phase4a_model_performance.csv,0.9509330486036992,0.951,1,PASS,Pooled five-fold out-of-fold metric.
+4A MLR pooled_r2,phase4a_model_performance.csv,0.2649973496202031,0.265,2,PASS,Pooled five-fold out-of-fold metric.
+4A MLR pooled_rmse,phase4a_model_performance.csv,0.9993741845234486,0.999,2,PASS,Pooled five-fold out-of-fold metric.
+4A MLR pooled_mae,phase4a_model_performance.csv,0.754748378147029,0.755,1,PASS,Pooled five-fold out-of-fold metric.
+4A RandomForest pooled_r2,phase4a_model_performance.csv,0.48385824262394,0.484,3,PASS,Pooled five-fold out-of-fold metric.
+4A RandomForest pooled_rmse,phase4a_model_performance.csv,0.837467905097449,0.837,2,PASS,Pooled five-fold out-of-fold metric.
+4A RandomForest pooled_mae,phase4a_model_performance.csv,0.6088766102024924,0.609,1,PASS,Pooled five-fold out-of-fold metric.
+4A XGBoost pooled_r2,phase4a_model_performance.csv,0.4312879088862669,0.431,2,PASS,Pooled five-fold out-of-fold metric.
+4A XGBoost pooled_rmse,phase4a_model_performance.csv,0.8790830473265774,0.879,2,PASS,Pooled five-fold out-of-fold metric.
+4A XGBoost pooled_mae,phase4a_model_performance.csv,0.6374367682399037,0.637,1,PASS,Pooled five-fold out-of-fold metric.
+4A GaussianProcess pooled_r2,phase4a_model_performance.csv,0.4923448034761006,0.492,5,PASS,Pooled five-fold out-of-fold metric.
+4A GaussianProcess pooled_rmse,phase4a_model_performance.csv,0.830554416996462,0.831,3,PASS,Pooled five-fold out-of-fold metric.
+4A GaussianProcess pooled_mae,phase4a_model_performance.csv,0.6215485739714551,0.622,3,PASS,Pooled five-fold out-of-fold metric.
+Cosmetics inside simple MW/LogP range,phase4a_ad_comparison.csv,38,38,11,PASS,Count of 48 cosmetics inside both existing range flags.
+Cosmetics inside leverage domain,phase4a_ad_comparison.csv,33,33,5,PASS,Count of 48 cosmetics at or below leverage threshold.
+Range-inside but leverage-outside cosmetics,phase4a_ad_comparison.csv,5,5,84,PASS,Disagreement count between simple and leverage applicability domains.
+Random split permeation_amount_ug_cm2 MLR pooled_r2,phase4b_random_split_performance.csv,0.1912274513931356,0.191,2,PASS,Fixed 70:30 Yuan test-set metric.
+Random split permeation_amount_ug_cm2 MLR pooled_rmse,phase4b_random_split_performance.csv,2795.6030185625464,"2,795.603",1,PASS,Fixed 70:30 Yuan test-set metric.
+Random split permeation_amount_ug_cm2 RandomForest pooled_r2,phase4b_random_split_performance.csv,0.9481400196534367,0.948,2,PASS,Fixed 70:30 Yuan test-set metric.
+Random split permeation_amount_ug_cm2 RandomForest pooled_rmse,phase4b_random_split_performance.csv,707.9106950534235,707.911,2,PASS,Fixed 70:30 Yuan test-set metric.
+Random split permeation_amount_ug_cm2 XGBoost pooled_r2,phase4b_random_split_performance.csv,0.967286259303752,0.967,5,PASS,Fixed 70:30 Yuan test-set metric.
+Random split permeation_amount_ug_cm2 XGBoost pooled_rmse,phase4b_random_split_performance.csv,562.2473319099707,562.247,3,PASS,Fixed 70:30 Yuan test-set metric.
+Random split permeation_percentage MLR pooled_r2,phase4b_random_split_performance.csv,0.935692468455355,0.936,2,PASS,Fixed 70:30 Yuan test-set metric.
+Random split permeation_percentage MLR pooled_rmse,phase4b_random_split_performance.csv,6.983726708617866,6.984,1,PASS,Fixed 70:30 Yuan test-set metric.
+Random split permeation_percentage RandomForest pooled_r2,phase4b_random_split_performance.csv,0.9615940595078,0.962,2,PASS,Fixed 70:30 Yuan test-set metric.
+Random split permeation_percentage RandomForest pooled_rmse,phase4b_random_split_performance.csv,5.39703853030204,5.397,1,PASS,Fixed 70:30 Yuan test-set metric.
+Random split permeation_percentage XGBoost pooled_r2,phase4b_random_split_performance.csv,0.9649880169623416,0.965,3,PASS,Fixed 70:30 Yuan test-set metric.
+Random split permeation_percentage XGBoost pooled_rmse,phase4b_random_split_performance.csv,5.153053731631109,5.153,1,PASS,Fixed 70:30 Yuan test-set metric.
+Random split permeation_amount_ug_cm2 Fick proxy R2,phase4b_random_split_performance.csv,-29.882520537739985,-29.883,1,PASS,"Explicitly labelled analytical Fick-proxy, not original C solver."
+Random split permeation_percentage Fick proxy R2,phase4b_random_split_performance.csv,-3.78008091955202,-3.780,1,PASS,"Explicitly labelled analytical Fick-proxy, not original C solver."
+Six-drug LODO amount Fick_diffusion_proxy pooled_r2,phase4b_lodo_performance.csv,-18.33615289633747,-18.336,2,PASS,Pooled six-drug leave-one-drug-out metric.
+Six-drug LODO amount Fick_diffusion_proxy pooled_rmse,phase4b_lodo_performance.csv,19835.665242387902,"19,835.665",2,PASS,Pooled six-drug leave-one-drug-out metric.
+Six-drug LODO amount Fick_diffusion_proxy pooled_mae,phase4b_lodo_performance.csv,11418.27487511872,"11,418.275",1,PASS,Pooled six-drug leave-one-drug-out metric.
+Six-drug LODO amount MLR pooled_r2,phase4b_lodo_performance.csv,-2.21275964435927,-2.213,2,PASS,Pooled six-drug leave-one-drug-out metric.
+Six-drug LODO amount MLR pooled_rmse,phase4b_lodo_performance.csv,8085.387756885484,"8,085.388",2,PASS,Pooled six-drug leave-one-drug-out metric.
+Six-drug LODO amount MLR pooled_mae,phase4b_lodo_performance.csv,5159.020603747607,"5,159.021",1,PASS,Pooled six-drug leave-one-drug-out metric.
+Six-drug LODO amount RandomForest pooled_r2,phase4b_lodo_performance.csv,-0.1616414780409625,-0.162,2,PASS,Pooled six-drug leave-one-drug-out metric.
+Six-drug LODO amount RandomForest pooled_rmse,phase4b_lodo_performance.csv,4861.807843140067,"4,861.808",2,PASS,Pooled six-drug leave-one-drug-out metric.
+Six-drug LODO amount RandomForest pooled_mae,phase4b_lodo_performance.csv,2318.9189589015105,"2,318.919",1,PASS,Pooled six-drug leave-one-drug-out metric.
+Six-drug LODO amount XGBoost pooled_r2,phase4b_lodo_performance.csv,-0.1217845604880933,-0.122,5,PASS,Pooled six-drug leave-one-drug-out metric.
+Six-drug LODO amount XGBoost pooled_rmse,phase4b_lodo_performance.csv,4777.6734605584425,"4,777.673",4,PASS,Pooled six-drug leave-one-drug-out metric.
+Six-drug LODO amount XGBoost pooled_mae,phase4b_lodo_performance.csv,2081.587728154605,"2,081.588",2,PASS,Pooled six-drug leave-one-drug-out metric.
+Six-drug LODO percentage RandomForest pooled_r2,phase4b_lodo_performance.csv,-0.0378288035003613,-0.038,1,PASS,Pooled six-drug leave-one-drug-out metric.
+Six-drug LODO percentage RandomForest pooled_rmse,phase4b_lodo_performance.csv,25.71766396734407,25.718,1,PASS,Pooled six-drug leave-one-drug-out metric.
+Six-drug LODO percentage RandomForest pooled_mae,phase4b_lodo_performance.csv,15.580351828963598,15.580,1,PASS,Pooled six-drug leave-one-drug-out metric.
+Six-drug LODO percentage XGBoost pooled_r2,phase4b_lodo_performance.csv,-0.1394699203101614,-0.139,1,PASS,Pooled six-drug leave-one-drug-out metric.
+Six-drug LODO percentage XGBoost pooled_rmse,phase4b_lodo_performance.csv,26.94759987049662,26.948,1,PASS,Pooled six-drug leave-one-drug-out metric.
+Six-drug LODO percentage XGBoost pooled_mae,phase4b_lodo_performance.csv,15.581359520159072,15.581,1,PASS,Pooled six-drug leave-one-drug-out metric.
+XGBoost LODO lidocaine pooled_rmse,phase4b_lodo_fold_metrics.csv,7700.964641788612,"7,700.965",1,PASS,Per-held-out-drug amount diagnostic.
+XGBoost LODO copper ions pooled_rmse,phase4b_lodo_fold_metrics.csv,132.33992021776083,132.340,1,PASS,Per-held-out-drug amount diagnostic.
+XGBoost LODO Rhodamine B pooled_rmse,phase4b_lodo_fold_metrics.csv,141.83960955566437,141.840,1,PASS,Per-held-out-drug amount diagnostic.
+Transfer amount seven_feature_small_molecules_only MLR R2,phase4b_transfer_lodo_performance.csv,-0.4839160948142216,-0.484,1,PASS,Four-small-molecule LODO amount result.
+Transfer amount seven_feature_small_molecules_only RandomForest R2,phase4b_transfer_lodo_performance.csv,-0.4755493223529812,-0.476,1,PASS,Four-small-molecule LODO amount result.
+Transfer amount seven_feature_small_molecules_only XGBoost R2,phase4b_transfer_lodo_performance.csv,-0.1899312766400018,-0.190,2,PASS,Four-small-molecule LODO amount result.
+Transfer amount eight_feature_transfer_small_molecules_only MLR R2,phase4b_transfer_lodo_performance.csv,-1.4014784414503776,-1.401,1,PASS,Four-small-molecule LODO amount result.
+Transfer amount eight_feature_transfer_small_molecules_only RandomForest R2,phase4b_transfer_lodo_performance.csv,-0.4929395724640062,-0.493,1,PASS,Four-small-molecule LODO amount result.
+Transfer amount eight_feature_transfer_small_molecules_only XGBoost R2,phase4b_transfer_lodo_performance.csv,-0.1899312766400018,-0.190,2,PASS,Four-small-molecule LODO amount result.
+Transfer eight-feature XGBoost pooled_rmse,phase4b_transfer_lodo_performance.csv,5678.075255019385,"5,678.075",1,PASS,Four-small-molecule LODO amount result.
+Transfer eight-feature XGBoost pooled_mae,phase4b_transfer_lodo_performance.csv,2759.965244645471,"2,759.965",1,PASS,Four-small-molecule LODO amount result.
+Bias mitigation baseline_7feature_amount_XGBoost pooled_r2,phase4b_bias_mitigation_performance.csv,-0.1217845604880933,-0.122,5,PASS,Six-drug LODO amount comparison.
+Bias mitigation baseline_7feature_amount_XGBoost pooled_rmse,phase4b_bias_mitigation_performance.csv,4777.6734605584425,"4,777.673",4,PASS,Six-drug LODO amount comparison.
+Bias mitigation baseline_7feature_amount_XGBoost learned_component_loading_importance,phase4b_bias_mitigation_performance.csv,0.6246158080053571,0.625,2,PASS,Six-drug LODO amount comparison.
+Bias mitigation percentage_first_no_loading_XGBoost pooled_r2,phase4b_bias_mitigation_performance.csv,0.0275791166000101,0.028,2,PASS,Six-drug LODO amount comparison.
+Bias mitigation percentage_first_no_loading_XGBoost pooled_rmse,phase4b_bias_mitigation_performance.csv,4448.246780107805,"4,448.247",2,PASS,Six-drug LODO amount comparison.
+Bias mitigation percentage_first_no_loading_XGBoost learned_component_loading_importance,phase4b_bias_mitigation_performance.csv,0.0,0.000,1,PASS,Six-drug LODO amount comparison.
+Physics augmentation experimental_only_two_descriptor pooled_r2,phase4b_physics_augmentation_metrics.csv,0.3115326385218906,0.312,2,PASS,Experimental test rows only; synthetic rows are separately flagged.
+Physics augmentation experimental_only_two_descriptor pooled_rmse,phase4b_physics_augmentation_metrics.csv,0.9672201872322332,0.967,5,PASS,Experimental test rows only; synthetic rows are separately flagged.
+Physics augmentation experimental_only_two_descriptor pooled_mae,phase4b_physics_augmentation_metrics.csv,0.7167540667324421,0.717,1,PASS,Experimental test rows only; synthetic rows are separately flagged.
+Physics augmentation experimental_only_two_descriptor n_synthetic_points_available_per_training_fold,phase4b_physics_augmentation_metrics.csv,0,0,219,PASS,Experimental test rows only; synthetic rows are separately flagged.
+Physics augmentation physics_augmented_two_descriptor pooled_r2,phase4b_physics_augmentation_metrics.csv,0.276675937217067,0.277,2,PASS,Experimental test rows only; synthetic rows are separately flagged.
+Physics augmentation physics_augmented_two_descriptor pooled_rmse,phase4b_physics_augmentation_metrics.csv,0.9914027760327598,0.991,1,PASS,Experimental test rows only; synthetic rows are separately flagged.
+Physics augmentation physics_augmented_two_descriptor pooled_mae,phase4b_physics_augmentation_metrics.csv,0.7316995462190323,0.732,1,PASS,Experimental test rows only; synthetic rows are separately flagged.
+Physics augmentation physics_augmented_two_descriptor n_synthetic_points_available_per_training_fold,phase4b_physics_augmentation_metrics.csv,100,100,8,PASS,Experimental test rows only; synthetic rows are separately flagged.
+Physics synthetic point count,phase4b_physics_augmented_points.csv,100,100,8,PASS,Rows generated by Potts–Guy grid.
+Physics synthetic flag,phase4b_physics_augmented_points.csv,true,is_synthetic_physics_augmented=True,1,PASS,All pseudo-points must retain explicit true flag.
+4A SHAP LogP,phase5_shap_4a_feature_importance.csv,0.3499802258387904,0.350,1,PASS,Mean absolute TreeSHAP value.
+4A SHAP MW,phase5_shap_4a_feature_importance.csv,0.3078163908838042,0.308,1,PASS,Mean absolute TreeSHAP value.
+4A SHAP MolarRefractivity,phase5_shap_4a_feature_importance.csv,0.1979935536907428,0.198,1,PASS,Mean absolute TreeSHAP value.
+4A SHAP HBD,phase5_shap_4a_feature_importance.csv,0.177263883749789,0.177,1,PASS,Mean absolute TreeSHAP value.
+4A SHAP TPSA,phase5_shap_4a_feature_importance.csv,0.1573929461578742,0.157,1,PASS,Mean absolute TreeSHAP value.
+4B SHAP Drug loading in MN patch (µg),phase5_shap_4b_feature_importance.csv,3112.8417436689606,"3,112.842",1,PASS,Mean absolute TreeSHAP value.
+4B SHAP Permeation time (hour),phase5_shap_4b_feature_importance.csv,1693.7558416396537,"1,693.756",1,PASS,Mean absolute TreeSHAP value.
+4B SHAP Drug MW (Dalton),phase5_shap_4b_feature_importance.csv,111.5232330342238,111.523,1,PASS,Mean absolute TreeSHAP value.
+Cosmetic predicted minimum,phase5_cosmetic_4a_predictions.csv,-4.9260785184886995,-4.926,1,PASS,4A screening only.
+Cosmetic predicted maximum,phase5_cosmetic_4a_predictions.csv,-1.2232357148143913,-1.223,1,PASS,4A screening only.
+Cosmetic predicted mean,phase5_cosmetic_4a_predictions.csv,-3.224117519099497,-3.224,1,PASS,4A screening only.
+Cosmetic predicted median,phase5_cosmetic_4a_predictions.csv,-3.312184805220047,-3.312,1,PASS,4A screening only.
+Cosmetic MN prediction count,phase5_cosmetic_4a_predictions.csv,0,is_microneedle_prediction=False,1,PASS,All cosmetics must remain 4A-only outputs.
+Cosmetic category median penetration_enhancer,phase5_cosmetic_category_summary.csv,-2.221510173732351,-2.222,1,PASS,Descriptive 4A category summary.
+Cosmetic category median anti_aging_retinoid,phase5_cosmetic_category_summary.csv,-4.3425052896186855,-4.343,1,PASS,Descriptive 4A category summary.
+Cosmetic in-training structural overlaps,phase5_cosmetic_training_overlap.csv,4,4,179,PASS,This count is explicitly not external validation.
+Paper states no cosmetic 4B use,paper.md,no cosmetic ingredient was passed through a 4B MN model,no cosmetic ingredient was passed through a 4B MN model,1,PASS,Boundary statement required by the implementation instructions.
+Paper labels Fick limitation,paper.md,not an exact reimplementation of the original C solver,not an exact reimplementation of the original C solver,1,PASS,Boundary statement required by the implementation instructions.
+Paper labels in-training cosmetic overlap,paper.md,rather than an external validation set,rather than an external validation set,1,PASS,Boundary statement required by the implementation instructions.
