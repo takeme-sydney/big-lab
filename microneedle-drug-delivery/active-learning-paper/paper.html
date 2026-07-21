@@ -305,7 +305,8 @@ Small-Data Case Study」に関するMarkdown正本のHTML閲覧版。</p>
                 Active learning reduces experiments needed within a
                 known chemical space</h3>
                 <figure>
-                <img src="../research/fig_active_learning_curves.png"
+                <img
+                src="../research/figures/fig_active_learning_curves.png"
                 alt="Learning curves comparing acquisition strategies, and experiments needed to reach a target accuracy" />
                 <figcaption aria-hidden="true">Learning curves comparing
                 acquisition strategies, and experiments needed to reach
@@ -338,7 +339,7 @@ Small-Data Case Study」に関するMarkdown正本のHTML閲覧版。</p>
                 Active learning does not rescue prediction for a drug
                 class absent from training</h3>
                 <figure>
-                <img src="../research/fig_lodo_comparison.png"
+                <img src="../research/figures/fig_lodo_comparison.png"
                 alt="Test RMSE by held-out drug and acquisition strategy in the leave-one-drug-out setting" />
                 <figcaption aria-hidden="true">Test RMSE by held-out
                 drug and acquisition strategy in the leave-one-drug-out
@@ -461,16 +462,17 @@ Small-Data Case Study」に関するMarkdown正本のHTML閲覧版。</p>
                 Availability</h2>
                 <p>The repository preserves the reconstructed Yuan
                 dataset
-                (<code>yuan2023_dataset_with_descriptors.csv</code>),
+                (<code>data/processed/yuan2023_dataset_with_descriptors.csv</code>),
                 the archived numerical outputs
-                (<code>active_learning_curves_within_distribution.csv</code>,
-                <code>experiments_to_threshold.csv</code>, and
-                <code>lodo_active_learning_results.csv</code>), and the
-                figures underlying this note
-                (<code>fig_active_learning_curves.png</code> and
-                <code>fig_lodo_comparison.png</code>) under
+                (<code>data/results/active_learning_curves_within_distribution.csv</code>,
+                <code>data/results/experiments_to_threshold.csv</code>,
+                and
+                <code>data/results/lodo_active_learning_results.csv</code>),
+                and the figures underlying this note
+                (<code>figures/fig_active_learning_curves.png</code> and
+                <code>figures/fig_lodo_comparison.png</code>) under
                 <code>../research/</code>. The available
-                <code>active_learning.py</code> implements the
+                <code>src/active_learning.py</code> implements the
                 acquisition functions <code>select_random</code>,
                 <code>select_gp_uncertainty</code>, and
                 <code>select_rf_qbc</code>, together with

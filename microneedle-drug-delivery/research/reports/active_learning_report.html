@@ -9,14 +9,14 @@
 Labの「後ろ向き能動学習シミュレーション:マイクロニードル薬物透過予測の実験計画最適化」に関するMarkdown正本のHTML閲覧版。">
   <title>後ろ向き能動学習シミュレーション:マイクロニードル薬物透過予測の実験計画最適化 · BiG Lab</title>
   <link rel="alternate" type="text/markdown" href="active_learning_report.md" title="Markdown source">
-    <link rel="stylesheet" href="../../shared/website/assets/research-document.css">
+    <link rel="stylesheet" href="../../../shared/website/assets/research-document.css">
     </head>
 <body class="research-document">
   <a class="skip-link" href="#document-content">本文へ移動</a>
 
   <header class="document-topbar">
     <div class="document-topbar-inner">
-      <a class="document-brand" href="../../shared/website/index.html" aria-label="BiG Lab 資料一覧へ">
+      <a class="document-brand" href="../../../shared/website/index.html" aria-label="BiG Lab 資料一覧へ">
         <span class="document-brand-mark" aria-hidden="true">B</span>
         <span class="document-brand-copy">
           <strong>BiG Lab</strong>
@@ -25,7 +25,7 @@ Labの「後ろ向き能動学習シミュレーション:マイクロニード�
       </a>
 
       <nav class="document-actions" aria-label="文書ナビゲーション">
-        <a href="../../shared/website/index.html">資料一覧</a>
+        <a href="../../../shared/website/index.html">資料一覧</a>
         <a class="source-action" href="active_learning_report.md">Markdown正本 <span aria-hidden="true">↗</span></a>
       </nav>
     </div>
@@ -299,13 +299,15 @@ Labの「後ろ向き能動学習シミュレーション:マイクロニード�
                 </ul>
                 <h2
                 id="利用可能な実装と成果物">利用可能な実装と成果物</h2>
-                <p>本レポートと同じ <code>research/</code>
-                ディレクトリに、獲得戦略と単一学習曲線を実装した
-                <code>active_learning.py</code>、入力データ
-                <code>yuan2023_dataset_with_descriptors.csv</code>、結果CSV
-                <code>active_learning_curves_within_distribution.csv</code>、<code>experiments_to_threshold.csv</code>、
-                <code>lodo_active_learning_results.csv</code>、および対応する図
-                <code>fig_active_learning_curves.png</code>、<code>fig_lodo_comparison.png</code>
+                <p><code>research/</code>
+                配下には、獲得戦略と単一学習曲線を実装した
+                <code>src/active_learning.py</code>、入力データ
+                <code>data/processed/yuan2023_dataset_with_descriptors.csv</code>、
+                結果CSV
+                <code>data/results/active_learning_curves_within_distribution.csv</code>、
+                <code>data/results/experiments_to_threshold.csv</code>、<code>data/results/lodo_active_learning_results.csv</code>、
+                および対応する図
+                <code>figures/fig_active_learning_curves.png</code>、<code>figures/fig_lodo_comparison.png</code>
                 がある。</p>
                 <p><code>active_learning.py</code> には
                 <code>run_active_learning_curve()</code> と
@@ -336,7 +338,7 @@ Labの「後ろ向き能動学習シミュレーション:マイクロニード�
       <p>Markdown is canonical. HTML is the synchronized reading view.</p>
     </div>
     <div class="document-footer-links">
-      <a href="../../shared/website/index.html">資料一覧へ戻る</a>
+      <a href="../../../shared/website/index.html">資料一覧へ戻る</a>
       <a href="active_learning_report.md">Markdownを開く</a>
     </div>
   </footer>

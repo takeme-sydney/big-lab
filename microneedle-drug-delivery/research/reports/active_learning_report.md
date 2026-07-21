@@ -92,11 +92,11 @@ Yuan 2023がDiscussionで指摘した限界は、能動学習だけでは克服�
 
 ## 利用可能な実装と成果物
 
-本レポートと同じ `research/` ディレクトリに、獲得戦略と単一学習曲線を実装した
-`active_learning.py`、入力データ `yuan2023_dataset_with_descriptors.csv`、結果CSV
-`active_learning_curves_within_distribution.csv`、`experiments_to_threshold.csv`、
-`lodo_active_learning_results.csv`、および対応する図
-`fig_active_learning_curves.png`、`fig_lodo_comparison.png` がある。
+`research/` 配下には、獲得戦略と単一学習曲線を実装した
+`src/active_learning.py`、入力データ `data/processed/yuan2023_dataset_with_descriptors.csv`、
+結果CSV `data/results/active_learning_curves_within_distribution.csv`、
+`data/results/experiments_to_threshold.csv`、`data/results/lodo_active_learning_results.csv`、
+および対応する図 `figures/fig_active_learning_curves.png`、`figures/fig_lodo_comparison.png` がある。
 
 `active_learning.py` には `run_active_learning_curve()` と `STRATEGIES` 辞書があるが、
 データ読み込み、10反復の分割、leave-one-drug-outループ、CSV書き出し、図生成を

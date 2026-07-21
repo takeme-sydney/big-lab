@@ -129,7 +129,7 @@ from training.
 
 ### 3.1 Active learning reduces experiments needed within a known chemical space
 
-![Learning curves comparing acquisition strategies, and experiments needed to reach a target accuracy](../research/fig_active_learning_curves.png)
+![Learning curves comparing acquisition strategies, and experiments needed to reach a target accuracy](../research/figures/fig_active_learning_curves.png)
 
 **Figure 1.** (a) Test R² as a function of training set size for three
 acquisition strategies (mean ± SEM over 10 repeats). (b) Number of
@@ -151,7 +151,7 @@ At the largest simulated training-set size (117 points, 61% of the complete
 
 ### 3.2 Active learning does not rescue prediction for a drug class absent from training
 
-![Test RMSE by held-out drug and acquisition strategy in the leave-one-drug-out setting](../research/fig_lodo_comparison.png)
+![Test RMSE by held-out drug and acquisition strategy in the leave-one-drug-out setting](../research/figures/fig_lodo_comparison.png)
 
 **Figure 2.** Test RMSE (log₁₀ permeation amount) for each held-out drug,
 comparing acquisition strategies trained on the remaining five compounds.
@@ -248,12 +248,13 @@ inclusion of molecular descriptors, rather than experiment scheduling alone.
 ## Data and Code Availability
 
 The repository preserves the reconstructed Yuan dataset
-(`yuan2023_dataset_with_descriptors.csv`), the archived numerical outputs
-(`active_learning_curves_within_distribution.csv`,
-`experiments_to_threshold.csv`, and `lodo_active_learning_results.csv`), and
-the figures underlying this note (`fig_active_learning_curves.png` and
-`fig_lodo_comparison.png`) under `../research/`. The available
-`active_learning.py` implements the acquisition functions `select_random`,
+(`data/processed/yuan2023_dataset_with_descriptors.csv`), the archived
+numerical outputs (`data/results/active_learning_curves_within_distribution.csv`,
+`data/results/experiments_to_threshold.csv`, and
+`data/results/lodo_active_learning_results.csv`), and the figures underlying
+this note (`figures/fig_active_learning_curves.png` and
+`figures/fig_lodo_comparison.png`) under `../research/`. The available
+`src/active_learning.py` implements the acquisition functions `select_random`,
 `select_gp_uncertainty`, and `select_rf_qbc`, together with
 `run_active_learning_curve()` for an individual learning curve.
 
