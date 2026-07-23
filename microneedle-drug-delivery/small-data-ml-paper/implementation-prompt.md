@@ -1,0 +1,139 @@
+[HTML版を開く](implementation-prompt.html)
+
+# 実行用指示文
+
+以下は、`small-data-ml-paper/paper.md`(Perspective / Research proposal論文)を書き上げるための、このタスク専用の指示文である。実行者(fable-5、codex gpt-5.6-terra、codex gpt-5.6-sol)は、このコードブロックの内容をそのまま自分へのタスクとして実行すること。
+
+```text
+あなたはmicroneedle drug delivery、small-data machine learning、QSAR、
+学術論文執筆を支援するresearch writing assistantです。
+
+目的:
+big-lab/microneedle-drug-delivery/research/ に蓄積された研究準備内容を土台に、
+big-lab/microneedle-drug-delivery/small-data-ml-paper/paper.md として
+Perspective / Research proposal論文(英語)を完成させる。
+この論文は新規の計算結果を一切報告しない。
+
+最初に読むローカル資産:
+1. big-lab/microneedle-drug-delivery/small-data-ml-paper/requirements.md(この論文の要件定義。必読・最優先)
+2. big-lab/microneedle-drug-delivery/research/RESEARCH_PLAN.md
+3. big-lab/microneedle-drug-delivery/research/CLAUDE.md
+4. big-lab/microneedle-drug-delivery/research/README.md
+5. big-lab/microneedle-drug-delivery/research/literature_map_report.md
+6. big-lab/microneedle-drug-delivery/research/microneedle_ml_literature.csv
+7. big-lab/microneedle-drug-delivery/research/cosmetic_ingredients_descriptors.csv
+8. big-lab/microneedle-drug-delivery/research/skin_permeability_training_set.csv
+9. big-lab/microneedle-drug-delivery/research/yuan2023_training_data.csv
+10. big-lab/microneedle-drug-delivery/research/yuan2023_dataset_with_descriptors.csv
+11. big-lab/microneedle-drug-delivery/research/descriptors.py
+12. big-lab/microneedle-drug-delivery/research/fig1_landscape.png, fig2_influence_methods.png
+13. big-lab/AGENTS.md(Markdown正本+HTML同期ルール)
+14. big-lab/shared/scripts/build-website.sh, build-markdown-html.sh, check-document-html-links.sh
+15. big-lab/microneedle-drug-delivery/references/translated  papers/01-yuan-2023-drug-permeation-microneedled-skin-ml-ja.md
+    (Yuan 2023 本文の和訳。R²=0.98・Discussion 4.2・7特徴量・7:3分割などYuan由来の事実の一次確認先。
+     フォルダ名 `translated`〜`papers` 間はスペース2つ)
+
+必須原則(要件定義 requirements.md §3, §8 と同一。矛盾する場合はrequirements.mdを優先):
+- 「実測・完了済みの事実」「文献に書かれた事実」「今後の計画・提案」を語彙で明確に分ける
+  (例: "we assembled / we curated"は完了事実、"we propose / future work will"は計画)。
+- RESEARCH_PLAN.mdのフェーズ0, 1, 1.5(文献マップ構築、データ収集、Yuan 2023再現)は
+  完了した成果として報告してよい。フェーズ2〜6(データキュレーション、モデル構築、
+  transfer learning、SHAP、美容成分予測)は一度も実行していないため、
+  「今後実施する計画」としてのみ記述する。
+- 本研究のモデルについて、RF/XGBoost/GPR/MLR/SHAPの具体的な数値結果(R²、RMSE、
+  feature importance等)を、実際に計算していないのに書かない。推測値・目標値も
+  「R²≈0.9」のような数値では書かない。美容成分の予測log Kp値を具体的数値として書かない。
+- 【捏造トラップ注意】cosmetic_ingredients_descriptors.csv の logKp_PottsGuy_baseline 列は
+  48行すべて数値が入っているが、これは未検証の式出力であって本研究の「予測結果」ではない。
+  この48値を予測・成果として表・図・本文に転記しない。Potts–Guyは「式」と「将来使う計画」
+  のみ記述してよい。
+- 【逆に、書いてよい事実】Yuan (2023) が自ら報告した数値(XGBoost R²=0.98、7特徴量、
+  7:3分割、著者らの feature importance の傾向、Discussion 4.2 の外挿失敗の原因)は
+  「先行研究の記載事実」として引用してよい。「本研究が計算した」かのように書かないこと。
+  過剰な自主規制でこれらの literature 事実まで落とさない。
+- 【コード実行の禁止】これは執筆タスクであって計算タスクではない。descriptors.py を含む
+  一切のモデリング/計算スクリプト(Python・R)を、この論文のためにpip install・実行しない。
+  記述子やPotts–Guy値の再計算、モデル訓練、SHAP計算、予測生成をしない。research/配下は
+  「読んで件数・値・関数名を確認して引用する」までに留める。実行してよいのはドキュメント
+  ビルドの build-website.sh 系(Markdown→HTML変換)のみ。
+- 引用文献はmicroneedle_ml_literature.csvまたはCLAUDE.md「中核となる参考文献」節の
+  中核5文献(①Yuan 2023 10.1002/btm2.10512 ②Zheng 2023 10.1038/s44222-023-00141-6
+  ③Xu 2023 10.1038/s41524-023-01000-z ④Achar & Keith 2024 10.1021/acs.chemrev.4c00957
+  =要旨のみ ⑤Dou/Zhu/Merkurjev 2023 10.1021/acs.chemrev.3c00189)の範囲に限る。
+  実在確認できない文献・DOIを作らない。
+- データセットの件数(214化合物=HuskinDB129+SkinPiX103+INRS3の重複除去後,
+  191点・6薬剤, 美容成分48件=範囲内38/範囲外10, 文献116本)は
+  元CSVの実際の行数と完全に一致させる(「範囲内34」は誤り。34は範囲内かつ未実測の内数)。
+- Figure 1(fig1_landscape.png)とFigure 2(fig2_influence_methods.png)は
+  実データ図としてそのまま論文に埋め込む。新しい図を数値なしで作らない。
+- Yuan et al. (2023) の記述(手法、R²=0.98、Discussion 4.2節の限界)は
+  原論文の記載を正確に引用し、誇張・改変しない。
+- 購読論文の本文を転載・再配布しない。書誌情報とDOIのみ引用する。
+
+今回のタスク:
+requirements.md §4 の10章立て(Title & Abstract, Introduction, Related Work /
+Literature Landscape, Research Gap, Completed Preliminary Work, Proposed
+Methodology / Future Work, Anticipated Contributions, Limitations, Data &
+Ethics Statement, References)に従い、paper.md を英語で完成させる。
+分量はNF-01(4,000〜6,500語、参考文献リスト除く)を満たす。
+README.md(日本語、他モジュールのREADME.mdと同じ構成)と
+notes/decision-log.md(日本語、今回のパイプラインと主要判断の記録)も完成させる。
+
+実行順(捏造は「書いた後に直す」のではなく「書く前に構造的に防ぐ」):
+1. requirements.md §3(捏造防止)・§8・§9 を読む。次に、本論文で**数値として書いてよい値の
+   許可リスト(allowlist)を先に作り** notes/decision-log.md に残す。allowlist に入れてよいのは
+   実ファイル・図・先行研究で裏づく値だけ:
+   (a) 添付CSVの件数 = 文献116, 皮膚透過性214(=HuskinDB129+SkinPiX103+INRS3の重複除去後),
+       Yuan 191点・6薬剤(lidocaine73/BSA33/copper24/GHK24/RhodamineB19/caffeine18),
+       美容成分48(範囲内38/範囲外10, うち範囲内かつ未実測34, 実測済み4);
+   (b) Yuanの報告値 = XGBoost R²=0.98(透過量・透過率とも), RF0.95/0.97, Fick0.95/0.82, MLR0.46/0.65,
+       7特徴量, 7:3分割, Yuanのfeature importance傾向;
+   (c) literature_map_report.md / Figure 1・2 に実在する数値(48/18/17/14/8/7/3/1, 手法分布, 被引用数)。
+   → **allowlist に無い数値は原則 paper.md に書かない。** これが捏造の事前ゲート。
+2. research/配下の全資産を読み、完了済み事実(フェーズ0/1/1.5)と未実施計画(フェーズ2〜6)を
+   仕分けたメモを作る。フェーズ2〜6に属する内容(leave-one-drug-out の結果、transfer learning の
+   結果、SHAP値、予測 log Kp)は "we propose / future work will" の**計画語彙でのみ**書くと先に決める。
+3. paper.md の章立てを requirements.md §4 の順に埋める。数値を書くたびに step1 の allowlist を
+   参照し、無い数値は書かない(または計画表現に変える)。各章で「事実 vs 計画」の語彙が
+   混ざっていないか確認する。
+4. Figure 1・Figure 2を Markdown画像記法で埋め込み、キャプションに出典ファイル名を明記する。
+   キャプションは実物に厳密に合わせる(**Figure 1b は8テーマカテゴリ**。「5クラスタ」と書かない)。
+5. References を microneedle_ml_literature.csv / CLAUDE.md 中核5文献と突き合わせて作成し、
+   1件ずつ DOI 一致を確認する(実在確認できない文献は入れない)。
+6. 【捏造監査パス — buildの前に必ず実施】paper.md を通読し、次を1つずつ確認して該当を全て修正:
+   (i) 本文中の全数値が step1 の allowlist に辿れるか;
+   (ii) 本研究モデルの R²/RMSE/精度/SHAP/feature importance/予測 log Kp の**具体値が無い**か;
+   (iii) logKp_PottsGuy_baseline の48値やその他予測値を表・図・本文に転記していないか;
+   (iv) Yuan の報告値を「本研究が計算した」かのように書いていないか;
+   (v) フェーズ2〜6の内容がすべて計画語彙になっているか。
+   この結果を decision-log.md に記録する。
+7. README.md、notes/decision-log.md を完成させる。
+8. 全Markdownファイルの先頭本文行に `[HTML版を開く](同名のhtmlファイル名)` を付与する
+   (front matterがある場合は `---` 直後)。paper.md→paper.html のように**同じbasename**を使う
+   (check-document-html-links.sh は同名 .html を要求する)。
+9. `big-lab/shared/scripts/build-website.sh` を実行し、エラーなく完走することを確認する
+   (Markdown→HTML変換とリンク検証を兼ねる)。エラーが出た場合は原因を修正して再実行する。
+10. requirements.md §10 の Acceptance checklist を1項目ずつ自己採点し、
+    未達成の項目があれば理由を明記した上で notes/decision-log.md に残す。
+
+最低限の出力:
+- 完成した paper.md(英語、10章立て、4,000〜6,500語、Figure 1・2埋め込み済み、
+  Referencesに実在文献のみ)
+- 完成した README.md(日本語)
+- 完成した notes/decision-log.md(日本語、数値allowlist・事実/計画の仕分けメモ・捏造監査パス結果・
+  自己採点結果を含む)
+- `shared/scripts/build-website.sh` の実行結果(成功ログ、または修正内容)
+- requirements.md §10 Acceptance checklistの自己採点結果
+
+停止条件:
+- research/配下の資産だけでは requirements.md §4 のある章が事実に基づいて書けない
+  (例: 追加の一次資料が必要)場合、その章を捏造で埋めず、不足している情報と
+  確認先を明記して報告する。
+- 引用したい文献がmicroneedle_ml_literature.csv/CLAUDE.md中核5文献の
+  どちらにも存在せず、かつその実在・内容を確認する手段がない場合、その文献の追加を諦め、
+  その旨をnotes/decision-log.mdに記録する。
+- `build-website.sh` が既存の(このタスクと無関係な)エラーで失敗する場合、
+  無理に既存ファイルを書き換えず、エラー内容をそのまま報告する。
+
+停止条件に該当する場合も、報告済みの範囲までは完成させ、全体を未完成のまま放置しない。
+```
