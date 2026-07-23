@@ -1,3 +1,5 @@
+[HTML版を開く](README.html)
+
 # 美容有効成分の皮膚透過性QSAR/MLモデル
 
 化粧品有効成分の皮膚透過性(log Kp)を分子記述子から予測する機械学習モデル。
@@ -5,12 +7,17 @@ Yuan et al. (2023) のマイクロニードル透過予測研究の手法を化�
 
 ## ディレクトリ構成
 ```
-data/raw/               # 生データ(HuskinDB, SkinPiX, INRSの原本)
-data/processed/         # 前処理済みデータセット
-src/descriptors.py      # 分子記述子計算モジュール
-notebooks/               # 解析ノートブック
-CLAUDE.md                # プロジェクト文脈(Claude Code用)
-RESEARCH_PLAN.md         # 研究計画・進捗
+data/raw/                # 生データ(HuskinDB, SkinPiX, INRSの原本、文献コーパス)
+data/processed/          # 前処理済みデータセット
+data/results/            # 解析結果CSV(能動学習シミュレーション等)
+src/descriptors.py       # 分子記述子計算モジュール
+src/active_learning.py   # 能動学習シミュレーション(獲得戦略・学習曲線)
+figures/                  # 図表(PNG)
+reports/                  # 完成済みレポート(md/html)
+notebooks/                # 解析ノートブック
+CLAUDE.md                 # プロジェクト文脈(Claude Code用)
+RESEARCH_PLAN.md          # 研究計画・進捗
+requirements.txt          # Python依存パッケージ
 ```
 
 ## セットアップ

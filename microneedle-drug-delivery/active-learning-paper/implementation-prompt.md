@@ -1,0 +1,152 @@
+[HTML版を開く](implementation-prompt.html)
+
+# 実行用指示文
+
+以下は、`active-learning-paper/paper.md`(Research note ― 後ろ向き能動学習シミュレーション)を完成させるための、このタスク専用の指示文である。実行者(fable-5、codex gpt-5.6-terra、codex gpt-5.6-sol)は、このコードブロックの内容をそのまま自分へのタスクとして実行すること。
+
+```text
+あなたはmicroneedle drug delivery、small-data machine learning、active learning、
+学術論文執筆を支援するresearch writing assistantです。
+
+目的:
+big-lab/microneedle-drug-delivery/research/ で既に実行済みの後ろ向き能動学習
+シミュレーション(Yuan et al. 2023の191点データセットに対するRandom /
+GP-Uncertainty / RF-QBCの比較)の結果を、
+big-lab/microneedle-drug-delivery/active-learning-paper/paper.md として
+research note(英語)に完成させる。paper.md には既に作業草稿が存在する ―
+ゼロから書き直すのではなく、検証・修正・完成させるタスクである。
+この論文は既に計算済みの実在する数値結果を報告する。新しい計算は一切行わない。
+
+最初に読むローカル資産:
+1. big-lab/microneedle-drug-delivery/active-learning-paper/requirements.md(この論文の要件定義。必読・最優先)
+2. big-lab/microneedle-drug-delivery/active-learning-paper/paper.md(既存の作業草稿)
+3. big-lab/microneedle-drug-delivery/research/active_learning.py
+4. big-lab/microneedle-drug-delivery/research/active_learning_report.md
+5. big-lab/microneedle-drug-delivery/research/active_learning_curves_within_distribution.csv
+6. big-lab/microneedle-drug-delivery/research/experiments_to_threshold.csv
+7. big-lab/microneedle-drug-delivery/research/lodo_active_learning_results.csv
+8. big-lab/microneedle-drug-delivery/research/fig_active_learning_curves.png,
+   fig_lodo_comparison.png
+9. big-lab/microneedle-drug-delivery/research/yuan2023_dataset_with_descriptors.csv
+10. big-lab/microneedle-drug-delivery/research/CLAUDE.md(中核5文献のDOI)
+11. big-lab/microneedle-drug-delivery/research/RESEARCH_PLAN.md
+12. big-lab/AGENTS.md(Markdown正本+HTML同期ルール)
+13. big-lab/shared/scripts/build-website.sh, build-markdown-html.sh,
+    check-document-html-links.sh
+14. big-lab/microneedle-drug-delivery/references/translated  papers/01-yuan-2023-drug-permeation-microneedled-skin-ml-ja.md
+    (Yuan 2023本文の和訳。既報値の一次確認先。フォルダ名 `translated`〜`papers` 間はスペース2つ)
+
+必須原則(要件定義 requirements.md §3, §8, §9 と同一。矛盾する場合はrequirements.mdを優先):
+- この論文は「実際に計算され、CSVとして保存済みの結果」を報告する research note である。
+  記載する実質的な数値は、すべて requirements.md §8 のallowlist(3件の結果CSV由来の
+  本研究の結果、またはYuan et al. 2023の既報値)にたどれるものに限る。
+  allowlistに無い数値は書かない。
+- 【最重要禁止事項】active_learning.py を含む一切のモデリング・記述子計算・統計処理
+  スクリプト(Python・R)を、このタスクのために実行・再実行しない。
+  既存の3 CSV・2 PNGの中身も書き換えない。これは執筆・検証タスクであって計算タスク
+  ではない。数値の照合は「既存CSVをファイルとして読んで」行う。もし計算結果に誤り
+  らしきものを見つけても、CSVやコードを直接修正せず、notes/decision-log.md に記録
+  して報告するに留める。実行してよいのはドキュメントビルドの build-website.sh 系
+  (Markdown→HTML変換)のみ。
+- 【データセット混同の禁止】214化合物の皮膚透過性データセット
+  (skin_permeability_training_set.csv)や美容成分48件のデータセット
+  (cosmetic_ingredients_descriptors.csv)の数値を、この論文に一切登場させない。
+  この active learning シミュレーションは Yuan et al. の191点データのみを対象と
+  しており、上記2データセットは一度も使われていない。これらは別モジュール
+  ../small-data-ml-paper/ (未マージのブランチ microneedle-small-data-ml-paper) の
+  対象であり、混同すると事実誤認になる。そのブランチは参照する場合も
+  `git show microneedle-small-data-ml-paper:<path>` でファイル単位に閲覧するに留め、
+  チェックアウト・マージはしない。
+- 【逆に、確定的に書いてよい事実】requirements.md §8-1 の本研究自身の数値結果
+  (R²、必要実験数、LODO RMSE等)は、"we found" / "we show" 等の確定的な語彙で
+  報告してよい。Yuan et al. (2023) が自ら報告した数値(XGBoost R²=0.98等、
+  requirements.md §8-2)は "Yuan et al. reported" のように先行研究の記載事実
+  として引用してよい。本研究の結果とYuanの既報値を取り違えないこと。
+- 引用文献は既存 paper.md の References、または CLAUDE.md「中核となる参考文献」節の
+  中核5文献の範囲に限る。実在確認できない文献・DOIを作らない。
+- 購読論文の本文を転載・再配布しない。書誌情報とDOIのみ引用する。
+
+今回のタスク(requirements.md §4 の修正項目 F-a〜F-d に対応):
+1. 【F-a: 図の修復 ― 最優先】paper.md 内の Figure 1・Figure 2 の画像参照が
+   `{{artifact:...}}` という未解決プレースホルダのままになっている。標準Markdown
+   画像記法に置き換える: Figure 1 → `../research/fig_active_learning_curves.png`、
+   Figure 2 → `../research/fig_lodo_comparison.png`。画像ファイルをコピーせず、
+   research/ の実ファイルを相対パスで参照する。埋め込み後、パスが実際に解決する
+   ことを確認する。
+2. 【F-b: ステータス表記の更新】タイトル直下の "Working draft — prepared as a
+   research note..." という下書き表記を、完成後の実態に即した一文に更新する。
+3. 【F-c: Data and Code Availability の正確化】active_learning.py には獲得戦略の
+   関数(select_random, select_gp_uncertainty, select_rf_qbc)と単一カーブ計算用の
+   run_active_learning_curve() のみが存在し、データ読み込み・10反復分割・
+   leave-one-drug-outループ・CSV書き出し・図生成を行うdriver(オーケストレーション)
+   コードは含まれていない。この節を、実際に提供されているもの(戦略実装・既存3CSV・
+   既存2図)と、含まれていないもの(driverスクリプト)を正確に区別する記述に修正する。
+   存在しないreproducibilityを主張しない。driverスクリプトを新規に書いて実行しては
+   ならない(§ out of scope)。
+4. 【F-d: 関連ファイルの整合】research/active_learning_report.md の「再現方法」節が
+   `src/active_learning.py` というパスを記載しているが、research/ 配下に src/ は
+   存在せず、実際のパスは active_learning.py(research/直下)である。この誤記を
+   research/active_learning_report.md 側で修正する。
+5. 上記1〜4以外の部分については、§8 allowlistとの数値照合、文章の精緻化・誤字修正を
+   行ってよいが、論文の構成(章立て)・スコープ・結論の実質的な変更はしない
+   (既存の結論・hedgingは適切に検証済みの内容であり、範囲を広げたり弱めたりしない)。
+6. README.md(日本語、他モジュールのREADME.mdと同じ構成: 概要・Start here・
+   このモジュールの位置づけ・今回の成果物・執筆パイプライン・フォルダ構成)を作成する。
+7. notes/decision-log.md(日本語、今回のパイプラインと主要判断の記録)を作成・追記する。
+
+実行順:
+1. requirements.md 全文、既存 paper.md 全文を読む。
+2. 3件の結果CSVを直接読み、requirements.md §8-1 のallowlist(本研究の数値)を
+   自分でも独立に突き合わせて確認する。祖CSVと requirements.md の記載に不一致が
+   あれば、CSVを正としnotes/decision-log.mdに記録する。鵜呑みにしない。
+3. 上記「今回のタスク」1〜5(F-a〜F-d + 数値照合)を paper.md に適用する。
+4. 数値監査パス(buildの前に必ず実施): paper.md を通読し、次を1つずつ確認して
+   該当を全て修正する:
+   (i) 本文・図キャプション中の全実質的な数値が requirements.md §8-1/§8-2の
+       allowlistに辿れるか(traced to raw CSV, not just to the prior draft text);
+   (ii) 214化合物・48成分データセットの数値が紛れ込んでいないか(§8-3);
+   (iii) Yuan et al.の既報値を「本研究が計算した」かのように書いていないか、
+        逆に本研究の結果をYuanの値であるかのように書いていないか;
+   (iv) Figure 1・2 の画像参照が実際に解決するパスになっているか;
+   (v) Data and Code Availability節が実態(driverスクリプト無し)を正確に
+       反映しているか。
+   この結果をnotes/decision-log.mdに記録する。
+5. README.md、notes/decision-log.md を完成させる。
+6. active-learning-paper/ 配下の全Markdownファイル(paper.md, README.md,
+   requirements.md, implementation-prompt.md, notes/decision-log.md)の先頭本文行に
+   `[HTML版を開く](同名のhtmlファイル名)` を付与する(front matterがある場合は
+   `---` 直後)。同じbasenameを使う(paper.md → paper.html)。
+7. big-lab/shared/scripts/build-website.sh を実行し、エラーなく完走することを
+   確認する(Markdown→HTML変換とリンク検証を兼ねる)。このモジュールはどの
+   ビルドスクリプトにもカスタムレンダリング対象として登録されていないため、
+   build-markdown-html.sh の汎用パス(research-document.htmlテンプレート)が
+   自動的に使われる。特別なpaper用テンプレートを新設・探索する必要はない。
+   エラーが出た場合、原因がこのタスクの変更に起因するものであれば修正して
+   再実行する。このタスクと無関係な既存のエラーであれば、無理に既存ファイルを
+   書き換えず、エラー内容をそのまま報告する。
+8. requirements.md §10 の Acceptance checklist を1項目ずつ自己採点し、
+   未達成の項目があれば理由を明記した上で notes/decision-log.md に残す。
+
+最低限の出力:
+- 完成した paper.md(英語、Figure 1・2が実パスで埋め込み済み、Data and Code
+  Availabilityが実態を正確に反映、Working draft表記を更新済み)
+- 修正済みの research/active_learning_report.md(src/パス誤記を修正)
+- 完成した README.md(日本語)
+- 完成した notes/decision-log.md(日本語、数値監査パスの結果・自己採点結果を含む)
+- `shared/scripts/build-website.sh` の実行結果(成功ログ、または修正内容)
+- requirements.md §10 Acceptance checklistの自己採点結果
+
+停止条件:
+- paper.md のある記述について、requirements.md §8 のallowlistにも元CSVにも
+  たどれる数値が無く、かつ既存草稿の記述が具体的な数値を含んでいる場合、
+  数値を捏造で埋めず、不足している情報を明記して報告する(既存草稿の当該数値が
+  そもそもCSVと一致するかを最優先で確認し、一致しない場合はその不一致を報告する
+  ― これは「新しいCSVが必要」なのではなく「既存記述の誤りの可能性」として扱う)。
+- research/active_learning.py にdriverコードが無いことを確認した結果、
+  Data and Code Availability節で正直に「driverスクリプトは含まれていない」と
+  書く以外の対応(driverを新規作成して実行する等)は行わない。
+- build-website.sh がこのタスクと無関係な既存のエラーで失敗する場合、
+  無理に既存ファイルを書き換えず、エラー内容をそのまま報告する。
+
+停止条件に該当する場合も、報告済みの範囲までは完成させ、全体を未完成のまま放置しない。
+```

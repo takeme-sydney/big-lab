@@ -1,3 +1,5 @@
+[HTML版を開く](RESEARCH_PLAN.html)
+
 # 研究計画: Small-data MLによるマイクロニードル薬物送達予測の改良(美容成分応用を含む)
 
 *2026-07-20更新: ユーザー提供の5文献(Yuan 2023本人論文、マイクロニードルレビュー、
@@ -75,6 +77,11 @@ Small-data MLレビュー3本)を精読し、研究の軸をYuan 2023の限界�
 ## フェーズ6: 成果物整理
 - [ ] `figure-style` 適用済み最終図表の作成
 - [ ] 論文/レポート草稿
+- [x] **副次的検討(能動学習)**: Yuan 2023データ(191点)を用いたretrospective active
+      learningシミュレーション(Random vs GP-Uncertainty vs RF-QBC)を実施し、
+      研究ノートとして完成: [`../active-learning-paper/`](../active-learning-paper/)。
+      新規データ収集なし・既存191点の再利用のみ。フェーズ2〜6本体(transfer learning等)
+      の代替ではなく、実験計画最適化に関する独立した補足的知見。
 
 ---
 *進捗: フェーズ0, 1, 1.5 完了。次はフェーズ2(データキュレーション)を経て、

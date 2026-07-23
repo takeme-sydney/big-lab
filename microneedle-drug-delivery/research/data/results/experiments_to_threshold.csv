@@ -1,0 +1,10 @@
+strategy,r2_threshold,n_experiments_needed
+Random,0.85,33
+Random,0.9,39
+Random,0.95,69
+GP-Uncertainty,0.85,27
+GP-Uncertainty,0.9,39
+GP-Uncertainty,0.95,84
+RF-QBC,0.85,45
+RF-QBC,0.9,57
+RF-QBC,0.95,84

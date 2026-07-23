@@ -1,3 +1,5 @@
+[HTML版を開く](literature_map_report.html)
+
 # Recent Literature Map: Machine Learning & Computational Modeling for Microneedle and Transdermal Drug Delivery
 
 *Prepared for an intern in Yuan Yunong's group (BIG, University of Sydney). Anchored on the group's own work — Yuan et al. (2023), "Prediction of drug permeation through microneedled skin by machine learning" (35 citations) — this map surveys the subfield that paper sits in: using computational and machine-learning models to predict, design, and optimize drug transport through skin.*
@@ -122,4 +124,4 @@ The newest work (52 papers from 2025–26) points where the field is heading:
 
 ---
 
-*Corpus and analysis: Crossref + PubMed, 2015–2026, 116 curated in-scope papers. Full bibliography with DOIs, themes, methods, and citation counts in `microneedle_ml_literature.csv`.*
+*Corpus and analysis: Crossref + PubMed, 2015–2026, 116 curated in-scope papers. Full bibliography with DOIs, themes, methods, and citation counts in `data/raw/microneedle_ml_literature.csv`.*
