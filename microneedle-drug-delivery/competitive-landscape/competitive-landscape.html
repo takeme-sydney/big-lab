@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#edf2f0">
+  <meta name="description" content="BiG Labの「競合・関連研究マップ —
+Microneedle Drug Permeation ML」に関するMarkdown正本のHTML閲覧版。">
+  <title>競合・関連研究マップ — Microneedle Drug Permeation
+ML · BiG Lab</title>
+  <link rel="alternate" type="text/markdown" href="competitive-landscape.md" title="Markdown source">
+    <link rel="stylesheet" href="../../shared/website/assets/research-document.css">
+    </head>
+<body class="research-document">
+  <a class="skip-link" href="#document-content">本文へ移動</a>
+
+  <header class="document-topbar">
+    <div class="document-topbar-inner">
+      <a class="document-brand" href="../../shared/website/index.html" aria-label="BiG Lab 資料一覧へ">
+        <span class="document-brand-mark" aria-hidden="true">B</span>
+        <span class="document-brand-copy">
+          <strong>BiG Lab</strong>
+          <small>Research library</small>
+        </span>
+      </a>
+
+      <nav class="document-actions" aria-label="文書ナビゲーション">
+        <a href="../../shared/website/index.html">資料一覧</a>
+        <a class="source-action" href="competitive-landscape.md">Markdown正本 <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <header class="document-hero">
+    <div class="document-hero-copy">
+      <p class="document-kicker">
+        <span aria-hidden="true"></span>
+        RESEARCH DOCUMENT
+      </p>
+      <h1 class="long-title">競合・関連研究マップ — Microneedle Drug
+Permeation ML</h1>
+      <p class="document-description">BiG Labの「競合・関連研究マップ —
+Microneedle Drug Permeation ML」に関するMarkdown正本のHTML閲覧版。</p>
+
+      <dl class="document-meta">
+                        <div>
+          <dt>Format</dt>
+          <dd>HTML reading view</dd>
+        </div>
+      </dl>
+    </div>
+
+    <aside class="format-map" aria-label="MarkdownからHTMLへの文書フロー">
+      <div class="format-map-head">
+        <span>DOCUMENT PIPELINE</span>
+        <small>ONE SOURCE · TWO VIEWS</small>
+      </div>
+      <div class="format-map-flow">
+        <div class="format-node source-node">
+          <span>CANONICAL</span>
+          <strong>Markdown</strong>
+          <small>内容の正本</small>
+        </div>
+        <span class="format-arrow" aria-hidden="true">→</span>
+        <div class="format-node view-node">
+          <span>READING VIEW</span>
+          <strong>HTML</strong>
+          <small>閲覧用レンダリング</small>
+        </div>
+      </div>
+      <p>内容は同一に保ち、画面では読解・移動・参照に適した構造で表示します。</p>
+    </aside>
+  </header>
+
+  <div class="document-rule" aria-hidden="true">
+    <span></span><span></span><span></span>
+  </div>
+
+  <div class="document-shell">
+        <aside class="document-toc" aria-labelledby="document-toc-title">
+      <p id="document-toc-title">On this page</p>
+      <nav aria-label="目次">
+        <ul>
+        <li><a href="#競合関連研究マップ-microneedle-drug-permeation-ml"
+        id="toc-競合関連研究マップ-microneedle-drug-permeation-ml">競合・関連研究マップ
+        — Microneedle Drug Permeation ML</a>
+        <ul>
+        <li><a href="#競合構図の全体像" id="toc-競合構図の全体像">1.
+        競合構図の全体像</a></li>
+        <li><a
+        href="#商用pbpkメカニスティックツール確認済み直接競合ではない"
+        id="toc-商用pbpkメカニスティックツール確認済み直接競合ではない">2.
+        商用PBPK/メカニスティックツール(確認済み・直接競合ではない)</a></li>
+        <li><a href="#最も近い学術的ml類似研究-abdallah-et-al.-2024"
+        id="toc-最も近い学術的ml類似研究-abdallah-et-al.-2024">3.
+        最も近い学術的ML類似研究: Abdallah et al. (2024)</a></li>
+        <li><a
+        href="#直接の先行研究の疑い-asgarkhanova-et-al.-2026-最優先フォローアップ"
+        id="toc-直接の先行研究の疑い-asgarkhanova-et-al.-2026-最優先フォローアップ">4.
+        直接の先行研究の疑い: Asgarkhanova et al. (2026) —
+        最優先フォローアップ</a></li>
+        <li><a href="#補完的データ資源-stevens-et-al.-2024-epa"
+        id="toc-補完的データ資源-stevens-et-al.-2024-epa">5.
+        補完的データ資源: Stevens et al. (2024, EPA)</a></li>
+        <li><a href="#転移学習の手法的フロンティア参考皮膚特化ではない"
+        id="toc-転移学習の手法的フロンティア参考皮膚特化ではない">6.
+        転移学習の手法的フロンティア(参考、皮膚特化ではない)</a></li>
+        <li><a href="#見送ってよい競合ではないと確認できたもの"
+        id="toc-見送ってよい競合ではないと確認できたもの">7.
+        見送ってよい/競合ではないと確認できたもの</a></li>
+        <li><a
+        href="#未解決の問い捏造せず明示的にオープンとして扱うこと"
+        id="toc-未解決の問い捏造せず明示的にオープンとして扱うこと">8.
+        未解決の問い(捏造せず、明示的にオープンとして扱うこと)</a></li>
+        <li><a href="#直接確認したリード" id="toc-直接確認したリード">9.
+        直接確認したリード</a></li>
+        <li><a href="#推奨アクション優先順位順"
+        id="toc-推奨アクション優先順位順">10.
+        推奨アクション(優先順位順)</a></li>
+        <li><a
+        href="#microneedle-small-data-ml-paper-への影響要ユーザー判断"
+        id="toc-microneedle-small-data-ml-paper-への影響要ユーザー判断">11.
+        <code>microneedle-small-data-ml-paper</code>
+        への影響(要ユーザー判断)</a></li>
+        </ul></li>
+        </ul>
+      </nav>
+            <a class="toc-source-link" href="competitive-landscape.md">
+        <span>Source</span>
+        <strong>competitive-landscape.md</strong>
+      </a>
+          </aside>
+    
+    <main id="document-content" class="document-main">
+      <article class="document-content">
+                <p><a
+                href="competitive-landscape.html">HTML版を開く</a></p>
+                <h1
+                id="競合関連研究マップ-microneedle-drug-permeation-ml">競合・関連研究マップ
+                — Microneedle Drug Permeation ML</h1>
+                <p>作成日: 2026-07-20 根拠: deep-research harness
+                による多角的調査(6検索角度、26件一次資料取得、113件の主張抽出、25件を3票制adversarial
+                verificationで検証 — 15件確認・10件棄却) 比較対象:
+                <code>microneedle-drug-delivery/research/</code>
+                で進めているアプローチ(Yuan et
+                al. 2023の191点・6薬剤データセット再現、HuskinDB+SkinPiX+INRS統合214化合物データセットとのtransfer
+                learning計画、Fick則物理モデル併用データ拡張計画、leave-one-drug-out交差検証、美容成分48件への応用)</p>
+                <h2 id="競合構図の全体像">1. 競合構図の全体像</h2>
+                <p>皮膚/経皮透過性予測の競合は大きく2陣営に分かれる。</p>
+                <ul>
+                <li><strong>商用PBPK/メカニスティック系ツール</strong>(Certara
+                Simcyp MPML MechDermA、Simulations Plus GastroPlus
+                TCAT、VeriSIM Life BIOiSIM)—
+                純粋なMLベンチマーク競争ではなく、メカニスティックな多層コンパートメントモデルの精度で競っている。</li>
+                <li><strong>学術QSAR/ML系研究</strong>(Abdallah et
+                al. 2024が最も近い)—
+                本プロジェクトと似た規模のデータで似た手法(boosted
+                trees)を使い、同種の外挿弱点を抱えている。</li>
+                </ul>
+                <p><strong>最重要の発見</strong>:
+                本プロジェクトが使用計画中の統合皮膚透過性データセット(HuskinDB+SkinPiX+INRS)と実質的に同一の組成のデータセットに対し、CNRS-Strasbourg/INRSのグループがすでにQSPRモデルを発表している(§4)。本文入手不可のため詳細は不明だが、優先度の高いフォローアップ事項である。</p>
+                <h2
+                id="商用pbpkメカニスティックツール確認済み直接競合ではない">2.
+                商用PBPK/メカニスティックツール(確認済み・直接競合ではない)</h2>
+                <table>
+                <colgroup>
+                <col style="width: 25%" />
+                <col style="width: 25%" />
+                <col style="width: 25%" />
+                <col style="width: 25%" />
+                </colgroup>
+                <thead>
+                <tr>
+                <th>ツール</th>
+                <th>提供元</th>
+                <th>手法</th>
+                <th>本プロジェクトとの違い</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td>MPML MechDermA</td>
+                <td>Certara (Simcyp)</td>
+                <td>多相・多層メカニスティック皮膚吸収モデル(doi:10.1002/psp4.12814)</td>
+                <td>純粋にメカニスティック。ML言語なし</td>
+                </tr>
+                <tr>
+                <td>GastroPlus TCAT</td>
+                <td>Simulations Plus</td>
+                <td>コンパートメントモデル(角質層・表皮・真皮・皮脂腺・毛包脂質・毛包芯)</td>
+                <td>同上</td>
+                </tr>
+                <tr>
+                <td>BIOiSIM</td>
+                <td>VeriSIM Life</td>
+                <td>16コンパートメントのメカニスティックODEモデル +
+                MLはパラメータフィッティングのみ</td>
+                <td>ハイブリッドだがMLは補助的</td>
+                </tr>
+                </tbody>
+                </table>
+                <p><strong>結論</strong>:
+                これらは「メカニスティック忠実度」で競争しており、本プロジェクトの「Fick則+MLR/RF/XGBoost」という純データ駆動アプローチとは競争軸が異なる。直接のベンチマーク比較対象ではないが、Discussion/Related
+                Workで「メカニスティック系との違い」として言及する価値はある。</p>
+                <p><em>(棄却済み: Simulations
+                PlusがTCAT向けにFDAから研究助成金を得たという主張は3票中0票で不成立。引用しないこと。)</em></p>
+                <h2
+                id="最も近い学術的ml類似研究-abdallah-et-al.-2024">3.
+                最も近い学術的ML類似研究: Abdallah et al. (2024)</h2>
+                <p>Abdallah, Hasan &amp; Hammad. “Predictive modeling of
+                skin permeability for molecules: Investigating
+                FDA-approved drug permeability with various AI
+                algorithms.” <em>PLOS Digital Health</em>, 2024.
+                doi:10.1371/journal.pdig.0000483</p>
+                <ul>
+                <li>441レコード・140化合物(本プロジェクトの214化合物と近い規模)、85/15分割。</li>
+                <li>LightGBM(R²=0.819)とGradient
+                Boosting(R²=0.818)が上位。MLR(0.338)・ANN(0.797)を上回る。</li>
+                <li>記述子のみでDrugBank全2326化合物へ適用(約16.6倍の外挿)。</li>
+                <li><strong>本文中でのマイクロニードルへの実質的な言及・応用はない</strong>(2026-07-21のQA監査でPLOS本文を直接確認:
+                参考文献リストにYuan et al. 2023 —
+                本プロジェクトが再現・改良対象とする論文 —
+                が”microneedled
+                skin”を含むタイトルで1件引用されているのみで、本文・手法・考察中には一切登場しない)。バリデーションはランダム85/15分割のみで、leave-one-drug-out等のapplicability
+                domain評価は行っていない。</li>
+                </ul>
+                <p><strong>本プロジェクトとの比較で言えること</strong>:
+                -
+                本プロジェクトが計画しているleave-one-drug-out交差検証は、Abdallah
+                et
+                al.のランダム分割よりも一般化性能の評価として厳格である。これは正当にアピールできる方法論的な強み。
+                - 逆に言えば、Abdallah et
+                al.は既に「記述子ベースで大規模外挿(16倍)を試みる」実践例であり、本プロジェクトが美容成分48件への外挿(訓練データの214件に対し48件、倍率は小さい)を計画する上での前例・比較対象になる。</p>
+                <p><em>(棄却済み:
+                「LightGBMが単独の最良モデルとして報告された」という比較の強さ自体は3票中0票で不成立
+                — 実際はGradient
+                Boostingとほぼ同率。「マイクロニードルに全く言及がなく、ランダム分割のみで方法論的に劣る」という統合主張も2票中1票の僅差で不成立と判定されている。個別の事実
+                [441件/140化合物、85/15分割、LGBM R²=0.819、DrugBank
+                2326化合物への適用]
+                は3票中0票で確認済みなので、これらは使ってよい。)</em></p>
+                <h2
+                id="直接の先行研究の疑い-asgarkhanova-et-al.-2026-最優先フォローアップ">4.
+                直接の先行研究の疑い: Asgarkhanova et al. (2026) —
+                最優先フォローアップ</h2>
+                <p><strong>CNRS-Strasbourg(Laboratory of
+                Chemoinformatics UMR7140, Alexandre Varnek研究室)+
+                INRS</strong> による論文:</p>
+                <blockquote>
+                <p>Asgarkhanova et al., <em>Molecular Informatics</em>
+                (Wiley), doi:10.1002/minf.70030,
+                オンライン公開2026年4月22日(受理2026年3月25日、投稿2026年1月17日)</p>
+                </blockquote>
+                <p>本文は購読制(HTTP 403、Unpaywallでも closed access
+                を確認済み)のため、実際の手法・R²/RMSE等の性能指標は<strong>不明</strong>。しかし、公開されている再現用データセット(Recherche
+                Data Gouv, doi:10.57745/ZUU1DH —
+                <strong>本プロジェクトのCLAUDE.mdが「統合QSPRデータセット」の出典として既に引用しているのと同じDOI</strong>)を確認したところ、内訳は次の通り:</p>
+                <ul>
+                <li><code>huskin_depot.tab</code>: 129件</li>
+                <li><code>skinpix_depot.tab</code>: 103件</li>
+                <li><code>inrs_depot.tab</code>: 3件</li>
+                <li>Crossrefの抄録記載:
+                209件のキュレーション済み化合物(3件の新規実測データと突き合わせ)</li>
+                </ul>
+                <p>本プロジェクトの214化合物データセットの内訳(HuskinDB
+                129 + SkinPiX 103 + INRS
+                3)と<strong>完全に一致</strong>する。</p>
+                <p><strong>重要な位置づけの確認</strong>:
+                本プロジェクトの
+                <code>research/CLAUDE.md</code>「データ出典」節は、この
+                Asgarkhanova et
+                al. のデータリポジトリ(doi:10.57745/ZUU1DH)を最初から「統合QSPRデータセットの出典」として引用している。つまり本プロジェクトの214化合物データセットは、HuskinDB・SkinPiXから独立にゼロから統合したものではなく、<strong>Asgarkhanova
+                et
+                al.がすでに統合・公開したデータセットを直接re-useしている</strong>可能性が高い。これは隠されたことではなく元々出典明記されているが、<strong>「本プロジェクトが214化合物を統合した」という表現は、実際には「Asgarkhanova
+                et
+                al.が統合したデータセットを再利用した」という表現に修正すべき</strong>である。</p>
+                <p><strong>未解決点</strong>: - Asgarkhanova et
+                al.が実際にどのようなQSPRモデル(手法・性能指標)を報告しているかは不明(本文入手が最優先)。
+                - 209件(Asgarkhanova) vs
+                214件(本プロジェクト)の差分5件の原因は未確認。</p>
+                <p><strong>推奨アクション</strong>: 1.
+                図書館アクセス等でAsgarkhanova et
+                al.の本文を入手し、実際の手法・性能を確認する。 2.
+                入手できるまでは、本プロジェクトの成果物(論文含む)で「214化合物データセットを本プロジェクトが構築した」という表現を避け、「Asgarkhanova
+                et al. (2026)
+                が構築・公開した統合データセットを本プロジェクトで再利用している」という表現に統一する。
+                3.
+                本プロジェクトの新規性は「統合データセットの構築」ではなく、<strong>「その統合データセットをマイクロニードル文脈への転移学習のソースドメインとして使う」という橋渡し</strong>にあることを明確にする(Asgarkhanova
+                et
+                al.はマイクロニードルへの言及があるかどうか自体が未確認)。</p>
+                <h2 id="補完的データ資源-stevens-et-al.-2024-epa">5.
+                補完的データ資源: Stevens et al. (2024, EPA)</h2>
+                <p>Stevens, Prockter, Fisher, Tran &amp; Evans.
+                <em>Scientific Data</em> 11:755 (2024),
+                doi:10.1038/s41597-024-03588-3</p>
+                <ul>
+                <li>73化合物について、角質層・表皮・真皮の<strong>層別</strong>diffusion係数・partition係数(+約47記述子)を提供。</li>
+                <li>HuskinDBは透過係数(Kp)のみで、層別のdiffusion/partition係数は含まない
+                —
+                本プロジェクトが計画しているFick則ベースの物理モデル併用データ拡張に<strong>直接使える</strong>補完データ。</li>
+                <li>EPA所属著者を含み、目的は毒性評価・httkツールキット連携であり、マイクロニードルへの言及はない(競合ではなく取り込むべきリソース)。</li>
+                </ul>
+                <p><strong>推奨アクション</strong>:
+                RESEARCH_PLAN.mdフェーズ4Bの「物理モデル併用データ拡張」にこのデータセットを追加候補として明記する。</p>
+                <h2
+                id="転移学習の手法的フロンティア参考皮膚特化ではない">6.
+                転移学習の手法的フロンティア(参考、皮膚特化ではない)</h2>
+                <ul>
+                <li>MAMLスタイルのメタ学習によるGNN初期化が、マルチタスク事前学習より16/20のin-distributionタスクと<strong>全て</strong>のout-of-distributionタスクで上回った(平均AUPRC改善:
+                in-distribution 11.2%、out-of-distribution 26.9%)(arXiv
+                2003.05996)。out-of-distribution(=本プロジェクトのleave-one-drug-out的弱点)で優位性が大きい点が示唆的。</li>
+                <li>Merck/NVIDIAのKERMT基盤モデル研究(arXiv
+                2510.12719)は、マルチタスクファインチューニングの恩恵は6万データ点超の大規模データで最大化されると報告
+                —
+                本プロジェクトの小規模データ(191点・214化合物)には直接当てはまらない可能性を示唆。</li>
+                </ul>
+                <p><strong>確信度</strong>:
+                中(皮膚透過性に特化した研究ではなく、一般的な分子ML研究からの推論)。本プロジェクトが「単純なpretrain→fine-tune」型のtransfer
+                learningを計画している箇所(RESEARCH_PLAN.mdフェーズ4B)に対し、「より洗練されたメタ学習アプローチも検討候補として言及する」程度の弱い推奨に留める。</p>
+                <h2 id="見送ってよい競合ではないと確認できたもの">7.
+                見送ってよい/競合ではないと確認できたもの</h2>
+                <ul>
+                <li><strong>ACD/Labs Percepta ADME Suite</strong>:
+                BBB・CYP450・経口バイオアベイラビリティ等は扱うが、皮膚/経皮透過性のエンドポイントが<strong>存在しない</strong>。競合ではない。</li>
+                <li><strong>OECD QSAR Toolbox の Skin Permeability
+                Profiler</strong>:
+                188化合物のルールベース分類木で、High/Moderate/Lowの3分類のみ。ツール自体が「予測用途には非推奨」と明記。定量的なMLツールではない。</li>
+                </ul>
+                <h2
+                id="未解決の問い捏造せず明示的にオープンとして扱うこと">8.
+                未解決の問い(捏造せず、明示的にオープンとして扱うこと)</h2>
+                <p><em>2026-07-20追記:
+                Fable-5が利用制限で2回失敗したため、Claude Sonnet
+                5がこのセッション内で
+                直接フォローアップ調査を実施した(WebSearch/WebFetch使用)。結果を以下に統合する。</em></p>
+                <ol type="1">
+                <li><strong>美容成分への応用の独自性は、依然として明確な答えが得られていない。</strong>
+                追加調査で 確認できたのは: (a)
+                一般的な皮膚透過性QSAR/ML研究は「医薬品・化粧品双方への応用」を
+                目的として繰り返し言及している(例:
+                HSVR+PLSの”Two-QSAR”手法、PMC9143389/MDPI 14(5):961)—
+                つまり化粧品はこの分野で頻繁に引用される応用先ではあるが、
+                <strong>本プロジェクトと同じ枠組み(microneedle特化 +
+                transfer learning + 特定48成分リスト)
+                に一致する先行研究は見つからなかった</strong>。(b)
+                “microneedle cosmetic ingredient machine learning
+                permeation prediction” で直接検索しても、Yuan et
+                al. (2023) 自身とBiswas et al. (2024, 未adversarial
+                verification、§9参照)以外に該当する研究は見つからなかった。
+                <ol start="3" type="a">
+                <li>「化粧品成分の皮膚感作性(skin
+                sensitization)予測のML研究」(PMC11648681)も
+                見つかったが、これは透過性ではなく安全性エンドポイントであり、本プロジェクトとは
+                別の問題設定なので混同しないこと。<strong>結論:
+                「microneedle × 化粧品成分 × 構造ベースQSAR」
+                という組み合わせについては、引き続き未確認(先行研究なしとは断定できないが、
+                今回の調査では見つからなかった)。</strong></li>
+                </ol></li>
+                <li>Asgarkhanova et
+                al.の実際の手法・性能指標は<strong>依然として不明</strong>。追加調査でWiley本体の
+                抄録ページ(https://onlinelibrary.wiley.com/doi/abs/10.1002/minf.70030)から
+                「209件のキュレーション済み化合物、Kp値とメタデータを含む」という抄録レベルの記述を
+                確認できたが(既知の情報と整合)、具体的な手法・R²/RMSE等の性能指標は本文なしには
+                得られなかった。Varnek氏・Horvath氏(共著者)のResearchGateプロフィールは見つかったが、
+                論文自体のプレプリントやPDFへのリンクは見つからなかった。<strong>本文入手は引き続き未達成。</strong></li>
+                <li>HuskinDBの現行フル公開データが129化合物より多い可能性について、<code>research/</code>配下の
+                全ローカルファイル(CSV・Markdown)を検索したが、251化合物や546測定値、
+                コンセンサス値抽出のロジックについての説明・言及は<strong>見つからなかった</strong>。この差分の
+                説明はローカル資料からは得られず、HuskinDBの現行公開データを直接確認する以外に
+                解決方法がない。</li>
+                <li>高分子量・biologics領域(microneedleが受動透過に対して優位性を発揮しやすい化学空間)を
+                競合ツールがカバーしているかどうかは、今回のフォローアップ調査では扱っていない
+                (優先度が最も低いため)。引き続き未確認。</li>
+                </ol>
+                <h2 id="直接確認したリード">9. 直接確認したリード</h2>
+                <ul>
+                <li><strong>小林製薬</strong>(日本企業)の技術ページ(https://skincare.kobayashi.co.jp/field/skincare/penetration02.html)を<strong>直接fetchして内容を確認した</strong>(2026-07-20)。確認できた内容:
+                <ul>
+                <li>手法: ラマン分光スペクトル +
+                機械学習(MCR-ALS、多変量スペクトル分解)による、3次元培養皮膚モデル内部への美容成分の浸透可視化。</li>
+                <li>対象成分:
+                <strong>トラネキサム酸</strong>(美白・抗炎症成分。本プロジェクトの48件リストと同カテゴリ)。</li>
+                <li>手順: (1)
+                3D皮膚モデルと純粋成分のRaman基準スペクトル取得 → (2)
+                多変量スペクトル分解による対象成分シグナルの分離 → (3)
+                実際の複合処方(クリーム等)での検証 → (4)
+                MLによる皮膚断面への浸透分布の可視化。</li>
+                <li>IFSCC Congress 2025でポスター発表済み。</li>
+                <li><strong>本プロジェクトとの違い</strong>:
+                手法が構造記述子からの透過係数(log
+                Kp)予測ではなく、実測スペクトルの信号分離・可視化である。問題設定(ML×皮膚透過×美容成分)は共通するが、アプローチは全く異なる。本プロジェクトの構造ベースQSAR/転移学習アプローチと直接競合するものではないが、「日本企業がこの交差領域に既に取り組んでいる」という文脈として言及する価値がある。</li>
+                </ul></li>
+                </ul>
+                <h2 id="推奨アクション優先順位順">10.
+                推奨アクション(優先順位順)</h2>
+                <ol type="1">
+                <li><strong>[最優先]</strong> Asgarkhanova et al. (2026)
+                の本文入手(図書館アクセス等)を試み、本プロジェクトの214化合物データセットとの関係(再利用か独自統合か)・実際の手法/性能を明確化する。入手できるまでは、本プロジェクトの成果物で「データセットを構築した」ではなく「Asgarkhanova
+                et
+                al.が構築したデータセットを再利用している」という表現に統一する。</li>
+                <li>美容成分への応用の独自性について、§8-1で示した通り一般的なQSAR研究は化粧品応用に言及するが、microneedle特化の先行研究は見つかっていない
+                —
+                この「見つからなかった」こと自体を、本プロジェクトの成果物で（「独自」と断定せず）正直に記述する。</li>
+                <li>Stevens et al. (2024)
+                の層別diffusion/partitionデータをRESEARCH_PLAN.mdフェーズ4Bの物理モデル併用データ拡張の候補データ源として追加する(実施済み
+                — RESEARCH_PLAN.md参照)。</li>
+                <li>Abdallah et al. (2024)
+                との方法論比較(leave-one-drug-out vs
+                ランダム分割)を、本プロジェクトの方法論的な強みとして明記する(実施済み
+                — RESEARCH_PLAN.mdフェーズ6参照)。</li>
+                <li>MAMLスタイルのメタ学習を、単純なpretrain→fine-tuneの代替候補として弱く言及する(確信度:
+                中、皮膚特化の実証なし。実施済み —
+                RESEARCH_PLAN.mdフェーズ4B参照)。</li>
+                <li>小林製薬の技術(§9)を、美容成分への応用の独自性の議論における「関連するが異なるアプローチの例」として、将来の成果物のRelated
+                Workで言及する。</li>
+                </ol>
+                <h2
+                id="microneedle-small-data-ml-paper-への影響要ユーザー判断">11.
+                <code>microneedle-small-data-ml-paper</code>
+                への影響(要ユーザー判断)</h2>
+                <p>このタスク(競合分析)は別ブランチ・別PRとして独立に扱っているため、既存のPR
+                #1(<code>microneedle-small-data-ml-paper</code>)の内容には直接手を加えていない。ただし、§4の発見は同PRの論文原稿(<code>paper.md</code>
+                §5.2, Reference #11)の「we assembled a training resource
+                of 214 unique compounds」という表現に関わる —
+                実際にはAsgarkhanova et
+                al. (2026)がほぼ同一の統合データセットをすでに公開している可能性が高い。ユーザーには別途、PR
+                #1への追加コミット(表現の修正、Related
+                Workへの言及追加)を推奨する。</p>
+              </article>
+    </main>
+
+    <aside class="reading-gauge" aria-hidden="true">
+      <p>READING DEPTH</p>
+      <div class="gauge-scale">
+        <span>00</span>
+        <span>25</span>
+        <span>50</span>
+        <span>75</span>
+        <span>100</span>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="document-footer">
+    <div>
+      <strong>BiG Lab Research Library</strong>
+      <p>Markdown is canonical. HTML is the synchronized reading view.</p>
+    </div>
+    <div class="document-footer-links">
+      <a href="../../shared/website/index.html">資料一覧へ戻る</a>
+      <a href="competitive-landscape.md">Markdownを開く</a>
+    </div>
+  </footer>
+</body>
+</html>

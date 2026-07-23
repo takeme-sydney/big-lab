@@ -1,3 +1,5 @@
+[HTML版を開く](CLAUDE.html)
+
 # プロジェクト: Small-data MLによるマイクロニードル薬物送達予測の改良と美容成分への応用
 
 ## 目的
@@ -80,6 +82,16 @@ Rhodamine B, lidocaine, caffeine)を論文補足データ(Data S1, PMC10658566)�
 - 統合QSPRデータセット: Recherche Data Gouv doi:10.57745/ZUU1DH (Asgarkhanova et al.,
   Laboratory of Chemoinformatics, University of Strasbourg)
 - Yuan 2023訓練データ: PMC10658566 Data S1 (doi:10.1002/btm2.10512 補足情報)
+
+**重要(2026-07-20競合調査で判明)**: 上記の doi:10.57745/ZUU1DH は、Asgarkhanova et al.
+の論文(*Molecular Informatics*, doi:10.1002/minf.70030, 2026年4月公開)の再現用データ
+そのものであり、その論文自体がこのHuskinDB+SkinPiX+INRS統合データセット(209件)を
+用いたQSPRモデルを既に発表している(本文入手不可のため手法・性能は未確認)。したがって
+`skin_permeability_training_set.csv`(214件)は本プロジェクトが独自にゼロから統合した
+ものではなく、**Asgarkhanova et al.が構築・公開した統合データセットを再利用している**
+可能性が高い。成果物(論文等)で「本プロジェクトが214化合物を統合した」と書かず、出典を
+正確に帰属させること。詳細は
+[`../competitive-landscape/competitive-landscape.md`](../competitive-landscape/competitive-landscape.md) §4。
 
 ## 命名規則・コーディング規約
 - 日本語コメント可、変数名・関数名は英語(snake_case)
