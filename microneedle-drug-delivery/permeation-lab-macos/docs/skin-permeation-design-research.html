@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#edf2f0">
+  <meta name="description" content="BiG
+Labの「医療系データビジュアライゼーションと皮膚透過図のデザイン調査」に関するMarkdown正本のHTML閲覧版。">
+  <title>医療系データビジュアライゼーションと皮膚透過図のデザイン調査 · BiG Lab</title>
+  <link rel="alternate" type="text/markdown" href="skin-permeation-design-research.md" title="Markdown source">
+    <link rel="stylesheet" href="../../../shared/website/assets/research-document.css">
+    </head>
+<body class="research-document">
+  <a class="skip-link" href="#document-content">本文へ移動</a>
+
+  <header class="document-topbar">
+    <div class="document-topbar-inner">
+      <a class="document-brand" href="../../../shared/website/index.html" aria-label="BiG Lab 資料一覧へ">
+        <span class="document-brand-mark" aria-hidden="true">B</span>
+        <span class="document-brand-copy">
+          <strong>BiG Lab</strong>
+          <small>Research library</small>
+        </span>
+      </a>
+
+      <nav class="document-actions" aria-label="文書ナビゲーション">
+        <a href="../../../shared/website/index.html">資料一覧</a>
+        <a class="source-action" href="skin-permeation-design-research.md">Markdown正本 <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <header class="document-hero">
+    <div class="document-hero-copy">
+      <p class="document-kicker">
+        <span aria-hidden="true"></span>
+        RESEARCH DOCUMENT
+      </p>
+      <h1 class="extra-long-title">医療系データビジュアライゼーションと皮膚透過図のデザイン調査</h1>
+      <p class="document-description">BiG
+Labの「医療系データビジュアライゼーションと皮膚透過図のデザイン調査」に関するMarkdown正本のHTML閲覧版。</p>
+
+      <dl class="document-meta">
+                        <div>
+          <dt>Format</dt>
+          <dd>HTML reading view</dd>
+        </div>
+      </dl>
+    </div>
+
+    <aside class="format-map" aria-label="MarkdownからHTMLへの文書フロー">
+      <div class="format-map-head">
+        <span>DOCUMENT PIPELINE</span>
+        <small>ONE SOURCE · TWO VIEWS</small>
+      </div>
+      <div class="format-map-flow">
+        <div class="format-node source-node">
+          <span>CANONICAL</span>
+          <strong>Markdown</strong>
+          <small>内容の正本</small>
+        </div>
+        <span class="format-arrow" aria-hidden="true">→</span>
+        <div class="format-node view-node">
+          <span>READING VIEW</span>
+          <strong>HTML</strong>
+          <small>閲覧用レンダリング</small>
+        </div>
+      </div>
+      <p>内容は同一に保ち、画面では読解・移動・参照に適した構造で表示します。</p>
+    </aside>
+  </header>
+
+  <div class="document-rule" aria-hidden="true">
+    <span></span><span></span><span></span>
+  </div>
+
+  <div class="document-shell">
+        <aside class="document-toc" aria-labelledby="document-toc-title">
+      <p id="document-toc-title">On this page</p>
+      <nav aria-label="目次">
+        <ul>
+        <li><a
+        href="#医療系データビジュアライゼーションと皮膚透過図のデザイン調査"
+        id="toc-医療系データビジュアライゼーションと皮膚透過図のデザイン調査">医療系データビジュアライゼーションと皮膚透過図のデザイン調査</a>
+        <ul>
+        <li><a href="#調査方法" id="toc-調査方法">1. 調査方法</a></li>
+        <li><a href="#evidence-ledger" id="toc-evidence-ledger">2.
+        Evidence ledger</a></li>
+        <li><a href="#採用した画面構造" id="toc-採用した画面構造">3.
+        採用した画面構造</a></li>
+        <li><a href="#visual-encoding" id="toc-visual-encoding">4.
+        Visual encoding</a>
+        <ul>
+        <li><a href="#実測点" id="toc-実測点">実測点</a></li>
+        <li><a href="#皮膚franz-cell図"
+        id="toc-皮膚franz-cell図">皮膚・Franz cell図</a></li>
+        <li><a href="#provenance"
+        id="toc-provenance">Provenance</a></li>
+        </ul></li>
+        <li><a href="#却下した案" id="toc-却下した案">5.
+        却下した案</a></li>
+        <li><a href="#実装への影響" id="toc-実装への影響">6.
+        実装への影響</a></li>
+        </ul></li>
+        </ul>
+      </nav>
+            <a class="toc-source-link" href="skin-permeation-design-research.md">
+        <span>Source</span>
+        <strong>skin-permeation-design-research.md</strong>
+      </a>
+          </aside>
+
+    <main id="document-content" class="document-main">
+      <article class="document-content">
+                <p><a
+                href="skin-permeation-design-research.html">HTML版を開く</a></p>
+                <h1
+                id="医療系データビジュアライゼーションと皮膚透過図のデザイン調査">医療系データビジュアライゼーションと皮膚透過図のデザイン調査</h1>
+                <p>調査日: 2026-08-27 適用範囲: Permeation
+                Lab「皮膚透過」destinationの情報設計・視覚表現・アクセシビリティ</p>
+                <h2 id="調査方法">1. 調査方法</h2>
+                <p>原著とData S1を科学的truth
+                sourceとし、Web調査は「どう見せるか」の判断に限定した。外部の皮膚解剖資料は一般的な読解補助として監査したが、原著にない層厚、到達深度、濃度、臨床効果をアプリへ追加していない。</p>
+                <h2 id="evidence-ledger">2. Evidence ledger</h2>
+                <table>
+                <colgroup>
+                <col style="width: 33%" />
+                <col style="width: 33%" />
+                <col style="width: 33%" />
+                </colgroup>
+                <thead>
+                <tr>
+                <th>Source</th>
+                <th>確認した設計原則</th>
+                <th>実装判断</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td><a
+                href="https://pubmed.ncbi.nlm.nih.gov/38023708/">Yuan et
+                al. PubMed</a> / <a
+                href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10658566/">PMC全文</a></td>
+                <td>Data S1は累積amount / percentage、Franz
+                cellはreceptor液を複数時点で測定。hydrogelとplasticの工程が異なる。Figure
+                4はFick model</td>
+                <td>実測点、原著model、概念工程を混同しない</td>
+                </tr>
+                <tr>
+                <td><a
+                href="https://developer.apple.com/design/human-interface-guidelines/charts">Apple
+                HIG: Charts</a></td>
+                <td>mark、axis、unit、legend、annotationで意味を明示し、chart以外の文脈も与える</td>
+                <td><code>PointMark</code>、軸・単位、直接annotation、全11列detail</td>
+                </tr>
+                <tr>
+                <td><a
+                href="https://developer.apple.com/design/human-interface-guidelines/accessibility">Apple
+                HIG: Accessibility</a></td>
+                <td>色以外の手掛かり、明快なlabel、Reduce
+                Motion等のsystem settingへの応答</td>
+                <td>固定symbol、工程番号、VoiceOver label、paused-first
+                motion</td>
+                </tr>
+                <tr>
+                <td><a
+                href="https://www.w3.org/WAI/WCAG22/Understanding/use-of-color">W3C:
+                Use of Color</a></td>
+                <td>色を情報伝達の唯一の手段にしない</td>
+                <td>drugをcolorとsymbolの二重encodingで示す</td>
+                </tr>
+                <tr>
+                <td><a
+                href="https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum">W3C:
+                Contrast Minimum</a> / <a
+                href="https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast">Non-text
+                Contrast</a></td>
+                <td>通常text 4.5:1、大textと重要なnon-text
+                3:1を基準にする</td>
+                <td>system
+                colorsを中心にし、label・outline・状態textを併用</td>
+                </tr>
+                <tr>
+                <td><a
+                href="https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions">W3C:
+                Animation from Interactions</a></td>
+                <td>interaction起点の不要なmotionを無効化できるようにする</td>
+                <td>初期paused、明示的Play、Reduce Motion時は静止</td>
+                </tr>
+                <tr>
+                <td><a
+                href="https://health-infobase.canada.ca/design-manual/dataviz/dataviz/types.html">Health
+                Infobase: Visualization types</a></td>
+                <td>taskに合うchartを選び、説明と探索を分ける</td>
+                <td>工程説明とraw
+                observation探索を同一画面内の別cardにする</td>
+                </tr>
+                <tr>
+                <td><a
+                href="https://health-infobase.canada.ca/design-manual/dataviz/dataviz/design.html">Health
+                Infobase: Design</a></td>
+                <td>色数を抑え、direct
+                label、読みやすい軸、軽いgridを使う</td>
+                <td>restrained palette、選択点の直接label、水平grid</td>
+                </tr>
+                <tr>
+                <td><a
+                href="https://health-infobase.canada.ca/design-manual/dataviz/dataviz/accessibility.html">Health
+                Infobase: Accessibility</a></td>
+                <td>visualizationに文章summaryとdata
+                accessを併設する</td>
+                <td>chartのAX
+                summary、選択観測の全11列、科学的境界note</td>
+                </tr>
+                <tr>
+                <td><a
+                href="https://www.ncbi.nlm.nih.gov/books/NBK144027/">NCBI
+                Bookshelf / WHO: normal skin</a></td>
+                <td>角質層が経皮移行のbarrierである一般文脈</td>
+                <td>外部画像は複製せず、原著allowlist内の「角質層／皮膚膜」だけをoriginal
+                vectorで描く</td>
+                </tr>
+                <tr>
+                <td><a
+                href="https://www.nature.com/articles/s41467-020-19160-7">Crameri
+                et al., The misuse of colour in science
+                communication</a></td>
+                <td>rainbow色など知覚的に不均一なcolor
+                mapはデータ解釈を歪め得る</td>
+                <td>Data
+                S1に空間濃度がないためheatmapを作らず、categorical
+                paletteを固定する</td>
+                </tr>
+                </tbody>
+                </table>
+                <h2 id="採用した画面構造">3. 採用した画面構造</h2>
+                <pre class="text"><code>皮膚透過
+├── provenance banner: 191行は累積時点観測
+├── adaptive filters: drug / skin / MN / outcome / reset
+├── conceptual Franz-cell illustration
+│   ├── mechanism: hydrogel / plastic
+│   ├── donor / patch → 角質層 → 皮膚膜 → receptor液
+│   ├── selected rowのtime / receptor到達値をtext照合
+│   └── Play / Pause / Step / Reset + numbered steps
+├── selected observation: 11 source fields
+├── unconnected raw scatter: PointMark only
+└── observation / Fick model / concept boundary note</code></pre>
+                <h2 id="visual-encoding">4. Visual encoding</h2>
+                <h3 id="実測点">実測点</h3>
+                <ul>
+                <li>x軸はpermeation
+                time、y軸はpercentageまたはamount。</li>
+                <li>raw Data S1
+                observationはpointだけで表し、線を用いない。</li>
+                <li>6 drugは固定colorと固定shapeを併用する。</li>
+                <li>選択点は大きさ、orange
+                outline、直接annotationで示す。</li>
+                <li>108.3982246%を含むため、percentageを100%上限のgaugeへ変換しない。</li>
+                </ul>
+                <h3 id="皮膚franz-cell図">皮膚・Franz cell図</h3>
+                <ul>
+                <li>donor /
+                patchを上、角質層と皮膚膜を中央、receptor液を下に置き、in
+                vitro装置である方向を明瞭にする。</li>
+                <li>hydrogelは針を留置し、膨潤・放出を示す。</li>
+                <li>plasticは工程1だけ針を挿入し、工程2以降はpatchを外して点線のpassageを示す。</li>
+                <li>glyphは固定数とし、観測値へmapしない。</li>
+                <li><code>概念図・非定量・縮尺外</code>
+                を常時表示する。</li>
+                </ul>
+                <h3 id="provenance">Provenance</h3>
+                <ul>
+                <li><code>Data S1</code> は観測。</li>
+                <li><code>原著Fick model</code> はFigure
+                4の数値model。</li>
+                <li><code>概念図</code>
+                はアプリが描く説明用vector。</li>
+                <li>source種類をcolorだけで区別せず、常時textで明示する。</li>
+                </ul>
+                <h2 id="却下した案">5. 却下した案</h2>
+                <ul>
+                <li>191個の粒子を皮膚内へ飛ばす:
+                191行は粒子IDを持たない。</li>
+                <li>time順に全点を接続する: series /
+                replicate関係が未提供。</li>
+                <li>percentageに応じてglyph数、速度、到達深度を変える:
+                空間・速度・深度データがない。</li>
+                <li>Data S1から皮膚内heatmapを補間する: Figure
+                4とは異なる未観測値を発明する。</li>
+                <li>Figure 4の5 frameをmorphする:
+                原著にない中間濃度場を作る。</li>
+                <li>percentageを100%上限のprogress ringにする:
+                108.3982246%を誤表示する。</li>
+                <li>Data S1 <code>µg/cm²</code> とpaper
+                <code>µg</code>を同一axisに無言で載せる: source
+                unitが異なる。</li>
+                <li>plastic針を全透過工程で留置する:
+                原著の前処置・除去工程と矛盾する。</li>
+                <li>血管や全身循環を描く: 本データはFranz receptor液のin
+                vitro測定。</li>
+                <li>外部の皮膚解剖図をbundleする: source
+                boundaryと権利確認を超える。</li>
+                </ul>
+                <h2 id="実装への影響">6. 実装への影響</h2>
+                <p>この調査により、皮膚断面を派手な濃度heatmapではなくoriginal
+                vectorの工程図とし、定量値は非連結散布図とtextへ分離した。アニメーションはデータencodingではなく、hydrogel
+                / plasticの工程順を理解する補助に限定した。</p>
+              </article>
+    </main>
+
+    <aside class="reading-gauge" aria-hidden="true">
+      <p>READING DEPTH</p>
+      <div class="gauge-scale">
+        <span>00</span>
+        <span>25</span>
+        <span>50</span>
+        <span>75</span>
+        <span>100</span>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="document-footer">
+    <div>
+      <strong>BiG Lab Research Library</strong>
+      <p>Markdown is canonical. HTML is the synchronized reading view.</p>
+    </div>
+    <div class="document-footer-links">
+      <a href="../../../shared/website/index.html">資料一覧へ戻る</a>
+      <a href="skin-permeation-design-research.md">Markdownを開く</a>
+    </div>
+  </footer>
+</body>
+</html>

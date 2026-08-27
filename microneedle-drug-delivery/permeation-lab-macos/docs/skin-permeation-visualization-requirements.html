@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#edf2f0">
+  <meta name="description" content="BiG
+Labの「皮膚透過データビジュアライゼーション要件定義」に関するMarkdown正本のHTML閲覧版。">
+  <title>皮膚透過データビジュアライゼーション要件定義 · BiG Lab</title>
+  <link rel="alternate" type="text/markdown" href="skin-permeation-visualization-requirements.md" title="Markdown source">
+    <link rel="stylesheet" href="../../../shared/website/assets/research-document.css">
+    </head>
+<body class="research-document">
+  <a class="skip-link" href="#document-content">本文へ移動</a>
+
+  <header class="document-topbar">
+    <div class="document-topbar-inner">
+      <a class="document-brand" href="../../../shared/website/index.html" aria-label="BiG Lab 資料一覧へ">
+        <span class="document-brand-mark" aria-hidden="true">B</span>
+        <span class="document-brand-copy">
+          <strong>BiG Lab</strong>
+          <small>Research library</small>
+        </span>
+      </a>
+
+      <nav class="document-actions" aria-label="文書ナビゲーション">
+        <a href="../../../shared/website/index.html">資料一覧</a>
+        <a class="source-action" href="skin-permeation-visualization-requirements.md">Markdown正本 <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <header class="document-hero">
+    <div class="document-hero-copy">
+      <p class="document-kicker">
+        <span aria-hidden="true"></span>
+        RESEARCH DOCUMENT
+      </p>
+      <h1 class="long-title">皮膚透過データビジュアライゼーション要件定義</h1>
+      <p class="document-description">BiG
+Labの「皮膚透過データビジュアライゼーション要件定義」に関するMarkdown正本のHTML閲覧版。</p>
+
+      <dl class="document-meta">
+                        <div>
+          <dt>Format</dt>
+          <dd>HTML reading view</dd>
+        </div>
+      </dl>
+    </div>
+
+    <aside class="format-map" aria-label="MarkdownからHTMLへの文書フロー">
+      <div class="format-map-head">
+        <span>DOCUMENT PIPELINE</span>
+        <small>ONE SOURCE · TWO VIEWS</small>
+      </div>
+      <div class="format-map-flow">
+        <div class="format-node source-node">
+          <span>CANONICAL</span>
+          <strong>Markdown</strong>
+          <small>内容の正本</small>
+        </div>
+        <span class="format-arrow" aria-hidden="true">→</span>
+        <div class="format-node view-node">
+          <span>READING VIEW</span>
+          <strong>HTML</strong>
+          <small>閲覧用レンダリング</small>
+        </div>
+      </div>
+      <p>内容は同一に保ち、画面では読解・移動・参照に適した構造で表示します。</p>
+    </aside>
+  </header>
+
+  <div class="document-rule" aria-hidden="true">
+    <span></span><span></span><span></span>
+  </div>
+
+  <div class="document-shell">
+        <aside class="document-toc" aria-labelledby="document-toc-title">
+      <p id="document-toc-title">On this page</p>
+      <nav aria-label="目次">
+        <ul>
+        <li><a href="#皮膚透過データビジュアライゼーション要件定義"
+        id="toc-皮膚透過データビジュアライゼーション要件定義">皮膚透過データビジュアライゼーション要件定義</a>
+        <ul>
+        <li><a href="#目的" id="toc-目的">1. 目的</a></li>
+        <li><a href="#要件確定時のsource-boundary"
+        id="toc-要件確定時のsource-boundary">2. 要件確定時のsource
+        boundary</a></li>
+        <li><a href="#data-s1-truth-contract"
+        id="toc-data-s1-truth-contract">3. Data S1 truth
+        contract</a></li>
+        <li><a href="#機能要件" id="toc-機能要件">4. 機能要件</a>
+        <ul>
+        <li><a href="#spv-fr-01-独立destination"
+        id="toc-spv-fr-01-独立destination">SPV-FR-01
+        独立destination</a></li>
+        <li><a href="#spv-fr-02-観測フィルタ"
+        id="toc-spv-fr-02-観測フィルタ">SPV-FR-02 観測フィルタ</a></li>
+        <li><a href="#spv-fr-03-非連結散布図"
+        id="toc-spv-fr-03-非連結散布図">SPV-FR-03 非連結散布図</a></li>
+        <li><a href="#spv-fr-04-選択観測"
+        id="toc-spv-fr-04-選択観測">SPV-FR-04 選択観測</a></li>
+        <li><a href="#spv-fr-05-hydrogel工程"
+        id="toc-spv-fr-05-hydrogel工程">SPV-FR-05 hydrogel工程</a></li>
+        <li><a href="#spv-fr-06-plastic工程"
+        id="toc-spv-fr-06-plastic工程">SPV-FR-06 plastic工程</a></li>
+        <li><a href="#spv-fr-07-franz-cellの境界"
+        id="toc-spv-fr-07-franz-cellの境界">SPV-FR-07 Franz
+        cellの境界</a></li>
+        <li><a href="#spv-fr-08-概念motion"
+        id="toc-spv-fr-08-概念motion">SPV-FR-08 概念motion</a></li>
+        <li><a href="#spv-fr-09-evidence境界"
+        id="toc-spv-fr-09-evidence境界">SPV-FR-09 evidence境界</a></li>
+        <li><a href="#spv-fr-10-source-failure"
+        id="toc-spv-fr-10-source-failure">SPV-FR-10 source
+        failure</a></li>
+        </ul></li>
+        <li><a href="#macosアクセシビリティ要件"
+        id="toc-macosアクセシビリティ要件">5.
+        macOS・アクセシビリティ要件</a></li>
+        <li><a href="#受入条件" id="toc-受入条件">6. 受入条件</a></li>
+        </ul></li>
+        </ul>
+      </nav>
+            <a class="toc-source-link" href="skin-permeation-visualization-requirements.md">
+        <span>Source</span>
+        <strong>skin-permeation-visualization-requirements.md</strong>
+      </a>
+          </aside>
+
+    <main id="document-content" class="document-main">
+      <article class="document-content">
+                <p><a
+                href="skin-permeation-visualization-requirements.html">HTML版を開く</a></p>
+                <h1
+                id="皮膚透過データビジュアライゼーション要件定義">皮膚透過データビジュアライゼーション要件定義</h1>
+                <p>文書版: 1.0 作成・更新日: 2026-08-27 対象: Yuan et
+                al. (2023), PMID 38023708 / Data S1</p>
+                <h2 id="目的">1. 目的</h2>
+                <p>既存の「実測データ」とは別のmacOS sidebar
+                destination「皮膚透過」を設け、Data
+                S1の191行と、原著が説明するhydrogel /
+                plasticマイクロニードル処理、摘出皮膚膜、Franz
+                receptor液への累積到達を一画面で照合できるようにする。</p>
+                <p>この機能は「191個の粒子が皮膚内を移動した軌跡」を再現しない。Data
+                S1に空間座標、深さ、粒子ID、series ID、replicate
+                IDがないため、191行は累積amount /
+                percentageの<strong>時点観測</strong>として扱う。</p>
+                <h2 id="要件確定時のsource-boundary">2.
+                要件確定時のsource boundary</h2>
+                <p>科学的主張は原著、Data S1、Data S2、SI3、およびData
+                S1から機械的に検証できる集計だけを根拠とする。Webで調べたApple、W3C、Health
+                Canada等は表示設計・アクセシビリティ判断にだけ用い、論文の実験事実を補完しない。</p>
+                <p>皮膚断面はアプリ内で描くoriginal
+                vectorとし、科学ラベルは原著で確認できるdonor /
+                patch、角質層、皮膚膜、Franz
+                receptor液に限定する。一般解剖の外部画像や、原著にない皮膚厚・到達深度・濃度を取り込まない。</p>
+                <h2 id="data-s1-truth-contract">3. Data S1 truth
+                contract</h2>
+                <ul>
+                <li>191行、11 source fieldsを原値のまま扱う。</li>
+                <li>drug件数はlidocaine 73、BSA 33、GHK peptide
+                24、copper ions 24、Rhodamine B 19、caffeine 18。</li>
+                <li>MN type件数はhydrogel 131、plastic 60。skin件数はrat
+                137、human 54。</li>
+                <li>permeation time範囲は0.083333333–48 h、MN
+                length範囲は0.7–1.25 mm。</li>
+                <li>percentage最大値 <code>108.3982246%</code>
+                を100%へclamp、丸め、除外しない。</li>
+                <li>Data S1 amount列はheaderどおり <code>µg/cm²</code>
+                と表示する。本文・Table 4・Figure 6の <code>µg</code>
+                と無言で統一しない。</li>
+                <li>全191行でamountが数値上
+                <code>loading × percentage / 100</code>
+                と一致することは注記してよいが、補足表だけから導出方向や独立測定性を断定しない。</li>
+                <li>同一条件・同一時点の複数観測を含み、行間のseries関係がないため、raw
+                pointsを線で結ばない。</li>
+                <li><code>MN length</code>
+                は針の幾何学値であり、実挿入深度や特定の皮膚層への到達を意味しない。</li>
+                </ul>
+                <h2 id="機能要件">4. 機能要件</h2>
+                <h3 id="spv-fr-01-独立destination">SPV-FR-01
+                独立destination</h3>
+                <p>「実測データ」とpeerになるsidebar
+                item「皮膚透過」を追加する。既存データ画面内のsubtabだけで済ませない。</p>
+                <h3 id="spv-fr-02-観測フィルタ">SPV-FR-02
+                観測フィルタ</h3>
+                <p>drug、skin、MN type、outcome（percentage /
+                amount）で絞り込み、全解除、filter後件数を提供する。filterはraw
+                recordを書き換えず、選択順は決定的であること。</p>
+                <h3 id="spv-fr-03-非連結散布図">SPV-FR-03
+                非連結散布図</h3>
+                <p>Swift Chartsの <code>PointMark</code>
+                だけでtime対outcomeを表示する。<code>LineMark</code>、補間、回帰、平均曲線、外挿を禁止する。drugは固定colorに加えて固定symbolでも区別し、filter後もencodingを変えない。</p>
+                <h3 id="spv-fr-04-選択観測">SPV-FR-04 選択観測</h3>
+                <p>前後buttonとpickerで任意のfilter済み観測へ移動し、11
+                source fields、Data S1転記行番号、原値、source
+                unitを表示する。概念図の直下にも選択行番号、time、receptor到達値をtextとして照合表示し、glyphの数・位置・速度・深さには反映しないと明記する。</p>
+                <h3 id="spv-fr-05-hydrogel工程">SPV-FR-05
+                hydrogel工程</h3>
+                <p>薬物を含浸したhydrogel
+                MNを皮膚膜へ挿入したままにし、膨潤・放出、皮膚膜内の移行、receptor液中濃度からの累積値算出を番号付き工程で示す。</p>
+                <h3 id="spv-fr-06-plastic工程">SPV-FR-06
+                plastic工程</h3>
+                <p>plastic
+                MNによる前処置、patch除去、残存するmicron-sized
+                passage、donor側薬物溶液の添加、receptor側測定をhydrogelと別工程で示す。工程1では針を挿入状態、工程2以降では針を除去した微小孔として描く。</p>
+                <h3 id="spv-fr-07-franz-cellの境界">SPV-FR-07 Franz
+                cellの境界</h3>
+                <p>表示値はin vitro Franz
+                receptor液への累積到達結果であり、皮膚内濃度、体内吸収、血流、治療効果ではないと常時説明する。</p>
+                <h3 id="spv-fr-08-概念motion">SPV-FR-08 概念motion</h3>
+                <p>初期状態はpausedとし、Play / Pause / Step /
+                Resetを提供する。固定数glyphと矢印は工程と方向だけを示し、粒子数・速度・深さ・濃度をencodeしない。<code>accessibilityReduceMotion</code>
+                が有効なら反復移動を止め、静止工程へ置換する。</p>
+                <h3 id="spv-fr-09-evidence境界">SPV-FR-09
+                evidence境界</h3>
+                <p>同じ画面で次の3層を明確に分ける。</p>
+                <ol type="1">
+                <li>Data S1: 191行の累積時点観測</li>
+                <li>原著Figure 4: Fick数値modelの15 min、1、3、6、24
+                h濃度map</li>
+                <li>アプリの概念図: 非定量・縮尺外の工程説明</li>
+                </ol>
+                <p>Figure 4を選択中Data
+                S1行のsimulationと表現せず、新しい濃度mapや中間frameを生成しない。</p>
+                <h3 id="spv-fr-10-source-failure">SPV-FR-10 source
+                failure</h3>
+                <p>Data S1の読込に失敗した場合は明示的なerror
+                stateを表示する。空データを191件と表現せず、demo /
+                synthetic fallbackを使わない。</p>
+                <h2 id="macosアクセシビリティ要件">5.
+                macOS・アクセシビリティ要件</h2>
+                <ul>
+                <li>native SwiftUI / Charts、macOS
+                14+、offline、deterministic。</li>
+                <li><code>NavigationSplitView</code>
+                の既存8画面構成へ統合する。</li>
+                <li>filter群はadaptive
+                layoutとし、window幅に応じて折り返す。</li>
+                <li>sidebar、filters、mechanism、motion
+                controls、selection controlsに安定したaccessibility
+                identifierを付ける。</li>
+                <li>chart
+                summaryには件数、軸、選択行、正確な値を含める。</li>
+                <li>概念図のVoiceOver
+                labelにはmechanism、現在工程、非定量・縮尺外であることを含める。</li>
+                <li>colorだけに依存せず、symbol、線種、label、番号付き工程を併用する。</li>
+                <li>OSのReduce Motionを尊重する。</li>
+                </ul>
+                <h2 id="受入条件">6. 受入条件</h2>
+                <ul class="task-list">
+                <li><label><input type="checkbox"
+                checked="" />「実測データ」と「皮膚透過」が別destinationとして存在する。</label></li>
+                <li><label><input type="checkbox" checked="" />191 raw
+                pointsを表示対象とし、raw
+                point間に接続線がない。</label></li>
+                <li><label><input type="checkbox"
+                checked="" /><code>108.3982246%</code>を原値で保持し、選択・読上げできる。</label></li>
+                <li><label><input type="checkbox"
+                checked="" />hydrogel留置とplastic前処置・抜去後を別工程として描く。</label></li>
+                <li><label><input type="checkbox" checked="" />Franz
+                receptor到達をin vitro測定として表現する。</label></li>
+                <li><label><input type="checkbox"
+                checked="" />選択観測の11 fieldsとsource-specific
+                unitを表示する。</label></li>
+                <li><label><input type="checkbox"
+                checked="" />実測、Fick
+                model、概念図の境界を表示する。</label></li>
+                <li><label><input type="checkbox"
+                checked="" />amountとpercentageの数値関係と断定できない導出方向を注記する。</label></li>
+                <li><label><input type="checkbox" checked="" />source
+                failure時にsynthetic fallbackを返さない。</label></li>
+                <li><label><input type="checkbox" checked="" />unit
+                tests 8件、build-for-testing、static
+                analyzeが成功する。</label></li>
+                <li><label><input type="checkbox" checked="" />UI test
+                targetがcompileする。</label></li>
+                <li><label><input type="checkbox" checked="" />実macOS
+                appでhydrogel / plastic、step、play、191 /
+                60件filter、108.3982246%を目視確認する。</label></li>
+                <li><label><input type="checkbox" />Xcode UI test
+                runner完走。ローカルtest managerがworker
+                materialization待ちで停止するため未達で、手動GUI検証で代替した範囲を監査報告に記録する。</label></li>
+                <li><label><input type="checkbox" checked="" />Markdown
+                / HTML同期とrepository-wide link
+                validation。</label></li>
+                </ul>
+              </article>
+    </main>
+
+    <aside class="reading-gauge" aria-hidden="true">
+      <p>READING DEPTH</p>
+      <div class="gauge-scale">
+        <span>00</span>
+        <span>25</span>
+        <span>50</span>
+        <span>75</span>
+        <span>100</span>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="document-footer">
+    <div>
+      <strong>BiG Lab Research Library</strong>
+      <p>Markdown is canonical. HTML is the synchronized reading view.</p>
+    </div>
+    <div class="document-footer-links">
+      <a href="../../../shared/website/index.html">資料一覧へ戻る</a>
+      <a href="skin-permeation-visualization-requirements.md">Markdownを開く</a>
+    </div>
+  </footer>
+</body>
+</html>

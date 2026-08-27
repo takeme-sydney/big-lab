@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#edf2f0">
+  <meta name="description" content="BiG Labの「Permeation Lab for
+macOS」に関するMarkdown正本のHTML閲覧版。">
+  <title>Permeation Lab for macOS · BiG Lab</title>
+  <link rel="alternate" type="text/markdown" href="README.md" title="Markdown source">
+    <link rel="stylesheet" href="../../shared/website/assets/research-document.css">
+    </head>
+<body class="research-document">
+  <a class="skip-link" href="#document-content">本文へ移動</a>
+
+  <header class="document-topbar">
+    <div class="document-topbar-inner">
+      <a class="document-brand" href="../../shared/website/index.html" aria-label="BiG Lab 資料一覧へ">
+        <span class="document-brand-mark" aria-hidden="true">B</span>
+        <span class="document-brand-copy">
+          <strong>BiG Lab</strong>
+          <small>Research library</small>
+        </span>
+      </a>
+
+      <nav class="document-actions" aria-label="文書ナビゲーション">
+        <a href="../../shared/website/index.html">資料一覧</a>
+        <a class="source-action" href="README.md">Markdown正本 <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <header class="document-hero">
+    <div class="document-hero-copy">
+      <p class="document-kicker">
+        <span aria-hidden="true"></span>
+        DOCUMENT INDEX
+      </p>
+      <h1>Permeation Lab for macOS</h1>
+      <p class="document-description">BiG Labの「Permeation Lab for
+macOS」に関するMarkdown正本のHTML閲覧版。</p>
+
+      <dl class="document-meta">
+                        <div>
+          <dt>Format</dt>
+          <dd>HTML reading view</dd>
+        </div>
+      </dl>
+    </div>
+
+    <aside class="format-map" aria-label="MarkdownからHTMLへの文書フロー">
+      <div class="format-map-head">
+        <span>DOCUMENT PIPELINE</span>
+        <small>ONE SOURCE · TWO VIEWS</small>
+      </div>
+      <div class="format-map-flow">
+        <div class="format-node source-node">
+          <span>CANONICAL</span>
+          <strong>Markdown</strong>
+          <small>内容の正本</small>
+        </div>
+        <span class="format-arrow" aria-hidden="true">→</span>
+        <div class="format-node view-node">
+          <span>READING VIEW</span>
+          <strong>HTML</strong>
+          <small>閲覧用レンダリング</small>
+        </div>
+      </div>
+      <p>内容は同一に保ち、画面では読解・移動・参照に適した構造で表示します。</p>
+    </aside>
+  </header>
+
+  <div class="document-rule" aria-hidden="true">
+    <span></span><span></span><span></span>
+  </div>
+
+  <div class="document-shell">
+        <aside class="document-toc" aria-labelledby="document-toc-title">
+      <p id="document-toc-title">On this page</p>
+      <nav aria-label="目次">
+        <ul>
+        <li><a href="#permeation-lab-for-macos"
+        id="toc-permeation-lab-for-macos">Permeation Lab for macOS</a>
+        <ul>
+        <li><a href="#目的" id="toc-目的">目的</a></li>
+        <li><a href="#最初に読む文書"
+        id="toc-最初に読む文書">最初に読む文書</a></li>
+        <li><a href="#アプリに収録する内容"
+        id="toc-アプリに収録する内容">アプリに収録する内容</a></li>
+        <li><a href="#科学的境界"
+        id="toc-科学的境界">科学的境界</a></li>
+        <li><a href="#原著で公開されたものされていないもの"
+        id="toc-原著で公開されたものされていないもの">原著で公開されたもの／されていないもの</a></li>
+        <li><a href="#一次資料" id="toc-一次資料">一次資料</a></li>
+        <li><a href="#文書生成" id="toc-文書生成">文書生成</a></li>
+        </ul></li>
+        </ul>
+      </nav>
+            <a class="toc-source-link" href="README.md">
+        <span>Source</span>
+        <strong>README.md</strong>
+      </a>
+          </aside>
+
+    <main id="document-content" class="document-main">
+      <article class="document-content">
+                <p><a href="README.html">HTML版を開く</a></p>
+                <h1 id="permeation-lab-for-macos">Permeation Lab for
+                macOS</h1>
+                <p>更新日: 2026-08-27 対象論文: Yuan Y, Han Y, Yap CW,
+                et al. <em>Prediction of drug permeation through
+                microneedled skin by machine learning</em>.
+                <em>Bioengineering &amp; Translational Medicine</em>.
+                2023;8(6):e10512. DOI: 10.1002/btm2.10512</p>
+                <h2 id="目的">目的</h2>
+                <p>Permeation Lab は、Yuan et al. (2023)
+                の本文と同論文の Supporting Information だけを、macOS
+                上で体系的に読解・照合する研究教育用アプリである。論文の要約だけでなく、本文全節、191行の
+                Data S1、式、表、図、Data S2
+                のコード、原著メタデータ、再現上の不足情報を一つの閲覧環境に収める。</p>
+                <p>本アプリは新しい予測器を発明しない。原著が公開していない係数、決定木、booster、train/test
+                行番号、未記載の前処理や乱数条件を補完せず、根拠のない予測曲線も生成しない。</p>
+                <h2 id="最初に読む文書">最初に読む文書</h2>
+                <ol type="1">
+                <li><a href="docs/requirements.md">要件定義</a></li>
+                <li><a href="docs/design.md">設計書</a></li>
+                <li><a
+                href="docs/implementation-prompt.md">実装指示文</a></li>
+                <li><a
+                href="docs/paper-content-matrix.md">論文内容カバレッジ表</a></li>
+                <li><a
+                href="docs/audit-report.md">品質・科学的完全性監査</a></li>
+                <li><a
+                href="docs/skin-permeation-visualization-requirements.md">皮膚透過ビジュアライゼーション要件</a></li>
+                <li><a
+                href="docs/skin-permeation-design-research.md">医療系データビジュアライゼーション調査</a></li>
+                <li><a
+                href="docs/skin-permeation-visualization-implementation-prompt.md">皮膚透過機能の実装指示文</a></li>
+                </ol>
+                <h2 id="アプリに収録する内容">アプリに収録する内容</h2>
+                <ul>
+                <li>書誌情報、要旨、キーワード、著者・所属、連絡先、研究資金</li>
+                <li>Introduction、Methods、Results、Discussion、Conclusion
+                の全文リーダー</li>
+                <li>著者貢献、謝辞、利益相反、査読、データ可用性、倫理声明、ORCID、参考文献1–51、引用方法</li>
+                <li>Data S1
+                の191観測・11列を原値のまま閲覧するデータブラウザ</li>
+                <li>独立した「皮膚透過」画面で、191累積時点観測の非連結散布図とhydrogel
+                / plastic別のFranz-cell概念工程を照合</li>
+                <li>Fick、MLR、RF、XGBoost
+                の説明と、番号付き式（1）–（11）</li>
+                <li>式（11）に続く、原著では式番号のない2つの数値代入例</li>
+                <li>Table 1–4 の全値</li>
+                <li>Figure 1–8 と Supporting Information の Figure
+                S1–S2</li>
+                <li>Data S2 に掲載された R コードと C
+                コードの読取専用ビュー</li>
+                <li>原著 PDF、Data S1、Data S2、SI3、CSV の SHA-256
+                照合</li>
+                <li>原著内の表記差、再現に不足する成果物、モデル利用上の限界</li>
+                </ul>
+                <h2 id="科学的境界">科学的境界</h2>
+                <p>表示を許可する数値は、本文、表、図、Data S1、Data
+                S2、SI3 に存在する値、または Data S1
+                から決定論的に求めた件数・最小値・最大値に限る。Data S1
+                から計算した値には「Data S1
+                集計」と表示し、原著本文に記載された値と混同しない。</p>
+                <p>次の機能は実装しない。</p>
+                <ul>
+                <li>独自係数や経験則による Fick・MLR・RF・XGBoost
+                の擬似予測</li>
+                <li>学習済みモデルであるかのように見せる対話曲線</li>
+                <li>Data S1 の範囲外を含む新規条件の数値予測</li>
+                <li>診断、治療、投与量、安全性、有効性、患者転帰に関する推奨</li>
+                <li>論文外の研究、製品、ガイドライン、市場情報による説明の追加</li>
+                </ul>
+                <h2
+                id="原著で公開されたものされていないもの">原著で公開されたもの／されていないもの</h2>
+                <p>原著は、191点を7:3で無作為に分けたこと、Table 3
+                のハイパーパラメータ、Table 4 の性能、Data S2
+                のコードを公開している。Data S2 の R コードには
+                <code>set.seed(0)</code> があるが、既に作成済みの
+                <code>train set.csv</code> と <code>test set.csv</code>
+                を読み込む構造であり、分割そのものを作るコードではない。</p>
+                <p>次は同梱資料に存在しないため、アプリは復元済みと主張しない。</p>
+                <ul>
+                <li>train/test
+                のCSV、各行の割当、分割を生成した処理</li>
+                <li>MLR の確定係数・切片</li>
+                <li>RF の学習済み forest</li>
+                <li>XGBoost の学習済み booster</li>
+                <li>4モデルの全予測行と完全な評価中間出力</li>
+                <li>Table 3 の透過量用設定を実行する独立した R
+                コード経路</li>
+                </ul>
+                <h2 id="一次資料">一次資料</h2>
+                <ul>
+                <li><a
+                href="../../shared/references/papers/yunong-yuan/microneedle/03-yuan-2023-machine-learning-microneedled-skin-permeation.pdf">原著PDF</a></li>
+                <li><a
+                href="../drug-release-profile/references/supplementary/06-yuan-2023-data-s1.xlsx">Data
+                S1</a></li>
+                <li><a
+                href="../drug-release-profile/references/supplementary/07-yuan-2023-code-si2.docx">Data
+                S2 / Code SI2</a></li>
+                <li><a
+                href="../drug-release-profile/references/supplementary/08-yuan-2023-new-drug-figures-si3.docx">Figure
+                S1–S2 / SI3</a></li>
+                <li><a
+                href="../research/data/raw/yuan2023_training_data.csv">Data
+                S1由来CSV</a></li>
+                <li><a
+                href="../references/translated%20%20papers/01-yuan-2023-drug-permeation-microneedled-skin-ml-ja.md">原著日本語閲覧版</a></li>
+                </ul>
+                <h2 id="文書生成">文書生成</h2>
+                <p>このディレクトリの Markdown
+                が正本である。対応HTMLは、リポジトリ直下から次を実行して生成・検証する。</p>
+                <div class="sourceCode" id="cb1"><pre
+                class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">./shared/scripts/build-website.sh</span></span></code></pre></div>
+                <p>アプリの検証は
+                <code>scripts/quality-check.sh</code>、Release app生成は
+                <code>scripts/build-app.sh</code>
+                を使う。実測したbuild・unit
+                test・analyze・GUI・署名結果と、自動UI
+                runnerの環境制約は<a
+                href="docs/audit-report.md">監査報告</a>に記録する。</p>
+              </article>
+    </main>
+
+    <aside class="reading-gauge" aria-hidden="true">
+      <p>READING DEPTH</p>
+      <div class="gauge-scale">
+        <span>00</span>
+        <span>25</span>
+        <span>50</span>
+        <span>75</span>
+        <span>100</span>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="document-footer">
+    <div>
+      <strong>BiG Lab Research Library</strong>
+      <p>Markdown is canonical. HTML is the synchronized reading view.</p>
+    </div>
+    <div class="document-footer-links">
+      <a href="../../shared/website/index.html">資料一覧へ戻る</a>
+      <a href="README.md">Markdownを開く</a>
+    </div>
+  </footer>
+</body>
+</html>

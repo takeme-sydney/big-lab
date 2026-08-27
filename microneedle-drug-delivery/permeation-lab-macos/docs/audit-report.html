@@ -1,0 +1,527 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#edf2f0">
+  <meta name="description" content="BiG Labの「Permeation Lab
+品質・科学的完全性監査」に関するMarkdown正本のHTML閲覧版。">
+  <title>Permeation Lab 品質・科学的完全性監査 · BiG Lab</title>
+  <link rel="alternate" type="text/markdown" href="audit-report.md" title="Markdown source">
+    <link rel="stylesheet" href="../../../shared/website/assets/research-document.css">
+    </head>
+<body class="research-document">
+  <a class="skip-link" href="#document-content">本文へ移動</a>
+
+  <header class="document-topbar">
+    <div class="document-topbar-inner">
+      <a class="document-brand" href="../../../shared/website/index.html" aria-label="BiG Lab 資料一覧へ">
+        <span class="document-brand-mark" aria-hidden="true">B</span>
+        <span class="document-brand-copy">
+          <strong>BiG Lab</strong>
+          <small>Research library</small>
+        </span>
+      </a>
+
+      <nav class="document-actions" aria-label="文書ナビゲーション">
+        <a href="../../../shared/website/index.html">資料一覧</a>
+        <a class="source-action" href="audit-report.md">Markdown正本 <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <header class="document-hero">
+    <div class="document-hero-copy">
+      <p class="document-kicker">
+        <span aria-hidden="true"></span>
+        RESEARCH DOCUMENT
+      </p>
+      <h1>Permeation Lab 品質・科学的完全性監査</h1>
+      <p class="document-description">BiG Labの「Permeation Lab
+品質・科学的完全性監査」に関するMarkdown正本のHTML閲覧版。</p>
+
+      <dl class="document-meta">
+                        <div>
+          <dt>Format</dt>
+          <dd>HTML reading view</dd>
+        </div>
+      </dl>
+    </div>
+
+    <aside class="format-map" aria-label="MarkdownからHTMLへの文書フロー">
+      <div class="format-map-head">
+        <span>DOCUMENT PIPELINE</span>
+        <small>ONE SOURCE · TWO VIEWS</small>
+      </div>
+      <div class="format-map-flow">
+        <div class="format-node source-node">
+          <span>CANONICAL</span>
+          <strong>Markdown</strong>
+          <small>内容の正本</small>
+        </div>
+        <span class="format-arrow" aria-hidden="true">→</span>
+        <div class="format-node view-node">
+          <span>READING VIEW</span>
+          <strong>HTML</strong>
+          <small>閲覧用レンダリング</small>
+        </div>
+      </div>
+      <p>内容は同一に保ち、画面では読解・移動・参照に適した構造で表示します。</p>
+    </aside>
+  </header>
+
+  <div class="document-rule" aria-hidden="true">
+    <span></span><span></span><span></span>
+  </div>
+
+  <div class="document-shell">
+        <aside class="document-toc" aria-labelledby="document-toc-title">
+      <p id="document-toc-title">On this page</p>
+      <nav aria-label="目次">
+        <ul>
+        <li><a href="#permeation-lab-品質科学的完全性監査"
+        id="toc-permeation-lab-品質科学的完全性監査">Permeation Lab
+        品質・科学的完全性監査</a>
+        <ul>
+        <li><a href="#executive-verdict" id="toc-executive-verdict">1.
+        Executive verdict</a></li>
+        <li><a href="#audited-sources" id="toc-audited-sources">2.
+        Audited sources</a></li>
+        <li><a href="#integrity-baseline" id="toc-integrity-baseline">3.
+        Integrity baseline</a></li>
+        <li><a href="#scientific-integrity-findings"
+        id="toc-scientific-integrity-findings">4. Scientific integrity
+        findings</a>
+        <ul>
+        <li><a href="#の意味" id="toc-の意味">4.1 191の意味</a></li>
+        <li><a href="#実験装置と機序" id="toc-実験装置と機序">4.2
+        実験装置と機序</a></li>
+        <li><a href="#値と単位" id="toc-値と単位">4.3 値と単位</a></li>
+        <li><a href="#観測model概念図" id="toc-観測model概念図">4.4
+        観測・model・概念図</a></li>
+        </ul></li>
+        <li><a href="#reproducibility-audit"
+        id="toc-reproducibility-audit">5. Reproducibility audit</a>
+        <ul>
+        <li><a href="#verified-as-present"
+        id="toc-verified-as-present">Verified as present</a></li>
+        <li><a href="#not-provided" id="toc-not-provided">Not
+        provided</a></li>
+        </ul></li>
+        <li><a href="#software-verification"
+        id="toc-software-verification">6. Software verification</a>
+        <ul>
+        <li><a href="#xcode-ui-runner-limitation"
+        id="toc-xcode-ui-runner-limitation">Xcode UI runner
+        limitation</a></li>
+        </ul></li>
+        <li><a href="#実macos-app-manual-verification"
+        id="toc-実macos-app-manual-verification">7. 実macOS app manual
+        verification</a></li>
+        <li><a href="#branch-application-audit"
+        id="toc-branch-application-audit">8. Branch / application
+        audit</a></li>
+        <li><a href="#documentation-gate" id="toc-documentation-gate">9.
+        Documentation gate</a></li>
+        <li><a href="#final-disposition" id="toc-final-disposition">10.
+        Final disposition</a></li>
+        </ul></li>
+        </ul>
+      </nav>
+            <a class="toc-source-link" href="audit-report.md">
+        <span>Source</span>
+        <strong>audit-report.md</strong>
+      </a>
+          </aside>
+
+    <main id="document-content" class="document-main">
+      <article class="document-content">
+                <p><a href="audit-report.html">HTML版を開く</a></p>
+                <h1 id="permeation-lab-品質科学的完全性監査">Permeation
+                Lab 品質・科学的完全性監査</h1>
+                <p>監査日: 2026-08-27（Australia/Sydney） 監査対象:
+                source inventory / native macOS app /
+                皮膚透過visualization / documentation 現在の判定:
+                <strong>PASS FOR DELIVERY — automated UI
+                runnerのみ環境制約で未完走</strong></p>
+                <h2 id="executive-verdict">1. Executive verdict</h2>
+                <p>Yuan et al. (2023) の原著、Data S1、Data
+                S2、SI3を収録する1つのnative macOS
+                appを完成させ、既存7画面へ独立した「皮膚透過」を追加した。Data
+                S1の191行を粒子軌跡へ変換せず、非連結散布図、選択観測11列、hydrogel
+                / plastic別のFranz-cell概念工程として表示する。</p>
+                <p>source hash、191-row integrity、privacy / sandbox /
+                network absence、build、8 unit tests、static
+                analyze、Release bundle、ad-hoc signing、実macOS
+                GUIは合格した。UI test
+                targetはcompileしたが、<code>xcodebuild test-without-building</code>
+                はこのローカルXcode test managerでworker
+                materialization待ちのまま終了しないため、自動UI
+                testをPASSとは記録しない。皮膚透過機能は実appをComputer
+                Useで操作し、該当範囲を手動検証した。</p>
+                <h2 id="audited-sources">2. Audited sources</h2>
+                <table>
+                <colgroup>
+                <col style="width: 33%" />
+                <col style="width: 33%" />
+                <col style="width: 33%" />
+                </colgroup>
+                <thead>
+                <tr>
+                <th>Source</th>
+                <th>Status</th>
+                <th>Evidence</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td>Original PDF</td>
+                <td>verified / bundled</td>
+                <td>15-page article、3,800,340 bytes</td>
+                </tr>
+                <tr>
+                <td>Data S1 XLSX</td>
+                <td>verified / bundled</td>
+                <td>single worksheet、header row 4、191×11、no
+                formulas</td>
+                </tr>
+                <tr>
+                <td>Data S1 CSV</td>
+                <td>verified / bundled</td>
+                <td>191 data rows、11 columns、source-derived copy</td>
+                </tr>
+                <tr>
+                <td>Data S2 DOCX / extracted text</td>
+                <td>verified / bundled</td>
+                <td>R code + C code</td>
+                </tr>
+                <tr>
+                <td>SI3 DOCX</td>
+                <td>verified / bundled</td>
+                <td>Figure S1 / S2</td>
+                </tr>
+                <tr>
+                <td>Figure 1–8 / S1–S2</td>
+                <td>verified / bundled</td>
+                <td>10 figure assets</td>
+                </tr>
+                </tbody>
+                </table>
+                <p>Code SI2のvisual DOCX
+                renderingはLibreOffice不在のため行わず、plain-text
+                extractionと原DOCX
+                hashで監査した。アプリは抽出textと原sourceを両方収録する。</p>
+                <h2 id="integrity-baseline">3. Integrity baseline</h2>
+                <table>
+                <colgroup>
+                <col style="width: 33%" />
+                <col style="width: 33%" />
+                <col style="width: 33%" />
+                </colgroup>
+                <thead>
+                <tr>
+                <th>Source</th>
+                <th>SHA-256</th>
+                <th>Result</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td>PDF</td>
+                <td><code>4641e97362f3cc545586879f2da3735e5487a50fe3cc6149076c87151e47c820</code></td>
+                <td>verified</td>
+                </tr>
+                <tr>
+                <td>Data S1 XLSX</td>
+                <td><code>a22cc32b4d461b1e65c2b29623186a0d0c1f984fc1935d8bd3b35ec0bc3c3a24</code></td>
+                <td>verified</td>
+                </tr>
+                <tr>
+                <td>Data S2 DOCX</td>
+                <td><code>9d6fe3da0127ba26469b7a1fe61a98f723a5547d8a666c92670bf30f31820c81</code></td>
+                <td>verified</td>
+                </tr>
+                <tr>
+                <td>SI3 DOCX</td>
+                <td><code>49f953203a33dd6c781e2761011c8124a6bac891e07ceedf61de6c1289626031</code></td>
+                <td>verified</td>
+                </tr>
+                <tr>
+                <td>Data S1 CSV</td>
+                <td><code>03ff02276f333d06747efb7a625e9de1b4055b94b8736873f5e7cc389315b0f5</code></td>
+                <td>verified</td>
+                </tr>
+                </tbody>
+                </table>
+                <h2 id="scientific-integrity-findings">4. Scientific
+                integrity findings</h2>
+                <h3 id="の意味">4.1 191の意味</h3>
+                <p>191はData
+                S1の観測行数であり、191個の分子、粒子、穿刺点、連続軌跡ではない。Data
+                S1には空間座標、皮膚内深さ、粒子ID、series / replicate
+                IDがないため、アプリはraw
+                <code>PointMark</code>だけを表示し、点間を接続しない。</p>
+                <p>Data S1集計はlidocaine 73、BSA 33、GHK peptide
+                24、copper ions 24、Rhodamine B 19、caffeine
+                18、hydrogel 131 / plastic 60、rat 137 / human
+                54である。</p>
+                <h3 id="実験装置と機序">4.2 実験装置と機序</h3>
+                <p>表示値は摘出皮膚膜を介してFranz
+                receptor液へ到達した累積amount /
+                percentageであり、皮膚内濃度や全身吸収ではない。hydrogel
+                MNは留置して膨潤・放出する工程、plastic
+                MNは前処置後にpatchを除去して残ったmicron-sized
+                passageへdonor溶液を加える工程として分けた。</p>
+                <h3 id="値と単位">4.3 値と単位</h3>
+                <ul>
+                <li><code>108.3982246%</code>
+                を原値で保持し、100%へclampしない。</li>
+                <li>Data S1 amount headerの <code>µg/cm²</code> とpaper
+                table / figureの <code>µg</code>
+                をsource別に保持する。</li>
+                <li>全191行でamountは数値上
+                <code>loading × percentage / 100</code>
+                と一致するが、生成方向や独立測定性は断定しない。</li>
+                <li>MN
+                lengthは幾何学値であり、実挿入深度として描かない。</li>
+                </ul>
+                <h3 id="観測model概念図">4.4 観測・model・概念図</h3>
+                <p>Figure 4の15 min、1、3、6、24 h concentration
+                mapはFick数値modelであり、Data
+                S1の空間測定ではない。アプリは選択行のsimulationや新しい中間frameを生成しない。original
+                vectorの概念図は工程と方向だけを示し、固定glyphを数・速度・深さ・濃度へ対応させない。</p>
+                <h2 id="reproducibility-audit">5. Reproducibility
+                audit</h2>
+                <h3 id="verified-as-present">Verified as present</h3>
+                <ul>
+                <li>191-row Data S1</li>
+                <li>paper記載の7:3 random split</li>
+                <li>Table 3 hyperparameters</li>
+                <li>Table 4 reported metrics</li>
+                <li>Data S2のMLR / RF / XGBoost R code</li>
+                <li>Data S2のFick C code</li>
+                <li>R code中の <code>set.seed(0)</code></li>
+                </ul>
+                <h3 id="not-provided">Not provided</h3>
+                <ul>
+                <li><code>train set.csv</code> /
+                <code>test set.csv</code></li>
+                <li>191行のtrain/test assignmentとsplit生成code</li>
+                <li>final MLR coefficients</li>
+                <li>trained RF forest / XGBoost booster</li>
+                <li>Table 4に用いた全prediction output</li>
+                <li>amount向けTable 3設定を実行する独立R path</li>
+                </ul>
+                <p><code>set.seed(0)</code>
+                は既成CSVを読むcodeにあり、分割生成code自体は公開されていない。従ってexact
+                Table 4 reproductionはclaimせず、surrogate
+                predictorも実装していない。</p>
+                <h2 id="software-verification">6. Software
+                verification</h2>
+                <p>実行日はいずれも2026-08-27、repository外DerivedDataを使用した。</p>
+                <table>
+                <colgroup>
+                <col style="width: 33%" />
+                <col style="width: 33%" />
+                <col style="width: 33%" />
+                </colgroup>
+                <thead>
+                <tr>
+                <th>Check</th>
+                <th>Result</th>
+                <th>Evidence</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td>project / shared scheme</td>
+                <td>PASS</td>
+                <td>app、unit test、UI test targetを列挙</td>
+                </tr>
+                <tr>
+                <td>resources / bytes / 5 SHA-256</td>
+                <td>PASS</td>
+                <td><code>scripts/quality-check.sh</code></td>
+                </tr>
+                <tr>
+                <td>CSV</td>
+                <td>PASS</td>
+                <td>192 lines = header + 191 rows</td>
+                </tr>
+                <tr>
+                <td>entitlements / privacy</td>
+                <td>PASS</td>
+                <td>App Sandbox、network entitlementなし、tracking
+                false</td>
+                </tr>
+                <tr>
+                <td>prohibited source patterns</td>
+                <td>PASS</td>
+                <td>network / predictor / secret patternなし</td>
+                </tr>
+                <tr>
+                <td>raw chart guard</td>
+                <td>PASS</td>
+                <td><code>SkinPermeationView.swift</code> に
+                <code>LineMark</code> なし</td>
+                </tr>
+                <tr>
+                <td>build-for-testing</td>
+                <td>PASS</td>
+                <td>app、8 unit tests、UI test targetをcompile</td>
+                </tr>
+                <tr>
+                <td>unit tests</td>
+                <td>PASS</td>
+                <td>8 executed、0 failures、direct
+                <code>xcrun xctest</code></td>
+                </tr>
+                <tr>
+                <td>static analyze</td>
+                <td>PASS</td>
+                <td><code>xcodebuild analyze</code> exit 0</td>
+                </tr>
+                <tr>
+                <td>Release build</td>
+                <td>PASS</td>
+                <td>arm64 + x86_64 universal app</td>
+                </tr>
+                <tr>
+                <td>PrivacyInfo in bundle</td>
+                <td>PASS</td>
+                <td>Release bundleで存在確認</td>
+                </tr>
+                <tr>
+                <td>ad-hoc signing</td>
+                <td>PASS</td>
+                <td><code>codesign --verify --deep --strict</code></td>
+                </tr>
+                </tbody>
+                </table>
+                <p>Release artifact:</p>
+                <pre class="text"><code>microneedle-drug-delivery/permeation-lab-macos/dist/PermeationLab.app</code></pre>
+                <p><code>dist/</code> は生成物のため
+                <code>.gitignore</code> 対象である。再生成は
+                <code>./scripts/build-app.sh</code> を使う。</p>
+                <h3 id="xcode-ui-runner-limitation">Xcode UI runner
+                limitation</h3>
+                <p>signed / unsignedの双方で
+                <code>xcodebuild test-without-building</code>
+                を試したが、この環境ではtest managerが
+                <code>waiting for workers to materialize</code>
+                相当の状態で停止した。test
+                failureではないが完走していないため、automated UI
+                testsは未合格とする。UI test sourceはSwift 6
+                warningなしでcompileしている。</p>
+                <h2 id="実macos-app-manual-verification">7. 実macOS app
+                manual verification</h2>
+                <p>最終Debug appを起動し、accessibility
+                treeとscreenshotで次を確認した。</p>
+                <ul>
+                <li>sidebarに8つのdestinationがあり、「実測データ」と「皮膚透過」が別項目。</li>
+                <li>初期hydrogel表示は191 / 191点、Data S1転記行 #1、1
+                h、17.6958866%。</li>
+                <li>Plastic filterは60 / 191点へ変わり、転記行 #132、1
+                h、0.8453793%を表示。</li>
+                <li>Plastic工程1はsolid
+                needlesを挿入状態で表示し、工程2はpatchを除去して点線passageだけを表示。</li>
+                <li>Stepで現在工程が1から2へ変化。</li>
+                <li>PlayでPause表示へ変化し、停止できる。</li>
+                <li>BSA転記行 #31、48 h、<code>108.3982246%</code>
+                をchart、detail、accessibility labelで確認。</li>
+                <li>選択観測の全11 fields、source unit、MN
+                length≠insertion depth noteを確認。</li>
+                <li>観測値は図直下のtextで照合し、glyph
+                mappingではないことを確認。</li>
+                </ul>
+                <p>Reduce Motionのcode path、Data S1読込error
+                state、adaptive filter layoutはsource / unit
+                levelで監査した。OS設定を切り替えたGUI、dark mode、Full
+                Keyboard Access、200%相当text
+                scaleの全組合せは未実施である。</p>
+                <h2 id="branch-application-audit">8. Branch /
+                application audit</h2>
+                <ul>
+                <li>canonical appは
+                <code>microneedle-drug-delivery/permeation-lab-macos/</code>
+                の1つに限定した。</li>
+                <li>old SwiftPM版、synthetic
+                <code>mn-next-ios</code>、interactive SLM
+                web、P2BRD系appは統合対象から除外した。</li>
+                <li>open PR
+                #1–#5は個別にはmergeableでも研究文書がpairwise
+                conflictするため、一括mergeしない。</li>
+                <li>PRのない
+                <code>microneedle-active-learning-paper-revision</code>
+                と <code>p2brd-platform-macos</code>
+                に、監査対象tipを越える固有commitはなかった。</li>
+                <li>本機能はfocused app commitだけをlocal
+                <code>main</code>へcherry-pickする。</li>
+                </ul>
+                <h2 id="documentation-gate">9. Documentation gate</h2>
+                <p>Markdown
+                8点を正本とし、それぞれ先頭link先のHTMLを同じ内容で生成する。repository
+                rootから次を実行し、全Markdown-to-HTML
+                linkを検証する。</p>
+                <div class="sourceCode" id="cb2"><pre
+                class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">./shared/scripts/build-website.sh</span></span></code></pre></div>
+                <p>結果: <strong>PASS</strong>。このアプリのREADMEとdocs
+                8点を含むsame-basename HTMLを生成し、repository-wide
+                Markdown-to-HTML link validationが成功した。</p>
+                <h2 id="final-disposition">10. Final disposition</h2>
+                <ul class="task-list">
+                <li><label><input type="checkbox" checked="" />native
+                macOS target / shared scheme</label></li>
+                <li><label><input type="checkbox" checked="" />191×11
+                source data / 5 hashes</label></li>
+                <li><label><input type="checkbox" checked="" />unit
+                tests 8 / 8</label></li>
+                <li><label><input type="checkbox"
+                checked="" />build-for-testing / UI target
+                compile</label></li>
+                <li><label><input type="checkbox" checked="" />static
+                analyze</label></li>
+                <li><label><input type="checkbox" checked="" />Release
+                universal app / PrivacyInfo / ad-hoc
+                signing</label></li>
+                <li><label><input type="checkbox" checked="" />no
+                invented prediction / no network / no synthetic
+                fallback</label></li>
+                <li><label><input type="checkbox" checked="" />focused
+                skin-permeation manual GUI verification</label></li>
+                <li><label><input type="checkbox" />automated UI
+                runner完走（環境制約を上記に記録）</label></li>
+                <li><label><input type="checkbox" checked="" />Markdown
+                / HTML synchronization and link validation</label></li>
+                </ul>
+                <p>自動UI
+                runnerと未実施のaccessibility組合せを除き、依頼された皮膚透過visualizationと1つのmacOS
+                appへの統合はdelivery可能な状態である。</p>
+              </article>
+    </main>
+
+    <aside class="reading-gauge" aria-hidden="true">
+      <p>READING DEPTH</p>
+      <div class="gauge-scale">
+        <span>00</span>
+        <span>25</span>
+        <span>50</span>
+        <span>75</span>
+        <span>100</span>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="document-footer">
+    <div>
+      <strong>BiG Lab Research Library</strong>
+      <p>Markdown is canonical. HTML is the synchronized reading view.</p>
+    </div>
+    <div class="document-footer-links">
+      <a href="../../../shared/website/index.html">資料一覧へ戻る</a>
+      <a href="audit-report.md">Markdownを開く</a>
+    </div>
+  </footer>
+</body>
+</html>

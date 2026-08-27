@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#edf2f0">
+  <meta name="description" content="BiG Labの「Permeation Lab macOS
+アプリ要件定義」に関するMarkdown正本のHTML閲覧版。">
+  <title>Permeation Lab macOS アプリ要件定義 · BiG Lab</title>
+  <link rel="alternate" type="text/markdown" href="requirements.md" title="Markdown source">
+    <link rel="stylesheet" href="../../../shared/website/assets/research-document.css">
+    </head>
+<body class="research-document">
+  <a class="skip-link" href="#document-content">本文へ移動</a>
+
+  <header class="document-topbar">
+    <div class="document-topbar-inner">
+      <a class="document-brand" href="../../../shared/website/index.html" aria-label="BiG Lab 資料一覧へ">
+        <span class="document-brand-mark" aria-hidden="true">B</span>
+        <span class="document-brand-copy">
+          <strong>BiG Lab</strong>
+          <small>Research library</small>
+        </span>
+      </a>
+
+      <nav class="document-actions" aria-label="文書ナビゲーション">
+        <a href="../../../shared/website/index.html">資料一覧</a>
+        <a class="source-action" href="requirements.md">Markdown正本 <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <header class="document-hero">
+    <div class="document-hero-copy">
+      <p class="document-kicker">
+        <span aria-hidden="true"></span>
+        PROJECT REQUIREMENTS
+      </p>
+      <h1>Permeation Lab macOS アプリ要件定義</h1>
+      <p class="document-description">BiG Labの「Permeation Lab macOS
+アプリ要件定義」に関するMarkdown正本のHTML閲覧版。</p>
+
+      <dl class="document-meta">
+                        <div>
+          <dt>Format</dt>
+          <dd>HTML reading view</dd>
+        </div>
+      </dl>
+    </div>
+
+    <aside class="format-map" aria-label="MarkdownからHTMLへの文書フロー">
+      <div class="format-map-head">
+        <span>DOCUMENT PIPELINE</span>
+        <small>ONE SOURCE · TWO VIEWS</small>
+      </div>
+      <div class="format-map-flow">
+        <div class="format-node source-node">
+          <span>CANONICAL</span>
+          <strong>Markdown</strong>
+          <small>内容の正本</small>
+        </div>
+        <span class="format-arrow" aria-hidden="true">→</span>
+        <div class="format-node view-node">
+          <span>READING VIEW</span>
+          <strong>HTML</strong>
+          <small>閲覧用レンダリング</small>
+        </div>
+      </div>
+      <p>内容は同一に保ち、画面では読解・移動・参照に適した構造で表示します。</p>
+    </aside>
+  </header>
+
+  <div class="document-rule" aria-hidden="true">
+    <span></span><span></span><span></span>
+  </div>
+
+  <div class="document-shell">
+        <aside class="document-toc" aria-labelledby="document-toc-title">
+      <p id="document-toc-title">On this page</p>
+      <nav aria-label="目次">
+        <ul>
+        <li><a href="#permeation-lab-macos-アプリ要件定義"
+        id="toc-permeation-lab-macos-アプリ要件定義">Permeation Lab
+        macOS アプリ要件定義</a>
+        <ul>
+        <li><a href="#product-definition" id="toc-product-definition">1.
+        Product definition</a></li>
+        <li><a href="#scientific-source-boundary"
+        id="toc-scientific-source-boundary">2. Scientific source
+        boundary</a>
+        <ul>
+        <li><a href="#許可する情報源" id="toc-許可する情報源">2.1
+        許可する情報源</a></li>
+        <li><a href="#禁止事項" id="toc-禁止事項">2.2 禁止事項</a></li>
+        </ul></li>
+        <li><a href="#information-architecture"
+        id="toc-information-architecture">3. Information
+        architecture</a></li>
+        <li><a href="#functional-requirements"
+        id="toc-functional-requirements">4. Functional requirements</a>
+        <ul>
+        <li><a href="#fr-01-研究概要" id="toc-fr-01-研究概要">FR-01
+        研究概要</a></li>
+        <li><a href="#fr-02-方法数式" id="toc-fr-02-方法数式">FR-02
+        方法・数式</a></li>
+        <li><a href="#fr-03-実測データ" id="toc-fr-03-実測データ">FR-03
+        実測データ</a></li>
+        <li><a href="#fr-04-皮膚透過" id="toc-fr-04-皮膚透過">FR-04
+        皮膚透過</a></li>
+        <li><a href="#fr-05-結果比較" id="toc-fr-05-結果比較">FR-05
+        結果・比較</a></li>
+        <li><a href="#fr-06-原著図" id="toc-fr-06-原著図">FR-06
+        原著図</a></li>
+        <li><a href="#fr-07-全文" id="toc-fr-07-全文">FR-07
+        全文</a></li>
+        <li><a href="#fr-08-研究情報完全性"
+        id="toc-fr-08-研究情報完全性">FR-08 研究情報・完全性</a></li>
+        </ul></li>
+        <li><a href="#source-discrepancies-to-preserve"
+        id="toc-source-discrepancies-to-preserve">5. Source
+        discrepancies to preserve</a></li>
+        <li><a href="#non-functional-requirements"
+        id="toc-non-functional-requirements">6. Non-functional
+        requirements</a></li>
+        <li><a href="#verification-requirements"
+        id="toc-verification-requirements">7. Verification
+        requirements</a></li>
+        </ul></li>
+        </ul>
+      </nav>
+            <a class="toc-source-link" href="requirements.md">
+        <span>Source</span>
+        <strong>requirements.md</strong>
+      </a>
+          </aside>
+
+    <main id="document-content" class="document-main">
+      <article class="document-content">
+                <p><a href="requirements.html">HTML版を開く</a></p>
+                <h1 id="permeation-lab-macos-アプリ要件定義">Permeation
+                Lab macOS アプリ要件定義</h1>
+                <p>文書版: 1.1 作成・更新日: 2026-08-27 対象: Yuan et
+                al. (2023), PMID 38023708</p>
+                <h2 id="product-definition">1. Product definition</h2>
+                <p>Permeation Lab は、Yuan et
+                al. が報告したマイクロニードル処理皮膚の薬物透過予測研究を、本文、補足資料、実測データ、式、表、図、コード、再現限界まで一つの
+                native macOS
+                アプリで照合するオフライン研究リーダーである。</p>
+                <p>本アプリは新規条件の予測器ではない。公開されていない学習済みモデル、係数、train/test
+                行割当を推測せず、原著が報告した値と Data S1
+                の観測値だけを扱う。</p>
+                <h2 id="scientific-source-boundary">2. Scientific source
+                boundary</h2>
+                <h3 id="許可する情報源">2.1 許可する情報源</h3>
+                <p>科学的内容は次の同一論文一式だけに限定する。</p>
+                <ol type="1">
+                <li>原著15ページの本文、図表、末尾情報、参考文献一覧</li>
+                <li>Data S1 の単一 worksheet、191観測、11列</li>
+                <li>Data S2 の R コードと C コード</li>
+                <li>SI3 の Figure S1 と Figure S2</li>
+                <li>上記から機械的に確認できる行数、列数、カテゴリ件数、最小値、最大値、ファイルサイズ、SHA-256</li>
+                <li>同じ原著の日本語翻訳版と、原著から抽出した図</li>
+                </ol>
+                <p>macOS、SwiftUI、Charts、AppKitのHTML読込、CSV
+                読込、テスト、アクセシビリティは実装手段であり、新しい科学的主張の情報源にはしない。</p>
+                <h3 id="禁止事項">2.2 禁止事項</h3>
+                <ul>
+                <li>論文外の医学、薬学、機械学習、製品、ガイドライン、市場情報の追加</li>
+                <li>独自の物理係数、回帰係数、決定木、閾値、補正式、予測曲線</li>
+                <li><code>educational surrogate</code>
+                を含む未出典の数値予測</li>
+                <li>Table 4
+                をアプリが再学習・再計算した結果と表現すること</li>
+                <li>Data S1 の 108.3982246%
+                を100%へ制限、丸め、除外すること</li>
+                <li>source 間の単位・表記差を無言で統一すること</li>
+                <li>診断、治療、投与量、安全性、有効性、患者転帰の判断機能</li>
+                </ul>
+                <h2 id="information-architecture">3. Information
+                architecture</h2>
+                <p>sidebar は次の8画面を持つ。</p>
+                <ol type="1">
+                <li>研究概要</li>
+                <li>方法・数式</li>
+                <li>実測データ</li>
+                <li>皮膚透過</li>
+                <li>結果・比較</li>
+                <li>原著図</li>
+                <li>全文</li>
+                <li>研究情報</li>
+                </ol>
+                <p>式と Tables 1–3、Data S2 は「方法・数式」へ、Table 4
+                は「結果・比較」へ統合する。front matter、本文全節、end
+                matter、参考文献1–51は「全文」で原著順に読めるようにする。</p>
+                <h2 id="functional-requirements">4. Functional
+                requirements</h2>
+                <h3 id="fr-01-研究概要">FR-01 研究概要</h3>
+                <ul>
+                <li>title、authors、journal、year、DOI、PMID、研究目的、4手法、2
+                outcomes を示す。</li>
+                <li>原著の7:3無作為分割と、Table 4
+                の主要結果を「原著報告値」として示す。</li>
+                <li>Data S2 に <code>set.seed(0)</code>
+                はあるが、無作為分割処理自体は掲載されず、既成のtrain/test
+                CSVを読むだけなので固定行割当を再構成しないことを明記する。</li>
+                <li>学習済みモデルを同梱せず、新しい予測値を生成しないことを常時明示する。</li>
+                </ul>
+                <h3 id="fr-02-方法数式">FR-02 方法・数式</h3>
+                <ul>
+                <li>データ収集、Fick、MLR、RF、XGBoost、学習・評価手順を原著記載の範囲で説明する。</li>
+                <li>Fick モデルの5仮定をすべて収録する。</li>
+                <li>番号付き式 (1)–(11)
+                を番号、式、原著由来の記号説明、source locator
+                とともに表示する。</li>
+                <li>式 (11)
+                後の2つの数値代入は、原著どおり「番号なし計算例」として別表示する。</li>
+                <li>Tables 1–3
+                の全パラメータ、特徴量、ハイパーパラメータを表示する。</li>
+                <li>Data S2 から抽出した R/C
+                コード全体を、実行機能のない選択可能な monospaced text
+                として表示する。</li>
+                <li>欠落する <code>train set.csv</code> /
+                <code>test set.csv</code>、学習済みモデル、掲載Cコードの構文欠落を明記し、推測補完しない。</li>
+                </ul>
+                <h3 id="fr-03-実測データ">FR-03 実測データ</h3>
+                <ul>
+                <li>Data S1 由来CSVの191観測・11 source
+                fieldsを読取専用で保持する。</li>
+                <li>drug、skin type、MN type で絞り込み、amount /
+                percentage を切り替える。</li>
+                <li>フィルタ件数、選択 outcome の最小値・最大値を
+                <code>Data S1 集計</code> として示す。</li>
+                <li>time 対 outcome を <code>PointMark</code>
+                だけで表示し、線、回帰、補間、外挿、平均を加えない。</li>
+                <li>全観測を1ページ20件の paged table で閲覧できる。skin
+                と MN は同一表示列内でも両値を明示し、11 source fields
+                の内容を失わない。</li>
+                <li>数値は source precision
+                を保持できる最大10桁の小数表示を用いる。</li>
+                <li>amount は Data S1 header に従い
+                <code>µg/cm²</code>、percentage は <code>%</code>
+                とする。</li>
+                <li>108.3982246%を原値のまま表示する。</li>
+                </ul>
+                <h3 id="fr-04-皮膚透過">FR-04 皮膚透過</h3>
+                <ul>
+                <li>Data S1 の191観測と、原著が説明する hydrogel /
+                plastic MN の実験工程を同一画面で照合する。</li>
+                <li>観測点を空間座標、粒子、連続時系列として扱わず、非連結散布図として表示する。</li>
+                <li>drug、skin、MN、outcome
+                のfilter、全解除、前後観測、観測pickerを提供する。</li>
+                <li>選択観測について11 source fieldsを縦に表示し、空
+                reference は <code>blank in Data S1</code> と示す。</li>
+                <li>概念図の要素は原著にある donor /
+                patch、角質層、皮膚膜、Franz receptor
+                液に限定する。</li>
+                <li>hydrogel の留置工程と plastic
+                の抜去後工程を区別する。</li>
+                <li>概念図は常に <code>非定量・縮尺外</code>
+                と表示し、glyph
+                数・速度・深さ・位置を観測値へ対応させない。</li>
+                <li>animation
+                は停止状態で開始し、再生、一時停止、一段送り、リセットを提供する。Reduce
+                Motion 時は移動を停止する。</li>
+                <li>Figure 4 は Fick model の濃度mapであり、Data S1
+                の空間測定ではないことを明記し、新しい中間frameを生成しない。</li>
+                </ul>
+                <h3 id="fr-05-結果比較">FR-05 結果・比較</h3>
+                <ul>
+                <li>Table 4 の4モデル×2 outcomesの RMSE /
+                R²を全値表示する。</li>
+                <li>値は原著報告値であり再計算値ではないことを明記する。</li>
+                <li>XGBoostが両 outcome で最良、amount の次点が
+                Fick、percentage の次点が
+                RF、MLRが最低という原著の順位を表示する。</li>
+                <li>Figures 4–8 に対応する Fick
+                の挙動、モデル比較、特徴量重要度を原著記載の範囲で整理する。</li>
+                <li>原著が XGBoost をさらに検証した
+                <code>a drug purposely removed</code>
+                の新規薬物検証を、各薬物で反復したと断定せず提示する。</li>
+                </ul>
+                <h3 id="fr-06-原著図">FR-06 原著図</h3>
+                <ul>
+                <li>Figures 1–8 と Figures S1–S2
+                の10画像を選択して閲覧できる。</li>
+                <li>画像は aspect-fit で表示し、縦横比を変えない。</li>
+                <li>各図に source
+                label、原著由来caption要約、読み方を付ける。</li>
+                <li>原著そのものの完全なcaptionは「全文」で図と同じ位置から確認できる。</li>
+                <li>画像から独自数値を読み取ったり、Figure 4
+                の補間mapを生成したりしない。</li>
+                </ul>
+                <h3 id="fr-07-全文">FR-07 全文</h3>
+                <ul>
+                <li>自己完結した日本語HTMLを bundle から AppKit
+                の読取専用rich-textへ読み込み、選択可能な全文として表示する。</li>
+                <li>front
+                matter、authors、affiliations、correspondence、abstract、sections
+                1–5、式 (1)–(11)と番号なし計算例、Tables 1–4、Figures
+                1–8、end matter、references 1–51、how to cite
+                を収録する。</li>
+                <li>原著の表記上の不一致を翻訳側で黙って訂正しない。</li>
+                <li>同梱した原著PDFを開ける。</li>
+                <li>import後のlink属性を除去し、JavaScript実行・外部navigation・ネットワーク通信を持たせない。</li>
+                </ul>
+                <h3 id="fr-08-研究情報完全性">FR-08
+                研究情報・完全性</h3>
+                <ul>
+                <li>書誌、著者、所属、連絡先、研究資金、謝辞、利益相反、データ可用性、倫理、ORCID、著者貢献を表示する。</li>
+                <li>原著PDF、Data S1 XLSX/CSV、Data S2 DOCX、SI3
+                DOCXのSHA-256を実行時に計算し、baselineと照合する。</li>
+                <li>Data
+                S2からのtext転記と日本語全文HTMLも同梱sourceとして列挙する。</li>
+                <li>train/test 行割当、split生成code、最終MLR係数、RF
+                forest、XGBoost
+                boosterなど、公開されていないartifactを明記する。</li>
+                <li>原著本文、Tables、Data S1、Data S2
+                間の表記差を別項目として示す。</li>
+                </ul>
+                <h2 id="source-discrepancies-to-preserve">5. Source
+                discrepancies to preserve</h2>
+                <ul>
+                <li>原著本文は BSA / GHK / copper を
+                <code>33% / 24% / 24%</code>、Rhodamine B / caffeine
+                を各10%と記す一方、Data S1 の件数は33 / 24 / 24 / 19 /
+                18である。</li>
+                <li>Data S1 amount header は <code>µg/cm²</code>、Table
+                4 の amount RMSE は <code>µg</code> である。</li>
+                <li>BSA MW は本文と Data S1 で66,000 Da、Table 2で66,430
+                Daである。</li>
+                <li>MN type は Methods / Data S1 で hydrogel /
+                plastic、Table 2で hydrogel / solid と記される。</li>
+                <li>MLR 式 (4) は切片 <code>b</code> を含むが、Data S2
+                の式は <code>Results ~ . - 1</code>
+                で切片を除外する。</li>
+                </ul>
+                <h2 id="non-functional-requirements">6. Non-functional
+                requirements</h2>
+                <ul>
+                <li>macOS 14+、Swift 6、native SwiftUI / Charts /
+                AppKit。</li>
+                <li>App Sandbox と Hardened Runtime を有効にする。</li>
+                <li>network entitlement、analytics、account、remote
+                databaseを持たない。</li>
+                <li>scientific resourcesはbundle内のimmutable
+                fileとし、missing resourceをdemo dataで埋めない。</li>
+                <li>sidebarとdetailの2領域がwindow
+                resizeに追従する。</li>
+                <li>text selection、system
+                control、caption、symbol、accessibility
+                identifierを用い、色だけに意味を持たせない。</li>
+                <li>privacy manifest は tracking false
+                とし、収集データを宣言しない。</li>
+                </ul>
+                <h2 id="verification-requirements">7. Verification
+                requirements</h2>
+                <p>unit testsは少なくとも次を検証する。</p>
+                <ul>
+                <li>191行、6薬物、drug / skin / MN counts</li>
+                <li>全数値範囲と108.3982246%</li>
+                <li>全191行で
+                <code>amount = loading × percentage / 100</code></li>
+                <li>Table 4 全16値</li>
+                <li>番号付き式 (1)–(11)、番号なし計算例2件、図10点</li>
+                <li>皮膚透過scatterが非連結観測点だけを使うこと</li>
+                <li>hydrogel / plastic の工程が異なること</li>
+                <li>filter後の選択順が決定的であること</li>
+                </ul>
+                <p>UI test
+                targetは起動、8画面navigation、皮膚透過の境界・図・観測detail・controlsをコンパイル可能な形で持つ。自動UI
+                runnerを実行できない環境では、その事実を記録し、実appの全画面目視確認で代替した範囲を明記する。</p>
+                <p>完成判定には、warning-free build、unit tests、static
+                analyze、Release build、ad-hoc signing、source
+                hash、実app目視、Markdown/HTML同期を要求する。未実行項目を成功と記録しない。</p>
+              </article>
+    </main>
+
+    <aside class="reading-gauge" aria-hidden="true">
+      <p>READING DEPTH</p>
+      <div class="gauge-scale">
+        <span>00</span>
+        <span>25</span>
+        <span>50</span>
+        <span>75</span>
+        <span>100</span>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="document-footer">
+    <div>
+      <strong>BiG Lab Research Library</strong>
+      <p>Markdown is canonical. HTML is the synchronized reading view.</p>
+    </div>
+    <div class="document-footer-links">
+      <a href="../../../shared/website/index.html">資料一覧へ戻る</a>
+      <a href="requirements.md">Markdownを開く</a>
+    </div>
+  </footer>
+</body>
+</html>

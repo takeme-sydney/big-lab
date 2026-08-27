@@ -1,0 +1,987 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#edf2f0">
+  <meta name="description" content="BiG Labの「Yuan et al. (2023)
+論文内容カバレッジ表」に関するMarkdown正本のHTML閲覧版。">
+  <title>Yuan et al. (2023) 論文内容カバレッジ表 · BiG Lab</title>
+  <link rel="alternate" type="text/markdown" href="paper-content-matrix.md" title="Markdown source">
+    <link rel="stylesheet" href="../../../shared/website/assets/research-document.css">
+    </head>
+<body class="research-document">
+  <a class="skip-link" href="#document-content">本文へ移動</a>
+
+  <header class="document-topbar">
+    <div class="document-topbar-inner">
+      <a class="document-brand" href="../../../shared/website/index.html" aria-label="BiG Lab 資料一覧へ">
+        <span class="document-brand-mark" aria-hidden="true">B</span>
+        <span class="document-brand-copy">
+          <strong>BiG Lab</strong>
+          <small>Research library</small>
+        </span>
+      </a>
+
+      <nav class="document-actions" aria-label="文書ナビゲーション">
+        <a href="../../../shared/website/index.html">資料一覧</a>
+        <a class="source-action" href="paper-content-matrix.md">Markdown正本 <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <header class="document-hero">
+    <div class="document-hero-copy">
+      <p class="document-kicker">
+        <span aria-hidden="true"></span>
+        RESEARCH DOCUMENT
+      </p>
+      <h1>Yuan et al. (2023) 論文内容カバレッジ表</h1>
+      <p class="document-description">BiG Labの「Yuan et al. (2023)
+論文内容カバレッジ表」に関するMarkdown正本のHTML閲覧版。</p>
+
+      <dl class="document-meta">
+                        <div>
+          <dt>Format</dt>
+          <dd>HTML reading view</dd>
+        </div>
+      </dl>
+    </div>
+
+    <aside class="format-map" aria-label="MarkdownからHTMLへの文書フロー">
+      <div class="format-map-head">
+        <span>DOCUMENT PIPELINE</span>
+        <small>ONE SOURCE · TWO VIEWS</small>
+      </div>
+      <div class="format-map-flow">
+        <div class="format-node source-node">
+          <span>CANONICAL</span>
+          <strong>Markdown</strong>
+          <small>内容の正本</small>
+        </div>
+        <span class="format-arrow" aria-hidden="true">→</span>
+        <div class="format-node view-node">
+          <span>READING VIEW</span>
+          <strong>HTML</strong>
+          <small>閲覧用レンダリング</small>
+        </div>
+      </div>
+      <p>内容は同一に保ち、画面では読解・移動・参照に適した構造で表示します。</p>
+    </aside>
+  </header>
+
+  <div class="document-rule" aria-hidden="true">
+    <span></span><span></span><span></span>
+  </div>
+
+  <div class="document-shell">
+        <aside class="document-toc" aria-labelledby="document-toc-title">
+      <p id="document-toc-title">On this page</p>
+      <nav aria-label="目次">
+        <ul>
+        <li><a href="#yuan-et-al.-2023-論文内容カバレッジ表"
+        id="toc-yuan-et-al.-2023-論文内容カバレッジ表">Yuan et
+        al. (2023) 論文内容カバレッジ表</a>
+        <ul>
+        <li><a href="#article-metadata-and-front-matter"
+        id="toc-article-metadata-and-front-matter">1. Article metadata
+        and front matter</a></li>
+        <li><a href="#main-article-sections"
+        id="toc-main-article-sections">2. Main article sections</a></li>
+        <li><a href="#end-matter" id="toc-end-matter">3. End
+        matter</a></li>
+        <li><a href="#dataset-coverage" id="toc-dataset-coverage">4.
+        Dataset coverage</a></li>
+        <li><a href="#equation-coverage" id="toc-equation-coverage">5.
+        Equation coverage</a></li>
+        <li><a href="#table-coverage" id="toc-table-coverage">6. Table
+        coverage</a>
+        <ul>
+        <li><a href="#table-1-fick-parameters"
+        id="toc-table-1-fick-parameters">Table 1 — Fick
+        parameters</a></li>
+        <li><a href="#table-2-ml-parameters"
+        id="toc-table-2-ml-parameters">Table 2 — ML parameters</a></li>
+        <li><a href="#table-3-hyperparameters"
+        id="toc-table-3-hyperparameters">Table 3 —
+        Hyperparameters</a></li>
+        <li><a href="#table-4-reported-performance"
+        id="toc-table-4-reported-performance">Table 4 — Reported
+        performance</a></li>
+        </ul></li>
+        <li><a href="#figure-coverage" id="toc-figure-coverage">7.
+        Figure coverage</a></li>
+        <li><a href="#supporting-code-coverage"
+        id="toc-supporting-code-coverage">8. Supporting code
+        coverage</a>
+        <ul>
+        <li><a href="#data-s2-r-section" id="toc-data-s2-r-section">Data
+        S2 R section</a></li>
+        <li><a href="#data-s2-c-section" id="toc-data-s2-c-section">Data
+        S2 C section</a></li>
+        </ul></li>
+        <li><a href="#reproducibility-gap-matrix"
+        id="toc-reproducibility-gap-matrix">9. Reproducibility gap
+        matrix</a></li>
+        <li><a href="#integrity-manifest-baseline"
+        id="toc-integrity-manifest-baseline">10. Integrity manifest
+        baseline</a></li>
+        </ul></li>
+        </ul>
+      </nav>
+            <a class="toc-source-link" href="paper-content-matrix.md">
+        <span>Source</span>
+        <strong>paper-content-matrix.md</strong>
+      </a>
+          </aside>
+
+    <main id="document-content" class="document-main">
+      <article class="document-content">
+                <p><a
+                href="paper-content-matrix.html">HTML版を開く</a></p>
+                <h1 id="yuan-et-al.-2023-論文内容カバレッジ表">Yuan et
+                al. (2023) 論文内容カバレッジ表</h1>
+                <p>この文書は、アプリが原著と補足資料の何をどこに収録するかを示すtraceability
+                matrixである。<code>Required</code>
+                は省略不可、<code>Source note</code>
+                は原著内の差をそのまま示す項目である。</p>
+                <h2 id="article-metadata-and-front-matter">1. Article
+                metadata and front matter</h2>
+                <table>
+                <colgroup>
+                <col style="width: 33%" />
+                <col style="width: 33%" />
+                <col style="width: 33%" />
+                </colgroup>
+                <thead>
+                <tr>
+                <th>Source content</th>
+                <th>Required app destination</th>
+                <th>Coverage rule</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td>received / revised / accepted dates</td>
+                <td>Overview / Full Paper</td>
+                <td>3 datesを保持</td>
+                </tr>
+                <tr>
+                <td>DOI、article type、title</td>
+                <td>Overview</td>
+                <td>原著表記</td>
+                </tr>
+                <tr>
+                <td>authors 7名、affiliations 6件</td>
+                <td>Full Paper</td>
+                <td>全件</td>
+                </tr>
+                <tr>
+                <td>corresponding authors</td>
+                <td>Full Paper</td>
+                <td>affiliation、emailを含む</td>
+                </tr>
+                <tr>
+                <td>funding</td>
+                <td>Overview / Full Paper</td>
+                <td>CSC No. 202008320366、USYD PCA2019</td>
+                </tr>
+                <tr>
+                <td>abstract</td>
+                <td>Overview / Full Paper</td>
+                <td>全文</td>
+                </tr>
+                <tr>
+                <td>keywords</td>
+                <td>Overview</td>
+                <td>6語</td>
+                </tr>
+                <tr>
+                <td>CC BY notice</td>
+                <td>Full Paper / Integrity</td>
+                <td>attributionを保持</td>
+                </tr>
+                </tbody>
+                </table>
+                <h2 id="main-article-sections">2. Main article
+                sections</h2>
+                <table>
+                <colgroup>
+                <col style="width: 33%" />
+                <col style="width: 33%" />
+                <col style="width: 33%" />
+                </colgroup>
+                <thead>
+                <tr>
+                <th>Section</th>
+                <th>Required content</th>
+                <th>Related items</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td>1 Introduction</td>
+                <td>skin barrier、MN、in vitro permeation
+                cost/time、simulation/ML rationale、study aim</td>
+                <td>References 1–28</td>
+                </tr>
+                <tr>
+                <td>2.1 Data collection</td>
+                <td>6 permeants、hydrogel/plastic provenance、Franz
+                experiments、Data S1</td>
+                <td>Figure 3、Data S1</td>
+                </tr>
+                <tr>
+                <td>2.2 Overview</td>
+                <td>4 methods、2 outcomes、descriptors、train/test
+                concept</td>
+                <td>Figure 1</td>
+                </tr>
+                <tr>
+                <td>2.3 Fick</td>
+                <td>2D finite-difference model、boundary
+                elements、normalization、5 assumptions</td>
+                <td>Eq 1–2、Table 1、Figures 4–5、Data S2 C</td>
+                </tr>
+                <tr>
+                <td>2.4 MLR</td>
+                <td>simple/multiple linear form</td>
+                <td>Eq 3–4、Data S2 R</td>
+                </tr>
+                <tr>
+                <td>2.5 RF</td>
+                <td>independent trees、regression mean、importance</td>
+                <td>Figure 1c、Table 3、Figure 8</td>
+                </tr>
+                <tr>
+                <td>2.6 XGBoost</td>
+                <td>sequential trees、loss + complexity</td>
+                <td>Eq 5–6、Table 3、Figure 8</td>
+                </tr>
+                <tr>
+                <td>2.7 Evaluation</td>
+                <td>RMSE、R²、direction of better performance</td>
+                <td>Eq 7–8</td>
+                </tr>
+                <tr>
+                <td>2.8 Process</td>
+                <td>manual cleaning、191 points、7:3 random
+                split、software versions</td>
+                <td>Figure 2、Data S2</td>
+                </tr>
+                <tr>
+                <td>3.1 Data</td>
+                <td>drug composition、small dataset limitation</td>
+                <td>Figure 3、Data S1</td>
+                </tr>
+                <tr>
+                <td>3.2 Fick results</td>
+                <td>concentration evolution、plateau、hydrogel/plastic
+                approximation、parameter effects</td>
+                <td>Table 1、Figures 4–5</td>
+                </tr>
+                <tr>
+                <td>3.3 ML results</td>
+                <td>7 features、MN geometries、surface area</td>
+                <td>Eq 9–11、番号なし計算例、Tables 2–3</td>
+                </tr>
+                <tr>
+                <td>3.4 Comparison</td>
+                <td>reported RMSE/R²、drug/skin panels、small-subset
+                deviations</td>
+                <td>Table 4、Figures 6–7</td>
+                </tr>
+                <tr>
+                <td>3.5 Importance</td>
+                <td>percentage: area/time、amount: loading/time</td>
+                <td>Figure 8</td>
+                </tr>
+                <tr>
+                <td>4.1 Mechanistic vs statistical</td>
+                <td>interpretability、diffusion coefficient
+                dependence、ML advantage</td>
+                <td>Figures 4–5</td>
+                </tr>
+                <tr>
+                <td>4.2 Model comparison</td>
+                <td>XGBoost best、XGBoost unseen-drug validationのlarge
+                deviation、loading-range explanation</td>
+                <td>Table 4、Figures S1–S2</td>
+                </tr>
+                <tr>
+                <td>4.3 Feature comparison</td>
+                <td>outcome-specific importance、low importance
+                caveat、future larger dataset</td>
+                <td>Figure 8</td>
+                </tr>
+                <tr>
+                <td>5 Conclusion</td>
+                <td>XGBoost best、RF second for percentage、Fick second
+                for amount</td>
+                <td>Table 4</td>
+                </tr>
+                </tbody>
+                </table>
+                <h2 id="end-matter">3. End matter</h2>
+                <table>
+                <thead>
+                <tr>
+                <th>Source content</th>
+                <th>Required coverage</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td>Author contributions</td>
+                <td>7 authors and all roles</td>
+                </tr>
+                <tr>
+                <td>Acknowledgments</td>
+                <td>PCA、USYD-CSC support</td>
+                </tr>
+                <tr>
+                <td>Conflict of interest</td>
+                <td>authors declare none</td>
+                </tr>
+                <tr>
+                <td>Peer review</td>
+                <td>statement as printed</td>
+                </tr>
+                <tr>
+                <td>Data availability</td>
+                <td>supplementary availability statement</td>
+                </tr>
+                <tr>
+                <td>Ethics</td>
+                <td>prior studies had required approvals</td>
+                </tr>
+                <tr>
+                <td>ORCID</td>
+                <td>Lifeng Kang identifier</td>
+                </tr>
+                <tr>
+                <td>References</td>
+                <td>entries 1–51, without importing their full
+                texts</td>
+                </tr>
+                <tr>
+                <td>Supporting information list</td>
+                <td>Data S1、Data S2、Figure S1、Figure S2</td>
+                </tr>
+                <tr>
+                <td>How to cite</td>
+                <td>full citation</td>
+                </tr>
+                </tbody>
+                </table>
+                <h2 id="dataset-coverage">4. Dataset coverage</h2>
+                <p>Data S1
+                は単一worksheetで、4行目がheader、続く191行がobservations、11列がmodel/data
+                fieldsである。appは全行・全列を収録する。</p>
+                <table>
+                <colgroup>
+                <col style="width: 33%" />
+                <col style="width: 33%" />
+                <col style="width: 33%" />
+                </colgroup>
+                <thead>
+                <tr>
+                <th>Column</th>
+                <th>Meaning in source</th>
+                <th>App handling</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td>Drug name</td>
+                <td>6 permeants</td>
+                <td>text/filter</td>
+                </tr>
+                <tr>
+                <td>Drug loading in MN patch (µg)</td>
+                <td>50–70,940</td>
+                <td>original numeric value</td>
+                </tr>
+                <tr>
+                <td>Drug MW (Dalton)</td>
+                <td>molecular weight</td>
+                <td>original numeric value</td>
+                </tr>
+                <tr>
+                <td>MN Length (mm)</td>
+                <td>needle length</td>
+                <td>original numeric value</td>
+                </tr>
+                <tr>
+                <td>Skin type</td>
+                <td>rat=1、human=2</td>
+                <td>code + source label</td>
+                </tr>
+                <tr>
+                <td>MN type</td>
+                <td>hydrogel=1、plastic=2</td>
+                <td>code + source label</td>
+                </tr>
+                <tr>
+                <td>MN surface area (mm2)</td>
+                <td>total patch area</td>
+                <td>original numeric value</td>
+                </tr>
+                <tr>
+                <td>Permeation time (hour)</td>
+                <td>0.083333333–48</td>
+                <td>original numeric value</td>
+                </tr>
+                <tr>
+                <td>Drug permeation percentage</td>
+                <td>cumulative percentage</td>
+                <td>original numeric value</td>
+                </tr>
+                <tr>
+                <td>Drug permeation amounts (µg/cm2)</td>
+                <td>cumulative amount column as titled</td>
+                <td>preserve source unit string</td>
+                </tr>
+                <tr>
+                <td>References</td>
+                <td>source-study citation, blanks included</td>
+                <td>no forward-fill in raw view</td>
+                </tr>
+                </tbody>
+                </table>
+                <table>
+                <colgroup>
+                <col style="width: 30%" />
+                <col style="width: 40%" />
+                <col style="width: 30%" />
+                </colgroup>
+                <thead>
+                <tr>
+                <th>Drug</th>
+                <th style="text-align: right;">Data S1 count</th>
+                <th>Article prose / Figure 3 note</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td>lidocaine</td>
+                <td style="text-align: right;">73</td>
+                <td>prose states 73 and 38%</td>
+                </tr>
+                <tr>
+                <td>BSA</td>
+                <td style="text-align: right;">33</td>
+                <td>prose prints <code>33%</code>, while Data S1 count
+                is 33</td>
+                </tr>
+                <tr>
+                <td>GHK peptide</td>
+                <td style="text-align: right;">24</td>
+                <td>prose prints <code>24%</code>, while Data S1 count
+                is 24</td>
+                </tr>
+                <tr>
+                <td>copper ions</td>
+                <td style="text-align: right;">24</td>
+                <td>prose prints <code>24%</code>, while Data S1 count
+                is 24</td>
+                </tr>
+                <tr>
+                <td>Rhodamine B</td>
+                <td style="text-align: right;">19</td>
+                <td>prose describes 10%; Figure 6 discussion says fewer
+                than 20</td>
+                </tr>
+                <tr>
+                <td>caffeine</td>
+                <td style="text-align: right;">18</td>
+                <td>prose describes 10%; Figure 6 discussion says fewer
+                than 20</td>
+                </tr>
+                <tr>
+                <td>total</td>
+                <td style="text-align: right;">191</td>
+                <td>article and Data S1 agree</td>
+                </tr>
+                </tbody>
+                </table>
+                <p>アプリはData S1 countとarticle
+                proseを別labelで示し、どちらかを無言で置換しない。</p>
+                <h2 id="equation-coverage">5. Equation coverage</h2>
+                <table>
+                <colgroup>
+                <col style="width: 40%" />
+                <col style="width: 30%" />
+                <col style="width: 30%" />
+                </colgroup>
+                <thead>
+                <tr>
+                <th style="text-align: right;">Eq</th>
+                <th>Expression / subject</th>
+                <th>Required context</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td style="text-align: right;">1</td>
+                <td><code>∂C/∂t = D(∂²C/∂x² + ∂²C/∂y²)</code></td>
+                <td>2D Fick’s second law、C/t/D definition</td>
+                </tr>
+                <tr>
+                <td style="text-align: right;">2</td>
+                <td><code>permeation percentage = (m_t / m_total) × 100%</code></td>
+                <td>cumulative amount and loaded total</td>
+                </tr>
+                <tr>
+                <td style="text-align: right;">3</td>
+                <td><code>y = kx + b</code></td>
+                <td>simple regression</td>
+                </tr>
+                <tr>
+                <td style="text-align: right;">4</td>
+                <td><code>y = k₁x₁ + … + kₙxₙ + b</code></td>
+                <td>MLR</td>
+                </tr>
+                <tr>
+                <td style="text-align: right;">5</td>
+                <td><code>Obj = Σl(yᵢ, ŷᵢ) + ΣΩ(fₖ)</code></td>
+                <td>XGBoost loss + complexity</td>
+                </tr>
+                <tr>
+                <td style="text-align: right;">6</td>
+                <td><code>Ω(fₖ) = γT + 1/2 λΣwⱼ²</code></td>
+                <td>γ、T、w、λ definitions</td>
+                </tr>
+                <tr>
+                <td style="text-align: right;">7</td>
+                <td><code>RMSE = sqrt[(1/n)Σ(yᵢ−ŷᵢ)²]</code></td>
+                <td>lower is better</td>
+                </tr>
+                <tr>
+                <td style="text-align: right;">8</td>
+                <td><code>R² = 1 − Σ(ŷᵢ−yᵢ)² / Σ(ȳᵢ−yᵢ)²</code></td>
+                <td>render notation as printed; closer to 1 is
+                better</td>
+                </tr>
+                <tr>
+                <td style="text-align: right;">9</td>
+                <td><code>S = πr² + π(Rl + rl)</code></td>
+                <td>hydrogel frustum surface area</td>
+                </tr>
+                <tr>
+                <td style="text-align: right;">10</td>
+                <td><code>S = 4·1/2·a·sqrt((a/2)² + h²)</code></td>
+                <td>square-pyramid plastic MN area</td>
+                </tr>
+                <tr>
+                <td style="text-align: right;">11</td>
+                <td><code>S_total = S·n</code></td>
+                <td>patch total surface area</td>
+                </tr>
+                </tbody>
+                </table>
+                <p>式 (11)
+                後の番号なし計算例も、架空の式番号を付けずに保持する。</p>
+                <ul>
+                <li><code>a=0.075 mm</code>、<code>h=0.7 mm</code> から
+                <code>S=0.105 mm²</code></li>
+                <li><code>n=351</code> から
+                <code>S_total=36.855 mm²</code></li>
+                </ul>
+                <h2 id="table-coverage">6. Table coverage</h2>
+                <h3 id="table-1-fick-parameters">Table 1 — Fick
+                parameters</h3>
+                <table>
+                <thead>
+                <tr>
+                <th>Parameter</th>
+                <th>Paper value</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td>D</td>
+                <td>50–1000 µm²/min</td>
+                </tr>
+                <tr>
+                <td>N</td>
+                <td>64、351</td>
+                </tr>
+                <tr>
+                <td>L</td>
+                <td>700、820、876、889、999、1250、1063 µm</td>
+                </tr>
+                <tr>
+                <td>t</td>
+                <td>15 min–48 h</td>
+                </tr>
+                <tr>
+                <td>m</td>
+                <td>50–70,940 µg</td>
+                </tr>
+                <tr>
+                <td>dx、dy</td>
+                <td>2 × 2</td>
+                </tr>
+                <tr>
+                <td>dt</td>
+                <td>0.00001–0.001 min</td>
+                </tr>
+                </tbody>
+                </table>
+                <h3 id="table-2-ml-parameters">Table 2 — ML
+                parameters</h3>
+                <table>
+                <colgroup>
+                <col style="width: 50%" />
+                <col style="width: 50%" />
+                </colgroup>
+                <thead>
+                <tr>
+                <th>Feature / outcome</th>
+                <th>Paper value</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td>skin type</td>
+                <td>rat、human</td>
+                </tr>
+                <tr>
+                <td>MN type</td>
+                <td>hydrogel、solid</td>
+                </tr>
+                <tr>
+                <td>MN length</td>
+                <td>700、820、889、1250、875.97、998.62、1062.97 µm</td>
+                </tr>
+                <tr>
+                <td>MN surface area</td>
+                <td>26.76、28.54、29.97、32.13、32.43、34.49、36.86
+                mm²</td>
+                </tr>
+                <tr>
+                <td>loading</td>
+                <td>50–70,940 µg</td>
+                </tr>
+                <tr>
+                <td>time</td>
+                <td>0.08333–48 h</td>
+                </tr>
+                <tr>
+                <td>MW</td>
+                <td>64、194、234、340、479、66,430 Da</td>
+                </tr>
+                <tr>
+                <td>amount outcome</td>
+                <td>0–30,000 µg</td>
+                </tr>
+                </tbody>
+                </table>
+                <h3 id="table-3-hyperparameters">Table 3 —
+                Hyperparameters</h3>
+                <table>
+                <thead>
+                <tr>
+                <th>Outcome</th>
+                <th>XGBoost</th>
+                <th>RF</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td>amount</td>
+                <td>max depth 4、eta 0.4、Nround 100</td>
+                <td>trees 500、mtry 5</td>
+                </tr>
+                <tr>
+                <td>percentage</td>
+                <td>max depth 3、eta 0.2、Nround 45</td>
+                <td>trees 500、mtry 6</td>
+                </tr>
+                </tbody>
+                </table>
+                <h3 id="table-4-reported-performance">Table 4 — Reported
+                performance</h3>
+                <table>
+                <thead>
+                <tr>
+                <th>Outcome / metric</th>
+                <th style="text-align: right;">XGBoost</th>
+                <th style="text-align: right;">RF</th>
+                <th style="text-align: right;">Fick</th>
+                <th style="text-align: right;">MLR</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td>amount RMSE (µg)</td>
+                <td style="text-align: right;">4,447.23</td>
+                <td style="text-align: right;">7,043.97</td>
+                <td style="text-align: right;">6,778.17</td>
+                <td style="text-align: right;">23,398.91</td>
+                </tr>
+                <tr>
+                <td>amount R²</td>
+                <td style="text-align: right;">0.98</td>
+                <td style="text-align: right;">0.95</td>
+                <td style="text-align: right;">0.95</td>
+                <td style="text-align: right;">0.46</td>
+                </tr>
+                <tr>
+                <td>percentage RMSE (%)</td>
+                <td style="text-align: right;">28.24</td>
+                <td style="text-align: right;">34.33</td>
+                <td style="text-align: right;">85.58</td>
+                <td style="text-align: right;">120.33</td>
+                </tr>
+                <tr>
+                <td>percentage R²</td>
+                <td style="text-align: right;">0.98</td>
+                <td style="text-align: right;">0.97</td>
+                <td style="text-align: right;">0.82</td>
+                <td style="text-align: right;">0.65</td>
+                </tr>
+                </tbody>
+                </table>
+                <h2 id="figure-coverage">7. Figure coverage</h2>
+                <table>
+                <thead>
+                <tr>
+                <th>Figure</th>
+                <th>Required content</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td>1</td>
+                <td>four method schematics: Fick、MLR、RF、XGBoost</td>
+                </tr>
+                <tr>
+                <td>2</td>
+                <td>cleaning、7:3 split、training/prediction flow</td>
+                </tr>
+                <tr>
+                <td>3</td>
+                <td>drug distribution and molecular structures</td>
+                </tr>
+                <tr>
+                <td>4</td>
+                <td>Fick curve + concentration maps at 15
+                min、1、3、6、24 h</td>
+                </tr>
+                <tr>
+                <td>5</td>
+                <td>effects of D、MN number、MN length、loading</td>
+                </tr>
+                <tr>
+                <td>6</td>
+                <td>amount predictions vs experiments for 9 drug/skin
+                panels</td>
+                </tr>
+                <tr>
+                <td>7</td>
+                <td>percentage predictions vs experiments for the same 9
+                panels</td>
+                </tr>
+                <tr>
+                <td>8</td>
+                <td>RF/XGBoost feature importance for amount and
+                percentage</td>
+                </tr>
+                <tr>
+                <td>S1</td>
+                <td>XGBoost unseen-drug amount prediction, 9 panels</td>
+                </tr>
+                <tr>
+                <td>S2</td>
+                <td>XGBoost unseen-drug percentage prediction, 9
+                panels</td>
+                </tr>
+                </tbody>
+                </table>
+                <h2 id="supporting-code-coverage">8. Supporting code
+                coverage</h2>
+                <h3 id="data-s2-r-section">Data S2 R section</h3>
+                <ul>
+                <li><code>xgboost</code>、<code>Matrix</code>、<code>randomForest</code></li>
+                <li><code>set.seed(0)</code></li>
+                <li>reads <code>train set.csv</code> and
+                <code>test set.csv</code></li>
+                <li>MLR with <code>Results ~ . - 1</code></li>
+                <li>RF with 500 trees and mtry 6</li>
+                <li>XGBoost with depth 3、eta 0.2、square-error
+                objective、45 rounds</li>
+                <li>importance plots and CSV outputs</li>
+                </ul>
+                <h3 id="data-s2-c-section">Data S2 C section</h3>
+                <ul>
+                <li>finite-difference implementation of the 2D Fick
+                model</li>
+                <li>example declarations including
+                <code>D=700</code>、<code>N=64</code>、<code>m=1637</code>、<code>dx=dy=2</code>、<code>dt=0.0001</code></li>
+                <li>separate update cases for
+                corners、edges、interior</li>
+                <li>receptor accumulation and time-series output</li>
+                </ul>
+                <h2 id="reproducibility-gap-matrix">9. Reproducibility
+                gap matrix</h2>
+                <table>
+                <colgroup>
+                <col style="width: 33%" />
+                <col style="width: 33%" />
+                <col style="width: 33%" />
+                </colgroup>
+                <thead>
+                <tr>
+                <th>Item</th>
+                <th>Present?</th>
+                <th>App statement</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td>Data S1</td>
+                <td>yes</td>
+                <td>complete 191×11 source dataset</td>
+                </tr>
+                <tr>
+                <td>7:3 ratio</td>
+                <td>yes, paper text</td>
+                <td>reported split ratio</td>
+                </tr>
+                <tr>
+                <td>train/test row assignment</td>
+                <td>no</td>
+                <td>not provided</td>
+                </tr>
+                <tr>
+                <td>split-generation code</td>
+                <td>no</td>
+                <td>not provided</td>
+                </tr>
+                <tr>
+                <td><code>set.seed(0)</code></td>
+                <td>yes, before existing CSV reads</td>
+                <td>split-generation code itself is absent, so it does
+                not reconstruct the split</td>
+                </tr>
+                <tr>
+                <td>MLR formula code</td>
+                <td>yes</td>
+                <td>source code viewable</td>
+                </tr>
+                <tr>
+                <td>final MLR coefficients</td>
+                <td>no</td>
+                <td>not provided</td>
+                </tr>
+                <tr>
+                <td>RF training call</td>
+                <td>yes</td>
+                <td>source code viewable</td>
+                </tr>
+                <tr>
+                <td>trained RF forest</td>
+                <td>no</td>
+                <td>not provided</td>
+                </tr>
+                <tr>
+                <td>XGBoost training call</td>
+                <td>yes</td>
+                <td>source code viewable</td>
+                </tr>
+                <tr>
+                <td>trained booster</td>
+                <td>no</td>
+                <td>not provided</td>
+                </tr>
+                <tr>
+                <td>Fick example C code</td>
+                <td>yes</td>
+                <td>source code viewable</td>
+                </tr>
+                <tr>
+                <td>full condition-specific Fick artifacts</td>
+                <td>no</td>
+                <td>not provided</td>
+                </tr>
+                <tr>
+                <td>Table 4 metrics</td>
+                <td>yes</td>
+                <td>reported, not recomputed</td>
+                </tr>
+                </tbody>
+                </table>
+                <h2 id="integrity-manifest-baseline">10. Integrity
+                manifest baseline</h2>
+                <table>
+                <colgroup>
+                <col style="width: 30%" />
+                <col style="width: 40%" />
+                <col style="width: 30%" />
+                </colgroup>
+                <thead>
+                <tr>
+                <th>Source</th>
+                <th style="text-align: right;">Bytes</th>
+                <th>SHA-256</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td>original PDF</td>
+                <td style="text-align: right;">3,800,340</td>
+                <td><code>4641e97362f3cc545586879f2da3735e5487a50fe3cc6149076c87151e47c820</code></td>
+                </tr>
+                <tr>
+                <td>Data S1 XLSX</td>
+                <td style="text-align: right;">25,802</td>
+                <td><code>a22cc32b4d461b1e65c2b29623186a0d0c1f984fc1935d8bd3b35ec0bc3c3a24</code></td>
+                </tr>
+                <tr>
+                <td>Data S2 DOCX</td>
+                <td style="text-align: right;">23,283</td>
+                <td><code>9d6fe3da0127ba26469b7a1fe61a98f723a5547d8a666c92670bf30f31820c81</code></td>
+                </tr>
+                <tr>
+                <td>SI3 DOCX</td>
+                <td style="text-align: right;">196,389</td>
+                <td><code>49f953203a33dd6c781e2761011c8124a6bac891e07ceedf61de6c1289626031</code></td>
+                </tr>
+                <tr>
+                <td>Data S1 CSV</td>
+                <td style="text-align: right;">14,819</td>
+                <td><code>03ff02276f333d06747efb7a625e9de1b4055b94b8736873f5e7cc389315b0f5</code></td>
+                </tr>
+                </tbody>
+                </table>
+                <p>hashはこのrepository内のtracked一次資料に対するbaselineである。source更新時は、新旧hashと更新理由を監査報告へ記録する。</p>
+              </article>
+    </main>
+
+    <aside class="reading-gauge" aria-hidden="true">
+      <p>READING DEPTH</p>
+      <div class="gauge-scale">
+        <span>00</span>
+        <span>25</span>
+        <span>50</span>
+        <span>75</span>
+        <span>100</span>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="document-footer">
+    <div>
+      <strong>BiG Lab Research Library</strong>
+      <p>Markdown is canonical. HTML is the synchronized reading view.</p>
+    </div>
+    <div class="document-footer-links">
+      <a href="../../../shared/website/index.html">資料一覧へ戻る</a>
+      <a href="paper-content-matrix.md">Markdownを開く</a>
+    </div>
+  </footer>
+</body>
+</html>
